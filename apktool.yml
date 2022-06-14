@@ -1,0 +1,221 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: Carga SUBE_v1.5.10b_apkpure.com.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- META-INF/androidx.activity_activity-ktx.version
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.appcompat_appcompat-resources.version
+- META-INF/androidx.appcompat_appcompat.version
+- META-INF/androidx.arch.core_core-runtime.version
+- META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version
+- META-INF/androidx.browser_browser.version
+- META-INF/androidx.cardview_cardview.version
+- META-INF/androidx.coordinatorlayout_coordinatorlayout.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.cursoradapter_cursoradapter.version
+- META-INF/androidx.customview_customview.version
+- META-INF/androidx.databinding_viewbinding.version
+- META-INF/androidx.documentfile_documentfile.version
+- META-INF/androidx.drawerlayout_drawerlayout.version
+- META-INF/androidx.fragment_fragment-ktx.version
+- META-INF/androidx.fragment_fragment.version
+- META-INF/androidx.gridlayout_gridlayout.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.legacy_legacy-support-core-ui.version
+- META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.legacy_legacy-support-v4.version
+- META-INF/androidx.lifecycle_lifecycle-extensions.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+- META-INF/androidx.lifecycle_lifecycle-livedata.version
+- META-INF/androidx.lifecycle_lifecycle-process.version
+- META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.lifecycle_lifecycle-service.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
+- META-INF/androidx.loader_loader.version
+- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
+- META-INF/androidx.media_media.version
+- META-INF/androidx.print_print.version
+- META-INF/androidx.recyclerview_recyclerview.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.slidingpanelayout_slidingpanelayout.version
+- META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
+- META-INF/androidx.transition_transition.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/androidx.viewpager_viewpager.version
+- META-INF/com.google.android.material_material.version
+- res/drawable/charge_sube_wallet.webp
+- png
+- res/drawable-night-xxhdpi-v8/main_menu.webp
+- res/drawable-night-xxhdpi-v8/main_menu_original.webp
+- res/drawable-xxhdpi-v4/about_balance.webp
+- res/drawable-xxhdpi-v4/about_charge_sube.webp
+- res/drawable-xxhdpi-v4/about_last_use.webp
+- res/drawable-xxhdpi-v4/about_recharge.webp
+- res/drawable-xxhdpi-v4/charge_sube_alto_viaje.webp
+- res/drawable-xxhdpi-v4/charge_sube_alto_viaje_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_billetera_pais.webp
+- res/drawable-xxhdpi-v4/charge_sube_billetera_pais_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_cencosud.webp
+- res/drawable-xxhdpi-v4/charge_sube_cencosud_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_mercado_pago.webp
+- res/drawable-xxhdpi-v4/charge_sube_mercado_pago_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_moni.webp
+- res/drawable-xxhdpi-v4/charge_sube_moni_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_movypay.webp
+- res/drawable-xxhdpi-v4/charge_sube_movypay_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_naranja.webp
+- res/drawable-xxhdpi-v4/charge_sube_naranja_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_pago_24.webp
+- res/drawable-xxhdpi-v4/charge_sube_pago_24_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_paymovil.webp
+- res/drawable-xxhdpi-v4/charge_sube_paymovil_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_pim.webp
+- res/drawable-xxhdpi-v4/charge_sube_pim_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_todopago.webp
+- res/drawable-xxhdpi-v4/charge_sube_todopago_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_uala.webp
+- res/drawable-xxhdpi-v4/charge_sube_uala_transparent.webp
+- res/drawable-xxhdpi-v4/charge_sube_vale_pei.webp
+- res/drawable-xxhdpi-v4/charge_sube_vale_pei_transparent.webp
+- res/drawable-xxhdpi-v4/login_pre_form_background.webp
+- res/drawable-xxhdpi-v4/main_menu.webp
+- res/drawable-xxhdpi-v4/main_menu_original.webp
+- res/raw/joda_atlantic_jan_mayen
+- res/raw/joda_est
+- res/raw/joda_etc_gmt
+- res/raw/joda_etc_gmt_1
+- res/raw/joda_etc_gmt_10
+- res/raw/joda_etc_gmt_11
+- res/raw/joda_etc_gmt_12
+- res/raw/joda_etc_gmt_13
+- res/raw/joda_etc_gmt_14
+- res/raw/joda_etc_gmt_2
+- res/raw/joda_etc_gmt_3
+- res/raw/joda_etc_gmt_4
+- res/raw/joda_etc_gmt_5
+- res/raw/joda_etc_gmt_6
+- res/raw/joda_etc_gmt_7
+- res/raw/joda_etc_gmt_8
+- res/raw/joda_etc_gmt_9
+- res/raw/joda_etc_gmtplus1
+- res/raw/joda_etc_gmtplus10
+- res/raw/joda_etc_gmtplus11
+- res/raw/joda_etc_gmtplus12
+- res/raw/joda_etc_gmtplus2
+- res/raw/joda_etc_gmtplus3
+- res/raw/joda_etc_gmtplus4
+- res/raw/joda_etc_gmtplus5
+- res/raw/joda_etc_gmtplus6
+- res/raw/joda_etc_gmtplus7
+- res/raw/joda_etc_gmtplus8
+- res/raw/joda_etc_gmtplus9
+- res/raw/joda_etc_utc
+- res/raw/joda_hst
+- res/raw/joda_mst
+- res/raw/joda_pacific_johnston
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '18'
+  targetSdkVersion: '31'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  androidsupportmultidexversion.txt: '0'
+  firebase-analytics.properties: '8'
+  firebase-common.properties: '8'
+  firebase-components.properties: '8'
+  firebase-core.properties: '8'
+  firebase-crashlytics.properties: '8'
+  firebase-dynamic-links.properties: '8'
+  firebase-encoders-json.properties: '8'
+  firebase-encoders.properties: '8'
+  firebase-installations-interop.properties: '8'
+  firebase-installations.properties: '8'
+  firebase-measurement-connector.properties: '8'
+  play-services-ads-identifier.properties: '8'
+  play-services-base.properties: '8'
+  play-services-basement.properties: '8'
+  play-services-measurement-api.properties: '8'
+  play-services-measurement-base.properties: '8'
+  play-services-measurement-impl.properties: '8'
+  play-services-measurement-sdk-api.properties: '8'
+  play-services-measurement-sdk.properties: '8'
+  play-services-measurement.properties: '8'
+  play-services-safetynet.properties: '8'
+  play-services-stats.properties: '8'
+  play-services-tasks.properties: '8'
+  transport-api.properties: '8'
+  transport-backend-cct.properties: '8'
+  transport-runtime.properties: '8'
+  stamp-cert-sha256: '8'
+  javax/annotation/CheckForNull.java: '8'
+  javax/annotation/CheckForSigned.java: '8'
+  javax/annotation/CheckReturnValue.java: '8'
+  javax/annotation/Detainted.java: '8'
+  javax/annotation/MatchesPattern.java: '8'
+  javax/annotation/Nonnegative.java: '8'
+  javax/annotation/Nonnull.java: '8'
+  javax/annotation/Nullable.java: '8'
+  javax/annotation/OverridingMethodsMustInvokeSuper.java: '8'
+  javax/annotation/ParametersAreNonnullByDefault.java: '8'
+  javax/annotation/PropertyKey.java: '8'
+  javax/annotation/RegEx.java: '8'
+  javax/annotation/Signed.java: '8'
+  javax/annotation/Syntax.java: '8'
+  javax/annotation/Tainted.java: '8'
+  javax/annotation/Untainted.java: '8'
+  javax/annotation/WillClose.java: '8'
+  javax/annotation/WillCloseWhenClosed.java: '8'
+  javax/annotation/WillNotClose.java: '8'
+  javax/annotation/concurrent/GuardedBy.java: '8'
+  javax/annotation/concurrent/Immutable.java: '8'
+  javax/annotation/concurrent/NotThreadSafe.java: '8'
+  javax/annotation/concurrent/ThreadSafe.java: '8'
+  javax/annotation/meta/Exclusive.java: '8'
+  javax/annotation/meta/Exhaustive.java: '8'
+  javax/annotation/meta/TypeQualifier.java: '8'
+  javax/annotation/meta/TypeQualifierDefault.java: '8'
+  javax/annotation/meta/TypeQualifierNickname.java: '8'
+  javax/annotation/meta/TypeQualifierValidator.java: '8'
+  javax/annotation/meta/When.java: '8'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '0'
+  org/joda/time/format/messages.properties: '8'
+  org/joda/time/format/messages_bg.properties: '8'
+  org/joda/time/format/messages_cs.properties: '8'
+  org/joda/time/format/messages_da.properties: '8'
+  org/joda/time/format/messages_de.properties: '8'
+  org/joda/time/format/messages_en.properties: '0'
+  org/joda/time/format/messages_es.properties: '8'
+  org/joda/time/format/messages_fr.properties: '8'
+  org/joda/time/format/messages_it.properties: '8'
+  org/joda/time/format/messages_ja.properties: '8'
+  org/joda/time/format/messages_kk.properties: '8'
+  org/joda/time/format/messages_nl.properties: '8'
+  org/joda/time/format/messages_no.properties: '8'
+  org/joda/time/format/messages_pl.properties: '8'
+  org/joda/time/format/messages_pt.properties: '8'
+  org/joda/time/format/messages_ru.properties: '8'
+  org/joda/time/format/messages_tr.properties: '8'
+  org/jsoup/nodes/entities-base.properties: '8'
+  org/jsoup/nodes/entities-full.properties: '8'
+  org/jsoup/nodes/entities-xhtml.properties: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.5.0
+versionInfo:
+  versionCode: '39'
+  versionName: 1.5.10b

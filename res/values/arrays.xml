@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="errores_tarifa_social">
+        <item>Tarjeta sin Tarifa Social aplicada</item>
+        <item>Tarjeta con Tarifa Social aplicada</item>
+        <item>"Algo pasó con tu SUBE
+Contactanos por redes sociales para que podamos ayudarte"</item>
+        <item>"Algo pasó con tu SUBE
+Acercate a un centro de atención para que podamos ayudarte. Ubicá el más cercano en nuestra web"</item>
+        <item>"Algo pasó con tu SUBE
+Contactanos por redes sociales para que podamos ayudarte"</item>
+        <item>"Algo pasó con tu SUBE
+Acercate a un centro de atención para que podamos ayudarte. Ubicá el más cercano en nuestra web"</item>
+    </string-array>
+</resources>

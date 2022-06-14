@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/primary">
+        <item android:icon="@drawable/ic_movements" android:id="@id/action_last_uses" android:title="@string/action_last_uses" app:showAsAction="never" />
+    </group>
+    <group android:id="@id/secondary">
+        <item android:icon="@drawable/ic_about" android:id="@id/action_about_app" android:title="@string/action_about_app" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_help" android:id="@id/action_help" android:title="@string/action_help" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_settings" android:id="@id/action_settings" android:title="@string/action_settings" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_share" android:id="@id/action_share" android:title="@string/action_share" app:showAsAction="never" />
+    </group>
+    <group android:id="@id/dark">
+        <item android:id="@id/action_dark" app:actionLayout="@layout/switch_mode_menu_item_action_layout" app:showAsAction="never" />
+    </group>
+    <group android:id="@id/logout">
+        <item android:icon="@drawable/ic_close" android:id="@id/action_logout" android:title="@string/action_close_session" app:showAsAction="never" />
+    </group>
+</menu>
