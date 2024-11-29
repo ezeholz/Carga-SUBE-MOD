@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.cardview.widget.CardView android:gravity="center" android:id="@id/cardViewRateUs" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="28.0dip" android:layout_marginEnd="28.0dip" app:cardBackgroundColor="@color/colorSubeMediumGray" app:cardCornerRadius="14.0dip" app:cardElevation="2.0dip" app:layout_constraintBottom_toBottomOf="@id/floatingActionButton" app:layout_constraintEnd_toEndOf="@id/floatingActionButton" app:layout_constraintTop_toTopOf="@id/floatingActionButton">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/textViewRateUs" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="valoranos" android:textAllCaps="true" android:paddingStart="10.0dip" android:paddingEnd="36.0dip" />
+        </androidx.cardview.widget.CardView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/floatingActionButton" android:visibility="invisible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:layout_marginBottom="24.0dip" android:layout_marginEnd="24.0dip" app:backgroundTint="@color/colorSubeRating" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:srcCompat="@drawable/ic_star_white_36dp" app:tint="@android:color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/balance_layout_no_card_number" />
+        <Space android:layout_width="fill_parent" android:layout_height="40.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/linearLayoutAppliedAmount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/textViewAppliedAmountLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/total_recharges_command_result_message" />
+            <Space android:layout_width="10.0dip" android:layout_height="wrap_content" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/textViewAppliedAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/textViewRechargeResultLabel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/textViewRechargeResult" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_weight="6.0" />
+            <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

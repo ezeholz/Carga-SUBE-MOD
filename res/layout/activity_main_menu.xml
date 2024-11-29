@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/coordinatorLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.appcompat.widget.Toolbar android:theme="@style/toolbarStyle" android:id="@id/my_toolbar" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="56.0dip" app:contentInsetLeft="0.0dip" app:contentInsetStart="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextColor="@android:color/white">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/imageViewSubeLogo" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/main_menu_toolbar_sube_logo" android:scaleType="centerInside" />
+                <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/textViewTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.Toolbar>
+            <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+                <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="fill_horizontal|center" android:id="@id/imageViewMainMenu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:foregroundGravity="center" android:onClick="onButtonClick" app:srcCompat="@drawable/main_menu_original" />
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <FrameLayout android:id="@id/layoutAplicarCarga" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.6" android:onClick="onButtonClick" />
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:baselineAligned="false" android:layout_weight="1.0">
+                            <FrameLayout android:id="@id/layoutConsultarSaldo" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onButtonClick" />
+                            <FrameLayout android:id="@id/layoutUltimosViajes" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onButtonClick" />
+                        </LinearLayout>
+                        <FrameLayout android:id="@id/layoutCargarSube" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.2" android:onClick="onButtonClick" />
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView android:layout_gravity="start" android:id="@id/navigation" android:visibility="visible" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="fill_parent" app:headerLayout="@layout/nav_drawer_header" app:itemIconTint="@color/colorSubeDarkGray" app:menu="@menu/main_menu" app:theme="@style/drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

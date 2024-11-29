@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_gravity="center"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayoutCardNumber" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="22.0sp" android:gravity="center" android:id="@id/textViewCardNumberLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/card_number_label_result_message" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:id="@id/textViewCardNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/imageViewCopyCardNumber" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="false" android:layout_marginStart="10.0dip" app:srcCompat="@drawable/ic_content_copy_sube_dark_gray_24dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="44.0sp" />
+    <TextView android:textSize="80.0sp" android:gravity="center_vertical" android:id="@id/textViewSaldoActual" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:width="1.0dip" android:textAlignment="center" />
+    <Space android:layout_width="fill_parent" android:layout_height="22.0dip" />
+    <TextView android:textSize="22.0sp" android:gravity="center" android:id="@id/textViewBalanceLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/current_balance_result_message" />
+    <Space android:layout_width="fill_parent" android:layout_height="22.0dip" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/textViewBalanceAttributeLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+</LinearLayout>

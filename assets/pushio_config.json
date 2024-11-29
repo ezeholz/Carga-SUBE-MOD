@@ -1,0 +1,16 @@
+{
+  "pushio": {
+    "appName": "App Productiva",
+    "platformName": "Carga SUBE Beta",
+    "platform_type": "gcm",
+    "apiKey": "ABEgwwpedRXx3nNE2aQ6slNoQ",
+    "apiHost": "api.pushio.com",
+    "bundleId": null,
+    "accountToken": "ABEokYCUxg_NECedPcn6lefDo",
+    "conversionUrl": null,
+    "riAppId": "85"
+  },
+  "google": {
+    "projectId": "231716491521"
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorButton">#ff232323</color>
+    <color name="colorSubeDarkGray">#ffffffff</color>
+    <color name="colorSubeLightBlueExtra">#ff121212</color>
+    <color name="colorSubeOrangeExtra">#ff121212</color>
+    <color name="colorSubePurpleExtra">#ff121212</color>
+    <color name="colorSubeText">#ffffffff</color>
+    <color name="colorSwitchOn">#ffffffff</color>
+</resources>

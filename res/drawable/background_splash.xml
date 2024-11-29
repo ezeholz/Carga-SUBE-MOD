@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorBrand" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:layout_gravity="center" android:src="@drawable/splash_logo_sube_caga_movil" android:tileMode="disabled" />
+    </item>
+    <item android:bottom="12.0dip">
+        <bitmap android:gravity="bottom" android:src="@drawable/ministry_logo_white" />
+    </item>
+</layer-list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="results_instruction_integration_title">
+        <item quantity="other">Tus últimos %d viajes fueron con descuento por combinación</item>
+        <item quantity="one">Tu último viaje fue con descuento por combinación</item>
+    </plurals>
+</resources>

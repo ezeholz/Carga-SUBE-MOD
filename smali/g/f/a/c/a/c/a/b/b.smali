@@ -1,0 +1,8 @@
+.class public interface abstract Lg/f/a/c/a/c/a/b/b;
+.super Ljava/lang/Object;
+.source "SelectedWalletsRecyclerView.kt"
+
+
+# virtual methods
+.method public abstract a(Ljava/lang/String;)V
+.end method
