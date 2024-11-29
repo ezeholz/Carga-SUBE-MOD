@@ -6,6 +6,14 @@
 .implements Landroid/view/MenuItem;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # static fields
 .field public static final SHOW_AS_ACTION_ALWAYS:I = 0x2
 
@@ -67,6 +75,9 @@
 .method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
 .end method
 
+.method public bridge abstract synthetic setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+.end method
+
 .method public abstract setContentDescription(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
 .end method
 
@@ -89,6 +100,9 @@
 .end method
 
 .method public abstract setSupportActionProvider(Landroidx/core/view/ActionProvider;)Landroidx/core/internal/view/SupportMenuItem;
+.end method
+
+.method public bridge abstract synthetic setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 .end method
 
 .method public abstract setTooltipText(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;

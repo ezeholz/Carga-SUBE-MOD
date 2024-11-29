@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;
+.class public Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;
 .super Ljava/io/OutputStream;
 .source "Framer.java"
 
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "FramingOutputStream"
 .end annotation
 
 
 # instance fields
-.field private final mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
+.field public final mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
-.field private final mPrefix:B
+.field public final mPrefix:B
 
-.field final synthetic this$0:Lcom/facebook/stetho/dumpapp/Framer;
+.field public final synthetic this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/dumpapp/Framer;B)V
     .locals 1
 
-    .line 207
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    .line 205
+    .line 2
     new-instance p1, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
     const/4 v0, 0x0
@@ -40,7 +40,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
-    .line 208
+    .line 3
     iput-byte p2, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->mPrefix:B
 
     return-void
@@ -51,7 +51,7 @@
 .method public close()V
     .locals 1
 
-    .line 242
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;->close()V
@@ -72,7 +72,7 @@
 
     aput-byte p1, v1, v2
 
-    .line 232
+    .line 8
     invoke-virtual {p0, v1, v2, v0}, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->write([BII)V
 
     return-void
@@ -81,7 +81,7 @@
 .method public write([B)V
     .locals 2
 
-    .line 237
+    .line 9
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -94,14 +94,14 @@
 .method public write([BII)V
     .locals 3
 
-    .line 213
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;->throwIfClosed()V
 
     if-lez p3, :cond_0
 
-    .line 216
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
@@ -109,7 +109,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 217
+    .line 3
     :try_start_1
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
@@ -117,12 +117,12 @@
 
     invoke-virtual {v1, v2, p3}, Lcom/facebook/stetho/dumpapp/Framer;->writeIntFrame(BI)V
 
-    .line 218
+    .line 4
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-virtual {v1, p1, p2, p3}, Lcom/facebook/stetho/dumpapp/Framer;->writeBlob([BII)V
 
-    .line 219
+    .line 5
     iget-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-static {p1}, Lcom/facebook/stetho/dumpapp/Framer;->access$300(Lcom/facebook/stetho/dumpapp/Framer;)Ljava/io/DataOutputStream;
@@ -131,10 +131,10 @@
 
     invoke-virtual {p1}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 220
+    .line 6
     monitor-exit v0
 
-    return-void
+    goto :goto_0
 
     :catchall_0
     move-exception p1
@@ -151,7 +151,7 @@
     :catch_0
     move-exception p1
 
-    .line 224
+    .line 7
     new-instance p2, Lcom/facebook/stetho/dumpapp/DumpappOutputBrokenException;
 
     invoke-direct {p2, p1}, Lcom/facebook/stetho/dumpapp/DumpappOutputBrokenException;-><init>(Ljava/lang/Throwable;)V
@@ -159,5 +159,6 @@
     throw p2
 
     :cond_0
+    :goto_0
     return-void
 .end method

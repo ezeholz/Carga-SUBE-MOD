@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract createDispatcher(Ljava/util/List;)Lkotlinx/coroutines/az;
+.method public abstract a(Ljava/util/List;)Le/a/g1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -12,13 +12,13 @@
             "+",
             "Lkotlinx/coroutines/internal/MainDispatcherFactory;",
             ">;)",
-            "Lkotlinx/coroutines/az;"
+            "Le/a/g1;"
         }
     .end annotation
 .end method
 
-.method public abstract getLoadPriority()I
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract hintOnError()Ljava/lang/String;
+.method public abstract b()I
 .end method

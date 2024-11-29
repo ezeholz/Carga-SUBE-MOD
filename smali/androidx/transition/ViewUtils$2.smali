@@ -1,4 +1,4 @@
-.class final Landroidx/transition/ViewUtils$2;
+.class public final Landroidx/transition/ViewUtils$2;
 .super Landroid/util/Property;
 .source "ViewUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -24,10 +24,10 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 75
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -35,10 +35,10 @@
 
 
 # virtual methods
-.method public final get(Landroid/view/View;)Landroid/graphics/Rect;
+.method public get(Landroid/view/View;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 79
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object p1
@@ -46,10 +46,10 @@
     return-object p1
 .end method
 
-.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 75
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/transition/ViewUtils$2;->get(Landroid/view/View;)Landroid/graphics/Rect;
@@ -59,19 +59,19 @@
     return-object p1
 .end method
 
-.method public final set(Landroid/view/View;Landroid/graphics/Rect;)V
+.method public set(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 84
+    .line 2
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 75
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/graphics/Rect;

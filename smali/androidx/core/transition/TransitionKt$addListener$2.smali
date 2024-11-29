@@ -1,14 +1,14 @@
 .class public final Landroidx/core/transition/TransitionKt$addListener$2;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "Transition.kt"
 
 # interfaces
-.implements Lkotlin/d/a/b;
+.implements Lj/m/b/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/transition/TransitionKt;->addListener$default(Landroid/transition/Transition;Lkotlin/d/a/b;Lkotlin/d/a/b;Lkotlin/d/a/b;Lkotlin/d/a/b;Lkotlin/d/a/b;ILjava/lang/Object;)Landroid/transition/Transition$TransitionListener;
+    value = Landroidx/core/transition/TransitionKt;->addListener$default(Landroid/transition/Transition;Lj/m/b/l;Lj/m/b/l;Lj/m/b/l;Lj/m/b/l;Lj/m/b/l;ILjava/lang/Object;)Landroid/transition/Transition$TransitionListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,10 +18,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/b<",
+        "Lj/m/c/j;",
+        "Lj/m/b/l<",
         "Landroid/transition/Transition;",
-        "Lkotlin/n;",
+        "Lj/i;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/core/transition/TransitionKt$addListener$2;
@@ -49,22 +49,22 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, v0}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 68
+    .line 1
     check-cast p1, Landroid/transition/Transition;
 
     invoke-virtual {p0, p1}, Landroidx/core/transition/TransitionKt$addListener$2;->invoke(Landroid/transition/Transition;)V
 
-    sget-object p1, Lkotlin/n;->a:Lkotlin/n;
+    sget-object p1, Lj/i;->a:Lj/i;
 
     return-object p1
 .end method
@@ -74,7 +74,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

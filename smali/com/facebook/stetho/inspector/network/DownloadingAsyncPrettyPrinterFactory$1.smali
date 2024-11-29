@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;
+.class public Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;
 .super Ljava/lang/Object;
 .source "DownloadingAsyncPrettyPrinterFactory.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;
 
-.field final synthetic val$response:Ljava/util/concurrent/Future;
+.field public final synthetic val$response:Ljava/util/concurrent/Future;
 
-.field final synthetic val$result:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;
+.field public final synthetic val$result:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;Ljava/util/concurrent/Future;Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;Ljava/util/concurrent/Future;Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;)V
     .locals 0
 
-    .line 43
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;->this$0:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;
 
     iput-object p2, p0, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;->val$response:Ljava/util/concurrent/Future;
@@ -46,7 +46,7 @@
 .method public getPrettifiedType()Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
     .locals 1
 
-    .line 77
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;->val$result:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;->getDisplayType()Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
@@ -59,7 +59,7 @@
 .method public printTo(Ljava/io/PrintWriter;Ljava/io/InputStream;)V
     .locals 3
 
-    .line 49
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;->val$response:Ljava/util/concurrent/Future;
 
@@ -72,13 +72,13 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
+    .line 2
     :try_start_1
     iget-object v1, p0, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;->this$0:Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;
 
     invoke-virtual {v1, p1, p2, v0}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->doPrint(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
 
-    return-void
+    goto :goto_1
 
     :catch_0
     move-exception v0
@@ -88,12 +88,12 @@
     :catch_1
     move-exception v0
 
-    .line 51
+    .line 3
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    .line 52
+    .line 4
     const-class v2, Ljava/io/IOException;
 
     invoke-virtual {v2, v1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -102,14 +102,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 53
+    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Cannot successfully download schema: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 57
+    .line 6
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -120,12 +122,12 @@
 
     move-result-object v0
 
-    .line 53
+    .line 7
     invoke-static {p1, p2, v0}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->access$000(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
 
     return-void
 
-    .line 60
+    .line 8
     :cond_0
     throw v0
     :try_end_1
@@ -135,27 +137,27 @@
     :catch_2
     move-exception p1
 
-    .line 71
+    .line 9
     invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
-    .line 72
+    .line 10
     invoke-static {p1}, Lcom/facebook/stetho/common/ExceptionUtil;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 65
     :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Encountered spurious interrupt while downloading schema for pretty printing: "
 
-    const-string v2, "Encountered spurious interrupt while downloading schema for pretty printing: "
+    .line 11
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    .line 69
+    .line 12
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -166,8 +168,9 @@
 
     move-result-object v0
 
-    .line 65
+    .line 13
     invoke-static {p1, p2, v0}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->access$000(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
 
+    :goto_1
     return-void
 .end method

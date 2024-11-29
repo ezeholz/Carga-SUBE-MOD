@@ -1,4 +1,4 @@
-.class Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
+.class public Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
 .super Ljava/lang/Object;
 .source "ParcelableCompat.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ParcelableCompatCreatorHoneycombMR2"
 .end annotation
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field private final mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
+.field public final mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/core/os/ParcelableCompatCreatorCallbacks<",
@@ -40,7 +40,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/os/ParcelableCompatCreatorCallbacks;)V
+.method public constructor <init>(Landroidx/core/os/ParcelableCompatCreatorCallbacks;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -50,10 +50,10 @@
         }
     .end annotation
 
-    .line 48
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
+    .line 2
     iput-object p1, p0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
 
     return-void
@@ -71,7 +71,7 @@
         }
     .end annotation
 
-    .line 54
+    .line 1
     iget-object v0, p0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
 
     const/4 v1, 0x0
@@ -94,7 +94,7 @@
         }
     .end annotation
 
-    .line 59
+    .line 2
     iget-object v0, p0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
 
     invoke-interface {v0, p1, p2}, Landroidx/core/os/ParcelableCompatCreatorCallbacks;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
@@ -112,7 +112,7 @@
         }
     .end annotation
 
-    .line 64
+    .line 1
     iget-object v0, p0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
 
     invoke-interface {v0, p1}, Landroidx/core/os/ParcelableCompatCreatorCallbacks;->newArray(I)[Ljava/lang/Object;

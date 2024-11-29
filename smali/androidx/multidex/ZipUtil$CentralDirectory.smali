@@ -1,4 +1,4 @@
-.class Landroidx/multidex/ZipUtil$CentralDirectory;
+.class public Landroidx/multidex/ZipUtil$CentralDirectory;
 .super Ljava/lang/Object;
 .source "ZipUtil.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "CentralDirectory"
 .end annotation
 
 
 # instance fields
-.field offset:J
+.field public offset:J
 
-.field size:J
+.field public size:J
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 33
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

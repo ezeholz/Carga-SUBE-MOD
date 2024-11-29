@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;
+.class public final Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;
 .super Ljava/util/ArrayList;
 .source "Document.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "ChildEventingList"
 .end annotation
 
@@ -23,41 +23,41 @@
 
 
 # instance fields
-.field private mDocumentView:Lcom/facebook/stetho/inspector/elements/DocumentView;
+.field public mDocumentView:Lcom/facebook/stetho/inspector/elements/DocumentView;
 
-.field private mParentElement:Ljava/lang/Object;
+.field public mParentElement:Ljava/lang/Object;
 
-.field private mParentNodeId:I
+.field public mParentNodeId:I
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;)V
     .locals 0
 
-    .line 554
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 555
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mParentElement:Ljava/lang/Object;
 
     const/4 p1, -0x1
 
-    .line 556
+    .line 3
     iput p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mParentNodeId:I
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;Lcom/facebook/stetho/inspector/elements/Document$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;Lcom/facebook/stetho/inspector/elements/Document$1;)V
     .locals 0
 
-    .line 554
+    .line 4
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;-><init>(Lcom/facebook/stetho/inspector/elements/Document;)V
 
     return-void
@@ -65,10 +65,10 @@
 
 
 # virtual methods
-.method public final acquire(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/DocumentView;)V
+.method public acquire(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/DocumentView;)V
     .locals 1
 
-    .line 560
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mParentElement:Ljava/lang/Object;
 
     if-nez p1, :cond_0
@@ -77,11 +77,11 @@
 
     goto :goto_0
 
-    .line 562
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
-    .line 564
+    .line 3
     invoke-static {p1}, Lcom/facebook/stetho/inspector/elements/Document;->access$500(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
     move-result-object p1
@@ -99,13 +99,13 @@
     :goto_0
     iput p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mParentNodeId:I
 
-    .line 566
+    .line 4
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mDocumentView:Lcom/facebook/stetho/inspector/elements/DocumentView;
 
     return-void
 .end method
 
-.method public final addWithEvent(ILjava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+.method public addWithEvent(ILjava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -126,8 +126,8 @@
     :cond_0
     add-int/lit8 v0, p1, -0x1
 
-    .line 578
-    invoke-virtual {p0, v0}, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->get(I)Ljava/lang/Object;
+    .line 1
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -140,11 +140,11 @@
 
     goto :goto_1
 
-    .line 580
+    .line 2
     :cond_1
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
-    .line 582
+    .line 3
     invoke-static {v1}, Lcom/facebook/stetho/inspector/elements/Document;->access$500(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
     move-result-object v1
@@ -159,11 +159,11 @@
 
     move v5, v0
 
-    .line 584
+    .line 4
     :goto_1
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->add(ILjava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 586
+    .line 5
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {p1}, Lcom/facebook/stetho/inspector/elements/Document;->access$700(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;
@@ -183,37 +183,37 @@
     return-void
 .end method
 
-.method public final release()V
+.method public release()V
     .locals 2
 
-    .line 570
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->clear()V
+    .line 1
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     const/4 v0, 0x0
 
-    .line 572
+    .line 2
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mParentElement:Ljava/lang/Object;
 
     const/4 v1, -0x1
 
-    .line 573
+    .line 3
     iput v1, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mParentNodeId:I
 
-    .line 574
+    .line 4
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->mDocumentView:Lcom/facebook/stetho/inspector/elements/DocumentView;
 
     return-void
 .end method
 
-.method public final removeWithEvent(I)V
+.method public removeWithEvent(I)V
     .locals 2
 
-    .line 595
-    invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->remove(I)Ljava/lang/Object;
+    .line 1
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    .line 596
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$500(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
@@ -228,7 +228,7 @@
 
     move-result p1
 
-    .line 597
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ChildEventingList;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$700(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;

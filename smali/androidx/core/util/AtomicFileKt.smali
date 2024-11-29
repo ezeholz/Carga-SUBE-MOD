@@ -6,42 +6,48 @@
 # direct methods
 .method public static final readBytes(Landroid/util/AtomicFile;)[B
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 71
+    .line 1
     invoke-virtual {p0}, Landroid/util/AtomicFile;->readFully()[B
 
     move-result-object p0
 
     const-string v0, "readFully()"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
 .method public static final readText(Landroid/util/AtomicFile;Ljava/nio/charset/Charset;)Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "charset"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 80
+    .line 1
     invoke-virtual {p0}, Landroid/util/AtomicFile;->readFully()[B
 
     move-result-object p0
 
     const-string v0, "readFully()"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/String;
 
@@ -57,8 +63,8 @@
 
     if-eqz p2, :cond_0
 
-    .line 79
-    sget-object p1, Lkotlin/h/d;->a:Ljava/nio/charset/Charset;
+    .line 1
+    sget-object p1, Lj/q/a;->a:Ljava/nio/charset/Charset;
 
     :cond_0
     invoke-static {p0, p1}, Landroidx/core/util/AtomicFileKt;->readText(Landroid/util/AtomicFile;Ljava/nio/charset/Charset;)Ljava/lang/String;
@@ -68,29 +74,33 @@
     return-object p0
 .end method
 
-.method public static final tryWrite(Landroid/util/AtomicFile;Lkotlin/d/a/b;)V
+.method public static final tryWrite(Landroid/util/AtomicFile;Lj/m/b/l;)V
     .locals 2
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/util/AtomicFile;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Ljava/io/FileOutputStream;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "block"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 32
+    .line 1
     invoke-virtual {p0}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v0
@@ -98,14 +108,14 @@
     :try_start_0
     const-string v1, "stream"
 
-    .line 35
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 2
+    invoke-static {v0, v1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 39
+    .line 3
     invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
     return-void
@@ -113,7 +123,7 @@
     :catchall_0
     move-exception p1
 
-    .line 41
+    .line 4
     invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     throw p1
@@ -121,16 +131,19 @@
 
 .method public static final writeBytes(Landroid/util/AtomicFile;[B)V
     .locals 2
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "array"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 83
+    .line 1
     invoke-virtual {p0}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v0
@@ -138,15 +151,15 @@
     :try_start_0
     const-string v1, "stream"
 
-    .line 86
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 2
+    invoke-static {v0, v1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
+    .line 3
     invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
+    .line 4
     invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
     return-void
@@ -154,7 +167,7 @@
     :catchall_0
     move-exception p1
 
-    .line 92
+    .line 5
     invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     throw p1
@@ -162,27 +175,30 @@
 
 .method public static final writeText(Landroid/util/AtomicFile;Ljava/lang/String;Ljava/nio/charset/Charset;)V
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "text"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "charset"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 62
+    .line 1
     invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p1
 
     const-string p2, "(this as java.lang.String).getBytes(charset)"
 
-    invoke-static {p1, p2}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0, p1}, Landroidx/core/util/AtomicFileKt;->writeBytes(Landroid/util/AtomicFile;[B)V
 
@@ -196,8 +212,8 @@
 
     if-eqz p3, :cond_0
 
-    .line 61
-    sget-object p2, Lkotlin/h/d;->a:Ljava/nio/charset/Charset;
+    .line 1
+    sget-object p2, Lj/q/a;->a:Ljava/nio/charset/Charset;
 
     :cond_0
     invoke-static {p0, p1, p2}, Landroidx/core/util/AtomicFileKt;->writeText(Landroid/util/AtomicFile;Ljava/lang/String;Ljava/nio/charset/Charset;)V

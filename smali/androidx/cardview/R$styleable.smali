@@ -61,21 +61,21 @@
     .array-data 4
         0x101013f
         0x1010140
-        0x7f04006f
-        0x7f040070
         0x7f040071
+        0x7f040072
         0x7f040073
-        0x7f040074
         0x7f040075
-        0x7f0400d2
-        0x7f0400d3
+        0x7f040076
+        0x7f040077
         0x7f0400d4
         0x7f0400d5
         0x7f0400d6
+        0x7f0400d7
+        0x7f0400d8
     .end array-data
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

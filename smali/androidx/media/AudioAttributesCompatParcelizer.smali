@@ -3,11 +3,19 @@
 .source "AudioAttributesCompatParcelizer.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 9
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +24,12 @@
 .method public static read(Landroidx/versionedparcelable/VersionedParcel;)Landroidx/media/AudioAttributesCompat;
     .locals 3
 
-    .line 11
+    .line 1
     new-instance v0, Landroidx/media/AudioAttributesCompat;
 
     invoke-direct {v0}, Landroidx/media/AudioAttributesCompat;-><init>()V
 
-    .line 12
+    .line 2
     iget-object v1, v0, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
     const/4 v2, 0x1
@@ -42,10 +50,10 @@
 
     const/4 v0, 0x0
 
-    .line 17
+    .line 1
     invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/VersionedParcel;->setSerializationFlags(ZZ)V
 
-    .line 18
+    .line 2
     iget-object p0, p0, Landroidx/media/AudioAttributesCompat;->mImpl:Landroidx/media/AudioAttributesImpl;
 
     const/4 v0, 0x1

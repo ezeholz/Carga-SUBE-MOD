@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;
+.class public Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;
 .super Ljava/lang/Object;
 .source "DOM.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "RGBAColor"
 .end annotation
 
@@ -40,10 +40,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 510
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,7 +54,7 @@
 .method public getColor()I
     .locals 6
 
-    .line 525
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;->a:Ljava/lang/Double;
 
     const/4 v1, -0x1
@@ -63,7 +63,7 @@
 
     goto :goto_0
 
-    .line 528
+    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
@@ -83,6 +83,8 @@
 
     if-gez v0, :cond_1
 
+    const/4 v0, 0x0
+
     const/4 v1, 0x0
 
     goto :goto_0
@@ -99,9 +101,11 @@
     :cond_2
     long-to-int v0, v2
 
-    int-to-byte v1, v0
+    int-to-byte v0, v0
 
-    .line 532
+    move v1, v0
+
+    .line 3
     :goto_0
     iget v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;->r:I
 

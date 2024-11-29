@@ -6,15 +6,23 @@
 .implements Landroid/animation/TypeEvaluator;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # static fields
-.field private static final sInstance:Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
+.field public static final sInstance:Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 33
+    .line 1
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
     invoke-direct {v0}, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;-><init>()V
@@ -27,7 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 32
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +44,7 @@
 .method public static getInstance()Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
     .locals 1
 
-    .line 43
+    .line 1
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;->sInstance:Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
     return-object v0
@@ -47,7 +55,7 @@
 .method public evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 11
 
-    .line 64
+    .line 1
     check-cast p2, Ljava/lang/Integer;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
@@ -86,7 +94,7 @@
 
     div-float/2addr p2, v1
 
-    .line 70
+    .line 2
     check-cast p3, Ljava/lang/Integer;
 
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
@@ -127,7 +135,7 @@
 
     const-wide v9, 0x400199999999999aL    # 2.2
 
-    .line 77
+    .line 3
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v7
@@ -136,7 +144,7 @@
 
     float-to-double v7, v3
 
-    .line 78
+    .line 4
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v7
@@ -145,7 +153,7 @@
 
     float-to-double v7, p2
 
-    .line 79
+    .line 5
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v7
@@ -154,7 +162,7 @@
 
     float-to-double v7, v5
 
-    .line 81
+    .line 6
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v7
@@ -163,7 +171,7 @@
 
     float-to-double v6, v6
 
-    .line 82
+    .line 7
     invoke-static {v6, v7, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
@@ -172,56 +180,48 @@
 
     float-to-double v7, p3
 
-    .line 83
+    .line 8
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v7
 
     double-to-float p3, v7
 
-    sub-float/2addr v4, v0
+    invoke-static {v4, v0, p1, v0}, Lg/b/a/a/a;->a(FFFF)F
 
-    mul-float v4, v4, p1
+    move-result v0
 
-    add-float/2addr v0, v4
+    invoke-static {v5, v2, p1, v2}, Lg/b/a/a/a;->a(FFFF)F
 
-    sub-float/2addr v5, v2
+    move-result v2
 
-    mul-float v5, v5, p1
+    invoke-static {v6, v3, p1, v3}, Lg/b/a/a/a;->a(FFFF)F
 
-    add-float/2addr v2, v5
+    move-result v3
 
-    sub-float/2addr v6, v3
+    invoke-static {p3, p2, p1, p2}, Lg/b/a/a/a;->a(FFFF)F
 
-    mul-float v6, v6, p1
-
-    add-float/2addr v3, v6
-
-    sub-float/2addr p3, p2
-
-    mul-float p1, p1, p3
-
-    add-float/2addr p2, p1
+    move-result p1
 
     mul-float v0, v0, v1
 
-    float-to-double v4, v2
+    float-to-double p2, v2
 
-    const-wide v6, 0x3fdd1745d1745d17L    # 0.45454545454545453
+    const-wide v4, 0x3fdd1745d1745d17L    # 0.45454545454545453
 
-    .line 93
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
+    .line 9
+    invoke-static {p2, p3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v4
+    move-result-wide p2
 
-    double-to-float p1, v4
+    double-to-float p2, p2
 
-    mul-float p1, p1, v1
+    mul-float p2, p2, v1
 
     float-to-double v2, v3
 
-    .line 94
-    invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->pow(DD)D
+    .line 10
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
 
@@ -229,31 +229,31 @@
 
     mul-float p3, p3, v1
 
-    float-to-double v2, p2
+    float-to-double v2, p1
 
-    .line 95
-    invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->pow(DD)D
+    .line 11
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
 
-    double-to-float p2, v2
+    double-to-float p1, v2
 
-    mul-float p2, p2, v1
+    mul-float p1, p1, v1
 
-    .line 97
+    .line 12
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
     shl-int/lit8 v0, v0, 0x18
 
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+    invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
-    move-result p1
+    move-result p2
 
-    shl-int/lit8 p1, p1, 0x10
+    shl-int/lit8 p2, p2, 0x10
 
-    or-int/2addr p1, v0
+    or-int/2addr p2, v0
 
     invoke-static {p3}, Ljava/lang/Math;->round(F)I
 
@@ -261,11 +261,11 @@
 
     shl-int/lit8 p3, p3, 0x8
 
-    or-int/2addr p1, p3
+    or-int/2addr p2, p3
 
-    invoke-static {p2}, Ljava/lang/Math;->round(F)I
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    move-result p2
+    move-result p1
 
     or-int/2addr p1, p2
 

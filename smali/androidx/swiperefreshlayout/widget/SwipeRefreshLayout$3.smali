@@ -1,4 +1,4 @@
-.class Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$3;
+.class public Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$3;
 .super Landroid/view/animation/Animation;
 .source "SwipeRefreshLayout.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+.field public final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
 
 # direct methods
-.method constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
+.method public constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
     .locals 0
 
-    .line 478
+    .line 1
     iput-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$3;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
@@ -35,7 +35,7 @@
 .method public applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 1
 
-    .line 481
+    .line 1
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$3;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     const/high16 v0, 0x3f800000    # 1.0f

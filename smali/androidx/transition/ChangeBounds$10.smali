@@ -1,4 +1,4 @@
-.class Landroidx/transition/ChangeBounds$10;
+.class public Landroidx/transition/ChangeBounds$10;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "ChangeBounds.java"
 
@@ -9,28 +9,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/transition/ChangeBounds;
+.field public final synthetic this$0:Landroidx/transition/ChangeBounds;
 
-.field final synthetic val$drawable:Landroid/graphics/drawable/BitmapDrawable;
+.field public final synthetic val$drawable:Landroid/graphics/drawable/BitmapDrawable;
 
-.field final synthetic val$sceneRoot:Landroid/view/ViewGroup;
+.field public final synthetic val$sceneRoot:Landroid/view/ViewGroup;
 
-.field final synthetic val$transitionAlpha:F
+.field public final synthetic val$transitionAlpha:F
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/ViewGroup;Landroid/graphics/drawable/BitmapDrawable;Landroid/view/View;F)V
+.method public constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/ViewGroup;Landroid/graphics/drawable/BitmapDrawable;Landroid/view/View;F)V
     .locals 0
 
-    .line 445
+    .line 1
     iput-object p1, p0, Landroidx/transition/ChangeBounds$10;->this$0:Landroidx/transition/ChangeBounds;
 
     iput-object p2, p0, Landroidx/transition/ChangeBounds$10;->val$sceneRoot:Landroid/view/ViewGroup;
@@ -51,7 +51,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 448
+    .line 1
     iget-object p1, p0, Landroidx/transition/ChangeBounds$10;->val$sceneRoot:Landroid/view/ViewGroup;
 
     invoke-static {p1}, Landroidx/transition/ViewUtils;->getOverlay(Landroid/view/View;)Landroidx/transition/ViewOverlayImpl;
@@ -62,7 +62,7 @@
 
     invoke-interface {p1, v0}, Landroidx/transition/ViewOverlayImpl;->remove(Landroid/graphics/drawable/Drawable;)V
 
-    .line 449
+    .line 2
     iget-object p1, p0, Landroidx/transition/ChangeBounds$10;->val$view:Landroid/view/View;
 
     iget v0, p0, Landroidx/transition/ChangeBounds$10;->val$transitionAlpha:F

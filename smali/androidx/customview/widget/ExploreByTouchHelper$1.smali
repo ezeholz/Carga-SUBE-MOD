@@ -1,4 +1,4 @@
-.class final Landroidx/customview/widget/ExploreByTouchHelper$1;
+.class public final Landroidx/customview/widget/ExploreByTouchHelper$1;
 .super Ljava/lang/Object;
 .source "ExploreByTouchHelper.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -27,10 +27,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 336
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,19 +38,19 @@
 
 
 # virtual methods
-.method public final obtainBounds(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/graphics/Rect;)V
+.method public obtainBounds(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 339
+    .line 2
     invoke-virtual {p1, p2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getBoundsInParent(Landroid/graphics/Rect;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic obtainBounds(Ljava/lang/Object;Landroid/graphics/Rect;)V
+.method public bridge synthetic obtainBounds(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 336
+    .line 1
     check-cast p1, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper$1;->obtainBounds(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/graphics/Rect;)V

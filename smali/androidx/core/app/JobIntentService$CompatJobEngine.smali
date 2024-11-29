@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/app/JobIntentService$CompatJobEngine;
+.class public interface abstract Landroidx/core/app/JobIntentService$CompatJobEngine;
 .super Ljava/lang/Object;
 .source "JobIntentService.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "CompatJobEngine"
 .end annotation
 

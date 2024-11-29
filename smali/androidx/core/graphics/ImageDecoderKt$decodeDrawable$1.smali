@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/graphics/ImageDecoderKt;->decodeDrawable(Landroid/graphics/ImageDecoder$Source;Lkotlin/d/a/q;)Landroid/graphics/drawable/Drawable;
+    value = Landroidx/core/graphics/ImageDecoderKt;->decodeDrawable(Landroid/graphics/ImageDecoder$Source;Lj/m/b/q;)Landroid/graphics/drawable/Drawable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic $action:Lkotlin/d/a/q;
+.field public final synthetic $action:Lj/m/b/q;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/q<",
+            "Lj/m/b/q<",
             "Landroid/graphics/ImageDecoder;",
             "Landroid/graphics/ImageDecoder$ImageInfo;",
             "Landroid/graphics/ImageDecoder$Source;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
@@ -33,24 +33,24 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/q;)V
+.method public constructor <init>(Lj/m/b/q;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/d/a/q<",
+            "Lj/m/b/q<",
             "-",
             "Landroid/graphics/ImageDecoder;",
             "-",
             "Landroid/graphics/ImageDecoder$ImageInfo;",
             "-",
             "Landroid/graphics/ImageDecoder$Source;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
-    iput-object p1, p0, Landroidx/core/graphics/ImageDecoderKt$decodeDrawable$1;->$action:Lkotlin/d/a/q;
+    iput-object p1, p0, Landroidx/core/graphics/ImageDecoderKt$decodeDrawable$1;->$action:Lj/m/b/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,15 +64,20 @@
 
     const-string v0, "decoder"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "info"
+    const-string v0, "info"
 
-    invoke-static {p2, p1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p1, "source"
+    const-string v0, "source"
 
-    invoke-static {p3, p1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget-object v0, p0, Landroidx/core/graphics/ImageDecoderKt$decodeDrawable$1;->$action:Lj/m/b/q;
+
+    invoke-interface {v0, p1, p2, p3}, Lj/m/b/q;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

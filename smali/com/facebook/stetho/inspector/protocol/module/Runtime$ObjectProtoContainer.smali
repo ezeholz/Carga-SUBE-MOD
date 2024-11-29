@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectProtoContainer;
+.class public Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectProtoContainer;
 .super Ljava/lang/Object;
 .source "Runtime.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ObjectProtoContainer"
 .end annotation
 
@@ -22,10 +22,10 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 185
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectProtoContainer;->object:Ljava/lang/Object;
 
     return-void

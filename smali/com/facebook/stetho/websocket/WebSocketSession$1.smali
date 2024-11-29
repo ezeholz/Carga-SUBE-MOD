@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/websocket/WebSocketSession$1;
+.class public Lcom/facebook/stetho/websocket/WebSocketSession$1;
 .super Ljava/lang/Object;
 .source "WebSocketSession.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
+.field public final synthetic this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/websocket/WebSocketSession;)V
+.method public constructor <init>(Lcom/facebook/stetho/websocket/WebSocketSession;)V
     .locals 0
 
-    .line 122
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method private handleBinaryFrame([BI)V
     .locals 2
 
-    .line 180
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
     invoke-static {v0}, Lcom/facebook/stetho/websocket/WebSocketSession;->access$400(Lcom/facebook/stetho/websocket/WebSocketSession;)Lcom/facebook/stetho/websocket/SimpleEndpoint;
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    .line 152
+    .line 1
     aget-byte v1, p1, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -76,7 +76,7 @@
 
     if-le p2, v0, :cond_0
 
-    .line 153
+    .line 2
     new-instance v2, Ljava/lang/String;
 
     sub-int/2addr p2, v0
@@ -95,7 +95,7 @@
 
     const-string v2, "Unparseable close frame"
 
-    .line 160
+    .line 3
     :goto_0
     iget-object p1, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
@@ -105,7 +105,7 @@
 
     if-nez p1, :cond_2
 
-    .line 161
+    .line 4
     iget-object p1, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
     const/16 p2, 0x3e8
@@ -114,7 +114,7 @@
 
     invoke-static {p1, p2, v0}, Lcom/facebook/stetho/websocket/WebSocketSession;->access$200(Lcom/facebook/stetho/websocket/WebSocketSession;ILjava/lang/String;)V
 
-    .line 164
+    .line 5
     :cond_2
     iget-object p1, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
@@ -126,7 +126,7 @@
 .method private handlePing([BI)V
     .locals 1
 
-    .line 168
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
     invoke-static {p1, p2}, Lcom/facebook/stetho/websocket/FrameHelper;->createPongFrame([BI)Lcom/facebook/stetho/websocket/Frame;
@@ -147,7 +147,7 @@
 .method private handleTextFrame([BI)V
     .locals 4
 
-    .line 176
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
     invoke-static {v0}, Lcom/facebook/stetho/websocket/WebSocketSession;->access$400(Lcom/facebook/stetho/websocket/WebSocketSession;)Lcom/facebook/stetho/websocket/SimpleEndpoint;
@@ -182,18 +182,14 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 142
+    .line 1
     iget-object p2, p0, Lcom/facebook/stetho/websocket/WebSocketSession$1;->this$0:Lcom/facebook/stetho/websocket/WebSocketSession;
 
     new-instance p3, Ljava/io/IOException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
     const-string v0, "Unsupported frame opcode="
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lg/b/a/a/a;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -201,36 +197,37 @@
 
     invoke-static {p2, p3}, Lcom/facebook/stetho/websocket/WebSocketSession;->access$000(Lcom/facebook/stetho/websocket/WebSocketSession;Ljava/io/IOException;)V
 
-    return-void
+    goto :goto_0
 
-    .line 133
+    .line 2
     :pswitch_0
     invoke-direct {p0, p2, p3}, Lcom/facebook/stetho/websocket/WebSocketSession$1;->handlePong([BI)V
 
-    return-void
+    goto :goto_0
 
-    .line 130
+    .line 3
     :pswitch_1
     invoke-direct {p0, p2, p3}, Lcom/facebook/stetho/websocket/WebSocketSession$1;->handlePing([BI)V
 
-    return-void
+    goto :goto_0
 
-    .line 127
+    .line 4
     :pswitch_2
     invoke-direct {p0, p2, p3}, Lcom/facebook/stetho/websocket/WebSocketSession$1;->handleClose([BI)V
 
-    return-void
+    goto :goto_0
 
-    .line 139
+    .line 5
     :cond_0
     invoke-direct {p0, p2, p3}, Lcom/facebook/stetho/websocket/WebSocketSession$1;->handleBinaryFrame([BI)V
 
-    return-void
+    goto :goto_0
 
-    .line 136
+    .line 6
     :cond_1
     invoke-direct {p0, p2, p3}, Lcom/facebook/stetho/websocket/WebSocketSession$1;->handleTextFrame([BI)V
 
+    :goto_0
     return-void
 
     :pswitch_data_0

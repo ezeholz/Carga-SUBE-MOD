@@ -16,6 +16,12 @@
 
 # virtual methods
 .method public abstract test(Ljava/lang/Object;)Z
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "UnknownNullness"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"

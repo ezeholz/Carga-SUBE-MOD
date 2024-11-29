@@ -7,7 +7,7 @@
 .method public static final rotationMatrix(FFF)Landroid/graphics/Matrix;
     .locals 1
 
-    .line 53
+    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -35,7 +35,7 @@
 
     const/4 p2, 0x0
 
-    .line 52
+    .line 1
     :cond_1
     invoke-static {p0, p1, p2}, Landroidx/core/graphics/MatrixKt;->rotationMatrix(FFF)Landroid/graphics/Matrix;
 
@@ -47,7 +47,7 @@
 .method public static final scaleMatrix(FF)Landroid/graphics/Matrix;
     .locals 1
 
-    .line 46
+    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -75,7 +75,7 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 45
+    .line 1
     :cond_1
     invoke-static {p0, p1}, Landroidx/core/graphics/MatrixKt;->scaleMatrix(FF)Landroid/graphics/Matrix;
 
@@ -89,13 +89,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "m"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 27
+    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0, p0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
@@ -108,7 +108,7 @@
 .method public static final translationMatrix(FF)Landroid/graphics/Matrix;
     .locals 1
 
-    .line 39
+    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -136,7 +136,7 @@
 
     const/4 p1, 0x0
 
-    .line 38
+    .line 1
     :cond_1
     invoke-static {p0, p1}, Landroidx/core/graphics/MatrixKt;->translationMatrix(FF)Landroid/graphics/Matrix;
 
@@ -150,13 +150,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    .line 32
+    .line 1
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
     return-object v0

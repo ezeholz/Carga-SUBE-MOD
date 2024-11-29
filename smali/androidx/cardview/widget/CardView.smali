@@ -4,29 +4,29 @@
 
 
 # static fields
-.field private static final COLOR_BACKGROUND_ATTR:[I
+.field public static final COLOR_BACKGROUND_ATTR:[I
 
-.field private static final IMPL:Landroidx/cardview/widget/CardViewImpl;
+.field public static final IMPL:Landroidx/cardview/widget/CardViewImpl;
 
 
 # instance fields
-.field private final mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
+.field public final mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
 
-.field private mCompatPadding:Z
+.field public mCompatPadding:Z
 
-.field final mContentPadding:Landroid/graphics/Rect;
+.field public final mContentPadding:Landroid/graphics/Rect;
 
-.field private mPreventCornerOverlap:Z
+.field public mPreventCornerOverlap:Z
 
-.field final mShadowBounds:Landroid/graphics/Rect;
+.field public final mShadowBounds:Landroid/graphics/Rect;
 
-.field mUserSetMinHeight:I
+.field public mUserSetMinHeight:I
 
-.field mUserSetMinWidth:I
+.field public mUserSetMinWidth:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -39,17 +39,17 @@
 
     aput v2, v0, v1
 
-    .line 81
+    .line 1
     sput-object v0, Landroidx/cardview/widget/CardView;->COLOR_BACKGROUND_ATTR:[I
 
-    .line 85
+    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 86
+    .line 3
     new-instance v0, Landroidx/cardview/widget/CardViewApi21Impl;
 
     invoke-direct {v0}, Landroidx/cardview/widget/CardViewApi21Impl;-><init>()V
@@ -58,32 +58,15 @@
 
     goto :goto_0
 
-    .line 87
+    .line 4
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x11
-
-    if-lt v0, v1, :cond_1
-
-    .line 88
     new-instance v0, Landroidx/cardview/widget/CardViewApi17Impl;
 
     invoke-direct {v0}, Landroidx/cardview/widget/CardViewApi17Impl;-><init>()V
 
     sput-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
-    goto :goto_0
-
-    .line 90
-    :cond_1
-    new-instance v0, Landroidx/cardview/widget/CardViewBaseImpl;
-
-    invoke-direct {v0}, Landroidx/cardview/widget/CardViewBaseImpl;-><init>()V
-
-    sput-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
-
-    .line 92
+    .line 5
     :goto_0
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
@@ -94,10 +77,14 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    .line 113
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/cardview/widget/CardView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -105,8 +92,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 117
+    .line 2
     sget v0, Landroidx/cardview/R$attr;->cardViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/cardview/widget/CardView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -116,32 +111,40 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 8
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 121
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 108
+    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
-    .line 110
+    .line 5
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/cardview/widget/CardView;->mShadowBounds:Landroid/graphics/Rect;
 
-    .line 447
+    .line 6
     new-instance v0, Landroidx/cardview/widget/CardView$1;
 
     invoke-direct {v0, p0}, Landroidx/cardview/widget/CardView$1;-><init>(Landroidx/cardview/widget/CardView;)V
 
     iput-object v0, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
 
-    .line 123
+    .line 7
     sget-object v0, Landroidx/cardview/R$styleable;->CardView:[I
 
     sget v1, Landroidx/cardview/R$style;->CardView:I
@@ -150,7 +153,7 @@
 
     move-result-object p2
 
-    .line 126
+    .line 8
     sget p3, Landroidx/cardview/R$styleable;->CardView_cardBackgroundColor:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -161,7 +164,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 127
+    .line 9
     sget p3, Landroidx/cardview/R$styleable;->CardView_cardBackgroundColor:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -173,9 +176,9 @@
 
     goto :goto_2
 
-    .line 130
+    .line 10
     :cond_0
-    invoke-virtual {p0}, Landroidx/cardview/widget/CardView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
@@ -185,24 +188,24 @@
 
     move-result-object p3
 
-    .line 131
+    .line 11
     invoke-virtual {p3, v0, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v1
 
-    .line 132
+    .line 12
     invoke-virtual {p3}, Landroid/content/res/TypedArray;->recycle()V
 
     const/4 p3, 0x3
 
     new-array p3, p3, [F
 
-    .line 136
+    .line 13
     invoke-static {v1, p3}, Landroid/graphics/Color;->colorToHSV(I[F)V
 
     const/4 v1, 0x2
 
-    .line 137
+    .line 14
     aget p3, p3, v1
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -211,8 +214,8 @@
 
     if-lez p3, :cond_1
 
-    .line 138
-    invoke-virtual {p0}, Landroidx/cardview/widget/CardView;->getResources()Landroid/content/res/Resources;
+    .line 15
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -224,9 +227,9 @@
 
     goto :goto_1
 
-    .line 139
+    .line 16
     :cond_1
-    invoke-virtual {p0}, Landroidx/cardview/widget/CardView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -236,7 +239,7 @@
 
     move-result p3
 
-    .line 137
+    .line 17
     :goto_1
     invoke-static {p3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
@@ -244,7 +247,7 @@
 
     goto :goto_0
 
-    .line 141
+    .line 18
     :goto_2
     sget p3, Landroidx/cardview/R$styleable;->CardView_cardCornerRadius:I
 
@@ -254,21 +257,21 @@
 
     move-result v5
 
-    .line 142
+    .line 19
     sget p3, Landroidx/cardview/R$styleable;->CardView_cardElevation:I
 
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v6
 
-    .line 143
+    .line 20
     sget p3, Landroidx/cardview/R$styleable;->CardView_cardMaxElevation:I
 
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p3
 
-    .line 144
+    .line 21
     sget v1, Landroidx/cardview/R$styleable;->CardView_cardUseCompatPadding:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -277,7 +280,7 @@
 
     iput-boolean v1, p0, Landroidx/cardview/widget/CardView;->mCompatPadding:Z
 
-    .line 145
+    .line 22
     sget v1, Landroidx/cardview/R$styleable;->CardView_cardPreventCornerOverlap:I
 
     const/4 v2, 0x1
@@ -288,14 +291,14 @@
 
     iput-boolean v1, p0, Landroidx/cardview/widget/CardView;->mPreventCornerOverlap:Z
 
-    .line 146
+    .line 23
     sget v1, Landroidx/cardview/R$styleable;->CardView_contentPadding:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
-    .line 147
+    .line 24
     iget-object v2, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     sget v3, Landroidx/cardview/R$styleable;->CardView_contentPaddingLeft:I
@@ -306,7 +309,7 @@
 
     iput v3, v2, Landroid/graphics/Rect;->left:I
 
-    .line 149
+    .line 25
     iget-object v2, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     sget v3, Landroidx/cardview/R$styleable;->CardView_contentPaddingTop:I
@@ -317,7 +320,7 @@
 
     iput v3, v2, Landroid/graphics/Rect;->top:I
 
-    .line 151
+    .line 26
     iget-object v2, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     sget v3, Landroidx/cardview/R$styleable;->CardView_contentPaddingRight:I
@@ -328,7 +331,7 @@
 
     iput v3, v2, Landroid/graphics/Rect;->right:I
 
-    .line 153
+    .line 27
     iget-object v2, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     sget v3, Landroidx/cardview/R$styleable;->CardView_contentPaddingBottom:I
@@ -350,7 +353,7 @@
     :cond_2
     move v7, p3
 
-    .line 158
+    .line 28
     :goto_3
     sget p3, Landroidx/cardview/R$styleable;->CardView_android_minWidth:I
 
@@ -360,7 +363,7 @@
 
     iput p3, p0, Landroidx/cardview/widget/CardView;->mUserSetMinWidth:I
 
-    .line 159
+    .line 29
     sget p3, Landroidx/cardview/R$styleable;->CardView_android_minHeight:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -369,10 +372,10 @@
 
     iput p3, p0, Landroidx/cardview/widget/CardView;->mUserSetMinHeight:I
 
-    .line 160
+    .line 30
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 162
+    .line 31
     sget-object v1, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v2, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -384,28 +387,28 @@
     return-void
 .end method
 
-.method static synthetic access$001(Landroidx/cardview/widget/CardView;IIII)V
+.method public static synthetic access$001(Landroidx/cardview/widget/CardView;IIII)V
     .locals 0
 
-    .line 79
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
     return-void
 .end method
 
-.method static synthetic access$101(Landroidx/cardview/widget/CardView;I)V
+.method public static synthetic access$101(Landroidx/cardview/widget/CardView;I)V
     .locals 0
 
-    .line 79
+    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setMinimumWidth(I)V
 
     return-void
 .end method
 
-.method static synthetic access$201(Landroidx/cardview/widget/CardView;I)V
+.method public static synthetic access$201(Landroidx/cardview/widget/CardView;I)V
     .locals 0
 
-    .line 79
+    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setMinimumHeight(I)V
 
     return-void
@@ -415,8 +418,10 @@
 # virtual methods
 .method public getCardBackgroundColor()Landroid/content/res/ColorStateList;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 303
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -431,7 +436,7 @@
 .method public getCardElevation()F
     .locals 2
 
-    .line 387
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -445,8 +450,10 @@
 
 .method public getContentPaddingBottom()I
     .locals 1
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
-    .line 343
+    .line 1
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -456,8 +463,10 @@
 
 .method public getContentPaddingLeft()I
     .locals 1
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
-    .line 313
+    .line 1
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -467,8 +476,10 @@
 
 .method public getContentPaddingRight()I
     .locals 1
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
-    .line 323
+    .line 1
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -478,8 +489,10 @@
 
 .method public getContentPaddingTop()I
     .locals 1
+    .annotation build Landroidx/annotation/Px;
+    .end annotation
 
-    .line 333
+    .line 1
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -490,7 +503,7 @@
 .method public getMaxCardElevation()F
     .locals 2
 
-    .line 413
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -505,7 +518,7 @@
 .method public getPreventCornerOverlap()Z
     .locals 1
 
-    .line 424
+    .line 1
     iget-boolean v0, p0, Landroidx/cardview/widget/CardView;->mPreventCornerOverlap:Z
 
     return v0
@@ -514,7 +527,7 @@
 .method public getRadius()F
     .locals 2
 
-    .line 364
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -529,23 +542,23 @@
 .method public getUseCompatPadding()Z
     .locals 1
 
-    .line 183
+    .line 1
     iget-boolean v0, p0, Landroidx/cardview/widget/CardView;->mCompatPadding:Z
 
     return v0
 .end method
 
-.method protected onMeasure(II)V
+.method public onMeasure(II)V
     .locals 5
 
-    .line 232
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     instance-of v0, v0, Landroidx/cardview/widget/CardViewApi21Impl;
 
     if-nez v0, :cond_2
 
-    .line 233
+    .line 2
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -560,7 +573,7 @@
 
     goto :goto_0
 
-    .line 237
+    .line 3
     :cond_0
     sget-object v3, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
@@ -578,12 +591,12 @@
 
     double-to-int v3, v3
 
-    .line 239
+    .line 4
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 238
+    .line 5
     invoke-static {v3, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -592,7 +605,7 @@
 
     move-result p1
 
-    .line 246
+    .line 6
     :goto_0
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -604,7 +617,7 @@
 
     goto :goto_1
 
-    .line 250
+    .line 7
     :cond_1
     sget-object v1, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
@@ -622,12 +635,12 @@
 
     double-to-int v1, v1
 
-    .line 252
+    .line 8
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
 
-    .line 251
+    .line 9
     invoke-static {v1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p2
@@ -636,23 +649,28 @@
 
     move-result p2
 
-    .line 258
+    .line 10
     :goto_1
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    return-void
+    goto :goto_2
 
-    .line 260
+    .line 11
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
+    :goto_2
     return-void
 .end method
 
 .method public setCardBackgroundColor(I)V
     .locals 2
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
-    .line 283
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -668,8 +686,12 @@
 
 .method public setCardBackgroundColor(Landroid/content/res/ColorStateList;)V
     .locals 2
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 293
+    .line 2
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -682,7 +704,7 @@
 .method public setCardElevation(F)V
     .locals 2
 
-    .line 376
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -694,13 +716,29 @@
 
 .method public setContentPadding(IIII)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
-    .line 226
+    .line 1
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mContentPadding:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 227
+    .line 2
     sget-object p1, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object p2, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -713,7 +751,7 @@
 .method public setMaxCardElevation(F)V
     .locals 2
 
-    .line 402
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -726,10 +764,10 @@
 .method public setMinimumHeight(I)V
     .locals 0
 
-    .line 272
+    .line 1
     iput p1, p0, Landroidx/cardview/widget/CardView;->mUserSetMinHeight:I
 
-    .line 273
+    .line 2
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setMinimumHeight(I)V
 
     return-void
@@ -738,10 +776,10 @@
 .method public setMinimumWidth(I)V
     .locals 0
 
-    .line 266
+    .line 1
     iput p1, p0, Landroidx/cardview/widget/CardView;->mUserSetMinWidth:I
 
-    .line 267
+    .line 2
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setMinimumWidth(I)V
 
     return-void
@@ -762,15 +800,15 @@
 .method public setPreventCornerOverlap(Z)V
     .locals 1
 
-    .line 441
+    .line 1
     iget-boolean v0, p0, Landroidx/cardview/widget/CardView;->mPreventCornerOverlap:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 442
+    .line 2
     iput-boolean p1, p0, Landroidx/cardview/widget/CardView;->mPreventCornerOverlap:Z
 
-    .line 443
+    .line 3
     sget-object p1, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -784,7 +822,7 @@
 .method public setRadius(F)V
     .locals 2
 
-    .line 354
+    .line 1
     sget-object v0, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v1, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;
@@ -797,15 +835,15 @@
 .method public setUseCompatPadding(Z)V
     .locals 1
 
-    .line 203
+    .line 1
     iget-boolean v0, p0, Landroidx/cardview/widget/CardView;->mCompatPadding:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 204
+    .line 2
     iput-boolean p1, p0, Landroidx/cardview/widget/CardView;->mCompatPadding:Z
 
-    .line 205
+    .line 3
     sget-object p1, Landroidx/cardview/widget/CardView;->IMPL:Landroidx/cardview/widget/CardViewImpl;
 
     iget-object v0, p0, Landroidx/cardview/widget/CardView;->mCardViewDelegate:Landroidx/cardview/widget/CardViewDelegate;

@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 30
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,15 +15,21 @@
 
 .method public static getLocales(Landroid/content/res/Configuration;)Landroidx/core/os/LocaleListCompat;
     .locals 2
+    .param p0    # Landroid/content/res/Configuration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 41
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 42
+    .line 2
     invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object p0
@@ -41,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    .line 44
+    .line 3
     iget-object p0, p0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     aput-object p0, v0, v1

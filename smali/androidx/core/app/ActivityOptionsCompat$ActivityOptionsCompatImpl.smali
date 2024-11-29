@@ -1,31 +1,35 @@
-.class Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
+.class public Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 .super Landroidx/core/app/ActivityOptionsCompat;
 .source "ActivityOptionsCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/app/ActivityOptionsCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ActivityOptionsCompatImpl"
 .end annotation
 
 
 # instance fields
-.field private final mActivityOptions:Landroid/app/ActivityOptions;
+.field public final mActivityOptions:Landroid/app/ActivityOptions;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/ActivityOptions;)V
+.method public constructor <init>(Landroid/app/ActivityOptions;)V
     .locals 0
 
-    .line 256
+    .line 1
     invoke-direct {p0}, Landroidx/core/app/ActivityOptionsCompat;-><init>()V
 
-    .line 257
+    .line 2
     iput-object p1, p0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
     return-void
@@ -36,7 +40,7 @@
 .method public getLaunchBounds()Landroid/graphics/Rect;
     .locals 2
 
-    .line 293
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -47,7 +51,7 @@
 
     return-object v0
 
-    .line 296
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
@@ -60,15 +64,19 @@
 
 .method public requestUsageTimeReport(Landroid/app/PendingIntent;)V
     .locals 2
+    .param p1    # Landroid/app/PendingIntent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 276
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 277
+    .line 2
     iget-object v0, p0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
     invoke-virtual {v0, p1}, Landroid/app/ActivityOptions;->requestUsageTimeReport(Landroid/app/PendingIntent;)V
@@ -79,8 +87,14 @@
 
 .method public setLaunchBounds(Landroid/graphics/Rect;)Landroidx/core/app/ActivityOptionsCompat;
     .locals 2
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 284
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -89,13 +103,13 @@
 
     return-object p0
 
-    .line 287
+    .line 2
     :cond_0
     new-instance v0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 
     iget-object v1, p0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
-    .line 288
+    .line 3
     invoke-virtual {v1, p1}, Landroid/app/ActivityOptions;->setLaunchBounds(Landroid/graphics/Rect;)Landroid/app/ActivityOptions;
 
     move-result-object p1
@@ -108,7 +122,7 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 1
 
-    .line 262
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
     invoke-virtual {v0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
@@ -120,16 +134,20 @@
 
 .method public update(Landroidx/core/app/ActivityOptionsCompat;)V
     .locals 1
+    .param p1    # Landroidx/core/app/ActivityOptionsCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 267
+    .line 1
     instance-of v0, p1, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 2
     check-cast p1, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 
-    .line 270
+    .line 3
     iget-object v0, p0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
     iget-object p1, p1, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;->mActivityOptions:Landroid/app/ActivityOptions;

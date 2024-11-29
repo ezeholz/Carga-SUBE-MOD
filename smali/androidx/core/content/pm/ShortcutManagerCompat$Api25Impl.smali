@@ -1,31 +1,39 @@
-.class Landroidx/core/content/pm/ShortcutManagerCompat$Api25Impl;
+.class public Landroidx/core/content/pm/ShortcutManagerCompat$Api25Impl;
 .super Ljava/lang/Object;
 .source "ShortcutManagerCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x19
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/content/pm/ShortcutManagerCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Api25Impl"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 875
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static getShortcutInfoWithLowestRank(Ljava/util/List;)Ljava/lang/String;
+.method public static getShortcutInfoWithLowestRank(Ljava/util/List;)Ljava/lang/String;
     .locals 5
+    .param p0    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -36,7 +44,7 @@
         }
     .end annotation
 
-    .line 879
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -59,19 +67,19 @@
 
     check-cast v2, Landroid/content/pm/ShortcutInfo;
 
-    .line 880
+    .line 2
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getRank()I
 
     move-result v3
 
     if-le v3, v0, :cond_0
 
-    .line 881
+    .line 3
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 882
+    .line 4
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getRank()I
 
     move-result v1

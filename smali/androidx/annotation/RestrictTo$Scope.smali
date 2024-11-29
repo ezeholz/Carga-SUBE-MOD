@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/annotation/RestrictTo$Scope;
+.field public static final synthetic $VALUES:[Landroidx/annotation/RestrictTo$Scope;
 
 .field public static final enum GROUP_ID:Landroidx/annotation/RestrictTo$Scope;
     .annotation runtime Ljava/lang/Deprecated;
@@ -42,10 +42,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 9
 
-    .line 63
+    .line 1
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
 
     const/4 v1, 0x0
@@ -56,7 +56,7 @@
 
     sput-object v0, Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
 
-    .line 69
+    .line 2
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
 
     const/4 v2, 0x1
@@ -67,7 +67,7 @@
 
     sput-object v0, Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
 
-    .line 83
+    .line 3
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
 
     const/4 v3, 0x2
@@ -78,7 +78,7 @@
 
     sput-object v0, Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
 
-    .line 91
+    .line 4
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
 
     const/4 v4, 0x3
@@ -89,7 +89,7 @@
 
     sput-object v0, Landroidx/annotation/RestrictTo$Scope;->GROUP_ID:Landroidx/annotation/RestrictTo$Scope;
 
-    .line 97
+    .line 5
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
 
     const/4 v5, 0x4
@@ -100,7 +100,7 @@
 
     sput-object v0, Landroidx/annotation/RestrictTo$Scope;->TESTS:Landroidx/annotation/RestrictTo$Scope;
 
-    .line 105
+    .line 6
     new-instance v0, Landroidx/annotation/RestrictTo$Scope;
 
     const/4 v6, 0x5
@@ -115,7 +115,7 @@
 
     new-array v7, v7, [Landroidx/annotation/RestrictTo$Scope;
 
-    .line 58
+    .line 7
     sget-object v8, Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
 
     aput-object v8, v7, v1
@@ -143,7 +143,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -151,7 +151,7 @@
         }
     .end annotation
 
-    .line 58
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -160,7 +160,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/annotation/RestrictTo$Scope;
     .locals 1
 
-    .line 58
+    .line 1
     const-class v0, Landroidx/annotation/RestrictTo$Scope;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -175,7 +175,7 @@
 .method public static values()[Landroidx/annotation/RestrictTo$Scope;
     .locals 1
 
-    .line 58
+    .line 1
     sget-object v0, Landroidx/annotation/RestrictTo$Scope;->$VALUES:[Landroidx/annotation/RestrictTo$Scope;
 
     invoke-virtual {v0}, [Landroidx/annotation/RestrictTo$Scope;->clone()Ljava/lang/Object;

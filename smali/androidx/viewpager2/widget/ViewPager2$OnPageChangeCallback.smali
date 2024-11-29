@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1045
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +34,10 @@
 
 .method public onPageScrolled(IFI)V
     .locals 0
+    .param p3    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
     return-void
 .end method

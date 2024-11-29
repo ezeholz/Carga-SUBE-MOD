@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;
+.class public Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;
 .super Landroidx/recyclerview/widget/LinearLayoutManager;
 .source "ViewPager2.java"
 
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "LinearLayoutManagerImpl"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/content/Context;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/content/Context;)V
     .locals 0
 
-    .line 977
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
-    .line 978
+    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -35,8 +35,16 @@
 # virtual methods
 .method public calculateExtraLayoutSpace(Landroidx/recyclerview/widget/RecyclerView$State;[I)V
     .locals 2
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$State;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1000
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getOffscreenPageLimit()I
@@ -47,12 +55,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1003
+    .line 2
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->calculateExtraLayoutSpace(Landroidx/recyclerview/widget/RecyclerView$State;[I)V
 
     return-void
 
-    .line 1006
+    .line 3
     :cond_0
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
@@ -64,12 +72,12 @@
 
     const/4 v0, 0x0
 
-    .line 1007
+    .line 4
     aput p1, p2, v0
 
     const/4 v0, 0x1
 
-    .line 1008
+    .line 5
     aput p1, p2, v0
 
     return-void
@@ -77,11 +85,23 @@
 
 .method public onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Recycler;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView$State;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 993
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 994
+    .line 2
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
@@ -93,8 +113,20 @@
 
 .method public performAccessibilityAction(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;ILandroid/os/Bundle;)Z
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Recycler;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView$State;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 984
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
@@ -105,7 +137,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 985
+    .line 2
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
@@ -116,9 +148,9 @@
 
     return p1
 
-    .line 987
+    .line 3
     :cond_0
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;->performAccessibilityAction(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;ILandroid/os/Bundle;)Z
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->performAccessibilityAction(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;ILandroid/os/Bundle;)Z
 
     move-result p1
 

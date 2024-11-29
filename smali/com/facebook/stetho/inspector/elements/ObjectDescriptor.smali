@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;-><init>()V
 
     return-void
@@ -25,13 +25,13 @@
 
 
 # virtual methods
-.method public final getAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
+.method public getAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+.method public getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -46,16 +46,16 @@
     return-void
 .end method
 
-.method public final getComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
+.method public getComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final getLocalName(Ljava/lang/Object;)Ljava/lang/String;
+.method public getLocalName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 35
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/ObjectDescriptor;->getNodeName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -63,10 +63,10 @@
     return-object p1
 .end method
 
-.method public final getNodeName(Ljava/lang/Object;)Ljava/lang/String;
+.method public getNodeName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 30
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -78,16 +78,16 @@
     return-object p1
 .end method
 
-.method public final getNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
+.method public getNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
     .locals 0
 
-    .line 25
+    .line 1
     sget-object p1, Lcom/facebook/stetho/inspector/elements/NodeType;->ELEMENT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
     return-object p1
 .end method
 
-.method public final getNodeValue(Ljava/lang/Object;)Ljava/lang/String;
+.method public getNodeValue(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
     const/4 p1, 0x0
@@ -95,37 +95,37 @@
     return-object p1
 .end method
 
-.method public final getStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
+.method public getStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final getStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
+.method public getStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final hook(Ljava/lang/Object;)V
+.method public hook(Ljava/lang/Object;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
+.method public setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final setStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public setStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final unhook(Ljava/lang/Object;)V
+.method public unhook(Ljava/lang/Object;)V
     .locals 0
 
     return-void

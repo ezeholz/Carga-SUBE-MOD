@@ -15,46 +15,46 @@
 
 
 # instance fields
-.field private final a:I
+.field public final d:I
 
-.field private final b:Landroid/accounts/Account;
+.field public final e:Landroid/accounts/Account;
 
-.field private final c:I
+.field public final f:I
 
-.field private final d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+.field public final g:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 26
-    new-instance v0, Lcom/google/android/gms/common/internal/ab;
+    .line 1
+    new-instance v0, Lg/d/a/b/d/m/z;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/internal/ab;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/d/m/z;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
+.method public constructor <init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     .line 2
-    iput p1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->a:I
+    iput p1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->d:I
 
     .line 3
-    iput-object p2, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->b:Landroid/accounts/Account;
+    iput-object p2, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->e:Landroid/accounts/Account;
 
     .line 4
-    iput p3, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->c:I
+    iput p3, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->f:I
 
     .line 5
-    iput-object p4, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    iput-object p4, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->g:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
     return-void
 .end method
@@ -62,10 +62,22 @@
 .method public constructor <init>(Landroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
     .locals 1
 
+    .line 6
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+
     const/4 v0, 0x2
 
     .line 7
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/google/android/gms/common/internal/ResolveAccountRequest;-><init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
+    iput v0, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->d:I
+
+    .line 8
+    iput-object p1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->e:Landroid/accounts/Account;
+
+    .line 9
+    iput p2, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->f:I
+
+    .line 10
+    iput-object p3, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->g:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
     return-void
 .end method
@@ -73,48 +85,48 @@
 
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    .locals 4
 
-    const/16 v0, 0x4f45
-
-    .line 1017
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    .line 1
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result v0
 
-    .line 14
-    iget v1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->a:I
+    .line 2
+    iget v1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->d:I
 
     const/4 v2, 0x1
 
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    invoke-static {p1, v2, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    .line 2009
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->b:Landroid/accounts/Account;
+    .line 3
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->e:Landroid/accounts/Account;
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    .line 17
-    invoke-static {p1, v2, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    const/4 v3, 0x2
 
-    .line 2010
-    iget v1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->c:I
+    .line 4
+    invoke-static {p1, v3, v1, p2, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
 
-    const/4 v2, 0x3
+    const/4 v1, 0x3
 
-    .line 20
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    .line 5
+    iget v3, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->f:I
 
-    .line 2011
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    .line 6
+    invoke-static {p1, v1, v3}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    const/4 v2, 0x4
+    const/4 v1, 0x4
 
-    .line 23
-    invoke-static {p1, v2, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    .line 7
+    iget-object v3, p0, Lcom/google/android/gms/common/internal/ResolveAccountRequest;->g:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
-    .line 2018
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    .line 8
+    invoke-static {p1, v1, v3, p2, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
+
+    .line 9
+    invoke-static {p1, v0}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     return-void
 .end method

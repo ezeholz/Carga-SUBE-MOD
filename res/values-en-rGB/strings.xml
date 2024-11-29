@@ -49,10 +49,6 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign In</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="joda_time_android_date_time">%1$s, %2$s</string>
-    <string name="joda_time_android_preposition_for_date">on %s</string>
-    <string name="joda_time_android_preposition_for_time">at %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

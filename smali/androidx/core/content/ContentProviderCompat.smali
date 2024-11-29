@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 29
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,8 +15,14 @@
 
 .method public static requireContext(Landroid/content/ContentProvider;)Landroid/content/Context;
     .locals 1
+    .param p0    # Landroid/content/ContentProvider;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 45
+    .line 1
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -25,7 +31,7 @@
 
     return-object p0
 
-    .line 47
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

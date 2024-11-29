@@ -4,14 +4,14 @@
 
 
 # static fields
-.field private static final serialVersionUID:J = -0x5b589c52f7efcef6L
+.field public static final serialVersionUID:J = -0x5b589c52f7efcef6L
 
 
 # direct methods
-.method protected constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 46
+    .line 1
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
     return-void

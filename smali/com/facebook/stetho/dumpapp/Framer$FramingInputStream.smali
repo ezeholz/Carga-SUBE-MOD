@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;
+.class public Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;
 .super Ljava/io/InputStream;
 .source "Framer.java"
 
@@ -9,27 +9,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "FramingInputStream"
 .end annotation
 
 
 # instance fields
-.field private final mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
+.field public final mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
-.field final synthetic this$0:Lcom/facebook/stetho/dumpapp/Framer;
+.field public final synthetic this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/dumpapp/Framer;)V
+.method public constructor <init>(Lcom/facebook/stetho/dumpapp/Framer;)V
     .locals 1
 
-    .line 137
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 138
+    .line 2
     new-instance p1, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
     const/4 v0, 0x0
@@ -41,10 +41,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/dumpapp/Framer;Lcom/facebook/stetho/dumpapp/Framer$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/dumpapp/Framer;Lcom/facebook/stetho/dumpapp/Framer$1;)V
     .locals 0
 
-    .line 137
+    .line 3
     invoke-direct {p0, p1}, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;-><init>(Lcom/facebook/stetho/dumpapp/Framer;)V
 
     return-void
@@ -55,7 +55,7 @@
 .method public close()V
     .locals 1
 
-    .line 198
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;->close()V
@@ -70,7 +70,7 @@
 
     new-array v0, v0, [B
 
-    .line 143
+    .line 1
     invoke-virtual {p0, v0}, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->read([B)I
 
     move-result v1
@@ -84,7 +84,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 146
+    .line 2
     aget-byte v0, v0, v1
 
     return v0
@@ -93,7 +93,7 @@
 .method public read([B)I
     .locals 2
 
-    .line 151
+    .line 3
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -108,17 +108,17 @@
 .method public read([BII)I
     .locals 3
 
-    .line 156
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->mClosedHelper:Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;->throwIfClosed()V
 
-    .line 158
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     monitor-enter v0
 
-    .line 160
+    .line 6
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
@@ -126,7 +126,7 @@
 
     invoke-virtual {v1, v2, p3}, Lcom/facebook/stetho/dumpapp/Framer;->writeIntFrame(BI)V
 
-    .line 161
+    .line 7
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-virtual {v1}, Lcom/facebook/stetho/dumpapp/Framer;->readFrameType()B
@@ -137,7 +137,7 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 167
+    .line 8
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-virtual {v1}, Lcom/facebook/stetho/dumpapp/Framer;->readInt()I
@@ -148,7 +148,7 @@
 
     if-gt v1, p3, :cond_0
 
-    .line 173
+    .line 9
     iget-object p3, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     invoke-static {p3}, Lcom/facebook/stetho/dumpapp/Framer;->access$200(Lcom/facebook/stetho/dumpapp/Framer;)Ljava/io/DataInputStream;
@@ -159,15 +159,17 @@
 
     goto :goto_0
 
-    .line 170
+    .line 10
     :cond_0
     new-instance p1, Lcom/facebook/stetho/dumpapp/DumpappFramingException;
 
     new-instance p2, Ljava/lang/StringBuilder;
 
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Expected at most "
 
-    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -185,14 +187,14 @@
 
     throw p1
 
-    .line 175
+    .line 11
     :cond_1
     :goto_0
     monitor-exit v0
 
     return v1
 
-    .line 163
+    .line 12
     :cond_2
     new-instance p1, Lcom/facebook/stetho/dumpapp/UnexpectedFrameException;
 
@@ -203,7 +205,7 @@
     :catchall_0
     move-exception p1
 
-    .line 176
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -216,17 +218,17 @@
 
     const-wide/16 v0, 0x800
 
-    .line 182
+    .line 1
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
     long-to-int v1, v0
 
-    .line 183
+    .line 2
     new-array v0, v1, [B
 
-    .line 184
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->this$0:Lcom/facebook/stetho/dumpapp/Framer;
 
     monitor-enter v1
@@ -236,24 +238,28 @@
     :goto_0
     cmp-long v4, v2, p1
 
-    if-gez v4, :cond_0
+    if-gez v4, :cond_1
 
-    .line 186
+    .line 4
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;->read([B)I
 
     move-result v4
 
-    if-ltz v4, :cond_0
+    if-gez v4, :cond_0
 
+    goto :goto_1
+
+    :cond_0
     int-to-long v4, v4
 
     add-long/2addr v2, v4
 
     goto :goto_0
 
-    .line 192
-    :cond_0
+    .line 5
+    :cond_1
+    :goto_1
     monitor-exit v1
 
     return-wide v2
@@ -265,11 +271,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_2
-
-    :goto_1
-    throw p1
+    goto :goto_3
 
     :goto_2
-    goto :goto_1
+    throw p1
+
+    :goto_3
+    goto :goto_2
 .end method

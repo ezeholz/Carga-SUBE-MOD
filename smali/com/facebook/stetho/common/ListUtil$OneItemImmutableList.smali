@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;
+.class public final Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;
 .super Ljava/util/AbstractList;
 .source "ListUtil.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "OneItemImmutableList"
 .end annotation
 
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field private final mItem:Ljava/lang/Object;
+.field public final mItem:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -48,10 +48,10 @@
         }
     .end annotation
 
-    .line 103
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 104
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;->mItem:Ljava/lang/Object;
 
     return-void
@@ -59,7 +59,7 @@
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
+.method public get(I)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -69,12 +69,12 @@
 
     if-nez p1, :cond_0
 
-    .line 110
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;->mItem:Ljava/lang/Object;
 
     return-object p1
 
-    .line 112
+    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -83,7 +83,7 @@
     throw p1
 .end method
 
-.method public final size()I
+.method public size()I
     .locals 1
 
     const/4 v0, 0x1

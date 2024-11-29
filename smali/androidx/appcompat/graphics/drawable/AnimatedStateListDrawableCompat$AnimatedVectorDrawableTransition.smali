@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedVectorDrawableTransition;
+.class public Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedVectorDrawableTransition;
 .super Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;
 .source "AnimatedStateListDrawableCompat.java"
 
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AnimatedVectorDrawableTransition"
 .end annotation
 
 
 # instance fields
-.field private final mAvd:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
+.field public final mAvd:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
 
 # direct methods
-.method constructor <init>(Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;)V
+.method public constructor <init>(Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 433
+    .line 1
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;-><init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$1;)V
 
-    .line 434
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedVectorDrawableTransition;->mAvd:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
     return-void
@@ -38,7 +38,7 @@
 .method public start()V
     .locals 1
 
-    .line 439
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedVectorDrawableTransition;->mAvd:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
     invoke-virtual {v0}, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->start()V
@@ -49,7 +49,7 @@
 .method public stop()V
     .locals 1
 
-    .line 444
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedVectorDrawableTransition;->mAvd:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
     invoke-virtual {v0}, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->stop()V

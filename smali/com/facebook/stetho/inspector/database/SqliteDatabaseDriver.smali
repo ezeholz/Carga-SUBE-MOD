@@ -20,17 +20,17 @@
 
 
 # static fields
-.field private static final UNINTERESTING_FILENAME_SUFFIXES:[Ljava/lang/String;
+.field public static final UNINTERESTING_FILENAME_SUFFIXES:[Ljava/lang/String;
 
 
 # instance fields
-.field private final mDatabaseConnectionProvider:Lcom/facebook/stetho/inspector/database/DatabaseConnectionProvider;
+.field public final mDatabaseConnectionProvider:Lcom/facebook/stetho/inspector/database/DatabaseConnectionProvider;
 
-.field private final mDatabaseFilesProvider:Lcom/facebook/stetho/inspector/database/DatabaseFilesProvider;
+.field public final mDatabaseFilesProvider:Lcom/facebook/stetho/inspector/database/DatabaseFilesProvider;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x4
@@ -61,7 +61,7 @@
 
     aput-object v2, v0, v1
 
-    .line 37
+    .line 1
     sput-object v0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->UNINTERESTING_FILENAME_SUFFIXES:[Ljava/lang/String;
 
     return-void
@@ -72,7 +72,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 56
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/database/DefaultDatabaseFilesProvider;
 
     invoke-direct {v0, p1}, Lcom/facebook/stetho/inspector/database/DefaultDatabaseFilesProvider;-><init>(Landroid/content/Context;)V
@@ -91,7 +91,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 69
+    .line 2
     new-instance v0, Lcom/facebook/stetho/inspector/database/DefaultDatabaseConnectionProvider;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/database/DefaultDatabaseConnectionProvider;-><init>()V
@@ -104,13 +104,13 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/stetho/inspector/database/DatabaseFilesProvider;Lcom/facebook/stetho/inspector/database/DatabaseConnectionProvider;)V
     .locals 0
 
-    .line 85
+    .line 3
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;-><init>(Landroid/content/Context;)V
 
-    .line 86
+    .line 4
     iput-object p2, p0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->mDatabaseFilesProvider:Lcom/facebook/stetho/inspector/database/DatabaseFilesProvider;
 
-    .line 87
+    .line 5
     iput-object p3, p0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->mDatabaseConnectionProvider:Lcom/facebook/stetho/inspector/database/DatabaseConnectionProvider;
 
     return-void
@@ -130,17 +130,17 @@
         }
     .end annotation
 
-    .line 201
+    .line 1
     invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object p1
 
-    .line 202
+    .line 2
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
 
     move-result-wide p1
 
-    .line 203
+    .line 3
     invoke-interface {p3, p1, p2}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;->handleInsert(J)Ljava/lang/Object;
 
     move-result-object p1
@@ -162,10 +162,10 @@
         }
     .end annotation
 
-    .line 222
+    .line 1
     invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 223
+    .line 2
     invoke-interface {p3}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;->handleRawQuery()Ljava/lang/Object;
 
     move-result-object p1
@@ -189,12 +189,12 @@
 
     const/4 v0, 0x0
 
-    .line 210
+    .line 1
     invoke-virtual {p1, p2, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
 
-    .line 212
+    .line 2
     :try_start_0
     invoke-interface {p3, p1}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;->handleSelect(Landroid/database/Cursor;)Ljava/lang/Object;
 
@@ -202,7 +202,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 214
+    .line 3
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     return-object p2
@@ -212,12 +212,16 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 215
+    .line 4
     throw p2
 .end method
 
 .method private executeUpdateDelete(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0xb
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -230,17 +234,17 @@
         }
     .end annotation
 
-    .line 192
+    .line 1
     invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object p1
 
-    .line 193
+    .line 2
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
 
     move-result p1
 
-    .line 194
+    .line 3
     invoke-interface {p3, p1}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;->handleUpdateDelete(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -248,17 +252,17 @@
     return-object p1
 .end method
 
-.method private static getFirstWord(Ljava/lang/String;)Ljava/lang/String;
+.method public static getFirstWord(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 182
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
     const/16 v0, 0x20
 
-    .line 183
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -267,7 +271,7 @@
 
     const/4 v1, 0x0
 
-    .line 184
+    .line 3
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -279,10 +283,10 @@
 .method private openDatabase(Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;)Landroid/database/sqlite/SQLiteDatabase;
     .locals 1
 
-    .line 229
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->mDatabaseConnectionProvider:Lcom/facebook/stetho/inspector/database/DatabaseConnectionProvider;
 
     iget-object p1, p1, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;->file:Ljava/io/File;
@@ -294,10 +298,10 @@
     return-object p1
 .end method
 
-.method private static removeSuffix(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+.method public static removeSuffix(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .line 125
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -309,14 +313,14 @@
 
     aget-object v3, p1, v2
 
-    .line 126
+    .line 2
     invoke-virtual {p0, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 127
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -342,7 +346,7 @@
     return-object p0
 .end method
 
-.method static tidyDatabaseList(Ljava/util/List;)Ljava/util/List;
+.method public static tidyDatabaseList(Ljava/util/List;)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -356,17 +360,17 @@
         }
     .end annotation
 
-    .line 112
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 113
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 114
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -385,19 +389,19 @@
 
     check-cast v2, Ljava/io/File;
 
-    .line 115
+    .line 4
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 116
+    .line 5
     sget-object v4, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->UNINTERESTING_FILENAME_SUFFIXES:[Ljava/lang/String;
 
     invoke-static {v3, v4}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->removeSuffix(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 117
+    .line 6
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -408,15 +412,15 @@
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 118
+    .line 7
     :cond_1
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
@@ -440,18 +444,18 @@
         }
     .end annotation
 
-    .line 158
+    .line 2
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
+    .line 3
     invoke-static {p3}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
+    .line 4
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->openDatabase(Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
-    .line 162
+    .line 5
     :try_start_0
     invoke-static {p2}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->getFirstWord(Ljava/lang/String;)Ljava/lang/String;
 
@@ -463,7 +467,7 @@
 
     const/4 v1, -0x1
 
-    .line 163
+    .line 6
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -572,7 +576,7 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 174
+    .line 7
     invoke-direct {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->executeRawQuery(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Ljava/lang/Object;
 
     move-result-object p2
@@ -581,12 +585,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 177
+    .line 8
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     return-object p2
 
-    .line 172
+    .line 9
     :cond_1
     :try_start_1
     invoke-direct {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->executeSelect(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Ljava/lang/Object;
@@ -597,12 +601,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 177
+    .line 10
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     return-object p2
 
-    .line 168
+    .line 11
     :cond_2
     :try_start_2
     invoke-direct {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->executeInsert(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Ljava/lang/Object;
@@ -613,12 +617,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 177
+    .line 12
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     return-object p2
 
-    .line 166
+    .line 13
     :cond_3
     :try_start_3
     invoke-direct {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->executeUpdateDelete(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Ljava/lang/Object;
@@ -629,7 +633,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 177
+    .line 14
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     return-object p2
@@ -639,7 +643,7 @@
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 178
+    .line 15
     throw p2
 
     :sswitch_data_0
@@ -656,7 +660,7 @@
 .method public bridge synthetic executeSQL(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
     .locals 0
 
-    .line 34
+    .line 1
     check-cast p1, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->executeSQL(Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
@@ -677,27 +681,27 @@
         }
     .end annotation
 
-    .line 92
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 93
+    .line 2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->mDatabaseFilesProvider:Lcom/facebook/stetho/inspector/database/DatabaseFilesProvider;
 
     invoke-interface {v1}, Lcom/facebook/stetho/inspector/database/DatabaseFilesProvider;->getDatabaseFiles()Ljava/util/List;
 
     move-result-object v1
 
-    .line 94
+    .line 3
     invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 95
+    .line 4
     invoke-static {v1}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->tidyDatabaseList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 96
+    .line 5
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -715,7 +719,7 @@
 
     check-cast v2, Ljava/io/File;
 
-    .line 97
+    .line 6
     new-instance v3, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;
 
     invoke-direct {v3, v2}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;-><init>(Ljava/io/File;)V
@@ -741,7 +745,7 @@
         }
     .end annotation
 
-    .line 135
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->openDatabase(Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
@@ -765,20 +769,20 @@
 
     aput-object v4, v1, v2
 
-    .line 137
+    .line 3
     invoke-virtual {p1, v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 140
+    .line 4
     :try_start_1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 141
+    .line 5
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -786,25 +790,25 @@
 
     if-eqz v2, :cond_0
 
-    .line 142
+    .line 6
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 146
+    .line 7
     :cond_0
     :try_start_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 149
+    .line 8
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     return-object v1
@@ -812,11 +816,11 @@
     :catchall_0
     move-exception v1
 
-    .line 146
+    .line 9
     :try_start_3
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 147
+    .line 10
     throw v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -824,10 +828,10 @@
     :catchall_1
     move-exception v0
 
-    .line 149
+    .line 11
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 150
+    .line 12
     goto :goto_2
 
     :goto_1
@@ -840,7 +844,7 @@
 .method public bridge synthetic getTableNames(Ljava/lang/Object;)Ljava/util/List;
     .locals 0
 
-    .line 34
+    .line 1
     check-cast p1, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver;->getTableNames(Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;)Ljava/util/List;

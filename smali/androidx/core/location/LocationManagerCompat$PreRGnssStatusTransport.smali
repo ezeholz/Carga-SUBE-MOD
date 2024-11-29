@@ -1,30 +1,37 @@
-.class Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
+.class public Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
 .super Landroid/location/GnssStatus$Callback;
 .source "LocationManagerCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/location/LocationManagerCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "PreRGnssStatusTransport"
 .end annotation
 
 
 # instance fields
-.field final mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
+.field public final mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
-.field volatile mExecutor:Ljava/util/concurrent/Executor;
+.field public volatile mExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/location/GnssStatusCompat$Callback;)V
+.method public constructor <init>(Landroidx/core/location/GnssStatusCompat$Callback;)V
     .locals 2
 
-    .line 449
+    .line 1
     invoke-direct {p0}, Landroid/location/GnssStatus$Callback;-><init>()V
 
     if-eqz p1, :cond_0
@@ -39,10 +46,10 @@
     :goto_0
     const-string v1, "invalid null callback"
 
-    .line 450
+    .line 2
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 451
+    .line 3
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
     return-void
@@ -53,14 +60,14 @@
 .method public onFirstFix(I)V
     .locals 2
 
-    .line 502
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 507
+    .line 2
     :cond_0
     new-instance v1, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$3;
 
@@ -74,14 +81,14 @@
 .method public onSatelliteStatusChanged(Landroid/location/GnssStatus;)V
     .locals 2
 
-    .line 520
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 525
+    .line 2
     :cond_0
     new-instance v1, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;
 
@@ -95,14 +102,14 @@
 .method public onStarted()V
     .locals 2
 
-    .line 466
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 471
+    .line 2
     :cond_0
     new-instance v1, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$1;
 
@@ -116,14 +123,14 @@
 .method public onStopped()V
     .locals 2
 
-    .line 484
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 489
+    .line 2
     :cond_0
     new-instance v1, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$2;
 
@@ -153,10 +160,10 @@
     :goto_0
     const-string v3, "invalid null executor"
 
-    .line 455
+    .line 1
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 456
+    .line 2
     iget-object v2, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v2, :cond_1
@@ -169,7 +176,7 @@
     :goto_1
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkState(Z)V
 
-    .line 457
+    .line 3
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -180,7 +187,7 @@
 
     const/4 v0, 0x0
 
-    .line 461
+    .line 1
     iput-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void

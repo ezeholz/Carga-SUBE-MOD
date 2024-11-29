@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/RequestExecutor;
+.class public Landroidx/core/provider/RequestExecutor;
 .super Ljava/lang/Object;
 .source "RequestExecutor.java"
 
@@ -14,24 +14,33 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 44
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static createDefaultExecutor(Ljava/lang/String;II)Ljava/util/concurrent/ThreadPoolExecutor;
+.method public static createDefaultExecutor(Ljava/lang/String;II)Ljava/util/concurrent/ThreadPoolExecutor;
     .locals 8
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
 
-    .line 82
+    .line 1
     new-instance v7, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;
 
     invoke-direct {v7, p0, p1}, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;-><init>(Ljava/lang/String;I)V
 
-    .line 85
+    .line 2
     new-instance p0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     int-to-long v3, p2
@@ -52,16 +61,20 @@
 
     const/4 p1, 0x1
 
-    .line 93
+    .line 3
     invoke-virtual {p0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     return-object p0
 .end method
 
-.method static createHandlerExecutor(Landroid/os/Handler;)Ljava/util/concurrent/Executor;
+.method public static createHandlerExecutor(Landroid/os/Handler;)Ljava/util/concurrent/Executor;
     .locals 1
+    .param p0    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 98
+    .line 1
     new-instance v0, Landroidx/core/provider/RequestExecutor$HandlerExecutor;
 
     invoke-direct {v0, p0}, Landroidx/core/provider/RequestExecutor$HandlerExecutor;-><init>(Landroid/os/Handler;)V
@@ -69,8 +82,20 @@
     return-object v0
 .end method
 
-.method static execute(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Landroidx/core/util/Consumer;)V
+.method public static execute(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Landroidx/core/util/Consumer;)V
     .locals 2
+    .param p0    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/concurrent/Callable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/core/util/Consumer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -84,12 +109,12 @@
         }
     .end annotation
 
-    .line 56
+    .line 1
     invoke-static {}, Landroidx/core/provider/CalleeHandler;->create()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 57
+    .line 2
     new-instance v1, Landroidx/core/provider/RequestExecutor$ReplyRunnable;
 
     invoke-direct {v1, v0, p1, p2}, Landroidx/core/provider/RequestExecutor$ReplyRunnable;-><init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;Landroidx/core/util/Consumer;)V
@@ -99,8 +124,21 @@
     return-void
 .end method
 
-.method static submit(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;I)Ljava/lang/Object;
+.method public static submit(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;I)Ljava/lang/Object;
     .locals 1
+    .param p0    # Ljava/util/concurrent/ExecutorService;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/concurrent/Callable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -112,14 +150,14 @@
         }
     .end annotation
 
-    .line 65
+    .line 1
     invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p0
 
     int-to-long p1, p2
 
-    .line 67
+    .line 2
     :try_start_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -133,7 +171,7 @@
 
     return-object p0
 
-    .line 73
+    .line 3
     :catch_0
     new-instance p0, Ljava/lang/InterruptedException;
 
@@ -146,13 +184,13 @@
     :catch_1
     move-exception p0
 
-    .line 71
+    .line 4
     throw p0
 
     :catch_2
     move-exception p0
 
-    .line 69
+    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

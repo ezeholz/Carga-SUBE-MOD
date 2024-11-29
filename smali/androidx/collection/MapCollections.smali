@@ -1,4 +1,4 @@
-.class abstract Landroidx/collection/MapCollections;
+.class public abstract Landroidx/collection/MapCollections;
 .super Ljava/lang/Object;
 .source "MapCollections.java"
 
@@ -27,7 +27,10 @@
 
 
 # instance fields
-.field mEntrySet:Landroidx/collection/MapCollections$EntrySet;
+.field public mEntrySet:Landroidx/collection/MapCollections$EntrySet;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -36,7 +39,10 @@
     .end annotation
 .end field
 
-.field mKeySet:Landroidx/collection/MapCollections$KeySet;
+.field public mKeySet:Landroidx/collection/MapCollections$KeySet;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -45,7 +51,10 @@
     .end annotation
 .end field
 
-.field mValues:Landroidx/collection/MapCollections$ValuesCollection;
+.field public mValues:Landroidx/collection/MapCollections$ValuesCollection;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/MapCollections<",
@@ -56,10 +65,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 32
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,12 +90,12 @@
         }
     .end annotation
 
-    .line 459
+    .line 1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 460
+    .line 2
     :cond_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -94,7 +103,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 461
+    .line 3
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -135,18 +144,18 @@
 
     return v0
 
-    .line 518
+    .line 1
     :cond_0
     instance-of v1, p1, Ljava/util/Set;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 519
+    .line 2
     check-cast p1, Ljava/util/Set;
 
-    .line 522
+    .line 3
     :try_start_0
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
@@ -167,10 +176,16 @@
 
     if-eqz p0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 
     :catch_0
-    :cond_1
+    :cond_2
     return v2
 .end method
 
@@ -190,17 +205,17 @@
         }
     .end annotation
 
-    .line 469
+    .line 1
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
 
-    .line 470
+    .line 2
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 471
+    .line 3
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -208,7 +223,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 472
+    .line 4
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -217,7 +232,7 @@
 
     goto :goto_0
 
-    .line 474
+    .line 5
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
@@ -227,11 +242,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_1
 
     :cond_1
     const/4 p0, 0x0
 
+    :goto_1
     return p0
 .end method
 
@@ -251,12 +267,12 @@
         }
     .end annotation
 
-    .line 478
+    .line 1
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
 
-    .line 479
+    .line 2
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -265,7 +281,7 @@
 
     move-result-object v1
 
-    .line 480
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -274,7 +290,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 481
+    .line 4
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -285,12 +301,12 @@
 
     if-nez v2, :cond_0
 
-    .line 482
+    .line 5
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 485
+    .line 6
     :cond_1
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
@@ -300,23 +316,24 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_1
 
     :cond_2
     const/4 p0, 0x0
 
+    :goto_1
     return p0
 .end method
 
 
 # virtual methods
-.method protected abstract colClear()V
+.method public abstract colClear()V
 .end method
 
-.method protected abstract colGetEntry(II)Ljava/lang/Object;
+.method public abstract colGetEntry(II)Ljava/lang/Object;
 .end method
 
-.method protected abstract colGetMap()Ljava/util/Map;
+.method public abstract colGetMap()Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -326,16 +343,16 @@
     .end annotation
 .end method
 
-.method protected abstract colGetSize()I
+.method public abstract colGetSize()I
 .end method
 
-.method protected abstract colIndexOfKey(Ljava/lang/Object;)I
+.method public abstract colIndexOfKey(Ljava/lang/Object;)I
 .end method
 
-.method protected abstract colIndexOfValue(Ljava/lang/Object;)I
+.method public abstract colIndexOfValue(Ljava/lang/Object;)I
 .end method
 
-.method protected abstract colPut(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public abstract colPut(Ljava/lang/Object;Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)V"
@@ -343,10 +360,10 @@
     .end annotation
 .end method
 
-.method protected abstract colRemoveAt(I)V
+.method public abstract colRemoveAt(I)V
 .end method
 
-.method protected abstract colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
+.method public abstract colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITV;)TV;"
@@ -365,19 +382,19 @@
         }
     .end annotation
 
-    .line 533
+    .line 1
     iget-object v0, p0, Landroidx/collection/MapCollections;->mEntrySet:Landroidx/collection/MapCollections$EntrySet;
 
     if-nez v0, :cond_0
 
-    .line 534
+    .line 2
     new-instance v0, Landroidx/collection/MapCollections$EntrySet;
 
     invoke-direct {v0, p0}, Landroidx/collection/MapCollections$EntrySet;-><init>(Landroidx/collection/MapCollections;)V
 
     iput-object v0, p0, Landroidx/collection/MapCollections;->mEntrySet:Landroidx/collection/MapCollections$EntrySet;
 
-    .line 536
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/collection/MapCollections;->mEntrySet:Landroidx/collection/MapCollections$EntrySet;
 
@@ -394,19 +411,19 @@
         }
     .end annotation
 
-    .line 540
+    .line 1
     iget-object v0, p0, Landroidx/collection/MapCollections;->mKeySet:Landroidx/collection/MapCollections$KeySet;
 
     if-nez v0, :cond_0
 
-    .line 541
+    .line 2
     new-instance v0, Landroidx/collection/MapCollections$KeySet;
 
     invoke-direct {v0, p0}, Landroidx/collection/MapCollections$KeySet;-><init>(Landroidx/collection/MapCollections;)V
 
     iput-object v0, p0, Landroidx/collection/MapCollections;->mKeySet:Landroidx/collection/MapCollections$KeySet;
 
-    .line 543
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/collection/MapCollections;->mKeySet:Landroidx/collection/MapCollections$KeySet;
 
@@ -423,19 +440,19 @@
         }
     .end annotation
 
-    .line 547
+    .line 1
     iget-object v0, p0, Landroidx/collection/MapCollections;->mValues:Landroidx/collection/MapCollections$ValuesCollection;
 
     if-nez v0, :cond_0
 
-    .line 548
+    .line 2
     new-instance v0, Landroidx/collection/MapCollections$ValuesCollection;
 
     invoke-direct {v0, p0}, Landroidx/collection/MapCollections$ValuesCollection;-><init>(Landroidx/collection/MapCollections;)V
 
     iput-object v0, p0, Landroidx/collection/MapCollections;->mValues:Landroidx/collection/MapCollections$ValuesCollection;
 
-    .line 550
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/collection/MapCollections;->mValues:Landroidx/collection/MapCollections$ValuesCollection;
 
@@ -445,12 +462,12 @@
 .method public toArrayHelper(I)[Ljava/lang/Object;
     .locals 4
 
-    .line 490
+    .line 1
     invoke-virtual {p0}, Landroidx/collection/MapCollections;->colGetSize()I
 
     move-result v0
 
-    .line 491
+    .line 2
     new-array v1, v0, [Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -458,7 +475,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 493
+    .line 3
     invoke-virtual {p0, v2, p1}, Landroidx/collection/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v3
@@ -483,17 +500,17 @@
         }
     .end annotation
 
-    .line 499
+    .line 4
     invoke-virtual {p0}, Landroidx/collection/MapCollections;->colGetSize()I
 
     move-result v0
 
-    .line 500
+    .line 5
     array-length v1, p1
 
     if-ge v1, v0, :cond_0
 
-    .line 502
+    .line 6
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -508,15 +525,13 @@
 
     check-cast p1, [Ljava/lang/Object;
 
-    check-cast p1, [Ljava/lang/Object;
-
     :cond_0
     const/4 v1, 0x0
 
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 506
+    .line 7
     invoke-virtual {p0, v1, p2}, Landroidx/collection/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v2
@@ -527,7 +542,7 @@
 
     goto :goto_0
 
-    .line 508
+    .line 8
     :cond_1
     array-length p2, p1
 
@@ -535,7 +550,7 @@
 
     const/4 p2, 0x0
 
-    .line 509
+    .line 9
     aput-object p2, p1, v0
 
     :cond_2

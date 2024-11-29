@@ -15,10 +15,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2648
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,13 +26,13 @@
 
 
 # virtual methods
-.method abstract getAlignmentValue(Landroid/view/View;II)I
+.method public abstract getAlignmentValue(Landroid/view/View;II)I
 .end method
 
-.method getBounds()Landroidx/gridlayout/widget/GridLayout$Bounds;
+.method public getBounds()Landroidx/gridlayout/widget/GridLayout$Bounds;
     .locals 1
 
-    .line 2683
+    .line 1
     new-instance v0, Landroidx/gridlayout/widget/GridLayout$Bounds;
 
     invoke-direct {v0}, Landroidx/gridlayout/widget/GridLayout$Bounds;-><init>()V
@@ -40,13 +40,13 @@
     return-object v0
 .end method
 
-.method abstract getDebugString()Ljava/lang/String;
+.method public abstract getDebugString()Ljava/lang/String;
 .end method
 
-.method abstract getGravityOffset(Landroid/view/View;I)I
+.method public abstract getGravityOffset(Landroid/view/View;I)I
 .end method
 
-.method getSizeInCell(Landroid/view/View;II)I
+.method public getSizeInCell(Landroid/view/View;II)I
     .locals 0
 
     return p2
@@ -55,12 +55,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 2690
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Alignment:"
 
-    const-string v1, "Alignment:"
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     invoke-virtual {p0}, Landroidx/gridlayout/widget/GridLayout$Alignment;->getDebugString()Ljava/lang/String;
 

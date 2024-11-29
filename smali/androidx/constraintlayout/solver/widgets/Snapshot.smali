@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private mConnections:Ljava/util/ArrayList;
+.field public mConnections:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -22,63 +22,63 @@
     .end annotation
 .end field
 
-.field private mHeight:I
+.field public mHeight:I
 
-.field private mWidth:I
+.field public mWidth:I
 
-.field private mX:I
+.field public mX:I
 
-.field private mY:I
+.field public mY:I
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
     .locals 5
 
-    .line 91
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mConnections:Ljava/util/ArrayList;
 
-    .line 92
+    .line 3
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getX()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mX:I
 
-    .line 93
+    .line 4
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getY()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mY:I
 
-    .line 94
+    .line 5
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mWidth:I
 
-    .line 95
+    .line 6
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mHeight:I
 
-    .line 96
+    .line 7
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getAnchors()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 97
+    .line 8
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -88,14 +88,14 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 98
+    .line 9
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    .line 99
+    .line 10
     iget-object v3, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mConnections:Ljava/util/ArrayList;
 
     new-instance v4, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;
@@ -117,27 +117,27 @@
 .method public applyTo(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
     .locals 3
 
-    .line 126
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mX:I
 
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->setX(I)V
 
-    .line 127
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mY:I
 
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->setY(I)V
 
-    .line 128
+    .line 3
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mWidth:I
 
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->setWidth(I)V
 
-    .line 129
+    .line 4
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mHeight:I
 
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->setHeight(I)V
 
-    .line 130
+    .line 5
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -149,7 +149,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 131
+    .line 6
     iget-object v2, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -158,7 +158,7 @@
 
     check-cast v2, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;
 
-    .line 132
+    .line 7
     invoke-virtual {v2, p1}, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->applyTo(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -172,35 +172,35 @@
 .method public updateFrom(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
     .locals 3
 
-    .line 109
+    .line 1
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getX()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mX:I
 
-    .line 110
+    .line 2
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getY()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mY:I
 
-    .line 111
+    .line 3
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mWidth:I
 
-    .line 112
+    .line 4
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mHeight:I
 
-    .line 113
+    .line 5
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -212,7 +212,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 115
+    .line 6
     iget-object v2, p0, Landroidx/constraintlayout/solver/widgets/Snapshot;->mConnections:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -221,7 +221,7 @@
 
     check-cast v2, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;
 
-    .line 116
+    .line 7
     invoke-virtual {v2, p1}, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->updateFrom(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
 
     add-int/lit8 v1, v1, 0x1

@@ -1,4 +1,4 @@
-.class Landroidx/transition/WindowIdApi18;
+.class public Landroidx/transition/WindowIdApi18;
 .super Ljava/lang/Object;
 .source "WindowIdApi18.java"
 
@@ -6,18 +6,28 @@
 .implements Landroidx/transition/WindowIdImpl;
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x12
+.end annotation
+
+
 # instance fields
-.field private final mWindowId:Landroid/view/WindowId;
+.field public final mWindowId:Landroid/view/WindowId;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 29
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getWindowId()Landroid/view/WindowId;
 
     move-result-object p1
@@ -32,7 +42,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 35
+    .line 1
     instance-of v0, p1, Landroidx/transition/WindowIdApi18;
 
     if-eqz v0, :cond_0
@@ -51,18 +61,19 @@
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     return p1
 .end method
 
 .method public hashCode()I
     .locals 1
 
-    .line 40
+    .line 1
     iget-object v0, p0, Landroidx/transition/WindowIdApi18;->mWindowId:Landroid/view/WindowId;
 
     invoke-virtual {v0}, Landroid/view/WindowId;->hashCode()I

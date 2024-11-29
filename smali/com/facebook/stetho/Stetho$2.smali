@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/Stetho$2;
+.class public final Lcom/facebook/stetho/Stetho$2;
 .super Ljava/lang/Object;
 .source "Stetho.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$context:Landroid/content/Context;
+.field public final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 138
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/Stetho$2;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Iterable;
+.method public get()Ljava/lang/Iterable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -46,7 +46,7 @@
         }
     .end annotation
 
-    .line 141
+    .line 1
     new-instance v0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
 
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$2;->val$context:Landroid/content/Context;

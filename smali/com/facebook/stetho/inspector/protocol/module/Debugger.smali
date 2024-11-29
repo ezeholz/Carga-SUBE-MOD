@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 20
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +23,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 33
+    .line 1
     new-instance p1, Lcom/facebook/stetho/inspector/protocol/module/SimpleBooleanResult;
 
     const/4 p2, 0x0

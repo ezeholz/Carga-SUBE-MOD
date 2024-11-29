@@ -4,6 +4,12 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;
@@ -15,62 +21,74 @@
 
 
 # static fields
-.field private static final MSG_DESTRUCTION:I = 0x0
+.field public static final MSG_DESTRUCTION:I = 0x0
 
-.field private static final MSG_INVOKE_RUNNABLE:I = 0x1
+.field public static final MSG_INVOKE_RUNNABLE:I = 0x1
 
 
 # instance fields
-.field private mCallback:Landroid/os/Handler$Callback;
+.field public mCallback:Landroid/os/Handler$Callback;
 
-.field private final mDestructAfterMillisec:I
+.field public final mDestructAfterMillisec:I
 
-.field private mGeneration:I
+.field public mGeneration:I
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
 
-.field private final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
-.field private final mPriority:I
+.field public final mPriority:I
 
-.field private mThread:Landroid/os/HandlerThread;
+.field public mThread:Landroid/os/HandlerThread;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
 
-.field private final mThreadName:Ljava/lang/String;
+.field public final mThreadName:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 1
 
-    .line 83
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
-    .line 62
+    .line 3
     new-instance v0, Landroidx/core/provider/SelfDestructiveThread$1;
 
     invoke-direct {v0, p0}, Landroidx/core/provider/SelfDestructiveThread$1;-><init>(Landroidx/core/provider/SelfDestructiveThread;)V
 
     iput-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mCallback:Landroid/os/Handler$Callback;
 
-    .line 84
+    .line 4
     iput-object p1, p0, Landroidx/core/provider/SelfDestructiveThread;->mThreadName:Ljava/lang/String;
 
-    .line 85
+    .line 5
     iput p2, p0, Landroidx/core/provider/SelfDestructiveThread;->mPriority:I
 
-    .line 86
+    .line 6
     iput p3, p0, Landroidx/core/provider/SelfDestructiveThread;->mDestructAfterMillisec:I
 
     const/4 p1, 0x0
 
-    .line 87
+    .line 7
     iput p1, p0, Landroidx/core/provider/SelfDestructiveThread;->mGeneration:I
 
     return-void
@@ -79,12 +97,12 @@
 .method private post(Ljava/lang/Runnable;)V
     .locals 5
 
-    .line 111
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 112
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mThread:Landroid/os/HandlerThread;
 
@@ -92,7 +110,7 @@
 
     if-nez v1, :cond_0
 
-    .line 113
+    .line 3
     new-instance v1, Landroid/os/HandlerThread;
 
     iget-object v3, p0, Landroidx/core/provider/SelfDestructiveThread;->mThreadName:Ljava/lang/String;
@@ -103,10 +121,10 @@
 
     iput-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mThread:Landroid/os/HandlerThread;
 
-    .line 114
+    .line 4
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 115
+    .line 5
     new-instance v1, Landroid/os/Handler;
 
     iget-object v3, p0, Landroidx/core/provider/SelfDestructiveThread;->mThread:Landroid/os/HandlerThread;
@@ -121,14 +139,14 @@
 
     iput-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
-    .line 116
+    .line 6
     iget v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mGeneration:I
 
     add-int/2addr v1, v2
 
     iput v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mGeneration:I
 
-    .line 118
+    .line 7
     :cond_0
     iget-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
@@ -136,7 +154,7 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 119
+    .line 8
     iget-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
@@ -147,7 +165,7 @@
 
     invoke-virtual {v1, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 120
+    .line 9
     monitor-exit v0
 
     return-void
@@ -166,13 +184,15 @@
 # virtual methods
 .method public getGeneration()I
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
-    .line 105
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 106
+    .line 2
     :try_start_0
     iget v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mGeneration:I
 
@@ -183,7 +203,7 @@
     :catchall_0
     move-exception v1
 
-    .line 107
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -193,13 +213,15 @@
 
 .method public isRunning()Z
     .locals 2
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
 
-    .line 95
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 96
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mThread:Landroid/os/HandlerThread;
 
@@ -220,7 +242,7 @@
     :catchall_0
     move-exception v1
 
-    .line 97
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -228,15 +250,15 @@
     throw v1
 .end method
 
-.method onDestruction()V
+.method public onDestruction()V
     .locals 3
 
-    .line 228
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 229
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
@@ -248,12 +270,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 232
+    .line 3
     monitor-exit v0
 
     return-void
 
-    .line 234
+    .line 4
     :cond_0
     iget-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mThread:Landroid/os/HandlerThread;
 
@@ -261,13 +283,13 @@
 
     const/4 v1, 0x0
 
-    .line 235
+    .line 5
     iput-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mThread:Landroid/os/HandlerThread;
 
-    .line 236
+    .line 6
     iput-object v1, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
-    .line 237
+    .line 7
     monitor-exit v0
 
     return-void
@@ -282,18 +304,18 @@
     throw v1
 .end method
 
-.method onInvokeRunnable(Ljava/lang/Runnable;)V
+.method public onInvokeRunnable(Ljava/lang/Runnable;)V
     .locals 4
 
-    .line 219
+    .line 1
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 220
+    .line 2
     iget-object p1, p0, Landroidx/core/provider/SelfDestructiveThread;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 221
+    .line 3
     :try_start_0
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
@@ -301,7 +323,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 222
+    .line 4
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Landroidx/core/provider/SelfDestructiveThread;->mHandler:Landroid/os/Handler;
@@ -316,7 +338,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 224
+    .line 5
     monitor-exit p1
 
     return-void
@@ -345,12 +367,12 @@
         }
     .end annotation
 
-    .line 141
+    .line 1
     invoke-static {}, Landroidx/core/provider/CalleeHandler;->create()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 142
+    .line 2
     new-instance v1, Landroidx/core/provider/SelfDestructiveThread$2;
 
     invoke-direct {v1, p0, p1, v0, p2}, Landroidx/core/provider/SelfDestructiveThread$2;-><init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/Callable;Landroid/os/Handler;Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;)V
@@ -372,29 +394,29 @@
         }
     .end annotation
 
-    .line 171
+    .line 1
     new-instance v7, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v7}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    .line 172
+    .line 2
     invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object v8
 
-    .line 174
+    .line 3
     new-instance v9, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v9}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 175
+    .line 4
     new-instance v10, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
 
     invoke-direct {v10, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 176
+    .line 5
     new-instance v11, Landroidx/core/provider/SelfDestructiveThread$3;
 
     move-object v0, v11
@@ -415,10 +437,10 @@
 
     invoke-direct {p0, v11}, Landroidx/core/provider/SelfDestructiveThread;->post(Ljava/lang/Runnable;)V
 
-    .line 194
+    .line 6
     invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 196
+    .line 7
     :try_start_0
     invoke-virtual {v10}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
@@ -426,19 +448,19 @@
 
     if-nez p1, :cond_0
 
-    .line 197
+    .line 8
     invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 214
+    .line 9
     invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     return-object p1
 
-    .line 199
+    .line 10
     :cond_0
     :try_start_1
     sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -451,7 +473,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 202
+    .line 11
     :goto_0
     :try_start_2
     invoke-interface {v8, p1, p2}, Ljava/util/concurrent/locks/Condition;->awaitNanos(J)J
@@ -461,7 +483,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 206
+    .line 12
     :catch_0
     :try_start_3
     invoke-virtual {v10}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -470,14 +492,14 @@
 
     if-nez v0, :cond_1
 
-    .line 207
+    .line 13
     invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 214
+    .line 14
     invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     return-object p1
@@ -491,7 +513,7 @@
 
     goto :goto_0
 
-    .line 210
+    .line 15
     :cond_2
     :try_start_4
     new-instance p1, Ljava/lang/InterruptedException;
@@ -507,10 +529,10 @@
     :catchall_0
     move-exception p1
 
-    .line 214
+    .line 16
     invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 215
+    .line 17
     goto :goto_2
 
     :goto_1

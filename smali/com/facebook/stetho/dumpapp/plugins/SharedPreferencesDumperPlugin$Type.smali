@@ -1,4 +1,4 @@
-.class final enum Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
+.class public final enum Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 .super Ljava/lang/Enum;
 .source "SharedPreferencesDumperPlugin.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4018
+    accessFlags = 0x4019
     name = "Type"
 .end annotation
 
@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
+.field public static final synthetic $VALUES:[Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
 .field public static final enum BOOLEAN:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
@@ -39,14 +39,14 @@
 
 
 # instance fields
-.field private final name:Ljava/lang/String;
+.field public final name:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 9
 
-    .line 208
+    .line 1
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     const/4 v1, 0x0
@@ -59,7 +59,7 @@
 
     sput-object v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->BOOLEAN:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
-    .line 209
+    .line 2
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     const/4 v2, 0x1
@@ -72,7 +72,7 @@
 
     sput-object v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->INT:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
-    .line 210
+    .line 3
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     const/4 v3, 0x2
@@ -85,7 +85,7 @@
 
     sput-object v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->LONG:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
-    .line 211
+    .line 4
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     const/4 v4, 0x3
@@ -98,7 +98,7 @@
 
     sput-object v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->FLOAT:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
-    .line 212
+    .line 5
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     const/4 v5, 0x4
@@ -111,7 +111,7 @@
 
     sput-object v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->STRING:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
-    .line 213
+    .line 6
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     const/4 v6, 0x5
@@ -128,7 +128,7 @@
 
     new-array v7, v7, [Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
-    .line 207
+    .line 7
     sget-object v8, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->BOOLEAN:Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     aput-object v8, v7, v1
@@ -156,7 +156,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -166,10 +166,10 @@
         }
     .end annotation
 
-    .line 217
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 218
+    .line 2
     iput-object p3, p0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->name:Ljava/lang/String;
 
     return-void
@@ -178,7 +178,7 @@
 .method public static appendNamesList(Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 6
 
-    .line 232
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->values()[Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     move-result-object v0
@@ -202,11 +202,11 @@
 
     goto :goto_1
 
-    .line 236
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 238
+    .line 3
     :goto_1
     iget-object v5, v5, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->name:Ljava/lang/String;
 
@@ -223,7 +223,7 @@
 .method public static of(Ljava/lang/String;)Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
     .locals 5
 
-    .line 222
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->values()[Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     move-result-object v0
@@ -237,7 +237,7 @@
 
     aget-object v3, v0, v2
 
-    .line 223
+    .line 2
     iget-object v4, v3, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->name:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -262,7 +262,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
     .locals 1
 
-    .line 207
+    .line 1
     const-class v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -277,7 +277,7 @@
 .method public static values()[Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
     .locals 1
 
-    .line 207
+    .line 1
     sget-object v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->$VALUES:[Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;
 
     invoke-virtual {v0}, [Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin$Type;->clone()Ljava/lang/Object;

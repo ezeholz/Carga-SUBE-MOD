@@ -3,14 +3,14 @@
 .source "AndroidDocumentProviderFactory.java"
 
 # interfaces
-.implements Lcom/facebook/stetho/common/ThreadBound;
 .implements Lcom/facebook/stetho/inspector/elements/DocumentProviderFactory;
+.implements Lcom/facebook/stetho/common/ThreadBound;
 
 
 # instance fields
-.field private final mApplication:Landroid/app/Application;
+.field public final mApplication:Landroid/app/Application;
 
-.field private final mDescriptorProviders:Ljava/util/List;
+.field public final mDescriptorProviders:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -20,7 +20,7 @@
     .end annotation
 .end field
 
-.field private final mHandler:Landroid/os/Handler;
+.field public final mHandler:Landroid/os/Handler;
 
 
 # direct methods
@@ -36,10 +36,10 @@
         }
     .end annotation
 
-    .line 34
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -48,7 +48,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mApplication:Landroid/app/Application;
 
-    .line 36
+    .line 3
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -57,7 +57,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mDescriptorProviders:Ljava/util/List;
 
-    .line 37
+    .line 4
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -73,10 +73,10 @@
 
 
 # virtual methods
-.method public final checkThreadAccess()Z
+.method public checkThreadAccess()Z
     .locals 1
 
-    .line 48
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mHandler:Landroid/os/Handler;
 
     invoke-static {v0}, Lcom/facebook/stetho/common/android/HandlerUtil;->checkThreadAccess(Landroid/os/Handler;)Z
@@ -86,10 +86,10 @@
     return v0
 .end method
 
-.method public final create()Lcom/facebook/stetho/inspector/elements/DocumentProvider;
+.method public create()Lcom/facebook/stetho/inspector/elements/DocumentProvider;
     .locals 3
 
-    .line 42
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mApplication:Landroid/app/Application;
@@ -101,7 +101,7 @@
     return-object v0
 .end method
 
-.method public final postAndWait(Lcom/facebook/stetho/common/UncheckedCallable;)Ljava/lang/Object;
+.method public postAndWait(Lcom/facebook/stetho/common/UncheckedCallable;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -113,7 +113,7 @@
         }
     .end annotation
 
-    .line 58
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mHandler:Landroid/os/Handler;
 
     invoke-static {v0, p1}, Lcom/facebook/stetho/common/android/HandlerUtil;->postAndWait(Landroid/os/Handler;Lcom/facebook/stetho/common/UncheckedCallable;)Ljava/lang/Object;
@@ -123,10 +123,10 @@
     return-object p1
 .end method
 
-.method public final postAndWait(Ljava/lang/Runnable;)V
+.method public postAndWait(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 63
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mHandler:Landroid/os/Handler;
 
     invoke-static {v0, p1}, Lcom/facebook/stetho/common/android/HandlerUtil;->postAndWait(Landroid/os/Handler;Ljava/lang/Runnable;)V
@@ -134,10 +134,10 @@
     return-void
 .end method
 
-.method public final postDelayed(Ljava/lang/Runnable;J)V
+.method public postDelayed(Ljava/lang/Runnable;J)V
     .locals 1
 
-    .line 68
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -148,7 +148,7 @@
 
     return-void
 
-    .line 69
+    .line 2
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -159,10 +159,10 @@
     throw p1
 .end method
 
-.method public final removeCallbacks(Ljava/lang/Runnable;)V
+.method public removeCallbacks(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 75
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -170,10 +170,10 @@
     return-void
 .end method
 
-.method public final verifyThreadAccess()V
+.method public verifyThreadAccess()V
     .locals 1
 
-    .line 53
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProviderFactory;->mHandler:Landroid/os/Handler;
 
     invoke-static {v0}, Lcom/facebook/stetho/common/android/HandlerUtil;->verifyThreadAccess(Landroid/os/Handler;)V

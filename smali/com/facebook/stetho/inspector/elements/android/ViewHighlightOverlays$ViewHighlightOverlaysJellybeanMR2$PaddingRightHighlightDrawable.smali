@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$PaddingRightHighlightDrawable;
+.class public Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$PaddingRightHighlightDrawable;
 .super Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;
 .source "ViewHighlightOverlays.java"
 
@@ -9,18 +9,18 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "PaddingRightHighlightDrawable"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     const v0, -0x5541254a
 
-    .line 178
+    .line 1
     invoke-direct {p0, v0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;-><init>(I)V
 
     return-void
@@ -28,18 +28,18 @@
 
 
 # virtual methods
-.method highlightView(Landroid/view/View;)V
+.method public highlightView(Landroid/view/View;)V
     .locals 3
 
-    .line 183
+    .line 1
     invoke-super {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->highlightView(Landroid/view/View;)V
 
-    .line 184
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$PaddingRightHighlightDrawable;->mPaddings:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mPaddings:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
@@ -55,7 +55,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v0, v2, v1, p1}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$PaddingRightHighlightDrawable;->setBounds(IIII)V
+    invoke-virtual {p0, v0, v2, v1, p1}, Landroid/graphics/drawable/ColorDrawable;->setBounds(IIII)V
 
     return-void
 .end method

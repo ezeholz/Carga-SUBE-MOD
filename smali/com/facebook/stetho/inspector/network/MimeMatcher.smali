@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field private final mRuleMap:Ljava/util/ArrayList;
+.field public final mRuleMap:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -36,10 +36,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 18
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -61,7 +61,7 @@
         }
     .end annotation
 
-    .line 29
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/MimeMatcher;->mRuleMap:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/facebook/stetho/inspector/network/MimeMatcher$MimeMatcherRule;
@@ -76,7 +76,7 @@
 .method public clear()V
     .locals 1
 
-    .line 33
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/MimeMatcher;->mRuleMap:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -94,7 +94,7 @@
         }
     .end annotation
 
-    .line 38
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/MimeMatcher;->mRuleMap:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -106,7 +106,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 40
+    .line 2
     iget-object v2, p0, Lcom/facebook/stetho/inspector/network/MimeMatcher;->mRuleMap:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -115,14 +115,14 @@
 
     check-cast v2, Lcom/facebook/stetho/inspector/network/MimeMatcher$MimeMatcherRule;
 
-    .line 41
+    .line 3
     invoke-virtual {v2, p1}, Lcom/facebook/stetho/inspector/network/MimeMatcher$MimeMatcherRule;->match(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 42
+    .line 4
     invoke-virtual {v2}, Lcom/facebook/stetho/inspector/network/MimeMatcher$MimeMatcherRule;->getResultIfMatched()Ljava/lang/Object;
 
     move-result-object p1

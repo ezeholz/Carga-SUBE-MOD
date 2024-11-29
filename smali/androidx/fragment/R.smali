@@ -6,6 +6,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/fragment/R$anim;,
+        Landroidx/fragment/R$animator;,
         Landroidx/fragment/R$attr;,
         Landroidx/fragment/R$color;,
         Landroidx/fragment/R$dimen;,
@@ -21,7 +22,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

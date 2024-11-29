@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->doOnTextChanged(Landroid/widget/TextView;Lkotlin/d/a/r;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->doOnTextChanged(Landroid/widget/TextView;Lj/m/b/r;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic $onTextChanged:Lkotlin/d/a/r;
+.field public final synthetic $onTextChanged:Lj/m/b/r;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/r;)V
+.method public constructor <init>(Lj/m/b/r;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/core/widget/TextViewKt$doOnTextChanged$$inlined$addTextChangedListener$default$1;->$onTextChanged:Lkotlin/d/a/r;
+    iput-object p1, p0, Landroidx/core/widget/TextViewKt$doOnTextChanged$$inlined$addTextChangedListener$default$1;->$onTextChanged:Lj/m/b/r;
 
-    .line 80
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,23 +35,23 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public afterTextChanged(Landroid/text/Editable;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
     return-void
 .end method
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
 
-    .line 90
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$doOnTextChanged$$inlined$addTextChangedListener$default$1;->$onTextChanged:Lkotlin/d/a/r;
+    .line 1
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$doOnTextChanged$$inlined$addTextChangedListener$default$1;->$onTextChanged:Lj/m/b/r;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -65,7 +65,7 @@
 
     move-result-object p4
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/d/a/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lj/m/b/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

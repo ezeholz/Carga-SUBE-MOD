@@ -1,4 +1,4 @@
-.class Landroidx/core/text/BidiFormatter$DirectionalityEstimator;
+.class public Landroidx/core/text/BidiFormatter$DirectionalityEstimator;
 .super Ljava/lang/Object;
 .source "BidiFormatter.java"
 
@@ -9,38 +9,38 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DirectionalityEstimator"
 .end annotation
 
 
 # static fields
-.field private static final DIR_TYPE_CACHE:[B
+.field public static final DIR_TYPE_CACHE:[B
 
-.field private static final DIR_TYPE_CACHE_SIZE:I = 0x700
+.field public static final DIR_TYPE_CACHE_SIZE:I = 0x700
 
 
 # instance fields
-.field private charIndex:I
+.field public charIndex:I
 
-.field private final isHtml:Z
+.field public final isHtml:Z
 
-.field private lastChar:C
+.field public lastChar:C
 
-.field private final length:I
+.field public final length:I
 
-.field private final text:Ljava/lang/CharSequence;
+.field public final text:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     const/16 v0, 0x700
 
     new-array v1, v0, [B
 
-    .line 584
+    .line 1
     sput-object v1, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->DIR_TYPE_CACHE:[B
 
     const/4 v1, 0x0
@@ -48,7 +48,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 586
+    .line 2
     sget-object v2, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->DIR_TYPE_CACHE:[B
 
     invoke-static {v1}, Ljava/lang/Character;->getDirectionality(I)B
@@ -65,19 +65,19 @@
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/CharSequence;Z)V
+.method public constructor <init>(Ljava/lang/CharSequence;Z)V
     .locals 0
 
-    .line 628
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 629
+    .line 2
     iput-object p1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
-    .line 630
+    .line 3
     iput-boolean p2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->isHtml:Z
 
-    .line 631
+    .line 4
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
@@ -87,35 +87,36 @@
     return-void
 .end method
 
-.method private static getCachedDirectionality(C)B
+.method public static getCachedDirectionality(C)B
     .locals 1
 
     const/16 v0, 0x700
 
     if-ge p0, v0, :cond_0
 
-    .line 803
+    .line 1
     sget-object v0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->DIR_TYPE_CACHE:[B
 
     aget-byte p0, v0, p0
 
-    return p0
+    goto :goto_0
 
     :cond_0
     invoke-static {p0}, Ljava/lang/Character;->getDirectionality(C)B
 
     move-result p0
 
+    :goto_0
     return p0
 .end method
 
 .method private skipEntityBackward()B
     .locals 4
 
-    .line 944
+    .line 1
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 945
+    .line 2
     :cond_0
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -123,7 +124,7 @@
 
     if-lez v1, :cond_2
 
-    .line 946
+    .line 3
     iget-object v3, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     add-int/lit8 v1, v1, -0x1
@@ -147,11 +148,11 @@
     :cond_1
     if-ne v1, v2, :cond_0
 
-    .line 954
+    .line 4
     :cond_2
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 955
+    .line 5
     iput-char v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     const/16 v0, 0xd
@@ -162,13 +163,13 @@
 .method private skipEntityForward()B
     .locals 3
 
-    .line 929
-    :cond_0
+    .line 1
+    :goto_0
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->length:I
 
-    if-ge v0, v1, :cond_1
+    if-ge v0, v1, :cond_0
 
     iget-object v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
@@ -184,9 +185,11 @@
 
     const/16 v1, 0x3b
 
-    if-ne v0, v1, :cond_0
+    if-eq v0, v1, :cond_0
 
-    :cond_1
+    goto :goto_0
+
+    :cond_0
     const/16 v0, 0xc
 
     return v0
@@ -195,19 +198,18 @@
 .method private skipTagBackward()B
     .locals 4
 
-    .line 901
+    .line 1
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 902
+    .line 2
     :cond_0
-    :goto_0
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     const/16 v2, 0x3e
 
     if-lez v1, :cond_4
 
-    .line 903
+    .line 3
     iget-object v3, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     add-int/lit8 v1, v1, -0x1
@@ -229,22 +231,25 @@
     return v0
 
     :cond_1
-    if-eq v1, v2, :cond_4
+    if-ne v1, v2, :cond_2
 
+    goto :goto_1
+
+    :cond_2
     const/16 v2, 0x22
 
-    if-eq v1, v2, :cond_2
+    if-eq v1, v2, :cond_3
 
     const/16 v2, 0x27
 
     if-ne v1, v2, :cond_0
 
-    .line 913
-    :cond_2
+    .line 4
+    :cond_3
     iget-char v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
-    .line 914
-    :cond_3
+    .line 5
+    :goto_0
     iget v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     if-lez v2, :cond_0
@@ -261,15 +266,16 @@
 
     iput-char v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
-    if-ne v2, v1, :cond_3
+    if-eq v2, v1, :cond_0
 
     goto :goto_0
 
-    .line 918
+    .line 6
     :cond_4
+    :goto_1
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 919
+    .line 7
     iput-char v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     const/16 v0, 0xd
@@ -280,19 +286,18 @@
 .method private skipTagForward()B
     .locals 5
 
-    .line 872
+    .line 1
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 873
+    .line 2
     :cond_0
-    :goto_0
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     iget v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->length:I
 
-    if-ge v1, v2, :cond_4
+    if-ge v1, v2, :cond_3
 
-    .line 874
+    .line 3
     iget-object v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     add-int/lit8 v3, v1, 0x1
@@ -322,12 +327,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 881
+    .line 4
     :cond_2
     iget-char v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
-    .line 882
-    :cond_3
+    .line 5
+    :goto_0
     iget v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     iget v3, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->length:I
@@ -346,17 +351,17 @@
 
     iput-char v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
-    if-ne v2, v1, :cond_3
+    if-eq v2, v1, :cond_0
 
     goto :goto_0
 
-    .line 886
-    :cond_4
+    .line 6
+    :cond_3
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     const/16 v0, 0x3c
 
-    .line 887
+    .line 7
     iput-char v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     const/16 v0, 0xd
@@ -366,10 +371,10 @@
 
 
 # virtual methods
-.method dirTypeBackward()B
+.method public dirTypeBackward()B
     .locals 3
 
-    .line 846
+    .line 1
     iget-object v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -382,14 +387,14 @@
 
     iput-char v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
-    .line 847
+    .line 2
     invoke-static {v0}, Ljava/lang/Character;->isLowSurrogate(C)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 848
+    .line 3
     iget-object v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -398,7 +403,7 @@
 
     move-result v0
 
-    .line 849
+    .line 4
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
@@ -409,14 +414,14 @@
 
     iput v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 850
+    .line 5
     invoke-static {v0}, Ljava/lang/Character;->getDirectionality(I)B
 
     move-result v0
 
     return v0
 
-    .line 852
+    .line 6
     :cond_0
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -424,26 +429,26 @@
 
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 853
+    .line 7
     iget-char v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     invoke-static {v0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->getCachedDirectionality(C)B
 
     move-result v0
 
-    .line 854
+    .line 8
     iget-boolean v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->isHtml:Z
 
     if-eqz v1, :cond_2
 
-    .line 856
+    .line 9
     iget-char v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     const/16 v2, 0x3e
 
     if-ne v1, v2, :cond_1
 
-    .line 857
+    .line 10
     invoke-direct {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->skipTagBackward()B
 
     move-result v0
@@ -455,7 +460,7 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 859
+    .line 11
     invoke-direct {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->skipEntityBackward()B
 
     move-result v0
@@ -465,10 +470,10 @@
     return v0
 .end method
 
-.method dirTypeForward()B
+.method public dirTypeForward()B
     .locals 3
 
-    .line 816
+    .line 1
     iget-object v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -479,14 +484,14 @@
 
     iput-char v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
-    .line 817
+    .line 2
     invoke-static {v0}, Ljava/lang/Character;->isHighSurrogate(C)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 818
+    .line 3
     iget-object v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->text:Ljava/lang/CharSequence;
 
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -495,25 +500,25 @@
 
     move-result v0
 
-    .line 819
+    .line 4
     iget v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
 
     move-result v2
 
-    add-int/2addr v1, v2
+    add-int/2addr v2, v1
 
-    iput v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
+    iput v2, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 820
+    .line 5
     invoke-static {v0}, Ljava/lang/Character;->getDirectionality(I)B
 
     move-result v0
 
     return v0
 
-    .line 822
+    .line 6
     :cond_0
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -521,26 +526,26 @@
 
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
-    .line 823
+    .line 7
     iget-char v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     invoke-static {v0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->getCachedDirectionality(C)B
 
     move-result v0
 
-    .line 824
+    .line 8
     iget-boolean v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->isHtml:Z
 
     if-eqz v1, :cond_2
 
-    .line 826
+    .line 9
     iget-char v1, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     const/16 v2, 0x3c
 
     if-ne v1, v2, :cond_1
 
-    .line 827
+    .line 10
     invoke-direct {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->skipTagForward()B
 
     move-result v0
@@ -552,7 +557,7 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 829
+    .line 11
     invoke-direct {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->skipEntityForward()B
 
     move-result v0
@@ -562,12 +567,12 @@
     return v0
 .end method
 
-.method getEntryDir()I
+.method public getEntryDir()I
     .locals 8
 
     const/4 v0, 0x0
 
-    .line 646
+    .line 1
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     const/4 v1, -0x1
@@ -580,7 +585,7 @@
 
     const/4 v5, 0x0
 
-    .line 650
+    .line 2
     :cond_0
     :goto_0
     iget v6, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -591,7 +596,7 @@
 
     if-nez v3, :cond_4
 
-    .line 651
+    .line 3
     invoke-virtual {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->dirTypeForward()B
 
     move-result v6
@@ -659,14 +664,14 @@
 
     return v4
 
-    .line 706
+    .line 4
     :cond_6
     :goto_2
     iget v4, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     if-lez v4, :cond_8
 
-    .line 707
+    .line 5
     invoke-virtual {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->dirTypeBackward()B
 
     move-result v4
@@ -717,10 +722,10 @@
     .end packed-switch
 .end method
 
-.method getExitDir()I
+.method public getExitDir()I
     .locals 7
 
-    .line 744
+    .line 1
     iget v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->length:I
 
     iput v0, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -731,14 +736,14 @@
 
     const/4 v2, 0x0
 
-    .line 747
+    .line 2
     :cond_0
     :goto_0
     iget v3, p0, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     if-lez v3, :cond_6
 
-    .line 748
+    .line 3
     invoke-virtual {p0}, Landroidx/core/text/BidiFormatter$DirectionalityEstimator;->dirTypeBackward()B
 
     move-result v3

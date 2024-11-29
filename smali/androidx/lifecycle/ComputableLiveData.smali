@@ -4,6 +4,12 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -15,15 +21,18 @@
 
 
 # instance fields
-.field final mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final mExecutor:Ljava/util/concurrent/Executor;
+.field public final mExecutor:Ljava/util/concurrent/Executor;
 
-.field final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final mInvalidationRunnable:Ljava/lang/Runnable;
+.field public final mInvalidationRunnable:Ljava/lang/Runnable;
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
-.field final mLiveData:Landroidx/lifecycle/LiveData;
+.field public final mLiveData:Landroidx/lifecycle/LiveData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/LiveData<",
@@ -32,14 +41,17 @@
     .end annotation
 .end field
 
-.field final mRefreshRunnable:Ljava/lang/Runnable;
+.field public final mRefreshRunnable:Ljava/lang/Runnable;
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 56
+    .line 1
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getIOThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -51,11 +63,15 @@
 
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 65
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -64,7 +80,7 @@
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 48
+    .line 4
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -73,24 +89,24 @@
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 86
+    .line 5
     new-instance v0, Landroidx/lifecycle/ComputableLiveData$2;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ComputableLiveData$2;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mRefreshRunnable:Ljava/lang/Runnable;
 
-    .line 123
+    .line 6
     new-instance v0, Landroidx/lifecycle/ComputableLiveData$3;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ComputableLiveData$3;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
 
     iput-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mInvalidationRunnable:Ljava/lang/Runnable;
 
-    .line 66
+    .line 7
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 67
+    .line 8
     new-instance p1, Landroidx/lifecycle/ComputableLiveData$1;
 
     invoke-direct {p1, p0}, Landroidx/lifecycle/ComputableLiveData$1;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
@@ -102,7 +118,10 @@
 
 
 # virtual methods
-.method protected abstract compute()Ljava/lang/Object;
+.method public abstract compute()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/WorkerThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -112,6 +131,9 @@
 
 .method public getLiveData()Landroidx/lifecycle/LiveData;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -120,7 +142,7 @@
         }
     .end annotation
 
-    .line 83
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mLiveData:Landroidx/lifecycle/LiveData;
 
     return-object v0
@@ -129,14 +151,14 @@
 .method public invalidate()V
     .locals 2
 
-    .line 143
+    .line 1
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/lifecycle/ComputableLiveData;->mInvalidationRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Landroidx/arch/core/executor/ArchTaskExecutor;->executeOnMainThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroidx/arch/core/executor/TaskExecutor;->executeOnMainThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

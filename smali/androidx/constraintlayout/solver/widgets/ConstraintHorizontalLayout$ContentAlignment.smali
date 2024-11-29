@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
+.field public static final synthetic $VALUES:[Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
 .field public static final enum BEGIN:Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
@@ -43,10 +43,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 11
 
-    .line 27
+    .line 1
     new-instance v0, Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
     const/4 v1, 0x0
@@ -131,7 +131,7 @@
 
     new-array v9, v9, [Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
-    .line 26
+    .line 2
     sget-object v10, Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;->BEGIN:Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
     aput-object v10, v9, v1
@@ -167,7 +167,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -175,7 +175,7 @@
         }
     .end annotation
 
-    .line 26
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -184,7 +184,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
     .locals 1
 
-    .line 26
+    .line 1
     const-class v0, Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -199,7 +199,7 @@
 .method public static values()[Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
     .locals 1
 
-    .line 26
+    .line 1
     sget-object v0, Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;->$VALUES:[Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;
 
     invoke-virtual {v0}, [Landroidx/constraintlayout/solver/widgets/ConstraintHorizontalLayout$ContentAlignment;->clone()Ljava/lang/Object;

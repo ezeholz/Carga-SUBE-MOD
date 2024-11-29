@@ -1,4 +1,4 @@
-.class Landroidx/gridlayout/widget/GridLayout$Bounds;
+.class public Landroidx/gridlayout/widget/GridLayout$Bounds;
 .super Ljava/lang/Object;
 .source "GridLayout.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Bounds"
 .end annotation
 
@@ -23,13 +23,13 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2267
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2268
+    .line 2
     invoke-virtual {p0}, Landroidx/gridlayout/widget/GridLayout$Bounds;->reset()V
 
     return-void
@@ -37,10 +37,10 @@
 
 
 # virtual methods
-.method protected getOffset(Landroidx/gridlayout/widget/GridLayout;Landroid/view/View;Landroidx/gridlayout/widget/GridLayout$Alignment;IZ)I
+.method public getOffset(Landroidx/gridlayout/widget/GridLayout;Landroid/view/View;Landroidx/gridlayout/widget/GridLayout$Alignment;IZ)I
     .locals 0
 
-    .line 2292
+    .line 1
     iget p5, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->before:I
 
     invoke-static {p1}, Landroidx/core/view/ViewGroupCompat;->getLayoutMode(Landroid/view/ViewGroup;)I
@@ -56,10 +56,10 @@
     return p5
 .end method
 
-.method protected include(II)V
+.method public include(II)V
     .locals 1
 
-    .line 2278
+    .line 1
     iget v0, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->before:I
 
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
@@ -68,7 +68,7 @@
 
     iput p1, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->before:I
 
-    .line 2279
+    .line 2
     iget p1, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->after:I
 
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
@@ -80,10 +80,10 @@
     return-void
 .end method
 
-.method protected final include(Landroidx/gridlayout/widget/GridLayout;Landroid/view/View;Landroidx/gridlayout/widget/GridLayout$Spec;Landroidx/gridlayout/widget/GridLayout$Axis;I)V
+.method public final include(Landroidx/gridlayout/widget/GridLayout;Landroid/view/View;Landroidx/gridlayout/widget/GridLayout$Spec;Landroidx/gridlayout/widget/GridLayout$Axis;I)V
     .locals 2
 
-    .line 2296
+    .line 3
     iget v0, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->flexibility:I
 
     invoke-virtual {p3}, Landroidx/gridlayout/widget/GridLayout$Spec;->getFlexibility()I
@@ -94,15 +94,15 @@
 
     iput v0, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->flexibility:I
 
-    .line 2297
+    .line 4
     iget-boolean p4, p4, Landroidx/gridlayout/widget/GridLayout$Axis;->horizontal:Z
 
-    .line 2298
+    .line 5
     invoke-virtual {p3, p4}, Landroidx/gridlayout/widget/GridLayout$Spec;->getAbsoluteAlignment(Z)Landroidx/gridlayout/widget/GridLayout$Alignment;
 
     move-result-object p3
 
-    .line 2300
+    .line 6
     invoke-static {p1}, Landroidx/core/view/ViewGroupCompat;->getLayoutMode(Landroid/view/ViewGroup;)I
 
     move-result p1
@@ -113,37 +113,37 @@
 
     sub-int/2addr p5, p1
 
-    .line 2301
+    .line 7
     invoke-virtual {p0, p1, p5}, Landroidx/gridlayout/widget/GridLayout$Bounds;->include(II)V
 
     return-void
 .end method
 
-.method protected reset()V
+.method public reset()V
     .locals 1
 
     const/high16 v0, -0x80000000
 
-    .line 2272
+    .line 1
     iput v0, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->before:I
 
-    .line 2273
+    .line 2
     iput v0, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->after:I
 
     const/4 v0, 0x2
 
-    .line 2274
+    .line 3
     iput v0, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->flexibility:I
 
     return-void
 .end method
 
-.method protected size(Z)I
+.method public size(Z)I
     .locals 1
 
     if-nez p1, :cond_0
 
-    .line 2284
+    .line 1
     iget p1, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->flexibility:I
 
     invoke-static {p1}, Landroidx/gridlayout/widget/GridLayout;->canStretch(I)Z
@@ -156,7 +156,7 @@
 
     return p1
 
-    .line 2288
+    .line 2
     :cond_0
     iget p1, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->before:I
 
@@ -170,12 +170,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 2306
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Bounds{before="
 
-    const-string v1, "Bounds{before="
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget v1, p0, Landroidx/gridlayout/widget/GridLayout$Bounds;->before:I
 

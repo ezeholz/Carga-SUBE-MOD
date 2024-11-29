@@ -1,5 +1,5 @@
 .class public final Landroidx/lifecycle/PausingDispatcher;
-.super Lkotlinx/coroutines/o;
+.super Le/a/w;
 .source "PausingDispatcher.kt"
 
 
@@ -11,10 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 175
-    invoke-direct {p0}, Lkotlinx/coroutines/o;-><init>()V
+    .line 1
+    invoke-direct {p0}, Le/a/w;-><init>()V
 
-    .line 180
+    .line 2
     new-instance v0, Landroidx/lifecycle/DispatchQueue;
 
     invoke-direct {v0}, Landroidx/lifecycle/DispatchQueue;-><init>()V
@@ -26,18 +26,18 @@
 
 
 # virtual methods
-.method public final dispatch(Lkotlin/b/f;Ljava/lang/Runnable;)V
+.method public dispatch(Lj/k/f;Ljava/lang/Runnable;)V
     .locals 1
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p1, "block"
 
-    invoke-static {p2, p1}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 184
+    .line 1
     iget-object p1, p0, Landroidx/lifecycle/PausingDispatcher;->dispatchQueue:Landroidx/lifecycle/DispatchQueue;
 
     invoke-virtual {p1, p2}, Landroidx/lifecycle/DispatchQueue;->runOrEnqueue(Ljava/lang/Runnable;)V

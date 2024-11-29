@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/TooltipCompatHandler$1;
+.class public Landroidx/appcompat/widget/TooltipCompatHandler$1;
 .super Ljava/lang/Object;
 .source "TooltipCompatHandler.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/TooltipCompatHandler;
+.field public final synthetic this$0:Landroidx/appcompat/widget/TooltipCompatHandler;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/TooltipCompatHandler;)V
+.method public constructor <init>(Landroidx/appcompat/widget/TooltipCompatHandler;)V
     .locals 0
 
-    .line 54
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/TooltipCompatHandler$1;->this$0:Landroidx/appcompat/widget/TooltipCompatHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 57
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipCompatHandler$1;->this$0:Landroidx/appcompat/widget/TooltipCompatHandler;
 
     const/4 v1, 0x0

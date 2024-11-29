@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/media/AudioAttributesImpl;
+.class public interface abstract Landroidx/media/AudioAttributesImpl;
 .super Ljava/lang/Object;
 .source "AudioAttributesImpl.java"
 
@@ -29,4 +29,6 @@
 .end method
 
 .method public abstract toBundle()Landroid/os/Bundle;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method

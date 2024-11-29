@@ -1,4 +1,4 @@
-.class Landroidx/collection/ArraySet$1;
+.class public Landroidx/collection/ArraySet$1;
 .super Landroidx/collection/MapCollections;
 .source "ArraySet.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -22,14 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/collection/ArraySet;
+.field public final synthetic this$0:Landroidx/collection/ArraySet;
 
 
 # direct methods
-.method constructor <init>(Landroidx/collection/ArraySet;)V
+.method public constructor <init>(Landroidx/collection/ArraySet;)V
     .locals 0
 
-    .line 635
+    .line 1
     iput-object p1, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     invoke-direct {p0}, Landroidx/collection/MapCollections;-><init>()V
@@ -39,10 +39,10 @@
 
 
 # virtual methods
-.method protected colClear()V
+.method public colClear()V
     .locals 1
 
-    .line 678
+    .line 1
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     invoke-virtual {v0}, Landroidx/collection/ArraySet;->clear()V
@@ -50,10 +50,10 @@
     return-void
 .end method
 
-.method protected colGetEntry(II)Ljava/lang/Object;
+.method public colGetEntry(II)Ljava/lang/Object;
     .locals 0
 
-    .line 643
+    .line 1
     iget-object p2, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     iget-object p2, p2, Landroidx/collection/ArraySet;->mArray:[Ljava/lang/Object;
@@ -63,7 +63,7 @@
     return-object p1
 .end method
 
-.method protected colGetMap()Ljava/util/Map;
+.method public colGetMap()Ljava/util/Map;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -73,7 +73,7 @@
         }
     .end annotation
 
-    .line 658
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "not a map"
@@ -83,10 +83,10 @@
     throw v0
 .end method
 
-.method protected colGetSize()I
+.method public colGetSize()I
     .locals 1
 
-    .line 638
+    .line 1
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     iget v0, v0, Landroidx/collection/ArraySet;->mSize:I
@@ -94,10 +94,10 @@
     return v0
 .end method
 
-.method protected colIndexOfKey(Ljava/lang/Object;)I
+.method public colIndexOfKey(Ljava/lang/Object;)I
     .locals 1
 
-    .line 648
+    .line 1
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     invoke-virtual {v0, p1}, Landroidx/collection/ArraySet;->indexOf(Ljava/lang/Object;)I
@@ -107,10 +107,10 @@
     return p1
 .end method
 
-.method protected colIndexOfValue(Ljava/lang/Object;)I
+.method public colIndexOfValue(Ljava/lang/Object;)I
     .locals 1
 
-    .line 653
+    .line 1
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     invoke-virtual {v0, p1}, Landroidx/collection/ArraySet;->indexOf(Ljava/lang/Object;)I
@@ -120,7 +120,7 @@
     return p1
 .end method
 
-.method protected colPut(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public colPut(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -128,7 +128,7 @@
         }
     .end annotation
 
-    .line 663
+    .line 1
     iget-object p2, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     invoke-virtual {p2, p1}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
@@ -136,10 +136,10 @@
     return-void
 .end method
 
-.method protected colRemoveAt(I)V
+.method public colRemoveAt(I)V
     .locals 1
 
-    .line 673
+    .line 1
     iget-object v0, p0, Landroidx/collection/ArraySet$1;->this$0:Landroidx/collection/ArraySet;
 
     invoke-virtual {v0, p1}, Landroidx/collection/ArraySet;->removeAt(I)Ljava/lang/Object;
@@ -147,7 +147,7 @@
     return-void
 .end method
 
-.method protected colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
+.method public colSetValue(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -155,7 +155,7 @@
         }
     .end annotation
 
-    .line 668
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "not a map"

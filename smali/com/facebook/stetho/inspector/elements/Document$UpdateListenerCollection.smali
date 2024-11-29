@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;
+.class public Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;
 .super Ljava/lang/Object;
 .source "Document.java"
 
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "UpdateListenerCollection"
 .end annotation
 
 
 # instance fields
-.field private final mListeners:Ljava/util/List;
+.field public final mListeners:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -28,21 +28,21 @@
     .end annotation
 .end field
 
-.field private volatile mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
+.field public volatile mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;)V
     .locals 0
 
-    .line 605
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 606
+    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -55,7 +55,7 @@
 .method private getListenersSnapshot()[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
     .locals 2
 
-    .line 626
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
@@ -63,17 +63,17 @@
 
     return-object v0
 
-    .line 630
+    .line 2
     :cond_0
     monitor-enter p0
 
-    .line 631
+    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     if-nez v0, :cond_1
 
-    .line 632
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListeners:Ljava/util/List;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListeners:Ljava/util/List;
@@ -92,14 +92,14 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
-    .line 633
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     monitor-exit p0
 
     return-object v0
 
-    .line 635
+    .line 6
     :cond_1
     monitor-exit p0
 
@@ -128,7 +128,7 @@
 
     monitor-enter p0
 
-    .line 610
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListeners:Ljava/util/List;
 
@@ -136,12 +136,12 @@
 
     const/4 p1, 0x0
 
-    .line 611
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 612
+    .line 3
     monitor-exit p0
 
     return-void
@@ -159,7 +159,7 @@
 
     monitor-enter p0
 
-    .line 620
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListeners:Ljava/util/List;
 
@@ -167,12 +167,12 @@
 
     const/4 v0, 0x0
 
-    .line 621
+    .line 2
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 622
+    .line 3
     monitor-exit p0
 
     return-void
@@ -188,7 +188,7 @@
 .method public onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    .line 641
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->getListenersSnapshot()[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     move-result-object v0
@@ -202,7 +202,7 @@
 
     aget-object v3, v0, v2
 
-    .line 642
+    .line 2
     invoke-interface {v3, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;->onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -216,7 +216,7 @@
 .method public onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 4
 
-    .line 648
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->getListenersSnapshot()[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     move-result-object v0
@@ -230,7 +230,7 @@
 
     aget-object v3, v0, v2
 
-    .line 649
+    .line 2
     invoke-interface {v3, p1, p2}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;->onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -255,7 +255,7 @@
         }
     .end annotation
 
-    .line 674
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->getListenersSnapshot()[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     move-result-object v0
@@ -279,7 +279,7 @@
 
     move-object v8, p5
 
-    .line 675
+    .line 2
     invoke-interface/range {v3 .. v8}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;->onChildNodeInserted(Lcom/facebook/stetho/inspector/elements/DocumentView;Ljava/lang/Object;IILcom/facebook/stetho/common/Accumulator;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -293,7 +293,7 @@
 .method public onChildNodeRemoved(II)V
     .locals 4
 
-    .line 662
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->getListenersSnapshot()[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     move-result-object v0
@@ -307,7 +307,7 @@
 
     aget-object v3, v0, v2
 
-    .line 663
+    .line 2
     invoke-interface {v3, p1, p2}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;->onChildNodeRemoved(II)V
 
     add-int/lit8 v2, v2, 0x1
@@ -321,7 +321,7 @@
 .method public onInspectRequested(Ljava/lang/Object;)V
     .locals 4
 
-    .line 655
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->getListenersSnapshot()[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
 
     move-result-object v0
@@ -335,7 +335,7 @@
 
     aget-object v3, v0, v2
 
-    .line 656
+    .line 2
     invoke-interface {v3, p1}, Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;->onInspectRequested(Ljava/lang/Object;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -351,7 +351,7 @@
 
     monitor-enter p0
 
-    .line 615
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListeners:Ljava/util/List;
 
@@ -359,12 +359,12 @@
 
     const/4 p1, 0x0
 
-    .line 616
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;->mListenersSnapshot:[Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 617
+    .line 3
     monitor-exit p0
 
     return-void

@@ -8,4 +8,6 @@
 
 # virtual methods
 .method public abstract getOnBackPressedDispatcher()Landroidx/activity/OnBackPressedDispatcher;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method

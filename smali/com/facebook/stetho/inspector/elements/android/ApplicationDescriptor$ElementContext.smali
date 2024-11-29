@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;
+.class public Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;
 .super Ljava/lang/Object;
 .source "ApplicationDescriptor.java"
 
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "ElementContext"
 .end annotation
 
 
 # instance fields
-.field private mElement:Landroid/app/Application;
+.field public mElement:Landroid/app/Application;
 
-.field private final mListener:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;
+.field public final mListener:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;)V
     .locals 0
 
-    .line 96
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;->this$0:Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 113
+    .line 2
     new-instance p1, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext$1;
 
     invoke-direct {p1, p0}, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext$1;-><init>(Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;)V
@@ -55,7 +55,7 @@
         }
     .end annotation
 
-    .line 110
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;->this$0:Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;->access$000(Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;)Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
@@ -72,10 +72,10 @@
 .method public hook(Landroid/app/Application;)V
     .locals 1
 
-    .line 100
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;->mElement:Landroid/app/Application;
 
-    .line 101
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;->this$0:Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;
 
     invoke-static {p1}, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;->access$000(Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;)Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
@@ -92,7 +92,7 @@
 .method public unhook()V
     .locals 2
 
-    .line 105
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;->this$0:Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;->access$000(Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;)Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
@@ -105,7 +105,7 @@
 
     const/4 v0, 0x0
 
-    .line 106
+    .line 2
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor$ElementContext;->mElement:Landroid/app/Application;
 
     return-void

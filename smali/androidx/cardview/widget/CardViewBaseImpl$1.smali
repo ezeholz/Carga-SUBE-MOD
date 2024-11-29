@@ -1,4 +1,4 @@
-.class Landroidx/cardview/widget/CardViewBaseImpl$1;
+.class public Landroidx/cardview/widget/CardViewBaseImpl$1;
 .super Ljava/lang/Object;
 .source "CardViewBaseImpl.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/cardview/widget/CardViewBaseImpl;
+.field public final synthetic this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/cardview/widget/CardViewBaseImpl;)V
+.method public constructor <init>(Landroidx/cardview/widget/CardViewBaseImpl;)V
     .locals 0
 
-    .line 38
+    .line 1
     iput-object p1, p0, Landroidx/cardview/widget/CardViewBaseImpl$1;->this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
     mul-float v1, v1, p3
 
-    .line 43
+    .line 1
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/RectF;->width()F
 
     move-result v2
@@ -59,7 +59,7 @@
 
     sub-float v10, v2, v9
 
-    .line 44
+    .line 2
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/RectF;->height()F
 
     move-result v2
@@ -76,7 +76,7 @@
 
     add-float v12, p3, v1
 
-    .line 48
+    .line 3
     iget-object v1, v0, Landroidx/cardview/widget/CardViewBaseImpl$1;->this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
     iget-object v1, v1, Landroidx/cardview/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
@@ -85,12 +85,12 @@
 
     invoke-virtual {v1, v2, v2, v12, v12}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 50
+    .line 4
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v13
 
-    .line 51
+    .line 5
     iget v1, v8, Landroid/graphics/RectF;->left:F
 
     add-float/2addr v1, v12
@@ -101,7 +101,7 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 53
+    .line 6
     iget-object v1, v0, Landroidx/cardview/widget/CardViewBaseImpl$1;->this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
     iget-object v2, v1, Landroidx/cardview/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
@@ -120,15 +120,15 @@
 
     const/4 v14, 0x0
 
-    .line 54
+    .line 7
     invoke-virtual {v7, v10, v14}, Landroid/graphics/Canvas;->translate(FF)V
 
     const/high16 v15, 0x42b40000    # 90.0f
 
-    .line 55
+    .line 8
     invoke-virtual {v7, v15}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 56
+    .line 9
     iget-object v1, v0, Landroidx/cardview/widget/CardViewBaseImpl$1;->this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
     iget-object v2, v1, Landroidx/cardview/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
@@ -137,13 +137,13 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 57
+    .line 10
     invoke-virtual {v7, v11, v14}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 58
+    .line 11
     invoke-virtual {v7, v15}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 59
+    .line 12
     iget-object v1, v0, Landroidx/cardview/widget/CardViewBaseImpl$1;->this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
     iget-object v2, v1, Landroidx/cardview/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
@@ -152,13 +152,13 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 60
+    .line 13
     invoke-virtual {v7, v10, v14}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 61
+    .line 14
     invoke-virtual {v7, v15}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 62
+    .line 15
     iget-object v1, v0, Landroidx/cardview/widget/CardViewBaseImpl$1;->this$0:Landroidx/cardview/widget/CardViewBaseImpl;
 
     iget-object v2, v1, Landroidx/cardview/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
@@ -167,10 +167,10 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 63
+    .line 16
     invoke-virtual {v7, v13}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 65
+    .line 17
     iget v1, v8, Landroid/graphics/RectF;->left:F
 
     add-float/2addr v1, v12
@@ -185,24 +185,22 @@
 
     add-float v4, v1, v9
 
-    iget v1, v8, Landroid/graphics/RectF;->top:F
-
-    add-float v5, v1, v12
+    add-float v5, v3, v12
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 69
+    .line 18
     iget v1, v8, Landroid/graphics/RectF;->left:F
 
     add-float/2addr v1, v12
 
     sub-float v2, v1, v9
 
-    iget v1, v8, Landroid/graphics/RectF;->bottom:F
+    iget v5, v8, Landroid/graphics/RectF;->bottom:F
 
-    sub-float v3, v1, v12
+    sub-float v3, v5, v12
 
     iget v1, v8, Landroid/graphics/RectF;->right:F
 
@@ -210,13 +208,11 @@
 
     add-float v4, v1, v9
 
-    iget v5, v8, Landroid/graphics/RectF;->bottom:F
-
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 74
+    .line 19
     :cond_0
     iget v2, v8, Landroid/graphics/RectF;->left:F
 

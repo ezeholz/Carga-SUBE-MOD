@@ -21,7 +21,7 @@
     <string name="abc_search_hint">వెతకండి…</string>
     <string name="abc_searchview_description_clear">ప్రశ్నను తీసివేస్తుంది</string>
     <string name="abc_searchview_description_query">శోధన ప్రశ్న</string>
-    <string name="abc_searchview_description_search">శోధన</string>
+    <string name="abc_searchview_description_search">సెర్చ్</string>
     <string name="abc_searchview_description_submit">ప్రశ్నని సమర్పిస్తుంది</string>
     <string name="abc_searchview_description_voice">వాయిస్ శోధన</string>
     <string name="abc_shareactionprovider_share_with">వీరితో షేర్ చేస్తుంది</string>
@@ -68,6 +68,6 @@
     <string name="common_open_on_phone">ఫోన్‌లో తెరువు</string>
     <string name="common_signin_button_text">సైన్ ఇన్ చేయండి</string>
     <string name="common_signin_button_text_long">Googleతో సైన్ ఇన్ చేయి</string>
-    <string name="search_menu_title">శోధన</string>
+    <string name="search_menu_title">సెర్చ్</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

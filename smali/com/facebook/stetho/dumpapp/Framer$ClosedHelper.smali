@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
+.class public Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;
 .super Ljava/lang/Object;
 .source "Framer.java"
 
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ClosedHelper"
 .end annotation
 
 
 # instance fields
-.field private volatile mClosed:Z
+.field public volatile mClosed:Z
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 246
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/dumpapp/Framer$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/dumpapp/Framer$1;)V
     .locals 0
 
-    .line 246
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
 
     const/4 v0, 0x1
 
-    .line 256
+    .line 1
     iput-boolean v0, p0, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;->mClosed:Z
 
     return-void
@@ -53,14 +53,14 @@
 .method public throwIfClosed()V
     .locals 2
 
-    .line 250
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/dumpapp/Framer$ClosedHelper;->mClosed:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 251
+    .line 2
     :cond_0
     new-instance v0, Ljava/io/IOException;
 

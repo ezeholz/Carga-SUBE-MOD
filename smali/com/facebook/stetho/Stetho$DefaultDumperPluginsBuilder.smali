@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field private final mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
+.field public final mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/facebook/stetho/Stetho$PluginBuilder<",
@@ -32,10 +32,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 204
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 202
+    .line 2
     new-instance v0, Lcom/facebook/stetho/Stetho$PluginBuilder;
 
     const/4 v1, 0x0
@@ -44,7 +44,7 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
 
-    .line 205
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mContext:Landroid/content/Context;
 
     return-void
@@ -53,7 +53,7 @@
 .method private provideIfDesired(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
     .locals 2
 
-    .line 214
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
 
     invoke-interface {p1}, Lcom/facebook/stetho/dumpapp/DumperPlugin;->getName()Ljava/lang/String;
@@ -67,7 +67,7 @@
 
 
 # virtual methods
-.method public final finish()Ljava/lang/Iterable;
+.method public finish()Ljava/lang/Iterable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -78,7 +78,7 @@
         }
     .end annotation
 
-    .line 224
+    .line 1
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/HprofDumperPlugin;
 
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mContext:Landroid/content/Context;
@@ -87,7 +87,7 @@
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->provideIfDesired(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
 
-    .line 225
+    .line 2
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/SharedPreferencesDumperPlugin;
 
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mContext:Landroid/content/Context;
@@ -96,14 +96,14 @@
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->provideIfDesired(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
 
-    .line 226
+    .line 3
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/CrashDumperPlugin;
 
     invoke-direct {v0}, Lcom/facebook/stetho/dumpapp/plugins/CrashDumperPlugin;-><init>()V
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->provideIfDesired(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
 
-    .line 227
+    .line 4
     new-instance v0, Lcom/facebook/stetho/dumpapp/plugins/FilesDumperPlugin;
 
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mContext:Landroid/content/Context;
@@ -112,7 +112,7 @@
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->provideIfDesired(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
 
-    .line 228
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/Stetho$PluginBuilder;->finish()Ljava/lang/Iterable;
@@ -122,10 +122,10 @@
     return-object v0
 .end method
 
-.method public final provide(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
+.method public provide(Lcom/facebook/stetho/dumpapp/DumperPlugin;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
     .locals 2
 
-    .line 209
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
 
     invoke-interface {p1}, Lcom/facebook/stetho/dumpapp/DumperPlugin;->getName()Ljava/lang/String;
@@ -137,10 +137,10 @@
     return-object p0
 .end method
 
-.method public final remove(Ljava/lang/String;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
+.method public remove(Ljava/lang/String;)Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;
     .locals 1
 
-    .line 219
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$DefaultDumperPluginsBuilder;->mDelegate:Lcom/facebook/stetho/Stetho$PluginBuilder;
 
     invoke-virtual {v0, p1}, Lcom/facebook/stetho/Stetho$PluginBuilder;->remove(Ljava/lang/String;)V

@@ -4,18 +4,18 @@
 
 
 # instance fields
-.field public a:S
+.field public d:S
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;S)V
     .locals 0
 
-    .line 9
+    .line 1
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 11
-    iput-short p2, p0, Lcom/sube/subemobileclient/core/operations/common/OperationException;->a:S
+    .line 2
+    iput-short p2, p0, Lcom/sube/subemobileclient/core/operations/common/OperationException;->d:S
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/FastScroller$AnimatorListener;
+.class public Landroidx/recyclerview/widget/FastScroller$AnimatorListener;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "FastScroller.java"
 
@@ -9,29 +9,29 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "AnimatorListener"
 .end annotation
 
 
 # instance fields
-.field private mCanceled:Z
+.field public mCanceled:Z
 
-.field final synthetic this$0:Landroidx/recyclerview/widget/FastScroller;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/FastScroller;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/FastScroller;)V
     .locals 0
 
-    .line 551
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->this$0:Landroidx/recyclerview/widget/FastScroller;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 549
+    .line 2
     iput-boolean p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->mCanceled:Z
 
     return-void
@@ -44,7 +44,7 @@
 
     const/4 p1, 0x1
 
-    .line 572
+    .line 1
     iput-boolean p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->mCanceled:Z
 
     return-void
@@ -53,19 +53,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 557
+    .line 1
     iget-boolean p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->mCanceled:Z
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 558
+    .line 2
     iput-boolean v0, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->mCanceled:Z
 
     return-void
 
-    .line 561
+    .line 3
     :cond_0
     iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->this$0:Landroidx/recyclerview/widget/FastScroller;
 
@@ -87,19 +87,17 @@
 
     if-nez p1, :cond_1
 
-    .line 562
+    .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->this$0:Landroidx/recyclerview/widget/FastScroller;
 
     iput v0, p1, Landroidx/recyclerview/widget/FastScroller;->mAnimationState:I
 
-    .line 563
-    iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->this$0:Landroidx/recyclerview/widget/FastScroller;
-
+    .line 5
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/FastScroller;->setState(I)V
 
-    return-void
+    goto :goto_0
 
-    .line 565
+    .line 6
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->this$0:Landroidx/recyclerview/widget/FastScroller;
 
@@ -107,10 +105,9 @@
 
     iput v0, p1, Landroidx/recyclerview/widget/FastScroller;->mAnimationState:I
 
-    .line 566
-    iget-object p1, p0, Landroidx/recyclerview/widget/FastScroller$AnimatorListener;->this$0:Landroidx/recyclerview/widget/FastScroller;
-
+    .line 7
     invoke-virtual {p1}, Landroidx/recyclerview/widget/FastScroller;->requestRedraw()V
 
+    :goto_0
     return-void
 .end method

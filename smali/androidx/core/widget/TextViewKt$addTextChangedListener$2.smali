@@ -1,14 +1,14 @@
 .class public final Landroidx/core/widget/TextViewKt$addTextChangedListener$2;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "TextView.kt"
 
 # interfaces
-.implements Lkotlin/d/a/r;
+.implements Lj/m/b/r;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->addTextChangedListener$default(Landroid/widget/TextView;Lkotlin/d/a/r;Lkotlin/d/a/r;Lkotlin/d/a/b;ILjava/lang/Object;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->addTextChangedListener$default(Landroid/widget/TextView;Lj/m/b/r;Lj/m/b/r;Lj/m/b/l;ILjava/lang/Object;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,13 +18,13 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/r<",
+        "Lj/m/c/j;",
+        "Lj/m/b/r<",
         "Ljava/lang/CharSequence;",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
-        "Lkotlin/n;",
+        "Lj/i;",
         ">;"
     }
 .end annotation
@@ -35,7 +35,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/core/widget/TextViewKt$addTextChangedListener$2;
@@ -52,17 +52,17 @@
 
     const/4 v0, 0x4
 
-    invoke-direct {p0, v0}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, v0}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 77
+    .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
     check-cast p2, Ljava/lang/Number;
@@ -85,7 +85,7 @@
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/core/widget/TextViewKt$addTextChangedListener$2;->invoke(Ljava/lang/CharSequence;III)V
 
-    sget-object p1, Lkotlin/n;->a:Lkotlin/n;
+    sget-object p1, Lj/i;->a:Lj/i;
 
     return-object p1
 .end method

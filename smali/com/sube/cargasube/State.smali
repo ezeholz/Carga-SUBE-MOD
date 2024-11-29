@@ -4,46 +4,46 @@
 
 
 # static fields
-.field private static final ONCE_LOGGED_IN_KEY:Ljava/lang/String; = "ONCE_LOGGED_IN_KEY"
+.field public static final ONCE_LOGGED_IN_KEY:Ljava/lang/String; = "ONCE_LOGGED_IN_KEY"
 
-.field private static final RATE_ME_MAYBE_CURRENTLY_APPLIED_KEY:Ljava/lang/String; = "RATE_ME_MAYBE_CURRENTLY_APPLIED_KEY"
+.field public static final RATE_ME_MAYBE_CURRENTLY_APPLIED_KEY:Ljava/lang/String; = "RATE_ME_MAYBE_CURRENTLY_APPLIED_KEY"
 
-.field private static final RATE_ME_MAYBE_FIRST_X:I = 0x3
+.field public static final RATE_ME_MAYBE_FIRST_X:I = 0x3
 
-.field private static final RATE_ME_MAYBE_FIRST_Y:I = 0xc
+.field public static final RATE_ME_MAYBE_FIRST_Y:I = 0xc
 
-.field private static final RATE_ME_MAYBE_X_KEY:Ljava/lang/String; = "RATE_ME_MAYBE_X_KEY"
+.field public static final RATE_ME_MAYBE_X_KEY:Ljava/lang/String; = "RATE_ME_MAYBE_X_KEY"
 
-.field private static final RATE_ME_MAYBE_Y_KEY:Ljava/lang/String; = "RATE_ME_MAYBE_Y_KEY"
+.field public static final RATE_ME_MAYBE_Y_KEY:Ljava/lang/String; = "RATE_ME_MAYBE_Y_KEY"
 
-.field private static final RATE_ME_TOUCHED_KEY:Ljava/lang/String; = "RATE_ME_TOUCHED_KEY"
+.field public static final RATE_ME_TOUCHED_KEY:Ljava/lang/String; = "RATE_ME_TOUCHED_KEY"
 
-.field private static final TUTORIAL_SHOWN_KEY:Ljava/lang/String; = "TUTORIAL_SHOWN_KEY"
+.field public static final TUTORIAL_SHOWN_KEY:Ljava/lang/String; = "TUTORIAL_SHOWN_KEY"
 
-.field private static editor:Landroid/content/SharedPreferences$Editor;
+.field public static editor:Landroid/content/SharedPreferences$Editor;
 
-.field private static instance:Lcom/sube/cargasube/State;
+.field public static instance:Lcom/sube/cargasube/State;
 
-.field private static sharedPreferences:Landroid/content/SharedPreferences;
+.field public static sharedPreferences:Landroid/content/SharedPreferences;
 
 
 # instance fields
-.field private tag:Landroid/nfc/Tag;
+.field public tag:Landroid/nfc/Tag;
 
-.field private uid:[B
+.field public uid:[B
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 32
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 2
     invoke-virtual {p0}, Lcom/sube/cargasube/State;->cleanState()V
 
-    .line 34
+    .line 3
     invoke-direct {p0, p1}, Lcom/sube/cargasube/State;->initSharedPreferences(Landroid/content/Context;)V
 
     return-void
@@ -52,7 +52,7 @@
 .method public static getInstance()Lcom/sube/cargasube/State;
     .locals 1
 
-    .line 44
+    .line 4
     sget-object v0, Lcom/sube/cargasube/State;->instance:Lcom/sube/cargasube/State;
 
     return-object v0
@@ -61,12 +61,12 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/sube/cargasube/State;
     .locals 1
 
-    .line 38
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->instance:Lcom/sube/cargasube/State;
 
     if-nez v0, :cond_0
 
-    .line 39
+    .line 2
     new-instance v0, Lcom/sube/cargasube/State;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -77,7 +77,7 @@
 
     sput-object v0, Lcom/sube/cargasube/State;->instance:Lcom/sube/cargasube/State;
 
-    .line 40
+    .line 3
     :cond_0
     sget-object p0, Lcom/sube/cargasube/State;->instance:Lcom/sube/cargasube/State;
 
@@ -87,17 +87,17 @@
 .method private initSharedPreferences(Landroid/content/Context;)V
     .locals 2
 
-    .line 53
+    .line 1
     const-class v0, Lcom/sube/cargasube/State;
 
-    .line 54
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 53
+    .line 3
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
@@ -112,16 +112,16 @@
 .method public addOneRateMeMaybeCurrentlyApplied()V
     .locals 3
 
-    .line 144
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 145
     sput-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
+    .line 2
     invoke-virtual {p0}, Lcom/sube/cargasube/State;->getRateMeMaybeCurrentlyApplied()Ljava/lang/Integer;
 
     move-result-object v1
@@ -136,7 +136,7 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 146
+    .line 3
     sget-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -149,10 +149,10 @@
 
     const/4 v0, 0x0
 
-    .line 48
+    .line 1
     iput-object v0, p0, Lcom/sube/cargasube/State;->tag:Landroid/nfc/Tag;
 
-    .line 49
+    .line 2
     iput-object v0, p0, Lcom/sube/cargasube/State;->uid:[B
 
     return-void
@@ -161,16 +161,16 @@
 .method public duplicateRateMeMaybeX()V
     .locals 3
 
-    .line 128
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 129
     sput-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
+    .line 2
     invoke-virtual {p0}, Lcom/sube/cargasube/State;->getRateMeMaybeX()Ljava/lang/Integer;
 
     move-result-object v1
@@ -185,7 +185,7 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 130
+    .line 3
     sget-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -196,7 +196,7 @@
 .method public getRateMeMaybeCurrentlyApplied()Ljava/lang/Integer;
     .locals 3
 
-    .line 140
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "RATE_ME_MAYBE_CURRENTLY_APPLIED_KEY"
@@ -217,7 +217,7 @@
 .method public getRateMeMaybeX()Ljava/lang/Integer;
     .locals 3
 
-    .line 124
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "RATE_ME_MAYBE_X_KEY"
@@ -238,7 +238,7 @@
 .method public getRateMeMaybeY()Ljava/lang/Integer;
     .locals 3
 
-    .line 135
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "RATE_ME_MAYBE_Y_KEY"
@@ -259,7 +259,7 @@
 .method public getTag()Landroid/nfc/Tag;
     .locals 1
 
-    .line 61
+    .line 1
     iget-object v0, p0, Lcom/sube/cargasube/State;->tag:Landroid/nfc/Tag;
 
     return-object v0
@@ -268,7 +268,7 @@
 .method public getUid()[B
     .locals 1
 
-    .line 69
+    .line 1
     iget-object v0, p0, Lcom/sube/cargasube/State;->uid:[B
 
     return-object v0
@@ -277,7 +277,7 @@
 .method public isRateMeTouched()Z
     .locals 3
 
-    .line 113
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "RATE_ME_TOUCHED_KEY"
@@ -294,7 +294,7 @@
 .method public isTutorialShown()Z
     .locals 3
 
-    .line 91
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "TUTORIAL_SHOWN_KEY"
@@ -311,7 +311,7 @@
 .method public onceLoggedIn()Z
     .locals 3
 
-    .line 102
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v1, "ONCE_LOGGED_IN_KEY"
@@ -328,23 +328,23 @@
 .method public resetRateMeMaybeCurrentlyApplied()V
     .locals 3
 
-    .line 150
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 151
     sput-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "RATE_ME_MAYBE_CURRENTLY_APPLIED_KEY"
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 152
+    .line 3
     sget-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -355,21 +355,21 @@
 .method public setOnceLoggedIn(Z)V
     .locals 2
 
-    .line 106
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 107
     sput-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "ONCE_LOGGED_IN_KEY"
 
+    .line 2
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 108
+    .line 3
     sget-object p1, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
@@ -380,23 +380,23 @@
 .method public setRateMeTouched()V
     .locals 3
 
-    .line 117
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 118
     sput-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "RATE_ME_TOUCHED_KEY"
 
     const/4 v2, 0x1
 
+    .line 2
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 119
+    .line 3
     sget-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -407,7 +407,7 @@
 .method public setTag(Landroid/nfc/Tag;)V
     .locals 0
 
-    .line 65
+    .line 1
     iput-object p1, p0, Lcom/sube/cargasube/State;->tag:Landroid/nfc/Tag;
 
     return-void
@@ -416,23 +416,23 @@
 .method public setTutorialShown()V
     .locals 3
 
-    .line 95
+    .line 1
     sget-object v0, Lcom/sube/cargasube/State;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 96
     sput-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "TUTORIAL_SHOWN_KEY"
 
     const/4 v2, 0x1
 
+    .line 2
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 97
+    .line 3
     sget-object v0, Lcom/sube/cargasube/State;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
@@ -443,7 +443,7 @@
 .method public setUid([B)V
     .locals 0
 
-    .line 73
+    .line 1
     iput-object p1, p0, Lcom/sube/cargasube/State;->uid:[B
 
     return-void

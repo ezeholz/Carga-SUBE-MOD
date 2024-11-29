@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/Transformations$1;
+.class public final Landroidx/lifecycle/Transformations$1;
 .super Ljava/lang/Object;
 .source "Transformations.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -26,16 +26,16 @@
 
 
 # instance fields
-.field final synthetic val$mapFunction:Landroidx/arch/core/util/Function;
+.field public final synthetic val$mapFunction:Landroidx/arch/core/util/Function;
 
-.field final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
+.field public final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/MediatorLiveData;Landroidx/arch/core/util/Function;)V
+.method public constructor <init>(Landroidx/lifecycle/MediatorLiveData;Landroidx/arch/core/util/Function;)V
     .locals 0
 
-    .line 72
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/Transformations$1;->val$result:Landroidx/lifecycle/MediatorLiveData;
 
     iput-object p2, p0, Landroidx/lifecycle/Transformations$1;->val$mapFunction:Landroidx/arch/core/util/Function;
@@ -47,15 +47,19 @@
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public onChanged(Ljava/lang/Object;)V
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TX;)V"
         }
     .end annotation
 
-    .line 75
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/Transformations$1;->val$result:Landroidx/lifecycle/MediatorLiveData;
 
     iget-object v1, p0, Landroidx/lifecycle/Transformations$1;->val$mapFunction:Landroidx/arch/core/util/Function;
@@ -64,7 +68,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/MediatorLiveData;->setValue(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V
 
     return-void
 .end method

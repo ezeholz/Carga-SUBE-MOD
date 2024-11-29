@@ -1,52 +1,56 @@
-.class Landroidx/print/PrintHelper$PrintBitmapAdapter;
+.class public Landroidx/print/PrintHelper$PrintBitmapAdapter;
 .super Landroid/print/PrintDocumentAdapter;
 .source "PrintHelper.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/print/PrintHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "PrintBitmapAdapter"
 .end annotation
 
 
 # instance fields
-.field private mAttributes:Landroid/print/PrintAttributes;
+.field public mAttributes:Landroid/print/PrintAttributes;
 
-.field private final mBitmap:Landroid/graphics/Bitmap;
+.field public final mBitmap:Landroid/graphics/Bitmap;
 
-.field private final mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
+.field public final mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
 
-.field private final mFittingMode:I
+.field public final mFittingMode:I
 
-.field private final mJobName:Ljava/lang/String;
+.field public final mJobName:Ljava/lang/String;
 
-.field final synthetic this$0:Landroidx/print/PrintHelper;
+.field public final synthetic this$0:Landroidx/print/PrintHelper;
 
 
 # direct methods
-.method constructor <init>(Landroidx/print/PrintHelper;Ljava/lang/String;ILandroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
+.method public constructor <init>(Landroidx/print/PrintHelper;Ljava/lang/String;ILandroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
     .locals 0
 
-    .line 288
+    .line 1
     iput-object p1, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->this$0:Landroidx/print/PrintHelper;
 
     invoke-direct {p0}, Landroid/print/PrintDocumentAdapter;-><init>()V
 
-    .line 289
+    .line 2
     iput-object p2, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mJobName:Ljava/lang/String;
 
-    .line 290
+    .line 3
     iput p3, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mFittingMode:I
 
-    .line 291
+    .line 4
     iput-object p4, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 292
+    .line 5
     iput-object p5, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
 
     return-void
@@ -57,12 +61,12 @@
 .method public onFinish()V
     .locals 1
 
-    .line 323
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
 
     if-eqz v0, :cond_0
 
-    .line 324
+    .line 2
     invoke-interface {v0}, Landroidx/print/PrintHelper$OnPrintFinishCallback;->onFinish()V
 
     :cond_0
@@ -72,10 +76,10 @@
 .method public onLayout(Landroid/print/PrintAttributes;Landroid/print/PrintAttributes;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$LayoutResultCallback;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 302
+    .line 1
     iput-object p2, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mAttributes:Landroid/print/PrintAttributes;
 
-    .line 304
+    .line 2
     new-instance p3, Landroid/print/PrintDocumentInfo$Builder;
 
     iget-object p5, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mJobName:Ljava/lang/String;
@@ -84,29 +88,29 @@
 
     const/4 p5, 0x1
 
-    .line 305
+    .line 3
     invoke-virtual {p3, p5}, Landroid/print/PrintDocumentInfo$Builder;->setContentType(I)Landroid/print/PrintDocumentInfo$Builder;
 
     move-result-object p3
 
-    .line 306
+    .line 4
     invoke-virtual {p3, p5}, Landroid/print/PrintDocumentInfo$Builder;->setPageCount(I)Landroid/print/PrintDocumentInfo$Builder;
 
     move-result-object p3
 
-    .line 307
+    .line 5
     invoke-virtual {p3}, Landroid/print/PrintDocumentInfo$Builder;->build()Landroid/print/PrintDocumentInfo;
 
     move-result-object p3
 
-    .line 308
+    .line 6
     invoke-virtual {p2, p1}, Landroid/print/PrintAttributes;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     xor-int/2addr p1, p5
 
-    .line 309
+    .line 7
     invoke-virtual {p4, p3, p1}, Landroid/print/PrintDocumentAdapter$LayoutResultCallback;->onLayoutFinished(Landroid/print/PrintDocumentInfo;Z)V
 
     return-void
@@ -115,7 +119,7 @@
 .method public onWrite([Landroid/print/PageRange;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
     .locals 7
 
-    .line 317
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->this$0:Landroidx/print/PrintHelper;
 
     iget-object v1, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mAttributes:Landroid/print/PrintAttributes;

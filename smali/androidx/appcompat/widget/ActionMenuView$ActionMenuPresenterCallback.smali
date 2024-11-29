@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ActionMenuView$ActionMenuPresenterCallback;
+.class public Landroidx/appcompat/widget/ActionMenuView$ActionMenuPresenterCallback;
 .super Ljava/lang/Object;
 .source "ActionMenuView.java"
 
@@ -12,16 +12,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ActionMenuPresenterCallback"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 793
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,12 +31,20 @@
 # virtual methods
 .method public onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
     .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
     .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 p1, 0x0
 

@@ -14,79 +14,79 @@
 
 
 # static fields
-.field private static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
 .field public static final DEFAULT_SPAN_COUNT:I = -0x1
 
-.field private static final TAG:Ljava/lang/String; = "GridLayoutManager"
+.field public static final TAG:Ljava/lang/String; = "GridLayoutManager"
 
 
 # instance fields
-.field mCachedBorders:[I
+.field public mCachedBorders:[I
 
-.field final mDecorInsets:Landroid/graphics/Rect;
+.field public final mDecorInsets:Landroid/graphics/Rect;
 
-.field mPendingSpanCountChange:Z
+.field public mPendingSpanCountChange:Z
 
-.field final mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
+.field public final mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
-.field final mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
+.field public final mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
-.field mSet:[Landroid/view/View;
+.field public mSet:[Landroid/view/View;
 
-.field mSpanCount:I
+.field public mSpanCount:I
 
-.field mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
+.field public mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-.field private mUsingSpansToEstimateScrollBarDimensions:Z
+.field public mUsingSpansToEstimateScrollBarDimensions:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 85
+    .line 10
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 44
+    .line 11
     iput-boolean p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     const/4 p1, -0x1
 
-    .line 45
+    .line 12
     iput p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    .line 56
+    .line 13
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
-    .line 57
+    .line 14
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
-    .line 58
+    .line 15
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    .line 60
+    .line 16
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
-    .line 86
+    .line 17
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
 
     return-void
@@ -95,48 +95,48 @@
 .method public constructor <init>(Landroid/content/Context;IIZ)V
     .locals 0
 
-    .line 98
+    .line 18
     invoke-direct {p0, p1, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     const/4 p1, 0x0
 
-    .line 44
+    .line 19
     iput-boolean p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     const/4 p1, -0x1
 
-    .line 45
+    .line 20
     iput p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    .line 56
+    .line 21
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
-    .line 57
+    .line 22
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
-    .line 58
+    .line 23
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    .line 60
+    .line 24
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
-    .line 99
+    .line 25
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
 
     return-void
@@ -145,53 +145,53 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
 
-    .line 73
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 v0, 0x0
 
-    .line 44
+    .line 2
     iput-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     const/4 v0, -0x1
 
-    .line 45
+    .line 3
     iput v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    .line 56
+    .line 4
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
-    .line 57
+    .line 5
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
-    .line 58
+    .line 6
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    .line 60
+    .line 7
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
-    .line 74
-    invoke-static {p1, p2, p3, p4}, Landroidx/recyclerview/widget/GridLayoutManager;->getProperties(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;
+    .line 8
+    invoke-static {p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getProperties(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;
 
     move-result-object p1
 
-    .line 75
+    .line 9
     iget p1, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;->spanCount:I
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
@@ -226,20 +226,20 @@
     :goto_0
     if-eq p3, v1, :cond_1
 
-    .line 786
+    .line 1
     iget-object v2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
     aget-object v2, v2, p3
 
-    .line 787
+    .line 2
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 788
-    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    .line 3
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v2
 
@@ -249,11 +249,8 @@
 
     iput v2, v3, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    .line 789
+    .line 4
     iput v0, v3, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
-
-    .line 790
-    iget v2, v3, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
     add-int/2addr v0, v2
 
@@ -268,8 +265,8 @@
 .method private cachePreLayoutSpanMapping()V
     .locals 6
 
-    .line 189
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildCount()I
+    .line 1
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
     move-result v0
 
@@ -278,8 +275,8 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 191
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildAt(I)Landroid/view/View;
+    .line 2
+    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -289,12 +286,12 @@
 
     check-cast v2, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 192
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->getViewLayoutPosition()I
+    .line 3
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 
     move-result v3
 
-    .line 193
+    .line 4
     iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->getSpanSize()I
@@ -303,7 +300,7 @@
 
     invoke-virtual {v4, v3, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 194
+    .line 5
     iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->getSpanIndex()I
@@ -323,7 +320,7 @@
 .method private calculateItemBorders(I)V
     .locals 2
 
-    .line 314
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
     iget v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
@@ -337,14 +334,14 @@
     return-void
 .end method
 
-.method static calculateItemBorders([III)[I
+.method public static calculateItemBorders([III)[I
     .locals 5
 
     const/4 v0, 0x1
 
     if-eqz p0, :cond_0
 
-    .line 325
+    .line 2
     array-length v1, p0
 
     add-int/lit8 v2, p1, 0x1
@@ -362,19 +359,19 @@
     :cond_0
     add-int/lit8 p0, p1, 0x1
 
-    .line 327
+    .line 3
     new-array p0, p0, [I
 
     :cond_1
     const/4 v1, 0x0
 
-    .line 329
+    .line 4
     aput v1, p0, v1
 
-    .line 330
+    .line 5
     div-int v2, p2, p1
 
-    .line 331
+    .line 6
     rem-int/2addr p2, p1
 
     const/4 v3, 0x0
@@ -402,7 +399,7 @@
     :goto_1
     add-int/2addr v3, v4
 
-    .line 342
+    .line 7
     aput v3, p0, v0
 
     add-int/lit8 v0, v0, 0x1
@@ -416,12 +413,12 @@
 .method private clearPreLayoutSpanMappingCache()V
     .locals 1
 
-    .line 184
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
 
-    .line 185
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
@@ -432,8 +429,8 @@
 .method private computeScrollOffsetWithSpanInfo(Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 9
 
-    .line 1304
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildCount()I
+    .line 1
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
     move-result v0
 
@@ -449,12 +446,12 @@
 
     goto/16 :goto_1
 
-    .line 1307
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureLayoutState()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->ensureLayoutState()V
 
-    .line 1309
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isSmoothScrollbarEnabled()Z
+    .line 3
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isSmoothScrollbarEnabled()Z
 
     move-result v0
 
@@ -462,15 +459,15 @@
 
     const/4 v3, 0x1
 
-    .line 1310
-    invoke-virtual {p0, v2, v3}, Landroidx/recyclerview/widget/GridLayoutManager;->findFirstVisibleChildClosestToStart(ZZ)Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, v2, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleChildClosestToStart(ZZ)Landroid/view/View;
 
     move-result-object v2
 
     xor-int/lit8 v4, v0, 0x1
 
-    .line 1311
-    invoke-virtual {p0, v4, v3}, Landroidx/recyclerview/widget/GridLayoutManager;->findFirstVisibleChildClosestToEnd(ZZ)Landroid/view/View;
+    .line 5
+    invoke-virtual {p0, v4, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleChildClosestToEnd(ZZ)Landroid/view/View;
 
     move-result-object v4
 
@@ -480,11 +477,11 @@
 
     goto/16 :goto_1
 
-    .line 1315
+    .line 6
     :cond_1
     iget-object v5, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v6
 
@@ -494,10 +491,10 @@
 
     move-result v5
 
-    .line 1317
+    .line 7
     iget-object v6, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    invoke-virtual {p0, v4}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v7
 
@@ -507,17 +504,17 @@
 
     move-result v6
 
-    .line 1320
+    .line 8
     invoke-static {v5, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v7
 
-    .line 1321
+    .line 9
     invoke-static {v5, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v5
 
-    .line 1322
+    .line 10
     iget-object v6, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
@@ -534,8 +531,8 @@
 
     add-int/2addr p1, v3
 
-    .line 1325
-    iget-boolean v6, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mShouldReverseLayout:Z
+    .line 11
+    iget-boolean v6, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mShouldReverseLayout:Z
 
     if-eqz v6, :cond_2
 
@@ -543,14 +540,14 @@
 
     sub-int/2addr p1, v3
 
-    .line 1326
+    .line 12
     invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
     goto :goto_0
 
-    .line 1327
+    .line 13
     :cond_2
     invoke-static {v1, v7}, Ljava/lang/Math;->max(II)I
 
@@ -561,33 +558,33 @@
 
     return p1
 
-    .line 1331
+    .line 14
     :cond_3
-    iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
 
     move-result v0
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    .line 1332
+    .line 15
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    .line 1331
+    .line 16
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    .line 1334
+    .line 17
     iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    .line 1335
-    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    .line 18
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v5
 
@@ -597,10 +594,10 @@
 
     move-result v1
 
-    .line 1336
+    .line 19
     iget-object v5, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    invoke-virtual {p0, v4}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v4
 
@@ -624,16 +621,16 @@
 
     mul-float p1, p1, v0
 
-    .line 1341
-    iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 20
+    iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/OrientationHelper;->getStartAfterPadding()I
 
     move-result v0
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    .line 1342
+    .line 21
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v1
@@ -644,7 +641,7 @@
 
     add-float/2addr p1, v0
 
-    .line 1341
+    .line 22
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
@@ -659,8 +656,8 @@
 .method private computeScrollRangeWithSpanInfo(Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 6
 
-    .line 1271
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildCount()I
+    .line 1
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
     move-result v0
 
@@ -676,12 +673,12 @@
 
     goto :goto_0
 
-    .line 1274
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureLayoutState()V
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->ensureLayoutState()V
 
-    .line 1276
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isSmoothScrollbarEnabled()Z
+    .line 3
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isSmoothScrollbarEnabled()Z
 
     move-result v0
 
@@ -689,18 +686,18 @@
 
     xor-int/2addr v0, v2
 
-    invoke-virtual {p0, v0, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->findFirstVisibleChildClosestToStart(ZZ)Landroid/view/View;
+    invoke-virtual {p0, v0, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleChildClosestToStart(ZZ)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1277
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isSmoothScrollbarEnabled()Z
+    .line 4
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isSmoothScrollbarEnabled()Z
 
     move-result v3
 
     xor-int/2addr v3, v2
 
-    invoke-virtual {p0, v3, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->findFirstVisibleChildClosestToEnd(ZZ)Landroid/view/View;
+    invoke-virtual {p0, v3, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleChildClosestToEnd(ZZ)Landroid/view/View;
 
     move-result-object v3
 
@@ -710,18 +707,18 @@
 
     goto :goto_0
 
-    .line 1282
+    .line 5
     :cond_1
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isSmoothScrollbarEnabled()Z
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isSmoothScrollbarEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 1283
+    .line 6
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    .line 1284
+    .line 7
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
     move-result p1
@@ -730,7 +727,7 @@
 
     iget v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    .line 1283
+    .line 8
     invoke-virtual {v0, p1, v1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->getCachedSpanGroupIndex(II)I
 
     move-result p1
@@ -739,28 +736,28 @@
 
     return p1
 
-    .line 1288
+    .line 9
     :cond_2
-    iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
 
     move-result v1
 
-    iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    iget-object v4, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    .line 1289
+    .line 10
     invoke-virtual {v4, v0}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v4
 
     sub-int/2addr v1, v4
 
-    .line 1291
+    .line 11
     iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    .line 1292
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    .line 12
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v0
 
@@ -770,10 +767,10 @@
 
     move-result v0
 
-    .line 1293
+    .line 13
     iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-    invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v3
 
@@ -783,7 +780,7 @@
 
     move-result v3
 
-    .line 1295
+    .line 14
     iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
@@ -837,7 +834,7 @@
     :cond_0
     const/4 p4, 0x0
 
-    .line 393
+    .line 1
     :goto_0
     iget v1, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
@@ -850,28 +847,24 @@
     :goto_1
     if-lez v1, :cond_3
 
-    .line 396
+    .line 2
     iget p4, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
     if-lez p4, :cond_3
 
-    .line 397
-    iget p4, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
+    add-int/lit8 p4, p4, -0x1
 
-    sub-int/2addr p4, v0
-
+    .line 3
     iput p4, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
-    .line 398
-    iget p4, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
-
+    .line 4
     invoke-direct {p0, p1, p2, p4}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result v1
 
     goto :goto_1
 
-    .line 402
+    .line 5
     :cond_1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
@@ -879,7 +872,7 @@
 
     sub-int/2addr p4, v0
 
-    .line 403
+    .line 6
     iget v0, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
     :goto_2
@@ -887,7 +880,7 @@
 
     add-int/lit8 v2, v0, 0x1
 
-    .line 406
+    .line 7
     invoke-direct {p0, p1, p2, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result v3
@@ -900,7 +893,7 @@
 
     goto :goto_2
 
-    .line 414
+    .line 8
     :cond_2
     iput v0, p3, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
@@ -911,7 +904,7 @@
 .method private ensureViewSet()V
     .locals 2
 
-    .line 368
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -922,7 +915,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 369
+    .line 2
     :cond_0
     iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
@@ -937,14 +930,14 @@
 .method private getSpanGroupIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
     .locals 0
 
-    .line 455
+    .line 1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->isPreLayout()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 456
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     iget p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
@@ -955,7 +948,7 @@
 
     return p1
 
-    .line 458
+    .line 3
     :cond_0
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->convertPreLayoutPositionToPostLayout(I)I
 
@@ -969,7 +962,7 @@
 
     return p1
 
-    .line 467
+    .line 4
     :cond_1
     iget-object p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
@@ -985,14 +978,14 @@
 .method private getSpanIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
     .locals 1
 
-    .line 471
+    .line 1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->isPreLayout()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 472
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     iget p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
@@ -1003,7 +996,7 @@
 
     return p1
 
-    .line 474
+    .line 3
     :cond_0
     iget-object p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
@@ -1017,7 +1010,7 @@
 
     return p2
 
-    .line 478
+    .line 4
     :cond_1
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->convertPreLayoutPositionToPostLayout(I)I
 
@@ -1029,7 +1022,7 @@
 
     return p1
 
-    .line 488
+    .line 5
     :cond_2
     iget-object p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
@@ -1045,14 +1038,14 @@
 .method private getSpanSize(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
     .locals 1
 
-    .line 492
+    .line 1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->isPreLayout()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 493
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->getSpanSize(I)I
@@ -1061,7 +1054,7 @@
 
     return p1
 
-    .line 495
+    .line 3
     :cond_0
     iget-object p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
@@ -1075,7 +1068,7 @@
 
     return p2
 
-    .line 499
+    .line 4
     :cond_1
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->convertPreLayoutPositionToPostLayout(I)I
 
@@ -1087,7 +1080,7 @@
 
     return p1
 
-    .line 509
+    .line 5
     :cond_2
     iget-object p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
@@ -1101,7 +1094,7 @@
 .method private guessMeasurement(FI)V
     .locals 1
 
-    .line 750
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
     int-to-float v0, v0
@@ -1112,7 +1105,7 @@
 
     move-result p1
 
-    .line 752
+    .line 2
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -1125,47 +1118,47 @@
 .method private measureChild(Landroid/view/View;IZ)V
     .locals 8
 
-    .line 716
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 717
-    iget-object v1, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mDecorInsets:Landroid/graphics/Rect;
+    .line 2
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->mDecorInsets:Landroid/graphics/Rect;
 
-    .line 718
+    .line 3
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     iget v3, v1, Landroid/graphics/Rect;->bottom:I
 
     add-int/2addr v2, v3
 
-    iget v3, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->topMargin:I
+    iget v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     add-int/2addr v2, v3
 
-    iget v3, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->bottomMargin:I
+    iget v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     add-int/2addr v2, v3
 
-    .line 720
+    .line 4
     iget v3, v1, Landroid/graphics/Rect;->left:I
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v3, v1
 
-    iget v1, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->leftMargin:I
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     add-int/2addr v3, v1
 
-    iget v1, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->rightMargin:I
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     add-int/2addr v3, v1
 
-    .line 722
+    .line 5
     iget v1, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     iget v4, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
@@ -1174,8 +1167,8 @@
 
     move-result v1
 
-    .line 725
-    iget v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 6
+    iget v4, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v5, 0x0
 
@@ -1183,54 +1176,54 @@
 
     if-ne v4, v6, :cond_0
 
-    .line 726
-    iget v4, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->width:I
+    .line 7
+    iget v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    invoke-static {v1, p2, v3, v4, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildMeasureSpec(IIIIZ)I
+    invoke-static {v1, p2, v3, v4, v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildMeasureSpec(IIIIZ)I
 
     move-result p2
 
-    .line 728
-    iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 8
+    iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/OrientationHelper;->getTotalSpace()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getHeightMode()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeightMode()I
 
     move-result v3
 
-    iget v0, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->height:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {v1, v3, v2, v0, v6}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildMeasureSpec(IIIIZ)I
+    invoke-static {v1, v3, v2, v0, v6}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildMeasureSpec(IIIIZ)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 731
+    .line 9
     :cond_0
-    iget v4, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->height:I
+    iget v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {v1, p2, v2, v4, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildMeasureSpec(IIIIZ)I
+    invoke-static {v1, p2, v2, v4, v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildMeasureSpec(IIIIZ)I
 
     move-result p2
 
-    .line 733
-    iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 10
+    iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/OrientationHelper;->getTotalSpace()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getWidthMode()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidthMode()I
 
     move-result v2
 
-    iget v0, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->width:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    invoke-static {v1, v2, v3, v0, v6}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildMeasureSpec(IIIIZ)I
+    invoke-static {v1, v2, v3, v0, v6}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildMeasureSpec(IIIIZ)I
 
     move-result v0
 
@@ -1240,7 +1233,7 @@
 
     move p2, v7
 
-    .line 736
+    .line 11
     :goto_0
     invoke-direct {p0, p1, p2, v0, p3}, Landroidx/recyclerview/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View;IIZ)V
 
@@ -1250,7 +1243,7 @@
 .method private measureChildWithDecorationsAndMargin(Landroid/view/View;IIZ)V
     .locals 1
 
-    .line 757
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1259,23 +1252,23 @@
 
     if-eqz p4, :cond_0
 
-    .line 760
-    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->shouldReMeasureChild(Landroid/view/View;IILandroidx/recyclerview/widget/RecyclerView$LayoutParams;)Z
+    .line 2
+    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->shouldReMeasureChild(Landroid/view/View;IILandroidx/recyclerview/widget/RecyclerView$LayoutParams;)Z
 
     move-result p4
 
     goto :goto_0
 
-    .line 762
+    .line 3
     :cond_0
-    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->shouldMeasureChild(Landroid/view/View;IILandroidx/recyclerview/widget/RecyclerView$LayoutParams;)Z
+    invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->shouldMeasureChild(Landroid/view/View;IILandroidx/recyclerview/widget/RecyclerView$LayoutParams;)Z
 
     move-result p4
 
     :goto_0
     if-eqz p4, :cond_1
 
-    .line 765
+    .line 4
     invoke-virtual {p1, p2, p3}, Landroid/view/View;->measure(II)V
 
     :cond_1
@@ -1285,8 +1278,8 @@
 .method private updateMeasurements()V
     .locals 2
 
-    .line 280
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getOrientation()I
+    .line 1
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getOrientation()I
 
     move-result v0
 
@@ -1294,43 +1287,43 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 281
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getWidth()I
+    .line 2
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingRight()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingRight()I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingLeft()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 283
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getHeight()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeight()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingBottom()I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingTop()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingTop()I
 
     move-result v1
 
     :goto_0
     sub-int/2addr v0, v1
 
-    .line 285
+    .line 4
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->calculateItemBorders(I)V
 
     return-void
@@ -1341,23 +1334,23 @@
 .method public checkLayoutParams(Landroidx/recyclerview/widget/RecyclerView$LayoutParams;)Z
     .locals 0
 
-    .line 256
+    .line 1
     instance-of p1, p1, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     return p1
 .end method
 
-.method collectPrefetchPositionsForLayoutState(Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;Landroidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry;)V
+.method public collectPrefetchPositionsForLayoutState(Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;Landroidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry;)V
     .locals 5
 
-    .line 515
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 517
+    .line 2
     :goto_0
     iget v3, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
@@ -1371,10 +1364,10 @@
 
     if-lez v0, :cond_0
 
-    .line 518
+    .line 3
     iget v3, p2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
-    .line 519
+    .line 4
     iget v4, p2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrollingOffset:I
 
     invoke-static {v1, v4}, Ljava/lang/Math;->max(II)I
@@ -1383,7 +1376,7 @@
 
     invoke-interface {p3, v3, v4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$LayoutPrefetchRegistry;->addPosition(II)V
 
-    .line 520
+    .line 5
     iget-object v4, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->getSpanSize(I)I
@@ -1392,7 +1385,7 @@
 
     sub-int/2addr v0, v3
 
-    .line 522
+    .line 6
     iget v3, p2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
     iget v4, p2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mItemDirection:I
@@ -1412,19 +1405,19 @@
 .method public computeHorizontalScrollOffset(Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 1
 
-    .line 1213
+    .line 1
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mUsingSpansToEstimateScrollBarDimensions:Z
 
     if-eqz v0, :cond_0
 
-    .line 1214
+    .line 2
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->computeScrollOffsetWithSpanInfo(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
 
     return p1
 
-    .line 1216
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->computeHorizontalScrollOffset(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
@@ -1436,19 +1429,19 @@
 .method public computeHorizontalScrollRange(Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 1
 
-    .line 1195
+    .line 1
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mUsingSpansToEstimateScrollBarDimensions:Z
 
     if-eqz v0, :cond_0
 
-    .line 1196
+    .line 2
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->computeScrollRangeWithSpanInfo(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
 
     return p1
 
-    .line 1198
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->computeHorizontalScrollRange(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
@@ -1460,19 +1453,19 @@
 .method public computeVerticalScrollOffset(Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 1
 
-    .line 1222
+    .line 1
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mUsingSpansToEstimateScrollBarDimensions:Z
 
     if-eqz v0, :cond_0
 
-    .line 1223
+    .line 2
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->computeScrollOffsetWithSpanInfo(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
 
     return p1
 
-    .line 1225
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->computeVerticalScrollOffset(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
@@ -1484,19 +1477,19 @@
 .method public computeVerticalScrollRange(Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 1
 
-    .line 1204
+    .line 1
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mUsingSpansToEstimateScrollBarDimensions:Z
 
     if-eqz v0, :cond_0
 
-    .line 1205
+    .line 2
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->computeScrollRangeWithSpanInfo(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
 
     return p1
 
-    .line 1207
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->computeVerticalScrollRange(Landroidx/recyclerview/widget/RecyclerView$State;)I
 
@@ -1505,21 +1498,21 @@
     return p1
 .end method
 
-.method findReferenceChild(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;III)Landroid/view/View;
+.method public findReferenceChild(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;III)Landroid/view/View;
     .locals 7
 
-    .line 421
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureLayoutState()V
+    .line 1
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->ensureLayoutState()V
 
-    .line 424
-    iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 2
+    iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/OrientationHelper;->getStartAfterPadding()I
 
     move-result v0
 
-    .line 425
-    iget-object v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 3
+    iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/OrientationHelper;->getEndAfterPadding()I
 
@@ -1540,30 +1533,33 @@
     move-object v4, v3
 
     :goto_1
-    if-eq p3, p4, :cond_5
+    if-eq p3, p4, :cond_6
 
-    .line 429
-    invoke-virtual {p0, p3}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildAt(I)Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, p3}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 430
-    invoke-virtual {p0, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->getPosition(Landroid/view/View;)I
+    .line 5
+    invoke-virtual {p0, v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v6
 
-    if-ltz v6, :cond_4
+    if-ltz v6, :cond_5
 
-    if-ge v6, p5, :cond_4
+    if-ge v6, p5, :cond_5
 
-    .line 432
+    .line 6
     invoke-direct {p0, p1, p2, v6}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result v6
 
-    if-nez v6, :cond_4
+    if-eqz v6, :cond_1
 
-    .line 436
+    goto :goto_3
+
+    .line 7
+    :cond_1
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
@@ -1574,64 +1570,67 @@
 
     move-result v6
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_2
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_5
 
     move-object v4, v5
 
     goto :goto_3
 
-    .line 440
-    :cond_1
-    iget-object v6, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 8
+    :cond_2
+    iget-object v6, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v6, v5}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v6
 
-    if-ge v6, v1, :cond_3
+    if-ge v6, v1, :cond_4
 
-    iget-object v6, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    iget-object v6, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    .line 441
+    .line 9
     invoke-virtual {v6, v5}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
 
     move-result v6
 
-    if-ge v6, v0, :cond_2
+    if-ge v6, v0, :cond_3
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     return-object v5
 
-    :cond_3
+    :cond_4
     :goto_2
-    if-nez v3, :cond_4
+    if-nez v3, :cond_5
 
     move-object v3, v5
 
-    :cond_4
+    :cond_5
     :goto_3
     add-int/2addr p3, v2
 
     goto :goto_1
 
-    :cond_5
-    if-eqz v3, :cond_6
-
-    return-object v3
-
     :cond_6
-    return-object v4
+    if-eqz v3, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    move-object v3, v4
+
+    :goto_4
+    return-object v3
 .end method
 
 .method public generateDefaultLayoutParams()Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
     .locals 3
 
-    .line 231
-    iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 1
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v1, -0x2
 
@@ -1639,14 +1638,14 @@
 
     if-nez v0, :cond_0
 
-    .line 232
+    .line 2
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     invoke-direct {v0, v1, v2}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;-><init>(II)V
 
     return-object v0
 
-    .line 235
+    .line 3
     :cond_0
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
@@ -1658,7 +1657,7 @@
 .method public generateLayoutParams(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
     .locals 1
 
-    .line 242
+    .line 1
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     invoke-direct {v0, p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -1669,12 +1668,12 @@
 .method public generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
     .locals 1
 
-    .line 247
+    .line 2
     instance-of v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v0, :cond_0
 
-    .line 248
+    .line 3
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
@@ -1683,7 +1682,7 @@
 
     return-object v0
 
-    .line 250
+    .line 4
     :cond_0
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
@@ -1695,31 +1694,31 @@
 .method public getColumnCountForAccessibility(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 2
 
-    .line 133
-    iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 1
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 134
+    .line 2
     iget p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
     return p1
 
-    .line 136
+    .line 3
     :cond_0
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
-    if-gtz v0, :cond_1
+    if-ge v0, v1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
-    .line 141
+    .line 4
     :cond_1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
@@ -1737,64 +1736,66 @@
 .end method
 
 .method public getRowCountForAccessibility(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
-    .locals 1
+    .locals 2
 
-    .line 119
-    iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 1
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     if-nez v0, :cond_0
 
-    .line 120
+    .line 2
     iget p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
     return p1
 
-    .line 122
+    .line 3
     :cond_0
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
-    if-gtz v0, :cond_1
+    const/4 v1, 0x1
+
+    if-ge v0, v1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
-    .line 127
+    .line 4
     :cond_1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
-    add-int/lit8 v0, v0, -0x1
+    sub-int/2addr v0, v1
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanGroupIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result p1
 
-    add-int/lit8 p1, p1, 0x1
+    add-int/2addr p1, v1
 
     return p1
 .end method
 
-.method getSpaceForSpanRange(II)I
+.method public getSpaceForSpanRange(II)I
     .locals 3
 
-    .line 348
-    iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 1
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isLayoutRTL()Z
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isLayoutRTL()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 349
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
     iget v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
@@ -1813,7 +1814,7 @@
 
     return v2
 
-    .line 352
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
@@ -1831,7 +1832,7 @@
 .method public getSpanCount()I
     .locals 1
 
-    .line 801
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
     return v0
@@ -1840,7 +1841,7 @@
 .method public getSpanSizeLookup()Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
     .locals 1
 
-    .line 275
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     return-object v0
@@ -1849,14 +1850,14 @@
 .method public isUsingSpansToEstimateScrollbarDimensions()Z
     .locals 1
 
-    .line 1267
+    .line 1
     iget-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mUsingSpansToEstimateScrollBarDimensions:Z
 
     return v0
 .end method
 
-.method layoutChunk(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;)V
-    .locals 17
+.method public layoutChunk(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;)V
+    .locals 18
 
     move-object/from16 v6, p0
 
@@ -1868,8 +1869,8 @@
 
     move-object/from16 v7, p4
 
-    .line 530
-    iget-object v3, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 1
+    iget-object v3, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v3}, Landroidx/recyclerview/widget/OrientationHelper;->getModeInOther()I
 
@@ -1883,142 +1884,148 @@
 
     if-eq v3, v4, :cond_0
 
-    const/4 v9, 0x1
+    const/4 v4, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v9, 0x0
+    const/4 v4, 0x0
 
-    .line 532
+    .line 2
     :goto_0
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
-    move-result v10
+    move-result v9
 
-    if-lez v10, :cond_1
+    if-lez v9, :cond_1
 
-    iget-object v10, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
+    iget-object v9, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
-    iget v11, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
+    iget v10, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    aget v10, v10, v11
+    aget v9, v9, v10
 
     goto :goto_1
 
     :cond_1
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
     :goto_1
-    if-eqz v9, :cond_2
+    if-eqz v4, :cond_2
 
-    .line 537
+    .line 3
     invoke-direct/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->updateMeasurements()V
 
-    .line 539
+    .line 4
     :cond_2
-    iget v11, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mItemDirection:I
+    iget v10, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mItemDirection:I
 
-    if-ne v11, v8, :cond_3
+    if-ne v10, v8, :cond_3
 
-    const/4 v11, 0x1
+    const/4 v10, 0x1
 
     goto :goto_2
 
     :cond_3
-    const/4 v11, 0x0
+    const/4 v10, 0x0
 
-    .line 543
+    .line 5
     :goto_2
-    iget v12, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
+    iget v11, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    if-nez v11, :cond_4
+    if-nez v10, :cond_4
 
-    .line 545
+    .line 6
+    iget v11, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
+
+    invoke-direct {v6, v0, v1, v11}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
+
+    move-result v11
+
+    .line 7
     iget v12, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
-    invoke-direct {v6, v0, v1, v12}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
+    invoke-direct {v6, v0, v1, v12}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanSize(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result v12
 
-    .line 546
-    iget v13, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
-
-    invoke-direct {v6, v0, v1, v13}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanSize(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
-
-    move-result v13
-
-    add-int/2addr v12, v13
+    add-int/2addr v11, v12
 
     :cond_4
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
-    .line 549
+    .line 8
     :goto_3
-    iget v14, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
+    iget v13, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    if-ge v13, v14, :cond_6
+    if-ge v12, v13, :cond_8
 
     invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->hasMore(Landroidx/recyclerview/widget/RecyclerView$State;)Z
 
+    move-result v13
+
+    if-eqz v13, :cond_8
+
+    if-lez v11, :cond_8
+
+    .line 9
+    iget v13, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
+
+    .line 10
+    invoke-direct {v6, v0, v1, v13}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanSize(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
+
     move-result v14
 
-    if-eqz v14, :cond_6
+    .line 11
+    iget v15, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    if-lez v12, :cond_6
+    if-gt v14, v15, :cond_7
 
-    .line 550
-    iget v14, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
+    sub-int/2addr v11, v14
 
-    .line 551
-    invoke-direct {v6, v0, v1, v14}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanSize(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
+    if-gez v11, :cond_5
 
-    move-result v15
+    goto :goto_4
 
-    .line 552
-    iget v4, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
-
-    if-gt v15, v4, :cond_5
-
-    sub-int/2addr v12, v15
-
-    if-ltz v12, :cond_6
-
-    .line 561
+    .line 12
+    :cond_5
     invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->next(Landroidx/recyclerview/widget/RecyclerView$Recycler;)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v13
 
-    if-eqz v4, :cond_6
+    if-nez v13, :cond_6
 
-    .line 566
+    goto :goto_4
+
+    .line 13
+    :cond_6
     iget-object v14, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
-    aput-object v4, v14, v13
+    aput-object v13, v14, v12
 
-    add-int/lit8 v13, v13, 0x1
-
-    const/high16 v4, 0x40000000    # 2.0f
+    add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
-    .line 553
-    :cond_5
+    .line 14
+    :cond_7
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Item at position "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, " requires "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, " spans but GridLayoutManager has only "
 
@@ -2026,13 +2033,9 @@
 
     iget v2, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, " spans."
 
-    const-string v2, " spans."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lg/b/a/a/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2040,222 +2043,223 @@
 
     throw v0
 
-    :cond_6
-    if-nez v13, :cond_7
+    :cond_8
+    :goto_4
+    if-nez v12, :cond_9
 
-    .line 571
+    .line 15
     iput-boolean v8, v7, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mFinished:Z
 
     return-void
 
-    :cond_7
-    const/4 v4, 0x0
+    :cond_9
+    const/4 v11, 0x0
 
-    .line 579
-    invoke-direct {v6, v0, v1, v13, v11}, Landroidx/recyclerview/widget/GridLayoutManager;->assignSpans(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;IZ)V
+    .line 16
+    invoke-direct {v6, v0, v1, v12, v10}, Landroidx/recyclerview/widget/GridLayoutManager;->assignSpans(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;IZ)V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    :goto_4
-    if-ge v0, v13, :cond_d
+    :goto_5
+    if-ge v0, v12, :cond_f
 
-    .line 581
-    iget-object v12, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
+    .line 17
+    iget-object v13, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
-    aget-object v12, v12, v0
+    aget-object v13, v13, v0
 
-    .line 582
+    .line 18
     iget-object v14, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
-    if-nez v14, :cond_9
+    if-nez v14, :cond_b
 
-    if-eqz v11, :cond_8
+    if-eqz v10, :cond_a
 
-    .line 584
-    invoke-virtual {v6, v12}, Landroidx/recyclerview/widget/GridLayoutManager;->addView(Landroid/view/View;)V
+    .line 19
+    invoke-virtual {v6, v13}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addView(Landroid/view/View;)V
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 586
-    :cond_8
-    invoke-virtual {v6, v12, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->addView(Landroid/view/View;I)V
-
-    goto :goto_5
-
-    :cond_9
-    if-eqz v11, :cond_a
-
-    .line 590
-    invoke-virtual {v6, v12}, Landroidx/recyclerview/widget/GridLayoutManager;->addDisappearingView(Landroid/view/View;)V
-
-    goto :goto_5
-
-    .line 592
+    .line 20
     :cond_a
-    invoke-virtual {v6, v12, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->addDisappearingView(Landroid/view/View;I)V
+    invoke-virtual {v6, v13, v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addView(Landroid/view/View;I)V
 
-    .line 595
-    :goto_5
+    goto :goto_6
+
+    :cond_b
+    if-eqz v10, :cond_c
+
+    .line 21
+    invoke-virtual {v6, v13}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addDisappearingView(Landroid/view/View;)V
+
+    goto :goto_6
+
+    .line 22
+    :cond_c
+    invoke-virtual {v6, v13, v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->addDisappearingView(Landroid/view/View;I)V
+
+    .line 23
+    :goto_6
     iget-object v14, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
-    invoke-virtual {v6, v12, v14}, Landroidx/recyclerview/widget/GridLayoutManager;->calculateItemDecorationsForChild(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-virtual {v6, v13, v14}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->calculateItemDecorationsForChild(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 597
-    invoke-direct {v6, v12, v3, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->measureChild(Landroid/view/View;IZ)V
+    .line 24
+    invoke-direct {v6, v13, v3, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->measureChild(Landroid/view/View;IZ)V
 
-    .line 598
-    iget-object v14, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 25
+    iget-object v5, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    invoke-virtual {v14, v12}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
-
-    move-result v14
-
-    if-le v14, v1, :cond_b
-
-    move v1, v14
-
-    .line 602
-    :cond_b
-    invoke-virtual {v12}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v14
-
-    check-cast v14, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
-
-    const/high16 v15, 0x3f800000    # 1.0f
-
-    .line 603
-    iget-object v5, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
-
-    invoke-virtual {v5, v12}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+    invoke-virtual {v5, v13}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
 
     move-result v5
 
+    if-le v5, v1, :cond_d
+
+    move v1, v5
+
+    .line 26
+    :cond_d
+    invoke-virtual {v13}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
+
+    const/high16 v14, 0x3f800000    # 1.0f
+
+    .line 27
+    iget-object v15, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+
+    invoke-virtual {v15, v13}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+
+    move-result v13
+
+    int-to-float v13, v13
+
+    mul-float v13, v13, v14
+
+    iget v5, v5, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
+
     int-to-float v5, v5
 
-    mul-float v5, v5, v15
+    div-float/2addr v13, v5
 
-    iget v12, v14, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
+    cmpl-float v5, v13, v11
 
-    int-to-float v12, v12
+    if-lez v5, :cond_e
 
-    div-float/2addr v5, v12
+    move v11, v13
 
-    cmpl-float v12, v5, v4
-
-    if-lez v12, :cond_c
-
-    move v4, v5
-
-    :cond_c
+    :cond_e
     add-int/lit8 v0, v0, 0x1
 
     const/4 v5, 0x0
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_d
-    if-eqz v9, :cond_f
+    :cond_f
+    if-eqz v4, :cond_11
 
-    .line 611
-    invoke-direct {v6, v4, v10}, Landroidx/recyclerview/widget/GridLayoutManager;->guessMeasurement(FI)V
+    .line 28
+    invoke-direct {v6, v11, v9}, Landroidx/recyclerview/widget/GridLayoutManager;->guessMeasurement(FI)V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    :goto_6
-    if-ge v0, v13, :cond_f
+    :goto_7
+    if-ge v0, v12, :cond_11
 
-    .line 615
+    .line 29
     iget-object v3, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
     aget-object v3, v3, v0
 
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 616
+    .line 30
     invoke-direct {v6, v3, v4, v8}, Landroidx/recyclerview/widget/GridLayoutManager;->measureChild(Landroid/view/View;IZ)V
 
-    .line 617
-    iget-object v4, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 31
+    iget-object v4, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
 
     move-result v3
 
-    if-le v3, v1, :cond_e
+    if-le v3, v1, :cond_10
 
     move v1, v3
 
-    :cond_e
+    :cond_10
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_f
+    :cond_11
     const/4 v0, 0x0
 
-    :goto_7
-    if-ge v0, v13, :cond_12
+    :goto_8
+    if-ge v0, v12, :cond_14
 
-    .line 627
+    .line 32
     iget-object v3, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
     aget-object v3, v3, v0
 
-    .line 628
-    iget-object v4, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 33
+    iget-object v4, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
     invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
 
     move-result v4
 
-    if-eq v4, v1, :cond_11
+    if-eq v4, v1, :cond_13
 
-    .line 629
+    .line 34
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
 
     check-cast v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 630
-    iget-object v5, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mDecorInsets:Landroid/graphics/Rect;
+    .line 35
+    iget-object v5, v4, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->mDecorInsets:Landroid/graphics/Rect;
 
-    .line 631
+    .line 36
     iget v9, v5, Landroid/graphics/Rect;->top:I
 
     iget v10, v5, Landroid/graphics/Rect;->bottom:I
 
     add-int/2addr v9, v10
 
-    iget v10, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->topMargin:I
+    iget v10, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     add-int/2addr v9, v10
 
-    iget v10, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->bottomMargin:I
+    iget v10, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     add-int/2addr v9, v10
 
-    .line 633
+    .line 37
     iget v10, v5, Landroid/graphics/Rect;->left:I
 
     iget v5, v5, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v10, v5
 
-    iget v5, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->leftMargin:I
+    iget v5, v4, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     add-int/2addr v10, v5
 
-    iget v5, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->rightMargin:I
+    iget v5, v4, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     add-int/2addr v10, v5
 
-    .line 635
+    .line 38
     iget v5, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     iget v11, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
@@ -2264,176 +2268,166 @@
 
     move-result v5
 
-    .line 638
-    iget v11, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 39
+    iget v11, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
-    if-ne v11, v8, :cond_10
+    if-ne v11, v8, :cond_12
 
-    .line 639
-    iget v4, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->width:I
+    .line 40
+    iget v4, v4, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
     const/high16 v11, 0x40000000    # 2.0f
 
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
-    invoke-static {v5, v11, v10, v4, v12}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildMeasureSpec(IIIIZ)I
+    invoke-static {v5, v11, v10, v4, v13}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildMeasureSpec(IIIIZ)I
 
     move-result v4
 
     sub-int v5, v1, v9
 
-    .line 641
+    .line 41
     invoke-static {v5, v11}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v5
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_10
+    :cond_12
     const/high16 v11, 0x40000000    # 2.0f
 
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
     sub-int v10, v1, v10
 
-    .line 644
+    .line 42
     invoke-static {v10, v11}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v10
 
-    .line 646
-    iget v4, v4, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->height:I
+    .line 43
+    iget v4, v4, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {v5, v11, v9, v4, v12}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildMeasureSpec(IIIIZ)I
+    invoke-static {v5, v11, v9, v4, v13}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildMeasureSpec(IIIIZ)I
 
     move-result v5
 
     move v4, v10
 
-    .line 649
-    :goto_8
+    .line 44
+    :goto_9
     invoke-direct {v6, v3, v4, v5, v8}, Landroidx/recyclerview/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View;IIZ)V
 
-    goto :goto_9
-
-    :cond_11
-    const/high16 v11, 0x40000000    # 2.0f
-
-    const/4 v12, 0x0
-
-    :goto_9
+    :cond_13
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_12
-    const/4 v12, 0x0
+    :cond_14
+    const/4 v0, 0x0
 
-    .line 653
+    .line 45
     iput v1, v7, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mConsumed:I
 
-    .line 656
-    iget v0, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 46
+    iget v3, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
-    const/4 v3, -0x1
+    const/4 v4, -0x1
 
-    if-ne v0, v8, :cond_14
+    if-ne v3, v8, :cond_16
 
-    .line 657
-    iget v0, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mLayoutDirection:I
+    .line 47
+    iget v3, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mLayoutDirection:I
 
-    if-ne v0, v3, :cond_13
+    if-ne v3, v4, :cond_15
 
-    .line 658
-    iget v0, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
+    .line 48
+    iget v2, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
 
-    sub-int v1, v0, v1
-
-    move v2, v1
-
-    const/4 v3, 0x0
-
-    move v1, v0
-
-    const/4 v0, 0x0
-
-    goto :goto_b
-
-    .line 661
-    :cond_13
-    iget v0, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
-
-    add-int/2addr v1, v0
-
-    move v2, v0
-
-    const/4 v0, 0x0
-
-    const/4 v3, 0x0
-
-    goto :goto_b
-
-    .line 665
-    :cond_14
-    iget v0, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mLayoutDirection:I
-
-    if-ne v0, v3, :cond_15
-
-    .line 666
-    iget v0, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
-
-    sub-int v1, v0, v1
-
-    move v3, v1
+    sub-int v1, v2, v1
 
     goto :goto_a
 
-    .line 669
+    .line 49
     :cond_15
-    iget v0, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
+    iget v2, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
 
-    add-int/2addr v1, v0
+    add-int/2addr v1, v2
 
-    move v3, v0
+    move/from16 v17, v2
 
-    move v0, v1
+    move v2, v1
+
+    move/from16 v1, v17
 
     :goto_a
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    goto :goto_b
+
+    .line 50
+    :cond_16
+    iget v3, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mLayoutDirection:I
+
+    if-ne v3, v4, :cond_17
+
+    .line 51
+    iget v3, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
+
+    sub-int v4, v3, v1
+
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
+    goto :goto_b
+
+    .line 52
+    :cond_17
+    iget v4, v2, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
+
+    add-int v3, v1, v4
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x0
+
     :goto_b
-    if-ge v12, v13, :cond_1a
+    const/4 v9, 0x0
 
-    .line 674
-    iget-object v4, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
+    :goto_c
+    if-ge v9, v12, :cond_1c
 
-    aget-object v9, v4, v12
+    .line 53
+    iget-object v0, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
-    .line 675
-    invoke-virtual {v9}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    aget-object v10, v0, v9
 
-    move-result-object v4
+    .line 54
+    invoke-virtual {v10}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-object v10, v4
+    move-result-object v0
 
-    check-cast v10, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
+    move-object v11, v0
 
-    .line 676
-    iget v4, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    check-cast v11, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    if-ne v4, v8, :cond_17
+    .line 55
+    iget v0, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
-    .line 677
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isLayoutRTL()Z
+    if-ne v0, v8, :cond_19
+
+    .line 56
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isLayoutRTL()Z
 
     move-result v0
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_18
 
-    .line 678
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingLeft()I
+    .line 57
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingLeft()I
 
     move-result v0
 
@@ -2441,49 +2435,43 @@
 
     iget v4, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    iget v5, v10, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
+    iget v5, v11, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     sub-int/2addr v4, v5
 
     aget v3, v3, v4
 
-    add-int/2addr v0, v3
+    add-int/2addr v3, v0
 
-    .line 679
-    iget-object v3, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 58
+    iget-object v0, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    invoke-virtual {v3, v9}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+    invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
 
-    move-result v3
+    move-result v0
 
-    sub-int v3, v0, v3
+    sub-int v4, v3, v0
 
-    move v11, v0
+    goto :goto_d
 
-    move v14, v1
-
-    move v15, v2
-
-    goto :goto_c
-
-    .line 681
-    :cond_16
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingLeft()I
+    .line 59
+    :cond_18
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingLeft()I
 
     move-result v0
 
     iget-object v3, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
-    iget v4, v10, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
+    iget v4, v11, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     aget v3, v3, v4
 
     add-int/2addr v0, v3
 
-    .line 682
-    iget-object v3, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+    .line 60
+    iget-object v3, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
 
-    invoke-virtual {v3, v9}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+    invoke-virtual {v3, v10}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
 
     move-result v3
 
@@ -2491,84 +2479,84 @@
 
     move/from16 v16, v0
 
-    move v14, v1
-
-    move v15, v2
-
-    move v11, v3
-
-    goto :goto_d
-
-    .line 685
-    :cond_17
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingTop()I
-
-    move-result v1
-
-    iget-object v2, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
-
-    iget v4, v10, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
-
-    aget v2, v2, v4
-
-    add-int/2addr v1, v2
-
-    .line 686
-    iget-object v2, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
-
-    invoke-virtual {v2, v9}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    move v11, v0
-
-    move v15, v1
+    move v13, v1
 
     move v14, v2
 
-    :goto_c
-    move/from16 v16, v3
+    move v15, v3
+
+    goto :goto_e
+
+    .line 61
+    :cond_19
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingTop()I
+
+    move-result v0
+
+    iget-object v1, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
+
+    iget v2, v11, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
+
+    aget v1, v1, v2
+
+    add-int/2addr v1, v0
+
+    .line 62
+    iget-object v0, v6, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
+
+    invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+
+    move-result v0
+
+    add-int v2, v0, v1
 
     :goto_d
+    move v13, v1
+
+    move v14, v2
+
+    move v15, v3
+
+    move/from16 v16, v4
+
+    :goto_e
     move-object/from16 v0, p0
 
-    move-object v1, v9
+    move-object v1, v10
 
     move/from16 v2, v16
 
-    move v3, v15
+    move v3, v13
 
-    move v4, v11
+    move v4, v15
 
     move v5, v14
 
-    .line 690
-    invoke-virtual/range {v0 .. v5}, Landroidx/recyclerview/widget/GridLayoutManager;->layoutDecoratedWithMargins(Landroid/view/View;IIII)V
+    .line 63
+    invoke-virtual/range {v0 .. v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->layoutDecoratedWithMargins(Landroid/view/View;IIII)V
 
-    .line 698
-    invoke-virtual {v10}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->isItemRemoved()Z
-
-    move-result v0
-
-    if-nez v0, :cond_18
-
-    invoke-virtual {v10}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->isItemChanged()Z
+    .line 64
+    invoke-virtual {v11}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->isItemRemoved()Z
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-nez v0, :cond_1a
 
-    .line 699
-    :cond_18
+    invoke-virtual {v11}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->isItemChanged()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1b
+
+    .line 65
+    :cond_1a
     iput-boolean v8, v7, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mIgnoreConsumed:Z
 
-    .line 701
-    :cond_19
+    .line 66
+    :cond_1b
     iget-boolean v0, v7, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable:Z
 
-    invoke-virtual {v9}, Landroid/view/View;->hasFocusable()Z
+    invoke-virtual {v10}, Landroid/view/View;->hasFocusable()Z
 
     move-result v1
 
@@ -2576,20 +2564,20 @@
 
     iput-boolean v0, v7, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable:Z
 
-    add-int/lit8 v12, v12, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    move v0, v11
+    move v1, v13
 
-    move v1, v14
+    move v2, v14
 
-    move v2, v15
+    move v3, v15
 
-    move/from16 v3, v16
+    move/from16 v4, v16
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
-    .line 703
-    :cond_1a
+    .line 67
+    :cond_1c
     iget-object v0, v6, Landroidx/recyclerview/widget/GridLayoutManager;->mSet:[Landroid/view/View;
 
     const/4 v1, 0x0
@@ -2599,16 +2587,16 @@
     return-void
 .end method
 
-.method onAnchorReady(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;I)V
+.method public onAnchorReady(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;I)V
     .locals 1
 
-    .line 359
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;->onAnchorReady(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;I)V
 
-    .line 360
+    .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->updateMeasurements()V
 
-    .line 361
+    .line 3
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
@@ -2621,10 +2609,10 @@
 
     if-nez v0, :cond_0
 
-    .line 362
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureAnchorIsInCorrectSpan(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;I)V
 
-    .line 364
+    .line 5
     :cond_0
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureViewSet()V
 
@@ -2632,7 +2620,7 @@
 .end method
 
 .method public onFocusSearchFailed(Landroid/view/View;ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)Landroid/view/View;
-    .locals 22
+    .locals 23
 
     move-object/from16 v0, p0
 
@@ -2640,8 +2628,8 @@
 
     move-object/from16 v2, p4
 
-    .line 1068
-    invoke-virtual/range {p0 .. p1}, Landroidx/recyclerview/widget/GridLayoutManager;->findContainingItemView(Landroid/view/View;)Landroid/view/View;
+    .line 1
+    invoke-virtual/range {p0 .. p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->findContainingItemView(Landroid/view/View;)Landroid/view/View;
 
     move-result-object v3
 
@@ -2651,7 +2639,7 @@
 
     return-object v4
 
-    .line 1072
+    .line 2
     :cond_0
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -2659,68 +2647,66 @@
 
     check-cast v5, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 1073
+    .line 3
     iget v6, v5, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1074
-    iget v7, v5, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
-
+    .line 4
     iget v5, v5, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    add-int/2addr v7, v5
+    add-int/2addr v5, v6
 
-    .line 1075
+    .line 5
     invoke-super/range {p0 .. p4}, Landroidx/recyclerview/widget/LinearLayoutManager;->onFocusSearchFailed(Landroid/view/View;ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)Landroid/view/View;
 
-    move-result-object v5
+    move-result-object v7
 
-    if-nez v5, :cond_1
+    if-nez v7, :cond_1
 
     return-object v4
 
     :cond_1
-    move/from16 v5, p2
+    move/from16 v7, p2
 
-    .line 1081
-    invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->convertFocusDirectionToLayoutDirection(I)I
+    .line 6
+    invoke-virtual {v0, v7}, Landroidx/recyclerview/widget/LinearLayoutManager;->convertFocusDirectionToLayoutDirection(I)I
 
-    move-result v5
+    move-result v7
 
     const/4 v9, 0x1
 
-    if-ne v5, v9, :cond_2
+    if-ne v7, v9, :cond_2
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
     goto :goto_0
 
     :cond_2
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
-    .line 1082
+    .line 7
     :goto_0
-    iget-boolean v10, v0, Landroidx/recyclerview/widget/GridLayoutManager;->mShouldReverseLayout:Z
+    iget-boolean v10, v0, Landroidx/recyclerview/widget/LinearLayoutManager;->mShouldReverseLayout:Z
 
-    if-eq v5, v10, :cond_3
+    if-eq v7, v10, :cond_3
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
     goto :goto_1
 
     :cond_3
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
     :goto_1
     const/4 v10, -0x1
 
-    if-eqz v5, :cond_4
+    if-eqz v7, :cond_4
 
-    .line 1085
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildCount()I
+    .line 8
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
-    move-result v5
+    move-result v7
 
-    sub-int/2addr v5, v9
+    sub-int/2addr v7, v9
 
     const/4 v11, -0x1
 
@@ -2728,25 +2714,25 @@
 
     goto :goto_2
 
-    .line 1091
+    .line 9
     :cond_4
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
 
-    move-result v5
+    move-result v7
 
-    move v11, v5
+    move v11, v7
 
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
     const/4 v12, 0x1
 
-    .line 1093
+    .line 10
     :goto_2
-    iget v13, v0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    iget v13, v0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     if-ne v13, v9, :cond_5
 
-    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/GridLayoutManager;->isLayoutRTL()Z
+    invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->isLayoutRTL()Z
 
     move-result v13
 
@@ -2759,13 +2745,13 @@
     :cond_5
     const/4 v13, 0x0
 
-    .line 1117
+    .line 11
     :goto_3
-    invoke-direct {v0, v1, v2, v5}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanGroupIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
+    invoke-direct {v0, v1, v2, v7}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanGroupIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result v14
 
-    move v10, v5
+    move v10, v7
 
     const/4 v8, 0x0
 
@@ -2775,243 +2761,247 @@
 
     const/16 v17, 0x0
 
-    move-object v5, v4
+    move-object v7, v4
 
     :goto_4
-    if-eq v10, v11, :cond_17
+    if-eq v10, v11, :cond_18
 
-    .line 1119
+    .line 12
     invoke-direct {v0, v1, v2, v10}, Landroidx/recyclerview/widget/GridLayoutManager;->getSpanGroupIndex(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;I)I
 
     move-result v9
 
-    .line 1120
-    invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/GridLayoutManager;->getChildAt(I)Landroid/view/View;
+    .line 13
+    invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    if-eq v1, v3, :cond_17
+    if-ne v1, v3, :cond_6
 
-    .line 1125
+    goto/16 :goto_e
+
+    .line 14
+    :cond_6
     invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
 
     move-result v18
 
-    if-eqz v18, :cond_7
+    if-eqz v18, :cond_8
 
-    if-eq v9, v14, :cond_7
+    if-eq v9, v14, :cond_8
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
-    goto/16 :goto_d
+    goto/16 :goto_e
 
-    :cond_6
+    :cond_7
     move-object/from16 v18, v3
 
-    move/from16 v20, v8
+    move-object/from16 v21, v7
 
-    move/from16 v19, v11
+    move/from16 v19, v8
 
-    move/from16 p1, v14
+    move/from16 v20, v11
 
-    move/from16 v11, v16
+    move/from16 v7, v16
 
     move/from16 v8, v17
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
-    .line 1136
-    :cond_7
+    .line 15
+    :cond_8
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v9
 
     check-cast v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 1137
+    .line 16
     iget v2, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     move-object/from16 v18, v3
 
-    .line 1138
-    iget v3, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
+    .line 17
+    iget v3, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    move/from16 v19, v11
+    add-int/2addr v3, v2
 
-    iget v11, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
-
-    add-int/2addr v3, v11
-
-    .line 1139
+    .line 18
     invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
 
-    move-result v11
+    move-result v19
 
-    if-eqz v11, :cond_8
+    if-eqz v19, :cond_9
 
-    if-ne v2, v6, :cond_8
+    if-ne v2, v6, :cond_9
 
-    if-ne v3, v7, :cond_8
+    if-ne v3, v5, :cond_9
 
     return-object v1
 
-    .line 1144
-    :cond_8
-    invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_9
-
-    if-eqz v4, :cond_a
-
-    .line 1145
+    .line 19
     :cond_9
     invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
 
-    move-result v11
+    move-result v19
 
-    if-nez v11, :cond_b
+    if-eqz v19, :cond_a
 
-    if-nez v5, :cond_b
+    if-eqz v4, :cond_b
 
+    .line 20
     :cond_a
+    invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
+
+    move-result v19
+
+    if-nez v19, :cond_c
+
+    if-nez v7, :cond_c
+
+    :cond_b
+    move-object/from16 v21, v7
+
     :goto_5
-    move/from16 v20, v8
+    move/from16 v19, v8
 
-    move/from16 p1, v14
+    move/from16 v20, v11
 
-    move/from16 v11, v16
+    move/from16 v7, v16
 
     move/from16 v8, v17
 
     :goto_6
-    const/4 v14, 0x1
-
-    goto :goto_a
-
-    .line 1148
-    :cond_b
-    invoke-static {v2, v6}, Ljava/lang/Math;->max(II)I
-
-    move-result v11
-
-    .line 1149
-    invoke-static {v3, v7}, Ljava/lang/Math;->min(II)I
-
-    move-result v20
-
-    sub-int v11, v20, v11
-
-    .line 1151
-    invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
-
-    move-result v20
-
-    if-eqz v20, :cond_e
-
-    if-le v11, v8, :cond_c
-
-    goto :goto_5
-
-    :cond_c
-    if-ne v11, v8, :cond_12
-
-    if-le v2, v15, :cond_d
-
     const/4 v11, 0x1
 
-    goto :goto_7
+    goto :goto_b
 
-    :cond_d
-    const/4 v11, 0x0
+    .line 21
+    :cond_c
+    invoke-static {v2, v6}, Ljava/lang/Math;->max(II)I
+
+    move-result v19
+
+    .line 22
+    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v20
+
+    move-object/from16 v21, v7
+
+    sub-int v7, v20, v19
+
+    .line 23
+    invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
+
+    move-result v19
+
+    if-eqz v19, :cond_f
+
+    if-le v7, v8, :cond_d
 
     :goto_7
-    if-ne v13, v11, :cond_12
-
     goto :goto_5
 
-    :cond_e
-    if-nez v4, :cond_12
+    :cond_d
+    if-ne v7, v8, :cond_13
 
-    move/from16 v20, v8
+    if-le v2, v15, :cond_e
 
-    move/from16 p1, v14
-
-    const/4 v8, 0x0
-
-    const/4 v14, 0x1
-
-    .line 1160
-    invoke-virtual {v0, v1, v8, v14}, Landroidx/recyclerview/widget/GridLayoutManager;->isViewPartiallyVisible(Landroid/view/View;ZZ)Z
-
-    move-result v21
-
-    if-eqz v21, :cond_13
-
-    move/from16 v8, v17
-
-    if-le v11, v8, :cond_f
-
-    move/from16 v11, v16
-
-    goto :goto_a
-
-    :cond_f
-    if-ne v11, v8, :cond_11
-
-    move/from16 v11, v16
-
-    if-le v2, v11, :cond_10
+    const/4 v7, 0x1
 
     goto :goto_8
 
-    :cond_10
-    const/4 v14, 0x0
+    :cond_e
+    const/4 v7, 0x0
 
     :goto_8
-    if-ne v13, v14, :cond_14
+    if-ne v13, v7, :cond_13
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_11
-    move/from16 v11, v16
+    :cond_f
+    if-nez v4, :cond_13
 
-    goto :goto_9
+    move/from16 v19, v8
 
-    :cond_12
-    move/from16 v20, v8
+    move/from16 v20, v11
 
-    move/from16 p1, v14
+    const/4 v8, 0x0
 
-    :cond_13
-    move/from16 v11, v16
+    const/4 v11, 0x1
+
+    .line 24
+    invoke-virtual {v0, v1, v8, v11}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->isViewPartiallyVisible(Landroid/view/View;ZZ)Z
+
+    move-result v22
+
+    if-eqz v22, :cond_14
 
     move/from16 v8, v17
 
-    :cond_14
+    if-le v7, v8, :cond_10
+
+    move/from16 v7, v16
+
+    goto :goto_b
+
+    :cond_10
+    if-ne v7, v8, :cond_12
+
+    move/from16 v7, v16
+
+    if-le v2, v7, :cond_11
+
+    goto :goto_9
+
+    :cond_11
+    const/4 v11, 0x0
+
     :goto_9
-    const/4 v14, 0x0
+    if-ne v13, v11, :cond_15
 
+    goto :goto_6
+
+    :cond_12
+    move/from16 v7, v16
+
+    goto :goto_a
+
+    :cond_13
+    move/from16 v19, v8
+
+    move/from16 v20, v11
+
+    :cond_14
+    move/from16 v7, v16
+
+    move/from16 v8, v17
+
+    :cond_15
     :goto_a
-    if-eqz v14, :cond_16
+    const/4 v11, 0x0
 
-    .line 1172
+    :goto_b
+    if-eqz v11, :cond_17
+
+    .line 25
     invoke-virtual {v1}, Landroid/view/View;->hasFocusable()Z
 
-    move-result v14
+    move-result v11
 
-    if-eqz v14, :cond_15
+    if-eqz v11, :cond_16
 
-    .line 1174
+    .line 26
     iget v4, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1175
-    invoke-static {v3, v7}, Ljava/lang/Math;->min(II)I
+    .line 27
+    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
-    .line 1176
+    .line 28
     invoke-static {v2, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -3020,52 +3010,54 @@
 
     move v15, v4
 
+    move/from16 v16, v7
+
     move/from16 v17, v8
 
-    move/from16 v16, v11
+    move-object/from16 v7, v21
 
     move-object v4, v1
 
     move v8, v2
 
-    goto :goto_c
+    goto :goto_d
 
-    .line 1179
-    :cond_15
-    iget v5, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
+    .line 29
+    :cond_16
+    iget v7, v9, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1180
-    invoke-static {v3, v7}, Ljava/lang/Math;->min(II)I
+    .line 30
+    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
-    .line 1181
+    .line 31
     invoke-static {v2, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
     sub-int v17, v3, v2
 
-    move/from16 v16, v5
+    move/from16 v16, v7
 
-    move/from16 v8, v20
+    move/from16 v8, v19
 
-    move-object v5, v1
+    move-object v7, v1
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_16
-    :goto_b
+    :cond_17
+    :goto_c
+    move/from16 v16, v7
+
     move/from16 v17, v8
 
-    move/from16 v16, v11
+    move/from16 v8, v19
 
-    move/from16 v8, v20
+    move-object/from16 v7, v21
 
-    :goto_c
+    :goto_d
     add-int/2addr v10, v12
-
-    move/from16 v14, p1
 
     move-object/from16 v1, p3
 
@@ -3073,46 +3065,51 @@
 
     move-object/from16 v3, v18
 
-    move/from16 v11, v19
+    move/from16 v11, v20
 
     const/4 v9, 0x1
 
     goto/16 :goto_4
 
-    :cond_17
-    :goto_d
-    if-eqz v4, :cond_18
-
-    return-object v4
-
     :cond_18
-    return-object v5
+    :goto_e
+    move-object/from16 v21, v7
+
+    if-eqz v4, :cond_19
+
+    goto :goto_f
+
+    :cond_19
+    move-object/from16 v4, v21
+
+    :goto_f
+    return-object v4
 .end method
 
 .method public onInitializeAccessibilityNodeInfoForItem(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 7
 
-    .line 147
+    .line 1
     invoke-virtual {p3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 148
+    .line 2
     instance-of v1, v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     if-nez v1, :cond_0
 
-    .line 149
-    invoke-super {p0, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;->onInitializeAccessibilityNodeInfoForItem(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
+    .line 3
+    invoke-super {p0, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->onInitializeAccessibilityNodeInfoForItem(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
     return-void
 
-    .line 152
+    .line 4
     :cond_0
     check-cast v0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
-    .line 153
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->getViewLayoutPosition()I
+    .line 5
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 
     move-result p3
 
@@ -3120,12 +3117,12 @@
 
     move-result p1
 
-    .line 154
-    iget p2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 6
+    iget p2, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     if-nez p2, :cond_1
 
-    .line 156
+    .line 7
     invoke-virtual {v0}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->getSpanIndex()I
 
     move-result v1
@@ -3142,19 +3139,19 @@
 
     move v3, p1
 
-    .line 155
+    .line 8
     invoke-static/range {v1 .. v6}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;->obtain(IIIIZZ)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;
 
     move-result-object p1
 
     invoke-virtual {p4, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setCollectionItemInfo(Ljava/lang/Object;)V
 
-    return-void
+    goto :goto_0
 
     :cond_1
     const/4 v2, 0x1
 
-    .line 161
+    .line 9
     invoke-virtual {v0}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->getSpanIndex()I
 
     move-result v3
@@ -3169,25 +3166,26 @@
 
     move v1, p1
 
-    .line 159
+    .line 10
     invoke-static/range {v1 .. v6}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;->obtain(IIIIZZ)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;
 
     move-result-object p1
 
     invoke-virtual {p4, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setCollectionItemInfo(Ljava/lang/Object;)V
 
+    :goto_0
     return-void
 .end method
 
 .method public onItemsAdded(Landroidx/recyclerview/widget/RecyclerView;II)V
     .locals 0
 
-    .line 200
+    .line 1
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanIndexCache()V
 
-    .line 201
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanGroupIndexCache()V
@@ -3198,12 +3196,12 @@
 .method public onItemsChanged(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 206
+    .line 1
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanIndexCache()V
 
-    .line 207
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanGroupIndexCache()V
@@ -3214,12 +3212,12 @@
 .method public onItemsMoved(Landroidx/recyclerview/widget/RecyclerView;III)V
     .locals 0
 
-    .line 225
+    .line 1
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanIndexCache()V
 
-    .line 226
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanGroupIndexCache()V
@@ -3230,12 +3228,12 @@
 .method public onItemsRemoved(Landroidx/recyclerview/widget/RecyclerView;II)V
     .locals 0
 
-    .line 212
+    .line 1
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanIndexCache()V
 
-    .line 213
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanGroupIndexCache()V
@@ -3246,12 +3244,12 @@
 .method public onItemsUpdated(Landroidx/recyclerview/widget/RecyclerView;IILjava/lang/Object;)V
     .locals 0
 
-    .line 219
+    .line 1
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanIndexCache()V
 
-    .line 220
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanGroupIndexCache()V
@@ -3262,21 +3260,21 @@
 .method public onLayoutChildren(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 1
 
-    .line 167
+    .line 1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->isPreLayout()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 168
+    .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->cachePreLayoutSpanMapping()V
 
-    .line 170
+    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->onLayoutChildren(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
-    .line 174
+    .line 4
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->clearPreLayoutSpanMappingCache()V
 
     return-void
@@ -3285,12 +3283,12 @@
 .method public onLayoutCompleted(Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 179
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->onLayoutCompleted(Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     const/4 p1, 0x0
 
-    .line 180
+    .line 2
     iput-boolean p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     return-void
@@ -3299,13 +3297,13 @@
 .method public scrollHorizontallyBy(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 0
 
-    .line 376
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->updateMeasurements()V
 
-    .line 377
+    .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureViewSet()V
 
-    .line 378
+    .line 3
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollHorizontallyBy(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
@@ -3316,13 +3314,13 @@
 .method public scrollVerticallyBy(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
     .locals 0
 
-    .line 384
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->updateMeasurements()V
 
-    .line 385
+    .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->ensureViewSet()V
 
-    .line 386
+    .line 3
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollVerticallyBy(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
@@ -3333,101 +3331,101 @@
 .method public setMeasuredDimension(Landroid/graphics/Rect;II)V
     .locals 4
 
-    .line 290
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
     if-nez v0, :cond_0
 
-    .line 291
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->setMeasuredDimension(Landroid/graphics/Rect;II)V
+    .line 2
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->setMeasuredDimension(Landroid/graphics/Rect;II)V
 
-    .line 294
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingLeft()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingRight()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingRight()I
 
     move-result v1
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    .line 295
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingTop()I
+    .line 4
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingTop()I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingBottom()I
 
     move-result v2
 
-    add-int/2addr v1, v2
+    add-int/2addr v2, v0
 
-    .line 296
-    iget v2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mOrientation:I
+    .line 5
+    iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v3, 0x1
 
-    if-ne v2, v3, :cond_1
+    if-ne v0, v3, :cond_1
 
-    .line 297
+    .line 6
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
 
-    add-int/2addr p1, v1
+    add-int/2addr p1, v2
 
-    .line 298
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getMinimumHeight()I
-
-    move-result v1
-
-    invoke-static {p3, p1, v1}, Landroidx/recyclerview/widget/GridLayoutManager;->chooseSize(III)I
-
-    move-result p1
-
-    .line 299
-    iget-object p3, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
-
-    array-length v1, p3
-
-    sub-int/2addr v1, v3
-
-    aget p3, p3, v1
-
-    add-int/2addr p3, v0
-
-    .line 300
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getMinimumWidth()I
+    .line 7
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getMinimumHeight()I
 
     move-result v0
 
-    .line 299
-    invoke-static {p2, p3, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->chooseSize(III)I
+    invoke-static {p3, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->chooseSize(III)I
+
+    move-result p1
+
+    .line 8
+    iget-object p3, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
+
+    array-length v0, p3
+
+    sub-int/2addr v0, v3
+
+    aget p3, p3, v0
+
+    add-int/2addr p3, v1
+
+    .line 9
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getMinimumWidth()I
+
+    move-result v0
+
+    .line 10
+    invoke-static {p2, p3, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->chooseSize(III)I
 
     move-result p2
 
     goto :goto_0
 
-    .line 302
+    .line 11
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result p1
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, v1
 
-    .line 303
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getMinimumWidth()I
+    .line 12
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getMinimumWidth()I
 
     move-result v0
 
-    invoke-static {p2, p1, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->chooseSize(III)I
+    invoke-static {p2, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->chooseSize(III)I
 
     move-result p2
 
-    .line 304
+    .line 13
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
     array-length v0, p1
@@ -3436,21 +3434,21 @@
 
     aget p1, p1, v0
 
-    add-int/2addr p1, v1
+    add-int/2addr p1, v2
 
-    .line 305
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->getMinimumHeight()I
+    .line 14
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getMinimumHeight()I
 
     move-result v0
 
-    .line 304
-    invoke-static {p3, p1, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->chooseSize(III)I
+    .line 15
+    invoke-static {p3, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->chooseSize(III)I
 
     move-result p1
 
-    .line 307
+    .line 16
     :goto_0
-    invoke-virtual {p0, p2, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p2, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->setMeasuredDimension(II)V
 
     return-void
 .end method
@@ -3458,7 +3456,7 @@
 .method public setSpanCount(I)V
     .locals 2
 
-    .line 814
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
     if-ne p1, v0, :cond_0
@@ -3468,35 +3466,31 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 817
+    .line 2
     iput-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
-    if-lez p1, :cond_1
+    if-lt p1, v0, :cond_1
 
-    .line 822
+    .line 3
     iput p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
-    .line 823
+    .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;->invalidateSpanIndexCache()V
 
-    .line 824
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->requestLayout()V
+    .line 5
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->requestLayout()V
 
     return-void
 
-    .line 819
+    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
     const-string v1, "Span count should be at least 1. Provided "
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lg/b/a/a/a;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3508,7 +3502,7 @@
 .method public setSpanSizeLookup(Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;)V
     .locals 0
 
-    .line 266
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     return-void
@@ -3521,12 +3515,12 @@
 
     const/4 p1, 0x0
 
-    .line 113
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setStackFromEnd(Z)V
 
     return-void
 
-    .line 109
+    .line 2
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -3540,7 +3534,7 @@
 .method public setUsingSpansToEstimateScrollbarDimensions(Z)V
     .locals 0
 
-    .line 1255
+    .line 1
     iput-boolean p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mUsingSpansToEstimateScrollBarDimensions:Z
 
     return-void
@@ -3549,8 +3543,8 @@
 .method public supportsPredictiveItemAnimations()Z
     .locals 1
 
-    .line 1190
-    iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSavedState:Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingSavedState:Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;
 
     if-nez v0, :cond_0
 
@@ -3560,10 +3554,11 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method

@@ -25,17 +25,17 @@
 
 
 # instance fields
-.field private final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 153
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/util/Pools$SimplePool;-><init>(I)V
 
-    .line 143
+    .line 2
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -55,12 +55,12 @@
         }
     .end annotation
 
-    .line 158
+    .line 1
     iget-object v0, p0, Landroidx/core/util/Pools$SynchronizedPool;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 159
+    .line 2
     :try_start_0
     invoke-super {p0}, Landroidx/core/util/Pools$SimplePool;->acquire()Ljava/lang/Object;
 
@@ -73,7 +73,7 @@
     :catchall_0
     move-exception v1
 
-    .line 160
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -83,18 +83,22 @@
 
 .method public release(Ljava/lang/Object;)Z
     .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
         }
     .end annotation
 
-    .line 165
+    .line 1
     iget-object v0, p0, Landroidx/core/util/Pools$SynchronizedPool;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 166
+    .line 2
     :try_start_0
     invoke-super {p0, p1}, Landroidx/core/util/Pools$SimplePool;->release(Ljava/lang/Object;)Z
 
@@ -107,7 +111,7 @@
     :catchall_0
     move-exception p1
 
-    .line 167
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

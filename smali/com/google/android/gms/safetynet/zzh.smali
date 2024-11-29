@@ -15,18 +15,18 @@
 
 
 # instance fields
-.field private final a:I
+.field public final d:I
 
-.field private final b:Z
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/safetynet/h;
+    new-instance v0, Lg/d/a/b/i/h;
 
-    invoke-direct {v0}, Lcom/google/android/gms/safetynet/h;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/i/h;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/safetynet/zzh;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -38,9 +38,9 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    iput p1, p0, Lcom/google/android/gms/safetynet/zzh;->a:I
+    iput p1, p0, Lcom/google/android/gms/safetynet/zzh;->d:I
 
-    iput-boolean p2, p0, Lcom/google/android/gms/safetynet/zzh;->b:Z
+    iput-boolean p2, p0, Lcom/google/android/gms/safetynet/zzh;->e:Z
 
     return-void
 .end method
@@ -50,27 +50,24 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    const/16 p2, 0x4f45
-
-    .line 1017
-    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result p2
 
-    iget v0, p0, Lcom/google/android/gms/safetynet/zzh;->a:I
+    iget v0, p0, Lcom/google/android/gms/safetynet/zzh;->d:I
 
     const/4 v1, 0x2
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v0}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    iget-boolean v0, p0, Lcom/google/android/gms/safetynet/zzh;->b:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/safetynet/zzh;->e:Z
 
     const/4 v1, 0x3
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;IZ)V
+    invoke-static {p1, v1, v0}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;IZ)V
 
-    .line 1018
-    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    .line 1
+    invoke-static {p1, p2}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     return-void
 .end method

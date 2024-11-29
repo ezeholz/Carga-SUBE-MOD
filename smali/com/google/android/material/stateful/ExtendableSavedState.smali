@@ -16,7 +16,10 @@
 
 
 # instance fields
-.field public final a:Landroidx/collection/SimpleArrayMap;
+.field public final d:Landroidx/collection/SimpleArrayMap;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
@@ -29,64 +32,64 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 91
-    new-instance v0, Lcom/google/android/material/stateful/ExtendableSavedState$1;
+    .line 1
+    new-instance v0, Lcom/google/android/material/stateful/ExtendableSavedState$a;
 
-    invoke-direct {v0}, Lcom/google/android/material/stateful/ExtendableSavedState$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/stateful/ExtendableSavedState$a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/stateful/ExtendableSavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 5
+.method public synthetic constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;Lcom/google/android/material/stateful/ExtendableSavedState$a;)V
+    .locals 4
 
-    .line 46
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 48
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
-    .line 50
-    new-array v0, p2, [Ljava/lang/String;
+    .line 5
+    new-array p3, p2, [Ljava/lang/String;
 
-    .line 51
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
+    .line 6
+    invoke-virtual {p1, p3}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 53
-    new-array v1, p2, [Landroid/os/Bundle;
+    .line 7
+    new-array v0, p2, [Landroid/os/Bundle;
 
-    .line 54
-    sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    .line 8
+    sget-object v1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedArray([Ljava/lang/Object;Landroid/os/Parcelable$Creator;)V
 
-    .line 56
+    .line 9
     new-instance p1, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {p1, p2}, Landroidx/collection/SimpleArrayMap;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    iput-object p1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
 
     const/4 p1, 0x0
 
     :goto_0
     if-ge p1, p2, :cond_0
 
-    .line 58
-    iget-object v2, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    .line 10
+    iget-object v1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
+
+    aget-object v2, p3, p1
 
     aget-object v3, v0, p1
 
-    aget-object v4, v1, p1
-
-    invoke-virtual {v2, v3, v4}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 p1, p1, 0x1
 
@@ -96,27 +99,18 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;B)V
-    .locals 0
-
-    .line 36
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/stateful/ExtendableSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 41
+    .line 1
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 42
+    .line 2
     new-instance p1, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {p1}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    iput-object p1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -125,15 +119,17 @@
 # virtual methods
 .method public toString()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 84
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "ExtendableSavedState{"
 
-    const-string v1, "ExtendableSavedState{"
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 85
+    .line 2
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -148,7 +144,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    iget-object v1, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -165,24 +161,28 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 64
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 66
-    iget-object p2, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    .line 2
+    iget-object p2, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {p2}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result p2
 
-    .line 67
+    .line 3
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
+    .line 4
     new-array v0, p2, [Ljava/lang/String;
 
-    .line 70
+    .line 5
     new-array v1, p2, [Landroid/os/Bundle;
 
     const/4 v2, 0x0
@@ -192,8 +192,8 @@
     :goto_0
     if-ge v3, p2, :cond_0
 
-    .line 73
-    iget-object v4, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    .line 6
+    iget-object v4, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v4, v3}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
@@ -203,8 +203,8 @@
 
     aput-object v4, v0, v3
 
-    .line 74
-    iget-object v4, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->a:Landroidx/collection/SimpleArrayMap;
+    .line 7
+    iget-object v4, p0, Lcom/google/android/material/stateful/ExtendableSavedState;->d:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v4, v3}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
 
@@ -218,11 +218,11 @@
 
     goto :goto_0
 
-    .line 77
+    .line 8
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 78
+    .line 9
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
     return-void

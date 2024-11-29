@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;
+.class public Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;
 .super Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;
 .source "MediaControllerCompat.java"
 
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "TransportControlsBase"
 .end annotation
 
 
 # instance fields
-.field private mBinder:Landroid/support/v4/media/session/IMediaSession;
+.field public mBinder:Landroid/support/v4/media/session/IMediaSession;
 
 
 # direct methods
 .method public constructor <init>(Landroid/support/v4/media/session/IMediaSession;)V
     .locals 0
 
-    .line 1738
+    .line 1
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;-><init>()V
 
-    .line 1739
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
     return-void
@@ -36,7 +36,7 @@
 .method public fastForward()V
     .locals 1
 
-    .line 1853
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -51,7 +51,7 @@
 .method public pause()V
     .locals 1
 
-    .line 1826
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -66,7 +66,7 @@
 .method public play()V
     .locals 1
 
-    .line 1781
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -81,7 +81,7 @@
 .method public playFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1790
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -96,7 +96,7 @@
 .method public playFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1799
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -111,7 +111,7 @@
 .method public playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1808
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -126,7 +126,7 @@
 .method public prepare()V
     .locals 1
 
-    .line 1745
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -141,7 +141,7 @@
 .method public prepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1754
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -156,7 +156,7 @@
 .method public prepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1763
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -171,7 +171,7 @@
 .method public prepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1772
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -186,7 +186,7 @@
 .method public rewind()V
     .locals 1
 
-    .line 1871
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -201,7 +201,7 @@
 .method public seekTo(J)V
     .locals 1
 
-    .line 1844
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -216,7 +216,7 @@
 .method public sendCustomAction(Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1933
+    .line 1
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -229,10 +229,10 @@
 .method public sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1938
+    .line 2
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1940
+    .line 3
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -247,7 +247,7 @@
 .method public setCaptioningEnabled(Z)V
     .locals 1
 
-    .line 1907
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -262,7 +262,7 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;)V
     .locals 1
 
-    .line 1889
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -277,7 +277,7 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1898
+    .line 2
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -292,7 +292,7 @@
 .method public setRepeatMode(I)V
     .locals 1
 
-    .line 1916
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -307,7 +307,7 @@
 .method public setShuffleMode(I)V
     .locals 1
 
-    .line 1925
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -322,7 +322,7 @@
 .method public skipToNext()V
     .locals 1
 
-    .line 1862
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -337,7 +337,7 @@
 .method public skipToPrevious()V
     .locals 1
 
-    .line 1880
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -352,7 +352,7 @@
 .method public skipToQueueItem(J)V
     .locals 1
 
-    .line 1817
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -367,7 +367,7 @@
 .method public stop()V
     .locals 1
 
-    .line 1835
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 

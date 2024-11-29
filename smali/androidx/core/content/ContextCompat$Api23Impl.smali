@@ -1,33 +1,39 @@
-.class Landroidx/core/content/ContextCompat$Api23Impl;
+.class public Landroidx/core/content/ContextCompat$Api23Impl;
 .super Ljava/lang/Object;
 .source "ContextCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x17
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/content/ContextCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Api23Impl"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 878
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static getColor(Landroid/content/Context;I)I
+.method public static getColor(Landroid/content/Context;I)I
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
-    .line 889
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
 
     move-result p0
@@ -35,10 +41,12 @@
     return p0
 .end method
 
-.method static getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+.method public static getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
-    .line 884
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
@@ -46,8 +54,11 @@
     return-object p0
 .end method
 
-.method static getSystemService(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+.method public static getSystemService(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -59,7 +70,7 @@
         }
     .end annotation
 
-    .line 894
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -67,8 +78,11 @@
     return-object p0
 .end method
 
-.method static getSystemServiceName(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
+.method public static getSystemServiceName(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -79,7 +93,7 @@
         }
     .end annotation
 
-    .line 899
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemServiceName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p0

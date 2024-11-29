@@ -1,4 +1,4 @@
-.class Landroidx/core/app/ActivityCompat$1;
+.class public Landroidx/core/app/ActivityCompat$1;
 .super Ljava/lang/Object;
 .source "ActivityCompat.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$activity:Landroid/app/Activity;
+.field public final synthetic val$activity:Landroid/app/Activity;
 
-.field final synthetic val$permissions:[Ljava/lang/String;
+.field public final synthetic val$permissions:[Ljava/lang/String;
 
-.field final synthetic val$requestCode:I
+.field public final synthetic val$requestCode:I
 
 
 # direct methods
-.method constructor <init>([Ljava/lang/String;Landroid/app/Activity;I)V
+.method public constructor <init>([Ljava/lang/String;Landroid/app/Activity;I)V
     .locals 0
 
-    .line 519
+    .line 1
     iput-object p1, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     iput-object p2, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
@@ -46,28 +46,28 @@
 .method public run()V
     .locals 6
 
-    .line 522
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     array-length v0, v0
 
     new-array v0, v0, [I
 
-    .line 524
+    .line 2
     iget-object v1, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 525
+    .line 3
     iget-object v2, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 527
+    .line 4
     iget-object v3, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     array-length v3, v3
@@ -77,7 +77,7 @@
     :goto_0
     if-ge v4, v3, :cond_0
 
-    .line 529
+    .line 5
     iget-object v5, p0, Landroidx/core/app/ActivityCompat$1;->val$permissions:[Ljava/lang/String;
 
     aget-object v5, v5, v4
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 533
+    .line 6
     :cond_0
     iget-object v1, p0, Landroidx/core/app/ActivityCompat$1;->val$activity:Landroid/app/Activity;
 

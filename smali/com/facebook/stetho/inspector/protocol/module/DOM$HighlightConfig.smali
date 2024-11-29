@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightConfig;
+.class public Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightConfig;
 .super Ljava/lang/Object;
 .source "DOM.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "HighlightConfig"
 .end annotation
 
@@ -22,10 +22,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 489
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

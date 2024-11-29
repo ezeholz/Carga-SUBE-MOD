@@ -45,9 +45,6 @@
     <string name="common_open_on_phone">දුරකථනය තුළ විවෘත කරන්න</string>
     <string name="common_signin_button_text">පුරන්න</string>
     <string name="common_signin_button_text_long">Google සමගින් පුරන්න</string>
-    <string name="joda_time_android_preposition_for_date">%s වන දා</string>
-    <string name="joda_time_android_preposition_for_time">%s ට</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">සෙවීම</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AlertController$AlertParams$3;
+.class public Landroidx/appcompat/app/AlertController$AlertParams$3;
 .super Ljava/lang/Object;
 .source "AlertController.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/AlertController$AlertParams;
+.field public final synthetic this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-.field final synthetic val$dialog:Landroidx/appcompat/app/AlertController;
+.field public final synthetic val$dialog:Landroidx/appcompat/app/AlertController;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;)V
+.method public constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
-    .line 1065
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->val$dialog:Landroidx/appcompat/app/AlertController;
@@ -51,7 +51,7 @@
         }
     .end annotation
 
-    .line 1068
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-object p1, p1, Landroidx/appcompat/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -62,14 +62,14 @@
 
     invoke-interface {p1, p2, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 1069
+    .line 2
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-boolean p1, p1, Landroidx/appcompat/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
     if-nez p1, :cond_0
 
-    .line 1070
+    .line 3
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$3;->val$dialog:Landroidx/appcompat/app/AlertController;
 
     iget-object p1, p1, Landroidx/appcompat/app/AlertController;->mDialog:Landroidx/appcompat/app/AppCompatDialog;

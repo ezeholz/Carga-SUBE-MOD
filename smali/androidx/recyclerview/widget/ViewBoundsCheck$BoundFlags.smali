@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
+.class public Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;
 .super Ljava/lang/Object;
 .source "ViewBoundsCheck.java"
 
@@ -9,33 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "BoundFlags"
 .end annotation
 
 
 # instance fields
-.field mBoundFlags:I
+.field public mBoundFlags:I
 
-.field mChildEnd:I
+.field public mChildEnd:I
 
-.field mChildStart:I
+.field public mChildStart:I
 
-.field mRvEnd:I
+.field public mRvEnd:I
 
-.field mRvStart:I
+.field public mRvStart:I
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 136
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 137
+    .line 2
     iput v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
     return-void
@@ -43,10 +43,10 @@
 
 
 # virtual methods
-.method addFlags(I)V
+.method public addFlags(I)V
     .locals 1
 
-    .line 148
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
     or-int/2addr p1, v0
@@ -56,10 +56,10 @@
     return-void
 .end method
 
-.method boundsMatch()Z
+.method public boundsMatch()Z
     .locals 4
 
-    .line 166
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
     and-int/lit8 v1, v0, 0x7
@@ -68,7 +68,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 167
+    .line 2
     iget v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mChildStart:I
 
     iget v3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mRvStart:I
@@ -85,7 +85,7 @@
 
     return v2
 
-    .line 172
+    .line 3
     :cond_0
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
@@ -93,7 +93,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 173
+    .line 4
     iget v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mChildStart:I
 
     iget v3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mRvEnd:I
@@ -110,7 +110,7 @@
 
     return v2
 
-    .line 178
+    .line 5
     :cond_1
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 179
+    .line 6
     iget v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mChildEnd:I
 
     iget v3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mRvStart:I
@@ -135,7 +135,7 @@
 
     return v2
 
-    .line 184
+    .line 7
     :cond_2
     iget v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
@@ -143,7 +143,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 185
+    .line 8
     iget v1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mChildEnd:I
 
     iget v3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mRvEnd:I
@@ -166,7 +166,7 @@
     return v0
 .end method
 
-.method compare(II)I
+.method public compare(II)I
     .locals 0
 
     if-le p1, p2, :cond_0
@@ -188,30 +188,30 @@
     return p1
 .end method
 
-.method resetFlags()V
+.method public resetFlags()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 152
+    .line 1
     iput v0, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mBoundFlags:I
 
     return-void
 .end method
 
-.method setBounds(IIII)V
+.method public setBounds(IIII)V
     .locals 0
 
-    .line 141
+    .line 1
     iput p1, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mRvStart:I
 
-    .line 142
+    .line 2
     iput p2, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mRvEnd:I
 
-    .line 143
+    .line 3
     iput p3, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mChildStart:I
 
-    .line 144
+    .line 4
     iput p4, p0, Landroidx/recyclerview/widget/ViewBoundsCheck$BoundFlags;->mChildEnd:I
 
     return-void

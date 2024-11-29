@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/AppCompatSpinner$2;
+.class public Landroidx/appcompat/widget/AppCompatSpinner$2;
 .super Ljava/lang/Object;
 .source "AppCompatSpinner.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/AppCompatSpinner;
+.field public final synthetic this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner;)V
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner;)V
     .locals 0
 
-    .line 624
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$2;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,9 +36,9 @@
 
 # virtual methods
 .method public onGlobalLayout()V
-    .locals 3
+    .locals 1
 
-    .line 627
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$2;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner;->getInternalPopup()Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
@@ -51,37 +51,24 @@
 
     if-nez v0, :cond_0
 
-    .line 628
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$2;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner;->showPopup()V
 
-    .line 630
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$2;->this$0:Landroidx/appcompat/widget/AppCompatSpinner;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {v0}, Landroid/widget/Spinner;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 632
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x10
-
-    if-lt v1, v2, :cond_1
-
-    .line 633
+    .line 4
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    return-void
-
-    .line 635
     :cond_1
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    :cond_2
     return-void
 .end method

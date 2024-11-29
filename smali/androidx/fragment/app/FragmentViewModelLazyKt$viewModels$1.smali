@@ -1,14 +1,14 @@
 .class public final Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$1;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "FragmentViewModelLazy.kt"
 
 # interfaces
-.implements Lkotlin/d/a/a;
+.implements Lj/m/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/FragmentViewModelLazyKt;->viewModels$default(Landroidx/fragment/app/Fragment;Lkotlin/d/a/a;Lkotlin/d/a/a;ILjava/lang/Object;)Lkotlin/g;
+    value = Landroidx/fragment/app/FragmentViewModelLazyKt;->viewModels$default(Landroidx/fragment/app/Fragment;Lj/m/b/a;Lj/m/b/a;ILjava/lang/Object;)Lj/d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/a<",
+        "Lj/m/c/j;",
+        "Lj/m/b/a<",
         "Landroidx/fragment/app/Fragment;",
         ">;"
     }
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic $this_viewModels:Landroidx/fragment/app/Fragment;
+.field public final synthetic $this_viewModels:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, p1}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
@@ -48,13 +48,13 @@
 .method public final invoke()Landroidx/fragment/app/Fragment;
     .locals 1
 
-    .line 56
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$1;->$this_viewModels:Landroidx/fragment/app/Fragment;
 
     return-object v0
 .end method
 
-.method public final bridge synthetic invoke()Ljava/lang/Object;
+.method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$1;->invoke()Landroidx/fragment/app/Fragment;

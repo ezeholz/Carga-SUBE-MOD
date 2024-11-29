@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field private final c:Ljava/util/List;
+.field public final j:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -39,46 +39,46 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 69
-    new-instance v0, Lcom/facebook/share/model/SharePhotoContent$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/SharePhotoContent$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/SharePhotoContent$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/SharePhotoContent$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/SharePhotoContent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 4
 
-    .line 45
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareContent;-><init>(Landroid/os/Parcel;)V
 
-    .line 2112
+    .line 2
     const-class v0, Lcom/facebook/share/model/ShareMedia;
 
-    .line 2113
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 2112
+    .line 4
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object p1
 
-    .line 2114
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2115
+    .line 6
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -88,23 +88,23 @@
 
     aget-object v3, p1, v2
 
-    .line 2116
+    .line 7
     check-cast v3, Lcom/facebook/share/model/ShareMedia;
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1234
+    .line 8
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1235
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 9
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -122,32 +122,32 @@
 
     check-cast v1, Lcom/facebook/share/model/ShareMedia;
 
-    .line 1236
+    .line 10
     instance-of v2, v1, Lcom/facebook/share/model/SharePhoto;
 
     if-eqz v2, :cond_1
 
-    .line 1237
+    .line 11
     check-cast v1, Lcom/facebook/share/model/SharePhoto;
 
-    invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 47
+    .line 12
     :cond_2
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/model/SharePhotoContent;->c:Ljava/util/List;
+    iput-object p1, p0, Lcom/facebook/share/model/SharePhotoContent;->j:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -155,16 +155,16 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .line 64
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/facebook/share/model/ShareContent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 65
-    iget-object v0, p0, Lcom/facebook/share/model/SharePhotoContent;->c:Ljava/util/List;
+    .line 2
+    iget-object v0, p0, Lcom/facebook/share/model/SharePhotoContent;->j:Ljava/util/List;
 
-    .line 2221
+    .line 3
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -173,7 +173,7 @@
 
     const/4 v2, 0x0
 
-    .line 2222
+    .line 4
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -181,7 +181,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 2223
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -194,7 +194,7 @@
 
     goto :goto_0
 
-    .line 2225
+    .line 6
     :cond_0
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 

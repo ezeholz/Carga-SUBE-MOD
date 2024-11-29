@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/fragment/app/FragmentManager$OpGenerator;
+.class public interface abstract Landroidx/fragment/app/FragmentManager$OpGenerator;
 .super Ljava/lang/Object;
 .source "FragmentManager.java"
 
@@ -9,13 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "OpGenerator"
 .end annotation
 
 
 # virtual methods
 .method public abstract generateOps(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+    .param p1    # Ljava/util/ArrayList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/ArrayList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

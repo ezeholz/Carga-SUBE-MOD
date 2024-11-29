@@ -4,6 +4,16 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    api = 0x1c
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/app/CoreComponentFactory$CompatWrapped;
@@ -15,13 +25,13 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 39
+    .line 1
     invoke-direct {p0}, Landroid/app/AppComponentFactory;-><init>()V
 
     return-void
 .end method
 
-.method static checkCompatWrapper(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static checkCompatWrapper(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -31,12 +41,12 @@
         }
     .end annotation
 
-    .line 80
+    .line 1
     instance-of v0, p0, Landroidx/core/app/CoreComponentFactory$CompatWrapped;
 
     if-eqz v0, :cond_0
 
-    .line 81
+    .line 2
     move-object v0, p0
 
     check-cast v0, Landroidx/core/app/CoreComponentFactory$CompatWrapped;
@@ -57,8 +67,22 @@
 # virtual methods
 .method public instantiateActivity(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 45
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/app/AppComponentFactory;->instantiateActivity(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
 
     move-result-object p1
@@ -74,8 +98,18 @@
 
 .method public instantiateApplication(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 52
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/app/AppComponentFactory;->instantiateApplication(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
 
     move-result-object p1
@@ -91,8 +125,18 @@
 
 .method public instantiateProvider(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 67
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/app/AppComponentFactory;->instantiateProvider(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
 
     move-result-object p1
@@ -108,8 +152,22 @@
 
 .method public instantiateReceiver(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 60
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/app/AppComponentFactory;->instantiateReceiver(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
 
     move-result-object p1
@@ -125,8 +183,22 @@
 
 .method public instantiateService(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 75
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/app/AppComponentFactory;->instantiateService(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
 
     move-result-object p1

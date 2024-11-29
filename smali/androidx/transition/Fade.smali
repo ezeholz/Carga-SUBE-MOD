@@ -14,18 +14,18 @@
 # static fields
 .field public static final IN:I = 0x1
 
-.field private static final LOG_TAG:Ljava/lang/String; = "Fade"
+.field public static final LOG_TAG:Ljava/lang/String; = "Fade"
 
 .field public static final OUT:I = 0x2
 
-.field private static final PROPNAME_TRANSITION_ALPHA:Ljava/lang/String; = "android:fade:transitionAlpha"
+.field public static final PROPNAME_TRANSITION_ALPHA:Ljava/lang/String; = "android:fade:transitionAlpha"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 97
+    .line 3
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
     return-void
@@ -34,11 +34,11 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 90
+    .line 1
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
-    .line 91
-    invoke-virtual {p0, p1}, Landroidx/transition/Fade;->setMode(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroidx/transition/Visibility;->setMode(I)V
 
     return-void
 .end method
@@ -46,21 +46,21 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .line 101
+    .line 4
     invoke-direct {p0, p1, p2}, Landroidx/transition/Visibility;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 102
+    .line 5
     sget-object v0, Landroidx/transition/Styleable;->FADE:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    .line 104
+    .line 6
     check-cast p2, Landroid/content/res/XmlResourceParser;
 
-    .line 105
-    invoke-virtual {p0}, Landroidx/transition/Fade;->getMode()I
+    .line 7
+    invoke-virtual {p0}, Landroidx/transition/Visibility;->getMode()I
 
     move-result v0
 
@@ -68,15 +68,15 @@
 
     const/4 v2, 0x0
 
-    .line 104
+    .line 8
     invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
-    .line 106
-    invoke-virtual {p0, p2}, Landroidx/transition/Fade;->setMode(I)V
+    .line 9
+    invoke-virtual {p0, p2}, Landroidx/transition/Visibility;->setMode(I)V
 
-    .line 107
+    .line 10
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -93,11 +93,11 @@
 
     return-object p1
 
-    .line 124
+    .line 1
     :cond_0
     invoke-static {p1, p2}, Landroidx/transition/ViewUtils;->setTransitionAlpha(Landroid/view/View;F)V
 
-    .line 125
+    .line 2
     sget-object p2, Landroidx/transition/ViewUtils;->TRANSITION_ALPHA:Landroid/util/Property;
 
     const/4 v0, 0x1
@@ -112,30 +112,30 @@
 
     move-result-object p2
 
-    .line 130
+    .line 3
     new-instance p3, Landroidx/transition/Fade$FadeAnimatorListener;
 
     invoke-direct {p3, p1}, Landroidx/transition/Fade$FadeAnimatorListener;-><init>(Landroid/view/View;)V
 
-    .line 131
+    .line 4
     invoke-virtual {p2, p3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 132
+    .line 5
     new-instance p3, Landroidx/transition/Fade$1;
 
     invoke-direct {p3, p0, p1}, Landroidx/transition/Fade$1;-><init>(Landroidx/transition/Fade;Landroid/view/View;)V
 
-    invoke-virtual {p0, p3}, Landroidx/transition/Fade;->addListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
+    invoke-virtual {p0, p3}, Landroidx/transition/Transition;->addListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
 
     return-object p2
 .end method
 
-.method private static getStartAlpha(Landroidx/transition/TransitionValues;F)F
+.method public static getStartAlpha(Landroidx/transition/TransitionValues;F)F
     .locals 1
 
     if-eqz p0, :cond_0
 
-    .line 170
+    .line 1
     iget-object p0, p0, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v0, "android:fade:transitionAlpha"
@@ -148,7 +148,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 172
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
@@ -161,16 +161,20 @@
 # virtual methods
 .method public captureStartValues(Landroidx/transition/TransitionValues;)V
     .locals 2
+    .param p1    # Landroidx/transition/TransitionValues;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 112
+    .line 1
     invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Landroidx/transition/TransitionValues;)V
 
-    .line 113
+    .line 2
     iget-object v0, p1, Landroidx/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object p1, p1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
-    .line 114
+    .line 3
     invoke-static {p1}, Landroidx/transition/ViewUtils;->getTransitionAlpha(Landroid/view/View;)F
 
     move-result p1
@@ -181,7 +185,7 @@
 
     const-string v1, "android:fade:transitionAlpha"
 
-    .line 113
+    .line 4
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -192,7 +196,7 @@
 
     const/4 p1, 0x0
 
-    .line 152
+    .line 1
     invoke-static {p3, p1}, Landroidx/transition/Fade;->getStartAlpha(Landroidx/transition/TransitionValues;F)F
 
     move-result p3
@@ -208,7 +212,7 @@
     :cond_0
     move p1, p3
 
-    .line 156
+    .line 2
     :goto_0
     invoke-direct {p0, p2, p1, p4}, Landroidx/transition/Fade;->createAnimation(Landroid/view/View;FF)Landroid/animation/Animator;
 
@@ -220,19 +224,19 @@
 .method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroidx/transition/TransitionValues;Landroidx/transition/TransitionValues;)Landroid/animation/Animator;
     .locals 0
 
-    .line 162
+    .line 1
     invoke-static {p2}, Landroidx/transition/ViewUtils;->saveNonTransitionAlpha(Landroid/view/View;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 163
+    .line 2
     invoke-static {p3, p1}, Landroidx/transition/Fade;->getStartAlpha(Landroidx/transition/TransitionValues;F)F
 
     move-result p1
 
     const/4 p3, 0x0
 
-    .line 164
+    .line 3
     invoke-direct {p0, p2, p1, p3}, Landroidx/transition/Fade;->createAnimation(Landroid/view/View;FF)Landroid/animation/Animator;
 
     move-result-object p1

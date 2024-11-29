@@ -1,9 +1,13 @@
-.class Landroidx/media/MediaSessionManagerImplApi28;
+.class public Landroidx/media/MediaSessionManagerImplApi28;
 .super Landroidx/media/MediaSessionManagerImplApi21;
 .source "MediaSessionManagerImplApi28.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
@@ -12,19 +16,19 @@
 
 
 # instance fields
-.field mObject:Landroid/media/session/MediaSessionManager;
+.field public mObject:Landroid/media/session/MediaSessionManager;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 29
+    .line 1
     invoke-direct {p0, p1}, Landroidx/media/MediaSessionManagerImplApi21;-><init>(Landroid/content/Context;)V
 
     const-string v0, "media_session"
 
-    .line 31
+    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -41,12 +45,12 @@
 .method public isTrustedForMediaControl(Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;)Z
     .locals 1
 
-    .line 36
+    .line 1
     instance-of v0, p1, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 
     if-eqz v0, :cond_0
 
-    .line 37
+    .line 2
     iget-object v0, p0, Landroidx/media/MediaSessionManagerImplApi28;->mObject:Landroid/media/session/MediaSessionManager;
 
     check-cast p1, Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;

@@ -1,4 +1,4 @@
-.class final Landroidx/savedstate/Recreator$SavedStateProvider;
+.class public final Landroidx/savedstate/Recreator$SavedStateProvider;
 .super Ljava/lang/Object;
 .source "Recreator.java"
 
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "SavedStateProvider"
 .end annotation
 
 
 # instance fields
-.field final mClasses:Ljava/util/Set;
+.field public final mClasses:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -30,13 +30,13 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/savedstate/SavedStateRegistry;)V
+.method public constructor <init>(Landroidx/savedstate/SavedStateRegistry;)V
     .locals 1
 
-    .line 99
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -45,7 +45,7 @@
 
     const-string v0, "androidx.savedstate.Restarter"
 
-    .line 100
+    .line 3
     invoke-virtual {p1, v0, p0}, Landroidx/savedstate/SavedStateRegistry;->registerSavedStateProvider(Ljava/lang/String;Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;)V
 
     return-void
@@ -53,10 +53,10 @@
 
 
 # virtual methods
-.method final add(Ljava/lang/String;)V
+.method public add(Ljava/lang/String;)V
     .locals 1
 
-    .line 112
+    .line 1
     iget-object v0, p0, Landroidx/savedstate/Recreator$SavedStateProvider;->mClasses:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -64,15 +64,17 @@
     return-void
 .end method
 
-.method public final saveState()Landroid/os/Bundle;
+.method public saveState()Landroid/os/Bundle;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 106
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 107
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Landroidx/savedstate/Recreator$SavedStateProvider;->mClasses:Ljava/util/Set;

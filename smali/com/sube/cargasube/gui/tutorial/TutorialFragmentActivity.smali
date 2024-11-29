@@ -3,86 +3,57 @@
 .source "TutorialFragmentActivity.java"
 
 # interfaces
-.implements Lcom/sube/cargasube/gui/tutorial/b$a;
+.implements Lg/f/a/c/h/d$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$a;
+        Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$c;
     }
 .end annotation
 
 
 # instance fields
-.field private a:Landroidx/viewpager/widget/ViewPager;
+.field public d:Landroidx/viewpager/widget/ViewPager;
 
-.field private b:Landroidx/viewpager/widget/PagerAdapter;
+.field public e:Landroidx/viewpager/widget/PagerAdapter;
 
-.field private c:Z
+.field public f:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 22
+    .line 1
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 30
-    iput-boolean v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->c:Z
+    .line 2
+    iput-boolean v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->f:Z
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)Z
-    .locals 0
-
-    .line 22
-    iget-boolean p0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->c:Z
-
-    return p0
-.end method
-
-.method static synthetic b(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)Landroidx/viewpager/widget/PagerAdapter;
-    .locals 0
-
-    .line 22
-    iget-object p0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->b:Landroidx/viewpager/widget/PagerAdapter;
-
-    return-object p0
-.end method
-
-.method static synthetic c(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 22
-    iput-boolean v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->c:Z
-
-    return v0
-.end method
-
 
 # virtual methods
-.method public final a()V
+.method public b()V
     .locals 2
 
-    .line 1084
+    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/sube/cargasube/gui/login/pre_form/PreFormLoginActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1085
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->startActivity(Landroid/content/Intent;)V
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1086
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->finish()V
+    .line 3
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method
@@ -90,8 +61,8 @@
 .method public onBackPressed()V
     .locals 2
 
-    .line 71
-    iget-object v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->a:Landroidx/viewpager/widget/ViewPager;
+    .line 1
+    iget-object v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->d:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
 
@@ -99,15 +70,15 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->c:Z
+    iget-boolean v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->f:Z
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 74
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->a:Landroidx/viewpager/widget/ViewPager;
+    iget-object v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->d:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
 
@@ -117,74 +88,75 @@
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
 
-    return-void
+    goto :goto_1
 
-    .line 72
+    .line 3
     :cond_1
     :goto_0
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onBackPressed()V
+    invoke-super {p0}, Landroidx/activity/ComponentActivity;->onBackPressed()V
 
+    :goto_1
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 34
-    invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d0023
+    const p1, 0x7f0d0024
 
-    .line 35
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->setContentView(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    .line 37
+    .line 3
     invoke-static {}, Lcom/sube/cargasube/State;->getInstance()Lcom/sube/cargasube/State;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/sube/cargasube/State;->setTutorialShown()V
 
-    const p1, 0x7f0a0130
+    const p1, 0x7f0a0135
 
-    .line 39
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->findViewById(I)Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroidx/viewpager/widget/ViewPager;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->a:Landroidx/viewpager/widget/ViewPager;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->d:Landroidx/viewpager/widget/ViewPager;
 
-    .line 41
-    new-instance v0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$1;
+    .line 5
+    new-instance v0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$a;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$1;-><init>(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)V
+    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$a;-><init>(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)V
 
-    invoke-virtual {p1, v0}, Landroidx/viewpager/widget/ViewPager;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 48
-    new-instance p1, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$a;
+    .line 6
+    new-instance p1, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$c;
 
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    invoke-direct {p1, p0, v0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$a;-><init>(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;Landroidx/fragment/app/FragmentManager;)V
+    invoke-direct {p1, p0, v0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$c;-><init>(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;Landroidx/fragment/app/FragmentManager;)V
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->b:Landroidx/viewpager/widget/PagerAdapter;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->e:Landroidx/viewpager/widget/PagerAdapter;
 
-    .line 49
-    iget-object v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->a:Landroidx/viewpager/widget/ViewPager;
+    .line 7
+    iget-object v0, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->d:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
-    .line 51
-    iget-object p1, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->a:Landroidx/viewpager/widget/ViewPager;
+    .line 8
+    iget-object p1, p0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;->d:Landroidx/viewpager/widget/ViewPager;
 
-    new-instance v0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$2;
+    new-instance v0, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$b;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$2;-><init>(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)V
+    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity$b;-><init>(Lcom/sube/cargasube/gui/tutorial/TutorialFragmentActivity;)V
 
     invoke-virtual {p1, v0}, Landroidx/viewpager/widget/ViewPager;->addOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 

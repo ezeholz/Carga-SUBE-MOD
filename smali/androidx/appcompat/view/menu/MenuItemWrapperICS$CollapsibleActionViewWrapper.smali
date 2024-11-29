@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;
+.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;
 .super Landroid/widget/FrameLayout;
 .source "MenuItemWrapperICS.java"
 
@@ -12,45 +12,45 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "CollapsibleActionViewWrapper"
 .end annotation
 
 
 # instance fields
-.field final mWrappedView:Landroid/view/CollapsibleActionView;
+.field public final mWrappedView:Landroid/view/CollapsibleActionView;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 512
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 513
+    .line 2
     move-object v0, p1
 
     check-cast v0, Landroid/view/CollapsibleActionView;
 
     iput-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;->mWrappedView:Landroid/view/CollapsibleActionView;
 
-    .line 514
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;->addView(Landroid/view/View;)V
+    .line 3
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method getWrappedView()Landroid/view/View;
+.method public getWrappedView()Landroid/view/View;
     .locals 1
 
-    .line 528
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;->mWrappedView:Landroid/view/CollapsibleActionView;
 
     check-cast v0, Landroid/view/View;
@@ -61,7 +61,7 @@
 .method public onActionViewCollapsed()V
     .locals 1
 
-    .line 524
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;->mWrappedView:Landroid/view/CollapsibleActionView;
 
     invoke-interface {v0}, Landroid/view/CollapsibleActionView;->onActionViewCollapsed()V
@@ -72,7 +72,7 @@
 .method public onActionViewExpanded()V
     .locals 1
 
-    .line 519
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;->mWrappedView:Landroid/view/CollapsibleActionView;
 
     invoke-interface {v0}, Landroid/view/CollapsibleActionView;->onActionViewExpanded()V

@@ -1,4 +1,4 @@
-.class abstract Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;
+.class public abstract Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;
 .super Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 .source "FragmentStateAdapter.java"
 
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x408
+    accessFlags = 0x409
     name = "DataSetChangeObserver"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 715
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter$1;)V
+.method public synthetic constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter$1;)V
     .locals 0
 
-    .line 715
+    .line 2
     invoke-direct {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public final onItemRangeChanged(II)V
     .locals 0
 
-    .line 721
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;->onChanged()V
 
     return-void
@@ -49,8 +49,12 @@
 
 .method public final onItemRangeChanged(IILjava/lang/Object;)V
     .locals 0
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 727
+    .line 2
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;->onChanged()V
 
     return-void
@@ -59,7 +63,7 @@
 .method public final onItemRangeInserted(II)V
     .locals 0
 
-    .line 732
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;->onChanged()V
 
     return-void
@@ -68,7 +72,7 @@
 .method public final onItemRangeMoved(III)V
     .locals 0
 
-    .line 742
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;->onChanged()V
 
     return-void
@@ -77,7 +81,7 @@
 .method public final onItemRangeRemoved(II)V
     .locals 0
 
-    .line 737
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter$DataSetChangeObserver;->onChanged()V
 
     return-void

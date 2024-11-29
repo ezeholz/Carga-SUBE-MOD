@@ -7,22 +7,22 @@
 
 
 # instance fields
-.field private final mPayload:[B
+.field public final mPayload:[B
 
-.field private final mRequestId:Ljava/lang/String;
+.field public final mRequestId:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;[B)V
     .locals 0
 
-    .line 10
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/network/SimpleBinaryInspectorWebSocketFrame;->mRequestId:Ljava/lang/String;
 
-    .line 12
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/network/SimpleBinaryInspectorWebSocketFrame;->mPayload:[B
 
     return-void
@@ -49,7 +49,7 @@
 .method public payloadData()Ljava/lang/String;
     .locals 3
 
-    .line 34
+    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
@@ -66,7 +66,7 @@
     :catch_0
     move-exception v0
 
-    .line 36
+    .line 2
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -77,7 +77,7 @@
 .method public requestId()Ljava/lang/String;
     .locals 1
 
-    .line 17
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/SimpleBinaryInspectorWebSocketFrame;->mRequestId:Ljava/lang/String;
 
     return-object v0

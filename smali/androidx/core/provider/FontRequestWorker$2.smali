@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/FontRequestWorker$2;
+.class public Landroidx/core/provider/FontRequestWorker$2;
 .super Ljava/lang/Object;
 .source "FontRequestWorker.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$callback:Landroidx/core/provider/CallbackWithHandler;
+.field public final synthetic val$callback:Landroidx/core/provider/CallbackWithHandler;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/provider/CallbackWithHandler;)V
+.method public constructor <init>(Landroidx/core/provider/CallbackWithHandler;)V
     .locals 0
 
-    .line 171
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/FontRequestWorker$2;->val$callback:Landroidx/core/provider/CallbackWithHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public accept(Landroidx/core/provider/FontRequestWorker$TypefaceResult;)V
     .locals 1
 
-    .line 174
+    .line 2
     iget-object v0, p0, Landroidx/core/provider/FontRequestWorker$2;->val$callback:Landroidx/core/provider/CallbackWithHandler;
 
     invoke-virtual {v0, p1}, Landroidx/core/provider/CallbackWithHandler;->onTypefaceResult(Landroidx/core/provider/FontRequestWorker$TypefaceResult;)V
@@ -58,7 +58,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 171
+    .line 1
     check-cast p1, Landroidx/core/provider/FontRequestWorker$TypefaceResult;
 
     invoke-virtual {p0, p1}, Landroidx/core/provider/FontRequestWorker$2;->accept(Landroidx/core/provider/FontRequestWorker$TypefaceResult;)V

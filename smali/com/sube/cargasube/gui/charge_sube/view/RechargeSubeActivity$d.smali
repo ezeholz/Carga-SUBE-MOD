@@ -1,44 +1,36 @@
-.class final Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$d;
+.class public final Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$d;
 .super Ljava/lang/Object;
 .source "RechargeSubeActivity.kt"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Lg/f/a/c/a/c/a/b/a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Landroidx/lifecycle/Observer<",
-        "Ljava/util/List<",
-        "+",
-        "Lcom/sube/cargasube/gui/charge_sube/a/a;",
-        ">;>;"
-    }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
+.field public final synthetic a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)V
+.method public constructor <init>(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$d;->a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,38 +40,25 @@
 
 
 # virtual methods
-.method public final synthetic onChanged(Ljava/lang/Object;)V
-    .locals 2
+.method public a(Lg/f/a/c/a/a/a$a;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    .line 21
-    check-cast p1, Ljava/util/List;
+    const-string v0, "linkType"
 
-    .line 1039
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "link"
+
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "handle"
+
+    invoke-static {p3, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
     iget-object v0, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$d;->a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
 
-    invoke-static {v0}, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;->b(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/non_selected/NonSelectedWalletsRecyclerView;
-
-    move-result-object v0
-
-    const-string v1, "it"
-
-    invoke-static {p1, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "paymentMethod"
-
-    invoke-static {p1, v1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2039
-    iget-object v0, v0, Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/non_selected/NonSelectedWalletsRecyclerView;->b:Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/non_selected/a;
-
-    if-nez v0, :cond_0
-
-    const-string v1, "nonSelectedWalletsAdapter"
-
-    invoke-static {v1}, Lkotlin/d/b/h;->a(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/non_selected/a;->submitList(Ljava/util/List;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;->a(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;Lg/f/a/c/a/a/a$a;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

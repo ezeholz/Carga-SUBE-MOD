@@ -68,10 +68,6 @@
     <string name="common_open_on_phone">फ़ोन पर खोलें</string>
     <string name="common_signin_button_text">साइन इन करें</string>
     <string name="common_signin_button_text_long">Google के ज़रिए साइन इन करें</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">%s को</string>
-    <string name="joda_time_android_preposition_for_time">%s पर</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">खोजें</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

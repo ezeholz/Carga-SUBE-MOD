@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private mSources:Landroidx/arch/core/internal/SafeIterableMap;
+.field public mSources:Landroidx/arch/core/internal/SafeIterableMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap<",
@@ -39,10 +39,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 69
+    .line 1
     invoke-direct {p0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
-    .line 70
+    .line 2
     new-instance v0, Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {v0}, Landroidx/arch/core/internal/SafeIterableMap;-><init>()V
@@ -56,6 +56,17 @@
 # virtual methods
 .method public addSource(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
     .locals 2
+    .param p1    # Landroidx/lifecycle/LiveData;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Observer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",
@@ -68,12 +79,12 @@
         }
     .end annotation
 
-    .line 86
+    .line 1
     new-instance v0, Landroidx/lifecycle/MediatorLiveData$Source;
 
     invoke-direct {v0, p1, p2}, Landroidx/lifecycle/MediatorLiveData$Source;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
-    .line 87
+    .line 2
     iget-object v1, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {v1, p1, v0}, Landroidx/arch/core/internal/SafeIterableMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -84,14 +95,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 88
+    .line 3
     iget-object v1, p1, Landroidx/lifecycle/MediatorLiveData$Source;->mObserver:Landroidx/lifecycle/Observer;
 
     if-ne v1, p2, :cond_0
 
     goto :goto_0
 
-    .line 89
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -107,25 +118,27 @@
 
     return-void
 
-    .line 95
+    .line 5
     :cond_2
-    invoke-virtual {p0}, Landroidx/lifecycle/MediatorLiveData;->hasActiveObservers()Z
+    invoke-virtual {p0}, Landroidx/lifecycle/LiveData;->hasActiveObservers()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 96
+    .line 6
     invoke-virtual {v0}, Landroidx/lifecycle/MediatorLiveData$Source;->plug()V
 
     :cond_3
     return-void
 .end method
 
-.method protected onActive()V
+.method public onActive()V
     .locals 2
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 117
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {v0}, Landroidx/arch/core/internal/SafeIterableMap;->iterator()Ljava/util/Iterator;
@@ -145,7 +158,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 118
+    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -160,10 +173,12 @@
     return-void
 .end method
 
-.method protected onInactive()V
+.method public onInactive()V
     .locals 2
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 125
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {v0}, Landroidx/arch/core/internal/SafeIterableMap;->iterator()Ljava/util/Iterator;
@@ -183,7 +198,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 126
+    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -200,6 +215,13 @@
 
 .method public removeSource(Landroidx/lifecycle/LiveData;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/LiveData;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",
@@ -210,7 +232,7 @@
         }
     .end annotation
 
-    .line 108
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-virtual {v0, p1}, Landroidx/arch/core/internal/SafeIterableMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -221,7 +243,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 110
+    .line 2
     invoke-virtual {p1}, Landroidx/lifecycle/MediatorLiveData$Source;->unplug()V
 
     :cond_0

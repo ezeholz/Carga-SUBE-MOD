@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/CSS$PseudoIdMatches;
+.class public Lcom/facebook/stetho/inspector/protocol/module/CSS$PseudoIdMatches;
 .super Ljava/lang/Object;
 .source "CSS.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "PseudoIdMatches"
 .end annotation
 
@@ -40,10 +40,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 354
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 355
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V

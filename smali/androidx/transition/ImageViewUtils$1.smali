@@ -1,4 +1,4 @@
-.class final Landroidx/transition/ImageViewUtils$1;
+.class public final Landroidx/transition/ImageViewUtils$1;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "ImageViewUtils.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$view:Landroid/widget/ImageView;
+.field public final synthetic val$view:Landroid/widget/ImageView;
 
 
 # direct methods
-.method constructor <init>(Landroid/widget/ImageView;)V
+.method public constructor <init>(Landroid/widget/ImageView;)V
     .locals 0
 
-    .line 91
+    .line 1
     iput-object p1, p0, Landroidx/transition/ImageViewUtils$1;->val$view:Landroid/widget/ImageView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -32,27 +32,27 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 94
+    .line 1
     iget-object v0, p0, Landroidx/transition/ImageViewUtils$1;->val$view:Landroid/widget/ImageView;
 
     sget v1, Landroidx/transition/R$id;->save_scale_type:I
 
-    .line 95
+    .line 2
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->getTag(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView$ScaleType;
 
-    .line 96
+    .line 3
     iget-object v1, p0, Landroidx/transition/ImageViewUtils$1;->val$view:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 97
+    .line 4
     iget-object v1, p0, Landroidx/transition/ImageViewUtils$1;->val$view:Landroid/widget/ImageView;
 
     sget v2, Landroidx/transition/R$id;->save_scale_type:I
@@ -61,12 +61,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
 
-    .line 98
+    .line 5
     sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     if-ne v0, v1, :cond_0
 
-    .line 99
+    .line 6
     iget-object v0, p0, Landroidx/transition/ImageViewUtils$1;->val$view:Landroid/widget/ImageView;
 
     sget v1, Landroidx/transition/R$id;->save_image_matrix:I
@@ -79,14 +79,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 100
+    .line 7
     iget-object v0, p0, Landroidx/transition/ImageViewUtils$1;->val$view:Landroid/widget/ImageView;
 
     sget v1, Landroidx/transition/R$id;->save_image_matrix:I
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
 
-    .line 102
+    .line 8
     :cond_0
     invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 

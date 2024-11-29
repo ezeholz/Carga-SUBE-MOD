@@ -3,18 +3,26 @@
 .source "ActionBarPolicy.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 46
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     return-void
@@ -23,7 +31,7 @@
 .method public static get(Landroid/content/Context;)Landroidx/appcompat/view/ActionBarPolicy;
     .locals 1
 
-    .line 43
+    .line 1
     new-instance v0, Landroidx/appcompat/view/ActionBarPolicy;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/view/ActionBarPolicy;-><init>(Landroid/content/Context;)V
@@ -36,7 +44,7 @@
 .method public enableHomeButtonByDefault()Z
     .locals 2
 
-    .line 110
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -51,18 +59,19 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public getEmbeddedMenuWidthLimit()I
     .locals 1
 
-    .line 86
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -83,7 +92,7 @@
 .method public getMaxActionButtons()I
     .locals 4
 
-    .line 56
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -94,13 +103,13 @@
 
     move-result-object v0
 
-    .line 57
+    .line 2
     iget v1, v0, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    .line 58
+    .line 3
     iget v2, v0, Landroid/content/res/Configuration;->screenHeightDp:I
 
-    .line 59
+    .line 4
     iget v0, v0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
     const/16 v3, 0x258
@@ -174,7 +183,7 @@
 .method public getStackedTabMaxWidth()I
     .locals 2
 
-    .line 115
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -193,7 +202,7 @@
 .method public getTabContainerHeight()I
     .locals 5
 
-    .line 94
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroidx/appcompat/R$styleable;->ActionBar:[I
@@ -208,41 +217,41 @@
 
     move-result-object v0
 
-    .line 96
+    .line 2
     sget v1, Landroidx/appcompat/R$styleable;->ActionBar_height:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
     move-result v1
 
-    .line 97
+    .line 3
     iget-object v2, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 98
+    .line 4
     invoke-virtual {p0}, Landroidx/appcompat/view/ActionBarPolicy;->hasEmbeddedTabs()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 100
+    .line 5
     sget v3, Landroidx/appcompat/R$dimen;->abc_action_bar_stacked_max_height:I
 
-    .line 101
+    .line 6
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    .line 100
+    .line 7
     invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
-    .line 103
+    .line 8
     :cond_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -252,7 +261,7 @@
 .method public hasEmbeddedTabs()Z
     .locals 2
 
-    .line 90
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -271,7 +280,7 @@
 .method public showsOverflowMenuButton()Z
     .locals 3
 
-    .line 78
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x1
@@ -282,7 +291,7 @@
 
     return v1
 
-    .line 81
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
@@ -294,12 +303,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    const/4 v0, 0x0
+    xor-int/2addr v0, v1
 
     return v0
 .end method

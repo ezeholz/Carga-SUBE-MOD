@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/websocket/Frame;
+.class public Lcom/facebook/stetho/websocket/Frame;
 .super Ljava/lang/Object;
 .source "Frame.java"
 
@@ -36,10 +36,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 21
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,7 +63,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 64
+    .line 1
     :goto_0
     iput-boolean v0, p0, Lcom/facebook/stetho/websocket/Frame;->fin:Z
 
@@ -78,7 +78,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 65
+    .line 2
     :goto_1
     iput-boolean v0, p0, Lcom/facebook/stetho/websocket/Frame;->rsv1:Z
 
@@ -93,7 +93,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 66
+    .line 3
     :goto_2
     iput-boolean v0, p0, Lcom/facebook/stetho/websocket/Frame;->rsv2:Z
 
@@ -106,7 +106,7 @@
     :cond_3
     const/4 v1, 0x0
 
-    .line 67
+    .line 4
     :goto_3
     iput-boolean v1, p0, Lcom/facebook/stetho/websocket/Frame;->rsv3:Z
 
@@ -114,7 +114,7 @@
 
     int-to-byte p1, p1
 
-    .line 68
+    .line 5
     iput-byte p1, p0, Lcom/facebook/stetho/websocket/Frame;->opcode:B
 
     return-void
@@ -138,7 +138,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 93
+    .line 1
     invoke-static {p2}, Lcom/facebook/stetho/websocket/Frame;->readByteOrThrow(Ljava/io/InputStream;)B
 
     move-result p1
@@ -173,7 +173,7 @@
 
     shl-long/2addr v2, v1
 
-    .line 98
+    .line 2
     invoke-static {p2}, Lcom/facebook/stetho/websocket/Frame;->readByteOrThrow(Ljava/io/InputStream;)B
 
     move-result v0
@@ -191,17 +191,13 @@
     :cond_2
     return-wide v2
 
-    .line 102
+    .line 3
     :cond_3
     new-instance p2, Ljava/io/IOException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
     const-string v0, "Unexpected length byte: "
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lg/b/a/a/a;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -216,7 +212,7 @@
     goto :goto_1
 .end method
 
-.method private static decodeMaskingKey(Ljava/io/InputStream;)[B
+.method public static decodeMaskingKey(Ljava/io/InputStream;)[B
     .locals 3
 
     const/4 v0, 0x4
@@ -225,7 +221,7 @@
 
     const/4 v2, 0x0
 
-    .line 132
+    .line 1
     invoke-static {p0, v1, v2, v0}, Lcom/facebook/stetho/websocket/Frame;->readBytesOrThrow(Ljava/io/InputStream;[BII)V
 
     return-object v1
@@ -234,19 +230,21 @@
 .method private encodeFirstByte()B
     .locals 2
 
-    .line 73
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/websocket/Frame;->fin:Z
 
     if-eqz v0, :cond_0
 
-    const/16 v0, -0x80
+    const/16 v0, 0x80
+
+    int-to-byte v0, v0
 
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 76
+    .line 2
     :goto_0
     iget-boolean v1, p0, Lcom/facebook/stetho/websocket/Frame;->rsv1:Z
 
@@ -256,7 +254,7 @@
 
     int-to-byte v0, v0
 
-    .line 79
+    .line 3
     :cond_1
     iget-boolean v1, p0, Lcom/facebook/stetho/websocket/Frame;->rsv2:Z
 
@@ -266,7 +264,7 @@
 
     int-to-byte v0, v0
 
-    .line 82
+    .line 4
     :cond_2
     iget-boolean v1, p0, Lcom/facebook/stetho/websocket/Frame;->rsv3:Z
 
@@ -276,7 +274,7 @@
 
     int-to-byte v0, v0
 
-    .line 85
+    .line 5
     :cond_3
     iget-byte v1, p0, Lcom/facebook/stetho/websocket/Frame;->opcode:B
 
@@ -289,7 +287,7 @@
     return v0
 .end method
 
-.method private static encodeLength(J)[B
+.method public static encodeLength(J)[B
     .locals 11
 
     const/4 v0, 0x0
@@ -463,10 +461,10 @@
     return-object v2
 .end method
 
-.method private static readByteOrThrow(Ljava/io/InputStream;)B
+.method public static readByteOrThrow(Ljava/io/InputStream;)B
     .locals 1
 
-    .line 149
+    .line 1
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
     move-result p0
@@ -479,7 +477,7 @@
 
     return p0
 
-    .line 151
+    .line 2
     :cond_0
     new-instance p0, Ljava/io/EOFException;
 
@@ -488,13 +486,13 @@
     throw p0
 .end method
 
-.method private static readBytesOrThrow(Ljava/io/InputStream;[BII)V
+.method public static readBytesOrThrow(Ljava/io/InputStream;[BII)V
     .locals 2
 
     :goto_0
     if-lez p3, :cond_1
 
-    .line 139
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
     move-result v0
@@ -509,7 +507,7 @@
 
     goto :goto_0
 
-    .line 141
+    .line 2
     :cond_0
     new-instance p0, Ljava/io/EOFException;
 
@@ -526,14 +524,14 @@
 .method public readFrom(Ljava/io/BufferedInputStream;)V
     .locals 5
 
-    .line 39
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/websocket/Frame;->readByteOrThrow(Ljava/io/InputStream;)B
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/websocket/Frame;->decodeFirstByte(B)V
 
-    .line 40
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/websocket/Frame;->readByteOrThrow(Ljava/io/InputStream;)B
 
     move-result v0
@@ -551,7 +549,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 41
+    .line 3
     :goto_0
     iput-boolean v1, p0, Lcom/facebook/stetho/websocket/Frame;->hasMask:Z
 
@@ -559,14 +557,14 @@
 
     int-to-byte v0, v0
 
-    .line 42
+    .line 4
     invoke-direct {p0, v0, p1}, Lcom/facebook/stetho/websocket/Frame;->decodeLength(BLjava/io/InputStream;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/facebook/stetho/websocket/Frame;->payloadLen:J
 
-    .line 43
+    .line 5
     iget-boolean v0, p0, Lcom/facebook/stetho/websocket/Frame;->hasMask:Z
 
     if-eqz v0, :cond_1
@@ -583,7 +581,7 @@
     :goto_1
     iput-object v0, p0, Lcom/facebook/stetho/websocket/Frame;->maskingKey:[B
 
-    .line 44
+    .line 6
     iget-wide v0, p0, Lcom/facebook/stetho/websocket/Frame;->payloadLen:J
 
     long-to-int v3, v0
@@ -594,10 +592,10 @@
 
     long-to-int v1, v0
 
-    .line 45
+    .line 7
     invoke-static {p1, v3, v2, v1}, Lcom/facebook/stetho/websocket/Frame;->readBytesOrThrow(Ljava/io/InputStream;[BII)V
 
-    .line 46
+    .line 8
     iget-object p1, p0, Lcom/facebook/stetho/websocket/Frame;->maskingKey:[B
 
     iget-object v0, p0, Lcom/facebook/stetho/websocket/Frame;->payloadData:[B
@@ -614,28 +612,28 @@
 .method public writeTo(Ljava/io/BufferedOutputStream;)V
     .locals 5
 
-    .line 50
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/websocket/Frame;->encodeFirstByte()B
 
     move-result v0
 
     invoke-virtual {p1, v0}, Ljava/io/BufferedOutputStream;->write(I)V
 
-    .line 51
+    .line 2
     iget-wide v0, p0, Lcom/facebook/stetho/websocket/Frame;->payloadLen:J
 
     invoke-static {v0, v1}, Lcom/facebook/stetho/websocket/Frame;->encodeLength(J)[B
 
     move-result-object v0
 
-    .line 52
+    .line 3
     iget-boolean v1, p0, Lcom/facebook/stetho/websocket/Frame;->hasMask:Z
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 53
+    .line 4
     aget-byte v1, v0, v2
 
     or-int/lit16 v1, v1, 0x80
@@ -644,18 +642,18 @@
 
     aput-byte v1, v0, v2
 
-    .line 55
+    .line 5
     :cond_0
     array-length v1, v0
 
     invoke-virtual {p1, v0, v2, v1}, Ljava/io/BufferedOutputStream;->write([BII)V
 
-    .line 57
+    .line 6
     iget-boolean v0, p0, Lcom/facebook/stetho/websocket/Frame;->hasMask:Z
 
     if-nez v0, :cond_1
 
-    .line 60
+    .line 7
     iget-object v0, p0, Lcom/facebook/stetho/websocket/Frame;->payloadData:[B
 
     iget-wide v3, p0, Lcom/facebook/stetho/websocket/Frame;->payloadLen:J
@@ -666,7 +664,7 @@
 
     return-void
 
-    .line 58
+    .line 8
     :cond_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 

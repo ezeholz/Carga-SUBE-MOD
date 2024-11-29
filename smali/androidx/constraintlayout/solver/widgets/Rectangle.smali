@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 21
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public contains(II)Z
     .locals 2
 
-    .line 46
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
 
     if-lt p1, v0, :cond_0
@@ -51,18 +51,19 @@
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     return p1
 .end method
 
 .method public getCenterX()I
     .locals 2
 
-    .line 50
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
 
     iget v1, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->width:I
@@ -77,7 +78,7 @@
 .method public getCenterY()I
     .locals 2
 
-    .line 51
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->y:I
 
     iget v1, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->height:I
@@ -89,48 +90,48 @@
     return v0
 .end method
 
-.method grow(II)V
+.method public grow(II)V
     .locals 1
 
-    .line 34
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
 
     sub-int/2addr v0, p1
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
 
-    .line 35
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->y:I
 
     sub-int/2addr v0, p2
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->y:I
 
-    .line 36
+    .line 3
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->width:I
 
     mul-int/lit8 p1, p1, 0x2
 
-    add-int/2addr v0, p1
+    add-int/2addr p1, v0
 
-    iput v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->width:I
+    iput p1, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->width:I
 
-    .line 37
+    .line 4
     iget p1, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->height:I
 
     mul-int/lit8 p2, p2, 0x2
 
-    add-int/2addr p1, p2
+    add-int/2addr p2, p1
 
-    iput p1, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->height:I
+    iput p2, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->height:I
 
     return-void
 .end method
 
-.method intersects(Landroidx/constraintlayout/solver/widgets/Rectangle;)Z
+.method public intersects(Landroidx/constraintlayout/solver/widgets/Rectangle;)Z
     .locals 3
 
-    .line 41
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
 
     iget v1, p1, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
@@ -157,27 +158,28 @@
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     return p1
 .end method
 
 .method public setBounds(IIII)V
     .locals 0
 
-    .line 28
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->x:I
 
-    .line 29
+    .line 2
     iput p2, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->y:I
 
-    .line 30
+    .line 3
     iput p3, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->width:I
 
-    .line 31
+    .line 4
     iput p4, p0, Landroidx/constraintlayout/solver/widgets/Rectangle;->height:I
 
     return-void

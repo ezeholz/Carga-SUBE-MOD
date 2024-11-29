@@ -7,22 +7,22 @@
 
 
 # instance fields
-.field private final mPayload:Ljava/lang/String;
+.field public final mPayload:Ljava/lang/String;
 
-.field private final mRequestId:Ljava/lang/String;
+.field public final mRequestId:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 8
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/network/SimpleTextInspectorWebSocketFrame;->mRequestId:Ljava/lang/String;
 
-    .line 10
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/network/SimpleTextInspectorWebSocketFrame;->mPayload:Ljava/lang/String;
 
     return-void
@@ -49,7 +49,7 @@
 .method public payloadData()Ljava/lang/String;
     .locals 1
 
-    .line 30
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/SimpleTextInspectorWebSocketFrame;->mPayload:Ljava/lang/String;
 
     return-object v0
@@ -58,7 +58,7 @@
 .method public requestId()Ljava/lang/String;
     .locals 1
 
-    .line 15
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/SimpleTextInspectorWebSocketFrame;->mRequestId:Ljava/lang/String;
 
     return-object v0

@@ -15,20 +15,20 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
-.field public final b:[B
+.field public final e:[B
 
-.field public final c:I
+.field public final f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/safetynet/e;
+    new-instance v0, Lg/d/a/b/i/e;
 
-    invoke-direct {v0}, Lcom/google/android/gms/safetynet/e;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/i/e;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -40,11 +40,11 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->d:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->b:[B
+    iput-object p2, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->e:[B
 
-    iput p3, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->c:I
+    iput p3, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->f:I
 
     return-void
 .end method
@@ -52,35 +52,50 @@
 
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    .locals 3
 
-    const/16 p2, 0x4f45
-
-    .line 1017
-    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result p2
 
-    iget-object v0, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->d:Ljava/lang/String;
 
     const/4 v1, 0x2
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->b:[B
+    invoke-static {p1, v1, v0, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
+    iget-object v0, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->e:[B
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v1, 0x3
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I[B)V
+    .line 1
+    invoke-static {p1, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;I)I
 
-    iget v0, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->c:I
+    move-result v1
 
-    const/4 v1, 0x4
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    .line 3
+    invoke-static {p1, v1}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
-    .line 1018
-    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    :goto_0
+    const/4 v0, 0x4
+
+    .line 4
+    iget v1, p0, Lcom/google/android/gms/safetynet/HarmfulAppsData;->f:I
+
+    invoke-static {p1, v0, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
+
+    .line 5
+    invoke-static {p1, p2}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     return-void
 .end method

@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/ShareMessengerURLActionButton$a;
+        Lcom/facebook/share/model/ShareMessengerURLActionButton$b;
     }
 .end annotation
 
@@ -24,38 +24,32 @@
 
 
 # instance fields
-.field private final a:Landroid/net/Uri;
+.field public final e:Landroid/net/Uri;
 
-.field private final b:Landroid/net/Uri;
-
-.field private final c:Z
-
-.field private final d:Z
-
-.field private final e:Lcom/facebook/share/model/ShareMessengerURLActionButton$a;
+.field public final f:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 111
-    new-instance v0, Lcom/facebook/share/model/ShareMessengerURLActionButton$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareMessengerURLActionButton$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareMessengerURLActionButton$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareMessengerURLActionButton$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    .line 65
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareMessengerActionButton;-><init>(Landroid/os/Parcel;)V
 
-    .line 66
+    .line 2
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -68,30 +62,14 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->a:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->e:Landroid/net/Uri;
 
-    .line 67
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->c:Z
-
-    .line 68
+    .line 4
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -104,31 +82,19 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->b:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->f:Landroid/net/Uri;
 
-    .line 69
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/share/model/ShareMessengerURLActionButton$a;
+    check-cast v0, Lcom/facebook/share/model/ShareMessengerURLActionButton$b;
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->e:Lcom/facebook/share/model/ShareMessengerURLActionButton$a;
-
-    .line 70
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    iput-boolean v1, p0, Lcom/facebook/share/model/ShareMessengerURLActionButton;->d:Z
 
     return-void
 .end method

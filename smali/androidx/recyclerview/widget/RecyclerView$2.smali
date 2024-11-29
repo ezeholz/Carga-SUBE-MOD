@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/RecyclerView$2;
+.class public Landroidx/recyclerview/widget/RecyclerView$2;
 .super Ljava/lang/Object;
 .source "RecyclerView.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 590
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,21 +38,17 @@
 .method public run()V
     .locals 2
 
-    .line 593
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 594
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
-
+    .line 2
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->runPendingAnimations()V
 
-    .line 596
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 

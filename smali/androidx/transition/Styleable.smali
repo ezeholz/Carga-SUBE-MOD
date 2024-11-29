@@ -1,9 +1,15 @@
-.class Landroidx/transition/Styleable;
+.class public Landroidx/transition/Styleable;
 .super Ljava/lang/Object;
 .source "Styleable.java"
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "InlinedApi"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/transition/Styleable$PatternPathMotion;,
@@ -22,38 +28,71 @@
 
 
 # static fields
-.field static final ARC_MOTION:[I
+.field public static final ARC_MOTION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final CHANGE_BOUNDS:[I
+.field public static final CHANGE_BOUNDS:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final CHANGE_TRANSFORM:[I
+.field public static final CHANGE_TRANSFORM:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final FADE:[I
+.field public static final FADE:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final PATTERN_PATH_MOTION:[I
+.field public static final PATTERN_PATH_MOTION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final SLIDE:[I
+.field public static final SLIDE:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final TRANSITION:[I
+.field public static final TRANSITION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final TRANSITION_MANAGER:[I
+.field public static final TRANSITION_MANAGER:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final TRANSITION_SET:[I
+.field public static final TRANSITION_SET:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final TRANSITION_TARGET:[I
+.field public static final TRANSITION_TARGET:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
-.field static final VISIBILITY_TRANSITION:[I
+.field public static final VISIBILITY_TRANSITION:[I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
     const/4 v0, 0x6
 
     new-array v0, v0, [I
 
-    .line 30
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Landroidx/transition/Styleable;->TRANSITION_TARGET:[I
@@ -62,7 +101,7 @@
 
     new-array v1, v0, [I
 
-    .line 55
+    .line 2
     fill-array-data v1, :array_1
 
     sput-object v1, Landroidx/transition/Styleable;->TRANSITION_MANAGER:[I
@@ -71,7 +110,7 @@
 
     new-array v1, v1, [I
 
-    .line 71
+    .line 3
     fill-array-data v1, :array_2
 
     sput-object v1, Landroidx/transition/Styleable;->TRANSITION:[I
@@ -86,7 +125,7 @@
 
     aput v3, v2, v4
 
-    .line 90
+    .line 4
     sput-object v2, Landroidx/transition/Styleable;->CHANGE_BOUNDS:[I
 
     new-array v2, v1, [I
@@ -95,7 +134,7 @@
 
     aput v3, v2, v4
 
-    .line 100
+    .line 5
     sput-object v2, Landroidx/transition/Styleable;->VISIBILITY_TRANSITION:[I
 
     new-array v2, v1, [I
@@ -104,14 +143,14 @@
 
     aput v3, v2, v4
 
-    .line 110
+    .line 6
     sput-object v2, Landroidx/transition/Styleable;->FADE:[I
 
     const/4 v2, 0x2
 
     new-array v2, v2, [I
 
-    .line 120
+    .line 7
     fill-array-data v2, :array_3
 
     sput-object v2, Landroidx/transition/Styleable;->CHANGE_TRANSFORM:[I
@@ -122,7 +161,7 @@
 
     aput v3, v2, v4
 
-    .line 133
+    .line 8
     sput-object v2, Landroidx/transition/Styleable;->SLIDE:[I
 
     new-array v2, v1, [I
@@ -131,12 +170,12 @@
 
     aput v3, v2, v4
 
-    .line 143
+    .line 9
     sput-object v2, Landroidx/transition/Styleable;->TRANSITION_SET:[I
 
     new-array v0, v0, [I
 
-    .line 153
+    .line 10
     fill-array-data v0, :array_4
 
     sput-object v0, Landroidx/transition/Styleable;->ARC_MOTION:[I
@@ -147,7 +186,7 @@
 
     aput v1, v0, v4
 
-    .line 169
+    .line 11
     sput-object v0, Landroidx/transition/Styleable;->PATTERN_PATH_MOTION:[I
 
     return-void
@@ -191,10 +230,10 @@
     .end array-data
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 178
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/dumpapp/Framer;
+.class public Lcom/facebook/stetho/dumpapp/Framer;
 .super Ljava/lang/Object;
 .source "Framer.java"
 
@@ -26,43 +26,43 @@
 
 .field public static final STDOUT_FRAME_PREFIX:B = 0x31t
 
-.field private static final TAG:Ljava/lang/String; = "FramingSocket"
+.field public static final TAG:Ljava/lang/String; = "FramingSocket"
 
 
 # instance fields
-.field private final mInput:Ljava/io/DataInputStream;
+.field public final mInput:Ljava/io/DataInputStream;
 
-.field private final mMultiplexedOutputStream:Ljava/io/DataOutputStream;
+.field public final mMultiplexedOutputStream:Ljava/io/DataOutputStream;
 
-.field private final mStderr:Ljava/io/PrintStream;
+.field public final mStderr:Ljava/io/PrintStream;
 
-.field private final mStdin:Ljava/io/InputStream;
+.field public final mStdin:Ljava/io/InputStream;
 
-.field private final mStdout:Ljava/io/PrintStream;
+.field public final mStdout:Ljava/io/PrintStream;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 2
 
-    .line 75
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
+    .line 2
     new-instance v0, Ljava/io/DataInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mInput:Ljava/io/DataInputStream;
 
-    .line 77
+    .line 3
     new-instance p1, Ljava/io/DataOutputStream;
 
     invoke-direct {p1, p2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer;->mMultiplexedOutputStream:Ljava/io/DataOutputStream;
 
-    .line 78
+    .line 4
     new-instance p1, Lcom/facebook/stetho/dumpapp/Framer$FramingInputStream;
 
     const/4 p2, 0x0
@@ -71,7 +71,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStdin:Ljava/io/InputStream;
 
-    .line 79
+    .line 5
     new-instance p1, Ljava/io/PrintStream;
 
     new-instance p2, Ljava/io/BufferedOutputStream;
@@ -88,7 +88,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStdout:Ljava/io/PrintStream;
 
-    .line 82
+    .line 6
     new-instance p1, Ljava/io/PrintStream;
 
     new-instance p2, Lcom/facebook/stetho/dumpapp/Framer$FramingOutputStream;
@@ -104,25 +104,25 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/facebook/stetho/dumpapp/Framer;)Ljava/io/DataInputStream;
+.method public static synthetic access$200(Lcom/facebook/stetho/dumpapp/Framer;)Ljava/io/DataInputStream;
     .locals 0
 
-    .line 59
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mInput:Ljava/io/DataInputStream;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/facebook/stetho/dumpapp/Framer;)Ljava/io/DataOutputStream;
+.method public static synthetic access$300(Lcom/facebook/stetho/dumpapp/Framer;)Ljava/io/DataOutputStream;
     .locals 0
 
-    .line 59
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mMultiplexedOutputStream:Ljava/io/DataOutputStream;
 
     return-object p0
 .end method
 
-.method private static handleSuppression(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+.method public static handleSuppression(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -147,14 +147,18 @@
 
     const/4 p1, 0x1
 
-    .line 132
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    .line 1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Suppressed while handling "
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -172,7 +176,7 @@
 .method public getStderr()Ljava/io/PrintStream;
     .locals 1
 
-    .line 95
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStderr:Ljava/io/PrintStream;
 
     return-object v0
@@ -181,7 +185,7 @@
 .method public getStdin()Ljava/io/InputStream;
     .locals 1
 
-    .line 87
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStdin:Ljava/io/InputStream;
 
     return-object v0
@@ -190,7 +194,7 @@
 .method public getStdout()Ljava/io/PrintStream;
     .locals 1
 
-    .line 91
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStdout:Ljava/io/PrintStream;
 
     return-object v0
@@ -199,7 +203,7 @@
 .method public readFrameType()B
     .locals 1
 
-    .line 99
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mInput:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readByte()B
@@ -212,7 +216,7 @@
 .method public readInt()I
     .locals 1
 
-    .line 103
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mInput:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readInt()I
@@ -225,22 +229,22 @@
 .method public readString()Ljava/lang/String;
     .locals 3
 
-    .line 107
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mInput:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedShort()I
 
     move-result v0
 
-    .line 108
+    .line 2
     new-array v0, v0, [B
 
-    .line 109
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/dumpapp/Framer;->mInput:Ljava/io/DataInputStream;
 
     invoke-virtual {v1, v0}, Ljava/io/DataInputStream;->readFully([B)V
 
-    .line 110
+    .line 4
     new-instance v1, Ljava/lang/String;
 
     const-string v2, "UTF-8"
@@ -257,7 +261,7 @@
 .method public writeBlob([BII)V
     .locals 1
 
-    .line 125
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mMultiplexedOutputStream:Ljava/io/DataOutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/DataOutputStream;->write([BII)V
@@ -268,19 +272,19 @@
 .method public writeExitCode(I)V
     .locals 1
 
-    .line 114
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStdout:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/io/PrintStream;->flush()V
 
-    .line 115
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mStderr:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/io/PrintStream;->flush()V
 
     const/16 v0, 0x78
 
-    .line 116
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/facebook/stetho/dumpapp/Framer;->writeIntFrame(BI)V
 
     return-void
@@ -289,12 +293,12 @@
 .method public writeIntFrame(BI)V
     .locals 1
 
-    .line 120
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/dumpapp/Framer;->mMultiplexedOutputStream:Ljava/io/DataOutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->write(I)V
 
-    .line 121
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/dumpapp/Framer;->mMultiplexedOutputStream:Ljava/io/DataOutputStream;
 
     invoke-virtual {p1, p2}, Ljava/io/DataOutputStream;->writeInt(I)V

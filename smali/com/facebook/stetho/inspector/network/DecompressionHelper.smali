@@ -4,16 +4,16 @@
 
 
 # static fields
-.field static final DEFLATE_ENCODING:Ljava/lang/String; = "deflate"
+.field public static final DEFLATE_ENCODING:Ljava/lang/String; = "deflate"
 
-.field static final GZIP_ENCODING:Ljava/lang/String; = "gzip"
+.field public static final GZIP_ENCODING:Ljava/lang/String; = "gzip"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 22
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,14 +26,14 @@
 
     const-string v0, "gzip"
 
-    .line 37
+    .line 1
     invoke-virtual {v0, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     const-string v1, "deflate"
 
-    .line 38
+    .line 2
     invoke-virtual {v1, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -44,7 +44,7 @@
 
     goto :goto_0
 
-    .line 48
+    .line 3
     :cond_0
     sget-object v0, Lcom/facebook/stetho/inspector/protocol/module/Console$MessageLevel;->WARNING:Lcom/facebook/stetho/inspector/protocol/module/Console$MessageLevel;
 
@@ -52,9 +52,11 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Unsupported Content-Encoding in response for request #"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,7 +74,7 @@
 
     goto :goto_1
 
-    .line 41
+    .line 4
     :cond_1
     :goto_0
     new-instance p4, Lcom/facebook/stetho/inspector/network/CountingOutputStream;
@@ -81,7 +83,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 43
+    .line 5
     invoke-static {p4}, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;->create(Ljava/io/OutputStream;)Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;
 
     move-result-object p3
@@ -91,7 +93,7 @@
     :cond_2
     if-eqz v1, :cond_4
 
-    .line 45
+    .line 6
     new-instance p3, Ljava/util/zip/InflaterOutputStream;
 
     invoke-direct {p3, p4}, Ljava/util/zip/InflaterOutputStream;-><init>(Ljava/io/OutputStream;)V
@@ -108,7 +110,7 @@
 
     move-object v4, p4
 
-    .line 57
+    .line 7
     new-instance p3, Lcom/facebook/stetho/inspector/network/ResponseHandlingInputStream;
 
     move-object v0, p3

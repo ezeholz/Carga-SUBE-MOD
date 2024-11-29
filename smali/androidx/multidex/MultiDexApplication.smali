@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 35
+    .line 1
     invoke-direct {p0}, Landroid/app/Application;-><init>()V
 
     return-void
@@ -15,13 +15,13 @@
 
 
 # virtual methods
-.method protected attachBaseContext(Landroid/content/Context;)V
+.method public attachBaseContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 38
+    .line 1
     invoke-super {p0, p1}, Landroid/app/Application;->attachBaseContext(Landroid/content/Context;)V
 
-    .line 39
+    .line 2
     invoke-static {p0}, Landroidx/multidex/MultiDex;->install(Landroid/content/Context;)V
 
     return-void

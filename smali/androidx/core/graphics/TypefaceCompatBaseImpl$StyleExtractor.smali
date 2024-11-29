@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
+.class public interface abstract Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
 .super Ljava/lang/Object;
 .source "TypefaceCompatBaseImpl.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "StyleExtractor"
 .end annotation
 

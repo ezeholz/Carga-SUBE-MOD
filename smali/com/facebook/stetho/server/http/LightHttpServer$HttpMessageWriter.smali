@@ -15,20 +15,20 @@
 
 
 # static fields
-.field private static final CRLF:[B
+.field public static final CRLF:[B
 
 
 # instance fields
-.field private final mOut:Ljava/io/BufferedOutputStream;
+.field public final mOut:Ljava/io/BufferedOutputStream;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-string v0, "\r\n"
 
-    .line 263
+    .line 1
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
@@ -41,10 +41,10 @@
 .method public constructor <init>(Ljava/io/BufferedOutputStream;)V
     .locals 0
 
-    .line 265
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;->mOut:Ljava/io/BufferedOutputStream;
 
     return-void
@@ -55,7 +55,7 @@
 .method public flush()V
     .locals 1
 
-    .line 282
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;->mOut:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->flush()V
@@ -66,7 +66,7 @@
 .method public writeLine()V
     .locals 2
 
-    .line 278
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;->mOut:Ljava/io/BufferedOutputStream;
 
     sget-object v1, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;->CRLF:[B
@@ -79,7 +79,7 @@
 .method public writeLine(Ljava/lang/String;)V
     .locals 4
 
-    .line 270
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -89,12 +89,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 271
+    .line 2
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 272
+    .line 3
     iget-object v3, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;->mOut:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {v3, v2}, Ljava/io/BufferedOutputStream;->write(I)V
@@ -103,7 +103,7 @@
 
     goto :goto_0
 
-    .line 274
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;->mOut:Ljava/io/BufferedOutputStream;
 

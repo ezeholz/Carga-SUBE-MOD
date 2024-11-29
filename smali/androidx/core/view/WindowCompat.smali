@@ -21,10 +21,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 68
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,22 +32,32 @@
 
 .method public static getInsetsController(Landroid/view/Window;Landroid/view/View;)Landroidx/core/view/WindowInsetsControllerCompat;
     .locals 2
+    .param p0    # Landroid/view/Window;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 135
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 136
+    .line 2
     invoke-static {p0}, Landroidx/core/view/WindowCompat$Impl30;->getInsetsController(Landroid/view/Window;)Landroidx/core/view/WindowInsetsControllerCompat;
 
     move-result-object p0
 
     return-object p0
 
-    .line 138
+    .line 3
     :cond_0
     new-instance v0, Landroidx/core/view/WindowInsetsControllerCompat;
 
@@ -58,6 +68,17 @@
 
 .method public static requireViewById(Landroid/view/Window;I)Landroid/view/View;
     .locals 2
+    .param p0    # Landroid/view/Window;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -68,21 +89,21 @@
         }
     .end annotation
 
-    .line 88
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-lt v0, v1, :cond_0
 
-    .line 89
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/Window;->requireViewById(I)Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
 
-    .line 92
+    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -92,7 +113,7 @@
 
     return-object p0
 
-    .line 94
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -105,30 +126,27 @@
 
 .method public static setDecorFitsSystemWindows(Landroid/view/Window;Z)V
     .locals 2
+    .param p0    # Landroid/view/Window;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 117
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 118
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/view/WindowCompat$Impl30;->setDecorFitsSystemWindows(Landroid/view/Window;Z)V
 
-    return-void
+    goto :goto_0
 
-    .line 119
+    .line 3
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_1
-
-    .line 120
     invoke-static {p0, p1}, Landroidx/core/view/WindowCompat$Impl16;->setDecorFitsSystemWindows(Landroid/view/Window;Z)V
 
-    :cond_1
+    :goto_0
     return-void
 .end method

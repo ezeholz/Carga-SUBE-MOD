@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$3;
+.class public Landroidx/core/location/LocationManagerCompat$3;
 .super Ljava/lang/Object;
 .source "LocationManagerCompat.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,16 +27,16 @@
 
 
 # instance fields
-.field final synthetic val$locationManager:Landroid/location/LocationManager;
+.field public final synthetic val$locationManager:Landroid/location/LocationManager;
 
-.field final synthetic val$myTransport:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
+.field public final synthetic val$myTransport:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
 
 
 # direct methods
-.method constructor <init>(Landroid/location/LocationManager;Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;)V
+.method public constructor <init>(Landroid/location/LocationManager;Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;)V
     .locals 0
 
-    .line 320
+    .line 1
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$3;->val$locationManager:Landroid/location/LocationManager;
 
     iput-object p2, p0, Landroidx/core/location/LocationManagerCompat$3;->val$myTransport:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
@@ -50,8 +50,11 @@
 # virtual methods
 .method public call()Ljava/lang/Boolean;
     .locals 2
+    .annotation build Landroidx/annotation/RequiresPermission;
+        value = "android.permission.ACCESS_FINE_LOCATION"
+    .end annotation
 
-    .line 324
+    .line 2
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$3;->val$locationManager:Landroid/location/LocationManager;
 
     iget-object v1, p0, Landroidx/core/location/LocationManagerCompat$3;->val$myTransport:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
@@ -69,8 +72,11 @@
 
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresPermission;
+        value = "android.permission.ACCESS_FINE_LOCATION"
+    .end annotation
 
-    .line 320
+    .line 1
     invoke-virtual {p0}, Landroidx/core/location/LocationManagerCompat$3;->call()Ljava/lang/Boolean;
 
     move-result-object v0

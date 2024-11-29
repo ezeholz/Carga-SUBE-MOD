@@ -1,25 +1,35 @@
-.class Landroidx/documentfile/provider/SingleDocumentFile;
+.class public Landroidx/documentfile/provider/SingleDocumentFile;
 .super Landroidx/documentfile/provider/DocumentFile;
 .source "SingleDocumentFile.java"
 
 
-# instance fields
-.field private mContext:Landroid/content/Context;
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
 
-.field private mUri:Landroid/net/Uri;
+
+# instance fields
+.field public mContext:Landroid/content/Context;
+
+.field public mUri:Landroid/net/Uri;
 
 
 # direct methods
-.method constructor <init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
+.method public constructor <init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
     .locals 0
+    .param p1    # Landroidx/documentfile/provider/DocumentFile;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 32
+    .line 1
     invoke-direct {p0, p1}, Landroidx/documentfile/provider/DocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;)V
 
-    .line 33
+    .line 2
     iput-object p2, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
-    .line 34
+    .line 3
     iput-object p3, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
 
     return-void
@@ -30,7 +40,7 @@
 .method public canRead()Z
     .locals 2
 
-    .line 91
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -45,7 +55,7 @@
 .method public canWrite()Z
     .locals 2
 
-    .line 96
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -60,7 +70,7 @@
 .method public createDirectory(Ljava/lang/String;)Landroidx/documentfile/provider/DocumentFile;
     .locals 0
 
-    .line 44
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -71,7 +81,7 @@
 .method public createFile(Ljava/lang/String;Ljava/lang/String;)Landroidx/documentfile/provider/DocumentFile;
     .locals 0
 
-    .line 39
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -82,7 +92,7 @@
 .method public delete()Z
     .locals 2
 
-    .line 102
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
@@ -109,7 +119,7 @@
 .method public exists()Z
     .locals 2
 
-    .line 110
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -123,8 +133,10 @@
 
 .method public getName()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 55
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -138,8 +150,10 @@
 
 .method public getType()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 61
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -154,7 +168,7 @@
 .method public getUri()Landroid/net/Uri;
     .locals 1
 
-    .line 49
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
 
     return-object v0
@@ -163,7 +177,7 @@
 .method public isDirectory()Z
     .locals 2
 
-    .line 66
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -178,7 +192,7 @@
 .method public isFile()Z
     .locals 2
 
-    .line 71
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -193,7 +207,7 @@
 .method public isVirtual()Z
     .locals 2
 
-    .line 76
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -208,7 +222,7 @@
 .method public lastModified()J
     .locals 2
 
-    .line 81
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -223,7 +237,7 @@
 .method public length()J
     .locals 2
 
-    .line 86
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -238,7 +252,7 @@
 .method public listFiles()[Landroidx/documentfile/provider/DocumentFile;
     .locals 1
 
-    .line 115
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -249,7 +263,7 @@
 .method public renameTo(Ljava/lang/String;)Z
     .locals 0
 
-    .line 120
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V

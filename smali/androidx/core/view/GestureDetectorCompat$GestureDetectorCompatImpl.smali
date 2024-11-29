@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImpl;
+.class public interface abstract Landroidx/core/view/GestureDetectorCompat$GestureDetectorCompatImpl;
 .super Ljava/lang/Object;
 .source "GestureDetectorCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "GestureDetectorCompatImpl"
 .end annotation
 

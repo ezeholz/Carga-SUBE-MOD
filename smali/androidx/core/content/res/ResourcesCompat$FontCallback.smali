@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 406
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,10 +26,22 @@
 
 .method public static getHandler(Landroid/os/Handler;)Landroid/os/Handler;
     .locals 1
+    .param p0    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     if-nez p0, :cond_0
 
-    .line 464
+    .line 1
     new-instance p0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -46,8 +58,17 @@
 # virtual methods
 .method public final callbackFailAsync(ILandroid/os/Handler;)V
     .locals 1
+    .param p2    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 452
+    .line 1
     invoke-static {p2}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->getHandler(Landroid/os/Handler;)Landroid/os/Handler;
 
     move-result-object p2
@@ -63,8 +84,17 @@
 
 .method public final callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
     .locals 1
+    .param p2    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 436
+    .line 1
     invoke-static {p2}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->getHandler(Landroid/os/Handler;)Landroid/os/Handler;
 
     move-result-object p2
@@ -82,4 +112,8 @@
 .end method
 
 .method public abstract onFontRetrieved(Landroid/graphics/Typeface;)V
+    .param p1    # Landroid/graphics/Typeface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

@@ -1,4 +1,4 @@
-.class Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;
+.class public Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;
 .super Ljava/lang/Object;
 .source "BrowserActionsFallbackMenuUi.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
+.field public final synthetic this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
 
-.field final synthetic val$urlTextView:Landroid/widget/TextView;
+.field public final synthetic val$urlTextView:Landroid/widget/TextView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;Landroid/widget/TextView;)V
+.method public constructor <init>(Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;Landroid/widget/TextView;)V
     .locals 0
 
-    .line 107
+    .line 1
     iput-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
 
     iput-object p2, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->val$urlTextView:Landroid/widget/TextView;
@@ -42,7 +42,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 110
+    .line 1
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->val$urlTextView:Landroid/widget/TextView;
 
     invoke-static {p1}, Landroidx/core/widget/TextViewCompat;->getMaxLines(Landroid/widget/TextView;)I
@@ -53,34 +53,35 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 111
+    .line 2
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->val$urlTextView:Landroid/widget/TextView;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 112
+    .line 3
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->val$urlTextView:Landroid/widget/TextView;
 
     sget-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    return-void
+    goto :goto_0
 
-    .line 114
+    .line 4
     :cond_0
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->val$urlTextView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 115
+    .line 5
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$2;->val$urlTextView:Landroid/widget/TextView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
+    :goto_0
     return-void
 .end method

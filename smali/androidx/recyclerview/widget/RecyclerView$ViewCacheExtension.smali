@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 6921
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,4 +27,10 @@
 
 # virtual methods
 .method public abstract getViewForPositionAndType(Landroidx/recyclerview/widget/RecyclerView$Recycler;II)Landroid/view/View;
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Recycler;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method

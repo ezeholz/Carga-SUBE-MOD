@@ -68,10 +68,6 @@
     <string name="common_open_on_phone">Otvoriť v telefóne</string>
     <string name="common_signin_button_text">Prihlásiť sa</string>
     <string name="common_signin_button_text_long">Prihlásiť sa do účtu Google</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">dňa %s</string>
-    <string name="joda_time_android_preposition_for_time">o %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Hľadať</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

@@ -16,7 +16,33 @@
 
 # virtual methods
 .method public abstract onActivityResult(Landroid/app/Activity;IILandroid/content/Intent;)Z
+    .param p1    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .param p4    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract requestPermissions(Landroid/app/Activity;[Ljava/lang/String;I)Z
+    .param p1    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
 .end method

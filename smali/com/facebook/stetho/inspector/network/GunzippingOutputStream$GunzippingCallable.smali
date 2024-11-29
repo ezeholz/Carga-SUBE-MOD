@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;
+.class public Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;
 .super Ljava/lang/Object;
 .source "GunzippingOutputStream.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "GunzippingCallable"
 .end annotation
 
@@ -27,22 +27,22 @@
 
 
 # instance fields
-.field private final mIn:Ljava/io/InputStream;
+.field public final mIn:Ljava/io/InputStream;
 
-.field private final mOut:Ljava/io/OutputStream;
+.field public final mOut:Ljava/io/OutputStream;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 89
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->mIn:Ljava/io/InputStream;
 
-    .line 91
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->mOut:Ljava/io/OutputStream;
 
     return-void
@@ -53,7 +53,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .line 85
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->call()Ljava/lang/Void;
 
     move-result-object v0
@@ -64,14 +64,14 @@
 .method public call()Ljava/lang/Void;
     .locals 3
 
-    .line 96
+    .line 2
     new-instance v0, Ljava/util/zip/GZIPInputStream;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->mIn:Ljava/io/InputStream;
 
     invoke-direct {v0, v1}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 98
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->mOut:Ljava/io/OutputStream;
 
@@ -83,10 +83,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
+    .line 4
     invoke-virtual {v0}, Ljava/util/zip/GZIPInputStream;->close()V
 
-    .line 101
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->mOut:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
@@ -98,14 +98,14 @@
     :catchall_0
     move-exception v1
 
-    .line 100
+    .line 6
     invoke-virtual {v0}, Ljava/util/zip/GZIPInputStream;->close()V
 
-    .line 101
+    .line 7
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;->mOut:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 102
+    .line 8
     throw v1
 .end method

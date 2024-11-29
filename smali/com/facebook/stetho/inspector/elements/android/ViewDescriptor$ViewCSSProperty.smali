@@ -1,4 +1,4 @@
-.class abstract Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;
+.class public abstract Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;
 .super Ljava/lang/Object;
 .source "ViewDescriptor.java"
 
@@ -9,32 +9,32 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x400
+    accessFlags = 0x401
     name = "ViewCSSProperty"
 .end annotation
 
 
 # instance fields
-.field private final mAnnotation:Landroid/view/ViewDebug$ExportedProperty;
+.field public final mAnnotation:Landroid/view/ViewDebug$ExportedProperty;
 
-.field private final mCSSName:Ljava/lang/String;
+.field public final mCSSName:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;Ljava/lang/String;Landroid/view/ViewDebug$ExportedProperty;)V
     .locals 0
 
-    .line 554
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;->this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 555
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;->mCSSName:Ljava/lang/String;
 
-    .line 556
+    .line 3
     iput-object p3, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;->mAnnotation:Landroid/view/ViewDebug$ExportedProperty;
 
     return-void
@@ -45,7 +45,7 @@
 .method public final getAnnotation()Landroid/view/ViewDebug$ExportedProperty;
     .locals 1
 
-    .line 567
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;->mAnnotation:Landroid/view/ViewDebug$ExportedProperty;
 
     return-object v0
@@ -54,7 +54,7 @@
 .method public final getCSSName()Ljava/lang/String;
     .locals 1
 
-    .line 560
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;->mCSSName:Ljava/lang/String;
 
     return-object v0

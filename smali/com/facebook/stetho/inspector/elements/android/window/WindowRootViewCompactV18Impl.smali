@@ -1,25 +1,25 @@
-.class Lcom/facebook/stetho/inspector/elements/android/window/WindowRootViewCompactV18Impl;
+.class public Lcom/facebook/stetho/inspector/elements/android/window/WindowRootViewCompactV18Impl;
 .super Lcom/facebook/stetho/inspector/elements/android/window/WindowRootViewCompat;
 .source "WindowRootViewCompactV18Impl.java"
 
 
 # instance fields
-.field private mViewsField:Ljava/lang/reflect/Field;
+.field public mViewsField:Ljava/lang/reflect/Field;
 
-.field private mWindowManagerGlobal:Ljava/lang/Object;
+.field public mWindowManagerGlobal:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 4
 
-    .line 18
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/android/window/WindowRootViewCompat;-><init>()V
 
     :try_start_0
     const-string v0, "android.view.WindowManagerGlobal"
 
-    .line 20
+    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -30,14 +30,14 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 21
+    .line 3
     invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 22
+    .line 4
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -46,7 +46,7 @@
 
     const-string v1, "mViews"
 
-    .line 23
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x1
 
-    .line 24
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
@@ -69,7 +69,7 @@
     :catch_0
     move-exception v0
 
-    .line 34
+    .line 7
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -79,7 +79,7 @@
     :catch_1
     move-exception v0
 
-    .line 32
+    .line 8
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -89,7 +89,7 @@
     :catch_2
     move-exception v0
 
-    .line 30
+    .line 9
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -99,7 +99,7 @@
     :catch_3
     move-exception v0
 
-    .line 28
+    .line 10
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -109,7 +109,7 @@
     :catch_4
     move-exception v0
 
-    .line 26
+    .line 11
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -121,6 +121,9 @@
 # virtual methods
 .method public getRootViews()Ljava/util/List;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -130,7 +133,7 @@
         }
     .end annotation
 
-    .line 43
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/window/WindowRootViewCompactV18Impl;->mViewsField:Ljava/lang/reflect/Field;
 
@@ -139,8 +142,6 @@
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
-
-    check-cast v0, [Landroid/view/View;
 
     check-cast v0, [Landroid/view/View;
 
@@ -159,7 +160,7 @@
     :catch_0
     move-exception v0
 
-    .line 45
+    .line 2
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

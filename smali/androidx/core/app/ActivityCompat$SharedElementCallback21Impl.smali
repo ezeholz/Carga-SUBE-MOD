@@ -1,31 +1,35 @@
-.class Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;
+.class public Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;
 .super Landroid/app/SharedElementCallback;
 .source "ActivityCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/app/ActivityCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SharedElementCallback21Impl"
 .end annotation
 
 
 # instance fields
-.field private final mCallback:Landroidx/core/app/SharedElementCallback;
+.field public final mCallback:Landroidx/core/app/SharedElementCallback;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/app/SharedElementCallback;)V
+.method public constructor <init>(Landroidx/core/app/SharedElementCallback;)V
     .locals 0
 
-    .line 649
+    .line 1
     invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
 
-    .line 650
+    .line 2
     iput-object p1, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     return-void
@@ -36,7 +40,7 @@
 .method public onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
     .locals 1
 
-    .line 680
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/core/app/SharedElementCallback;->onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
@@ -49,7 +53,7 @@
 .method public onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
     .locals 1
 
-    .line 686
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/core/app/SharedElementCallback;->onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
@@ -74,7 +78,7 @@
         }
     .end annotation
 
-    .line 674
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/core/app/SharedElementCallback;->onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
@@ -93,7 +97,7 @@
         }
     .end annotation
 
-    .line 669
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     invoke-virtual {v0, p1}, Landroidx/core/app/SharedElementCallback;->onRejectSharedElements(Ljava/util/List;)V
@@ -118,7 +122,7 @@
         }
     .end annotation
 
-    .line 663
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/core/app/SharedElementCallback;->onSharedElementEnd(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
@@ -143,7 +147,7 @@
         }
     .end annotation
 
-    .line 656
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/core/app/SharedElementCallback;->onSharedElementStart(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
@@ -153,6 +157,10 @@
 
 .method public onSharedElementsArrived(Ljava/util/List;Ljava/util/List;Landroid/app/SharedElementCallback$OnSharedElementsReadyListener;)V
     .locals 2
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -167,7 +175,7 @@
         }
     .end annotation
 
-    .line 693
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl;->mCallback:Landroidx/core/app/SharedElementCallback;
 
     new-instance v1, Landroidx/core/app/ActivityCompat$SharedElementCallback21Impl$1;

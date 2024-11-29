@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentTransitionCompat21$4;
+.class public Landroidx/fragment/app/FragmentTransitionCompat21$4;
 .super Ljava/lang/Object;
 .source "FragmentTransitionCompat21.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
-.field final synthetic val$transitionCompleteRunnable:Ljava/lang/Runnable;
+.field public final synthetic val$transitionCompleteRunnable:Ljava/lang/Runnable;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Ljava/lang/Runnable;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 271
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$4;->this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransitionCompat21$4;->val$transitionCompleteRunnable:Ljava/lang/Runnable;
@@ -48,7 +48,7 @@
 .method public onTransitionEnd(Landroid/transition/Transition;)V
     .locals 0
 
-    .line 277
+    .line 1
     iget-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$4;->val$transitionCompleteRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

@@ -14,16 +14,16 @@
 
 
 # static fields
-.field private static sGetDeviceIdMethod:Ljava/lang/reflect/Method;
+.field public static sGetDeviceIdMethod:Ljava/lang/reflect/Method;
 
-.field private static sGetSubIdMethod:Ljava/lang/reflect/Method;
+.field public static sGetSubIdMethod:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 134
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,30 +31,43 @@
 
 .method public static getImei(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
     .locals 7
+    .param p0    # Landroid/telephony/TelephonyManager;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "MissingPermission"
+        }
+    .end annotation
 
-    .line 70
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresPermission;
+        value = "android.permission.READ_PHONE_STATE"
+    .end annotation
+
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 71
+    .line 2
     invoke-static {p0}, Landroidx/core/telephony/TelephonyManagerCompat$Api26Impl;->getImei(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 72
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
     const/16 v1, 0x16
 
     if-lt v0, v1, :cond_3
 
-    .line 77
+    .line 3
     invoke-static {p0}, Landroidx/core/telephony/TelephonyManagerCompat;->getSubscriptionId(Landroid/telephony/TelephonyManager;)I
 
     move-result v0
@@ -67,26 +80,26 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 79
+    .line 4
     invoke-static {v0}, Landroidx/core/telephony/SubscriptionManagerCompat;->getSlotIndex(I)I
 
     move-result v0
 
-    .line 80
+    .line 5
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x17
 
     if-lt v1, v2, :cond_1
 
-    .line 81
+    .line 6
     invoke-static {p0, v0}, Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;->getDeviceId(Landroid/telephony/TelephonyManager;I)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 84
+    .line 7
     :cond_1
     :try_start_0
     sget-object v1, Landroidx/core/telephony/TelephonyManagerCompat;->sGetDeviceIdMethod:Ljava/lang/reflect/Method;
@@ -97,7 +110,7 @@
 
     if-nez v1, :cond_2
 
-    .line 85
+    .line 8
     const-class v1, Landroid/telephony/TelephonyManager;
 
     const-string v4, "getDeviceId"
@@ -112,12 +125,12 @@
 
     move-result-object v1
 
-    .line 88
     sput-object v1, Landroidx/core/telephony/TelephonyManagerCompat;->sGetDeviceIdMethod:Ljava/lang/reflect/Method;
 
+    .line 9
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 91
+    .line 10
     :cond_2
     sget-object v1, Landroidx/core/telephony/TelephonyManagerCompat;->sGetDeviceIdMethod:Ljava/lang/reflect/Method;
 
@@ -146,7 +159,7 @@
 
     return-object p0
 
-    .line 102
+    .line 11
     :cond_3
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
@@ -157,30 +170,36 @@
 
 .method public static getSubscriptionId(Landroid/telephony/TelephonyManager;)I
     .locals 4
+    .param p0    # Landroid/telephony/TelephonyManager;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "SoonBlockedPrivateApi"
+        }
+    .end annotation
 
-    .line 112
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 113
+    .line 2
     invoke-static {p0}, Landroidx/core/telephony/TelephonyManagerCompat$Api30Impl;->getSubscriptionId(Landroid/telephony/TelephonyManager;)I
 
     move-result p0
 
     return p0
 
-    .line 114
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
     const/16 v1, 0x16
 
     if-lt v0, v1, :cond_2
 
-    .line 116
+    .line 3
     :try_start_0
     sget-object v0, Landroidx/core/telephony/TelephonyManagerCompat;->sGetSubIdMethod:Ljava/lang/reflect/Method;
 
@@ -188,7 +207,7 @@
 
     if-nez v0, :cond_1
 
-    .line 117
+    .line 4
     const-class v0, Landroid/telephony/TelephonyManager;
 
     const-string v2, "getSubId"
@@ -199,14 +218,14 @@
 
     move-result-object v0
 
-    .line 118
     sput-object v0, Landroidx/core/telephony/TelephonyManagerCompat;->sGetSubIdMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
 
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 121
+    .line 6
     :cond_1
     sget-object v0, Landroidx/core/telephony/TelephonyManagerCompat;->sGetSubIdMethod:Ljava/lang/reflect/Method;
 
@@ -220,7 +239,7 @@
 
     if-eqz p0, :cond_2
 
-    .line 122
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -229,7 +248,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 123
+    .line 8
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0

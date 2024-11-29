@@ -24,15 +24,15 @@
 
 
 # static fields
-.field private static sDiffExecutor:Ljava/util/concurrent/Executor;
+.field public static sDiffExecutor:Ljava/util/concurrent/Executor;
 
-.field private static final sExecutorLock:Ljava/lang/Object;
+.field public static final sExecutorLock:Ljava/lang/Object;
 
 
 # instance fields
-.field private mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
+.field public mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
-.field private final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+.field public final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/DiffUtil$ItemCallback<",
@@ -41,30 +41,32 @@
     .end annotation
 .end field
 
-.field private mMainThreadExecutor:Ljava/util/concurrent/Executor;
+.field public mMainThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 144
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sExecutorLock:Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    .line 145
-    sput-object v0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sDiffExecutor:Ljava/util/concurrent/Executor;
-
     return-void
 .end method
 
 .method public constructor <init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -73,10 +75,10 @@
         }
     .end annotation
 
-    .line 84
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
 
     return-void
@@ -84,8 +86,11 @@
 
 
 # virtual methods
-.method public final build()Landroidx/recyclerview/widget/AsyncDifferConfig;
+.method public build()Landroidx/recyclerview/widget/AsyncDifferConfig;
     .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -94,17 +99,17 @@
         }
     .end annotation
 
-    .line 129
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_1
 
-    .line 130
+    .line 2
     sget-object v0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sExecutorLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 131
+    .line 3
     :try_start_0
     sget-object v1, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sDiffExecutor:Ljava/util/concurrent/Executor;
 
@@ -112,20 +117,20 @@
 
     const/4 v1, 0x2
 
-    .line 132
+    .line 4
     invoke-static {v1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
     sput-object v1, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sDiffExecutor:Ljava/util/concurrent/Executor;
 
-    .line 134
+    .line 5
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 135
+    .line 6
     sget-object v0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->sDiffExecutor:Ljava/util/concurrent/Executor;
 
     iput-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
@@ -135,7 +140,7 @@
     :catchall_0
     move-exception v1
 
-    .line 134
+    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -143,7 +148,7 @@
 
     throw v1
 
-    .line 137
+    .line 8
     :cond_1
     :goto_0
     new-instance v0, Landroidx/recyclerview/widget/AsyncDifferConfig;
@@ -159,8 +164,11 @@
     return-object v0
 .end method
 
-.method public final setBackgroundThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
+.method public setBackgroundThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -171,14 +179,23 @@
         }
     .end annotation
 
-    .line 118
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
     return-object p0
 .end method
 
-.method public final setMainThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
+.method public setMainThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -189,7 +206,7 @@
         }
     .end annotation
 
-    .line 102
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->mMainThreadExecutor:Ljava/util/concurrent/Executor;
 
     return-object p0

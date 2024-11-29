@@ -1,4 +1,4 @@
-.class final Landroidx/gridlayout/widget/GridLayout$MutableInt;
+.class public final Landroidx/gridlayout/widget/GridLayout$MutableInt;
 .super Ljava/lang/Object;
 .source "GridLayout.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "MutableInt"
 .end annotation
 
@@ -22,10 +22,10 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 2139
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2140
+    .line 2
     invoke-virtual {p0}, Landroidx/gridlayout/widget/GridLayout$MutableInt;->reset()V
 
     return-void
@@ -34,10 +34,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 2143
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2144
+    .line 4
     iput p1, p0, Landroidx/gridlayout/widget/GridLayout$MutableInt;->value:I
 
     return-void
@@ -45,21 +45,21 @@
 
 
 # virtual methods
-.method public final reset()V
+.method public reset()V
     .locals 1
 
     const/high16 v0, -0x80000000
 
-    .line 2148
+    .line 1
     iput v0, p0, Landroidx/gridlayout/widget/GridLayout$MutableInt;->value:I
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 2153
+    .line 1
     iget v0, p0, Landroidx/gridlayout/widget/GridLayout$MutableInt;->value:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

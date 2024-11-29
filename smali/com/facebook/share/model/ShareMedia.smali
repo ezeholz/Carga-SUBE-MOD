@@ -15,42 +15,42 @@
 
 
 # instance fields
-.field final a:Landroid/os/Bundle;
+.field public final d:Landroid/os/Bundle;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 47
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/model/ShareMedia;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/facebook/share/model/ShareMedia;->d:Landroid/os/Bundle;
 
     return-void
 .end method
 
-.method protected constructor <init>(Lcom/facebook/share/model/ShareMedia$a;)V
+.method public constructor <init>(Lcom/facebook/share/model/ShareMedia$a;)V
     .locals 1
 
-    .line 43
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
+    .line 2
     new-instance v0, Landroid/os/Bundle;
 
-    .line 1074
+    .line 3
     iget-object p1, p1, Lcom/facebook/share/model/ShareMedia$a;->a:Landroid/os/Bundle;
 
-    .line 44
+    .line 4
     invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMedia;->a:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/facebook/share/model/ShareMedia;->d:Landroid/os/Bundle;
 
     return-void
 .end method
@@ -68,8 +68,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 66
-    iget-object p2, p0, Lcom/facebook/share/model/ShareMedia;->a:Landroid/os/Bundle;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/model/ShareMedia;->d:Landroid/os/Bundle;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 

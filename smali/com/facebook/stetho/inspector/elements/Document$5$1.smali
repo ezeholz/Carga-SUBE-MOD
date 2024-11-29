@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/Document$5$1;
+.class public Lcom/facebook/stetho/inspector/elements/Document$5$1;
 .super Ljava/lang/Object;
 .source "Document.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/facebook/stetho/inspector/elements/Document$5;
+.field public final synthetic this$1:Lcom/facebook/stetho/inspector/elements/Document$5;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/elements/Document$5;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/Document$5;)V
     .locals 0
 
-    .line 436
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$5$1;->this$1:Lcom/facebook/stetho/inspector/elements/Document$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public store(Ljava/lang/Object;)V
     .locals 1
 
-    .line 439
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$5$1;->this$1:Lcom/facebook/stetho/inspector/elements/Document$5;
 
     iget-object v0, v0, Lcom/facebook/stetho/inspector/elements/Document$5;->val$docUpdate:Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 443
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$5$1;->this$1:Lcom/facebook/stetho/inspector/elements/Document$5;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document$5;->access$800(Lcom/facebook/stetho/inspector/elements/Document$5;)Ljava/util/HashSet;

@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$1;
+.class public Landroidx/viewpager2/widget/ViewPager2$1;
 .super Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;
 .source "ViewPager2.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
-    .line 133
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$1;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     const/4 p1, 0x0
@@ -37,16 +37,14 @@
 .method public onChanged()V
     .locals 2
 
-    .line 136
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$1;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
-    .line 137
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$1;->this$0:Landroidx/viewpager2/widget/ViewPager2;
-
+    .line 2
     iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ScrollEventAdapter;->notifyDataSetChangeHappened()V

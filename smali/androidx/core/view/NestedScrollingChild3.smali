@@ -8,4 +8,12 @@
 
 # virtual methods
 .method public abstract dispatchNestedScroll(IIII[II[I)V
+    .param p5    # [I
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p7    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

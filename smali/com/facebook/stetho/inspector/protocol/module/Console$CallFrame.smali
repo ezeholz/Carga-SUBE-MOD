@@ -4,6 +4,13 @@
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "UsingDefaultJsonDeserializer",
+        "EmptyJsonPropertyUse"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/facebook/stetho/inspector/protocol/module/Console;
 .end annotation
@@ -44,7 +51,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 111
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,19 +60,19 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
-    .line 114
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Console$CallFrame;->functionName:Ljava/lang/String;
 
-    .line 116
+    .line 4
     iput-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Console$CallFrame;->url:Ljava/lang/String;
 
-    .line 117
+    .line 5
     iput p3, p0, Lcom/facebook/stetho/inspector/protocol/module/Console$CallFrame;->lineNumber:I
 
-    .line 118
+    .line 6
     iput p4, p0, Lcom/facebook/stetho/inspector/protocol/module/Console$CallFrame;->columnNumber:I
 
     return-void

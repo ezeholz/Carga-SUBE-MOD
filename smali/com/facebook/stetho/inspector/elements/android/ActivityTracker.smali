@@ -13,11 +13,11 @@
 
 
 # static fields
-.field private static final sInstance:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
+.field public static final sInstance:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
 
 # instance fields
-.field private final mActivities:Ljava/util/ArrayList;
+.field public final mActivities:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -28,7 +28,7 @@
     .end annotation
 .end field
 
-.field private final mActivitiesUnmodifiable:Ljava/util/List;
+.field public final mActivitiesUnmodifiable:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -39,9 +39,9 @@
     .end annotation
 .end field
 
-.field private mAutomaticTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
+.field public mAutomaticTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
 
-.field private final mListeners:Ljava/util/List;
+.field public final mListeners:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -53,10 +53,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 42
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;-><init>()V
@@ -69,24 +69,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 41
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivities:Ljava/util/ArrayList;
 
-    .line 51
+    .line 3
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivitiesUnmodifiable:Ljava/util/List;
 
-    .line 53
+    .line 4
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -99,13 +99,13 @@
 .method public static get()Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
     .locals 1
 
-    .line 59
+    .line 1
     sget-object v0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->sInstance:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
     return-object v0
 .end method
 
-.method private static removeFromWeakList(Ljava/util/ArrayList;Ljava/lang/Object;)Z
+.method public static removeFromWeakList(Ljava/util/ArrayList;Ljava/lang/Object;)Z
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -118,7 +118,7 @@
         }
     .end annotation
 
-    .line 118
+    .line 1
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -130,7 +130,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 119
+    .line 2
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -143,7 +143,7 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 121
+    .line 3
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     const/4 p0, 0x1
@@ -161,13 +161,13 @@
 
 
 # virtual methods
-.method public final add(Landroid/app/Activity;)V
+.method public add(Landroid/app/Activity;)V
     .locals 2
 
-    .line 99
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
+    .line 2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -188,7 +188,7 @@
     :goto_0
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNot(Z)V
 
-    .line 101
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivities:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -197,7 +197,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -217,7 +217,7 @@
 
     check-cast v1, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;
 
-    .line 103
+    .line 5
     invoke-interface {v1, p1}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;->onActivityAdded(Landroid/app/Activity;)V
 
     goto :goto_1
@@ -226,25 +226,25 @@
     return-void
 .end method
 
-.method public final beginTrackingIfPossible(Landroid/app/Application;)Z
+.method public beginTrackingIfPossible(Landroid/app/Application;)Z
     .locals 1
 
-    .line 77
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mAutomaticTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
 
     if-nez v0, :cond_0
 
-    .line 79
+    .line 2
     invoke-static {p1, p0}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;->newInstanceIfPossible(Landroid/app/Application;Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;)Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 81
+    .line 3
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;->register()V
 
-    .line 82
+    .line 4
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mAutomaticTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
 
     const/4 p1, 0x1
@@ -257,20 +257,20 @@
     return p1
 .end method
 
-.method public final endTracking()Z
+.method public endTracking()Z
     .locals 1
 
-    .line 90
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mAutomaticTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
 
     if-eqz v0, :cond_0
 
-    .line 91
+    .line 2
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;->unregister()V
 
     const/4 v0, 0x0
 
-    .line 92
+    .line 3
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mAutomaticTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$AutomaticTracker;
 
     const/4 v0, 0x1
@@ -283,7 +283,7 @@
     return v0
 .end method
 
-.method public final getActivitiesView()Ljava/util/List;
+.method public getActivitiesView()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -295,16 +295,16 @@
         }
     .end annotation
 
-    .line 129
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivitiesUnmodifiable:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public final registerListener(Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;)V
+.method public registerListener(Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;)V
     .locals 1
 
-    .line 63
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -312,13 +312,13 @@
     return-void
 .end method
 
-.method public final remove(Landroid/app/Activity;)V
+.method public remove(Landroid/app/Activity;)V
     .locals 2
 
-    .line 108
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
+    .line 2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -339,7 +339,7 @@
     :goto_0
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNot(Z)V
 
-    .line 110
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivities:Ljava/util/ArrayList;
 
     invoke-static {v0, p1}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->removeFromWeakList(Ljava/util/ArrayList;Ljava/lang/Object;)Z
@@ -348,7 +348,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 111
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -368,7 +368,7 @@
 
     check-cast v1, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;
 
-    .line 112
+    .line 5
     invoke-interface {v1, p1}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;->onActivityRemoved(Landroid/app/Activity;)V
 
     goto :goto_1
@@ -377,10 +377,10 @@
     return-void
 .end method
 
-.method public final tryGetTopActivity()Landroid/app/Activity;
+.method public tryGetTopActivity()Landroid/app/Activity;
     .locals 3
 
-    .line 134
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivitiesUnmodifiable:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -393,7 +393,7 @@
 
     return-object v1
 
-    .line 137
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivitiesUnmodifiable:Ljava/util/List;
 
@@ -406,7 +406,7 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 138
+    .line 3
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mActivitiesUnmodifiable:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -434,10 +434,10 @@
     return-object v1
 .end method
 
-.method public final unregisterListener(Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;)V
+.method public unregisterListener(Lcom/facebook/stetho/inspector/elements/android/ActivityTracker$Listener;)V
     .locals 1
 
-    .line 67
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->mListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

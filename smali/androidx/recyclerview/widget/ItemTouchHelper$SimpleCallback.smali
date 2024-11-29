@@ -15,22 +15,22 @@
 
 
 # instance fields
-.field private mDefaultDragDirs:I
+.field public mDefaultDragDirs:I
 
-.field private mDefaultSwipeDirs:I
+.field public mDefaultSwipeDirs:I
 
 
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 2233
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;-><init>()V
 
-    .line 2234
+    .line 2
     iput p2, p0, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->mDefaultSwipeDirs:I
 
-    .line 2235
+    .line 3
     iput p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->mDefaultDragDirs:I
 
     return-void
@@ -40,8 +40,16 @@
 # virtual methods
 .method public getDragDirs(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)I
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2287
+    .line 1
     iget p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->mDefaultDragDirs:I
 
     return p1
@@ -49,19 +57,27 @@
 
 .method public getMovementFlags(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)I
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2293
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->getDragDirs(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)I
 
     move-result v0
 
-    .line 2294
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->getSwipeDirs(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)I
 
     move-result p1
 
-    .line 2293
-    invoke-static {v0, p1}, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->makeMovementFlags(II)I
+    .line 3
+    invoke-static {v0, p1}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->makeMovementFlags(II)I
 
     move-result p1
 
@@ -70,8 +86,16 @@
 
 .method public getSwipeDirs(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)I
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2272
+    .line 1
     iget p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->mDefaultSwipeDirs:I
 
     return p1
@@ -80,7 +104,7 @@
 .method public setDefaultDragDirs(I)V
     .locals 0
 
-    .line 2257
+    .line 1
     iput p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->mDefaultDragDirs:I
 
     return-void
@@ -89,7 +113,7 @@
 .method public setDefaultSwipeDirs(I)V
     .locals 0
 
-    .line 2246
+    .line 1
     iput p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;->mDefaultSwipeDirs:I
 
     return-void

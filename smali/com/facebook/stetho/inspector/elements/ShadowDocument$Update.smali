@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private final mElementToInfoChangesMap:Ljava/util/Map;
+.field public final mElementToInfoChangesMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field private final mRootElementChangesSet:Ljava/util/Set;
+.field public final mRootElementChangesSet:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
 
 # direct methods
@@ -58,15 +58,15 @@
         }
     .end annotation
 
-    .line 268
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 269
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mElementToInfoChangesMap:Ljava/util/Map;
 
-    .line 270
+    .line 3
     iput-object p3, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mRootElementChangesSet:Ljava/util/Set;
 
     return-void
@@ -86,21 +86,19 @@
         }
     .end annotation
 
-    .line 372
+    .line 1
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/facebook/stetho/inspector/elements/ElementInfo;
 
-    .line 378
+    .line 2
     iget-object v1, v0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
-
-    .line 379
+    .line 3
     invoke-interface {p1, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -109,13 +107,13 @@
 
     return-void
 
-    .line 383
+    .line 4
     :cond_0
     invoke-interface {p1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 p2, 0x0
 
-    .line 385
+    .line 5
     iget-object v1, v0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -125,7 +123,7 @@
     :goto_0
     if-ge p2, v1, :cond_1
 
-    .line 386
+    .line 6
     iget-object v2, v0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -154,12 +152,12 @@
         }
     .end annotation
 
-    .line 395
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 397
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -183,24 +181,24 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 398
+    .line 3
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 399
+    .line 4
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;
 
-    .line 401
+    .line 5
     iget-object v5, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->element:Ljava/lang/Object;
 
     if-ne v4, v5, :cond_7
 
-    .line 407
+    .line 6
     iget-object v5, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
@@ -214,14 +212,14 @@
     :goto_1
     if-ge v7, v5, :cond_2
 
-    .line 408
+    .line 7
     iget-object v8, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v8, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
-    .line 409
+    .line 8
     invoke-interface {p1, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
@@ -230,7 +228,7 @@
 
     if-eqz v8, :cond_1
 
-    .line 417
+    .line 9
     iget-object v8, v8, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     if-ne v8, v4, :cond_0
@@ -239,7 +237,7 @@
 
     goto :goto_1
 
-    .line 418
+    .line 10
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -249,13 +247,13 @@
 
     throw p1
 
-    .line 412
+    .line 11
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-array v0, v3, [Ljava/lang/Object;
 
-    .line 414
+    .line 12
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -264,7 +262,7 @@
 
     const-string v1, "elementInfo.get(elementInfo.children.get(%s)) == null"
 
-    .line 412
+    .line 13
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -273,21 +271,19 @@
 
     throw p1
 
-    .line 423
+    .line 14
     :cond_2
     iget-object v3, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     if-nez v3, :cond_3
 
-    .line 424
+    .line 15
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 426
+    .line 16
     :cond_3
-    iget-object v3, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
-
     invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -296,14 +292,14 @@
 
     if-eqz v3, :cond_6
 
-    .line 432
+    .line 17
     iget-object v2, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     iget-object v5, v3, Lcom/facebook/stetho/inspector/elements/ElementInfo;->element:Ljava/lang/Object;
 
     if-ne v2, v5, :cond_5
 
-    .line 438
+    .line 18
     iget-object v2, v3, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v2, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -314,7 +310,7 @@
 
     goto :goto_0
 
-    .line 439
+    .line 19
     :cond_4
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -324,7 +320,7 @@
 
     throw p1
 
-    .line 434
+    .line 20
     :cond_5
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -334,7 +330,7 @@
 
     throw p1
 
-    .line 428
+    .line 21
     :cond_6
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -344,7 +340,7 @@
 
     throw p1
 
-    .line 403
+    .line 22
     :cond_7
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -354,7 +350,7 @@
 
     throw p1
 
-    .line 445
+    .line 23
     :cond_8
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
@@ -364,7 +360,7 @@
 
     return-void
 
-    .line 446
+    .line 24
     :cond_9
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -383,10 +379,10 @@
 
 
 # virtual methods
-.method public final abandon()V
+.method public abandon()V
     .locals 2
 
-    .line 342
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->access$200(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Z
@@ -395,7 +391,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 346
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     const/4 v1, 0x0
@@ -404,7 +400,7 @@
 
     return-void
 
-    .line 343
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -413,10 +409,10 @@
     throw v0
 .end method
 
-.method public final commit()V
+.method public commit()V
     .locals 3
 
-    .line 350
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->access$200(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Z
@@ -425,7 +421,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 355
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->access$000(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/util/IdentityHashMap;
@@ -436,7 +432,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/IdentityHashMap;->putAll(Ljava/util/Map;)V
 
-    .line 359
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mRootElementChangesSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -454,7 +450,7 @@
 
     move-result-object v1
 
-    .line 360
+    .line 4
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-static {v2}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->access$000(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/util/IdentityHashMap;
@@ -465,7 +461,7 @@
 
     goto :goto_0
 
-    .line 363
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
@@ -475,7 +471,7 @@
 
     return-void
 
-    .line 351
+    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -490,7 +486,7 @@
     goto :goto_1
 .end method
 
-.method public final getChangedElements(Lcom/facebook/stetho/common/Accumulator;)V
+.method public getChangedElements(Lcom/facebook/stetho/common/Accumulator;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -501,7 +497,7 @@
         }
     .end annotation
 
-    .line 296
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mElementToInfoChangesMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -523,7 +519,7 @@
 
     move-result-object v1
 
-    .line 297
+    .line 2
     invoke-interface {p1, v1}, Lcom/facebook/stetho/common/Accumulator;->store(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -532,10 +528,10 @@
     return-void
 .end method
 
-.method public final getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
+.method public getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
     .locals 1
 
-    .line 288
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mElementToInfoChangesMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -548,7 +544,7 @@
 
     return-object v0
 
-    .line 292
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
@@ -565,7 +561,7 @@
     return-object p1
 .end method
 
-.method public final getGarbageElements(Lcom/facebook/stetho/common/Accumulator;)V
+.method public getGarbageElements(Lcom/facebook/stetho/common/Accumulator;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -576,12 +572,12 @@
         }
     .end annotation
 
-    .line 306
+    .line 1
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    .line 310
+    .line 2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mRootElementChangesSet:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -600,12 +596,12 @@
 
     move-result-object v2
 
-    .line 311
+    .line 3
     invoke-virtual {p0, v2}, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
 
     move-result-object v3
 
-    .line 312
+    .line 4
     iget-object v4, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-static {v4}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->access$100(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/lang/Object;
@@ -618,29 +614,29 @@
 
     if-nez v3, :cond_0
 
-    .line 313
-    invoke-interface {v0, v2}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    .line 5
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 314
-    invoke-interface {v0, v2}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    .line 6
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 321
+    .line 7
     :cond_1
-    invoke-interface {v0}, Ljava/util/Queue;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 322
-    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+    .line 8
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 323
-    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+    .line 9
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -648,21 +644,21 @@
 
     const/4 v2, 0x0
 
-    .line 325
+    .line 10
     :cond_2
     invoke-virtual {p0, v1}, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
 
     move-result-object v3
 
-    .line 327
+    .line 11
     iget-object v3, v3, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     if-ne v3, v2, :cond_1
 
-    .line 328
+    .line 12
     invoke-interface {p1, v1}, Lcom/facebook/stetho/common/Accumulator;->store(Ljava/lang/Object;)V
 
-    .line 330
+    .line 13
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-virtual {v2, v1}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
@@ -673,7 +669,7 @@
 
     const/4 v3, 0x0
 
-    .line 332
+    .line 14
     iget-object v4, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -683,17 +679,17 @@
     :goto_1
     if-ge v3, v4, :cond_1
 
-    .line 333
+    .line 15
     iget-object v5, v2, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    invoke-interface {v0, v5}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v5}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 334
-    invoke-interface {v0, v1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    .line 16
+    invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 
@@ -703,10 +699,10 @@
     return-void
 .end method
 
-.method public final getRootElement()Ljava/lang/Object;
+.method public getRootElement()Ljava/lang/Object;
     .locals 1
 
-    .line 282
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->this$0:Lcom/facebook/stetho/inspector/elements/ShadowDocument;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->getRootElement()Ljava/lang/Object;
@@ -716,10 +712,10 @@
     return-object v0
 .end method
 
-.method public final isElementChanged(Ljava/lang/Object;)Z
+.method public isElementChanged(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 278
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mElementToInfoChangesMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -729,10 +725,10 @@
     return p1
 .end method
 
-.method public final isEmpty()Z
+.method public isEmpty()Z
     .locals 1
 
-    .line 274
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;->mElementToInfoChangesMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z

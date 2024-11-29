@@ -3,12 +3,12 @@
 .source "ViewGroup.kt"
 
 # interfaces
-.implements Lkotlin/g/e;
+.implements Lj/p/e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewGroupKt;->getChildren(Landroid/view/ViewGroup;)Lkotlin/g/e;
+    value = Landroidx/core/view/ViewGroupKt;->getChildren(Landroid/view/ViewGroup;)Lj/p/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/g/e<",
+        "Lj/p/e<",
         "Landroid/view/View;",
         ">;"
     }
@@ -27,16 +27,16 @@
 
 
 # instance fields
-.field final synthetic $this_children:Landroid/view/ViewGroup;
+.field public final synthetic $this_children:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/ViewGroup;)V
+.method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/view/ViewGroupKt$children$1;->$this_children:Landroid/view/ViewGroup;
 
-    .line 81
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public iterator()Ljava/util/Iterator;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
         }
     .end annotation
 
-    .line 82
+    .line 1
     iget-object v0, p0, Landroidx/core/view/ViewGroupKt$children$1;->$this_children:Landroid/view/ViewGroup;
 
     invoke-static {v0}, Landroidx/core/view/ViewGroupKt;->iterator(Landroid/view/ViewGroup;)Ljava/util/Iterator;

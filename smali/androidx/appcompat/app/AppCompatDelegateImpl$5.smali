@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$5;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$5;
 .super Ljava/lang/Object;
 .source "AppCompatDelegateImpl.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
-    .line 857
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$5;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    .line 863
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$5;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->dismissPopups()V

@@ -1,4 +1,4 @@
-.class final Landroidx/arch/core/executor/ArchTaskExecutor$1;
+.class public final Landroidx/arch/core/executor/ArchTaskExecutor$1;
 .super Ljava/lang/Object;
 .source "ArchTaskExecutor.java"
 
@@ -12,16 +12,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 42
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,10 +29,10 @@
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 45
+    .line 1
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
 
     move-result-object v0

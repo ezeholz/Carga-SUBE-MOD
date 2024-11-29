@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/widget/TextViewOnReceiveContentListener$ApiImpl;,
@@ -16,59 +22,60 @@
 
 
 # static fields
-.field private static final LOG_TAG:Ljava/lang/String; = "ReceiveContent"
+.field public static final LOG_TAG:Ljava/lang/String; = "ReceiveContent"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 49
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private static coerceToText(Landroid/content/Context;Landroid/content/ClipData$Item;I)Ljava/lang/CharSequence;
-    .locals 2
+.method public static coerceToText(Landroid/content/Context;Landroid/content/ClipData$Item;I)Ljava/lang/CharSequence;
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/ClipData$Item;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 94
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    .line 95
+    .line 1
     invoke-static {p0, p1, p2}, Landroidx/core/widget/TextViewOnReceiveContentListener$Api16Impl;->coerce(Landroid/content/Context;Landroid/content/ClipData$Item;I)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 97
-    :cond_0
-    invoke-static {p0, p1, p2}, Landroidx/core/widget/TextViewOnReceiveContentListener$ApiImpl;->coerce(Landroid/content/Context;Landroid/content/ClipData$Item;I)Ljava/lang/CharSequence;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static replaceSelection(Landroid/text/Editable;Ljava/lang/CharSequence;)V
+.method public static replaceSelection(Landroid/text/Editable;Ljava/lang/CharSequence;)V
     .locals 4
+    .param p0    # Landroid/text/Editable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 103
+    .line 1
     invoke-static {p0}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 104
+    .line 2
     invoke-static {p0}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 105
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -79,7 +86,7 @@
 
     move-result v2
 
-    .line 106
+    .line 4
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -88,10 +95,10 @@
 
     move-result v0
 
-    .line 107
+    .line 5
     invoke-static {p0, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 108
+    .line 6
     invoke-interface {p0, v2, v0, p1}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
     return-void
@@ -99,30 +106,44 @@
 
 
 # virtual methods
-.method public final onReceiveContent(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
+.method public onReceiveContent(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
     .locals 7
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/core/view/ContentInfoCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const-string v0, "ReceiveContent"
 
     const/4 v1, 0x3
 
-    .line 56
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 57
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "onReceive: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 59
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 3
     :cond_0
     invoke-virtual {p2}, Landroidx/core/view/ContentInfoCompat;->getSource()I
 
@@ -134,28 +155,28 @@
 
     return-object p2
 
-    .line 71
+    .line 4
     :cond_1
     invoke-virtual {p2}, Landroidx/core/view/ContentInfoCompat;->getClip()Landroid/content/ClipData;
 
     move-result-object v0
 
-    .line 72
+    .line 5
     invoke-virtual {p2}, Landroidx/core/view/ContentInfoCompat;->getFlags()I
 
     move-result p2
 
-    .line 73
+    .line 6
     check-cast p1, Landroid/widget/TextView;
 
-    .line 74
+    .line 7
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     check-cast v1, Landroid/text/Editable;
 
-    .line 75
+    .line 8
     invoke-virtual {p1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -164,7 +185,7 @@
 
     const/4 v3, 0x0
 
-    .line 77
+    .line 9
     :goto_0
     invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
 
@@ -172,7 +193,7 @@
 
     if-ge v2, v4, :cond_4
 
-    .line 78
+    .line 10
     invoke-virtual {v0, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
     move-result-object v4
@@ -185,14 +206,14 @@
 
     if-nez v3, :cond_2
 
-    .line 81
+    .line 11
     invoke-static {v1, v4}, Landroidx/core/widget/TextViewOnReceiveContentListener;->replaceSelection(Landroid/text/Editable;Ljava/lang/CharSequence;)V
 
     const/4 v3, 0x1
 
     goto :goto_1
 
-    .line 84
+    .line 12
     :cond_2
     invoke-static {v1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
@@ -202,7 +223,7 @@
 
     invoke-interface {v1, v5, v6}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 85
+    .line 13
     invoke-static {v1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v5

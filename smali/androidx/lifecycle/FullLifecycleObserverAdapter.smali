@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/FullLifecycleObserverAdapter;
+.class public Landroidx/lifecycle/FullLifecycleObserverAdapter;
 .super Ljava/lang/Object;
 .source "FullLifecycleObserverAdapter.java"
 
@@ -7,22 +7,22 @@
 
 
 # instance fields
-.field private final mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
+.field public final mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
-.field private final mLifecycleEventObserver:Landroidx/lifecycle/LifecycleEventObserver;
+.field public final mLifecycleEventObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/FullLifecycleObserver;Landroidx/lifecycle/LifecycleEventObserver;)V
+.method public constructor <init>(Landroidx/lifecycle/FullLifecycleObserver;Landroidx/lifecycle/LifecycleEventObserver;)V
     .locals 0
 
-    .line 27
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
+    .line 2
     iput-object p1, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
-    .line 29
+    .line 3
     iput-object p2, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mLifecycleEventObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
     return-void
@@ -31,22 +31,26 @@
 
 # virtual methods
 .method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
-    .locals 2
+    .locals 1
+    .param p1    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$Event;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 34
-    sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->$SwitchMap$androidx$lifecycle$Lifecycle$Event:[I
+    .line 1
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p2}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
+    move-result v0
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 54
+    .line 2
     :pswitch_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -56,7 +60,7 @@
 
     throw p1
 
-    .line 51
+    .line 3
     :pswitch_1
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
@@ -64,7 +68,7 @@
 
     goto :goto_0
 
-    .line 48
+    .line 4
     :pswitch_2
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
@@ -72,7 +76,7 @@
 
     goto :goto_0
 
-    .line 45
+    .line 5
     :pswitch_3
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
@@ -80,7 +84,7 @@
 
     goto :goto_0
 
-    .line 42
+    .line 6
     :pswitch_4
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
@@ -88,7 +92,7 @@
 
     goto :goto_0
 
-    .line 39
+    .line 7
     :pswitch_5
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
@@ -96,19 +100,19 @@
 
     goto :goto_0
 
-    .line 36
+    .line 8
     :pswitch_6
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mFullLifecycleObserver:Landroidx/lifecycle/FullLifecycleObserver;
 
     invoke-interface {v0, p1}, Landroidx/lifecycle/FullLifecycleObserver;->onCreate(Landroidx/lifecycle/LifecycleOwner;)V
 
-    .line 56
+    .line 9
     :goto_0
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->mLifecycleEventObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
     if-eqz v0, :cond_0
 
-    .line 57
+    .line 10
     invoke-interface {v0, p1, p2}, Landroidx/lifecycle/LifecycleEventObserver;->onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_0
@@ -117,7 +121,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
         :pswitch_6
         :pswitch_5
         :pswitch_4

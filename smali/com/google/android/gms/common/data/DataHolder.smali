@@ -6,6 +6,9 @@
 
 
 # annotations
+.annotation build Lcom/google/android/gms/common/annotation/KeepName;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/gms/common/data/DataHolder$zaa;,
@@ -25,57 +28,51 @@
     .end annotation
 .end field
 
-.field private static final k:Lcom/google/android/gms/common/data/DataHolder$a;
-
 
 # instance fields
-.field final a:[Ljava/lang/String;
+.field public final d:I
 
-.field b:Landroid/os/Bundle;
+.field public final e:[Ljava/lang/String;
 
-.field final c:[Landroid/database/CursorWindow;
+.field public f:Landroid/os/Bundle;
 
-.field d:[I
+.field public final g:[Landroid/database/CursorWindow;
 
-.field e:I
+.field public final h:I
 
-.field private final f:I
+.field public final i:Landroid/os/Bundle;
 
-.field private final g:I
+.field public j:[I
 
-.field private final h:Landroid/os/Bundle;
+.field public k:Z
 
-.field private i:Z
-
-.field private j:Z
+.field public l:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 220
-    new-instance v0, Lcom/google/android/gms/common/data/c;
+    .line 1
+    new-instance v0, Lg/d/a/b/d/k/c;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/data/c;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/d/k/c;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/data/DataHolder;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 221
-    new-instance v0, Lcom/google/android/gms/common/data/b;
+    .line 2
+    new-instance v0, Lg/d/a/b/d/k/b;
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/common/data/b;-><init>([Ljava/lang/String;)V
-
-    sput-object v0, Lcom/google/android/gms/common/data/DataHolder;->k:Lcom/google/android/gms/common/data/DataHolder$a;
+    invoke-direct {v0, v1}, Lg/d/a/b/d/k/b;-><init>([Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method constructor <init>(I[Ljava/lang/String;[Landroid/database/CursorWindow;ILandroid/os/Bundle;)V
+.method public constructor <init>(I[Ljava/lang/String;[Landroid/database/CursorWindow;ILandroid/os/Bundle;)V
     .locals 1
 
     .line 1
@@ -84,54 +81,29 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->i:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->k:Z
 
     const/4 v0, 0x1
 
     .line 3
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->j:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->l:Z
 
     .line 4
-    iput p1, p0, Lcom/google/android/gms/common/data/DataHolder;->f:I
+    iput p1, p0, Lcom/google/android/gms/common/data/DataHolder;->d:I
 
     .line 5
-    iput-object p2, p0, Lcom/google/android/gms/common/data/DataHolder;->a:[Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/common/data/DataHolder;->e:[Ljava/lang/String;
 
     .line 6
-    iput-object p3, p0, Lcom/google/android/gms/common/data/DataHolder;->c:[Landroid/database/CursorWindow;
+    iput-object p3, p0, Lcom/google/android/gms/common/data/DataHolder;->g:[Landroid/database/CursorWindow;
 
     .line 7
-    iput p4, p0, Lcom/google/android/gms/common/data/DataHolder;->g:I
+    iput p4, p0, Lcom/google/android/gms/common/data/DataHolder;->h:I
 
     .line 8
-    iput-object p5, p0, Lcom/google/android/gms/common/data/DataHolder;->h:Landroid/os/Bundle;
+    iput-object p5, p0, Lcom/google/android/gms/common/data/DataHolder;->i:Landroid/os/Bundle;
 
     return-void
-.end method
-
-.method private a()Z
-    .locals 1
-
-    .line 197
-    monitor-enter p0
-
-    .line 198
-    :try_start_0
-    iget-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->i:Z
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    .line 199
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method
 
 
@@ -139,32 +111,32 @@
 .method public final close()V
     .locals 2
 
-    .line 200
+    .line 1
     monitor-enter p0
 
-    .line 201
+    .line 2
     :try_start_0
-    iget-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->i:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->k:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 202
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->i:Z
+    .line 3
+    iput-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->k:Z
 
     const/4 v0, 0x0
 
-    .line 203
+    .line 4
     :goto_0
-    iget-object v1, p0, Lcom/google/android/gms/common/data/DataHolder;->c:[Landroid/database/CursorWindow;
+    iget-object v1, p0, Lcom/google/android/gms/common/data/DataHolder;->g:[Landroid/database/CursorWindow;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_0
 
-    .line 204
-    iget-object v1, p0, Lcom/google/android/gms/common/data/DataHolder;->c:[Landroid/database/CursorWindow;
+    .line 5
+    iget-object v1, p0, Lcom/google/android/gms/common/data/DataHolder;->g:[Landroid/database/CursorWindow;
 
     aget-object v1, v1, v0
 
@@ -174,7 +146,7 @@
 
     goto :goto_0
 
-    .line 206
+    .line 6
     :cond_0
     monitor-exit p0
 
@@ -196,62 +168,44 @@
     goto :goto_1
 .end method
 
-.method protected final finalize()V
-    .locals 3
+.method public final finalize()V
+    .locals 1
 
-    .line 207
+    .line 1
     :try_start_0
-    iget-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->j:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->l:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataHolder;->c:[Landroid/database/CursorWindow;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataHolder;->g:[Landroid/database/CursorWindow;
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/data/DataHolder;->a()Z
+    invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataHolder;->x()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 208
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
-    .line 210
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    add-int/lit16 v1, v1, 0xb2
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Internal data leak within a DataBuffer object detected!  Be sure to explicitly call release() on all DataBuffer extending objects when you are done with them. (internal object: "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 212
+    .line 4
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
@@ -260,82 +214,110 @@
     :catchall_0
     move-exception v0
 
-    .line 214
+    .line 5
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     throw v0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
+    .locals 5
 
-    const/16 v0, 0x4f45
-
-    .line 1017
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    .line 1
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result v0
 
-    .line 45
-    iget-object v1, p0, Lcom/google/android/gms/common/data/DataHolder;->a:[Ljava/lang/String;
+    .line 2
+    iget-object v1, p0, Lcom/google/android/gms/common/data/DataHolder;->e:[Ljava/lang/String;
 
     const/4 v2, 0x1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
-    .line 1225
-    invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-static {p1, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;I)I
 
     move-result v3
 
-    .line 1226
+    .line 4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 1227
-    invoke-static {p1, v3}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    .line 5
+    invoke-static {p1, v3}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
-    :cond_0
+    :goto_0
     const/4 v1, 0x2
 
-    .line 49
-    iget-object v3, p0, Lcom/google/android/gms/common/data/DataHolder;->c:[Landroid/database/CursorWindow;
+    .line 6
+    iget-object v3, p0, Lcom/google/android/gms/common/data/DataHolder;->g:[Landroid/database/CursorWindow;
 
-    .line 51
-    invoke-static {p1, v1, v3, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
+    const/4 v4, 0x0
+
+    .line 7
+    invoke-static {p1, v1, v3, p2, v4}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
 
     const/4 v1, 0x3
 
-    .line 2063
-    iget v3, p0, Lcom/google/android/gms/common/data/DataHolder;->g:I
+    .line 8
+    iget v3, p0, Lcom/google/android/gms/common/data/DataHolder;->h:I
 
-    .line 54
-    invoke-static {p1, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    .line 9
+    invoke-static {p1, v1, v3}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x4
 
-    .line 2064
-    iget-object v3, p0, Lcom/google/android/gms/common/data/DataHolder;->h:Landroid/os/Bundle;
+    .line 10
+    iget-object v3, p0, Lcom/google/android/gms/common/data/DataHolder;->i:Landroid/os/Bundle;
 
-    .line 57
-    invoke-static {p1, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Bundle;)V
+    .line 11
+    invoke-static {p1, v1, v3, v4}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILandroid/os/Bundle;Z)V
 
     const/16 v1, 0x3e8
 
-    .line 58
-    iget v3, p0, Lcom/google/android/gms/common/data/DataHolder;->f:I
+    .line 12
+    iget v3, p0, Lcom/google/android/gms/common/data/DataHolder;->d:I
 
-    invoke-static {p1, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v3}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    .line 3018
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    .line 13
+    invoke-static {p1, v0}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     and-int/lit8 p1, p2, 0x1
 
     if-eqz p1, :cond_1
 
-    .line 61
+    .line 14
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
     :cond_1
     return-void
+.end method
+
+.method public final x()Z
+    .locals 1
+
+    .line 1
+    monitor-enter p0
+
+    .line 2
+    :try_start_0
+    iget-boolean v0, p0, Lcom/google/android/gms/common/data/DataHolder;->k:Z
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    .line 3
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method

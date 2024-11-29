@@ -1,4 +1,4 @@
-.class interface abstract Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallback;
+.class public interface abstract Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallback;
 .super Ljava/lang/Object;
 .source "MediaBrowserCompatApi21.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "ConnectionCallback"
 .end annotation
 

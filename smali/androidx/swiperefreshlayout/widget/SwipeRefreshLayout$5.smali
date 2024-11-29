@@ -1,4 +1,4 @@
-.class Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$5;
+.class public Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$5;
 .super Ljava/lang/Object;
 .source "SwipeRefreshLayout.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+.field public final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
 
 # direct methods
-.method constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
+.method public constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
     .locals 0
 
-    .line 976
+    .line 1
     iput-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$5;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,18 +38,16 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 984
+    .line 1
     iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$5;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget-boolean p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mScale:Z
+    iget-boolean v0, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mScale:Z
 
-    if-nez p1, :cond_0
-
-    .line 985
-    iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$5;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p1, v0}, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->startScaleDownAnimation(Landroid/view/animation/Animation$AnimationListener;)V
 
     :cond_0

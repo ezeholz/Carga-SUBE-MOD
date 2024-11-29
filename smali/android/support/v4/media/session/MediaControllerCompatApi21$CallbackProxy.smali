@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;
+.class public Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;
 .super Landroid/media/session/MediaController$Callback;
 .source "MediaControllerCompatApi21.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "CallbackProxy"
 .end annotation
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field protected final mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
+.field public final mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -42,10 +42,10 @@
         }
     .end annotation
 
-    .line 283
+    .line 1
     invoke-direct {p0}, Landroid/media/session/MediaController$Callback;-><init>()V
 
-    .line 284
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     return-void
@@ -56,14 +56,14 @@
 .method public onAudioInfoChanged(Landroid/media/session/MediaController$PlaybackInfo;)V
     .locals 6
 
-    .line 326
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
 
     move-result v1
 
-    .line 327
+    .line 2
     invoke-static {p1}, Landroid/support/v4/media/session/MediaControllerCompatApi21$PlaybackInfo;->getLegacyAudioStream(Ljava/lang/Object;)I
 
     move-result v2
@@ -72,7 +72,7 @@
 
     move-result v3
 
-    .line 328
+    .line 3
     invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getMaxVolume()I
 
     move-result v4
@@ -81,7 +81,7 @@
 
     move-result v5
 
-    .line 326
+    .line 4
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onAudioInfoChanged(IIIII)V
 
     return-void
@@ -90,10 +90,10 @@
 .method public onExtrasChanged(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 320
+    .line 1
     invoke-static {p1}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 321
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onExtrasChanged(Landroid/os/Bundle;)V
@@ -104,7 +104,7 @@
 .method public onMetadataChanged(Landroid/media/MediaMetadata;)V
     .locals 1
 
-    .line 305
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onMetadataChanged(Ljava/lang/Object;)V
@@ -115,7 +115,7 @@
 .method public onPlaybackStateChanged(Landroid/media/session/PlaybackState;)V
     .locals 1
 
-    .line 300
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onPlaybackStateChanged(Ljava/lang/Object;)V
@@ -134,7 +134,7 @@
         }
     .end annotation
 
-    .line 310
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onQueueChanged(Ljava/util/List;)V
@@ -145,7 +145,7 @@
 .method public onQueueTitleChanged(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 315
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onQueueTitleChanged(Ljava/lang/CharSequence;)V
@@ -156,7 +156,7 @@
 .method public onSessionDestroyed()V
     .locals 1
 
-    .line 289
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onSessionDestroyed()V
@@ -167,10 +167,10 @@
 .method public onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 294
+    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 295
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;->onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V

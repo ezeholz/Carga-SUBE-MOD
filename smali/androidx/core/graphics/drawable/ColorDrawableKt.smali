@@ -6,8 +6,12 @@
 # direct methods
 .method public static final toDrawable(I)Landroid/graphics/drawable/ColorDrawable;
     .locals 1
+    .param p0    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
-    .line 27
+    .line 1
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, p0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
@@ -17,12 +21,15 @@
 
 .method public static final toDrawable(Landroid/graphics/Color;)Landroid/graphics/drawable/ColorDrawable;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1a
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
+    .line 2
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p0}, Landroid/graphics/Color;->toArgb()I

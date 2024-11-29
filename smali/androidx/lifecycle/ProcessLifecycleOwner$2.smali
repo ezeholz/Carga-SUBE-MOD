@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ProcessLifecycleOwner$2;
+.class public Landroidx/lifecycle/ProcessLifecycleOwner$2;
 .super Ljava/lang/Object;
 .source "ProcessLifecycleOwner.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
+.field public final synthetic this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
+.method public constructor <init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
     .locals 0
 
-    .line 73
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onResume()V
     .locals 1
 
-    .line 85
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityResumed()V
@@ -55,7 +55,7 @@
 .method public onStart()V
     .locals 1
 
-    .line 80
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner$2;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityStarted()V

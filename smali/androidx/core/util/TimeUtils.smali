@@ -3,25 +3,39 @@
 .source "TimeUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # static fields
 .field public static final HUNDRED_DAY_FIELD_LEN:I = 0x13
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+.end field
 
-.field private static final SECONDS_PER_DAY:I = 0x15180
+.field public static final SECONDS_PER_DAY:I = 0x15180
 
-.field private static final SECONDS_PER_HOUR:I = 0xe10
+.field public static final SECONDS_PER_HOUR:I = 0xe10
 
-.field private static final SECONDS_PER_MINUTE:I = 0x3c
+.field public static final SECONDS_PER_MINUTE:I = 0x3c
 
-.field private static sFormatStr:[C
+.field public static sFormatStr:[C
 
-.field private static final sFormatSync:Ljava/lang/Object;
+.field public static final sFormatSync:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 40
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -32,22 +46,22 @@
 
     new-array v0, v0, [C
 
-    .line 41
+    .line 2
     sput-object v0, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 185
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private static accumField(IIZI)I
+.method public static accumField(IIZI)I
     .locals 2
 
     const/4 v0, 0x3
@@ -108,6 +122,11 @@
 
 .method public static formatDuration(JJLjava/io/PrintWriter;)V
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const-wide/16 v0, 0x0
 
@@ -117,7 +136,7 @@
 
     const-string p0, "--"
 
-    .line 179
+    .line 10
     invoke-virtual {p4, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void
@@ -127,7 +146,7 @@
 
     const/4 p2, 0x0
 
-    .line 182
+    .line 11
     invoke-static {p0, p1, p4, p2}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;I)V
 
     return-void
@@ -135,10 +154,15 @@
 
 .method public static formatDuration(JLjava/io/PrintWriter;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 172
+    .line 9
     invoke-static {p0, p1, p2, v0}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;I)V
 
     return-void
@@ -146,19 +170,24 @@
 
 .method public static formatDuration(JLjava/io/PrintWriter;I)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 163
+    .line 5
     sget-object v0, Landroidx/core/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 164
+    .line 6
     :try_start_0
     invoke-static {p0, p1, p3}, Landroidx/core/util/TimeUtils;->formatDurationLocked(JI)I
 
     move-result p0
 
-    .line 165
+    .line 7
     new-instance p1, Ljava/lang/String;
 
     sget-object p3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
@@ -169,7 +198,7 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 166
+    .line 8
     monitor-exit v0
 
     return-void
@@ -186,26 +215,31 @@
 
 .method public static formatDuration(JLjava/lang/StringBuilder;)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 154
+    .line 1
     sget-object v0, Landroidx/core/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 155
+    .line 2
     :try_start_0
     invoke-static {p0, p1, v1}, Landroidx/core/util/TimeUtils;->formatDurationLocked(JI)I
 
     move-result p0
 
-    .line 156
+    .line 3
     sget-object p1, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
     invoke-virtual {p2, p1, v1, p0}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
-    .line 157
+    .line 4
     monitor-exit v0
 
     return-void
@@ -220,26 +254,26 @@
     throw p0
 .end method
 
-.method private static formatDurationLocked(JI)I
+.method public static formatDurationLocked(JI)I
     .locals 17
 
     move-wide/from16 v0, p0
 
     move/from16 v2, p2
 
-    .line 81
+    .line 1
     sget-object v3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
     array-length v3, v3
 
     if-ge v3, v2, :cond_0
 
-    .line 82
+    .line 2
     new-array v3, v2, [C
 
     sput-object v3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
-    .line 85
+    .line 3
     :cond_0
     sget-object v3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
@@ -260,7 +294,7 @@
     :goto_0
     if-lez v0, :cond_1
 
-    .line 91
+    .line 4
     aput-char v4, v3, v11
 
     goto :goto_0
@@ -268,7 +302,7 @@
     :cond_1
     const/16 v0, 0x30
 
-    .line 93
+    .line 5
     aput-char v0, v3, v11
 
     return v10
@@ -290,12 +324,12 @@
     :goto_1
     const-wide/16 v6, 0x3e8
 
-    .line 105
+    .line 6
     rem-long v8, v0, v6
 
     long-to-int v12, v8
 
-    .line 106
+    .line 7
     div-long/2addr v0, v6
 
     long-to-double v0, v0
@@ -310,7 +344,7 @@
 
     if-le v0, v1, :cond_4
 
-    .line 110
+    .line 8
     div-int v6, v0, v1
 
     mul-int v1, v1, v6
@@ -327,7 +361,7 @@
 
     if-le v0, v1, :cond_5
 
-    .line 114
+    .line 9
     div-int/lit16 v1, v0, 0xe10
 
     mul-int/lit16 v7, v1, 0xe10
@@ -344,7 +378,7 @@
 
     if-le v0, v7, :cond_6
 
-    .line 118
+    .line 10
     div-int/lit8 v7, v0, 0x3c
 
     mul-int/lit8 v8, v7, 0x3c
@@ -369,7 +403,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 125
+    .line 11
     invoke-static {v6, v10, v11, v11}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
     move-result v7
@@ -383,28 +417,28 @@
     :cond_7
     const/4 v8, 0x0
 
-    .line 126
+    .line 12
     :goto_5
     invoke-static {v1, v10, v8, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
     move-result v8
 
-    add-int/2addr v7, v8
+    add-int/2addr v8, v7
 
-    if-lez v7, :cond_8
+    if-lez v8, :cond_8
 
-    const/4 v8, 0x1
+    const/4 v7, 0x1
 
     goto :goto_6
 
     :cond_8
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    .line 127
+    .line 13
     :goto_6
-    invoke-static {v0, v10, v8, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
+    invoke-static {v0, v10, v7, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
-    move-result v8
+    move-result v7
 
     add-int/2addr v7, v8
 
@@ -417,30 +451,30 @@
     :cond_9
     const/4 v8, 0x0
 
-    .line 128
+    .line 14
     :goto_7
     invoke-static {v13, v10, v8, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
     move-result v8
 
-    add-int/2addr v7, v8
+    add-int/2addr v8, v7
 
-    if-lez v7, :cond_a
+    if-lez v8, :cond_a
 
-    const/4 v8, 0x3
+    const/4 v7, 0x3
 
     goto :goto_8
 
     :cond_a
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    .line 129
+    .line 15
     :goto_8
-    invoke-static {v12, v15, v10, v8}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
+    invoke-static {v12, v15, v10, v7}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
-    move-result v8
+    move-result v7
 
-    add-int/2addr v8, v10
+    add-int/2addr v7, v10
 
     add-int/2addr v7, v8
 
@@ -449,7 +483,7 @@
     :goto_9
     if-ge v7, v2, :cond_c
 
-    .line 131
+    .line 16
     aput-char v4, v3, v8
 
     add-int/lit8 v8, v8, 0x1
@@ -461,7 +495,7 @@
     :cond_b
     const/4 v8, 0x0
 
-    .line 137
+    .line 17
     :cond_c
     aput-char v5, v3, v8
 
@@ -495,7 +529,7 @@
 
     move/from16 v9, v16
 
-    .line 142
+    .line 18
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -526,7 +560,7 @@
 
     move v5, v1
 
-    .line 143
+    .line 19
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -557,7 +591,7 @@
 
     move v5, v0
 
-    .line 144
+    .line 20
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -588,7 +622,7 @@
 
     move v5, v13
 
-    .line 145
+    .line 21
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -613,14 +647,14 @@
 
     move v5, v12
 
-    .line 146
+    .line 22
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v0
 
     const/16 v1, 0x73
 
-    .line 147
+    .line 23
     aput-char v1, v3, v0
 
     add-int/2addr v0, v10
@@ -628,7 +662,7 @@
     return v0
 .end method
 
-.method private static printField([CICIZI)I
+.method public static printField([CICIZI)I
     .locals 2
 
     if-nez p4, :cond_0
@@ -647,7 +681,7 @@
 
     if-le p1, v0, :cond_3
 
-    .line 61
+    .line 1
     :cond_2
     div-int/lit8 v0, p1, 0x64
 
@@ -655,7 +689,7 @@
 
     int-to-char v1, v1
 
-    .line 62
+    .line 2
     aput-char v1, p0, p3
 
     add-int/lit8 v1, p3, 0x1
@@ -683,7 +717,7 @@
 
     if-eq p3, v1, :cond_6
 
-    .line 67
+    .line 3
     :cond_5
     div-int/lit8 p3, p1, 0xa
 
@@ -691,7 +725,7 @@
 
     int-to-char p4, p4
 
-    .line 68
+    .line 4
     aput-char p4, p0, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -705,12 +739,12 @@
 
     int-to-char p1, p1
 
-    .line 72
+    .line 5
     aput-char p1, p0, v1
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 74
+    .line 6
     aput-char p2, p0, v1
 
     add-int/lit8 p3, v1, 0x1

@@ -1,20 +1,20 @@
-.class Lcom/facebook/stetho/websocket/WriteHandler;
+.class public Lcom/facebook/stetho/websocket/WriteHandler;
 .super Ljava/lang/Object;
 .source "WriteHandler.java"
 
 
 # instance fields
-.field private final mBufferedOutput:Ljava/io/BufferedOutputStream;
+.field public final mBufferedOutput:Ljava/io/BufferedOutputStream;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 2
 
-    .line 22
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
+    .line 2
     new-instance v0, Ljava/io/BufferedOutputStream;
 
     const/16 v1, 0x400
@@ -33,48 +33,46 @@
 
     monitor-enter p0
 
-    .line 28
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/websocket/WriteHandler;->mBufferedOutput:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {p1, v0}, Lcom/facebook/stetho/websocket/Frame;->writeTo(Ljava/io/BufferedOutputStream;)V
 
-    .line 29
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/websocket/WriteHandler;->mBufferedOutput:Ljava/io/BufferedOutputStream;
 
     invoke-virtual {p1}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 30
+    .line 3
     invoke-interface {p2}, Lcom/facebook/stetho/websocket/WriteCallback;->onSuccess()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
-    monitor-exit p0
-
-    return-void
+    goto :goto_0
 
     :catchall_0
     move-exception p1
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
-    .line 32
+    .line 4
     :try_start_1
     invoke-interface {p2, p1}, Lcom/facebook/stetho/websocket/WriteCallback;->onFailure(Ljava/io/IOException;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 34
+    .line 5
+    :goto_0
     monitor-exit p0
 
     return-void
 
-    :goto_0
+    :goto_1
     monitor-exit p0
 
     throw p1

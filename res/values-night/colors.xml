@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorButton">#ff232323</color>
-    <color name="colorPrimary">#ff3e3e3e</color>
     <color name="colorSubeDarkGray">#ffffffff</color>
     <color name="colorSubeLightBlueExtra">#ff121212</color>
     <color name="colorSubeOrangeExtra">#ff121212</color>

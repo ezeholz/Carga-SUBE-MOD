@@ -6,59 +6,59 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/material/transformation/FabTransformationBehavior$a;
+        Lcom/google/android/material/transformation/FabTransformationBehavior$b;
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/graphics/Rect;
+.field public final c:Landroid/graphics/Rect;
 
-.field private final b:Landroid/graphics/RectF;
+.field public final d:Landroid/graphics/RectF;
 
-.field private final c:Landroid/graphics/RectF;
+.field public final e:Landroid/graphics/RectF;
 
-.field private final d:[I
+.field public final f:[I
 
-.field private e:F
+.field public g:F
 
-.field private f:F
+.field public h:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 85
+    .line 1
     invoke-direct {p0}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;-><init>()V
 
-    .line 75
+    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->a:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/Rect;
 
-    .line 76
+    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
 
-    .line 77
+    .line 4
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 78
-    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:[I
+    .line 5
+    iput-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->f:[I
 
     return-void
 .end method
@@ -66,77 +66,98 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 88
+    .line 6
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/transformation/ExpandableTransformationBehavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 75
+    .line 7
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->a:Landroid/graphics/Rect;
+    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/Rect;
 
-    .line 76
+    .line 8
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
+    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
 
-    .line 77
+    .line 9
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
+    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
 
     const/4 p1, 0x2
 
     new-array p1, p1, [I
 
-    .line 78
-    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:[I
+    .line 10
+    iput-object p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->f:[I
 
     return-void
 .end method
 
-.method private a(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
-    .locals 2
 
-    .line 557
-    iget-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
+# virtual methods
+.method public final a(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+    .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lg/d/a/c/l/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 558
-    iget-object v1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
+    .line 15
+    iget-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
 
-    .line 560
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/graphics/RectF;)V
+    .line 16
+    iget-object v1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
 
-    .line 561
-    invoke-direct {p0, p2, v1}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+    .line 17
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
 
-    .line 564
-    iget p1, p3, Lcom/google/android/material/a/j;->a:I
+    .line 18
+    iget p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->g:F
 
-    and-int/lit8 p1, p1, 0x7
+    iget v2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->h:F
 
-    const/4 p2, 0x1
+    invoke-virtual {v0, p1, v2}, Landroid/graphics/RectF;->offset(FF)V
 
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
+    .line 19
+    invoke-virtual {p0, p2, v1}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
 
     const/4 p1, 0x0
 
+    .line 20
+    iget p2, p3, Lg/d/a/c/l/i;->a:I
+
+    and-int/lit8 p2, p2, 0x7
+
+    const/4 v2, 0x1
+
+    if-eq p2, v2, :cond_2
+
+    const/4 v2, 0x3
+
+    if-eq p2, v2, :cond_1
+
+    const/4 v2, 0x5
+
+    if-eq p2, v2, :cond_0
+
     goto :goto_1
 
-    .line 572
+    .line 21
     :cond_0
     iget p1, v1, Landroid/graphics/RectF;->right:F
 
@@ -144,7 +165,7 @@
 
     goto :goto_0
 
-    .line 566
+    .line 22
     :cond_1
     iget p1, v1, Landroid/graphics/RectF;->left:F
 
@@ -152,7 +173,7 @@
 
     goto :goto_0
 
-    .line 569
+    .line 23
     :cond_2
     invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
 
@@ -165,38 +186,46 @@
     :goto_0
     sub-float/2addr p1, p2
 
-    .line 577
+    .line 24
     :goto_1
-    iget p2, p3, Lcom/google/android/material/a/j;->b:F
+    iget p2, p3, Lg/d/a/c/l/i;->b:F
 
     add-float/2addr p1, p2
 
     return p1
 .end method
 
-.method private static a(Lcom/google/android/material/transformation/FabTransformationBehavior$a;Lcom/google/android/material/a/i;F)F
+.method public final a(Lcom/google/android/material/transformation/FabTransformationBehavior$b;Lg/d/a/c/l/h;FF)F
     .locals 8
+    .param p1    # Lcom/google/android/material/transformation/FabTransformationBehavior$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lg/d/a/c/l/h;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 8061
-    iget-wide v0, p1, Lcom/google/android/material/a/i;->a:J
+    .line 1
+    iget-wide v0, p2, Lg/d/a/c/l/h;->a:J
 
-    .line 8065
-    iget-wide v2, p1, Lcom/google/android/material/a/i;->b:J
+    .line 2
+    iget-wide v2, p2, Lg/d/a/c/l/h;->b:J
 
-    .line 690
-    iget-object p0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    .line 3
+    iget-object p1, p1, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
 
     const-string v4, "expansion"
 
-    invoke-virtual {p0, v4}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
+    invoke-virtual {p1, v4}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
 
-    move-result-object p0
+    move-result-object p1
 
-    .line 9061
-    iget-wide v4, p0, Lcom/google/android/material/a/i;->a:J
+    .line 4
+    iget-wide v4, p1, Lg/d/a/c/l/h;->a:J
 
-    .line 9065
-    iget-wide v6, p0, Lcom/google/android/material/a/i;->b:J
+    .line 5
+    iget-wide v6, p1, Lg/d/a/c/l/h;->b:J
 
     add-long/2addr v4, v6
 
@@ -206,163 +235,174 @@
 
     sub-long/2addr v4, v0
 
-    long-to-float p0, v4
+    long-to-float p1, v4
 
     long-to-float v0, v2
 
-    div-float/2addr p0, v0
+    div-float/2addr p1, v0
 
-    .line 698
-    invoke-virtual {p1}, Lcom/google/android/material/a/i;->a()Landroid/animation/TimeInterpolator;
+    .line 6
+    invoke-virtual {p2}, Lg/d/a/c/l/h;->a()Landroid/animation/TimeInterpolator;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-interface {p1, p0}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+    invoke-interface {p2, p1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
-    move-result p0
+    move-result p1
 
-    const/4 p1, 0x0
+    .line 7
+    invoke-static {p3, p4, p1}, Lg/d/a/c/l/a;->a(FFF)F
 
-    .line 699
-    invoke-static {p2, p1, p0}, Lcom/google/android/material/a/a;->a(FFF)F
+    move-result p1
 
-    move-result p0
-
-    return p0
+    return p1
 .end method
 
-.method private static a(FFZLcom/google/android/material/transformation/FabTransformationBehavior$a;)Landroid/util/Pair;
+.method public final a(FFZLcom/google/android/material/transformation/FabTransformationBehavior$b;)Landroid/util/Pair;
     .locals 1
+    .param p4    # Lcom/google/android/material/transformation/FabTransformationBehavior$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(FFZ",
-            "Lcom/google/android/material/transformation/FabTransformationBehavior$a;",
+            "Lcom/google/android/material/transformation/FabTransformationBehavior$b;",
             ")",
             "Landroid/util/Pair<",
-            "Lcom/google/android/material/a/i;",
-            "Lcom/google/android/material/a/i;",
+            "Lg/d/a/c/l/h;",
+            "Lg/d/a/c/l/h;",
             ">;"
         }
     .end annotation
 
     const/4 v0, 0x0
 
-    cmpl-float p0, p0, v0
+    cmpl-float p1, p1, v0
 
-    if-eqz p0, :cond_4
+    if-eqz p1, :cond_4
 
-    cmpl-float p0, p1, v0
+    cmpl-float p1, p2, v0
 
-    if-nez p0, :cond_0
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-eqz p2, :cond_1
+    if-eqz p3, :cond_1
 
-    cmpg-float p0, p1, v0
+    cmpg-float p1, p2, v0
 
-    if-ltz p0, :cond_2
+    if-ltz p1, :cond_2
 
     :cond_1
-    if-nez p2, :cond_3
+    if-nez p3, :cond_3
 
-    cmpl-float p0, p1, v0
+    cmpl-float p1, p2, v0
 
-    if-lez p0, :cond_3
+    if-lez p1, :cond_3
 
-    .line 544
+    .line 8
     :cond_2
-    iget-object p0, p3, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    iget-object p1, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
 
-    const-string p1, "translationXCurveUpwards"
+    const-string p2, "translationXCurveUpwards"
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object p0
-
-    .line 545
-    iget-object p1, p3, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
-
-    const-string p2, "translationYCurveUpwards"
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
+    invoke-virtual {p1, p2}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
 
     move-result-object p1
 
+    .line 9
+    iget-object p2, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string p3, "translationYCurveUpwards"
+
+    invoke-virtual {p2, p3}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object p2
+
     goto :goto_1
 
-    .line 548
+    .line 10
     :cond_3
-    iget-object p0, p3, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    iget-object p1, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
 
-    const-string p1, "translationXCurveDownwards"
+    const-string p2, "translationXCurveDownwards"
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object p0
-
-    .line 549
-    iget-object p1, p3, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
-
-    const-string p2, "translationYCurveDownwards"
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
+    invoke-virtual {p1, p2}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
 
     move-result-object p1
 
+    .line 11
+    iget-object p2, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string p3, "translationYCurveDownwards"
+
+    invoke-virtual {p2, p3}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object p2
+
     goto :goto_1
 
-    .line 540
+    .line 12
     :cond_4
     :goto_0
-    iget-object p0, p3, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    iget-object p1, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
 
-    const-string p1, "translationXLinear"
+    const-string p2, "translationXLinear"
 
-    invoke-virtual {p0, p1}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object p0
-
-    .line 541
-    iget-object p1, p3, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
-
-    const-string p2, "translationYLinear"
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
+    invoke-virtual {p1, p2}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
 
     move-result-object p1
 
-    .line 552
+    .line 13
+    iget-object p2, p4, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string p3, "translationYLinear"
+
+    invoke-virtual {p2, p3}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object p2
+
+    .line 14
     :goto_1
-    new-instance p2, Landroid/util/Pair;
+    new-instance p3, Landroid/util/Pair;
 
-    invoke-direct {p2, p0, p1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p1, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-object p2
+    return-object p3
 .end method
 
-.method private static a(Landroid/view/View;)Landroid/view/ViewGroup;
+.method public final a(Landroid/view/View;)Landroid/view/ViewGroup;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 723
-    instance-of v0, p0, Landroid/view/ViewGroup;
+    .line 30
+    instance-of v0, p1, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 724
-    check-cast p0, Landroid/view/ViewGroup;
+    .line 31
+    check-cast p1, Landroid/view/ViewGroup;
 
-    return-object p0
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
-.method private static a(Landroid/view/View;JIIFLjava/util/List;)V
+.method public final a(Landroid/view/View;JIIFLjava/util/List;)V
     .locals 3
+    .param p7    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -374,7 +414,7 @@
         }
     .end annotation
 
-    .line 747
+    .line 32
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -383,32 +423,36 @@
 
     const-wide/16 v0, 0x0
 
-    cmp-long v2, p1, v0
+    cmp-long v2, p2, v0
 
     if-lez v2, :cond_0
 
-    .line 751
-    invoke-static {p0, p3, p4, p5, p5}, Landroid/view/ViewAnimationUtils;->createCircularReveal(Landroid/view/View;IIFF)Landroid/animation/Animator;
+    .line 33
+    invoke-static {p1, p4, p5, p6, p6}, Landroid/view/ViewAnimationUtils;->createCircularReveal(Landroid/view/View;IIFF)Landroid/animation/Animator;
 
-    move-result-object p0
+    move-result-object p1
 
-    .line 753
-    invoke-virtual {p0, v0, v1}, Landroid/animation/Animator;->setStartDelay(J)V
+    .line 34
+    invoke-virtual {p1, v0, v1}, Landroid/animation/Animator;->setStartDelay(J)V
 
-    .line 754
-    invoke-virtual {p0, p1, p2}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+    .line 35
+    invoke-virtual {p1, p2, p3}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
-    .line 755
-    invoke-interface {p6, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 36
+    invoke-interface {p7, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
     return-void
 .end method
 
-.method private a(Landroid/view/View;Landroid/graphics/RectF;)V
+.method public final a(Landroid/view/View;Landroid/graphics/RectF;)V
     .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 609
+    .line 25
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -425,15 +469,15 @@
 
     invoke-virtual {p2, v2, v2, v0, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 611
-    iget-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:[I
+    .line 26
+    iget-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->f:[I
 
-    .line 612
+    .line 27
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
     const/4 v1, 0x0
 
-    .line 614
+    .line 28
     aget v1, v0, v1
 
     int-to-float v1, v1
@@ -446,7 +490,7 @@
 
     invoke-virtual {p2, v1, v0}, Landroid/graphics/RectF;->offsetTo(FF)V
 
-    .line 618
+    .line 29
     invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
 
     move-result v0
@@ -472,43 +516,62 @@
     return-void
 .end method
 
-.method private b(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
-    .locals 2
+.method public final b(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+    .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lg/d/a/c/l/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 583
-    iget-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
+    .line 161
+    iget-object v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
 
-    .line 584
-    iget-object v1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
+    .line 162
+    iget-object v1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
 
-    .line 586
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/graphics/RectF;)V
+    .line 163
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
 
-    .line 587
-    invoke-direct {p0, p2, v1}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+    .line 164
+    iget p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->g:F
 
-    .line 590
-    iget p1, p3, Lcom/google/android/material/a/j;->a:I
+    iget v2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->h:F
 
-    and-int/lit8 p1, p1, 0x70
+    invoke-virtual {v0, p1, v2}, Landroid/graphics/RectF;->offset(FF)V
 
-    const/16 p2, 0x10
-
-    if-eq p1, p2, :cond_2
-
-    const/16 p2, 0x30
-
-    if-eq p1, p2, :cond_1
-
-    const/16 p2, 0x50
-
-    if-eq p1, p2, :cond_0
+    .line 165
+    invoke-virtual {p0, p2, v1}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
 
     const/4 p1, 0x0
 
+    .line 166
+    iget p2, p3, Lg/d/a/c/l/i;->a:I
+
+    and-int/lit8 p2, p2, 0x70
+
+    const/16 v2, 0x10
+
+    if-eq p2, v2, :cond_2
+
+    const/16 v2, 0x30
+
+    if-eq p2, v2, :cond_1
+
+    const/16 v2, 0x50
+
+    if-eq p2, v2, :cond_0
+
     goto :goto_1
 
-    .line 598
+    .line 167
     :cond_0
     iget p1, v1, Landroid/graphics/RectF;->bottom:F
 
@@ -516,7 +579,7 @@
 
     goto :goto_0
 
-    .line 592
+    .line 168
     :cond_1
     iget p1, v1, Landroid/graphics/RectF;->top:F
 
@@ -524,7 +587,7 @@
 
     goto :goto_0
 
-    .line 595
+    .line 169
     :cond_2
     invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
 
@@ -537,838 +600,1015 @@
     :goto_0
     sub-float/2addr p1, p2
 
-    .line 603
+    .line 170
     :goto_1
-    iget p2, p3, Lcom/google/android/material/a/j;->c:F
+    iget p2, p3, Lg/d/a/c/l/i;->c:F
 
     add-float/2addr p1, p2
 
     return p1
 .end method
 
-.method private b(Landroid/view/View;Landroid/graphics/RectF;)V
-    .locals 1
+.method public b(Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+    .locals 28
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 622
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+    move-object/from16 v8, p0
 
-    .line 623
-    iget p1, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:F
+    move-object/from16 v9, p1
 
-    iget v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->f:F
+    move-object/from16 v10, p2
 
-    invoke-virtual {p2, p1, v0}, Landroid/graphics/RectF;->offset(FF)V
+    move/from16 v11, p3
 
-    return-void
-.end method
-
-
-# virtual methods
-.method protected abstract a(Landroid/content/Context;Z)Lcom/google/android/material/transformation/FabTransformationBehavior$a;
-.end method
-
-.method protected final b(Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 22
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v9, p2
-
-    move/from16 v10, p3
-
-    .line 125
+    .line 1
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v10}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/content/Context;Z)Lcom/google/android/material/transformation/FabTransformationBehavior$a;
+    if-eqz v11, :cond_0
 
-    move-result-object v11
-
-    if-eqz v10, :cond_0
-
-    .line 128
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTranslationX()F
-
-    move-result v2
-
-    iput v2, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:F
-
-    .line 129
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTranslationY()F
-
-    move-result v2
-
-    iput v2, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->f:F
-
-    .line 132
-    :cond_0
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
-
-    .line 133
-    new-instance v13, Ljava/util/ArrayList;
-
-    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
-
-    .line 135
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v14, 0x15
-
-    const/4 v15, 0x0
-
-    const/4 v8, 0x1
-
-    const/4 v7, 0x0
-
-    if-lt v2, v14, :cond_3
-
-    .line 1203
-    invoke-static/range {p2 .. p2}, Landroidx/core/view/ViewCompat;->getElevation(Landroid/view/View;)F
-
-    move-result v2
-
-    invoke-static/range {p1 .. p1}, Landroidx/core/view/ViewCompat;->getElevation(Landroid/view/View;)F
-
-    move-result v3
-
-    sub-float/2addr v2, v3
-
-    if-eqz v10, :cond_2
-
-    if-nez p4, :cond_1
-
-    neg-float v2, v2
-
-    .line 1208
-    invoke-virtual {v9, v2}, Landroid/view/View;->setTranslationZ(F)V
-
-    .line 1210
-    :cond_1
-    sget-object v2, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
-
-    new-array v3, v8, [F
-
-    aput v15, v3, v7
-
-    invoke-static {v9, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
+    .line 2
+    sget v1, Lg/d/a/c/a;->mtrl_fab_transformation_sheet_expand_spec:I
 
     goto :goto_0
 
-    .line 1212
-    :cond_2
-    sget-object v3, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+    .line 3
+    :cond_0
+    sget v1, Lg/d/a/c/a;->mtrl_fab_transformation_sheet_collapse_spec:I
 
-    new-array v4, v8, [F
-
-    neg-float v2, v2
-
-    aput v2, v4, v7
-
-    invoke-static {v9, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
-
-    .line 1215
+    .line 4
     :goto_0
-    iget-object v3, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    new-instance v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;
 
-    const-string v4, "elevation"
+    invoke-direct {v12}, Lcom/google/android/material/transformation/FabTransformationBehavior$b;-><init>()V
 
-    invoke-virtual {v3, v4}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
+    .line 5
+    invoke-static {v0, v1}, Lg/d/a/c/l/g;->a(Landroid/content/Context;I)Lg/d/a/c/l/g;
 
-    move-result-object v3
+    move-result-object v0
 
-    .line 1216
-    invoke-virtual {v3, v2}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
+    iput-object v0, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
 
-    .line 1217
-    invoke-interface {v12, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 6
+    new-instance v0, Lg/d/a/c/l/i;
 
-    .line 140
-    :cond_3
-    iget-object v2, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
+    const/16 v1, 0x11
 
-    .line 1263
-    iget-object v3, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->b:Lcom/google/android/material/a/j;
+    const/4 v13, 0x0
 
-    invoke-direct {v0, v1, v9, v3}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
+    invoke-direct {v0, v1, v13, v13}, Lg/d/a/c/l/i;-><init>(IFF)V
 
-    move-result v3
+    iput-object v0, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
 
-    .line 1264
-    iget-object v4, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->b:Lcom/google/android/material/a/j;
+    if-eqz v11, :cond_1
 
-    invoke-direct {v0, v1, v9, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
+    .line 7
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTranslationX()F
 
-    move-result v4
+    move-result v0
 
-    .line 1270
-    invoke-static {v3, v4, v10, v11}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(FFZLcom/google/android/material/transformation/FabTransformationBehavior$a;)Landroid/util/Pair;
+    iput v0, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->g:F
 
-    move-result-object v5
+    .line 8
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTranslationY()F
 
-    .line 1271
-    iget-object v6, v5, Landroid/util/Pair;->first:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v6, Lcom/google/android/material/a/i;
+    iput v0, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->h:F
 
-    .line 1272
-    iget-object v5, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
+    .line 9
+    :cond_1
+    new-instance v14, Ljava/util/ArrayList;
 
-    check-cast v5, Lcom/google/android/material/a/i;
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz v10, :cond_5
+    .line 10
+    new-instance v15, Ljava/util/ArrayList;
 
-    if-nez p4, :cond_4
+    invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    neg-float v14, v3
+    .line 11
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 1276
-    invoke-virtual {v9, v14}, Landroid/view/View;->setTranslationX(F)V
+    const/16 v7, 0x15
 
-    neg-float v14, v4
+    const/4 v6, 0x1
 
-    .line 1277
-    invoke-virtual {v9, v14}, Landroid/view/View;->setTranslationY(F)V
+    const/4 v5, 0x0
 
-    .line 1279
-    :cond_4
-    sget-object v14, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    if-lt v0, v7, :cond_4
 
-    move-object/from16 v17, v13
+    .line 12
+    invoke-static/range {p2 .. p2}, Landroidx/core/view/ViewCompat;->getElevation(Landroid/view/View;)F
 
-    new-array v13, v8, [F
+    move-result v0
 
-    aput v15, v13, v7
+    invoke-static/range {p1 .. p1}, Landroidx/core/view/ViewCompat;->getElevation(Landroid/view/View;)F
 
-    invoke-static {v9, v14, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    move-result v1
 
-    move-result-object v13
+    sub-float/2addr v0, v1
 
-    .line 1280
-    sget-object v14, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+    if-eqz v11, :cond_3
 
-    move-object/from16 v18, v13
+    if-nez p4, :cond_2
 
-    new-array v13, v8, [F
+    neg-float v0, v0
 
-    aput v15, v13, v7
+    .line 13
+    invoke-virtual {v10, v0}, Landroid/view/View;->setTranslationZ(F)V
 
-    invoke-static {v9, v14, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    .line 14
+    :cond_2
+    sget-object v0, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
 
-    move-result-object v13
+    new-array v1, v6, [F
 
-    neg-float v3, v3
+    aput v13, v1, v5
 
-    neg-float v4, v4
+    invoke-static {v10, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    .line 1665
-    invoke-static {v11, v6, v3}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Lcom/google/android/material/transformation/FabTransformationBehavior$a;Lcom/google/android/material/a/i;F)F
-
-    move-result v3
-
-    .line 1667
-    invoke-static {v11, v5, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Lcom/google/android/material/transformation/FabTransformationBehavior$a;Lcom/google/android/material/a/i;F)F
-
-    move-result v4
-
-    .line 1670
-    iget-object v14, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->a:Landroid/graphics/Rect;
-
-    .line 1671
-    invoke-virtual {v9, v14}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
-
-    .line 1672
-    iget-object v15, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
-
-    .line 1673
-    invoke-virtual {v15, v14}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
-
-    .line 1676
-    iget-object v14, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
-
-    .line 1677
-    invoke-direct {v0, v9, v14}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
-
-    .line 1678
-    invoke-virtual {v14, v3, v4}, Landroid/graphics/RectF;->offset(FF)V
-
-    .line 1679
-    invoke-virtual {v14, v15}, Landroid/graphics/RectF;->intersect(Landroid/graphics/RectF;)Z
-
-    .line 1681
-    invoke-virtual {v2, v14}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
-
-    move-object v3, v13
-
-    move-object/from16 v13, v18
+    move-result-object v0
 
     goto :goto_1
 
-    :cond_5
-    move-object/from16 v17, v13
+    .line 15
+    :cond_3
+    sget-object v1, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
 
-    .line 1293
-    sget-object v13, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    new-array v2, v6, [F
 
-    new-array v14, v8, [F
+    neg-float v0, v0
 
-    neg-float v3, v3
+    aput v0, v2, v5
 
-    aput v3, v14, v7
+    invoke-static {v10, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    invoke-static {v9, v13, v14}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    move-result-object v0
 
-    move-result-object v13
-
-    .line 1294
-    sget-object v3, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
-
-    new-array v14, v8, [F
-
-    neg-float v4, v4
-
-    aput v4, v14, v7
-
-    invoke-static {v9, v3, v14}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v3
-
-    .line 1297
+    .line 16
     :goto_1
-    invoke-virtual {v6, v13}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
+    iget-object v1, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
 
-    .line 1298
-    invoke-virtual {v5, v3}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
+    const-string v2, "elevation"
 
-    .line 1299
-    invoke-interface {v12, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
 
-    .line 1300
-    invoke-interface {v12, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    .line 143
-    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
+    .line 17
+    invoke-virtual {v1, v0}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
 
-    move-result v3
+    .line 18
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 144
-    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
+    .line 19
+    :cond_4
+    iget-object v0, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
+
+    .line 20
+    iget-object v1, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
+
+    invoke-virtual {v8, v9, v10, v1}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+
+    move-result v1
+
+    .line 21
+    iget-object v2, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
+
+    invoke-virtual {v8, v9, v10, v2}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
 
     move-result v2
 
-    .line 2226
-    iget-object v4, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->b:Lcom/google/android/material/a/j;
+    .line 22
+    invoke-virtual {v8, v1, v2, v11, v12}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(FFZLcom/google/android/material/transformation/FabTransformationBehavior$b;)Landroid/util/Pair;
 
-    invoke-direct {v0, v1, v9, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
+    move-result-object v3
 
-    move-result v4
+    .line 23
+    iget-object v4, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .line 2227
-    iget-object v5, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->b:Lcom/google/android/material/a/j;
+    check-cast v4, Lg/d/a/c/l/h;
 
-    invoke-direct {v0, v1, v9, v5}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
+    .line 24
+    iget-object v3, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    move-result v5
+    check-cast v3, Lg/d/a/c/l/h;
 
-    .line 2233
-    invoke-static {v4, v5, v10, v11}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(FFZLcom/google/android/material/transformation/FabTransformationBehavior$a;)Landroid/util/Pair;
+    if-eqz v11, :cond_6
 
-    move-result-object v6
+    if-nez p4, :cond_5
 
-    .line 2234
-    iget-object v13, v6, Landroid/util/Pair;->first:Ljava/lang/Object;
+    neg-float v7, v1
 
-    check-cast v13, Lcom/google/android/material/a/i;
+    .line 25
+    invoke-virtual {v10, v7}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 2235
-    iget-object v6, v6, Landroid/util/Pair;->second:Ljava/lang/Object;
+    neg-float v7, v2
 
-    check-cast v6, Lcom/google/android/material/a/i;
+    .line 26
+    invoke-virtual {v10, v7}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 2237
-    sget-object v14, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    .line 27
+    :cond_5
+    sget-object v7, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    new-array v15, v8, [F
+    move-object/from16 v17, v15
 
-    if-eqz v10, :cond_6
+    new-array v15, v6, [F
+
+    aput v13, v15, v5
+
+    invoke-static {v10, v7, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    .line 28
+    sget-object v15, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    move-object/from16 v18, v7
+
+    new-array v7, v6, [F
+
+    aput v13, v7, v5
+
+    invoke-static {v10, v15, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    neg-float v1, v1
+
+    neg-float v2, v2
+
+    .line 29
+    invoke-virtual {v8, v12, v4, v1, v13}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Lcom/google/android/material/transformation/FabTransformationBehavior$b;Lg/d/a/c/l/h;FF)F
+
+    move-result v1
+
+    .line 30
+    invoke-virtual {v8, v12, v3, v2, v13}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Lcom/google/android/material/transformation/FabTransformationBehavior$b;Lg/d/a/c/l/h;FF)F
+
+    move-result v2
+
+    .line 31
+    iget-object v15, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/Rect;
+
+    .line 32
+    invoke-virtual {v10, v15}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    .line 33
+    iget-object v13, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
+
+    .line 34
+    invoke-virtual {v13, v15}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    .line 35
+    iget-object v15, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
+
+    .line 36
+    invoke-virtual {v8, v10, v15}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+
+    .line 37
+    invoke-virtual {v15, v1, v2}, Landroid/graphics/RectF;->offset(FF)V
+
+    .line 38
+    invoke-virtual {v15, v13}, Landroid/graphics/RectF;->intersect(Landroid/graphics/RectF;)Z
+
+    .line 39
+    invoke-virtual {v0, v15}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+
+    move-object v1, v7
+
+    move-object/from16 v7, v18
 
     goto :goto_2
 
     :cond_6
-    iget v4, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:F
+    move-object/from16 v17, v15
 
+    .line 40
+    sget-object v7, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+
+    new-array v13, v6, [F
+
+    neg-float v1, v1
+
+    aput v1, v13, v5
+
+    invoke-static {v10, v7, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    .line 41
+    sget-object v1, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    new-array v13, v6, [F
+
+    neg-float v2, v2
+
+    aput v2, v13, v5
+
+    invoke-static {v10, v1, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v1
+
+    .line 42
     :goto_2
-    aput v4, v15, v7
+    invoke-virtual {v4, v7}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
 
-    .line 2238
-    invoke-static {v1, v14, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    .line 43
+    invoke-virtual {v3, v1}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
+
+    .line 44
+    invoke-virtual {v14, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 45
+    invoke-virtual {v14, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 46
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+
+    move-result v1
+
+    .line 47
+    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
+
+    move-result v0
+
+    .line 48
+    iget-object v2, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
+
+    invoke-virtual {v8, v9, v10, v2}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+
+    move-result v2
+
+    .line 49
+    iget-object v3, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
+
+    invoke-virtual {v8, v9, v10, v3}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+
+    move-result v3
+
+    .line 50
+    invoke-virtual {v8, v2, v3, v11, v12}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(FFZLcom/google/android/material/transformation/FabTransformationBehavior$b;)Landroid/util/Pair;
 
     move-result-object v4
 
-    .line 2242
-    sget-object v14, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+    .line 51
+    iget-object v7, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    new-array v15, v8, [F
+    check-cast v7, Lg/d/a/c/l/h;
 
-    if-eqz v10, :cond_7
+    .line 52
+    iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v4, Lg/d/a/c/l/h;
+
+    .line 53
+    sget-object v13, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+
+    new-array v15, v6, [F
+
+    if-eqz v11, :cond_7
 
     goto :goto_3
 
     :cond_7
-    iget v5, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->f:F
+    iget v2, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->g:F
 
     :goto_3
-    aput v5, v15, v7
+    aput v2, v15, v5
 
-    .line 2243
-    invoke-static {v1, v14, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    .line 2248
-    invoke-virtual {v13, v4}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
-
-    .line 2249
-    invoke-virtual {v6, v5}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
-
-    .line 2250
-    invoke-interface {v12, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 2251
-    invoke-interface {v12, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 2311
-    instance-of v13, v9, Lcom/google/android/material/d/d;
-
-    if-eqz v13, :cond_b
-
-    instance-of v4, v1, Landroid/widget/ImageView;
-
-    if-nez v4, :cond_8
-
-    goto :goto_5
-
-    .line 2315
-    :cond_8
-    move-object v4, v9
-
-    check-cast v4, Lcom/google/android/material/d/d;
-
-    .line 2316
-    move-object v5, v1
-
-    check-cast v5, Landroid/widget/ImageView;
-
-    .line 2317
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_b
-
-    .line 2322
-    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    const/16 v6, 0xff
-
-    if-eqz v10, :cond_a
-
-    if-nez p4, :cond_9
-
-    .line 2328
-    invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    .line 2330
-    :cond_9
-    sget-object v6, Lcom/google/android/material/a/e;->a:Landroid/util/Property;
-
-    new-array v14, v8, [I
-
-    aput v7, v14, v7
-
-    invoke-static {v5, v6, v14}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v6
-
-    goto :goto_4
-
-    .line 2332
-    :cond_a
-    sget-object v14, Lcom/google/android/material/a/e;->a:Landroid/util/Property;
-
-    new-array v15, v8, [I
-
-    aput v6, v15, v7
-
-    invoke-static {v5, v14, v15}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v6
-
-    .line 2337
-    :goto_4
-    new-instance v14, Lcom/google/android/material/transformation/FabTransformationBehavior$2;
-
-    invoke-direct {v14, v0, v9}, Lcom/google/android/material/transformation/FabTransformationBehavior$2;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Landroid/view/View;)V
-
-    invoke-virtual {v6, v14}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 2345
-    iget-object v14, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
-
-    const-string v15, "iconFade"
-
-    invoke-virtual {v14, v15}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object v14
-
-    .line 2346
-    invoke-virtual {v14, v6}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
-
-    .line 2347
-    invoke-interface {v12, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 2348
-    new-instance v6, Lcom/google/android/material/transformation/FabTransformationBehavior$3;
-
-    invoke-direct {v6, v0, v4, v5}, Lcom/google/android/material/transformation/FabTransformationBehavior$3;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lcom/google/android/material/d/d;Landroid/graphics/drawable/Drawable;)V
-
-    move-object/from16 v14, v17
-
-    invoke-interface {v14, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_6
-
-    :cond_b
-    :goto_5
-    move-object/from16 v14, v17
-
-    :goto_6
-    if-eqz v13, :cond_10
-
-    .line 2376
-    move-object v15, v9
-
-    check-cast v15, Lcom/google/android/material/d/d;
-
-    .line 2378
-    iget-object v4, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->b:Lcom/google/android/material/a/j;
-
-    .line 2628
-    iget-object v5, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
-
-    .line 2629
-    iget-object v6, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
-
-    .line 2631
-    invoke-direct {v0, v1, v5}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/graphics/RectF;)V
-
-    .line 2632
-    invoke-direct {v0, v9, v6}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
-
-    .line 2634
-    invoke-direct {v0, v1, v9, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
-
-    move-result v4
-
-    neg-float v4, v4
-
-    const/4 v7, 0x0
-
-    .line 2635
-    invoke-virtual {v6, v4, v7}, Landroid/graphics/RectF;->offset(FF)V
-
-    .line 2637
-    invoke-virtual {v5}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v4
-
-    iget v5, v6, Landroid/graphics/RectF;->left:F
-
-    sub-float/2addr v4, v5
-
-    .line 2379
-    iget-object v5, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->b:Lcom/google/android/material/a/j;
-
-    .line 2642
-    iget-object v6, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->b:Landroid/graphics/RectF;
-
-    .line 2643
-    iget-object v8, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/RectF;
-
-    .line 2645
-    invoke-direct {v0, v1, v6}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/graphics/RectF;)V
-
-    .line 2646
-    invoke-direct {v0, v9, v8}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
-
-    .line 2648
-    invoke-direct {v0, v1, v9, v5}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/view/View;Lcom/google/android/material/a/j;)F
-
-    move-result v5
-
-    neg-float v5, v5
-
-    .line 2649
-    invoke-virtual {v8, v7, v5}, Landroid/graphics/RectF;->offset(FF)V
-
-    .line 2651
-    invoke-virtual {v6}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v5
-
-    iget v6, v8, Landroid/graphics/RectF;->top:F
-
-    sub-float/2addr v5, v6
-
-    .line 2380
-    move-object v6, v1
-
-    check-cast v6, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
-
-    iget-object v7, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->a:Landroid/graphics/Rect;
-
-    invoke-virtual {v6, v7}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->a(Landroid/graphics/Rect;)Z
-
-    .line 2381
-    iget-object v6, v0, Lcom/google/android/material/transformation/FabTransformationBehavior;->a:Landroid/graphics/Rect;
-
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    const/high16 v7, 0x40000000    # 2.0f
-
-    div-float v8, v6, v7
-
-    .line 2384
-    iget-object v6, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
-
-    const-string v7, "expansion"
-
-    invoke-virtual {v6, v7}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object v7
-
-    if-eqz v10, :cond_e
-
-    if-nez p4, :cond_c
-
-    .line 2388
-    new-instance v6, Lcom/google/android/material/d/d$d;
-
-    invoke-direct {v6, v4, v5, v8}, Lcom/google/android/material/d/d$d;-><init>(FFF)V
-
-    invoke-interface {v15, v6}, Lcom/google/android/material/d/d;->setRevealInfo(Lcom/google/android/material/d/d$d;)V
-
-    :cond_c
-    if-eqz p4, :cond_d
-
-    .line 2392
-    invoke-interface {v15}, Lcom/google/android/material/d/d;->getRevealInfo()Lcom/google/android/material/d/d$d;
-
-    move-result-object v6
-
-    iget v6, v6, Lcom/google/android/material/d/d$d;->c:F
-
-    move v8, v6
-
-    .line 2394
-    :cond_d
-    invoke-static {v4, v5, v3, v2}, Lcom/google/android/material/j/a;->a(FFFF)F
-
-    move-result v2
-
-    .line 2398
-    invoke-static {v15, v4, v5, v2}, Lcom/google/android/material/d/a;->a(Lcom/google/android/material/d/d;FFF)Landroid/animation/Animator;
-
-    move-result-object v6
-
-    .line 2400
-    new-instance v2, Lcom/google/android/material/transformation/FabTransformationBehavior$4;
-
-    invoke-direct {v2, v0, v15}, Lcom/google/android/material/transformation/FabTransformationBehavior$4;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lcom/google/android/material/d/d;)V
-
-    invoke-virtual {v6, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 3061
-    iget-wide v2, v7, Lcom/google/android/material/a/i;->a:J
-
-    float-to-int v4, v4
-
-    float-to-int v5, v5
-
-    move-wide/from16 v19, v2
-
-    move-object/from16 v2, p2
-
-    move/from16 v16, v4
-
-    move-wide/from16 v3, v19
-
-    move/from16 v19, v5
-
-    move/from16 v5, v16
-
-    move-object/from16 v16, v6
-
-    move/from16 v6, v19
-
-    move-object v0, v7
-
-    move v7, v8
-
-    const/4 v1, 0x1
-
-    move-object v8, v12
-
-    .line 2412
-    invoke-static/range {v2 .. v8}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;JIIFLjava/util/List;)V
-
-    move-object/from16 v21, v11
-
-    move-object/from16 v6, v16
-
-    goto :goto_7
-
-    :cond_e
-    move-object v0, v7
-
-    const/4 v1, 0x1
-
-    .line 2421
-    invoke-interface {v15}, Lcom/google/android/material/d/d;->getRevealInfo()Lcom/google/android/material/d/d$d;
+    .line 54
+    invoke-static {v9, v13, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
-    iget v7, v2, Lcom/google/android/material/d/d$d;->c:F
+    .line 55
+    sget-object v13, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
 
-    .line 2424
-    invoke-static {v15, v4, v5, v8}, Lcom/google/android/material/d/a;->a(Lcom/google/android/material/d/d;FFF)Landroid/animation/Animator;
+    new-array v15, v6, [F
 
-    move-result-object v18
+    if-eqz v11, :cond_8
 
-    .line 4061
-    iget-wide v2, v0, Lcom/google/android/material/a/i;->a:J
+    goto :goto_4
 
-    float-to-int v6, v4
+    :cond_8
+    iget v3, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->h:F
 
-    float-to-int v5, v5
+    :goto_4
+    aput v3, v15, v5
 
-    move-wide v3, v2
+    .line 56
+    invoke-static {v9, v13, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-object/from16 v2, p2
+    move-result-object v3
 
-    move/from16 v19, v5
+    .line 57
+    invoke-virtual {v7, v2}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
 
-    move v5, v6
+    .line 58
+    invoke-virtual {v4, v3}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
 
-    move v1, v6
+    .line 59
+    invoke-virtual {v14, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move/from16 v6, v19
+    .line 60
+    invoke-virtual {v14, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move v10, v8
+    .line 61
+    instance-of v13, v10, Lg/d/a/c/t/d;
 
-    move-object v8, v12
+    if-eqz v13, :cond_d
 
-    .line 2427
-    invoke-static/range {v2 .. v8}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;JIIFLjava/util/List;)V
+    instance-of v2, v9, Landroid/widget/ImageView;
 
-    .line 5061
-    iget-wide v2, v0, Lcom/google/android/material/a/i;->a:J
+    if-nez v2, :cond_9
 
-    .line 5065
-    iget-wide v4, v0, Lcom/google/android/material/a/i;->b:J
+    goto :goto_6
 
-    .line 2437
-    iget-object v6, v11, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    .line 62
+    :cond_9
+    move-object v2, v10
 
-    .line 2438
-    invoke-virtual {v6}, Lcom/google/android/material/a/h;->a()J
+    check-cast v2, Lg/d/a/c/t/d;
 
-    move-result-wide v6
+    .line 63
+    move-object v3, v9
 
-    .line 5770
-    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast v3, Landroid/widget/ImageView;
 
-    move-object/from16 v21, v11
+    .line 64
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    const/16 v11, 0x15
+    move-result-object v3
 
-    if-lt v8, v11, :cond_f
+    if-nez v3, :cond_a
 
-    add-long/2addr v2, v4
+    goto :goto_6
 
-    cmp-long v4, v2, v6
+    .line 65
+    :cond_a
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    if-gez v4, :cond_f
+    const/16 v4, 0xff
 
-    move/from16 v4, v19
+    if-eqz v11, :cond_c
 
-    .line 5774
-    invoke-static {v9, v1, v4, v10, v10}, Landroid/view/ViewAnimationUtils;->createCircularReveal(Landroid/view/View;IIFF)Landroid/animation/Animator;
+    if-nez p4, :cond_b
 
-    move-result-object v1
+    .line 66
+    invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 5776
-    invoke-virtual {v1, v2, v3}, Landroid/animation/Animator;->setStartDelay(J)V
+    .line 67
+    :cond_b
+    sget-object v4, Lg/d/a/c/l/d;->b:Landroid/util/Property;
 
-    sub-long/2addr v6, v2
+    new-array v7, v6, [I
 
-    .line 5777
-    invoke-virtual {v1, v6, v7}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+    aput v5, v7, v5
 
-    .line 5778
-    invoke-interface {v12, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-static {v3, v4, v7}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    goto :goto_5
+
+    .line 68
+    :cond_c
+    sget-object v7, Lg/d/a/c/l/d;->b:Landroid/util/Property;
+
+    new-array v15, v6, [I
+
+    aput v4, v15, v5
+
+    invoke-static {v3, v7, v15}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    .line 69
+    :goto_5
+    new-instance v7, Lg/d/a/c/i0/a;
+
+    invoke-direct {v7, v8, v10}, Lg/d/a/c/i0/a;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Landroid/view/View;)V
+
+    invoke-virtual {v4, v7}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 70
+    iget-object v7, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string v15, "iconFade"
+
+    invoke-virtual {v7, v15}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object v7
+
+    .line 71
+    invoke-virtual {v7, v4}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
+
+    .line 72
+    invoke-virtual {v14, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 73
+    new-instance v4, Lg/d/a/c/i0/b;
+
+    invoke-direct {v4, v8, v2, v3}, Lg/d/a/c/i0/b;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lg/d/a/c/t/d;Landroid/graphics/drawable/Drawable;)V
+
+    move-object/from16 v15, v17
+
+    invoke-virtual {v15, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_7
+
+    :cond_d
+    :goto_6
+    move-object/from16 v15, v17
+
+    :goto_7
+    if-nez v13, :cond_e
+
+    move-object/from16 v24, v12
+
+    move/from16 v19, v13
+
+    goto/16 :goto_b
+
+    .line 74
+    :cond_e
+    move-object v7, v10
+
+    check-cast v7, Lg/d/a/c/t/d;
+
+    .line 75
+    iget-object v2, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
+
+    .line 76
+    iget-object v3, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
+
+    .line 77
+    iget-object v4, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
+
+    .line 78
+    invoke-virtual {v8, v9, v3}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+
+    .line 79
+    iget v5, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->g:F
+
+    iget v6, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->h:F
+
+    invoke-virtual {v3, v5, v6}, Landroid/graphics/RectF;->offset(FF)V
+
+    .line 80
+    invoke-virtual {v8, v10, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+
+    .line 81
+    invoke-virtual {v8, v9, v10, v2}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+
+    move-result v2
+
+    neg-float v2, v2
+
+    const/4 v5, 0x0
+
+    .line 82
+    invoke-virtual {v4, v2, v5}, Landroid/graphics/RectF;->offset(FF)V
+
+    .line 83
+    invoke-virtual {v3}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v2
+
+    iget v3, v4, Landroid/graphics/RectF;->left:F
+
+    sub-float/2addr v2, v3
+
+    .line 84
+    iget-object v3, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->b:Lg/d/a/c/l/i;
+
+    .line 85
+    iget-object v4, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->d:Landroid/graphics/RectF;
+
+    .line 86
+    iget-object v5, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->e:Landroid/graphics/RectF;
+
+    .line 87
+    invoke-virtual {v8, v9, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+
+    .line 88
+    iget v6, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->g:F
+
+    move/from16 v19, v13
+
+    iget v13, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->h:F
+
+    invoke-virtual {v4, v6, v13}, Landroid/graphics/RectF;->offset(FF)V
+
+    .line 89
+    invoke-virtual {v8, v10, v5}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;Landroid/graphics/RectF;)V
+
+    .line 90
+    invoke-virtual {v8, v9, v10, v3}, Lcom/google/android/material/transformation/FabTransformationBehavior;->b(Landroid/view/View;Landroid/view/View;Lg/d/a/c/l/i;)F
+
+    move-result v3
+
+    neg-float v3, v3
+
+    const/4 v6, 0x0
+
+    .line 91
+    invoke-virtual {v5, v6, v3}, Landroid/graphics/RectF;->offset(FF)V
+
+    .line 92
+    invoke-virtual {v4}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v3
+
+    iget v4, v5, Landroid/graphics/RectF;->top:F
+
+    sub-float/2addr v3, v4
+
+    .line 93
+    move-object v4, v9
+
+    check-cast v4, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget-object v5, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v4, v5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->a(Landroid/graphics/Rect;)Z
+
+    .line 94
+    iget-object v4, v8, Lcom/google/android/material/transformation/FabTransformationBehavior;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    div-float v13, v4, v5
+
+    .line 95
+    iget-object v4, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string v5, "expansion"
+
+    invoke-virtual {v4, v5}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object v6
+
+    if-eqz v11, :cond_14
+
+    if-nez p4, :cond_f
+
+    .line 96
+    new-instance v4, Lg/d/a/c/t/d$e;
+
+    invoke-direct {v4, v2, v3, v13}, Lg/d/a/c/t/d$e;-><init>(FFF)V
+
+    invoke-interface {v7, v4}, Lg/d/a/c/t/d;->setRevealInfo(Lg/d/a/c/t/d$e;)V
 
     :cond_f
-    move-object/from16 v6, v18
+    if-eqz p4, :cond_10
 
-    .line 2445
-    :goto_7
-    invoke-virtual {v0, v6}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
+    .line 97
+    invoke-interface {v7}, Lg/d/a/c/t/d;->getRevealInfo()Lg/d/a/c/t/d$e;
 
-    .line 2446
-    invoke-interface {v12, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    .line 6123
-    new-instance v0, Lcom/google/android/material/d/a$1;
+    iget v4, v4, Lg/d/a/c/t/d$e;->c:F
 
-    invoke-direct {v0, v15}, Lcom/google/android/material/d/a$1;-><init>(Lcom/google/android/material/d/d;)V
+    move v13, v4
 
-    .line 2447
-    invoke-interface {v14, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :cond_10
+    const/4 v4, 0x0
+
+    .line 98
+    invoke-static {v2, v3, v4, v4}, Lg/d/a/b/d/m/q/a;->a(FFFF)F
+
+    move-result v5
+
+    .line 99
+    invoke-static {v2, v3, v1, v4}, Lg/d/a/b/d/m/q/a;->a(FFFF)F
+
+    move-result v16
+
+    .line 100
+    invoke-static {v2, v3, v1, v0}, Lg/d/a/b/d/m/q/a;->a(FFFF)F
+
+    move-result v1
+
+    .line 101
+    invoke-static {v2, v3, v4, v0}, Lg/d/a/b/d/m/q/a;->a(FFFF)F
+
+    move-result v0
+
+    cmpl-float v4, v5, v16
+
+    if-lez v4, :cond_11
+
+    cmpl-float v4, v5, v1
+
+    if-lez v4, :cond_11
+
+    cmpl-float v4, v5, v0
+
+    if-lez v4, :cond_11
 
     goto :goto_8
 
-    :cond_10
-    move-object/from16 v21, v11
+    :cond_11
+    cmpl-float v4, v16, v1
 
+    if-lez v4, :cond_12
+
+    cmpl-float v4, v16, v0
+
+    if-lez v4, :cond_12
+
+    move/from16 v5, v16
+
+    goto :goto_8
+
+    :cond_12
+    cmpl-float v4, v1, v0
+
+    if-lez v4, :cond_13
+
+    move v5, v1
+
+    goto :goto_8
+
+    :cond_13
+    move v5, v0
+
+    .line 102
     :goto_8
-    if-eqz v13, :cond_14
+    invoke-static {v7, v2, v3, v5}, Lg/d/a/b/d/m/q/a;->a(Lg/d/a/c/t/d;FFF)Landroid/animation/Animator;
 
-    .line 6461
-    move-object v0, v9
+    move-result-object v5
 
-    check-cast v0, Lcom/google/android/material/d/d;
+    .line 103
+    new-instance v0, Lg/d/a/c/i0/c;
 
-    .line 6731
+    invoke-direct {v0, v8, v7}, Lg/d/a/c/i0/c;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;Lg/d/a/c/t/d;)V
+
+    invoke-virtual {v5, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 104
+    iget-wide v0, v6, Lg/d/a/c/l/h;->a:J
+
+    float-to-int v4, v2
+
+    float-to-int v2, v3
+
+    move-wide/from16 v20, v0
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    move/from16 v16, v2
+
+    move-wide/from16 v2, v20
+
+    move-object/from16 v17, v5
+
+    const/4 v9, 0x0
+
+    move/from16 v5, v16
+
+    move-object v9, v6
+
+    const/4 v8, 0x1
+
+    move v6, v13
+
+    move-object v13, v7
+
+    move-object v7, v14
+
+    .line 105
+    invoke-virtual/range {v0 .. v7}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;JIIFLjava/util/List;)V
+
+    move-object/from16 v24, v12
+
+    move-object/from16 v23, v13
+
+    goto/16 :goto_a
+
+    :cond_14
+    move-object v9, v6
+
+    const/4 v8, 0x1
+
+    .line 106
+    invoke-interface {v7}, Lg/d/a/c/t/d;->getRevealInfo()Lg/d/a/c/t/d$e;
+
+    move-result-object v0
+
+    iget v6, v0, Lg/d/a/c/t/d$e;->c:F
+
+    .line 107
+    invoke-static {v7, v2, v3, v13}, Lg/d/a/b/d/m/q/a;->a(Lg/d/a/c/t/d;FFF)Landroid/animation/Animator;
+
+    move-result-object v17
+
+    .line 108
+    iget-wide v4, v9, Lg/d/a/c/l/h;->a:J
+
+    float-to-int v2, v2
+
+    float-to-int v3, v3
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    move/from16 v18, v2
+
+    move/from16 v21, v3
+
+    move-wide v2, v4
+
+    move/from16 v4, v18
+
+    move/from16 v5, v21
+
+    move-object v8, v7
+
+    const/16 v11, 0x15
+
+    move-object v7, v14
+
+    .line 109
+    invoke-virtual/range {v0 .. v7}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;JIIFLjava/util/List;)V
+
+    .line 110
+    iget-wide v0, v9, Lg/d/a/c/l/h;->a:J
+
+    .line 111
+    iget-wide v2, v9, Lg/d/a/c/l/h;->b:J
+
+    .line 112
+    iget-object v4, v12, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    .line 113
+    iget-object v5, v4, Lg/d/a/c/l/g;->a:Landroidx/collection/SimpleArrayMap;
+
+    invoke-virtual {v5}, Landroidx/collection/SimpleArrayMap;->size()I
+
+    move-result v5
+
+    const-wide/16 v6, 0x0
+
+    move-wide/from16 v26, v6
+
+    move-object v7, v12
+
+    move-wide/from16 v11, v26
+
+    const/4 v6, 0x0
+
+    :goto_9
+    if-ge v6, v5, :cond_15
+
+    move/from16 v22, v5
+
+    .line 114
+    iget-object v5, v4, Lg/d/a/c/l/g;->a:Landroidx/collection/SimpleArrayMap;
+
+    invoke-virtual {v5, v6}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lg/d/a/c/l/h;
+
+    move-object/from16 v24, v7
+
+    move-object/from16 v23, v8
+
+    .line 115
+    iget-wide v7, v5, Lg/d/a/c/l/h;->a:J
+
+    move-object/from16 v25, v4
+
+    .line 116
+    iget-wide v4, v5, Lg/d/a/c/l/h;->b:J
+
+    add-long/2addr v7, v4
+
+    .line 117
+    invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v11
+
+    add-int/lit8 v6, v6, 0x1
+
+    move/from16 v5, v22
+
+    move-object/from16 v8, v23
+
+    move-object/from16 v7, v24
+
+    move-object/from16 v4, v25
+
+    goto :goto_9
+
+    :cond_15
+    move-object/from16 v24, v7
+
+    move-object/from16 v23, v8
+
+    .line 118
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x15
+
+    if-lt v4, v5, :cond_16
+
+    add-long/2addr v0, v2
+
+    cmp-long v2, v0, v11
+
+    if-gez v2, :cond_16
+
+    move/from16 v2, v18
+
+    move/from16 v3, v21
+
+    .line 119
+    invoke-static {v10, v2, v3, v13, v13}, Landroid/view/ViewAnimationUtils;->createCircularReveal(Landroid/view/View;IIFF)Landroid/animation/Animator;
+
+    move-result-object v2
+
+    .line 120
+    invoke-virtual {v2, v0, v1}, Landroid/animation/Animator;->setStartDelay(J)V
+
+    sub-long/2addr v11, v0
+
+    .line 121
+    invoke-virtual {v2, v11, v12}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+
+    .line 122
+    invoke-virtual {v14, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_16
+    :goto_a
+    move-object/from16 v5, v17
+
+    .line 123
+    invoke-virtual {v9, v5}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
+
+    .line 124
+    invoke-virtual {v14, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 125
+    new-instance v0, Lg/d/a/c/t/a;
+
+    move-object/from16 v1, v23
+
+    invoke-direct {v0, v1}, Lg/d/a/c/t/a;-><init>(Lg/d/a/c/t/d;)V
+
+    .line 126
+    invoke-virtual {v15, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_b
+    if-nez v19, :cond_17
+
+    move/from16 v2, p3
+
+    move-object/from16 v1, v24
+
+    const/4 v4, 0x1
+
+    goto :goto_e
+
+    .line 127
+    :cond_17
+    move-object v0, v10
+
+    check-cast v0, Lg/d/a/c/t/d;
+
+    .line 128
     invoke-static/range {p1 .. p1}, Landroidx/core/view/ViewCompat;->getBackgroundTintList(Landroid/view/View;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_18
 
-    .line 6733
+    .line 129
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v2
@@ -1379,30 +1619,30 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
-    move-result v7
+    move-result v5
 
-    goto :goto_9
+    goto :goto_c
 
-    :cond_11
-    const/4 v7, 0x0
+    :cond_18
+    const/4 v5, 0x0
 
-    :goto_9
+    :goto_c
     const v1, 0xffffff
 
-    and-int/2addr v1, v7
+    and-int/2addr v1, v5
 
     move/from16 v2, p3
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_1a
 
-    if-nez p4, :cond_12
+    if-nez p4, :cond_19
 
-    .line 6469
-    invoke-interface {v0, v7}, Lcom/google/android/material/d/d;->setCircularRevealScrimColor(I)V
+    .line 130
+    invoke-interface {v0, v5}, Lg/d/a/c/t/d;->setCircularRevealScrimColor(I)V
 
-    .line 6471
-    :cond_12
-    sget-object v3, Lcom/google/android/material/d/d$c;->a:Landroid/util/Property;
+    .line 131
+    :cond_19
+    sget-object v3, Lg/d/a/c/t/d$d;->a:Landroid/util/Property;
 
     const/4 v4, 0x1
 
@@ -1412,243 +1652,241 @@
 
     aput v1, v5, v6
 
-    .line 6472
+    .line 132
     invoke-static {v0, v3, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    goto :goto_a
-
-    :cond_13
-    const/4 v4, 0x1
-
-    const/4 v6, 0x0
-
-    .line 6477
-    sget-object v1, Lcom/google/android/material/d/d$c;->a:Landroid/util/Property;
-
-    new-array v3, v4, [I
-
-    aput v7, v3, v6
-
-    .line 6478
-    invoke-static {v0, v1, v3}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    .line 6484
-    :goto_a
-    invoke-static {}, Lcom/google/android/material/a/c;->a()Lcom/google/android/material/a/c;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setEvaluator(Landroid/animation/TypeEvaluator;)V
-
-    move-object/from16 v1, v21
-
-    .line 6485
-    iget-object v3, v1, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
-
-    const-string v4, "color"
-
-    invoke-virtual {v3, v4}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object v3
-
-    .line 6486
-    invoke-virtual {v3, v0}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
-
-    .line 6487
-    invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_b
-
-    :cond_14
-    move/from16 v2, p3
-
-    move-object/from16 v1, v21
-
-    .line 7498
-    :goto_b
-    instance-of v0, v9, Landroid/view/ViewGroup;
-
-    if-eqz v0, :cond_1b
-
-    if-eqz v13, :cond_15
-
-    .line 7501
-    sget v0, Lcom/google/android/material/d/c;->a:I
-
-    if-eqz v0, :cond_1b
-
-    .line 7706
-    :cond_15
-    sget v0, Lcom/google/android/material/a$f;->mtrl_child_content_container:I
-
-    invoke-virtual {v9, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_16
-
-    .line 7708
-    invoke-static {v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;)Landroid/view/ViewGroup;
-
-    move-result-object v0
-
     goto :goto_d
-
-    .line 7712
-    :cond_16
-    instance-of v0, v9, Lcom/google/android/material/transformation/b;
-
-    if-nez v0, :cond_18
-
-    instance-of v0, v9, Lcom/google/android/material/transformation/a;
-
-    if-eqz v0, :cond_17
-
-    goto :goto_c
-
-    .line 7718
-    :cond_17
-    invoke-static/range {p2 .. p2}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;)Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    goto :goto_d
-
-    .line 7713
-    :cond_18
-    :goto_c
-    move-object v0, v9
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 7714
-    invoke-static {v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;)Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    :goto_d
-    if-eqz v0, :cond_1b
-
-    if-eqz v2, :cond_1a
-
-    if-nez p4, :cond_19
-
-    .line 7516
-    sget-object v3, Lcom/google/android/material/a/d;->a:Landroid/util/Property;
-
-    const/4 v4, 0x0
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v0, v4}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 7518
-    :cond_19
-    sget-object v3, Lcom/google/android/material/a/d;->a:Landroid/util/Property;
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [F
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    const/4 v6, 0x0
-
-    aput v5, v4, v6
-
-    .line 7519
-    invoke-static {v0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    goto :goto_e
 
     :cond_1a
     const/4 v4, 0x1
 
     const/4 v6, 0x0
 
-    .line 7521
-    sget-object v3, Lcom/google/android/material/a/d;->a:Landroid/util/Property;
+    .line 133
+    sget-object v1, Lg/d/a/c/t/d$d;->a:Landroid/util/Property;
 
-    new-array v4, v4, [F
+    new-array v3, v4, [I
 
-    const/4 v5, 0x0
+    aput v5, v3, v6
 
-    aput v5, v4, v6
-
-    .line 7522
-    invoke-static {v0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    .line 134
+    invoke-static {v0, v1, v3}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 7525
+    .line 135
+    :goto_d
+    sget-object v1, Lg/d/a/c/l/b;->a:Lg/d/a/c/l/b;
+
+    .line 136
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setEvaluator(Landroid/animation/TypeEvaluator;)V
+
+    move-object/from16 v1, v24
+
+    .line 137
+    iget-object v3, v1, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string v5, "color"
+
+    invoke-virtual {v3, v5}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object v3
+
+    .line 138
+    invoke-virtual {v3, v0}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
+
+    .line 139
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 140
     :goto_e
-    iget-object v1, v1, Lcom/google/android/material/transformation/FabTransformationBehavior$a;->a:Lcom/google/android/material/a/h;
+    instance-of v0, v10, Landroid/view/ViewGroup;
 
-    const-string v3, "contentFade"
-
-    invoke-virtual {v1, v3}, Lcom/google/android/material/a/h;->a(Ljava/lang/String;)Lcom/google/android/material/a/i;
-
-    move-result-object v1
-
-    .line 7526
-    invoke-virtual {v1, v0}, Lcom/google/android/material/a/i;->a(Landroid/animation/Animator;)V
-
-    .line 7527
-    invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1b
 
     goto :goto_f
 
     :cond_1b
+    if-eqz v19, :cond_1c
+
+    .line 141
+    sget v0, Lg/d/a/c/t/c;->a:I
+
+    if-nez v0, :cond_1c
+
+    :goto_f
+    const/4 v7, 0x0
+
+    move-object/from16 v3, p0
+
+    goto :goto_13
+
+    .line 142
+    :cond_1c
+    sget v0, Lg/d/a/c/f;->mtrl_child_content_container:I
+
+    invoke-virtual {v10, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1d
+
+    move-object/from16 v3, p0
+
+    .line 143
+    invoke-virtual {v3, v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;)Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    goto :goto_11
+
+    :cond_1d
+    move-object/from16 v3, p0
+
+    .line 144
+    instance-of v0, v10, Lg/d/a/c/i0/e;
+
+    if-nez v0, :cond_1f
+
+    instance-of v0, v10, Lg/d/a/c/i0/d;
+
+    if-eqz v0, :cond_1e
+
+    goto :goto_10
+
+    .line 145
+    :cond_1e
+    invoke-virtual {v3, v10}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;)Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    goto :goto_11
+
+    .line 146
+    :cond_1f
+    :goto_10
+    move-object v0, v10
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 147
+    invoke-virtual {v3, v0}, Lcom/google/android/material/transformation/FabTransformationBehavior;->a(Landroid/view/View;)Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    :goto_11
+    if-nez v0, :cond_20
+
+    const/4 v7, 0x0
+
+    goto :goto_13
+
+    :cond_20
+    if-eqz v2, :cond_22
+
+    if-nez p4, :cond_21
+
+    .line 148
+    sget-object v5, Lg/d/a/c/l/c;->a:Landroid/util/Property;
+
     const/4 v6, 0x0
 
-    .line 162
-    :goto_f
+    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v0, v6}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 149
+    :cond_21
+    sget-object v5, Lg/d/a/c/l/c;->a:Landroid/util/Property;
+
+    new-array v4, v4, [F
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    const/4 v7, 0x0
+
+    aput v6, v4, v7
+
+    .line 150
+    invoke-static {v0, v5, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    goto :goto_12
+
+    :cond_22
+    const/4 v7, 0x0
+
+    .line 151
+    sget-object v5, Lg/d/a/c/l/c;->a:Landroid/util/Property;
+
+    new-array v4, v4, [F
+
+    const/4 v6, 0x0
+
+    aput v6, v4, v7
+
+    .line 152
+    invoke-static {v0, v5, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    .line 153
+    :goto_12
+    iget-object v1, v1, Lcom/google/android/material/transformation/FabTransformationBehavior$b;->a:Lg/d/a/c/l/g;
+
+    const-string v4, "contentFade"
+
+    invoke-virtual {v1, v4}, Lg/d/a/c/l/g;->a(Ljava/lang/String;)Lg/d/a/c/l/h;
+
+    move-result-object v1
+
+    .line 154
+    invoke-virtual {v1, v0}, Lg/d/a/c/l/h;->a(Landroid/animation/Animator;)V
+
+    .line 155
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 156
+    :goto_13
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 163
-    invoke-static {v0, v12}, Lcom/google/android/material/a/b;->a(Landroid/animation/AnimatorSet;Ljava/util/List;)V
+    .line 157
+    invoke-static {v0, v14}, Lg/d/a/b/d/m/q/a;->a(Landroid/animation/AnimatorSet;Ljava/util/List;)V
 
-    .line 164
-    new-instance v1, Lcom/google/android/material/transformation/FabTransformationBehavior$1;
-
-    const/4 v5, 0x0
-
-    move-object/from16 v3, p0
+    .line 158
+    new-instance v1, Lcom/google/android/material/transformation/FabTransformationBehavior$a;
 
     move-object/from16 v4, p1
 
-    invoke-direct {v1, v3, v2, v9, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior$1;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;ZLandroid/view/View;Landroid/view/View;)V
+    const/4 v5, 0x0
+
+    invoke-direct {v1, v3, v2, v10, v4}, Lcom/google/android/material/transformation/FabTransformationBehavior$a;-><init>(Lcom/google/android/material/transformation/FabTransformationBehavior;ZLandroid/view/View;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 186
-    invoke-interface {v14}, Ljava/util/List;->size()I
+    .line 159
+    invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    const/4 v7, 0x0
+    :goto_14
+    if-ge v5, v1, :cond_23
 
-    :goto_10
-    if-ge v7, v1, :cond_1c
-
-    .line 187
-    invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 160
+    invoke-virtual {v15, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1656,66 +1894,72 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v5, v5, 0x1
 
-    goto :goto_10
+    goto :goto_14
 
-    :cond_1c
+    :cond_23
     return-object v0
 .end method
 
 .method public layoutDependsOn(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 1
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 95
+    .line 1
     invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
 
     move-result p1
 
     const/16 v0, 0x8
 
-    if-eq p1, v0, :cond_3
+    if-eq p1, v0, :cond_2
 
-    .line 100
+    .line 2
     instance-of p1, p3, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
-    .line 101
+    .line 3
     check-cast p3, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    .line 102
+    .line 4
     invoke-virtual {p3}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getExpandedComponentIdHint()I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    .line 103
+    .line 5
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result p2
 
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
+    if-ne p1, p2, :cond_1
 
     :cond_0
-    return v0
+    const/4 v0, 0x1
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
     return v0
 
-    .line 96
-    :cond_3
+    .line 6
+    :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "This behavior cannot be attached to a GONE view. Set the view to INVISIBLE instead."
@@ -1727,15 +1971,21 @@
 
 .method public onAttachedToLayoutParams(Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;)V
     .locals 1
+    .param p1    # Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 111
+    .line 1
     iget v0, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->dodgeInsetEdges:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x50
 
-    .line 114
+    .line 2
     iput v0, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->dodgeInsetEdges:I
 
     :cond_0

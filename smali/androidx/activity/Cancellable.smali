@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/activity/Cancellable;
+.class public interface abstract Landroidx/activity/Cancellable;
 .super Ljava/lang/Object;
 .source "Cancellable.java"
 

@@ -3,12 +3,12 @@
 .source "Range.kt"
 
 # interfaces
-.implements Lkotlin/e/a;
+.implements Lj/n/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/util/RangeKt;->toClosedRange(Landroid/util/Range;)Lkotlin/e/a;
+    value = Landroidx/core/util/RangeKt;->toClosedRange(Landroid/util/Range;)Lj/n/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,14 +19,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/e/a<",
+        "Lj/n/a<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $this_toClosedRange:Landroid/util/Range;
+.field public final synthetic $this_toClosedRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/util/Range;)V
+.method public constructor <init>(Landroid/util/Range;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -49,7 +49,7 @@
 
     iput-object p1, p0, Landroidx/core/util/RangeKt$toClosedRange$1;->$this_toClosedRange:Landroid/util/Range;
 
-    .line 52
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final contains(Ljava/lang/Comparable;)Z
+.method public contains(Ljava/lang/Comparable;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -67,11 +67,11 @@
 
     const-string v0, "value"
 
-    .line 52
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1026
-    invoke-interface {p0}, Lkotlin/e/a;->getStart()Ljava/lang/Comparable;
+    .line 2
+    invoke-interface {p0}, Lj/n/a;->getStart()Ljava/lang/Comparable;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     if-ltz v0, :cond_0
 
-    invoke-interface {p0}, Lkotlin/e/a;->getEndInclusive()Ljava/lang/Comparable;
+    invoke-interface {p0}, Lj/n/a;->getEndInclusive()Ljava/lang/Comparable;
 
     move-result-object v0
 
@@ -93,15 +93,16 @@
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     return p1
 .end method
 
-.method public final getEndInclusive()Ljava/lang/Comparable;
+.method public getEndInclusive()Ljava/lang/Comparable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -109,7 +110,7 @@
         }
     .end annotation
 
-    .line 53
+    .line 1
     iget-object v0, p0, Landroidx/core/util/RangeKt$toClosedRange$1;->$this_toClosedRange:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -119,7 +120,7 @@
     return-object v0
 .end method
 
-.method public final getStart()Ljava/lang/Comparable;
+.method public getStart()Ljava/lang/Comparable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -127,7 +128,7 @@
         }
     .end annotation
 
-    .line 54
+    .line 1
     iget-object v0, p0, Landroidx/core/util/RangeKt$toClosedRange$1;->$this_toClosedRange:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
@@ -137,15 +138,15 @@
     return-object v0
 .end method
 
-.method public final isEmpty()Z
+.method public isEmpty()Z
     .locals 2
 
-    .line 1033
-    invoke-interface {p0}, Lkotlin/e/a;->getStart()Ljava/lang/Comparable;
+    .line 1
+    invoke-interface {p0}, Lj/n/a;->getStart()Ljava/lang/Comparable;
 
     move-result-object v0
 
-    invoke-interface {p0}, Lkotlin/e/a;->getEndInclusive()Ljava/lang/Comparable;
+    invoke-interface {p0}, Lj/n/a;->getEndInclusive()Ljava/lang/Comparable;
 
     move-result-object v1
 
@@ -157,10 +158,11 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method

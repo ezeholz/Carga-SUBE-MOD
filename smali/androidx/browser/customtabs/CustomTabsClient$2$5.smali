@@ -1,4 +1,4 @@
-.class Landroidx/browser/customtabs/CustomTabsClient$2$5;
+.class public Landroidx/browser/customtabs/CustomTabsClient$2$5;
 .super Ljava/lang/Object;
 .source "CustomTabsClient.java"
 
@@ -12,28 +12,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/browser/customtabs/CustomTabsClient$2;
+.field public final synthetic this$1:Landroidx/browser/customtabs/CustomTabsClient$2;
 
-.field final synthetic val$extras:Landroid/os/Bundle;
+.field public final synthetic val$extras:Landroid/os/Bundle;
 
-.field final synthetic val$relation:I
+.field public final synthetic val$relation:I
 
-.field final synthetic val$requestedOrigin:Landroid/net/Uri;
+.field public final synthetic val$requestedOrigin:Landroid/net/Uri;
 
-.field final synthetic val$result:Z
+.field public final synthetic val$result:Z
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/customtabs/CustomTabsClient$2;ILandroid/net/Uri;ZLandroid/os/Bundle;)V
+.method public constructor <init>(Landroidx/browser/customtabs/CustomTabsClient$2;ILandroid/net/Uri;ZLandroid/os/Bundle;)V
     .locals 0
 
-    .line 246
+    .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient$2$5;->this$1:Landroidx/browser/customtabs/CustomTabsClient$2;
 
     iput p2, p0, Landroidx/browser/customtabs/CustomTabsClient$2$5;->val$relation:I
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 5
 
-    .line 249
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2$5;->this$1:Landroidx/browser/customtabs/CustomTabsClient$2;
 
     iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;

@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentActivityAccessorFramework;
+.class public Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentActivityAccessorFramework;
 .super Ljava/lang/Object;
 .source "FragmentCompatFramework.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "FragmentActivityAccessorFramework"
 .end annotation
 
@@ -28,19 +28,19 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 175
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/common/android/FragmentCompatFramework$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/common/android/FragmentCompatFramework$1;)V
     .locals 0
 
-    .line 175
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentActivityAccessorFramework;-><init>()V
 
     return-void
@@ -51,7 +51,7 @@
 .method public getFragmentManager(Landroid/app/Activity;)Landroid/app/FragmentManager;
     .locals 0
 
-    .line 180
+    .line 2
     invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object p1
@@ -62,7 +62,7 @@
 .method public bridge synthetic getFragmentManager(Landroid/app/Activity;)Ljava/lang/Object;
     .locals 0
 
-    .line 175
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentActivityAccessorFramework;->getFragmentManager(Landroid/app/Activity;)Landroid/app/FragmentManager;
 
     move-result-object p1

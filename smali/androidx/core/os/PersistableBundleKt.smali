@@ -4,12 +4,16 @@
 
 
 # direct methods
-.method public static final varargs persistableBundleOf([Lkotlin/h;)Landroid/os/PersistableBundle;
+.method public static final varargs persistableBundleOf([Lj/e;)Landroid/os/PersistableBundle;
     .locals 9
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Lkotlin/h<",
+            "Lj/e<",
             "Ljava/lang/String;",
             "+",
             "Ljava/lang/Object;",
@@ -20,46 +24,46 @@
 
     const-string v0, "pairs"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
+    .line 1
     new-instance v0, Landroid/os/PersistableBundle;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Landroid/os/PersistableBundle;-><init>(I)V
 
-    .line 32
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_f
+    if-ge v2, v1, :cond_e
 
     aget-object v3, p0, v2
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 1000
-    iget-object v4, v3, Lkotlin/h;->a:Ljava/lang/Object;
+    .line 3
+    iget-object v4, v3, Lj/e;->d:Ljava/lang/Object;
 
-    .line 32
+    .line 4
     check-cast v4, Ljava/lang/String;
 
-    .line 2000
-    iget-object v3, v3, Lkotlin/h;->b:Ljava/lang/Object;
+    .line 5
+    iget-object v3, v3, Lj/e;->e:Ljava/lang/Object;
 
     if-nez v3, :cond_0
 
     const/4 v3, 0x0
 
-    .line 34
+    .line 6
     invoke-virtual {v0, v4, v3}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 37
+    .line 7
     :cond_0
     instance-of v5, v3, Ljava/lang/Boolean;
 
@@ -69,12 +73,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 38
+    .line 8
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v5, v6, :cond_1
 
-    .line 39
+    .line 9
     check-cast v3, Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
@@ -85,15 +89,17 @@
 
     goto :goto_0
 
-    .line 41
+    .line 10
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Illegal value type boolean for key \""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -107,7 +113,7 @@
 
     throw p0
 
-    .line 44
+    .line 11
     :cond_2
     instance-of v5, v3, Ljava/lang/Double;
 
@@ -123,7 +129,7 @@
 
     goto :goto_0
 
-    .line 45
+    .line 12
     :cond_3
     instance-of v5, v3, Ljava/lang/Integer;
 
@@ -139,7 +145,7 @@
 
     goto :goto_0
 
-    .line 46
+    .line 13
     :cond_4
     instance-of v5, v3, Ljava/lang/Long;
 
@@ -155,7 +161,7 @@
 
     goto :goto_0
 
-    .line 49
+    .line 14
     :cond_5
     instance-of v5, v3, Ljava/lang/String;
 
@@ -167,33 +173,35 @@
 
     goto :goto_0
 
-    .line 52
+    .line 15
     :cond_6
     instance-of v5, v3, [Z
 
     if-eqz v5, :cond_8
 
-    .line 53
+    .line 16
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v5, v6, :cond_7
 
-    .line 54
+    .line 17
     check-cast v3, [Z
 
     invoke-virtual {v0, v4, v3}, Landroid/os/PersistableBundle;->putBooleanArray(Ljava/lang/String;[Z)V
 
     goto/16 :goto_0
 
-    .line 56
+    .line 18
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Illegal value type boolean[] for key \""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -207,7 +215,7 @@
 
     throw p0
 
-    .line 59
+    .line 19
     :cond_8
     instance-of v5, v3, [D
 
@@ -219,7 +227,7 @@
 
     goto/16 :goto_0
 
-    .line 60
+    .line 20
     :cond_9
     instance-of v5, v3, [I
 
@@ -231,7 +239,7 @@
 
     goto/16 :goto_0
 
-    .line 61
+    .line 21
     :cond_a
     instance-of v5, v3, [J
 
@@ -243,15 +251,15 @@
 
     goto/16 :goto_0
 
-    .line 64
+    .line 22
     :cond_b
     instance-of v5, v3, [Ljava/lang/Object;
 
     const-string v6, " for key \""
 
-    if-eqz v5, :cond_e
+    if-eqz v5, :cond_d
 
-    .line 65
+    .line 23
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
@@ -260,51 +268,42 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lkotlin/d/b/h;->a(Ljava/lang/Object;)V
+    invoke-static {v5}, Lj/m/c/i;->a(Ljava/lang/Object;)V
 
-    .line 67
+    .line 24
     const-class v8, Ljava/lang/String;
 
-    .line 68
+    .line 25
     invoke-virtual {v8, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_d
+    if-eqz v8, :cond_c
 
-    if-eqz v3, :cond_c
-
-    .line 69
+    .line 26
     check-cast v3, [Ljava/lang/String;
 
     invoke-virtual {v0, v4, v3}, Landroid/os/PersistableBundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
     goto/16 :goto_0
 
+    .line 27
     :cond_c
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type kotlin.Array<kotlin.String>"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 72
-    :cond_d
     invoke-virtual {v5}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 73
+    .line 28
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 74
+    .line 29
     new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Illegal value array type "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -318,13 +317,13 @@
 
     move-result-object p0
 
-    .line 73
+    .line 30
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 81
-    :cond_e
+    .line 31
+    :cond_d
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -333,14 +332,16 @@
 
     move-result-object p0
 
-    .line 82
+    .line 32
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Illegal value type "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -358,6 +359,6 @@
 
     throw v0
 
-    :cond_f
+    :cond_e
     return-object v0
 .end method

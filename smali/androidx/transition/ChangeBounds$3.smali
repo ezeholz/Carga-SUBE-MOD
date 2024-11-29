@@ -1,4 +1,4 @@
-.class final Landroidx/transition/ChangeBounds$3;
+.class public final Landroidx/transition/ChangeBounds$3;
 .super Landroid/util/Property;
 .source "ChangeBounds.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -24,10 +24,10 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 100
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final get(Landroidx/transition/ChangeBounds$ViewBounds;)Landroid/graphics/PointF;
+.method public get(Landroidx/transition/ChangeBounds$ViewBounds;)Landroid/graphics/PointF;
     .locals 0
 
     const/4 p1, 0x0
@@ -43,10 +43,10 @@
     return-object p1
 .end method
 
-.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 100
+    .line 1
     check-cast p1, Landroidx/transition/ChangeBounds$ViewBounds;
 
     invoke-virtual {p0, p1}, Landroidx/transition/ChangeBounds$3;->get(Landroidx/transition/ChangeBounds$ViewBounds;)Landroid/graphics/PointF;
@@ -56,19 +56,19 @@
     return-object p1
 .end method
 
-.method public final set(Landroidx/transition/ChangeBounds$ViewBounds;Landroid/graphics/PointF;)V
+.method public set(Landroidx/transition/ChangeBounds$ViewBounds;Landroid/graphics/PointF;)V
     .locals 0
 
-    .line 103
+    .line 2
     invoke-virtual {p1, p2}, Landroidx/transition/ChangeBounds$ViewBounds;->setBottomRight(Landroid/graphics/PointF;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 100
+    .line 1
     check-cast p1, Landroidx/transition/ChangeBounds$ViewBounds;
 
     check-cast p2, Landroid/graphics/PointF;

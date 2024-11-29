@@ -92,61 +92,61 @@
 
 .field public static final abc_search_view_preferred_width:I = 0x7f070037
 
-.field public static final abc_switch_padding:I = 0x7f07003b
+.field public static final abc_switch_padding:I = 0x7f07003e
 
-.field public static final abc_text_size_body_1_material:I = 0x7f07003c
+.field public static final abc_text_size_body_1_material:I = 0x7f07003f
 
-.field public static final abc_text_size_body_2_material:I = 0x7f07003d
+.field public static final abc_text_size_body_2_material:I = 0x7f070040
 
-.field public static final abc_text_size_button_material:I = 0x7f07003e
+.field public static final abc_text_size_button_material:I = 0x7f070041
 
-.field public static final abc_text_size_caption_material:I = 0x7f07003f
+.field public static final abc_text_size_caption_material:I = 0x7f070042
 
-.field public static final abc_text_size_display_1_material:I = 0x7f070040
+.field public static final abc_text_size_display_1_material:I = 0x7f070043
 
-.field public static final abc_text_size_display_2_material:I = 0x7f070041
+.field public static final abc_text_size_display_2_material:I = 0x7f070044
 
-.field public static final abc_text_size_display_3_material:I = 0x7f070042
+.field public static final abc_text_size_display_3_material:I = 0x7f070045
 
-.field public static final abc_text_size_display_4_material:I = 0x7f070043
+.field public static final abc_text_size_display_4_material:I = 0x7f070046
 
-.field public static final abc_text_size_headline_material:I = 0x7f070044
+.field public static final abc_text_size_headline_material:I = 0x7f070047
 
-.field public static final abc_text_size_large_material:I = 0x7f070045
+.field public static final abc_text_size_large_material:I = 0x7f070048
 
-.field public static final abc_text_size_medium_material:I = 0x7f070046
+.field public static final abc_text_size_medium_material:I = 0x7f070049
 
-.field public static final abc_text_size_menu_material:I = 0x7f070048
+.field public static final abc_text_size_menu_material:I = 0x7f07004b
 
-.field public static final abc_text_size_small_material:I = 0x7f070049
+.field public static final abc_text_size_small_material:I = 0x7f07004c
 
-.field public static final abc_text_size_subhead_material:I = 0x7f07004a
+.field public static final abc_text_size_subhead_material:I = 0x7f07004d
 
-.field public static final abc_text_size_subtitle_material_toolbar:I = 0x7f07004b
+.field public static final abc_text_size_subtitle_material_toolbar:I = 0x7f07004e
 
-.field public static final abc_text_size_title_material:I = 0x7f07004c
+.field public static final abc_text_size_title_material:I = 0x7f07004f
 
-.field public static final abc_text_size_title_material_toolbar:I = 0x7f07004d
+.field public static final abc_text_size_title_material_toolbar:I = 0x7f070050
 
-.field public static final disabled_alpha_material_dark:I = 0x7f07009c
+.field public static final disabled_alpha_material_dark:I = 0x7f07009f
 
-.field public static final disabled_alpha_material_light:I = 0x7f07009d
+.field public static final disabled_alpha_material_light:I = 0x7f0700a0
 
-.field public static final highlight_alpha_material_colored:I = 0x7f0700a1
+.field public static final highlight_alpha_material_colored:I = 0x7f0700a4
 
-.field public static final highlight_alpha_material_dark:I = 0x7f0700a2
+.field public static final highlight_alpha_material_dark:I = 0x7f0700a5
 
-.field public static final highlight_alpha_material_light:I = 0x7f0700a3
+.field public static final highlight_alpha_material_light:I = 0x7f0700a6
 
-.field public static final notification_large_icon_height:I = 0x7f070143
+.field public static final notification_large_icon_height:I = 0x7f070146
 
-.field public static final notification_large_icon_width:I = 0x7f070144
+.field public static final notification_large_icon_width:I = 0x7f070147
 
-.field public static final notification_subtext_size:I = 0x7f07014b
+.field public static final notification_subtext_size:I = 0x7f07014e
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

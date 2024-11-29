@@ -27,23 +27,23 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 47
-    new-instance v0, Lcom/facebook/share/model/ShareOpenGraphObject$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareOpenGraphObject$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareOpenGraphObject$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareOpenGraphObject$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareOpenGraphObject;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 43
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareOpenGraphValueContainer;-><init>(Landroid/os/Parcel;)V
 
     return-void

@@ -46,7 +46,7 @@
 
 .field public static final EXTRA_TOOLBAR_ITEMS:Ljava/lang/String; = "android.support.customtabs.extra.TOOLBAR_ITEMS"
 
-.field private static final EXTRA_USER_OPT_OUT_FROM_CUSTOM_TABS:Ljava/lang/String; = "android.support.customtabs.extra.user_opt_out"
+.field public static final EXTRA_USER_OPT_OUT_FROM_CUSTOM_TABS:Ljava/lang/String; = "android.support.customtabs.extra.user_opt_out"
 
 .field public static final KEY_DESCRIPTION:Ljava/lang/String; = "android.support.customtabs.customaction.DESCRIPTION"
 
@@ -58,7 +58,7 @@
 
 .field public static final KEY_PENDING_INTENT:Ljava/lang/String; = "android.support.customtabs.customaction.PENDING_INTENT"
 
-.field private static final MAX_TOOLBAR_ITEMS:I = 0x5
+.field public static final MAX_TOOLBAR_ITEMS:I = 0x5
 
 .field public static final NO_TITLE:I = 0x0
 
@@ -69,21 +69,27 @@
 
 # instance fields
 .field public final intent:Landroid/content/Intent;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field public final startAnimationBundle:Landroid/os/Bundle;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Intent;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Intent;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 267
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268
+    .line 2
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
-    .line 269
+    .line 3
     iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsIntent;->startAnimationBundle:Landroid/os/Bundle;
 
     return-void
@@ -102,7 +108,7 @@
 
     if-nez p0, :cond_0
 
-    .line 547
+    .line 1
     new-instance p0, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.VIEW"
@@ -112,14 +118,14 @@
     :cond_0
     const/high16 v0, 0x10000000
 
-    .line 548
+    .line 2
     invoke-virtual {p0, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/4 v0, 0x1
 
     const-string v1, "android.support.customtabs.extra.user_opt_out"
 
-    .line 549
+    .line 3
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     return-object p0
@@ -132,14 +138,14 @@
 
     const-string v1, "android.support.customtabs.extra.user_opt_out"
 
-    .line 561
+    .line 1
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 562
+    .line 2
     invoke-virtual {p0}, Landroid/content/Intent;->getFlags()I
 
     move-result p0
@@ -150,9 +156,7 @@
 
     if-eqz p0, :cond_0
 
-    const/4 p0, 0x1
-
-    return p0
+    const/4 v0, 0x1
 
     :cond_0
     return v0
@@ -160,15 +164,15 @@
 
 
 # virtual methods
-.method public final launchUrl(Landroid/content/Context;Landroid/net/Uri;)V
+.method public launchUrl(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 1
 
-    .line 262
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 263
+    .line 2
     iget-object p2, p0, Landroidx/browser/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsIntent;->startAnimationBundle:Landroid/os/Bundle;

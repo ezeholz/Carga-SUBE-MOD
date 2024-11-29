@@ -3,11 +3,19 @@
 .source "IconCompatParcelizer.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 11
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +24,12 @@
 .method public static read(Landroidx/versionedparcelable/VersionedParcel;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 3
 
-    .line 14
+    .line 1
     new-instance v0, Landroidx/core/graphics/drawable/IconCompat;
 
     invoke-direct {v0}, Landroidx/core/graphics/drawable/IconCompat;-><init>()V
 
-    .line 15
+    .line 2
     iget v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mType:I
 
     const/4 v2, 0x1
@@ -32,7 +40,7 @@
 
     iput v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mType:I
 
-    .line 16
+    .line 3
     iget-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mData:[B
 
     const/4 v2, 0x2
@@ -43,7 +51,7 @@
 
     iput-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mData:[B
 
-    .line 17
+    .line 4
     iget-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mParcelable:Landroid/os/Parcelable;
 
     const/4 v2, 0x3
@@ -54,7 +62,7 @@
 
     iput-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mParcelable:Landroid/os/Parcelable;
 
-    .line 18
+    .line 5
     iget v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
 
     const/4 v2, 0x4
@@ -65,7 +73,7 @@
 
     iput v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
 
-    .line 19
+    .line 6
     iget v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mInt2:I
 
     const/4 v2, 0x5
@@ -76,7 +84,7 @@
 
     iput v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mInt2:I
 
-    .line 20
+    .line 7
     iget-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mTintList:Landroid/content/res/ColorStateList;
 
     const/4 v2, 0x6
@@ -89,7 +97,7 @@
 
     iput-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mTintList:Landroid/content/res/ColorStateList;
 
-    .line 21
+    .line 8
     iget-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mTintModeStr:Ljava/lang/String;
 
     const/4 v2, 0x7
@@ -100,7 +108,7 @@
 
     iput-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mTintModeStr:Ljava/lang/String;
 
-    .line 22
+    .line 9
     iget-object v1, v0, Landroidx/core/graphics/drawable/IconCompat;->mString1:Ljava/lang/String;
 
     const/16 v2, 0x8
@@ -111,7 +119,7 @@
 
     iput-object p0, v0, Landroidx/core/graphics/drawable/IconCompat;->mString1:Ljava/lang/String;
 
-    .line 23
+    .line 10
     invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->onPostParceling()V
 
     return-object v0
@@ -122,117 +130,101 @@
 
     const/4 v0, 0x1
 
-    .line 29
+    .line 1
     invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/VersionedParcel;->setSerializationFlags(ZZ)V
 
-    .line 30
+    .line 2
     invoke-virtual {p1}, Landroidx/versionedparcelable/VersionedParcel;->isStream()Z
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroidx/core/graphics/drawable/IconCompat;->onPreParceling(Z)V
 
-    .line 31
+    .line 3
     iget v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mType:I
 
     const/4 v2, -0x1
 
     if-eq v2, v1, :cond_0
 
-    .line 32
-    iget v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mType:I
-
+    .line 4
     invoke-virtual {p1, v1, v0}, Landroidx/versionedparcelable/VersionedParcel;->writeInt(II)V
 
-    .line 34
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mData:[B
 
     if-eqz v0, :cond_1
 
-    .line 35
-    iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mData:[B
-
     const/4 v1, 0x2
 
+    .line 6
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeByteArray([BI)V
 
-    .line 37
+    .line 7
     :cond_1
     iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mParcelable:Landroid/os/Parcelable;
 
     if-eqz v0, :cond_2
 
-    .line 38
-    iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mParcelable:Landroid/os/Parcelable;
-
     const/4 v1, 0x3
 
+    .line 8
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 40
+    .line 9
     :cond_2
     iget v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
 
     if-eqz v0, :cond_3
 
-    .line 41
-    iget v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
-
     const/4 v1, 0x4
 
+    .line 10
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeInt(II)V
 
-    .line 43
+    .line 11
     :cond_3
     iget v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt2:I
 
     if-eqz v0, :cond_4
 
-    .line 44
-    iget v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt2:I
-
     const/4 v1, 0x5
 
+    .line 12
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeInt(II)V
 
-    .line 46
+    .line 13
     :cond_4
     iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintList:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_5
 
-    .line 47
-    iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintList:Landroid/content/res/ColorStateList;
-
     const/4 v1, 0x6
 
+    .line 14
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 49
+    .line 15
     :cond_5
     iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintModeStr:Ljava/lang/String;
 
     if-eqz v0, :cond_6
 
-    .line 50
-    iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintModeStr:Ljava/lang/String;
-
     const/4 v1, 0x7
 
+    .line 16
     invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->writeString(Ljava/lang/String;I)V
 
-    .line 52
+    .line 17
     :cond_6
-    iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mString1:Ljava/lang/String;
-
-    if-eqz v0, :cond_7
-
-    .line 53
     iget-object p0, p0, Landroidx/core/graphics/drawable/IconCompat;->mString1:Ljava/lang/String;
+
+    if-eqz p0, :cond_7
 
     const/16 v0, 0x8
 
+    .line 18
     invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->writeString(Ljava/lang/String;I)V
 
     :cond_7

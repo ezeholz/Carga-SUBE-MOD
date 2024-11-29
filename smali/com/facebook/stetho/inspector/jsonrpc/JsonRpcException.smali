@@ -4,14 +4,14 @@
 
 
 # instance fields
-.field private final mErrorMessage:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
+.field public final mErrorMessage:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;)V
     .locals 2
 
-    .line 19
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -34,7 +34,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 20
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -51,7 +51,7 @@
 .method public getErrorMessage()Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
     .locals 1
 
-    .line 24
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;->mErrorMessage:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
     return-object v0

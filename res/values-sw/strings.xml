@@ -45,10 +45,6 @@
     <string name="common_open_on_phone">Fungua kwenye simu</string>
     <string name="common_signin_button_text">Ingia katika akaunti</string>
     <string name="common_signin_button_text_long">Ingia katika akaunti ukitumia Google</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">tarehe %s</string>
-    <string name="joda_time_android_preposition_for_time">Saa %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Tafuta</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

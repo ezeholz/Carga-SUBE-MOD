@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "GraphRequest.java"
 
-# interfaces
-.implements Lcom/facebook/GraphRequest$b;
-
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -15,3 +12,8 @@
     accessFlags = 0x609
     name = "d"
 .end annotation
+
+
+# virtual methods
+.method public abstract a(Lg/c/k;)V
+.end method

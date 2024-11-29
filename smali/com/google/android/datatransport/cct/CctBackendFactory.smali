@@ -3,14 +3,19 @@
 .source "CctBackendFactory.java"
 
 # interfaces
-.implements Lcom/google/android/datatransport/runtime/backends/d;
+.implements Lg/d/a/a/f/o/d;
+
+
+# annotations
+.annotation build Landroidx/annotation/Keep;
+.end annotation
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,30 +23,26 @@
 
 
 # virtual methods
-.method public create(Lcom/google/android/datatransport/runtime/backends/h;)Lcom/google/android/datatransport/runtime/backends/m;
-    .locals 4
+.method public create(Lg/d/a/a/f/o/h;)Lg/d/a/a/f/o/m;
+    .locals 3
 
-    .line 26
-    new-instance v0, Lcom/google/android/datatransport/cct/b;
+    .line 1
+    new-instance v0, Lg/d/a/a/e/d;
 
-    .line 27
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/h;->a()Landroid/content/Context;
+    .line 2
+    check-cast p1, Lg/d/a/a/f/o/c;
 
-    move-result-object v1
+    .line 3
+    iget-object v1, p1, Lg/d/a/a/f/o/c;->a:Landroid/content/Context;
 
-    .line 28
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/h;->b()Lcom/google/android/datatransport/runtime/d/a;
+    .line 4
+    iget-object v2, p1, Lg/d/a/a/f/o/c;->b:Lg/d/a/a/f/t/a;
 
-    move-result-object v2
+    .line 5
+    iget-object p1, p1, Lg/d/a/a/f/o/c;->c:Lg/d/a/a/f/t/a;
 
-    .line 29
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/h;->c()Lcom/google/android/datatransport/runtime/d/a;
-
-    move-result-object p1
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, p1, v3}, Lcom/google/android/datatransport/cct/b;-><init>(Landroid/content/Context;Lcom/google/android/datatransport/runtime/d/a;Lcom/google/android/datatransport/runtime/d/a;B)V
+    .line 6
+    invoke-direct {v0, v1, v2, p1}, Lg/d/a/a/e/d;-><init>(Landroid/content/Context;Lg/d/a/a/f/t/a;Lg/d/a/a/f/t/a;)V
 
     return-object v0
 .end method

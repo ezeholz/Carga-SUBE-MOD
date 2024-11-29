@@ -12,17 +12,17 @@
 
 
 # static fields
-.field private static final FILENAME_PREFIX:Ljava/lang/String; = "network-response-body-"
+.field public static final FILENAME_PREFIX:Ljava/lang/String; = "network-response-body-"
 
-.field private static final PRETTY_PRINT_TIMEOUT_SEC:I = 0xa
+.field public static final PRETTY_PRINT_TIMEOUT_SEC:I = 0xa
 
-.field private static final TAG:Ljava/lang/String; = "ResponseBodyFileManager"
+.field public static final TAG:Ljava/lang/String; = "ResponseBodyFileManager"
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field private final mRequestIdMap:Ljava/util/Map;
+.field public final mRequestIdMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -38,10 +38,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 49
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -52,23 +52,19 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mRequestIdMap:Ljava/util/Map;
 
-    .line 50
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mContext:Landroid/content/Context;
 
     return-void
 .end method
 
-.method private static getFilename(Ljava/lang/String;)Ljava/lang/String;
+.method public static getFilename(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-
-    .line 126
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
 
     const-string v0, "network-response-body-"
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {v0, p0}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -78,12 +74,12 @@
 .method private prettyPrintContentWithTimeOut(Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;Ljava/io/InputStream;)Ljava/lang/String;
     .locals 3
 
-    .line 92
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;-><init>(Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;Ljava/io/InputStream;Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;)V
 
-    .line 95
+    .line 2
     invoke-static {}, Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinterExecutorHolder;->getExecutorService()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
@@ -94,7 +90,7 @@
 
     return-object p1
 
-    .line 100
+    .line 3
     :cond_0
     invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
@@ -102,7 +98,7 @@
 
     const-wide/16 v0, 0xa
 
-    .line 102
+    .line 4
     :try_start_0
     sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -120,17 +116,17 @@
     :catch_0
     move-exception p1
 
-    .line 108
+    .line 5
     invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
-    .line 109
+    .line 6
     const-class p2, Ljava/io/IOException;
 
     invoke-static {p1, p2}, Lcom/facebook/stetho/common/ExceptionUtil;->propagateIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
-    .line 110
+    .line 7
     invoke-static {p1}, Lcom/facebook/stetho/common/ExceptionUtil;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -140,17 +136,19 @@
     :catch_1
     const/4 v0, 0x1
 
-    .line 104
+    .line 8
     invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    .line 105
+    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "Time out after 10 seconds of attempting to pretty print\n"
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
+    .line 10
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->readAsUTF8(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p2
@@ -169,7 +167,7 @@
 .method public associateAsyncPrettyPrinterWithId(Ljava/lang/String;Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;)V
     .locals 1
 
-    .line 141
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mRequestIdMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -180,17 +178,13 @@
 
     return-void
 
-    .line 142
+    .line 2
     :cond_0
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
     const-string v0, "cannot associate different pretty printers with the same request id: "
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -202,7 +196,7 @@
 .method public cleanupFiles()V
     .locals 7
 
-    .line 54
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -224,7 +218,7 @@
 
     aget-object v4, v0, v2
 
-    .line 55
+    .line 2
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -237,19 +231,19 @@
 
     if-eqz v5, :cond_0
 
-    .line 56
+    .line 3
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 57
-    new-instance v5, Ljava/lang/StringBuilder;
+    const-string v5, "Failed to delete "
 
-    const-string v6, "Failed to delete "
+    .line 4
+    invoke-static {v5}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v5
 
     invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -271,7 +265,7 @@
     :cond_1
     const-string v0, "Cleaned up temporary network files."
 
-    .line 61
+    .line 5
     invoke-static {v3, v0}, Lcom/facebook/stetho/common/LogRedirector;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -280,7 +274,7 @@
 .method public openResponseBodyFile(Ljava/lang/String;Z)Ljava/io/OutputStream;
     .locals 2
 
-    .line 116
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->getFilename(Ljava/lang/String;)Ljava/lang/String;
@@ -293,12 +287,12 @@
 
     move-result-object p1
 
-    .line 117
+    .line 2
     invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
 
     if-eqz p2, :cond_0
 
-    .line 119
+    .line 3
     new-instance p2, Landroid/util/Base64OutputStream;
 
     invoke-direct {p2, p1, v1}, Landroid/util/Base64OutputStream;-><init>(Ljava/io/OutputStream;I)V
@@ -312,7 +306,7 @@
 .method public readFile(Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/ResponseBodyData;
     .locals 3
 
-    .line 65
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->getFilename(Ljava/lang/String;)Ljava/lang/String;
@@ -323,7 +317,7 @@
 
     move-result-object v0
 
-    .line 67
+    .line 2
     :try_start_0
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
@@ -333,7 +327,7 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 71
+    .line 3
     new-instance v2, Lcom/facebook/stetho/inspector/network/ResponseBodyData;
 
     invoke-direct {v2}, Lcom/facebook/stetho/inspector/network/ResponseBodyData;-><init>()V
@@ -347,11 +341,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 72
+    .line 4
     :goto_0
     iput-boolean v1, v2, Lcom/facebook/stetho/inspector/network/ResponseBodyData;->base64Encoded:Z
 
-    .line 74
+    .line 5
     iget-object v1, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->mRequestIdMap:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -362,7 +356,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 78
+    .line 6
     invoke-direct {p0, p1, v0}, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;->prettyPrintContentWithTimeOut(Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p1
@@ -371,7 +365,7 @@
 
     goto :goto_1
 
-    .line 80
+    .line 7
     :cond_1
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->readAsUTF8(Ljava/io/InputStream;)Ljava/lang/String;
 
@@ -381,13 +375,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 85
+    .line 8
     :goto_1
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     return-object v2
 
-    .line 69
+    .line 9
     :cond_2
     :try_start_1
     new-instance p1, Ljava/io/EOFException;
@@ -403,9 +397,9 @@
     :catchall_0
     move-exception p1
 
-    .line 85
+    .line 10
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 86
+    .line 11
     throw p1
 .end method

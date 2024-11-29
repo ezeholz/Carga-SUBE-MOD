@@ -1,4 +1,4 @@
-.class Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
+.class public Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
 .super Ljava/lang/Object;
 .source "LayoutInflaterCompat.java"
 
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Factory2Wrapper"
 .end annotation
 
 
 # instance fields
-.field final mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
+.field public final mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/view/LayoutInflaterFactory;)V
+.method public constructor <init>(Landroidx/core/view/LayoutInflaterFactory;)V
     .locals 0
 
-    .line 43
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
+    .line 2
     iput-object p1, p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;->mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
 
     return-void
@@ -39,7 +39,7 @@
 .method public onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 1
 
-    .line 55
+    .line 2
     iget-object v0, p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;->mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/view/LayoutInflaterFactory;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
@@ -52,7 +52,7 @@
 .method public onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 2
 
-    .line 49
+    .line 1
     iget-object v0, p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;->mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
 
     const/4 v1, 0x0
@@ -66,15 +66,15 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 61
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
+    const-class v1, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

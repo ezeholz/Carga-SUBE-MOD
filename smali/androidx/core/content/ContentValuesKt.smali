@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static final varargs contentValuesOf([Lkotlin/h;)Landroid/content/ContentValues;
+.method public static final varargs contentValuesOf([Lj/e;)Landroid/content/ContentValues;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Lkotlin/h<",
+            "Lj/e<",
             "Ljava/lang/String;",
             "+",
             "Ljava/lang/Object;",
@@ -20,16 +20,16 @@
 
     const-string v0, "pairs"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 28
+    .line 1
     new-instance v0, Landroid/content/ContentValues;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 29
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -41,23 +41,23 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 1000
-    iget-object v4, v3, Lkotlin/h;->a:Ljava/lang/Object;
+    .line 3
+    iget-object v4, v3, Lj/e;->d:Ljava/lang/Object;
 
-    .line 29
+    .line 4
     check-cast v4, Ljava/lang/String;
 
-    .line 2000
-    iget-object v3, v3, Lkotlin/h;->b:Ljava/lang/Object;
+    .line 5
+    iget-object v3, v3, Lj/e;->e:Ljava/lang/Object;
 
     if-nez v3, :cond_0
 
-    .line 31
+    .line 6
     invoke-virtual {v0, v4}, Landroid/content/ContentValues;->putNull(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 32
+    .line 7
     :cond_0
     instance-of v5, v3, Ljava/lang/String;
 
@@ -69,7 +69,7 @@
 
     goto :goto_0
 
-    .line 33
+    .line 8
     :cond_1
     instance-of v5, v3, Ljava/lang/Integer;
 
@@ -81,7 +81,7 @@
 
     goto :goto_0
 
-    .line 34
+    .line 9
     :cond_2
     instance-of v5, v3, Ljava/lang/Long;
 
@@ -93,7 +93,7 @@
 
     goto :goto_0
 
-    .line 35
+    .line 10
     :cond_3
     instance-of v5, v3, Ljava/lang/Boolean;
 
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 36
+    .line 11
     :cond_4
     instance-of v5, v3, Ljava/lang/Float;
 
@@ -117,7 +117,7 @@
 
     goto :goto_0
 
-    .line 37
+    .line 12
     :cond_5
     instance-of v5, v3, Ljava/lang/Double;
 
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .line 38
+    .line 13
     :cond_6
     instance-of v5, v3, [B
 
@@ -141,7 +141,7 @@
 
     goto :goto_0
 
-    .line 39
+    .line 14
     :cond_7
     instance-of v5, v3, Ljava/lang/Byte;
 
@@ -153,7 +153,7 @@
 
     goto :goto_0
 
-    .line 40
+    .line 15
     :cond_8
     instance-of v5, v3, Ljava/lang/Short;
 
@@ -165,7 +165,7 @@
 
     goto :goto_0
 
-    .line 42
+    .line 16
     :cond_9
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -175,14 +175,16 @@
 
     move-result-object p0
 
-    .line 43
+    .line 17
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Illegal value type "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

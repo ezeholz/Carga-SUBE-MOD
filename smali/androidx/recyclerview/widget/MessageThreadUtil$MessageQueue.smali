@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
+.class public Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
 .super Ljava/lang/Object;
 .source "MessageThreadUtil.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MessageQueue"
 .end annotation
 
 
 # instance fields
-.field private mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+.field public mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 233
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method declared-synchronized next()Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+.method public declared-synchronized next()Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
     .locals 2
 
     monitor-enter p0
 
-    .line 238
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
     :try_end_0
@@ -45,17 +45,17 @@
 
     const/4 v0, 0x0
 
-    .line 239
+    .line 2
     monitor-exit p0
 
     return-object v0
 
-    .line 241
+    .line 3
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 242
+    .line 4
     iget-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
@@ -64,7 +64,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 243
+    .line 5
     monitor-exit p0
 
     return-object v0
@@ -77,12 +77,12 @@
     throw v0
 .end method
 
-.method declared-synchronized removeMessages(I)V
+.method public declared-synchronized removeMessages(I)V
     .locals 4
 
     monitor-enter p0
 
-    .line 264
+    .line 1
     :goto_0
     :try_start_0
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
@@ -95,48 +95,48 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 265
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 266
+    .line 3
     iget-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     iput-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 267
+    .line 4
     invoke-virtual {v0}, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->recycle()V
 
     goto :goto_0
 
-    .line 269
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     if-eqz v0, :cond_2
 
-    .line 270
+    .line 6
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 271
+    .line 7
     iget-object v1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 273
+    .line 8
     iget-object v2, v1, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 274
+    .line 9
     iget v3, v1, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->what:I
 
     if-ne v3, p1, :cond_1
 
-    .line 275
+    .line 10
     iput-object v2, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 276
+    .line 11
     invoke-virtual {v1}, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->recycle()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -151,7 +151,7 @@
 
     goto :goto_1
 
-    .line 283
+    .line 12
     :cond_2
     monitor-exit p0
 
@@ -171,50 +171,50 @@
     goto :goto_3
 .end method
 
-.method declared-synchronized sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+.method public declared-synchronized sendMessage(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
     .locals 2
 
     monitor-enter p0
 
-    .line 252
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     if-nez v0, :cond_0
 
-    .line 253
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 254
+    .line 3
     monitor-exit p0
 
     return-void
 
-    .line 256
+    .line 4
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 257
+    .line 5
     :goto_0
     iget-object v1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     if-eqz v1, :cond_1
 
-    .line 258
+    .line 6
     iget-object v0, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     goto :goto_0
 
-    .line 260
+    .line 7
     :cond_1
     iput-object p1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 261
+    .line 8
     monitor-exit p0
 
     return-void
@@ -233,23 +233,23 @@
     goto :goto_1
 .end method
 
-.method declared-synchronized sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
+.method public declared-synchronized sendMessageAtFrontOfQueue(Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;)V
     .locals 1
 
     monitor-enter p0
 
-    .line 247
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     iput-object v0, p1, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
-    .line 248
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;->mRoot:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 249
+    .line 3
     monitor-exit p0
 
     return-void

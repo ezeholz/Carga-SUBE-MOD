@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/CSS$3$1;
+.class public Lcom/facebook/stetho/inspector/protocol/module/CSS$3$1;
 .super Ljava/lang/Object;
 .source "CSS.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Lcom/facebook/stetho/inspector/protocol/module/CSS$3;
+.field public final synthetic this$1:Lcom/facebook/stetho/inspector/protocol/module/CSS$3;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$3;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$3;)V
     .locals 0
 
-    .line 206
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$3$1;->this$1:Lcom/facebook/stetho/inspector/protocol/module/CSS$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,20 +38,20 @@
 .method public store(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 209
+    .line 1
     new-instance p3, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSProperty;
 
     const/4 v0, 0x0
 
     invoke-direct {p3, v0}, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSProperty;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$1;)V
 
-    .line 210
+    .line 2
     iput-object p1, p3, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSProperty;->name:Ljava/lang/String;
 
-    .line 211
+    .line 3
     iput-object p2, p3, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSProperty;->value:Ljava/lang/String;
 
-    .line 212
+    .line 4
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$3$1;->this$1:Lcom/facebook/stetho/inspector/protocol/module/CSS$3;
 
     iget-object p1, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$3;->val$result:Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;

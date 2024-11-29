@@ -35,26 +35,26 @@
 
 
 # instance fields
-.field private final mNetworkPeerManager:Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
+.field public final mNetworkPeerManager:Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
 
-.field private final mResponseBodyFileManager:Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
+.field public final mResponseBodyFileManager:Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 38
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/inspector/network/NetworkPeerManager;->getOrCreateInstance(Landroid/content/Context;)Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Network;->mNetworkPeerManager:Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
 
-    .line 40
+    .line 3
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/network/NetworkPeerManager;->getResponseBodyFileManager()Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
 
     move-result-object p1
@@ -67,14 +67,14 @@
 .method private readResponseBody(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Network$GetResponseBodyResponse;
     .locals 4
 
-    .line 77
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Network$GetResponseBodyResponse;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/facebook/stetho/inspector/protocol/module/Network$GetResponseBodyResponse;-><init>(Lcom/facebook/stetho/inspector/protocol/module/Network$1;)V
 
-    .line 80
+    .line 2
     :try_start_0
     iget-object v2, p0, Lcom/facebook/stetho/inspector/protocol/module/Network;->mResponseBodyFileManager:Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
 
@@ -84,12 +84,12 @@
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 86
+    .line 3
     iget-object v1, p1, Lcom/facebook/stetho/inspector/network/ResponseBodyData;->data:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/facebook/stetho/inspector/protocol/module/Network$GetResponseBodyResponse;->body:Ljava/lang/String;
 
-    .line 87
+    .line 4
     iget-boolean p1, p1, Lcom/facebook/stetho/inspector/network/ResponseBodyData;->base64Encoded:Z
 
     iput-boolean p1, v0, Lcom/facebook/stetho/inspector/protocol/module/Network$GetResponseBodyResponse;->base64Encoded:Z
@@ -99,14 +99,14 @@
     :catch_0
     move-exception p1
 
-    .line 82
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
     new-instance v2, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
     sget-object v3, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->INTERNAL_ERROR:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    .line 83
+    .line 6
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -125,10 +125,10 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 50
+    .line 1
     iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Network;->mNetworkPeerManager:Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
 
-    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/network/NetworkPeerManager;->removePeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
+    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->removePeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
 
     return-void
 .end method
@@ -138,10 +138,10 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 45
+    .line 1
     iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Network;->mNetworkPeerManager:Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
 
-    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/network/NetworkPeerManager;->addPeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)Z
+    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->addPeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)Z
 
     return-void
 .end method
@@ -156,12 +156,12 @@
     :try_start_0
     const-string v0, "requestId"
 
-    .line 62
+    .line 1
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 63
+    .line 2
     invoke-direct {p0, p2}, Lcom/facebook/stetho/inspector/protocol/module/Network;->readResponseBody(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Network$GetResponseBodyResponse;
 
     move-result-object p1
@@ -174,14 +174,14 @@
     :catch_0
     move-exception p2
 
-    .line 69
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
     new-instance v1, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
     sget-object v2, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->INTERNAL_ERROR:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    .line 70
+    .line 4
     invoke-virtual {p2}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -195,14 +195,14 @@
     :catch_1
     move-exception p2
 
-    .line 65
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
     new-instance v1, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
     sget-object v2, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->INTERNAL_ERROR:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    .line 66
+    .line 6
     invoke-virtual {p2}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -217,10 +217,10 @@
 .method public setPrettyPrinterInitializer(Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinterInitializer;)V
     .locals 1
 
-    .line 99
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Network;->mNetworkPeerManager:Lcom/facebook/stetho/inspector/network/NetworkPeerManager;
 
     invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/network/NetworkPeerManager;->setPrettyPrinterInitializer(Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinterInitializer;)V

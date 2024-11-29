@@ -61,6 +61,7 @@
     <item type="id" name="actions" />
     <item type="id" name="activity_chooser_view_content" />
     <item type="id" name="alertTitle" />
+    <item type="id" name="appBar" />
     <item type="id" name="barrier2" />
     <item type="id" name="browser_actions_header_text" />
     <item type="id" name="browser_actions_menu_item_icon" />
@@ -68,6 +69,7 @@
     <item type="id" name="browser_actions_menu_items" />
     <item type="id" name="browser_actions_menu_view" />
     <item type="id" name="buttonCrearCuenta" />
+    <item type="id" name="buttonDownloadSubeApp" />
     <item type="id" name="buttonIngresar" />
     <item type="id" name="buttonPanel" />
     <item type="id" name="cancel_action" />
@@ -179,6 +181,8 @@
     <item type="id" name="linearLayoutUpdateMessage" />
     <item type="id" name="list_item" />
     <item type="id" name="logout" />
+    <item type="id" name="lottieAnimationView" />
+    <item type="id" name="lottie_layer_name" />
     <item type="id" name="masked" />
     <item type="id" name="materialButtonIngresar" />
     <item type="id" name="media_actions" />
@@ -223,6 +227,7 @@
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
     <item type="id" name="primary" />
+    <item type="id" name="progressBar" />
     <item type="id" name="progressBar1" />
     <item type="id" name="progressBarGettingData" />
     <item type="id" name="progressBarLoading" />
@@ -259,6 +264,7 @@
     <item type="id" name="snackbar_text" />
     <item type="id" name="spaceHeader" />
     <item type="id" name="spacer" />
+    <item type="id" name="special_effects_controller_view_tag" />
     <item type="id" name="split_action_bar" />
     <item type="id" name="status_bar_latest_event_content" />
     <item type="id" name="subeProgressBar" />
@@ -325,6 +331,9 @@
     <item type="id" name="textViewRechargeResult" />
     <item type="id" name="textViewRechargeResultLabel" />
     <item type="id" name="textViewSaldoActual" />
+    <item type="id" name="textViewShutdownMessageBody" />
+    <item type="id" name="textViewShutdownMessageTitle" />
+    <item type="id" name="textViewShutdownWarning" />
     <item type="id" name="textViewTitle" />
     <item type="id" name="textViewUpdateMessage" />
     <item type="id" name="textViewWalletName" />
@@ -348,6 +357,9 @@
     <item type="id" name="up" />
     <item type="id" name="view" />
     <item type="id" name="view_offset_helper" />
+    <item type="id" name="view_tree_lifecycle_owner" />
+    <item type="id" name="view_tree_saved_state_registry_owner" />
+    <item type="id" name="view_tree_view_model_store_owner" />
     <item type="id" name="visible" />
     <item type="id" name="visible_removing_fragment_view_tag" />
     <item type="id" name="webView" />

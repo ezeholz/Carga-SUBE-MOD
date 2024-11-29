@@ -4,17 +4,21 @@
 
 
 # direct methods
-.method public static final backgroundColor(Landroid/text/SpannableStringBuilder;ILkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final backgroundColor(Landroid/text/SpannableStringBuilder;ILj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 2
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
             "I",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -22,26 +26,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 125
+    .line 1
     new-instance v0, Landroid/text/style/BackgroundColorSpan;
 
     invoke-direct {v0, p1}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
 
-    .line 180
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
 
-    .line 181
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p2
@@ -53,16 +57,16 @@
     return-object p0
 .end method
 
-.method public static final bold(Landroid/text/SpannableStringBuilder;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final bold(Landroid/text/SpannableStringBuilder;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -70,28 +74,28 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 87
+    .line 1
     new-instance v0, Landroid/text/style/StyleSpan;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroid/text/style/StyleSpan;-><init>(I)V
 
-    .line 164
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 165
-    invoke-interface {p1, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
@@ -103,15 +107,15 @@
     return-object p0
 .end method
 
-.method public static final buildSpannedString(Lkotlin/d/a/b;)Landroid/text/SpannedString;
+.method public static final buildSpannedString(Lj/m/b/l;)Landroid/text/SpannedString;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannedString;"
         }
@@ -119,37 +123,39 @@
 
     const-string v0, "builderAction"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 41
+    .line 1
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    .line 42
-    invoke-interface {p0, v0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-interface {p0, v0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
+    .line 3
     new-instance p0, Landroid/text/SpannedString;
-
-    check-cast v0, Ljava/lang/CharSequence;
 
     invoke-direct {p0, v0}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;)V
 
     return-object p0
 .end method
 
-.method public static final color(Landroid/text/SpannableStringBuilder;ILkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final color(Landroid/text/SpannableStringBuilder;ILj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 2
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
             "I",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -157,26 +163,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 115
+    .line 1
     new-instance v0, Landroid/text/style/ForegroundColorSpan;
 
     invoke-direct {v0, p1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
-    .line 176
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
 
-    .line 177
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p2
@@ -188,17 +194,17 @@
     return-object p0
 .end method
 
-.method public static final inSpans(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final inSpans(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
             "Ljava/lang/Object;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -206,25 +212,25 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "span"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 74
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 75
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 5
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
+    .line 6
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p2
@@ -236,7 +242,7 @@
     return-object p0
 .end method
 
-.method public static final inSpans(Landroid/text/SpannableStringBuilder;[Ljava/lang/Object;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final inSpans(Landroid/text/SpannableStringBuilder;[Ljava/lang/Object;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -244,10 +250,10 @@
             "Landroid/text/SpannableStringBuilder;",
             "[",
             "Ljava/lang/Object;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -255,25 +261,25 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "spans"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 57
+    .line 1
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 58
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
+    .line 3
     array-length p2, p1
 
     const/4 v1, 0x0
@@ -299,16 +305,16 @@
     return-object p0
 .end method
 
-.method public static final italic(Landroid/text/SpannableStringBuilder;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final italic(Landroid/text/SpannableStringBuilder;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -316,28 +322,28 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 96
+    .line 1
     new-instance v0, Landroid/text/style/StyleSpan;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Landroid/text/style/StyleSpan;-><init>(I)V
 
-    .line 168
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 169
-    invoke-interface {p1, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
@@ -349,17 +355,17 @@
     return-object p0
 .end method
 
-.method public static final scale(Landroid/text/SpannableStringBuilder;FLkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final scale(Landroid/text/SpannableStringBuilder;FLj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
             "F",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -367,26 +373,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 144
+    .line 1
     new-instance v0, Landroid/text/style/RelativeSizeSpan;
 
     invoke-direct {v0, p1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
 
-    .line 188
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
 
-    .line 189
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p2
@@ -398,16 +404,16 @@
     return-object p0
 .end method
 
-.method public static final strikeThrough(Landroid/text/SpannableStringBuilder;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final strikeThrough(Landroid/text/SpannableStringBuilder;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -415,26 +421,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 134
+    .line 1
     new-instance v0, Landroid/text/style/StrikethroughSpan;
 
     invoke-direct {v0}, Landroid/text/style/StrikethroughSpan;-><init>()V
 
-    .line 184
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 185
-    invoke-interface {p1, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
@@ -446,16 +452,16 @@
     return-object p0
 .end method
 
-.method public static final subscript(Landroid/text/SpannableStringBuilder;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final subscript(Landroid/text/SpannableStringBuilder;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -463,26 +469,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 162
+    .line 1
     new-instance v0, Landroid/text/style/SubscriptSpan;
 
     invoke-direct {v0}, Landroid/text/style/SubscriptSpan;-><init>()V
 
-    .line 196
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 197
-    invoke-interface {p1, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
@@ -494,16 +500,16 @@
     return-object p0
 .end method
 
-.method public static final superscript(Landroid/text/SpannableStringBuilder;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final superscript(Landroid/text/SpannableStringBuilder;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -511,26 +517,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 153
+    .line 1
     new-instance v0, Landroid/text/style/SuperscriptSpan;
 
     invoke-direct {v0}, Landroid/text/style/SuperscriptSpan;-><init>()V
 
-    .line 192
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 193
-    invoke-interface {p1, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
@@ -542,16 +548,16 @@
     return-object p0
 .end method
 
-.method public static final underline(Landroid/text/SpannableStringBuilder;Lkotlin/d/a/b;)Landroid/text/SpannableStringBuilder;
+.method public static final underline(Landroid/text/SpannableStringBuilder;Lj/m/b/l;)Landroid/text/SpannableStringBuilder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/SpannableStringBuilder;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)",
             "Landroid/text/SpannableStringBuilder;"
         }
@@ -559,26 +565,26 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "builderAction"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 105
+    .line 1
     new-instance v0, Landroid/text/style/UnderlineSpan;
 
     invoke-direct {v0}, Landroid/text/style/UnderlineSpan;-><init>()V
 
-    .line 172
+    .line 2
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    .line 173
-    invoke-interface {p1, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1

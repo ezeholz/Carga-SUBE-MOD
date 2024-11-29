@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
+.class public Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 .super Landroid/view/View$BaseSavedState;
 .source "AppCompatSpinner.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field mShowDropdown:Z
+.field public mShowDropdown:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 663
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;-><init>()V
@@ -44,13 +44,13 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 653
+    .line 2
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 654
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -70,10 +70,10 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcelable;)V
+.method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 649
+    .line 1
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -84,10 +84,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 659
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 660
+    .line 2
     iget-boolean p2, p0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;->mShowDropdown:Z
 
     int-to-byte p2, p2

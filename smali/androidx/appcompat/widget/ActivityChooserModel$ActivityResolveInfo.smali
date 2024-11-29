@@ -36,10 +36,10 @@
 .method public constructor <init>(Landroid/content/pm/ResolveInfo;)V
     .locals 0
 
-    .line 869
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 870
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     return-void
@@ -47,10 +47,10 @@
 
 
 # virtual methods
-.method public final compareTo(Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;)I
+.method public compareTo(Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;)I
     .locals 1
 
-    .line 898
+    .line 2
     iget p1, p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -68,10 +68,10 @@
     return p1
 .end method
 
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
+.method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 852
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->compareTo(Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;)I
@@ -81,7 +81,7 @@
     return p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
     const/4 v0, 0x1
@@ -97,11 +97,9 @@
 
     return v1
 
-    .line 886
+    .line 1
     :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
+    const-class v2, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -111,11 +109,11 @@
 
     return v1
 
-    .line 889
+    .line 2
     :cond_2
     check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
-    .line 890
+    .line 3
     iget v2, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -136,10 +134,10 @@
     return v0
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 1
 
-    .line 875
+    .line 1
     iget v0, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -151,24 +149,19 @@
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 903
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "["
-
-    .line 904
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "["
 
     const-string v1, "resolveInfo:"
 
-    .line 905
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1
+    invoke-static {v0, v1}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v0
+
+    .line 2
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     invoke-virtual {v1}, Landroid/content/pm/ResolveInfo;->toString()Ljava/lang/String;
@@ -179,7 +172,7 @@
 
     const-string v1, "; weight:"
 
-    .line 906
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/math/BigDecimal;
@@ -194,10 +187,10 @@
 
     const-string v1, "]"
 
-    .line 907
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 908
+    .line 5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

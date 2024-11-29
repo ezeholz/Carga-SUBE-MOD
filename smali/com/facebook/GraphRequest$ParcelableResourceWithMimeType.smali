@@ -40,9 +40,9 @@
 
 
 # instance fields
-.field final a:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
-.field final b:Landroid/os/Parcelable;
+.field public final e:Landroid/os/Parcelable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TRESOURCE;"
@@ -52,55 +52,46 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 2339
-    new-instance v0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType$1;
+    .line 1
+    new-instance v0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType$a;
 
-    invoke-direct {v0}, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType$a;-><init>()V
 
     sput-object v0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/os/Parcel;Lg/c/g;)V
+    .locals 0
 
-    .line 2363
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2364
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->a:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->d:Ljava/lang/String;
 
-    .line 2365
-    invoke-static {}, Lcom/facebook/d;->f()Landroid/content/Context;
+    .line 6
+    invoke-static {}, Lg/c/e;->a()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {p2}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->b:Landroid/os/Parcelable;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/os/Parcel;B)V
-    .locals 0
-
-    .line 2316
-    invoke-direct {p0, p1}, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;-><init>(Landroid/os/Parcel;)V
+    iput-object p1, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->e:Landroid/os/Parcelable;
 
     return-void
 .end method
@@ -115,14 +106,14 @@
         }
     .end annotation
 
-    .line 2358
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2359
-    iput-object p2, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->a:Ljava/lang/String;
+    .line 2
+    iput-object p2, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->d:Ljava/lang/String;
 
-    .line 2360
-    iput-object p1, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->b:Landroid/os/Parcelable;
+    .line 3
+    iput-object p1, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->e:Landroid/os/Parcelable;
 
     return-void
 .end method
@@ -140,13 +131,13 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 2334
-    iget-object v0, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->a:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 2335
-    iget-object v0, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->b:Landroid/os/Parcelable;
+    .line 2
+    iget-object v0, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->e:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 

@@ -4,14 +4,14 @@
 
 
 # static fields
-.field private static final PREFIX:Ljava/lang/String; = "stetho_"
+.field public static final PREFIX:Ljava/lang/String; = "stetho_"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,14 +20,14 @@
 .method public static createCustomAddress(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 18
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "stetho_"
 
-    const-string v1, "stetho_"
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 20
+    .line 2
     invoke-static {}, Lcom/facebook/stetho/common/ProcessUtil;->getProcessName()Ljava/lang/String;
 
     move-result-object v1

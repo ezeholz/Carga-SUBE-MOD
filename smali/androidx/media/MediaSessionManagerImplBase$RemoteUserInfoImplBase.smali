@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
+.class public Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 .super Ljava/lang/Object;
 .source "MediaSessionManagerImplBase.java"
 
@@ -12,33 +12,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "RemoteUserInfoImplBase"
 .end annotation
 
 
 # instance fields
-.field private mPackageName:Ljava/lang/String;
+.field public mPackageName:Ljava/lang/String;
 
-.field private mPid:I
+.field public mPid:I
 
-.field private mUid:I
+.field public mUid:I
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 125
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 126
+    .line 2
     iput-object p1, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
-    .line 127
+    .line 3
     iput p2, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPid:I
 
-    .line 128
+    .line 4
     iput p3, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mUid:I
 
     return-void
@@ -55,7 +55,7 @@
 
     return v0
 
-    .line 151
+    .line 1
     :cond_0
     instance-of v1, p1, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 
@@ -65,11 +65,11 @@
 
     return v2
 
-    .line 154
+    .line 2
     :cond_1
     check-cast p1, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 
-    .line 155
+    .line 3
     iget-object v1, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
     iget-object v3, p1, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
@@ -92,16 +92,19 @@
 
     if-ne v1, p1, :cond_2
 
-    return v0
+    goto :goto_0
 
     :cond_2
-    return v2
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 133
+    .line 1
     iget-object v0, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -110,7 +113,7 @@
 .method public getPid()I
     .locals 1
 
-    .line 138
+    .line 1
     iget v0, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPid:I
 
     return v0
@@ -119,7 +122,7 @@
 .method public getUid()I
     .locals 1
 
-    .line 143
+    .line 1
     iget v0, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mUid:I
 
     return v0
@@ -132,7 +135,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 162
+    .line 1
     iget-object v1, p0, Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;->mPackageName:Ljava/lang/String;
 
     const/4 v2, 0x0

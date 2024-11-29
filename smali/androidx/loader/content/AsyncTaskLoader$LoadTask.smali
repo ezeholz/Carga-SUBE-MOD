@@ -1,4 +1,4 @@
-.class final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
+.class public final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
 .super Landroidx/loader/content/ModernAsyncTask;
 .source "AsyncTaskLoader.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "LoadTask"
 .end annotation
 
@@ -28,23 +28,23 @@
 
 
 # instance fields
-.field private final mDone:Ljava/util/concurrent/CountDownLatch;
+.field public final mDone:Ljava/util/concurrent/CountDownLatch;
 
-.field final synthetic this$0:Landroidx/loader/content/AsyncTaskLoader;
+.field public final synthetic this$0:Landroidx/loader/content/AsyncTaskLoader;
 
-.field waiting:Z
+.field public waiting:Z
 
 
 # direct methods
-.method constructor <init>(Landroidx/loader/content/AsyncTaskLoader;)V
+.method public constructor <init>(Landroidx/loader/content/AsyncTaskLoader;)V
     .locals 1
 
-    .line 48
+    .line 1
     iput-object p1, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
     invoke-direct {p0}, Landroidx/loader/content/ModernAsyncTask;-><init>()V
 
-    .line 49
+    .line 2
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v0, 0x1
@@ -58,10 +58,10 @@
 
 
 # virtual methods
-.method protected final bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 48
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
@@ -71,7 +71,7 @@
     return-object p1
 .end method
 
-.method protected final varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
+.method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -81,7 +81,7 @@
         }
     .end annotation
 
-    .line 60
+    .line 2
     :try_start_0
     iget-object p1, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
@@ -96,8 +96,8 @@
     :catch_0
     move-exception p1
 
-    .line 64
-    invoke-virtual {p0}, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->isCancelled()Z
+    .line 3
+    invoke-virtual {p0}, Landroidx/loader/content/ModernAsyncTask;->isCancelled()Z
 
     move-result v0
 
@@ -107,12 +107,12 @@
 
     return-object p1
 
-    .line 71
+    .line 4
     :cond_0
     throw p1
 .end method
 
-.method protected final onCancelled(Ljava/lang/Object;)V
+.method public onCancelled(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -120,7 +120,7 @@
         }
     .end annotation
 
-    .line 94
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
@@ -128,7 +128,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 96
+    .line 2
     iget-object p1, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -145,7 +145,7 @@
     throw p1
 .end method
 
-.method protected final onPostExecute(Ljava/lang/Object;)V
+.method public onPostExecute(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -153,7 +153,7 @@
         }
     .end annotation
 
-    .line 83
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
@@ -161,7 +161,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 85
+    .line 2
     iget-object p1, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -178,15 +178,15 @@
     throw p1
 .end method
 
-.method public final run()V
+.method public run()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 104
+    .line 1
     iput-boolean v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->waiting:Z
 
-    .line 105
+    .line 2
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
     invoke-virtual {v0}, Landroidx/loader/content/AsyncTaskLoader;->executePendingTask()V
@@ -194,10 +194,10 @@
     return-void
 .end method
 
-.method public final waitForLoader()V
+.method public waitForLoader()V
     .locals 1
 
-    .line 111
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 

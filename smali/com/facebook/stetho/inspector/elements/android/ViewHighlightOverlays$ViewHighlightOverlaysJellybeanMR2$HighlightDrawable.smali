@@ -1,4 +1,4 @@
-.class abstract Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;
+.class public abstract Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;
 .super Landroid/graphics/drawable/ColorDrawable;
 .source "ViewHighlightOverlays.java"
 
@@ -9,32 +9,32 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x408
+    accessFlags = 0x409
     name = "HighlightDrawable"
 .end annotation
 
 
 # instance fields
-.field protected final mMargins:Landroid/graphics/Rect;
+.field public final mMargins:Landroid/graphics/Rect;
 
-.field protected final mPaddings:Landroid/graphics/Rect;
+.field public final mPaddings:Landroid/graphics/Rect;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 102
+    .line 4
     invoke-direct {p0}, Landroid/graphics/drawable/ColorDrawable;-><init>()V
 
-    .line 95
+    .line 5
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
 
-    .line 96
+    .line 6
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -44,20 +44,20 @@
     return-void
 .end method
 
-.method constructor <init>(I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    .line 99
+    .line 1
     invoke-direct {p0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 95
+    .line 2
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
 
-    .line 96
+    .line 3
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -69,53 +69,47 @@
 
 
 # virtual methods
-.method highlightView(Landroid/view/View;)V
+.method public highlightView(Landroid/view/View;)V
     .locals 3
 
-    .line 106
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 107
+    .line 2
     instance-of v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v1, :cond_0
 
-    .line 108
+    .line 3
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 109
+    .line 4
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
 
     iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 110
-    iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
-
+    .line 5
     iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 111
-    iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
-
+    .line 6
     iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 112
-    iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
-
+    .line 7
     iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_0
 
-    .line 114
+    .line 8
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
 
@@ -123,22 +117,16 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 115
-    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
-
+    .line 9
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 116
-    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
-
+    .line 10
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 117
-    iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mMargins:Landroid/graphics/Rect;
-
+    .line 11
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 119
+    .line 12
     :goto_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mPaddings:Landroid/graphics/Rect;
 
@@ -148,7 +136,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 120
+    .line 13
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mPaddings:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
@@ -157,7 +145,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 121
+    .line 14
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mPaddings:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
@@ -166,7 +154,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 122
+    .line 15
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2$HighlightDrawable;->mPaddings:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I

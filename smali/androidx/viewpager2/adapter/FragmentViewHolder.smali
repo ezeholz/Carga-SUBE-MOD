@@ -4,19 +4,29 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/widget/FrameLayout;)V
+.method public constructor <init>(Landroid/widget/FrameLayout;)V
     .locals 0
+    .param p1    # Landroid/widget/FrameLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 33
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method static create(Landroid/view/ViewGroup;)Landroidx/viewpager2/adapter/FragmentViewHolder;
+.method public static create(Landroid/view/ViewGroup;)Landroidx/viewpager2/adapter/FragmentViewHolder;
     .locals 2
+    .param p0    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 37
+    .line 1
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -25,7 +35,7 @@
 
     invoke-direct {v0, p0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 38
+    .line 2
     new-instance p0, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v1, -0x1
@@ -34,7 +44,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 41
+    .line 3
     invoke-static {}, Landroidx/core/view/ViewCompat;->generateViewId()I
 
     move-result p0
@@ -43,10 +53,10 @@
 
     const/4 p0, 0x0
 
-    .line 42
+    .line 4
     invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->setSaveEnabled(Z)V
 
-    .line 43
+    .line 5
     new-instance p0, Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     invoke-direct {p0, v0}, Landroidx/viewpager2/adapter/FragmentViewHolder;-><init>(Landroid/widget/FrameLayout;)V
@@ -56,11 +66,13 @@
 
 
 # virtual methods
-.method final getContainer()Landroid/widget/FrameLayout;
+.method public getContainer()Landroid/widget/FrameLayout;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 47
-    iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentViewHolder;->itemView:Landroid/view/View;
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 

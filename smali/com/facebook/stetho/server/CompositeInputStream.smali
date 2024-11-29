@@ -4,38 +4,38 @@
 
 
 # instance fields
-.field private mCurrentIndex:I
+.field public mCurrentIndex:I
 
-.field private final mStreams:[Ljava/io/InputStream;
+.field public final mStreams:[Ljava/io/InputStream;
 
 
 # direct methods
 .method public constructor <init>([Ljava/io/InputStream;)V
     .locals 2
 
-    .line 24
+    .line 1
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     if-eqz p1, :cond_0
 
-    .line 25
+    .line 2
     array-length v0, p1
 
     const/4 v1, 0x2
 
     if-lt v0, v1, :cond_0
 
-    .line 28
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mStreams:[Ljava/io/InputStream;
 
     const/4 p1, 0x0
 
-    .line 29
+    .line 4
     iput p1, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mCurrentIndex:I
 
     return-void
 
-    .line 26
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    .line 44
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mStreams:[Ljava/io/InputStream;
 
@@ -61,7 +61,7 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 46
+    .line 2
     :try_start_0
     aget-object v2, v2, v1
 
@@ -91,7 +91,7 @@
 
     const-string v3, "Suppressing exception"
 
-    .line 53
+    .line 3
     invoke-static {v0, v3}, Lcom/facebook/stetho/common/LogUtil;->w(Ljava/lang/Throwable;Ljava/lang/String;)V
 
     :cond_2
@@ -109,7 +109,7 @@
 .method private tryMoveToNextStream()Z
     .locals 3
 
-    .line 102
+    .line 1
     iget v0, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mCurrentIndex:I
 
     add-int/lit8 v1, v0, 0x1
@@ -124,7 +124,7 @@
 
     add-int/2addr v0, v1
 
-    .line 103
+    .line 2
     iput v0, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mCurrentIndex:I
 
     return v1
@@ -140,7 +140,7 @@
 .method public available()I
     .locals 2
 
-    .line 34
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mStreams:[Ljava/io/InputStream;
 
     iget v1, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mCurrentIndex:I
@@ -157,7 +157,7 @@
 .method public close()V
     .locals 1
 
-    .line 39
+    .line 1
     iget v0, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mCurrentIndex:I
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/server/CompositeInputStream;->closeAll(I)V
@@ -168,7 +168,7 @@
 .method public mark(I)V
     .locals 0
 
-    .line 61
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -187,7 +187,7 @@
 .method public read()I
     .locals 2
 
-    .line 93
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mStreams:[Ljava/io/InputStream;
 
@@ -203,7 +203,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 94
+    .line 5
     invoke-direct {p0}, Lcom/facebook/stetho/server/CompositeInputStream;->tryMoveToNextStream()Z
 
     move-result v1
@@ -217,7 +217,7 @@
 .method public read([B)I
     .locals 2
 
-    .line 76
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -232,7 +232,7 @@
 .method public read([BII)I
     .locals 2
 
-    .line 82
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/server/CompositeInputStream;->mStreams:[Ljava/io/InputStream;
 
@@ -248,7 +248,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 83
+    .line 3
     invoke-direct {p0}, Lcom/facebook/stetho/server/CompositeInputStream;->tryMoveToNextStream()Z
 
     move-result v1
@@ -262,7 +262,7 @@
 .method public reset()V
     .locals 1
 
-    .line 71
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -275,10 +275,10 @@
 
     long-to-int p2, p1
 
-    .line 111
+    .line 1
     new-array p1, p2, [B
 
-    .line 112
+    .line 2
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/server/CompositeInputStream;->read([B)I
 
     move-result p1
@@ -287,10 +287,11 @@
 
     int-to-long p1, p1
 
-    return-wide p1
+    goto :goto_0
 
     :cond_0
     const-wide/16 p1, -0x1
 
+    :goto_0
     return-wide p1
 .end method

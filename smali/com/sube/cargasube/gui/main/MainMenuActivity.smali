@@ -1,38 +1,38 @@
 .class public Lcom/sube/cargasube/gui/main/MainMenuActivity;
-.super Lcom/sube/cargasube/gui/common/view/c;
+.super Lg/f/a/c/c/a/h;
 .source "MainMenuActivity.java"
 
 
 # static fields
-.field private static final c:Ljava/lang/String;
+.field public static final o:Ljava/lang/String;
 
 
 # instance fields
-.field a:Landroidx/drawerlayout/widget/DrawerLayout;
+.field public i:Landroidx/drawerlayout/widget/DrawerLayout;
 
-.field b:Landroidx/appcompat/app/ActionBarDrawerToggle;
+.field public j:Landroidx/appcompat/app/ActionBarDrawerToggle;
 
-.field private d:Landroid/widget/TextView;
+.field public k:Landroid/widget/TextView;
 
-.field private e:Landroid/widget/TextView;
+.field public l:Landroid/widget/TextView;
 
-.field private f:Lcom/sube/subemobileclient/core/c;
+.field public m:Lg/f/b/d/c;
 
-.field private i:Lcom/google/firebase/analytics/FirebaseAnalytics;
+.field public n:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 60
+    .line 1
     const-class v0, Lcom/sube/cargasube/gui/main/MainMenuActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->c:Ljava/lang/String;
+    sput-object v0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->o:Ljava/lang/String;
 
     return-void
 .end method
@@ -40,80 +40,15 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 58
-    invoke-direct {p0}, Lcom/sube/cargasube/gui/common/view/c;-><init>()V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/sube/cargasube/gui/main/MainMenuActivity;)Lcom/google/firebase/analytics/FirebaseAnalytics;
-    .locals 0
-
-    .line 58
-    iget-object p0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Lcom/google/firebase/analytics/FirebaseAnalytics;
-
-    return-object p0
-.end method
-
-.method private c()V
-    .locals 2
-
-    const v0, 0x7f0a00e8
-
-    .line 231
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    const/4 v1, 0x0
-
-    .line 232
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
-
-    const v0, 0x7f0a00ea
-
-    .line 234
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    .line 235
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
-
-    const v0, 0x7f0a00eb
-
-    .line 237
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    .line 238
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
-
-    const v0, 0x7f0a00e9
-
-    .line 240
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    .line 241
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
+    .line 1
+    invoke-direct {p0}, Lg/f/a/c/c/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public f()I
     .locals 1
 
     const v0, 0x7f0d0021
@@ -121,7 +56,7 @@
     return v0
 .end method
 
-.method public final b()Ljava/lang/CharSequence;
+.method public g()Ljava/lang/CharSequence;
     .locals 1
 
     const/4 v0, 0x0
@@ -129,23 +64,23 @@
     return-object v0
 .end method
 
-.method public final g()V
+.method public h()V
     .locals 7
 
     const v0, 0x7f0d0021
 
-    .line 263
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->setContentView(I)V
+    .line 1
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
     const/4 v0, 0x0
 
-    .line 264
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->a(Ljava/lang/CharSequence;)V
+    .line 2
+    invoke-virtual {p0, v0}, Lg/f/a/c/c/a/i;->a(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0095
+    const v0, 0x7f0a0097
 
-    .line 265
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -153,16 +88,16 @@
 
     check-cast v3, Landroidx/drawerlayout/widget/DrawerLayout;
 
-    iput-object v3, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->a:Landroidx/drawerlayout/widget/DrawerLayout;
+    iput-object v3, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Landroidx/drawerlayout/widget/DrawerLayout;
 
-    .line 267
+    .line 4
     new-instance v0, Landroidx/appcompat/app/ActionBarDrawerToggle;
 
-    iget-object v4, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->h:Landroidx/appcompat/widget/Toolbar;
+    iget-object v4, p0, Lg/f/a/c/c/a/i;->f:Landroidx/appcompat/widget/Toolbar;
 
-    const v5, 0x7f1200c6
+    const v5, 0x7f1200c3
 
-    const v6, 0x7f1200c5
+    const v6, 0x7f1200c2
 
     move-object v1, v0
 
@@ -170,60 +105,74 @@
 
     invoke-direct/range {v1 .. v6}, Landroidx/appcompat/app/ActionBarDrawerToggle;-><init>(Landroid/app/Activity;Landroidx/drawerlayout/widget/DrawerLayout;Landroidx/appcompat/widget/Toolbar;II)V
 
-    iput-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->b:Landroidx/appcompat/app/ActionBarDrawerToggle;
+    iput-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->j:Landroidx/appcompat/app/ActionBarDrawerToggle;
 
-    .line 269
-    iget-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->a:Landroidx/drawerlayout/widget/DrawerLayout;
+    .line 5
+    iget-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {v1, v0}, Landroidx/drawerlayout/widget/DrawerLayout;->addDrawerListener(Landroidx/drawerlayout/widget/DrawerLayout$DrawerListener;)V
 
-    const v0, 0x7f0a011e
+    const v0, 0x7f0a0123
 
-    .line 271
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
+    .line 6
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/material/navigation/NavigationView;
 
-    .line 273
-    invoke-virtual {v0}, Lcom/google/android/material/navigation/NavigationView;->getHeaderView$7529eef0()Landroid/view/View;
+    .line 7
+    iget-object v1, v0, Lcom/google/android/material/navigation/NavigationView;->j:Lg/d/a/c/z/g;
+
+    .line 8
+    iget-object v1, v1, Lg/d/a/c/z/g;->e:Landroid/widget/LinearLayout;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    const v2, 0x7f0a011d
+    const v3, 0x7f0a0122
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    iput-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->d:Landroid/widget/TextView;
-
-    .line 274
-    invoke-virtual {v0}, Lcom/google/android/material/navigation/NavigationView;->getHeaderView$7529eef0()Landroid/view/View;
-
-    move-result-object v1
-
-    const v2, 0x7f0a011c
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 9
+    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->e:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->k:Landroid/widget/TextView;
 
-    .line 276
-    new-instance v1, Lcom/sube/cargasube/gui/main/MainMenuActivity$2;
+    .line 10
+    iget-object v1, v0, Lcom/google/android/material/navigation/NavigationView;->j:Lg/d/a/c/z/g;
 
-    invoke-direct {v1, p0}, Lcom/sube/cargasube/gui/main/MainMenuActivity$2;-><init>(Lcom/sube/cargasube/gui/main/MainMenuActivity;)V
+    .line 11
+    iget-object v1, v1, Lg/d/a/c/z/g;->e:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/navigation/NavigationView;->setNavigationItemSelectedListener(Lcom/google/android/material/navigation/NavigationView$a;)V
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 362
+    move-result-object v1
+
+    const v3, 0x7f0a0121
+
+    .line 12
+    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    iput-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->l:Landroid/widget/TextView;
+
+    .line 13
+    new-instance v1, Lcom/sube/cargasube/gui/main/MainMenuActivity$b;
+
+    invoke-direct {v1, p0}, Lcom/sube/cargasube/gui/main/MainMenuActivity$b;-><init>(Lcom/sube/cargasube/gui/main/MainMenuActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/navigation/NavigationView;->setNavigationItemSelectedListener(Lcom/google/android/material/navigation/NavigationView$b;)V
+
+    .line 14
     invoke-virtual {v0}, Lcom/google/android/material/navigation/NavigationView;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
@@ -234,12 +183,12 @@
 
     move-result-object v0
 
-    .line 2382
+    .line 15
     invoke-interface {v0}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a0181
+    const v1, 0x7f0a018b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -247,8 +196,8 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    .line 3366
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->getApplication()Landroid/app/Application;
+    .line 16
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v1
 
@@ -264,13 +213,13 @@
 
     move-result v1
 
-    const/4 v2, -0x1
+    const/4 v3, -0x1
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    if-eq v1, v2, :cond_1
+    if-eq v1, v3, :cond_1
 
-    if-eq v1, v3, :cond_0
+    if-eq v1, v4, :cond_0
 
     const/4 v2, 0x2
 
@@ -282,25 +231,79 @@
 
     goto :goto_0
 
+    .line 17
     :cond_0
-    const/4 v1, 0x0
-
-    .line 3374
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {v0, v2}, Landroid/widget/Switch;->setChecked(Z)V
 
     goto :goto_0
 
-    .line 3371
+    .line 18
     :cond_1
-    invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/Switch;->setChecked(Z)V
 
-    .line 2384
+    .line 19
     :goto_0
-    new-instance v1, Lcom/sube/cargasube/gui/main/MainMenuActivity$3;
+    new-instance v1, Lg/f/a/c/e/b;
 
-    invoke-direct {v1, p0}, Lcom/sube/cargasube/gui/main/MainMenuActivity$3;-><init>(Lcom/sube/cargasube/gui/main/MainMenuActivity;)V
+    invoke-direct {v1, p0}, Lg/f/a/c/e/b;-><init>(Lcom/sube/cargasube/gui/main/MainMenuActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    return-void
+.end method
+
+.method public final i()V
+    .locals 2
+
+    const v0, 0x7f0a00eb
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
+
+    const v0, 0x7f0a00ed
+
+    .line 3
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    .line 4
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
+
+    const v0, 0x7f0a00ee
+
+    .line 5
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    .line 6
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
+
+    const v0, 0x7f0a00ec
+
+    .line 7
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    .line 8
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     return-void
 .end method
@@ -308,8 +311,8 @@
 .method public onBackPressed()V
     .locals 2
 
-    .line 412
-    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->a:Landroidx/drawerlayout/widget/DrawerLayout;
+    .line 1
+    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Landroidx/drawerlayout/widget/DrawerLayout;
 
     const v1, 0x800003
 
@@ -319,29 +322,30 @@
 
     if-eqz v0, :cond_0
 
-    .line 413
-    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->a:Landroidx/drawerlayout/widget/DrawerLayout;
+    .line 2
+    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Landroidx/drawerlayout/widget/DrawerLayout;
 
     invoke-virtual {v0, v1}, Landroidx/drawerlayout/widget/DrawerLayout;->closeDrawer(I)V
 
-    return-void
+    goto :goto_0
 
-    .line 415
+    .line 3
     :cond_0
-    invoke-super {p0}, Lcom/sube/cargasube/gui/common/view/c;->onBackPressed()V
+    invoke-super {p0}, Lg/f/a/c/c/a/g;->onBackPressed()V
 
+    :goto_0
     return-void
 .end method
 
 .method public onButtonClick(Landroid/view/View;)V
     .locals 3
 
-    .line 194
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 195
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -354,7 +358,7 @@
 
     goto :goto_0
 
-    .line 207
+    .line 3
     :pswitch_0
     new-instance p1, Landroid/content/Intent;
 
@@ -364,12 +368,12 @@
 
     const-string v2, "Ultimo viaje"
 
-    .line 208
+    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 202
+    .line 5
     :pswitch_1
     new-instance p1, Landroid/content/Intent;
 
@@ -379,12 +383,12 @@
 
     const-string v2, "Ver saldo"
 
-    .line 203
+    .line 6
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 212
+    .line 7
     :pswitch_2
     new-instance p1, Landroid/content/Intent;
 
@@ -394,12 +398,12 @@
 
     const-string v2, "Cargar SUBE"
 
-    .line 213
+    .line 8
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 197
+    .line 9
     :pswitch_3
     new-instance p1, Landroid/content/Intent;
 
@@ -409,27 +413,27 @@
 
     const-string v2, "Acreditar cargas"
 
-    .line 198
+    .line 10
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     if-eqz p1, :cond_0
 
-    .line 218
-    iget-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Lcom/google/firebase/analytics/FirebaseAnalytics;
+    .line 11
+    iget-object v1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->n:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     const-string v2, "select_content"
 
     invoke-virtual {v1, v2, v0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 226
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->startActivity(Landroid/content/Intent;)V
+    .line 12
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     :cond_0
     return-void
 
     :pswitch_data_0
-    .packed-switch 0x7f0a00e8
+    .packed-switch 0x7f0a00eb
         :pswitch_3
         :pswitch_2
         :pswitch_1
@@ -440,17 +444,17 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 74
-    invoke-super {p0, p1}, Lcom/sube/cargasube/gui/common/view/c;->onCreate(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Lg/f/a/c/c/a/h;->onCreate(Landroid/os/Bundle;)V
 
-    .line 81
+    .line 2
     invoke-static {p0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->i:Lcom/google/firebase/analytics/FirebaseAnalytics;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->n:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    .line 83
+    .line 3
     invoke-static {}, Lcom/sube/cargasube/State;->getInstance()Lcom/sube/cargasube/State;
 
     move-result-object p1
@@ -459,14 +463,15 @@
 
     invoke-virtual {p1, v0}, Lcom/sube/cargasube/State;->setOnceLoggedIn(Z)V
 
+    :goto_1
     return-void
 .end method
 
 .method public onDestroy()V
     .locals 0
 
-    .line 186
-    invoke-super {p0}, Lcom/sube/cargasube/gui/common/view/c;->onDestroy()V
+    .line 1
+    invoke-super {p0}, Lg/f/a/c/c/a/g;->onDestroy()V
 
     return-void
 .end method
@@ -474,17 +479,17 @@
 .method public onNewIntent(Landroid/content/Intent;)V
     .locals 2
 
-    .line 246
-    invoke-super {p0, p1}, Lcom/sube/cargasube/gui/common/view/c;->onNewIntent(Landroid/content/Intent;)V
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 248
+    .line 2
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 249
+    .line 3
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -497,7 +502,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 250
+    .line 4
     invoke-static {}, Lcom/sube/cargasube/State;->getInstance()Lcom/sube/cargasube/State;
 
     move-result-object v0
@@ -512,7 +517,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sube/cargasube/State;->setTag(Landroid/nfc/Tag;)V
 
-    .line 251
+    .line 5
     invoke-static {}, Lcom/sube/cargasube/State;->getInstance()Lcom/sube/cargasube/State;
 
     move-result-object v0
@@ -525,10 +530,10 @@
 
     invoke-virtual {v0, p1}, Lcom/sube/cargasube/State;->setUid([B)V
 
-    const p1, 0x7f0a0083
+    const p1, 0x7f0a0085
 
-    .line 254
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->findViewById(I)Landroid/view/View;
+    .line 6
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -536,13 +541,13 @@
 
     const-string v1, "Para operar seleccion\u00e1 alguna de las opciones"
 
-    .line 253
+    .line 7
     invoke-static {p1, v1, v0}, Lcom/google/android/material/snackbar/Snackbar;->a(Landroid/view/View;Ljava/lang/CharSequence;I)Lcom/google/android/material/snackbar/Snackbar;
 
     move-result-object p1
 
-    .line 257
-    invoke-virtual {p1}, Lcom/google/android/material/snackbar/Snackbar;->b()V
+    .line 8
+    invoke-virtual {p1}, Lcom/google/android/material/snackbar/Snackbar;->f()V
 
     :cond_0
     return-void
@@ -551,13 +556,13 @@
 .method public onPause()V
     .locals 1
 
-    .line 172
-    invoke-super {p0}, Lcom/sube/cargasube/gui/common/view/c;->onPause()V
+    .line 1
+    invoke-super {p0}, Lg/f/a/c/c/a/g;->onPause()V
 
-    .line 175
-    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->f:Lcom/sube/subemobileclient/core/c;
+    .line 2
+    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->m:Lg/f/b/d/c;
 
-    invoke-virtual {v0, p0}, Lcom/sube/subemobileclient/core/c;->b(Landroid/app/Activity;)V
+    invoke-virtual {v0, p0}, Lg/f/b/d/c;->b(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -565,11 +570,11 @@
 .method public onPostCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 406
-    invoke-super {p0, p1}, Lcom/sube/cargasube/gui/common/view/c;->onPostCreate(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onPostCreate(Landroid/os/Bundle;)V
 
-    .line 407
-    iget-object p1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->b:Landroidx/appcompat/app/ActionBarDrawerToggle;
+    .line 2
+    iget-object p1, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->j:Landroidx/appcompat/app/ActionBarDrawerToggle;
 
     invoke-virtual {p1}, Landroidx/appcompat/app/ActionBarDrawerToggle;->syncState()V
 
@@ -579,20 +584,20 @@
 .method public onResume()V
     .locals 7
 
-    .line 146
-    invoke-super {p0}, Lcom/sube/cargasube/gui/common/view/c;->onResume()V
+    .line 1
+    invoke-super {p0}, Lg/f/a/c/c/a/g;->onResume()V
 
-    .line 149
-    new-instance v0, Lcom/sube/subemobileclient/core/c;
+    .line 2
+    new-instance v0, Lg/f/b/d/c;
 
-    invoke-direct {v0, p0}, Lcom/sube/subemobileclient/core/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lg/f/b/d/c;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->f:Lcom/sube/subemobileclient/core/c;
+    iput-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->m:Lg/f/b/d/c;
 
-    .line 150
-    invoke-virtual {v0, p0}, Lcom/sube/subemobileclient/core/c;->a(Landroid/app/Activity;)V
+    .line 3
+    invoke-virtual {v0, p0}, Lg/f/b/d/c;->a(Landroid/app/Activity;)V
 
-    .line 152
+    .line 4
     invoke-static {p0}, Lcom/sube/cargasube/user/UserInfo;->getInstance(Landroid/content/Context;)Lcom/sube/cargasube/user/UserInfo;
 
     move-result-object v0
@@ -601,7 +606,7 @@
 
     move-result-object v0
 
-    .line 153
+    .line 5
     invoke-static {p0}, Lcom/sube/cargasube/user/UserInfo;->getInstance(Landroid/content/Context;)Lcom/sube/cargasube/user/UserInfo;
 
     move-result-object v1
@@ -610,42 +615,49 @@
 
     move-result-object v1
 
-    .line 157
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/main/MainMenuActivity;->getApplicationContext()Landroid/content/Context;
+    .line 6
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/sube/subemobileclient/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lg/d/a/b/d/m/q/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 158
-    invoke-static {}, Lcom/google/firebase/crashlytics/c;->a()Lcom/google/firebase/crashlytics/c;
+    .line 7
+    invoke-static {}, Lg/d/b/k/d;->a()Lg/d/b/k/d;
 
     move-result-object v3
 
-    .line 1275
-    iget-object v3, v3, Lcom/google/firebase/crashlytics/c;->a:Lcom/google/firebase/crashlytics/a/c/k;
+    .line 8
+    iget-object v3, v3, Lg/d/b/k/d;->a:Lg/d/b/k/e/k/h0;
 
-    .line 1310
-    iget-object v3, v3, Lcom/google/firebase/crashlytics/a/c/k;->b:Lcom/google/firebase/crashlytics/a/c/i;
+    .line 9
+    iget-object v3, v3, Lg/d/b/k/e/k/h0;->g:Lg/d/b/k/e/k/v;
 
-    .line 1676
-    iget-object v4, v3, Lcom/google/firebase/crashlytics/a/c/i;->i:Lcom/google/firebase/crashlytics/a/c/ae;
+    .line 10
+    iget-object v4, v3, Lg/d/b/k/e/k/v;->e:Lg/d/b/k/e/k/b1;
 
-    invoke-virtual {v4, v2}, Lcom/google/firebase/crashlytics/a/c/ae;->a(Ljava/lang/String;)V
+    if-eqz v4, :cond_2
 
-    .line 1677
-    iget-object v4, v3, Lcom/google/firebase/crashlytics/a/c/i;->i:Lcom/google/firebase/crashlytics/a/c/ae;
+    .line 11
+    invoke-static {v2}, Lg/d/b/k/e/k/b1;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1702
-    iget-object v5, v3, Lcom/google/firebase/crashlytics/a/c/i;->j:Lcom/google/firebase/crashlytics/a/c/h;
+    move-result-object v5
 
-    new-instance v6, Lcom/google/firebase/crashlytics/a/c/i$4;
+    iput-object v5, v4, Lg/d/b/k/e/k/b1;->a:Ljava/lang/String;
 
-    invoke-direct {v6, v3, v4}, Lcom/google/firebase/crashlytics/a/c/i$4;-><init>(Lcom/google/firebase/crashlytics/a/c/i;Lcom/google/firebase/crashlytics/a/c/ae;)V
+    .line 12
+    iget-object v4, v3, Lg/d/b/k/e/k/v;->e:Lg/d/b/k/e/k/b1;
 
-    invoke-virtual {v5, v6}, Lcom/google/firebase/crashlytics/a/c/h;->a(Ljava/util/concurrent/Callable;)Lcom/google/android/gms/tasks/g;
+    .line 13
+    iget-object v5, v3, Lg/d/b/k/e/k/v;->f:Lg/d/b/k/e/k/h;
+
+    new-instance v6, Lg/d/b/k/e/k/n;
+
+    invoke-direct {v6, v3, v4}, Lg/d/b/k/e/k/n;-><init>(Lg/d/b/k/e/k/v;Lg/d/b/k/e/k/b1;)V
+
+    invoke-virtual {v5, v6}, Lg/d/b/k/e/k/h;->a(Ljava/util/concurrent/Callable;)Lg/d/a/b/k/g;
 
     const/4 v3, 0x1
 
@@ -657,27 +669,27 @@
 
     const-string v2, "Android ID: %s"
 
-    .line 159
+    .line 14
     invoke-static {v2, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 161
-    iget-object v2, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->d:Landroid/widget/TextView;
+    .line 15
+    iget-object v2, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->k:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 162
+    .line 16
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 163
-    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->e:Landroid/widget/TextView;
+    .line 17
+    iget-object v0, p0, Lcom/sube/cargasube/gui/main/MainMenuActivity;->l:Landroid/widget/TextView;
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    .line 164
+    .line 18
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -695,18 +707,24 @@
 
     move-result-object v1
 
-    .line 163
+    .line 19
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_1
     return-void
+
+    :cond_2
+    const/4 v0, 0x0
+
+    .line 20
+    throw v0
 .end method
 
 .method public onStart()V
     .locals 0
 
-    .line 140
-    invoke-super {p0}, Lcom/sube/cargasube/gui/common/view/c;->onStart()V
+    .line 1
+    invoke-super {p0}, Lg/f/a/c/c/a/h;->onStart()V
 
     return-void
 .end method
@@ -714,8 +732,8 @@
 .method public onStop()V
     .locals 0
 
-    .line 180
-    invoke-super {p0}, Lcom/sube/cargasube/gui/common/view/c;->onStop()V
+    .line 1
+    invoke-super {p0}, Lg/f/a/c/c/a/h;->onStop()V
 
     return-void
 .end method

@@ -1,32 +1,36 @@
-.class Landroidx/core/os/ProcessCompat$Api16Impl;
+.class public Landroidx/core/os/ProcessCompat$Api16Impl;
 .super Ljava/lang/Object;
 .source "ProcessCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/os/ProcessCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Api16Impl"
 .end annotation
 
 
 # static fields
-.field private static sMethodUserIdIsAppMethod:Ljava/lang/reflect/Method;
+.field public static sMethodUserIdIsAppMethod:Ljava/lang/reflect/Method;
 
-.field private static sResolved:Z
+.field public static sResolved:Z
 
-.field private static final sResolvedLock:Ljava/lang/Object;
+.field public static final sResolvedLock:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 119
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -36,21 +40,26 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 124
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static isApplicationUid(I)Z
+.method public static isApplicationUid(I)Z
     .locals 7
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "PrivateApi"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 134
+    .line 1
     :try_start_0
     sget-object v1, Landroidx/core/os/ProcessCompat$Api16Impl;->sResolvedLock:Ljava/lang/Object;
 
@@ -58,7 +67,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 135
+    .line 2
     :try_start_1
     sget-boolean v2, Landroidx/core/os/ProcessCompat$Api16Impl;->sResolved:Z
 
@@ -66,12 +75,12 @@
 
     if-nez v2, :cond_0
 
-    .line 136
+    .line 3
     sput-boolean v0, Landroidx/core/os/ProcessCompat$Api16Impl;->sResolved:Z
 
     const-string v2, "android.os.UserId"
 
-    .line 137
+    .line 4
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -84,26 +93,26 @@
 
     aput-object v6, v5, v3
 
-    .line 138
+    .line 5
     invoke-virtual {v2, v4, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     sput-object v2, Landroidx/core/os/ProcessCompat$Api16Impl;->sMethodUserIdIsAppMethod:Ljava/lang/reflect/Method;
 
-    .line 140
+    .line 6
     :cond_0
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 141
+    .line 7
     :try_start_2
     sget-object v1, Landroidx/core/os/ProcessCompat$Api16Impl;->sMethodUserIdIsAppMethod:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_2
 
-    .line 142
+    .line 8
     sget-object v1, Landroidx/core/os/ProcessCompat$Api16Impl;->sMethodUserIdIsAppMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -124,14 +133,14 @@
 
     if-eqz p0, :cond_1
 
-    .line 147
+    .line 9
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
 
     return p0
 
-    .line 145
+    .line 10
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -144,7 +153,7 @@
     :catchall_0
     move-exception p0
 
-    .line 140
+    .line 11
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -158,7 +167,7 @@
     :catch_0
     move-exception p0
 
-    .line 150
+    .line 12
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2

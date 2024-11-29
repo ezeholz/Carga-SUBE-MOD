@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/annotation/RequiresOptIn$Level;
+.field public static final synthetic $VALUES:[Landroidx/annotation/RequiresOptIn$Level;
 
 .field public static final enum ERROR:Landroidx/annotation/RequiresOptIn$Level;
 
@@ -31,7 +31,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 4
 
     const/4 v0, 0x2
@@ -67,7 +67,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -75,7 +75,7 @@
         }
     .end annotation
 
-    .line 80
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

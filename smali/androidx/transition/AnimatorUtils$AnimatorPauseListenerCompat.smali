@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/transition/AnimatorUtils$AnimatorPauseListenerCompat;
+.class public interface abstract Landroidx/transition/AnimatorUtils$AnimatorPauseListenerCompat;
 .super Ljava/lang/Object;
 .source "AnimatorUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "AnimatorPauseListenerCompat"
 .end annotation
 

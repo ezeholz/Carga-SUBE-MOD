@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;
+.class public Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;
 .super Landroid/media/browse/MediaBrowser$SubscriptionCallback;
 .source "MediaBrowserCompatApi21.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SubscriptionCallbackProxy"
 .end annotation
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field protected final mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
+.field public final mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -42,10 +42,10 @@
         }
     .end annotation
 
-    .line 126
+    .line 1
     invoke-direct {p0}, Landroid/media/browse/MediaBrowser$SubscriptionCallback;-><init>()V
 
-    .line 127
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
     return-void
@@ -55,6 +55,10 @@
 # virtual methods
 .method public onChildrenLoaded(Ljava/lang/String;Ljava/util/List;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -65,7 +69,7 @@
         }
     .end annotation
 
-    .line 133
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;->onChildrenLoaded(Ljava/lang/String;Ljava/util/List;)V
@@ -75,8 +79,12 @@
 
 .method public onError(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 138
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;->onError(Ljava/lang/String;)V

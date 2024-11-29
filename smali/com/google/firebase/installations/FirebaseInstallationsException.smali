@@ -11,31 +11,33 @@
 .end annotation
 
 
-# instance fields
-.field private final a:I
-
-
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lcom/google/firebase/installations/FirebaseInstallationsException$a;)V
     .locals 0
+    .param p1    # Lcom/google/firebase/installations/FirebaseInstallationsException$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 46
+    .line 1
     invoke-direct {p0}, Lcom/google/firebase/FirebaseException;-><init>()V
-
-    .line 47
-    iput p1, p0, Lcom/google/firebase/installations/FirebaseInstallationsException;->a:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;Lcom/google/firebase/installations/FirebaseInstallationsException$a;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/firebase/installations/FirebaseInstallationsException$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 51
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/firebase/FirebaseException;-><init>(Ljava/lang/String;)V
-
-    .line 52
-    iput p2, p0, Lcom/google/firebase/installations/FirebaseInstallationsException;->a:I
 
     return-void
 .end method

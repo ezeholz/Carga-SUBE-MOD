@@ -3,6 +3,15 @@
 .source "JsonRpcResponse.java"
 
 
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "UsingDefaultJsonDeserializer",
+        "EmptyJsonPropertyUse"
+    }
+.end annotation
+
+
 # instance fields
 .field public error:Lorg/json/JSONObject;
     .annotation runtime Lcom/facebook/stetho/json/annotation/JsonProperty;
@@ -25,7 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 18
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

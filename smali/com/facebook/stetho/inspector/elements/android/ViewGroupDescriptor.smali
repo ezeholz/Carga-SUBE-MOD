@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;
+.class public final Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;
 .super Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;
 .source "ViewGroupDescriptor.java"
 
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private final mViewToElementMap:Ljava/util/Map;
+.field public final mViewToElementMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -36,15 +36,15 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 39
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;-><init>()V
 
-    .line 36
+    .line 2
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    .line 37
+    .line 3
     invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -61,7 +61,7 @@
 
     return-object p1
 
-    .line 94
+    .line 1
     :cond_0
     check-cast p2, Ljava/lang/ref/WeakReference;
 
@@ -75,7 +75,7 @@
 .method private getElementForView(Landroid/view/ViewGroup;Landroid/view/View;)Ljava/lang/Object;
     .locals 2
 
-    .line 58
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->mViewToElementMap:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -84,14 +84,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 60
+    .line 2
     invoke-direct {p0, p2, v0}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->getElement(Landroid/view/View;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 64
+    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -100,13 +100,13 @@
 
     return-object v0
 
-    .line 67
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->mViewToElementMap:Ljava/util/Map;
 
     invoke-interface {p1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
+    .line 5
     :cond_1
     invoke-static {p2}, Lcom/facebook/stetho/common/android/FragmentCompatUtil;->findFragmentForView(Landroid/view/View;)Ljava/lang/Object;
 
@@ -114,14 +114,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 77
+    .line 6
     invoke-static {p1}, Lcom/facebook/stetho/common/android/FragmentCompatUtil;->isDialogFragment(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 78
+    .line 7
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->mViewToElementMap:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -132,7 +132,7 @@
 
     return-object p1
 
-    .line 84
+    .line 8
     :cond_2
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->mViewToElementMap:Ljava/util/Map;
 
@@ -144,27 +144,20 @@
 .method private isChildVisible(Landroid/view/View;)Z
     .locals 0
 
-    .line 54
+    .line 1
     instance-of p1, p1, Lcom/facebook/stetho/inspector/elements/android/DocumentHiddenView;
 
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
+    xor-int/lit8 p1, p1, 0x1
 
     return p1
 .end method
 
 
 # virtual methods
-.method public final getElementToHighlightAtPosition(Landroid/view/ViewGroup;IILandroid/graphics/Rect;)Ljava/lang/Object;
+.method public getElementToHighlightAtPosition(Landroid/view/ViewGroup;IILandroid/graphics/Rect;)Ljava/lang/Object;
     .locals 3
 
-    .line 108
+    .line 2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -174,29 +167,29 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 109
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 110
+    .line 4
     invoke-direct {p0, v1}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->isChildVisible(Landroid/view/View;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 111
+    .line 5
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 112
+    .line 6
     invoke-virtual {v1, p4}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 113
+    .line 7
     invoke-virtual {p4, p2, p3}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v2
@@ -218,7 +211,7 @@
 
     return-object v1
 
-    .line 123
+    .line 8
     :cond_2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
@@ -235,10 +228,10 @@
     return-object p1
 .end method
 
-.method public final bridge synthetic getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
+.method public bridge synthetic getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
     .locals 0
 
-    .line 27
+    .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->getElementToHighlightAtPosition(Landroid/view/ViewGroup;IILandroid/graphics/Rect;)Ljava/lang/Object;
@@ -248,16 +241,16 @@
     return-object p1
 .end method
 
-.method public final getViewAndBoundsForHighlighting(Landroid/view/ViewGroup;Landroid/graphics/Rect;)Landroid/view/View;
+.method public getViewAndBoundsForHighlighting(Landroid/view/ViewGroup;Landroid/graphics/Rect;)Landroid/view/View;
     .locals 0
 
     return-object p1
 .end method
 
-.method public final bridge synthetic getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
+.method public bridge synthetic getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
     .locals 0
 
-    .line 27
+    .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->getViewAndBoundsForHighlighting(Landroid/view/ViewGroup;Landroid/graphics/Rect;)Landroid/view/View;
@@ -267,7 +260,7 @@
     return-object p1
 .end method
 
-.method protected final onGetChildren(Landroid/view/ViewGroup;Lcom/facebook/stetho/common/Accumulator;)V
+.method public onGetChildren(Landroid/view/ViewGroup;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -279,7 +272,7 @@
         }
     .end annotation
 
-    .line 44
+    .line 2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -289,24 +282,24 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 45
+    .line 3
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 46
+    .line 4
     invoke-direct {p0, v2}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->isChildVisible(Landroid/view/View;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 47
+    .line 5
     invoke-direct {p0, p1, v2}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->getElementForView(Landroid/view/ViewGroup;Landroid/view/View;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 48
+    .line 6
     invoke-interface {p2, v2}, Lcom/facebook/stetho/common/Accumulator;->store(Ljava/lang/Object;)V
 
     :cond_0
@@ -318,10 +311,10 @@
     return-void
 .end method
 
-.method public final bridge synthetic onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+.method public bridge synthetic onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
 
-    .line 27
+    .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;->onGetChildren(Landroid/view/ViewGroup;Lcom/facebook/stetho/common/Accumulator;)V

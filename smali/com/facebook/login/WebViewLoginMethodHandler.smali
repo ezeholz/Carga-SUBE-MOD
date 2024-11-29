@@ -1,4 +1,4 @@
-.class Lcom/facebook/login/WebViewLoginMethodHandler;
+.class public Lcom/facebook/login/WebViewLoginMethodHandler;
 .super Lcom/facebook/login/WebLoginMethodHandler;
 .source "WebViewLoginMethodHandler.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/login/WebViewLoginMethodHandler$a;
+        Lcom/facebook/login/WebViewLoginMethodHandler$c;
     }
 .end annotation
 
@@ -24,45 +24,45 @@
 
 
 # instance fields
-.field private c:Lcom/facebook/internal/w;
+.field public g:Lg/c/z/x;
 
-.field private d:Ljava/lang/String;
+.field public h:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 186
-    new-instance v0, Lcom/facebook/login/WebViewLoginMethodHandler$2;
+    .line 1
+    new-instance v0, Lcom/facebook/login/WebViewLoginMethodHandler$b;
 
-    invoke-direct {v0}, Lcom/facebook/login/WebViewLoginMethodHandler$2;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/login/WebViewLoginMethodHandler$b;-><init>()V
 
     sput-object v0, Lcom/facebook/login/WebViewLoginMethodHandler;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 171
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/login/WebLoginMethodHandler;-><init>(Landroid/os/Parcel;)V
 
-    .line 172
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->h:Ljava/lang/String;
 
     return-void
 .end method
 
-.method constructor <init>(Lcom/facebook/login/LoginClient;)V
+.method public constructor <init>(Lcom/facebook/login/LoginClient;)V
     .locals 0
 
-    .line 42
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/login/WebLoginMethodHandler;-><init>(Lcom/facebook/login/LoginClient;)V
 
     return-void
@@ -70,67 +70,76 @@
 
 
 # virtual methods
-.method final a()Ljava/lang/String;
+.method public a()V
     .locals 1
 
-    const-string v0, "web_view"
+    .line 1
+    iget-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->g:Lg/c/z/x;
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Lg/c/z/x;->cancel()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->g:Lg/c/z/x;
+
+    :cond_0
+    return-void
 .end method
 
-.method final a(Lcom/facebook/login/LoginClient$Request;)Z
+.method public a(Lcom/facebook/login/LoginClient$Request;)Z
     .locals 6
 
-    .line 70
-    invoke-virtual {p0, p1}, Lcom/facebook/login/WebViewLoginMethodHandler;->b(Lcom/facebook/login/LoginClient$Request;)Landroid/os/Bundle;
+    .line 4
+    invoke-virtual {p0, p1}, Lcom/facebook/login/WebLoginMethodHandler;->b(Lcom/facebook/login/LoginClient$Request;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 72
-    new-instance v1, Lcom/facebook/login/WebViewLoginMethodHandler$1;
+    .line 5
+    new-instance v1, Lcom/facebook/login/WebViewLoginMethodHandler$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/facebook/login/WebViewLoginMethodHandler$1;-><init>(Lcom/facebook/login/WebViewLoginMethodHandler;Lcom/facebook/login/LoginClient$Request;)V
+    invoke-direct {v1, p0, p1}, Lcom/facebook/login/WebViewLoginMethodHandler$a;-><init>(Lcom/facebook/login/WebViewLoginMethodHandler;Lcom/facebook/login/LoginClient$Request;)V
 
-    .line 79
+    .line 6
     invoke-static {}, Lcom/facebook/login/LoginClient;->f()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Ljava/lang/String;
+    iput-object v2, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->h:Ljava/lang/String;
 
     const-string v3, "e2e"
 
-    .line 80
-    invoke-virtual {p0, v3, v2}, Lcom/facebook/login/WebViewLoginMethodHandler;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 7
+    invoke-virtual {p0, v3, v2}, Lcom/facebook/login/LoginMethodHandler;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 82
-    iget-object v2, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->b:Lcom/facebook/login/LoginClient;
+    .line 8
+    iget-object v2, p0, Lcom/facebook/login/LoginMethodHandler;->e:Lcom/facebook/login/LoginClient;
 
-    .line 1088
-    iget-object v2, v2, Lcom/facebook/login/LoginClient;->c:Landroidx/fragment/app/Fragment;
-
-    invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {v2}, Lcom/facebook/login/LoginClient;->b()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
-    .line 83
-    invoke-static {v2}, Lcom/facebook/internal/u;->f(Landroid/content/Context;)Z
+    .line 9
+    invoke-static {v2}, Lg/c/z/u;->d(Landroid/content/Context;)Z
 
     move-result v3
 
-    .line 85
-    new-instance v4, Lcom/facebook/login/WebViewLoginMethodHandler$a;
+    .line 10
+    new-instance v4, Lcom/facebook/login/WebViewLoginMethodHandler$c;
 
-    .line 1480
-    iget-object v5, p1, Lcom/facebook/login/LoginClient$Request;->d:Ljava/lang/String;
+    .line 11
+    iget-object v5, p1, Lcom/facebook/login/LoginClient$Request;->g:Ljava/lang/String;
 
-    .line 87
-    invoke-direct {v4, v2, v5, v0}, Lcom/facebook/login/WebViewLoginMethodHandler$a;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
+    .line 12
+    invoke-direct {v4, v2, v5, v0}, Lcom/facebook/login/WebViewLoginMethodHandler$c;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->h:Ljava/lang/String;
 
-    .line 2121
-    iput-object v0, v4, Lcom/facebook/login/WebViewLoginMethodHandler$a;->f:Ljava/lang/String;
+    .line 13
+    iput-object v0, v4, Lcom/facebook/login/WebViewLoginMethodHandler$c;->f:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
@@ -141,98 +150,86 @@
     :cond_0
     const-string v0, "fbconnect://success"
 
-    .line 2134
+    .line 14
     :goto_0
-    iput-object v0, v4, Lcom/facebook/login/WebViewLoginMethodHandler$a;->h:Ljava/lang/String;
+    iput-object v0, v4, Lcom/facebook/login/WebViewLoginMethodHandler$c;->h:Ljava/lang/String;
 
-    .line 2512
-    iget-object p1, p1, Lcom/facebook/login/LoginClient$Request;->h:Ljava/lang/String;
+    .line 15
+    iget-object p1, p1, Lcom/facebook/login/LoginClient$Request;->k:Ljava/lang/String;
 
-    .line 3141
-    iput-object p1, v4, Lcom/facebook/login/WebViewLoginMethodHandler$a;->g:Ljava/lang/String;
+    .line 16
+    iput-object p1, v4, Lcom/facebook/login/WebViewLoginMethodHandler$c;->g:Ljava/lang/String;
 
-    .line 3747
-    iput-object v1, v4, Lcom/facebook/internal/w$a;->d:Lcom/facebook/internal/w$c;
+    .line 17
+    iput-object v1, v4, Lg/c/z/x$d;->d:Lg/c/z/x$f;
 
-    .line 93
-    invoke-virtual {v4}, Lcom/facebook/internal/w$a;->a()Lcom/facebook/internal/w;
+    .line 18
+    invoke-virtual {v4}, Lg/c/z/x$d;->a()Lg/c/z/x;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->c:Lcom/facebook/internal/w;
+    iput-object p1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->g:Lg/c/z/x;
 
-    .line 95
-    new-instance p1, Lcom/facebook/internal/f;
+    .line 19
+    new-instance p1, Lg/c/z/e;
 
-    invoke-direct {p1}, Lcom/facebook/internal/f;-><init>()V
+    invoke-direct {p1}, Lg/c/z/e;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 96
-    invoke-virtual {p1, v0}, Lcom/facebook/internal/f;->setRetainInstance(Z)V
+    .line 20
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/Fragment;->setRetainInstance(Z)V
 
-    .line 97
-    iget-object v1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->c:Lcom/facebook/internal/w;
+    .line 21
+    iget-object v1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->g:Lg/c/z/x;
 
-    .line 4052
-    iput-object v1, p1, Lcom/facebook/internal/f;->a:Landroid/app/Dialog;
+    .line 22
+    iput-object v1, p1, Lg/c/z/e;->d:Landroid/app/Dialog;
 
-    .line 98
+    .line 23
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "FacebookDialogFragment"
 
-    invoke-virtual {p1, v1, v2}, Lcom/facebook/internal/f;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     return v0
 .end method
 
-.method final a_()Lcom/facebook/c;
+.method public b()Ljava/lang/String;
     .locals 1
 
-    .line 52
-    sget-object v0, Lcom/facebook/c;->e:Lcom/facebook/c;
+    const-string v0, "web_view"
 
     return-object v0
 .end method
 
-.method final b()V
-    .locals 1
-
-    .line 62
-    iget-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->c:Lcom/facebook/internal/w;
-
-    if-eqz v0, :cond_0
-
-    .line 63
-    invoke-virtual {v0}, Lcom/facebook/internal/w;->cancel()V
-
-    const/4 v0, 0x0
-
-    .line 64
-    iput-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->c:Lcom/facebook/internal/w;
-
-    :cond_0
-    return-void
-.end method
-
-.method final b(Lcom/facebook/login/LoginClient$Request;Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
+.method public b(Lcom/facebook/login/LoginClient$Request;Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 0
 
-    .line 106
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/facebook/login/WebLoginMethodHandler;->a(Lcom/facebook/login/LoginClient$Request;Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
 
     return-void
 .end method
 
-.method final d()Z
+.method public c()Z
     .locals 1
 
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public d()Lg/c/d;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lg/c/d;->i:Lg/c/d;
+
+    return-object v0
 .end method
 
 .method public describeContents()I
@@ -246,11 +243,13 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 182
-    invoke-super {p0, p1, p2}, Lcom/facebook/login/WebLoginMethodHandler;->writeToParcel(Landroid/os/Parcel;I)V
+    .line 1
+    iget-object p2, p0, Lcom/facebook/login/LoginMethodHandler;->d:Ljava/util/Map;
 
-    .line 183
-    iget-object p2, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Ljava/lang/String;
+    invoke-static {p1, p2}, Lg/c/z/u;->a(Landroid/os/Parcel;Ljava/util/Map;)V
+
+    .line 2
+    iget-object p2, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->h:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

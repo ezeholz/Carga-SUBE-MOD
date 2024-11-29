@@ -1,4 +1,4 @@
-.class interface abstract Lcom/facebook/stetho/websocket/WriteCallback;
+.class public interface abstract Lcom/facebook/stetho/websocket/WriteCallback;
 .super Ljava/lang/Object;
 .source "WriteCallback.java"
 

@@ -12,10 +12,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 33
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,10 +23,14 @@
 
 .method public static isAtLeastN()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x18
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 71
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -35,20 +39,25 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isAtLeastNMR1()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x19
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 85
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
@@ -57,20 +66,25 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isAtLeastO()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1a
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 99
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -79,20 +93,25 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isAtLeastOMR1()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1b
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 113
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1b
@@ -101,20 +120,25 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isAtLeastP()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1c
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 127
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
@@ -123,20 +147,34 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method protected static isAtLeastPreReleaseCodename(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static isAtLeastPreReleaseCodename(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->TESTS:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const-string v0, "REL"
 
-    .line 51
+    .line 1
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -147,7 +185,7 @@
 
     return v1
 
-    .line 57
+    .line 2
     :cond_0
     invoke-virtual {p1, p0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -155,9 +193,7 @@
 
     if-ltz p0, :cond_1
 
-    const/4 p0, 0x1
-
-    return p0
+    const/4 v1, 0x1
 
     :cond_1
     return v1
@@ -165,10 +201,14 @@
 
 .method public static isAtLeastQ()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1d
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 141
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -177,20 +217,25 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isAtLeastR()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1e
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 155
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
@@ -199,18 +244,23 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 .method public static isAtLeastS()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1f
+        codename = "S"
+    .end annotation
 
-    .line 166
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1f
@@ -232,19 +282,26 @@
     :cond_0
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_1
 
     :cond_1
     :goto_0
     const/4 v0, 0x1
 
+    :goto_1
     return v0
 .end method
 
 .method public static isAtLeastT()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        codename = "T"
+    .end annotation
 
-    .line 182
+    .annotation build Landroidx/core/os/BuildCompat$PrereleaseSdkCheck;
+    .end annotation
+
+    .line 1
     sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
     const-string v1, "T"

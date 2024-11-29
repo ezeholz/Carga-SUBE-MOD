@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/SearchView$3;
+.class public Landroidx/appcompat/widget/SearchView$3;
 .super Ljava/lang/Object;
 .source "SearchView.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/SearchView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/SearchView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
+.method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
-    .line 331
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,21 +38,15 @@
 .method public onFocusChange(Landroid/view/View;Z)V
     .locals 1
 
-    .line 334
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    iget-object p1, p1, Landroidx/appcompat/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
+    iget-object v0, p1, Landroidx/appcompat/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 335
-    iget-object p1, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
-
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
-
-    invoke-interface {p1, v0, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
+    .line 2
+    invoke-interface {v0, p1, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
 
     :cond_0
     return-void

@@ -10,12 +10,12 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-string v0, "UTF-8"
 
-    .line 18
+    .line 1
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method public static decodeUTF8([B)Ljava/lang/String;
     .locals 2
 
-    .line 29
+    .line 1
     new-instance v0, Ljava/lang/String;
 
     sget-object v1, Lcom/facebook/stetho/common/Utf8Charset;->INSTANCE:Ljava/nio/charset/Charset;
@@ -53,7 +53,7 @@
     :try_start_0
     const-string v0, "UTF-8"
 
-    .line 22
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -65,7 +65,7 @@
     :catch_0
     move-exception p0
 
-    .line 24
+    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

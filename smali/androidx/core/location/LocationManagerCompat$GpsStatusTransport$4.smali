@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$GpsStatusTransport$4;
+.class public Landroidx/core/location/LocationManagerCompat$GpsStatusTransport$4;
 .super Ljava/lang/Object;
 .source "LocationManagerCompat.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
+.field public final synthetic this$0:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
 
-.field final synthetic val$executor:Ljava/util/concurrent/Executor;
+.field public final synthetic val$executor:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$gnssStatus:Landroidx/core/location/GnssStatusCompat;
+.field public final synthetic val$gnssStatus:Landroidx/core/location/GnssStatusCompat;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
+.method public constructor <init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
     .locals 0
 
-    .line 612
+    .line 1
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport$4;->this$0:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
 
     iput-object p2, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport$4;->val$executor:Ljava/util/concurrent/Executor;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 615
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport$4;->this$0:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
 
     iget-object v0, v0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
@@ -57,7 +57,7 @@
 
     return-void
 
-    .line 618
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport$4;->this$0:Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
 

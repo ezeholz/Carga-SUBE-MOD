@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentTransitionCompat21$2;
+.class public Landroidx/fragment/app/FragmentTransitionCompat21$2;
 .super Ljava/lang/Object;
 .source "FragmentTransitionCompat21.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
-.field final synthetic val$exitingViews:Ljava/util/ArrayList;
+.field public final synthetic val$exitingViews:Ljava/util/ArrayList;
 
-.field final synthetic val$fragmentView:Landroid/view/View;
+.field public final synthetic val$fragmentView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/view/View;Ljava/util/ArrayList;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/view/View;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 146
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$2;->this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransitionCompat21$2;->val$fragmentView:Landroid/view/View;
@@ -52,17 +52,17 @@
 .method public onTransitionEnd(Landroid/transition/Transition;)V
     .locals 3
 
-    .line 161
+    .line 1
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 162
+    .line 2
     iget-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$2;->val$fragmentView:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 163
+    .line 3
     iget-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$2;->val$exitingViews:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -76,7 +76,7 @@
     :goto_0
     if-ge v1, p1, :cond_0
 
-    .line 165
+    .line 4
     iget-object v2, p0, Landroidx/fragment/app/FragmentTransitionCompat21$2;->val$exitingViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -110,10 +110,10 @@
 .method public onTransitionStart(Landroid/transition/Transition;)V
     .locals 0
 
-    .line 155
+    .line 1
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 156
+    .line 2
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
     return-void

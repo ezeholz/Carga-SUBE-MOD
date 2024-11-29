@@ -1,4 +1,4 @@
-.class final Landroidx/gridlayout/widget/GridLayout$5;
+.class public final Landroidx/gridlayout/widget/GridLayout$5;
 .super Landroidx/gridlayout/widget/GridLayout$Alignment;
 .source "GridLayout.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$ltr:Landroidx/gridlayout/widget/GridLayout$Alignment;
+.field public final synthetic val$ltr:Landroidx/gridlayout/widget/GridLayout$Alignment;
 
-.field final synthetic val$rtl:Landroidx/gridlayout/widget/GridLayout$Alignment;
+.field public final synthetic val$rtl:Landroidx/gridlayout/widget/GridLayout$Alignment;
 
 
 # direct methods
-.method constructor <init>(Landroidx/gridlayout/widget/GridLayout$Alignment;Landroidx/gridlayout/widget/GridLayout$Alignment;)V
+.method public constructor <init>(Landroidx/gridlayout/widget/GridLayout$Alignment;Landroidx/gridlayout/widget/GridLayout$Alignment;)V
     .locals 0
 
-    .line 2778
+    .line 1
     iput-object p1, p0, Landroidx/gridlayout/widget/GridLayout$5;->val$ltr:Landroidx/gridlayout/widget/GridLayout$Alignment;
 
     iput-object p2, p0, Landroidx/gridlayout/widget/GridLayout$5;->val$rtl:Landroidx/gridlayout/widget/GridLayout$Alignment;
@@ -36,10 +36,10 @@
 
 
 # virtual methods
-.method public final getAlignmentValue(Landroid/view/View;II)I
+.method public getAlignmentValue(Landroid/view/View;II)I
     .locals 2
 
-    .line 2788
+    .line 1
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -56,7 +56,7 @@
     :goto_0
     if-nez v1, :cond_1
 
-    .line 2790
+    .line 2
     iget-object v0, p0, Landroidx/gridlayout/widget/GridLayout$5;->val$ltr:Landroidx/gridlayout/widget/GridLayout$Alignment;
 
     goto :goto_1
@@ -72,15 +72,15 @@
     return p1
 .end method
 
-.method final getDebugString()Ljava/lang/String;
+.method public getDebugString()Ljava/lang/String;
     .locals 2
 
-    .line 2795
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "SWITCHING[L:"
 
-    const-string v1, "SWITCHING[L:"
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/gridlayout/widget/GridLayout$5;->val$ltr:Landroidx/gridlayout/widget/GridLayout$Alignment;
 
@@ -113,10 +113,10 @@
     return-object v0
 .end method
 
-.method final getGravityOffset(Landroid/view/View;I)I
+.method public getGravityOffset(Landroid/view/View;I)I
     .locals 2
 
-    .line 2781
+    .line 1
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -133,7 +133,7 @@
     :goto_0
     if-nez v1, :cond_1
 
-    .line 2783
+    .line 2
     iget-object v0, p0, Landroidx/gridlayout/widget/GridLayout$5;->val$ltr:Landroidx/gridlayout/widget/GridLayout$Alignment;
 
     goto :goto_1

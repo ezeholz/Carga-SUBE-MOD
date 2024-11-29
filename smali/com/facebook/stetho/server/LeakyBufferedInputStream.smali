@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field private mLeaked:Z
+.field public mLeaked:Z
 
-.field private mMarked:Z
+.field public mMarked:Z
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/InputStream;I)V
     .locals 0
 
-    .line 25
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
     return-void
@@ -22,29 +22,29 @@
 .method private clearBufferLocked()[B
     .locals 5
 
-    .line 59
-    iget v0, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->count:I
+    .line 1
+    iget v0, p0, Ljava/io/BufferedInputStream;->count:I
 
-    iget v1, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->pos:I
+    iget v1, p0, Ljava/io/BufferedInputStream;->pos:I
 
     sub-int/2addr v0, v1
 
     new-array v1, v0, [B
 
-    .line 60
-    iget-object v2, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->buf:[B
+    .line 2
+    iget-object v2, p0, Ljava/io/BufferedInputStream;->buf:[B
 
-    iget v3, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->pos:I
+    iget v3, p0, Ljava/io/BufferedInputStream;->pos:I
 
     const/4 v4, 0x0
 
     invoke-static {v2, v3, v1, v4, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 61
-    iput v4, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->pos:I
+    .line 3
+    iput v4, p0, Ljava/io/BufferedInputStream;->pos:I
 
-    .line 62
-    iput v4, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->count:I
+    .line 4
+    iput v4, p0, Ljava/io/BufferedInputStream;->count:I
 
     return-object v1
 .end method
@@ -52,14 +52,14 @@
 .method private throwIfLeaked()V
     .locals 1
 
-    .line 67
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->mLeaked:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 68
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -71,14 +71,14 @@
 .method private throwIfMarked()V
     .locals 1
 
-    .line 73
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->mMarked:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 74
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -94,19 +94,19 @@
 
     monitor-enter p0
 
-    .line 48
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->throwIfLeaked()V
 
-    .line 49
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->throwIfMarked()V
 
     const/4 v0, 0x1
 
-    .line 50
+    .line 3
     iput-boolean v0, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->mLeaked:Z
 
-    .line 51
+    .line 4
     new-instance v1, Lcom/facebook/stetho/server/CompositeInputStream;
 
     const/4 v2, 0x2
@@ -117,7 +117,7 @@
 
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
-    .line 53
+    .line 5
     invoke-direct {p0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->clearBufferLocked()[B
 
     move-result-object v5
@@ -126,7 +126,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v3, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->in:Ljava/io/InputStream;
+    iget-object v3, p0, Ljava/io/BufferedInputStream;->in:Ljava/io/InputStream;
 
     aput-object v3, v2, v0
 
@@ -134,7 +134,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
+    .line 6
     monitor-exit p0
 
     return-object v1
@@ -152,21 +152,21 @@
 
     monitor-enter p0
 
-    .line 30
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->throwIfLeaked()V
 
     const/4 v0, 0x1
 
-    .line 31
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->mMarked:Z
 
-    .line 32
+    .line 3
     invoke-super {p0, p1}, Ljava/io/BufferedInputStream;->mark(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
+    .line 4
     monitor-exit p0
 
     return-void
@@ -192,21 +192,21 @@
 
     monitor-enter p0
 
-    .line 37
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->throwIfLeaked()V
 
     const/4 v0, 0x0
 
-    .line 38
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->mMarked:Z
 
-    .line 39
+    .line 3
     invoke-super {p0}, Ljava/io/BufferedInputStream;->reset()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
+    .line 4
     monitor-exit p0
 
     return-void

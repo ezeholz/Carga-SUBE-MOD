@@ -4,23 +4,23 @@
 
 
 # static fields
-.field private static final THREAD_PREFIX:Ljava/lang/String; = "StethoListener"
+.field public static final THREAD_PREFIX:Ljava/lang/String; = "StethoListener"
 
 
 # instance fields
-.field private final mServer:Lcom/facebook/stetho/server/LocalSocketServer;
+.field public final mServer:Lcom/facebook/stetho/server/LocalSocketServer;
 
-.field private volatile mStarted:Z
+.field public volatile mStarted:Z
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/server/LocalSocketServer;)V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/server/ServerManager;->mServer:Lcom/facebook/stetho/server/LocalSocketServer;
 
     return-void
@@ -29,14 +29,14 @@
 .method private startServer(Lcom/facebook/stetho/server/LocalSocketServer;)V
     .locals 3
 
-    .line 36
+    .line 1
     new-instance v0, Lcom/facebook/stetho/server/ServerManager$1;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "StethoListener-"
 
-    const-string v2, "StethoListener-"
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     invoke-virtual {p1}, Lcom/facebook/stetho/server/LocalSocketServer;->getName()Ljava/lang/String;
 
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, p0, v1, p1}, Lcom/facebook/stetho/server/ServerManager$1;-><init>(Lcom/facebook/stetho/server/ServerManager;Ljava/lang/String;Lcom/facebook/stetho/server/LocalSocketServer;)V
 
-    .line 46
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -61,24 +61,24 @@
 .method public start()V
     .locals 2
 
-    .line 28
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/server/ServerManager;->mStarted:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 31
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/server/ServerManager;->mStarted:Z
 
-    .line 32
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/server/ServerManager;->mServer:Lcom/facebook/stetho/server/LocalSocketServer;
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/server/ServerManager;->startServer(Lcom/facebook/stetho/server/LocalSocketServer;)V
 
     return-void
 
-    .line 29
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

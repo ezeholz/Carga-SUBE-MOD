@@ -12,13 +12,13 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ChromePeerManager"
+.field public static final TAG:Ljava/lang/String; = "ChromePeerManager"
 
 
 # instance fields
-.field private mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
+.field public mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
 
-.field private final mReceivingPeers:Ljava/util/Map;
+.field public final mReceivingPeers:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -29,17 +29,17 @@
     .end annotation
 .end field
 
-.field private mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
+.field public mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 53
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -54,13 +54,13 @@
 
     monitor-enter p0
 
-    .line 106
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
     if-nez v0, :cond_0
 
-    .line 107
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeers:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -69,14 +69,14 @@
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeers:Ljava/util/Map;
 
-    .line 108
+    .line 3
     invoke-interface {v1}, Ljava/util/Map;->size()I
 
     move-result v1
 
     new-array v1, v1, [Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
-    .line 107
+    .line 4
     invoke-interface {v0, v1}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
-    .line 110
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
     :try_end_0
@@ -106,12 +106,12 @@
 .method private sendMessageToPeers(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
     .locals 6
 
-    .line 128
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->getReceivingPeersSnapshot()[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
     move-result-object v0
 
-    .line 129
+    .line 2
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -121,7 +121,7 @@
 
     aget-object v3, v0, v2
 
-    .line 131
+    .line 3
     :try_start_0
     invoke-virtual {v3, p1, p2, p3}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->invokeMethod(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
     :try_end_0
@@ -136,7 +136,7 @@
 
     const-string v5, "Error delivering data to Chrome"
 
-    .line 133
+    .line 4
     invoke-static {v4, v5, v3}, Lcom/facebook/stetho/common/LogRedirector;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
@@ -155,7 +155,7 @@
 
     monitor-enter p0
 
-    .line 73
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeers:Ljava/util/Map;
 
@@ -169,37 +169,37 @@
 
     const/4 p1, 0x0
 
-    .line 74
+    .line 2
     monitor-exit p0
 
     return p1
 
-    .line 77
+    .line 3
     :cond_0
     :try_start_1
     new-instance v0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;
 
     invoke-direct {v0, p0, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;-><init>(Lcom/facebook/stetho/inspector/helper/ChromePeerManager;Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
 
-    .line 78
+    .line 4
     invoke-virtual {p1, v0}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->registerDisconnectReceiver(Lcom/facebook/stetho/inspector/jsonrpc/DisconnectReceiver;)V
 
-    .line 79
+    .line 5
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeers:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    .line 80
+    .line 6
     iput-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
-    .line 81
+    .line 7
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
 
     if-eqz v0, :cond_1
 
-    .line 82
+    .line 8
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;->onPeerRegistered(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
@@ -209,7 +209,7 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 84
+    .line 9
     monitor-exit p0
 
     return p1
@@ -227,7 +227,7 @@
 
     monitor-enter p0
 
-    .line 102
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeers:Ljava/util/Map;
 
@@ -237,41 +237,27 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_0
+    xor-int/lit8 v0, v0, 0x1
 
-    const/4 v0, 0x1
-
-    :goto_0
     monitor-exit p0
 
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 
     :catchall_0
     move-exception v0
 
     monitor-exit p0
 
-    goto :goto_2
-
-    :goto_1
     throw v0
-
-    :goto_2
-    goto :goto_1
 .end method
 
 .method public invokeMethodOnPeers(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
     .locals 0
 
-    .line 121
+    .line 1
     invoke-static {p3}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 122
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->sendMessageToPeers(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
 
     return-void
@@ -282,7 +268,7 @@
 
     monitor-enter p0
 
-    .line 93
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeers:Ljava/util/Map;
 
@@ -294,22 +280,22 @@
 
     const/4 v0, 0x0
 
-    .line 94
+    .line 2
     iput-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mReceivingPeersSnapshot:[Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
-    .line 95
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
 
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;->onPeerUnregistered(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 99
+    .line 5
     :cond_0
     monitor-exit p0
 
@@ -328,7 +314,7 @@
 
     const/4 v0, 0x0
 
-    .line 115
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->sendMessageToPeers(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
 
     return-void
@@ -339,13 +325,13 @@
 
     monitor-enter p0
 
-    .line 63
+    .line 1
     :try_start_0
     iput-object p1, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->mListener:Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
+    .line 2
     monitor-exit p0
 
     return-void

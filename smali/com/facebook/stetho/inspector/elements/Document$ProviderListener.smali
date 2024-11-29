@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;
+.class public final Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;
 .super Ljava/lang/Object;
 .source "Document.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "ProviderListener"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;)V
     .locals 0
 
-    .line 717
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,10 +33,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;Lcom/facebook/stetho/inspector/elements/Document$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;Lcom/facebook/stetho/inspector/elements/Document$1;)V
     .locals 0
 
-    .line 717
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;-><init>(Lcom/facebook/stetho/inspector/elements/Document;)V
 
     return-void
@@ -44,15 +44,15 @@
 
 
 # virtual methods
-.method public final onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+.method public onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 725
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
-    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/Document;->verifyThreadAccess()V
+    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 726
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$700(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;
@@ -64,15 +64,15 @@
     return-void
 .end method
 
-.method public final onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
+.method public onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
-    .line 731
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
-    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/Document;->verifyThreadAccess()V
+    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 732
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$700(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;
@@ -84,15 +84,15 @@
     return-void
 .end method
 
-.method public final onInspectRequested(Ljava/lang/Object;)V
+.method public onInspectRequested(Ljava/lang/Object;)V
     .locals 1
 
-    .line 737
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
-    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/Document;->verifyThreadAccess()V
+    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 738
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$700(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;
@@ -104,10 +104,10 @@
     return-void
 .end method
 
-.method public final onPossiblyChanged()V
+.method public onPossiblyChanged()V
     .locals 1
 
-    .line 720
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$ProviderListener;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$1200(Lcom/facebook/stetho/inspector/elements/Document;)V

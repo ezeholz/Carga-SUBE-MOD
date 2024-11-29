@@ -1,4 +1,4 @@
-.class Landroidx/multidex/MultiDexExtractor$1;
+.class public Landroidx/multidex/MultiDexExtractor$1;
 .super Ljava/lang/Object;
 .source "MultiDexExtractor.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/multidex/MultiDexExtractor;
+.field public final synthetic this$0:Landroidx/multidex/MultiDexExtractor;
 
 
 # direct methods
-.method constructor <init>(Landroidx/multidex/MultiDexExtractor;)V
+.method public constructor <init>(Landroidx/multidex/MultiDexExtractor;)V
     .locals 0
 
-    .line 354
+    .line 1
     iput-object p1, p0, Landroidx/multidex/MultiDexExtractor$1;->this$0:Landroidx/multidex/MultiDexExtractor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public accept(Ljava/io/File;)Z
     .locals 1
 
-    .line 357
+    .line 1
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -49,14 +49,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
+    xor-int/lit8 p1, p1, 0x1
 
     return p1
 .end method

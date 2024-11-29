@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;
+.class public Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;
 .super Ljava/lang/Object;
 .source "ForwardingListener.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "DisallowIntercept"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ForwardingListener;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ForwardingListener;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ForwardingListener;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ForwardingListener;)V
     .locals 0
 
-    .line 316
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;->this$0:Landroidx/appcompat/widget/ForwardingListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 321
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ForwardingListener$DisallowIntercept;->this$0:Landroidx/appcompat/widget/ForwardingListener;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ForwardingListener;->mSrc:Landroid/view/View;
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x1
 
-    .line 323
+    .line 2
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     :cond_0

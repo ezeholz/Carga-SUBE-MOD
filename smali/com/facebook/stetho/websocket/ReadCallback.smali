@@ -1,4 +1,4 @@
-.class interface abstract Lcom/facebook/stetho/websocket/ReadCallback;
+.class public interface abstract Lcom/facebook/stetho/websocket/ReadCallback;
 .super Ljava/lang/Object;
 .source "ReadCallback.java"
 

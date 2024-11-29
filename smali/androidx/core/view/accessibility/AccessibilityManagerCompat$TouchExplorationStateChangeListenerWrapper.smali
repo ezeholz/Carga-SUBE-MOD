@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;
+.class public final Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;
 .super Ljava/lang/Object;
 .source "AccessibilityManagerCompat.java"
 
@@ -7,28 +7,36 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/view/accessibility/AccessibilityManagerCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "TouchExplorationStateChangeListenerWrapper"
 .end annotation
 
 
 # instance fields
-.field final mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
+.field public final mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;)V
+.method public constructor <init>(Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;)V
     .locals 0
+    .param p1    # Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 204
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 205
+    .line 2
     iput-object p1, p0, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;->mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
 
     return-void
@@ -36,7 +44,7 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 1
 
     if-ne p0, p1, :cond_0
@@ -45,7 +53,7 @@
 
     return p1
 
-    .line 218
+    .line 1
     :cond_0
     instance-of v0, p1, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;
 
@@ -55,11 +63,11 @@
 
     return p1
 
-    .line 221
+    .line 2
     :cond_1
     check-cast p1, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;
 
-    .line 223
+    .line 3
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;->mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
 
     iget-object p1, p1, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;->mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
@@ -71,10 +79,10 @@
     return p1
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 1
 
-    .line 210
+    .line 1
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;->mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -84,10 +92,10 @@
     return v0
 .end method
 
-.method public final onTouchExplorationStateChanged(Z)V
+.method public onTouchExplorationStateChanged(Z)V
     .locals 1
 
-    .line 228
+    .line 1
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper;->mListener:Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
 
     invoke-interface {v0, p1}, Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;->onTouchExplorationStateChanged(Z)V

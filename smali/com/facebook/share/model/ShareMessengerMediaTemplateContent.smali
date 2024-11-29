@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;
+        Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$b;
     }
 .end annotation
 
@@ -33,52 +33,52 @@
 
 
 # instance fields
-.field private final c:Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;
+.field public final j:Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$b;
 
-.field private final d:Ljava/lang/String;
+.field public final k:Ljava/lang/String;
 
-.field private final e:Landroid/net/Uri;
+.field public final l:Landroid/net/Uri;
 
-.field private final f:Lcom/facebook/share/model/ShareMessengerActionButton;
+.field public final m:Lcom/facebook/share/model/ShareMessengerActionButton;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 105
-    new-instance v0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 56
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareContent;-><init>(Landroid/os/Parcel;)V
 
-    .line 57
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;
+    check-cast v0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$b;
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->c:Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;
+    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->j:Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$b;
 
-    .line 58
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->d:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->k:Ljava/lang/String;
 
-    .line 59
+    .line 4
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -91,9 +91,9 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->e:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->l:Landroid/net/Uri;
 
-    .line 60
+    .line 5
     const-class v0, Lcom/facebook/share/model/ShareMessengerActionButton;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -106,14 +106,14 @@
 
     check-cast p1, Lcom/facebook/share/model/ShareMessengerActionButton;
 
-    iput-object p1, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->f:Lcom/facebook/share/model/ShareMessengerActionButton;
+    iput-object p1, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->m:Lcom/facebook/share/model/ShareMessengerActionButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -121,26 +121,26 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 98
-    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->c:Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$a;
+    .line 1
+    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->j:Lcom/facebook/share/model/ShareMessengerMediaTemplateContent$b;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    .line 99
-    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->d:Ljava/lang/String;
+    .line 2
+    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->k:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 100
-    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->e:Landroid/net/Uri;
+    .line 3
+    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->l:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 101
-    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->f:Lcom/facebook/share/model/ShareMessengerActionButton;
+    .line 4
+    iget-object v0, p0, Lcom/facebook/share/model/ShareMessengerMediaTemplateContent;->m:Lcom/facebook/share/model/ShareMessengerActionButton;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 

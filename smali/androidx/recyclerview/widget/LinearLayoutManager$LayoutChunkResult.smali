@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xc
+    accessFlags = 0x9
     name = "LayoutChunkResult"
 .end annotation
 
@@ -25,10 +25,10 @@
 
 
 # direct methods
-.method protected constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2549
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,21 +36,21 @@
 
 
 # virtual methods
-.method resetInternal()V
+.method public resetInternal()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 2556
+    .line 1
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mConsumed:I
 
-    .line 2557
+    .line 2
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mFinished:Z
 
-    .line 2558
+    .line 3
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mIgnoreConsumed:Z
 
-    .line 2559
+    .line 4
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable:Z
 
     return-void

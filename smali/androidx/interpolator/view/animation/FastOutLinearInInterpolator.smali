@@ -4,18 +4,18 @@
 
 
 # static fields
-.field private static final VALUES:[F
+.field public static final VALUES:[F
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const/16 v0, 0xc9
 
     new-array v0, v0, [F
 
-    .line 34
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;->VALUES:[F
@@ -231,7 +231,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 67
+    .line 1
     sget-object v0, Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;->VALUES:[F
 
     invoke-direct {p0, v0}, Landroidx/interpolator/view/animation/LookupTableInterpolator;-><init>([F)V
@@ -244,7 +244,7 @@
 .method public bridge synthetic getInterpolation(F)F
     .locals 0
 
-    .line 28
+    .line 1
     invoke-super {p0, p1}, Landroidx/interpolator/view/animation/LookupTableInterpolator;->getInterpolation(F)F
 
     move-result p1

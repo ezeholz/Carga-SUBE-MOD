@@ -1,4 +1,4 @@
-.class synthetic Landroidx/transition/ChangeImageTransform$3;
+.class public synthetic Landroidx/transition/ChangeImageTransform$3;
 .super Ljava/lang/Object;
 .source "ChangeImageTransform.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation
 
 
 # static fields
-.field static final synthetic $SwitchMap$android$widget$ImageView$ScaleType:[I
+.field public static final synthetic $SwitchMap$android$widget$ImageView$ScaleType:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 192
+    .line 1
     invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 
     move-result-object v0

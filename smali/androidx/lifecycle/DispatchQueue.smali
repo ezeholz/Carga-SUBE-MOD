@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private finished:Z
+.field public finished:Z
 
-.field private isDraining:Z
+.field public isDraining:Z
 
-.field private paused:Z
+.field public paused:Z
 
-.field private final queue:Ljava/util/Queue;
+.field public final queue:Ljava/util/Queue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Queue<",
@@ -25,20 +25,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 34
+    .line 2
     iput-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->paused:Z
 
-    .line 39
+    .line 3
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    check-cast v0, Ljava/util/Queue;
 
     iput-object v0, p0, Landroidx/lifecycle/DispatchQueue;->queue:Ljava/util/Queue;
 
@@ -48,7 +46,7 @@
 .method public static final synthetic access$enqueue(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 32
+    .line 1
     invoke-direct {p0, p1}, Landroidx/lifecycle/DispatchQueue;->enqueue(Ljava/lang/Runnable;)V
 
     return-void
@@ -56,8 +54,10 @@
 
 .method private final canRun()Z
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 84
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->finished:Z
 
     if-nez v0, :cond_1
@@ -71,19 +71,22 @@
     :cond_0
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_1
 
     :cond_1
     :goto_0
     const/4 v0, 0x1
 
+    :goto_1
     return v0
 .end method
 
 .method private final enqueue(Ljava/lang/Runnable;)V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 103
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/DispatchQueue;->queue:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
@@ -92,12 +95,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 106
+    .line 2
     invoke-virtual {p0}, Landroidx/lifecycle/DispatchQueue;->drainQueue()V
 
     return-void
 
-    .line 103
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -109,8 +112,6 @@
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Ljava/lang/Throwable;
-
     throw p1
 .end method
 
@@ -118,8 +119,10 @@
 # virtual methods
 .method public final drainQueue()V
     .locals 3
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 66
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->isDraining:Z
 
     if-eqz v0, :cond_0
@@ -131,16 +134,14 @@
 
     const/4 v1, 0x1
 
-    .line 71
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Landroidx/lifecycle/DispatchQueue;->isDraining:Z
 
-    .line 72
+    .line 3
     :cond_1
     :goto_0
     iget-object v2, p0, Landroidx/lifecycle/DispatchQueue;->queue:Ljava/util/Queue;
-
-    check-cast v2, Ljava/util/Collection;
 
     invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
@@ -148,16 +149,19 @@
 
     xor-int/2addr v2, v1
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
-    .line 73
+    .line 4
     invoke-direct {p0}, Landroidx/lifecycle/DispatchQueue;->canRun()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-nez v2, :cond_2
 
-    .line 76
+    goto :goto_1
+
+    .line 5
+    :cond_2
     iget-object v2, p0, Landroidx/lifecycle/DispatchQueue;->queue:Ljava/util/Queue;
 
     invoke-interface {v2}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -174,8 +178,9 @@
 
     goto :goto_0
 
-    .line 79
-    :cond_2
+    .line 6
+    :cond_3
+    :goto_1
     iput-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->isDraining:Z
 
     return-void
@@ -185,24 +190,26 @@
 
     iput-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->isDraining:Z
 
-    goto :goto_2
-
-    :goto_1
-    throw v1
+    goto :goto_3
 
     :goto_2
-    goto :goto_1
+    throw v1
+
+    :goto_3
+    goto :goto_2
 .end method
 
 .method public final finish()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 60
+    .line 1
     iput-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->finished:Z
 
-    .line 61
+    .line 2
     invoke-virtual {p0}, Landroidx/lifecycle/DispatchQueue;->drainQueue()V
 
     return-void
@@ -210,10 +217,12 @@
 
 .method public final pause()V
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 43
+    .line 1
     iput-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->paused:Z
 
     return-void
@@ -221,15 +230,17 @@
 
 .method public final resume()V
     .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 48
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->paused:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 51
+    .line 2
     :cond_0
     iget-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->finished:Z
 
@@ -239,15 +250,15 @@
 
     const/4 v0, 0x0
 
-    .line 54
+    .line 3
     iput-boolean v0, p0, Landroidx/lifecycle/DispatchQueue;->paused:Z
 
-    .line 55
+    .line 4
     invoke-virtual {p0}, Landroidx/lifecycle/DispatchQueue;->drainQueue()V
 
     return-void
 
-    .line 51
+    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -259,56 +270,57 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ljava/lang/Throwable;
-
     throw v0
 .end method
 
 .method public final runOrEnqueue(Ljava/lang/Runnable;)V
     .locals 3
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "WrongThread"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
 
     const-string v0, "runnable"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 90
-    invoke-static {}, Lkotlinx/coroutines/ae;->b()Lkotlinx/coroutines/az;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkotlinx/coroutines/az;->a()Lkotlinx/coroutines/az;
+    .line 1
+    invoke-static {}, Le/a/l0;->a()Le/a/g1;
 
     move-result-object v0
 
-    .line 91
-    sget-object v1, Lkotlin/b/g;->a:Lkotlin/b/g;
+    invoke-virtual {v0}, Le/a/g1;->j()Le/a/g1;
 
-    check-cast v1, Lkotlin/b/f;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lkotlinx/coroutines/az;->isDispatchNeeded(Lkotlin/b/f;)Z
+    .line 2
+    sget-object v1, Lj/k/h;->d:Lj/k/h;
+
+    invoke-virtual {v0, v1}, Le/a/w;->isDispatchNeeded(Lj/k/f;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 92
-    sget-object v1, Lkotlin/b/g;->a:Lkotlin/b/g;
-
-    check-cast v1, Lkotlin/b/f;
+    .line 3
+    sget-object v1, Lj/k/h;->d:Lj/k/h;
 
     new-instance v2, Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;
 
     invoke-direct {v2, p0, p1}, Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;-><init>(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
 
-    check-cast v2, Ljava/lang/Runnable;
+    invoke-virtual {v0, v1, v2}, Le/a/w;->dispatch(Lj/k/f;Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1, v2}, Lkotlinx/coroutines/az;->dispatch(Lkotlin/b/f;Ljava/lang/Runnable;)V
+    goto :goto_0
 
-    return-void
-
-    .line 96
+    .line 4
     :cond_0
     invoke-direct {p0, p1}, Landroidx/lifecycle/DispatchQueue;->enqueue(Ljava/lang/Runnable;)V
 
+    :goto_0
     return-void
 .end method

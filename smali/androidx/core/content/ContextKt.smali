@@ -18,110 +18,116 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
-    invoke-static {}, Lkotlin/d/b/h;->b()V
+    .line 1
+    invoke-static {}, Lj/m/c/i;->a()V
 
-    const-class v0, Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    check-cast v0, Ljava/lang/Class;
-
-    invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->getSystemService(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    throw p0
 .end method
 
-.method public static final withStyledAttributes(Landroid/content/Context;I[ILkotlin/d/a/b;)V
+.method public static final withStyledAttributes(Landroid/content/Context;I[ILj/m/b/l;)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "I[I",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/content/res/TypedArray;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "attrs"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "block"
 
-    invoke-static {p3, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 76
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
     const-string p1, "obtainStyledAttributes(resourceId, attrs)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p3, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
-.method public static final withStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[IIILkotlin/d/a/b;)V
+.method public static final withStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[IIILj/m/b/l;)V
     .locals 1
+    .param p3    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Landroid/util/AttributeSet;",
             "[III",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/content/res/TypedArray;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "attrs"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "block"
 
-    invoke-static {p5, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 59
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
     const-string p1, "obtainStyledAttributes(set, attrs, defStyleAttr, defStyleRes)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p5, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
-.method public static synthetic withStyledAttributes$default(Landroid/content/Context;Landroid/util/AttributeSet;[IIILkotlin/d/a/b;ILjava/lang/Object;)V
+.method public static synthetic withStyledAttributes$default(Landroid/content/Context;Landroid/util/AttributeSet;[IIILj/m/b/l;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p7, p6, 0x1
@@ -149,27 +155,27 @@
     :cond_2
     const-string p6, "<this>"
 
-    .line 52
-    invoke-static {p0, p6}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p0, p6}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p6, "attrs"
 
-    invoke-static {p2, p6}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p6}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p6, "block"
 
-    invoke-static {p5, p6}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, p6}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 59
+    .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
     const-string p1, "obtainStyledAttributes(set, attrs, defStyleAttr, defStyleRes)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p5, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p5, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 

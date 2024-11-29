@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/AppGroupCreationContent$a;
+        Lcom/facebook/share/model/AppGroupCreationContent$b;
     }
 .end annotation
 
@@ -27,62 +27,62 @@
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
-.field private final b:Ljava/lang/String;
+.field public final e:Ljava/lang/String;
 
-.field private c:Lcom/facebook/share/model/AppGroupCreationContent$a;
+.field public f:Lcom/facebook/share/model/AppGroupCreationContent$b;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 83
-    new-instance v0, Lcom/facebook/share/model/AppGroupCreationContent$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/AppGroupCreationContent$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/AppGroupCreationContent$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/AppGroupCreationContent$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/AppGroupCreationContent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 39
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/model/AppGroupCreationContent;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/model/AppGroupCreationContent;->d:Ljava/lang/String;
 
-    .line 41
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/model/AppGroupCreationContent;->b:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/model/AppGroupCreationContent;->e:Ljava/lang/String;
 
-    .line 42
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/share/model/AppGroupCreationContent$a;
+    check-cast p1, Lcom/facebook/share/model/AppGroupCreationContent$b;
 
-    iput-object p1, p0, Lcom/facebook/share/model/AppGroupCreationContent;->c:Lcom/facebook/share/model/AppGroupCreationContent$a;
+    iput-object p1, p0, Lcom/facebook/share/model/AppGroupCreationContent;->f:Lcom/facebook/share/model/AppGroupCreationContent$b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -90,21 +90,21 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 77
-    iget-object p2, p0, Lcom/facebook/share/model/AppGroupCreationContent;->a:Ljava/lang/String;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/model/AppGroupCreationContent;->d:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 78
-    iget-object p2, p0, Lcom/facebook/share/model/AppGroupCreationContent;->b:Ljava/lang/String;
+    .line 2
+    iget-object p2, p0, Lcom/facebook/share/model/AppGroupCreationContent;->e:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 79
-    iget-object p2, p0, Lcom/facebook/share/model/AppGroupCreationContent;->c:Lcom/facebook/share/model/AppGroupCreationContent$a;
+    .line 3
+    iget-object p2, p0, Lcom/facebook/share/model/AppGroupCreationContent;->f:Lcom/facebook/share/model/AppGroupCreationContent$b;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 

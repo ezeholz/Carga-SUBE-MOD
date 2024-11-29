@@ -24,15 +24,15 @@
 
 .field public static final TextAppearance_Compat_Notification_Title:I = 0x7f13016c
 
-.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f13024b
+.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f13024d
 
-.field public static final Widget_Compat_NotificationActionText:I = 0x7f13024c
+.field public static final Widget_Compat_NotificationActionText:I = 0x7f13024e
 
-.field public static final Widget_Support_CoordinatorLayout:I = 0x7f1302b7
+.field public static final Widget_Support_CoordinatorLayout:I = 0x7f1302b9
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

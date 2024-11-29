@@ -1,4 +1,4 @@
-.class Landroidx/media/AudioAttributesImplApi21;
+.class public Landroidx/media/AudioAttributesImplApi21;
 .super Ljava/lang/Object;
 .source "AudioAttributesImplApi21.java"
 
@@ -6,59 +6,65 @@
 .implements Landroidx/media/AudioAttributesImpl;
 
 
-# static fields
-.field private static final TAG:Ljava/lang/String; = "AudioAttributesCompat21"
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x15
+.end annotation
 
-.field static sAudioAttributesToLegacyStreamType:Ljava/lang/reflect/Method;
+
+# static fields
+.field public static final TAG:Ljava/lang/String; = "AudioAttributesCompat21"
+
+.field public static sAudioAttributesToLegacyStreamType:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field mAudioAttributes:Landroid/media/AudioAttributes;
+.field public mAudioAttributes:Landroid/media/AudioAttributes;
 
-.field mLegacyStreamType:I
+.field public mLegacyStreamType:I
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 49
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 43
+    .line 2
     iput v0, p0, Landroidx/media/AudioAttributesImplApi21;->mLegacyStreamType:I
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/media/AudioAttributes;)V
+.method public constructor <init>(Landroid/media/AudioAttributes;)V
     .locals 1
 
     const/4 v0, -0x1
 
-    .line 53
+    .line 3
     invoke-direct {p0, p1, v0}, Landroidx/media/AudioAttributesImplApi21;-><init>(Landroid/media/AudioAttributes;I)V
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/media/AudioAttributes;I)V
+.method public constructor <init>(Landroid/media/AudioAttributes;I)V
     .locals 1
 
-    .line 55
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 43
+    .line 5
     iput v0, p0, Landroidx/media/AudioAttributesImplApi21;->mLegacyStreamType:I
 
-    .line 56
+    .line 6
     iput-object p1, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
-    .line 57
+    .line 7
     iput p2, p0, Landroidx/media/AudioAttributesImplApi21;->mLegacyStreamType:I
 
     return-void
@@ -76,7 +82,7 @@
     :cond_0
     const-string v1, "androidx.media.audio_attrs.FRAMEWORKS"
 
-    .line 170
+    .line 1
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -92,12 +98,12 @@
 
     const-string v2, "androidx.media.audio_attrs.LEGACY_STREAM_TYPE"
 
-    .line 174
+    .line 2
     invoke-virtual {p0, v2, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 176
+    .line 3
     new-instance v0, Landroidx/media/AudioAttributesImplApi21;
 
     invoke-direct {v0, v1, p0}, Landroidx/media/AudioAttributesImplApi21;-><init>(Landroid/media/AudioAttributes;I)V
@@ -105,16 +111,16 @@
     return-object v0
 .end method
 
-.method static getAudioAttributesToLegacyStreamTypeMethod()Ljava/lang/reflect/Method;
+.method public static getAudioAttributesToLegacyStreamTypeMethod()Ljava/lang/reflect/Method;
     .locals 5
 
-    .line 64
+    .line 1
     :try_start_0
     sget-object v0, Landroidx/media/AudioAttributesImplApi21;->sAudioAttributesToLegacyStreamType:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
-    .line 65
+    .line 2
     const-class v0, Landroid/media/AudioAttributes;
 
     const-string v1, "toLegacyStreamType"
@@ -137,7 +143,7 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
+    .line 3
     :cond_0
     sget-object v0, Landroidx/media/AudioAttributesImplApi21;->sAudioAttributesToLegacyStreamType:Ljava/lang/reflect/Method;
 
@@ -154,7 +160,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 150
+    .line 1
     instance-of v0, p1, Landroidx/media/AudioAttributesImplApi21;
 
     if-nez v0, :cond_0
@@ -163,11 +169,11 @@
 
     return p1
 
-    .line 153
+    .line 2
     :cond_0
     check-cast p1, Landroidx/media/AudioAttributesImplApi21;
 
-    .line 154
+    .line 3
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     iget-object p1, p1, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
@@ -182,7 +188,7 @@
 .method public getAudioAttributes()Ljava/lang/Object;
     .locals 1
 
-    .line 78
+    .line 1
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     return-object v0
@@ -191,7 +197,7 @@
 .method public getContentType()I
     .locals 1
 
-    .line 117
+    .line 1
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0}, Landroid/media/AudioAttributes;->getContentType()I
@@ -204,7 +210,7 @@
 .method public getFlags()I
     .locals 1
 
-    .line 127
+    .line 1
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0}, Landroid/media/AudioAttributes;->getFlags()I
@@ -217,7 +223,7 @@
 .method public getLegacyStreamType()I
     .locals 6
 
-    .line 91
+    .line 1
     iget v0, p0, Landroidx/media/AudioAttributesImplApi21;->mLegacyStreamType:I
 
     const/4 v1, -0x1
@@ -226,24 +232,13 @@
 
     return v0
 
-    .line 94
+    .line 2
     :cond_0
     invoke-static {}, Landroidx/media/AudioAttributesImplApi21;->getAudioAttributesToLegacyStreamTypeMethod()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     if-nez v0, :cond_1
-
-    .line 96
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "No AudioAttributes#toLegacyStreamType() on API: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     return v1
 
@@ -257,7 +252,7 @@
 
     const/4 v4, 0x0
 
-    .line 101
+    .line 3
     iget-object v5, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     aput-object v5, v3, v4
@@ -266,7 +261,7 @@
 
     move-result-object v0
 
-    .line 102
+    .line 4
     check-cast v0, Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -278,25 +273,14 @@
 
     return v0
 
-    .line 104
     :catch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "getLegacyStreamType() failed on API: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     return v1
 .end method
 
 .method public getRawLegacyStreamType()I
     .locals 1
 
-    .line 112
+    .line 1
     iget v0, p0, Landroidx/media/AudioAttributesImplApi21;->mLegacyStreamType:I
 
     return v0
@@ -305,7 +289,7 @@
 .method public getUsage()I
     .locals 1
 
-    .line 122
+    .line 1
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0}, Landroid/media/AudioAttributes;->getUsage()I
@@ -318,14 +302,14 @@
 .method public getVolumeControlStream()I
     .locals 3
 
-    .line 83
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 84
+    .line 2
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0}, Landroid/media/AudioAttributes;->getVolumeControlStream()I
@@ -337,7 +321,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 86
+    .line 3
     invoke-virtual {p0}, Landroidx/media/AudioAttributesImplApi21;->getFlags()I
 
     move-result v1
@@ -356,7 +340,7 @@
 .method public hashCode()I
     .locals 1
 
-    .line 145
+    .line 1
     iget-object v0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0}, Landroid/media/AudioAttributes;->hashCode()I
@@ -368,20 +352,22 @@
 
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 132
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 133
+    .line 2
     iget-object v1, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     const-string v2, "androidx.media.audio_attrs.FRAMEWORKS"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 134
+    .line 3
     iget v1, p0, Landroidx/media/AudioAttributesImplApi21;->mLegacyStreamType:I
 
     const/4 v2, -0x1
@@ -390,7 +376,7 @@
 
     const-string v2, "androidx.media.audio_attrs.LEGACY_STREAM_TYPE"
 
-    .line 135
+    .line 4
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     :cond_0
@@ -400,12 +386,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 159
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "AudioAttributesCompat: audioattributes="
 
-    const-string v1, "AudioAttributesCompat: audioattributes="
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 

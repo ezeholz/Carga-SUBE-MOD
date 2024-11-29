@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;
+.class public Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;
 .super Landroid/media/session/MediaSession$Callback;
 .source "MediaSessionCompatApi21.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "CallbackProxy"
 .end annotation
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field protected final mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
+.field public final mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -42,10 +42,10 @@
         }
     .end annotation
 
-    .line 178
+    .line 1
     invoke-direct {p0}, Landroid/media/session/MediaSession$Callback;-><init>()V
 
-    .line 179
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     return-void
@@ -56,10 +56,10 @@
 .method public onCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
     .locals 1
 
-    .line 184
+    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 185
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
@@ -70,10 +70,10 @@
 .method public onCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 258
+    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 259
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -84,7 +84,7 @@
 .method public onFastForward()V
     .locals 1
 
-    .line 233
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onFastForward()V
@@ -95,7 +95,7 @@
 .method public onMediaButtonEvent(Landroid/content/Intent;)Z
     .locals 1
 
-    .line 190
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onMediaButtonEvent(Landroid/content/Intent;)Z
@@ -104,7 +104,7 @@
 
     if-nez v0, :cond_1
 
-    .line 191
+    .line 2
     invoke-super {p0, p1}, Landroid/media/session/MediaSession$Callback;->onMediaButtonEvent(Landroid/content/Intent;)Z
 
     move-result p1
@@ -116,19 +116,20 @@
     :cond_0
     const/4 p1, 0x0
 
-    return p1
+    goto :goto_1
 
     :cond_1
     :goto_0
     const/4 p1, 0x1
 
+    :goto_1
     return p1
 .end method
 
 .method public onPause()V
     .locals 1
 
-    .line 218
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onPause()V
@@ -139,7 +140,7 @@
 .method public onPlay()V
     .locals 1
 
-    .line 196
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onPlay()V
@@ -150,10 +151,10 @@
 .method public onPlayFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 201
+    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 202
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onPlayFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -164,10 +165,10 @@
 .method public onPlayFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 207
+    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 208
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onPlayFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -178,7 +179,7 @@
 .method public onRewind()V
     .locals 1
 
-    .line 238
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onRewind()V
@@ -189,7 +190,7 @@
 .method public onSeekTo(J)V
     .locals 1
 
-    .line 248
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onSeekTo(J)V
@@ -200,7 +201,7 @@
 .method public onSetRating(Landroid/media/Rating;)V
     .locals 1
 
-    .line 253
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onSetRating(Ljava/lang/Object;)V
@@ -211,7 +212,7 @@
 .method public onSkipToNext()V
     .locals 1
 
-    .line 223
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onSkipToNext()V
@@ -222,7 +223,7 @@
 .method public onSkipToPrevious()V
     .locals 1
 
-    .line 228
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onSkipToPrevious()V
@@ -233,7 +234,7 @@
 .method public onSkipToQueueItem(J)V
     .locals 1
 
-    .line 213
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onSkipToQueueItem(J)V
@@ -244,7 +245,7 @@
 .method public onStop()V
     .locals 1
 
-    .line 243
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;->onStop()V

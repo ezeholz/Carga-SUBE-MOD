@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/Document$4;
+.class public Lcom/facebook/stetho/inspector/elements/Document$4;
 .super Ljava/lang/Object;
 .source "Document.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
-.field final synthetic val$docUpdate:Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;
+.field public final synthetic val$docUpdate:Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;
 
-.field final synthetic val$garbageElementIds:Ljava/util/ArrayList;
+.field public final synthetic val$garbageElementIds:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;Ljava/util/ArrayList;Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;Ljava/util/ArrayList;Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;)V
     .locals 0
 
-    .line 402
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->val$garbageElementIds:Ljava/util/ArrayList;
@@ -55,7 +55,7 @@
 .method public store(Ljava/lang/Object;)V
     .locals 3
 
-    .line 405
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/elements/Document;->access$500(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
@@ -72,7 +72,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 408
+    .line 2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->val$garbageElementIds:Ljava/util/ArrayList;
 
     invoke-static {v1, v0}, Ljava/util/Collections;->binarySearch(Ljava/util/List;Ljava/lang/Object;)I
@@ -83,7 +83,7 @@
 
     return-void
 
-    .line 413
+    .line 3
     :cond_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
@@ -99,7 +99,7 @@
 
     return-void
 
-    .line 418
+    .line 4
     :cond_1
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->val$docUpdate:Lcom/facebook/stetho/inspector/elements/ShadowDocument$Update;
 
@@ -107,14 +107,14 @@
 
     move-result-object p1
 
-    .line 419
+    .line 5
     iget-object p1, p1, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     iget-object v2, v1, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
     if-eq p1, v2, :cond_2
 
-    .line 420
+    .line 6
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {p1}, Lcom/facebook/stetho/inspector/elements/Document;->access$500(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
@@ -131,7 +131,7 @@
 
     move-result p1
 
-    .line 421
+    .line 7
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/Document$4;->this$0:Lcom/facebook/stetho/inspector/elements/Document;
 
     invoke-static {v1}, Lcom/facebook/stetho/inspector/elements/Document;->access$700(Lcom/facebook/stetho/inspector/elements/Document;)Lcom/facebook/stetho/inspector/elements/Document$UpdateListenerCollection;

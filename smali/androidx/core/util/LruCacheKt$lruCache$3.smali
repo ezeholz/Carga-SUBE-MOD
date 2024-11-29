@@ -1,14 +1,14 @@
 .class public final Landroidx/core/util/LruCacheKt$lruCache$3;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "LruCache.kt"
 
 # interfaces
-.implements Lkotlin/d/a/r;
+.implements Lj/m/b/r;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/util/LruCacheKt;->lruCache$default(ILkotlin/d/a/m;Lkotlin/d/a/b;Lkotlin/d/a/r;ILjava/lang/Object;)Landroid/util/LruCache;
+    value = Landroidx/core/util/LruCacheKt;->lruCache$default(ILj/m/b/p;Lj/m/b/l;Lj/m/b/r;ILjava/lang/Object;)Landroid/util/LruCache;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/r<",
+        "Lj/m/c/j;",
+        "Lj/m/b/r<",
         "Ljava/lang/Boolean;",
         "TK;TV;TV;",
-        "Lkotlin/n;",
+        "Lj/i;",
         ">;"
     }
 .end annotation
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/core/util/LruCacheKt$lruCache$3;
@@ -50,17 +50,17 @@
 
     const/4 v0, 0x4
 
-    invoke-direct {p0, v0}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, v0}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/core/util/LruCacheKt$lruCache$3;->invoke(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/n;->a:Lkotlin/n;
+    sget-object p1, Lj/i;->a:Lj/i;
 
     return-object p1
 .end method
@@ -84,11 +84,11 @@
 
     const-string p1, "$noName_1"
 
-    invoke-static {p2, p1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p1, "$noName_2"
 
-    invoke-static {p3, p1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

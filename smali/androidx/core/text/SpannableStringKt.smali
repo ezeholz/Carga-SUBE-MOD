@@ -6,46 +6,46 @@
 # direct methods
 .method public static final clearSpans(Landroid/text/Spannable;)V
     .locals 4
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "SyntheticAccessor"
+        }
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 34
-    move-object v0, p0
+    .line 1
+    invoke-interface {p0}, Landroid/text/Spanned;->length()I
 
-    check-cast v0, Landroid/text/Spanned;
+    move-result v0
 
-    .line 71
-    invoke-interface {v0}, Landroid/text/Spanned;->length()I
+    .line 2
+    const-class v1, Ljava/lang/Object;
 
-    move-result v1
+    const/4 v2, 0x0
 
-    .line 72
-    const-class v2, Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-interface {v0, v3, v1, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    invoke-interface {p0, v2, v0, v1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "getSpans(start, end, T::class.java)"
 
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 73
+    .line 3
     array-length v1, v0
 
     :goto_0
-    if-ge v3, v1, :cond_0
+    if-ge v2, v1, :cond_0
 
-    aget-object v2, v0, v3
+    aget-object v3, v0, v2
 
-    .line 34
-    invoke-interface {p0, v2}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+    .line 4
+    invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -58,44 +58,63 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "span"
 
-    invoke-static {p3, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x11
 
-    .line 49
+    .line 1
     invoke-interface {p0, p3, p1, p2, v0}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
     return-void
 .end method
 
-.method public static final set(Landroid/text/Spannable;Lkotlin/e/d;Ljava/lang/Object;)V
+.method public static final set(Landroid/text/Spannable;Lj/n/d;Ljava/lang/Object;)V
     .locals 2
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "range"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "span"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1092
-    iget v0, p1, Lkotlin/e/b;->a:I
+    .line 2
+    iget v0, p1, Lj/n/b;->d:I
 
-    .line 2097
-    iget p1, p1, Lkotlin/e/b;->b:I
+    .line 3
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 5
+    iget p1, p1, Lj/n/b;->e:I
+
+    .line 6
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    .line 7
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
 
     const/16 v1, 0x11
 
-    .line 66
     invoke-interface {p0, p2, v0, p1, v1}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
     return-void
@@ -106,18 +125,16 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
+    .line 1
     invoke-static {p0}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
     move-result-object p0
 
     const-string v0, "valueOf(this)"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p0, Landroid/text/Spannable;
+    invoke-static {p0, v0}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method

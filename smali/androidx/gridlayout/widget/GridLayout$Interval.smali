@@ -1,4 +1,4 @@
-.class final Landroidx/gridlayout/widget/GridLayout$Interval;
+.class public final Landroidx/gridlayout/widget/GridLayout$Interval;
 .super Ljava/lang/Object;
 .source "GridLayout.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "Interval"
 .end annotation
 
@@ -24,13 +24,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 2345
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2346
+    .line 2
     iput p1, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->min:I
 
-    .line 2347
+    .line 3
     iput p2, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
 
     return-void
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
     const/4 v0, 0x1
@@ -52,10 +52,8 @@
 
     if-eqz p1, :cond_4
 
-    .line 2373
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
+    .line 1
+    const-class v2, Landroidx/gridlayout/widget/GridLayout$Interval;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -65,11 +63,11 @@
 
     goto :goto_0
 
-    .line 2377
+    .line 2
     :cond_1
     check-cast p1, Landroidx/gridlayout/widget/GridLayout$Interval;
 
-    .line 2379
+    .line 3
     iget v2, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
 
     iget v3, p1, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
@@ -78,7 +76,7 @@
 
     return v1
 
-    .line 2383
+    .line 4
     :cond_2
     iget v2, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->min:I
 
@@ -96,15 +94,15 @@
     return v1
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 2
 
-    .line 2392
+    .line 1
     iget v0, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->min:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 2393
+    .line 2
     iget v1, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
 
     add-int/2addr v0, v1
@@ -112,10 +110,10 @@
     return v0
 .end method
 
-.method final inverse()Landroidx/gridlayout/widget/GridLayout$Interval;
+.method public inverse()Landroidx/gridlayout/widget/GridLayout$Interval;
     .locals 3
 
-    .line 2355
+    .line 1
     new-instance v0, Landroidx/gridlayout/widget/GridLayout$Interval;
 
     iget v1, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
@@ -127,10 +125,10 @@
     return-object v0
 .end method
 
-.method final size()I
+.method public size()I
     .locals 2
 
-    .line 2351
+    .line 1
     iget v0, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
 
     iget v1, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->min:I
@@ -140,15 +138,15 @@
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public toString()Ljava/lang/String;
+    .locals 3
 
-    .line 2399
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "["
 
-    const-string v1, "["
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget v1, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->min:I
 
@@ -160,13 +158,9 @@
 
     iget v1, p0, Landroidx/gridlayout/widget/GridLayout$Interval;->max:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v2, "]"
 
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lg/b/a/a/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

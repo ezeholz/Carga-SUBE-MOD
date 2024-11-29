@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewKt;->doOnAttach(Landroid/view/View;Lkotlin/d/a/b;)V
+    value = Landroidx/core/view/ViewKt;->doOnAttach(Landroid/view/View;Lj/m/b/l;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,40 +18,40 @@
 
 
 # instance fields
-.field final synthetic $action:Lkotlin/d/a/b;
+.field public final synthetic $action:Lj/m/b/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "Landroid/view/View;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $this_doOnAttach:Landroid/view/View;
+.field public final synthetic $this_doOnAttach:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/d/a/b;)V
+.method public constructor <init>(Landroid/view/View;Lj/m/b/l;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     iput-object p1, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$this_doOnAttach:Landroid/view/View;
 
-    iput-object p2, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$action:Lkotlin/d/a/b;
+    iput-object p2, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$action:Lj/m/b/l;
 
-    .line 97
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,36 +59,32 @@
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 2
-
-    const-string v0, "view"
-
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 99
-    iget-object v0, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$this_doOnAttach:Landroid/view/View;
-
-    move-object v1, p0
-
-    check-cast v1, Landroid/view/View$OnAttachStateChangeListener;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    .line 100
-    iget-object v0, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$action:Lkotlin/d/a/b;
-
-    invoke-interface {v0, p1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+.method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
 
     const-string v0, "view"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$this_doOnAttach:Landroid/view/View;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    .line 2
+    iget-object v0, p0, Landroidx/core/view/ViewKt$doOnAttach$1;->$action:Lj/m/b/l;
+
+    invoke-interface {v0, p1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

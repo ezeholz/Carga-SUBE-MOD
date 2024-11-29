@@ -1,4 +1,4 @@
-.class synthetic Lcom/facebook/stetho/inspector/ChromeDevtoolsServer$1;
+.class public synthetic Lcom/facebook/stetho/inspector/ChromeDevtoolsServer$1;
 .super Ljava/lang/Object;
 .source "ChromeDevtoolsServer.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$facebook$stetho$inspector$jsonrpc$protocol$JsonRpcError$ErrorCode:[I
+.field public static final synthetic $SwitchMap$com$facebook$stetho$inspector$jsonrpc$protocol$JsonRpcError$ErrorCode:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 158
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->values()[Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
     move-result-object v0
@@ -36,9 +36,7 @@
     :try_start_0
     sget-object v1, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->METHOD_NOT_FOUND:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    invoke-virtual {v1}, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->ordinal()I
-
-    move-result v1
+    const/4 v1, 0x2
 
     const/4 v2, 0x1
 

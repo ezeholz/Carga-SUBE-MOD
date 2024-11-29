@@ -1,4 +1,4 @@
-.class final Landroidx/savedstate/Recreator;
+.class public final Landroidx/savedstate/Recreator;
 .super Ljava/lang/Object;
 .source "Recreator.java"
 
@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "RestrictedApi"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/savedstate/Recreator$SavedStateProvider;
@@ -15,23 +21,23 @@
 
 
 # static fields
-.field static final CLASSES_KEY:Ljava/lang/String; = "classes_to_restore"
+.field public static final CLASSES_KEY:Ljava/lang/String; = "classes_to_restore"
 
-.field static final COMPONENT_KEY:Ljava/lang/String; = "androidx.savedstate.Restarter"
+.field public static final COMPONENT_KEY:Ljava/lang/String; = "androidx.savedstate.Restarter"
 
 
 # instance fields
-.field private final mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
+.field public final mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
 
 # direct methods
-.method constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
+.method public constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
     .locals 0
 
-    .line 42
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 2
     iput-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
     return-void
@@ -40,25 +46,25 @@
 .method private reflectiveNew(Ljava/lang/String;)V
     .locals 4
 
-    .line 71
+    .line 1
     :try_start_0
     const-class v0, Landroidx/savedstate/Recreator;
 
-    .line 72
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 71
+    .line 3
     invoke-static {p1, v1, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-class v2, Landroidx/savedstate/SavedStateRegistry$AutoRecreated;
 
-    .line 72
+    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
@@ -68,7 +74,7 @@
     :try_start_1
     new-array v2, v1, [Ljava/lang/Class;
 
-    .line 79
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -77,13 +83,13 @@
 
     const/4 v2, 0x1
 
-    .line 84
+    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
     :try_start_2
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 88
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -92,7 +98,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 92
+    .line 8
     iget-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
     invoke-interface {v0, p1}, Landroidx/savedstate/SavedStateRegistry$AutoRecreated;->onRecreated(Landroidx/savedstate/SavedStateRegistryOwner;)V
@@ -102,16 +108,12 @@
     :catch_0
     move-exception v0
 
-    .line 90
+    .line 9
     new-instance v1, Ljava/lang/RuntimeException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
 
     const-string v2, "Failed to instantiate "
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -122,14 +124,14 @@
     :catch_1
     move-exception p1
 
-    .line 81
+    .line 10
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "Class"
 
-    const-string v3, "Class"
+    invoke-static {v2}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -152,22 +154,14 @@
     :catch_2
     move-exception v0
 
-    .line 74
+    .line 11
     new-instance v1, Ljava/lang/RuntimeException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "Class "
 
-    const-string v3, "Class "
+    const-string v3, " wasn\'t found"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " wasn\'t found"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, p1, v3}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -178,22 +172,22 @@
 
 
 # virtual methods
-.method public final onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
 
-    .line 48
+    .line 1
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, v0, :cond_3
 
-    .line 51
+    .line 2
     invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 52
+    .line 3
     iget-object p1, p0, Landroidx/savedstate/Recreator;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
     invoke-interface {p1}, Landroidx/savedstate/SavedStateRegistryOwner;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
@@ -202,7 +196,7 @@
 
     const-string p2, "androidx.savedstate.Restarter"
 
-    .line 53
+    .line 4
     invoke-virtual {p1, p2}, Landroidx/savedstate/SavedStateRegistry;->consumeRestoredStateForKey(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -214,14 +208,14 @@
     :cond_0
     const-string p2, "classes_to_restore"
 
-    .line 57
+    .line 5
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 63
+    .line 6
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -239,7 +233,7 @@
 
     check-cast p2, Ljava/lang/String;
 
-    .line 64
+    .line 7
     invoke-direct {p0, p2}, Landroidx/savedstate/Recreator;->reflectiveNew(Ljava/lang/String;)V
 
     goto :goto_0
@@ -247,7 +241,7 @@
     :cond_1
     return-void
 
-    .line 59
+    .line 8
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -257,7 +251,7 @@
 
     throw p1
 
-    .line 49
+    .line 9
     :cond_3
     new-instance p1, Ljava/lang/AssertionError;
 

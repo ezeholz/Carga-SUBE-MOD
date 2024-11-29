@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private final mDomainHandlers:Ljava/lang/Iterable;
+.field public final mDomainHandlers:Ljava/lang/Iterable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Iterable<",
@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private mMethods:Ljava/util/Map;
+.field public mMethods:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field private final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
+.field public final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
 
 # direct methods
@@ -49,20 +49,20 @@
         }
     .end annotation
 
-    .line 46
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-    .line 48
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mDomainHandlers:Ljava/lang/Iterable;
 
     return-void
 .end method
 
-.method private static buildDispatchTable(Lcom/facebook/stetho/json/ObjectMapper;Ljava/lang/Iterable;)Ljava/util/Map;
-    .locals 10
+.method public static buildDispatchTable(Lcom/facebook/stetho/json/ObjectMapper;Ljava/lang/Iterable;)Ljava/util/Map;
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -77,15 +77,15 @@
         }
     .end annotation
 
-    .line 109
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 111
+    .line 3
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -109,17 +109,17 @@
 
     check-cast v1, Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;
 
-    .line 112
+    .line 4
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 113
+    .line 5
     invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 115
+    .line 6
     invoke-virtual {v2}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -133,28 +133,24 @@
 
     aget-object v6, v2, v5
 
-    .line 116
+    .line 7
     invoke-static {v6}, Lcom/facebook/stetho/inspector/MethodDispatcher;->isDevtoolsMethod(Ljava/lang/reflect/Method;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 117
+    .line 8
     new-instance v7, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;
 
     invoke-direct {v7, p0, v1, v6}, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;-><init>(Lcom/facebook/stetho/json/ObjectMapper;Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;Ljava/lang/reflect/Method;)V
 
-    .line 121
-    new-instance v8, Ljava/lang/StringBuilder;
+    const-string v8, "."
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    .line 9
+    invoke-static {v3, v8}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, "."
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v8
 
     invoke-virtual {v6}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -173,7 +169,7 @@
 
     goto :goto_0
 
-    .line 125
+    .line 10
     :cond_2
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -187,13 +183,13 @@
 
     monitor-enter p0
 
-    .line 52
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mMethods:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
-    .line 53
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mDomainHandlers:Ljava/lang/Iterable;
@@ -204,7 +200,7 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mMethods:Ljava/util/Map;
 
-    .line 55
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/MethodDispatcher;->mMethods:Ljava/util/Map;
 
@@ -228,10 +224,10 @@
     throw p1
 .end method
 
-.method private static isDevtoolsMethod(Ljava/lang/reflect/Method;)Z
+.method public static isDevtoolsMethod(Ljava/lang/reflect/Method;)Z
     .locals 8
 
-    .line 136
+    .line 1
     const-class v0, Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
 
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Method;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -244,13 +240,13 @@
 
     return v1
 
-    .line 139
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 140
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,7 +275,7 @@
 
     move-result-object v2
 
-    .line 141
+    .line 4
     array-length v3, v0
 
     const/4 v4, 0x2
@@ -302,7 +298,7 @@
 
     array-length v7, v0
 
-    .line 144
+    .line 5
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -311,10 +307,10 @@
 
     const-string v7, "%s: expected 2 args, got %s"
 
-    .line 141
+    .line 6
     invoke-static {v3, v7, v6}, Lcom/facebook/stetho/common/Util;->throwIfNot(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 145
+    .line 7
     aget-object v3, v0, v1
 
     const-class v6, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
@@ -329,7 +325,7 @@
 
     aget-object v7, v0, v1
 
-    .line 148
+    .line 8
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v7
@@ -338,10 +334,10 @@
 
     const-string v7, "%s: expected 1st arg of JsonRpcPeer, got %s"
 
-    .line 145
+    .line 9
     invoke-static {v3, v7, v6}, Lcom/facebook/stetho/common/Util;->throwIfNot(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 149
+    .line 10
     aget-object v3, v0, v5
 
     const-class v6, Lorg/json/JSONObject;
@@ -356,7 +352,7 @@
 
     aget-object v0, v0, v5
 
-    .line 152
+    .line 11
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -365,15 +361,15 @@
 
     const-string v0, "%s: expected 2nd arg of JSONObject, got %s"
 
-    .line 149
+    .line 12
     invoke-static {v3, v0, v6}, Lcom/facebook/stetho/common/Util;->throwIfNot(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 154
+    .line 13
     invoke-virtual {p0}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 155
+    .line 14
     sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -382,7 +378,7 @@
 
     if-nez v0, :cond_2
 
-    .line 156
+    .line 15
     const-class v0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcResult;
 
     invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -393,7 +389,7 @@
 
     aput-object v2, v3, v1
 
-    .line 159
+    .line 16
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -402,7 +398,7 @@
 
     const-string p0, "%s: expected JsonRpcResult return type, got %s"
 
-    .line 156
+    .line 17
     invoke-static {v0, p0, v3}, Lcom/facebook/stetho/common/Util;->throwIfNot(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     :cond_2
@@ -414,7 +410,7 @@
 .method public dispatch(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 3
 
-    .line 60
+    .line 1
     invoke-direct {p0, p2}, Lcom/facebook/stetho/inspector/MethodDispatcher;->findMethodDispatcher(Ljava/lang/String;)Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;
 
     move-result-object v0
@@ -423,7 +419,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 67
+    .line 2
     :try_start_0
     invoke-virtual {v0, p1, p3}, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->invoke(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
@@ -438,14 +434,14 @@
     :catch_0
     move-exception p1
 
-    .line 75
+    .line 3
     new-instance p2, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
     new-instance p3, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
     sget-object v0, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->INTERNAL_ERROR:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    .line 76
+    .line 4
     invoke-virtual {p1}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -459,7 +455,7 @@
     :catch_1
     move-exception p1
 
-    .line 73
+    .line 5
     new-instance p2, Ljava/lang/RuntimeException;
 
     invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -469,24 +465,24 @@
     :catch_2
     move-exception p1
 
-    .line 69
+    .line 6
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
-    .line 70
+    .line 7
     const-class p2, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
     invoke-static {p1, p2}, Lcom/facebook/stetho/common/ExceptionUtil;->propagateIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
-    .line 71
+    .line 8
     invoke-static {p1}, Lcom/facebook/stetho/common/ExceptionUtil;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 62
+    .line 9
     :cond_0
     new-instance p1, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
@@ -494,13 +490,9 @@
 
     sget-object v0, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->METHOD_NOT_FOUND:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
     const-string v2, "Not implemented: "
 
-    invoke-virtual {v2, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p2}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

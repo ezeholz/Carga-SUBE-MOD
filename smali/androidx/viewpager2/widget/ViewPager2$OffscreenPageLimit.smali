@@ -7,6 +7,16 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/IntRange;
+    from = 0x1L
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/viewpager2/widget/ViewPager2;
 .end annotation

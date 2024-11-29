@@ -16,4 +16,8 @@
 
 # virtual methods
 .method public abstract onControllableInsetsChanged(Landroidx/core/view/WindowInsetsControllerCompat;I)V
+    .param p1    # Landroidx/core/view/WindowInsetsControllerCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

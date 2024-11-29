@@ -1,4 +1,4 @@
-.class Landroidx/core/app/ActivityCompat$2;
+.class public Landroidx/core/app/ActivityCompat$2;
 .super Ljava/lang/Object;
 .source "ActivityCompat.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$activity:Landroid/app/Activity;
+.field public final synthetic val$activity:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .line 588
+    .line 1
     iput-object p1, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 591
+    .line 1
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
@@ -47,7 +47,7 @@
 
     if-nez v0, :cond_0
 
-    .line 592
+    .line 2
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-static {v0}, Landroidx/core/app/ActivityRecreator;->recreate(Landroid/app/Activity;)Z
@@ -56,7 +56,7 @@
 
     if-nez v0, :cond_0
 
-    .line 595
+    .line 3
     iget-object v0, p0, Landroidx/core/app/ActivityCompat$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->recreate()V

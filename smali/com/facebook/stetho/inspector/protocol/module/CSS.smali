@@ -32,21 +32,21 @@
 
 
 # instance fields
-.field private final mDocument:Lcom/facebook/stetho/inspector/elements/Document;
+.field public final mDocument:Lcom/facebook/stetho/inspector/elements/Document;
 
-.field private final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
+.field public final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-.field private final mPeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
+.field public final mPeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/elements/Document;)V
     .locals 2
 
-    .line 42
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -55,21 +55,21 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mDocument:Lcom/facebook/stetho/inspector/elements/Document;
 
-    .line 44
+    .line 3
     new-instance p1, Lcom/facebook/stetho/json/ObjectMapper;
 
     invoke-direct {p1}, Lcom/facebook/stetho/json/ObjectMapper;-><init>()V
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-    .line 45
+    .line 4
     new-instance p1, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     invoke-direct {p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;-><init>()V
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mPeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
-    .line 46
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$PeerManagerListener;
 
     const/4 v1, 0x0
@@ -81,10 +81,10 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/facebook/stetho/inspector/protocol/module/CSS;)Lcom/facebook/stetho/inspector/elements/Document;
+.method public static synthetic access$200(Lcom/facebook/stetho/inspector/protocol/module/CSS;)Lcom/facebook/stetho/inspector/elements/Document;
     .locals 0
 
-    .line 37
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mDocument:Lcom/facebook/stetho/inspector/elements/Document;
 
     return-object p0
@@ -113,7 +113,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 59
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;
@@ -124,38 +124,44 @@
 
     check-cast p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;
 
-    .line 63
+    .line 2
     new-instance p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;
 
     const/4 v0, 0x0
 
     invoke-direct {p2, v0}, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$1;)V
 
-    .line 64
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;->computedStyle:Ljava/util/List;
 
-    .line 66
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mDocument:Lcom/facebook/stetho/inspector/elements/Document;
 
     new-instance v1, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;)V
 
-    invoke-virtual {v0, v1}, Lcom/facebook/stetho/inspector/elements/Document;->postAndWait(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->postAndWait(Ljava/lang/Runnable;)V
 
     return-object p2
 .end method
 
 .method public getMatchedStylesForNode(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;Lorg/json/JSONObject;)Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcResult;
     .locals 2
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "DefaultLocale"
+        }
+    .end annotation
+
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 98
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeRequest;
@@ -166,42 +172,42 @@
 
     check-cast p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeRequest;
 
-    .line 102
+    .line 2
     new-instance p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeResult;
 
     const/4 v0, 0x0
 
     invoke-direct {p2, v0}, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeResult;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$1;)V
 
-    .line 103
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeResult;->matchedCSSRules:Ljava/util/List;
 
-    .line 104
+    .line 4
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeResult;->inherited:Ljava/util/List;
 
-    .line 105
+    .line 5
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeResult;->pseudoElements:Ljava/util/List;
 
-    .line 107
+    .line 6
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mDocument:Lcom/facebook/stetho/inspector/elements/Document;
 
     new-instance v1, Lcom/facebook/stetho/inspector/protocol/module/CSS$2;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/facebook/stetho/inspector/protocol/module/CSS$2;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeRequest;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetMatchedStylesForNodeResult;)V
 
-    invoke-virtual {v0, v1}, Lcom/facebook/stetho/inspector/elements/Document;->postAndWait(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->postAndWait(Ljava/lang/Runnable;)V
 
     return-object p2
 .end method
@@ -211,7 +217,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 166
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;
@@ -222,7 +228,7 @@
 
     check-cast p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;
 
-    .line 170
+    .line 2
     iget-object p2, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;->styleSheetId:Ljava/lang/String;
 
     const/4 v0, 0x2
@@ -235,7 +241,7 @@
 
     const/4 v1, 0x0
 
-    .line 171
+    .line 3
     aget-object v2, p2, v1
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -244,17 +250,15 @@
 
     const/4 v2, 0x1
 
-    .line 172
+    .line 4
     aget-object v7, p2, v2
 
-    .line 176
+    .line 5
     iget-object p2, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;->text:Ljava/lang/String;
 
     const/4 v3, 0x0
 
     if-eqz p2, :cond_1
-
-    iget-object p2, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;->text:Ljava/lang/String;
 
     const-string v4, ":"
 
@@ -266,7 +270,7 @@
 
     goto :goto_0
 
-    .line 180
+    .line 6
     :cond_0
     iget-object p2, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;->text:Ljava/lang/String;
 
@@ -274,14 +278,14 @@
 
     move-result-object p2
 
-    .line 181
+    .line 7
     aget-object v0, p2, v1
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 182
+    .line 8
     aget-object p2, p2, v2
 
     const/16 v1, 0x3b
@@ -306,36 +310,32 @@
 
     move-object v8, v6
 
-    .line 186
+    .line 9
     :goto_1
     new-instance p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;
 
     invoke-direct {p2, v3}, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$1;)V
 
-    .line 187
+    .line 10
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;
 
     invoke-direct {v0, v3}, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS$1;)V
 
     iput-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;->style:Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;
 
-    .line 188
-    iget-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;->style:Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;
-
+    .line 11
     iget-object p1, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextRequest;->styleSheetId:Ljava/lang/String;
 
     iput-object p1, v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;->styleSheetId:Ljava/lang/String;
 
-    .line 189
-    iget-object p1, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;->style:Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;
+    .line 12
+    new-instance p1, Ljava/util/ArrayList;
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput-object p1, v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;->cssProperties:Ljava/util/List;
 
-    iput-object v0, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;->cssProperties:Ljava/util/List;
-
-    .line 190
+    .line 13
     iget-object p1, p2, Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;->style:Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -344,7 +344,7 @@
 
     iput-object v0, p1, Lcom/facebook/stetho/inspector/protocol/module/CSS$CSSStyle;->shorthandEntries:Ljava/util/List;
 
-    .line 192
+    .line 14
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS;->mDocument:Lcom/facebook/stetho/inspector/elements/Document;
 
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/CSS$3;
@@ -357,7 +357,7 @@
 
     invoke-direct/range {v3 .. v9}, Lcom/facebook/stetho/inspector/protocol/module/CSS$3;-><init>(Lcom/facebook/stetho/inspector/protocol/module/CSS;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/CSS$SetPropertyTextResult;)V
 
-    invoke-virtual {p1, v0}, Lcom/facebook/stetho/inspector/elements/Document;->postAndWait(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->postAndWait(Ljava/lang/Runnable;)V
 
     return-object p2
 .end method

@@ -1,14 +1,14 @@
 .class public final Landroidx/collection/LruCacheKt$lruCache$1;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "LruCache.kt"
 
 # interfaces
-.implements Lkotlin/d/a/m;
+.implements Lj/m/b/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/collection/LruCacheKt;->lruCache$default(ILkotlin/d/a/m;Lkotlin/d/a/b;Lkotlin/d/a/r;ILjava/lang/Object;)Landroidx/collection/LruCache;
+    value = Landroidx/collection/LruCacheKt;->lruCache$default(ILj/m/b/p;Lj/m/b/l;Lj/m/b/r;ILjava/lang/Object;)Landroidx/collection/LruCache;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/m<",
+        "Lj/m/c/j;",
+        "Lj/m/b/p<",
         "TK;TV;",
         "Ljava/lang/Integer;",
         ">;"
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/collection/LruCacheKt$lruCache$1;
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, v0}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
@@ -66,18 +66,18 @@
 
     const-string v0, "<anonymous parameter 0>"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p1, "<anonymous parameter 1>"
 
-    invoke-static {p2, p1}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public final synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroidx/collection/LruCacheKt$lruCache$1;->invoke(Ljava/lang/Object;Ljava/lang/Object;)I

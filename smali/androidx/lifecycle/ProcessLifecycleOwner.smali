@@ -7,34 +7,37 @@
 
 
 # static fields
-.field static final TIMEOUT_MS:J = 0x2bcL
+.field public static final TIMEOUT_MS:J = 0x2bcL
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
 
-.field private static final sInstance:Landroidx/lifecycle/ProcessLifecycleOwner;
+.field public static final sInstance:Landroidx/lifecycle/ProcessLifecycleOwner;
 
 
 # instance fields
-.field private mDelayedPauseRunnable:Ljava/lang/Runnable;
+.field public mDelayedPauseRunnable:Ljava/lang/Runnable;
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
-.field mInitializationListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
+.field public mInitializationListener:Landroidx/lifecycle/ReportFragment$ActivityInitializationListener;
 
-.field private mPauseSent:Z
+.field public mPauseSent:Z
 
-.field private final mRegistry:Landroidx/lifecycle/LifecycleRegistry;
+.field public final mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
-.field private mResumedCounter:I
+.field public mResumedCounter:I
 
-.field private mStartedCounter:I
+.field public mStartedCounter:I
 
-.field private mStopSent:Z
+.field public mStopSent:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 89
+    .line 1
     new-instance v0, Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-direct {v0}, Landroidx/lifecycle/ProcessLifecycleOwner;-><init>()V
@@ -44,43 +47,43 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 151
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 55
+    .line 2
     iput v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStartedCounter:I
 
-    .line 56
+    .line 3
     iput v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mResumedCounter:I
 
     const/4 v0, 0x1
 
-    .line 58
+    .line 4
     iput-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mPauseSent:Z
 
-    .line 59
+    .line 5
     iput-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStopSent:Z
 
-    .line 62
+    .line 6
     new-instance v0, Landroidx/lifecycle/LifecycleRegistry;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
 
     iput-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
-    .line 64
+    .line 7
     new-instance v0, Landroidx/lifecycle/ProcessLifecycleOwner$1;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ProcessLifecycleOwner$1;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
 
     iput-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mDelayedPauseRunnable:Ljava/lang/Runnable;
 
-    .line 72
+    .line 8
     new-instance v0, Landroidx/lifecycle/ProcessLifecycleOwner$2;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ProcessLifecycleOwner$2;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
@@ -93,16 +96,16 @@
 .method public static get()Landroidx/lifecycle/LifecycleOwner;
     .locals 1
 
-    .line 98
+    .line 1
     sget-object v0, Landroidx/lifecycle/ProcessLifecycleOwner;->sInstance:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     return-object v0
 .end method
 
-.method static init(Landroid/content/Context;)V
+.method public static init(Landroid/content/Context;)V
     .locals 1
 
-    .line 102
+    .line 1
     sget-object v0, Landroidx/lifecycle/ProcessLifecycleOwner;->sInstance:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {v0, p0}, Landroidx/lifecycle/ProcessLifecycleOwner;->attach(Landroid/content/Context;)V
@@ -112,10 +115,10 @@
 
 
 # virtual methods
-.method activityPaused()V
+.method public activityPaused()V
     .locals 4
 
-    .line 126
+    .line 1
     iget v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mResumedCounter:I
 
     add-int/lit8 v0, v0, -0x1
@@ -124,7 +127,7 @@
 
     if-nez v0, :cond_0
 
-    .line 128
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mDelayedPauseRunnable:Ljava/lang/Runnable;
@@ -137,10 +140,10 @@
     return-void
 .end method
 
-.method activityResumed()V
+.method public activityResumed()V
     .locals 2
 
-    .line 114
+    .line 1
     iget v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mResumedCounter:I
 
     const/4 v1, 0x1
@@ -151,12 +154,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 116
+    .line 2
     iget-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mPauseSent:Z
 
     if-eqz v0, :cond_0
 
-    .line 117
+    .line 3
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
@@ -165,12 +168,12 @@
 
     const/4 v0, 0x0
 
-    .line 118
+    .line 4
     iput-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mPauseSent:Z
 
-    return-void
+    goto :goto_0
 
-    .line 120
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mHandler:Landroid/os/Handler;
 
@@ -179,13 +182,14 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
-.method activityStarted()V
+.method public activityStarted()V
     .locals 2
 
-    .line 106
+    .line 1
     iget v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStartedCounter:I
 
     const/4 v1, 0x1
@@ -196,12 +200,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 107
+    .line 2
     iget-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStopSent:Z
 
     if-eqz v0, :cond_0
 
-    .line 108
+    .line 3
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
@@ -210,54 +214,54 @@
 
     const/4 v0, 0x0
 
-    .line 109
+    .line 4
     iput-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStopSent:Z
 
     :cond_0
     return-void
 .end method
 
-.method activityStopped()V
+.method public activityStopped()V
     .locals 1
 
-    .line 133
+    .line 1
     iget v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStartedCounter:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStartedCounter:I
 
-    .line 134
+    .line 2
     invoke-virtual {p0}, Landroidx/lifecycle/ProcessLifecycleOwner;->dispatchStopIfNeeded()V
 
     return-void
 .end method
 
-.method attach(Landroid/content/Context;)V
+.method public attach(Landroid/content/Context;)V
     .locals 2
 
-    .line 155
+    .line 1
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mHandler:Landroid/os/Handler;
 
-    .line 156
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
-    .line 157
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     check-cast p1, Landroid/app/Application;
 
-    .line 158
+    .line 4
     new-instance v0, Landroidx/lifecycle/ProcessLifecycleOwner$3;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ProcessLifecycleOwner$3;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
@@ -267,20 +271,20 @@
     return-void
 .end method
 
-.method dispatchPauseIfNeeded()V
+.method public dispatchPauseIfNeeded()V
     .locals 2
 
-    .line 138
+    .line 1
     iget v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mResumedCounter:I
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 139
+    .line 2
     iput-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mPauseSent:Z
 
-    .line 140
+    .line 3
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
@@ -291,10 +295,10 @@
     return-void
 .end method
 
-.method dispatchStopIfNeeded()V
+.method public dispatchStopIfNeeded()V
     .locals 2
 
-    .line 145
+    .line 1
     iget v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStartedCounter:I
 
     if-nez v0, :cond_0
@@ -303,7 +307,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 146
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
@@ -312,7 +316,7 @@
 
     const/4 v0, 0x1
 
-    .line 147
+    .line 3
     iput-boolean v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mStopSent:Z
 
     :cond_0
@@ -321,8 +325,10 @@
 
 .method public getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 179
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ProcessLifecycleOwner;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     return-object v0

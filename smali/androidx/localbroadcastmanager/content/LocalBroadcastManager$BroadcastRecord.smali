@@ -1,4 +1,4 @@
-.class final Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;
+.class public final Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;
 .super Ljava/lang/Object;
 .source "LocalBroadcastManager.java"
 
@@ -9,15 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "BroadcastRecord"
 .end annotation
 
 
 # instance fields
-.field final intent:Landroid/content/Intent;
+.field public final intent:Landroid/content/Intent;
 
-.field final receivers:Ljava/util/ArrayList;
+.field public final receivers:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -41,13 +41,13 @@
         }
     .end annotation
 
-    .line 79
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
+    .line 2
     iput-object p1, p0, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;->intent:Landroid/content/Intent;
 
-    .line 81
+    .line 3
     iput-object p2, p0, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;->receivers:Ljava/util/ArrayList;
 
     return-void

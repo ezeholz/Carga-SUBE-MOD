@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/loader/content/Loader;
+.field public final synthetic this$0:Landroidx/loader/content/Loader;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/loader/content/Loader;)V
     .locals 0
 
-    .line 58
+    .line 1
     iput-object p1, p0, Landroidx/loader/content/Loader$ForceLoadContentObserver;->this$0:Landroidx/loader/content/Loader;
 
-    .line 59
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -37,7 +37,7 @@
 
 
 # virtual methods
-.method public final deliverSelfNotifications()Z
+.method public deliverSelfNotifications()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -45,10 +45,10 @@
     return v0
 .end method
 
-.method public final onChange(Z)V
+.method public onChange(Z)V
     .locals 0
 
-    .line 69
+    .line 1
     iget-object p1, p0, Landroidx/loader/content/Loader$ForceLoadContentObserver;->this$0:Landroidx/loader/content/Loader;
 
     invoke-virtual {p1}, Landroidx/loader/content/Loader;->onContentChanged()V

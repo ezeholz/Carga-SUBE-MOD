@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field private final mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
+.field public final mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/common/ThreadBound;)V
     .locals 0
 
-    .line 25
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -34,7 +34,7 @@
 .method public final checkThreadAccess()Z
     .locals 1
 
-    .line 31
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
     invoke-interface {v0}, Lcom/facebook/stetho/common/ThreadBound;->checkThreadAccess()Z
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 41
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/common/ThreadBound;->postAndWait(Lcom/facebook/stetho/common/UncheckedCallable;)Ljava/lang/Object;
@@ -69,7 +69,7 @@
 .method public final postAndWait(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 46
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/common/ThreadBound;->postAndWait(Ljava/lang/Runnable;)V
@@ -80,7 +80,7 @@
 .method public final postDelayed(Ljava/lang/Runnable;J)V
     .locals 1
 
-    .line 51
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/facebook/stetho/common/ThreadBound;->postDelayed(Ljava/lang/Runnable;J)V
@@ -91,7 +91,7 @@
 .method public final removeCallbacks(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 56
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/common/ThreadBound;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -102,7 +102,7 @@
 .method public final verifyThreadAccess()V
     .locals 1
 
-    .line 36
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->mEnforcer:Lcom/facebook/stetho/common/ThreadBound;
 
     invoke-interface {v0}, Lcom/facebook/stetho/common/ThreadBound;->verifyThreadAccess()V

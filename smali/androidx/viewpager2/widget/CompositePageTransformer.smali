@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final mTransformers:Ljava/util/List;
+.field public final mTransformers:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -22,10 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 33
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,10 +37,14 @@
 
 
 # virtual methods
-.method public final addTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
+.method public addTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
     .locals 1
+    .param p1    # Landroidx/viewpager2/widget/ViewPager2$PageTransformer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 42
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/CompositePageTransformer;->mTransformers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -48,10 +52,14 @@
     return-void
 .end method
 
-.method public final removeTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
+.method public removeTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
     .locals 1
+    .param p1    # Landroidx/viewpager2/widget/ViewPager2$PageTransformer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 47
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/CompositePageTransformer;->mTransformers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -59,10 +67,14 @@
     return-void
 .end method
 
-.method public final transformPage(Landroid/view/View;F)V
+.method public transformPage(Landroid/view/View;F)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 52
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/CompositePageTransformer;->mTransformers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -82,7 +94,7 @@
 
     check-cast v1, Landroidx/viewpager2/widget/ViewPager2$PageTransformer;
 
-    .line 53
+    .line 2
     invoke-interface {v1, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$PageTransformer;->transformPage(Landroid/view/View;F)V
 
     goto :goto_0

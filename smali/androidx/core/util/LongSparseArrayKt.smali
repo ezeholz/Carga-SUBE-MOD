@@ -6,6 +6,10 @@
 # direct methods
 .method public static final contains(Landroid/util/LongSparseArray;J)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -18,9 +22,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/LongSparseArray;->indexOfKey(J)I
 
     move-result p0
@@ -29,16 +33,21 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
 .method public static final containsKey(Landroid/util/LongSparseArray;J)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -51,9 +60,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 48
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/LongSparseArray;->indexOfKey(J)I
 
     move-result p0
@@ -62,16 +71,21 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
 .method public static final containsValue(Landroid/util/LongSparseArray;Ljava/lang/Object;)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -84,9 +98,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 53
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/LongSparseArray;->indexOfValue(Ljava/lang/Object;)I
 
     move-result p0
@@ -95,16 +109,21 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
-.method public static final forEach(Landroid/util/LongSparseArray;Lkotlin/d/a/m;)V
+.method public static final forEach(Landroid/util/LongSparseArray;Lj/m/b/p;)V
     .locals 5
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -112,24 +131,24 @@
             ">(",
             "Landroid/util/LongSparseArray<",
             "TT;>;",
-            "Lkotlin/d/a/m<",
+            "Lj/m/b/p<",
             "-",
             "Ljava/lang/Long;",
             "-TT;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 91
+    .line 1
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->size()I
 
     move-result v0
@@ -141,7 +160,7 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 92
+    .line 2
     invoke-virtual {p0, v1}, Landroid/util/LongSparseArray;->keyAt(I)J
 
     move-result-wide v3
@@ -154,7 +173,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v3, v1}, Lkotlin/d/a/m;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3, v1}, Lj/m/b/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-lt v2, v0, :cond_0
 
@@ -172,6 +191,10 @@
 
 .method public static final getOrDefault(Landroid/util/LongSparseArray;JLjava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -184,23 +207,30 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 58
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    return-object p3
+    goto :goto_0
 
     :cond_0
-    return-object p0
+    move-object p3, p0
+
+    :goto_0
+    return-object p3
 .end method
 
-.method public static final getOrElse(Landroid/util/LongSparseArray;JLkotlin/d/a/a;)Ljava/lang/Object;
+.method public static final getOrElse(Landroid/util/LongSparseArray;JLj/m/b/a;)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -208,27 +238,27 @@
             ">(",
             "Landroid/util/LongSparseArray<",
             "TT;>;J",
-            "Lkotlin/d/a/a<",
+            "Lj/m/b/a<",
             "+TT;>;)TT;"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "defaultValue"
 
-    invoke-static {p3, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 63
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    invoke-interface {p3}, Lkotlin/d/a/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lj/m/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -238,6 +268,10 @@
 
 .method public static final getSize(Landroid/util/LongSparseArray;)I
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -250,9 +284,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 26
+    .line 1
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->size()I
 
     move-result p0
@@ -262,6 +296,10 @@
 
 .method public static final isEmpty(Landroid/util/LongSparseArray;)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -274,9 +312,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 67
+    .line 1
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->size()I
 
     move-result p0
@@ -285,16 +323,21 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
 .method public static final isNotEmpty(Landroid/util/LongSparseArray;)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -307,9 +350,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 71
+    .line 1
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->size()I
 
     move-result p0
@@ -318,16 +361,21 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
-.method public static final keyIterator(Landroid/util/LongSparseArray;)Lkotlin/a/w;
+.method public static final keyIterator(Landroid/util/LongSparseArray;)Lj/j/h;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -335,26 +383,28 @@
             ">(",
             "Landroid/util/LongSparseArray<",
             "TT;>;)",
-            "Lkotlin/a/w;"
+            "Lj/j/h;"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 98
+    .line 1
     new-instance v0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;
 
     invoke-direct {v0, p0}, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;-><init>(Landroid/util/LongSparseArray;)V
-
-    check-cast v0, Lkotlin/a/w;
 
     return-object v0
 .end method
 
 .method public static final plus(Landroid/util/LongSparseArray;Landroid/util/LongSparseArray;)Landroid/util/LongSparseArray;
     .locals 3
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -371,13 +421,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 40
+    .line 1
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->size()I
@@ -388,14 +438,14 @@
 
     move-result v2
 
-    add-int/2addr v1, v2
+    add-int/2addr v2, v1
 
-    invoke-direct {v0, v1}, Landroid/util/LongSparseArray;-><init>(I)V
+    invoke-direct {v0, v2}, Landroid/util/LongSparseArray;-><init>(I)V
 
-    .line 41
+    .line 2
     invoke-static {v0, p0}, Landroidx/core/util/LongSparseArrayKt;->putAll(Landroid/util/LongSparseArray;Landroid/util/LongSparseArray;)V
 
-    .line 42
+    .line 3
     invoke-static {v0, p1}, Landroidx/core/util/LongSparseArrayKt;->putAll(Landroid/util/LongSparseArray;Landroid/util/LongSparseArray;)V
 
     return-object v0
@@ -403,6 +453,10 @@
 
 .method public static final putAll(Landroid/util/LongSparseArray;Landroid/util/LongSparseArray;)V
     .locals 5
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -417,13 +471,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 112
+    .line 1
     invoke-virtual {p1}, Landroid/util/LongSparseArray;->size()I
 
     move-result v0
@@ -435,7 +489,7 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 113
+    .line 2
     invoke-virtual {p1, v1}, Landroid/util/LongSparseArray;->keyAt(I)J
 
     move-result-wide v3
@@ -444,7 +498,7 @@
 
     move-result-object v1
 
-    .line 86
+    .line 3
     invoke-virtual {p0, v3, v4, v1}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     if-lt v2, v0, :cond_0
@@ -463,6 +517,10 @@
 
 .method public static final remove(Landroid/util/LongSparseArray;JLjava/lang/Object;)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -475,27 +533,27 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 76
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/LongSparseArray;->indexOfKey(J)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
-    .line 77
+    .line 2
     invoke-virtual {p0, p1}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-static {p3, p2}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p3, p2}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 78
+    .line 3
     invoke-virtual {p0, p1}, Landroid/util/LongSparseArray;->removeAt(I)V
 
     const/4 p0, 0x1
@@ -510,6 +568,10 @@
 
 .method public static final set(Landroid/util/LongSparseArray;JLjava/lang/Object;)V
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -522,9 +584,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 35
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     return-void
@@ -532,6 +594,10 @@
 
 .method public static final valueIterator(Landroid/util/LongSparseArray;)Ljava/util/Iterator;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -546,14 +612,12 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 106
+    .line 1
     new-instance v0, Landroidx/core/util/LongSparseArrayKt$valueIterator$1;
 
     invoke-direct {v0, p0}, Landroidx/core/util/LongSparseArrayKt$valueIterator$1;-><init>(Landroid/util/LongSparseArray;)V
-
-    check-cast v0, Ljava/util/Iterator;
 
     return-object v0
 .end method

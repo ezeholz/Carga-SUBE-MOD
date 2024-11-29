@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/util/LruCacheKt;->lruCache(ILkotlin/d/a/m;Lkotlin/d/a/b;Lkotlin/d/a/r;)Landroid/util/LruCache;
+    value = Landroidx/core/util/LruCacheKt;->lruCache(ILj/m/b/p;Lj/m/b/l;Lj/m/b/r;)Landroid/util/LruCache;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,33 +22,33 @@
 
 
 # instance fields
-.field final synthetic $create:Lkotlin/d/a/b;
+.field public final synthetic $create:Lj/m/b/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "TK;TV;>;"
         }
     .end annotation
 .end field
 
-.field final synthetic $maxSize:I
+.field public final synthetic $maxSize:I
 
-.field final synthetic $onEntryRemoved:Lkotlin/d/a/r;
+.field public final synthetic $onEntryRemoved:Lj/m/b/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/r<",
+            "Lj/m/b/r<",
             "Ljava/lang/Boolean;",
             "TK;TV;TV;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $sizeOf:Lkotlin/d/a/m;
+.field public final synthetic $sizeOf:Lj/m/b/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/m<",
+            "Lj/m/b/p<",
             "TK;TV;",
             "Ljava/lang/Integer;",
             ">;"
@@ -58,35 +58,35 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/m;Lkotlin/d/a/b;Lkotlin/d/a/r;I)V
+.method public constructor <init>(Lj/m/b/p;Lj/m/b/l;Lj/m/b/r;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/d/a/m<",
+            "Lj/m/b/p<",
             "-TK;-TV;",
             "Ljava/lang/Integer;",
             ">;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-TK;+TV;>;",
-            "Lkotlin/d/a/r<",
+            "Lj/m/b/r<",
             "-",
             "Ljava/lang/Boolean;",
             "-TK;-TV;-TV;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;I)V"
         }
     .end annotation
 
-    iput-object p1, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$sizeOf:Lkotlin/d/a/m;
+    iput-object p1, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$sizeOf:Lj/m/b/p;
 
-    iput-object p2, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$create:Lkotlin/d/a/b;
+    iput-object p2, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$create:Lj/m/b/l;
 
-    iput-object p3, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$onEntryRemoved:Lkotlin/d/a/r;
+    iput-object p3, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$onEntryRemoved:Lj/m/b/r;
 
     iput p4, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$maxSize:I
 
-    .line 46
+    .line 1
     invoke-direct {p0, p4}, Landroid/util/LruCache;-><init>(I)V
 
     return-void
@@ -94,7 +94,7 @@
 
 
 # virtual methods
-.method protected final create(Ljava/lang/Object;)Ljava/lang/Object;
+.method public create(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -104,19 +104,19 @@
 
     const-string v0, "key"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 48
-    iget-object v0, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$create:Lkotlin/d/a/b;
+    .line 1
+    iget-object v0, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$create:Lj/m/b/l;
 
-    invoke-interface {v0, p1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected final entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -126,25 +126,25 @@
 
     const-string v0, "key"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "oldValue"
 
-    invoke-static {p3, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 50
-    iget-object v0, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$onEntryRemoved:Lkotlin/d/a/r;
+    .line 1
+    iget-object v0, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$onEntryRemoved:Lj/m/b/r;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/d/a/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lj/m/b/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method protected final sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -154,16 +154,16 @@
 
     const-string v0, "key"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "value"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 47
-    iget-object v0, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$sizeOf:Lkotlin/d/a/m;
+    .line 1
+    iget-object v0, p0, Landroidx/core/util/LruCacheKt$lruCache$4;->$sizeOf:Lj/m/b/p;
 
-    invoke-interface {v0, p1, p2}, Lkotlin/d/a/m;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lj/m/b/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/transition/Styleable$ChangeBounds;
+.class public interface abstract Landroidx/transition/Styleable$ChangeBounds;
 .super Ljava/lang/Object;
 .source "Styleable.java"
 
@@ -9,10 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "ChangeBounds"
 .end annotation
 
 
 # static fields
 .field public static final RESIZE_CLIP:I
+    .annotation build Landroidx/annotation/StyleableRes;
+    .end annotation
+.end field

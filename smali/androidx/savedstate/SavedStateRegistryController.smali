@@ -4,22 +4,22 @@
 
 
 # instance fields
-.field private final mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
+.field public final mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
-.field private final mRegistry:Landroidx/savedstate/SavedStateRegistry;
+.field public final mRegistry:Landroidx/savedstate/SavedStateRegistry;
 
 
 # direct methods
-.method private constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
+.method public constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
     .locals 0
 
-    .line 36
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 2
     iput-object p1, p0, Landroidx/savedstate/SavedStateRegistryController;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
-    .line 38
+    .line 3
     new-instance p1, Landroidx/savedstate/SavedStateRegistry;
 
     invoke-direct {p1}, Landroidx/savedstate/SavedStateRegistry;-><init>()V
@@ -31,8 +31,14 @@
 
 .method public static create(Landroidx/savedstate/SavedStateRegistryOwner;)Landroidx/savedstate/SavedStateRegistryController;
     .locals 1
+    .param p0    # Landroidx/savedstate/SavedStateRegistryOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 84
+    .line 1
     new-instance v0, Landroidx/savedstate/SavedStateRegistryController;
 
     invoke-direct {v0, p0}, Landroidx/savedstate/SavedStateRegistryController;-><init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
@@ -42,26 +48,34 @@
 
 
 # virtual methods
-.method public final getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
+.method public getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 46
+    .line 1
     iget-object v0, p0, Landroidx/savedstate/SavedStateRegistryController;->mRegistry:Landroidx/savedstate/SavedStateRegistry;
 
     return-object v0
 .end method
 
-.method public final performRestore(Landroid/os/Bundle;)V
+.method public performRestore(Landroid/os/Bundle;)V
     .locals 3
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 56
+    .line 1
     iget-object v0, p0, Landroidx/savedstate/SavedStateRegistryController;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
 
-    invoke-interface {v0}, Landroidx/savedstate/SavedStateRegistryOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-interface {v0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
-    .line 57
+    .line 2
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v1
@@ -70,7 +84,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 61
+    .line 3
     new-instance v1, Landroidx/savedstate/Recreator;
 
     iget-object v2, p0, Landroidx/savedstate/SavedStateRegistryController;->mOwner:Landroidx/savedstate/SavedStateRegistryOwner;
@@ -79,14 +93,14 @@
 
     invoke-virtual {v0, v1}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 62
+    .line 4
     iget-object v1, p0, Landroidx/savedstate/SavedStateRegistryController;->mRegistry:Landroidx/savedstate/SavedStateRegistry;
 
     invoke-virtual {v1, v0, p1}, Landroidx/savedstate/SavedStateRegistry;->performRestore(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
 
     return-void
 
-    .line 58
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -97,10 +111,16 @@
     throw p1
 .end method
 
-.method public final performSave(Landroid/os/Bundle;)V
+.method public performSave(Landroid/os/Bundle;)V
     .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 74
+    .line 1
     iget-object v0, p0, Landroidx/savedstate/SavedStateRegistryController;->mRegistry:Landroidx/savedstate/SavedStateRegistry;
 
     invoke-virtual {v0, p1}, Landroidx/savedstate/SavedStateRegistry;->performSave(Landroid/os/Bundle;)V

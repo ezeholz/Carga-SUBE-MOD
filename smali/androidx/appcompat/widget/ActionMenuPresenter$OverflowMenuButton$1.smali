@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;
+.class public Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;
 .super Landroidx/appcompat/widget/ForwardingListener;
 .source "ActionMenuPresenter.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
+.field public final synthetic this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
 
-.field final synthetic val$this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
+.field public final synthetic val$this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;Landroid/view/View;Landroidx/appcompat/widget/ActionMenuPresenter;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;Landroid/view/View;Landroidx/appcompat/widget/ActionMenuPresenter;)V
     .locals 0
 
-    .line 643
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iput-object p3, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->val$this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
@@ -39,7 +39,7 @@
 .method public getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
     .locals 1
 
-    .line 646
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
@@ -52,15 +52,9 @@
 
     return-object v0
 
-    .line 650
+    .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->mOverflowPopup:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowPopup;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowPopup;->getPopup()Landroidx/appcompat/view/menu/MenuPopup;
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->getPopup()Landroidx/appcompat/view/menu/MenuPopup;
 
     move-result-object v0
 
@@ -70,7 +64,7 @@
 .method public onForwardingStarted()Z
     .locals 1
 
-    .line 655
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
@@ -83,27 +77,23 @@
 .end method
 
 .method public onForwardingStopped()Z
-    .locals 1
+    .locals 2
 
-    .line 664
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->mPostedOpenRunnable:Landroidx/appcompat/widget/ActionMenuPresenter$OpenOverflowRunnable;
+    iget-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->mPostedOpenRunnable:Landroidx/appcompat/widget/ActionMenuPresenter$OpenOverflowRunnable;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     const/4 v0, 0x0
 
     return v0
 
-    .line 668
+    .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
-
     invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->hideOverflowMenu()Z
 
     const/4 v0, 0x1

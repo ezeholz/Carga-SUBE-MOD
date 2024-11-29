@@ -16,4 +16,6 @@
 
 # virtual methods
 .method public abstract getDrawerToggleDelegate()Landroidx/appcompat/app/ActionBarDrawerToggle$Delegate;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method

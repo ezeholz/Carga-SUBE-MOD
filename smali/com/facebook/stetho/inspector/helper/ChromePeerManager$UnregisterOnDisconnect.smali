@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;
+.class public Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;
 .super Ljava/lang/Object;
 .source "ChromePeerManager.java"
 
@@ -12,27 +12,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "UnregisterOnDisconnect"
 .end annotation
 
 
 # instance fields
-.field private final mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
+.field public final mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/helper/ChromePeerManager;Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
     .locals 0
 
-    .line 141
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;->this$0:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;->mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
     return-void
@@ -43,7 +43,7 @@
 .method public onDisconnect()V
     .locals 2
 
-    .line 147
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;->this$0:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager$UnregisterOnDisconnect;->mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;

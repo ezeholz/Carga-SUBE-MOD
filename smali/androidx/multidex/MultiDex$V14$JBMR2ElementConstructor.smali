@@ -1,4 +1,4 @@
-.class Landroidx/multidex/MultiDex$V14$JBMR2ElementConstructor;
+.class public Landroidx/multidex/MultiDex$V14$JBMR2ElementConstructor;
 .super Ljava/lang/Object;
 .source "MultiDex.java"
 
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "JBMR2ElementConstructor"
 .end annotation
 
 
 # instance fields
-.field private final elementConstructor:Ljava/lang/reflect/Constructor;
+.field public final elementConstructor:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;)V
+.method public constructor <init>(Ljava/lang/Class;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -39,7 +39,7 @@
         }
     .end annotation
 
-    .line 647
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    .line 648
+    .line 2
     const-class v2, Ljava/io/File;
 
     aput-object v2, v0, v1
@@ -71,14 +71,14 @@
 
     aput-object v3, v0, v1
 
-    .line 649
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/multidex/MultiDex$V14$JBMR2ElementConstructor;->elementConstructor:Ljava/lang/reflect/Constructor;
 
-    .line 650
+    .line 4
     invoke-virtual {p1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
     return-void
@@ -89,7 +89,7 @@
 .method public newInstance(Ljava/io/File;Ldalvik/system/DexFile;)Ljava/lang/Object;
     .locals 4
 
-    .line 657
+    .line 1
     iget-object v0, p0, Landroidx/multidex/MultiDex$V14$JBMR2ElementConstructor;->elementConstructor:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x4

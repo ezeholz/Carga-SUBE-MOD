@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
+.class public final Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 .super Ljava/lang/Object;
 .source "AndroidDocumentProvider.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "InspectModeHandler"
 .end annotation
 
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field private mOverlays:Ljava/util/List;
+.field public mOverlays:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field private final mViewSelector:Lcom/facebook/stetho/common/Predicate;
+.field public final mViewSelector:Lcom/facebook/stetho/common/Predicate;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/facebook/stetho/common/Predicate<",
@@ -41,19 +41,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)V
     .locals 0
 
-    .line 273
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 274
+    .line 2
     new-instance p1, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$1;
 
     invoke-direct {p1, p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$1;-><init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;)V
@@ -63,19 +63,19 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$1;)V
     .locals 0
 
-    .line 273
+    .line 3
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;-><init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;)Ljava/util/List;
+.method public static synthetic access$400(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;)Ljava/util/List;
     .locals 0
 
-    .line 273
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
     return-object p0
@@ -83,15 +83,15 @@
 
 
 # virtual methods
-.method public final disable()V
+.method public disable()V
     .locals 3
 
-    .line 314
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
-    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 316
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -101,7 +101,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 320
+    .line 3
     :goto_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
@@ -111,7 +111,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 321
+    .line 4
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -120,14 +120,14 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 322
+    .line 5
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    .line 323
+    .line 6
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -137,29 +137,29 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 326
+    .line 7
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
     return-void
 .end method
 
-.method public final enable()V
+.method public enable()V
     .locals 2
 
-    .line 284
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
-    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    invoke-virtual {v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 286
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 287
+    .line 3
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->disable()V
 
-    .line 290
+    .line 4
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -167,7 +167,7 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->mOverlays:Ljava/util/List;
 
-    .line 292
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
     new-instance v1, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$2;

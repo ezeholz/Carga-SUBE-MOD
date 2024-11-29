@@ -11,4 +11,6 @@
 .end method
 
 .method public abstract onWindowStartingSupportActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method

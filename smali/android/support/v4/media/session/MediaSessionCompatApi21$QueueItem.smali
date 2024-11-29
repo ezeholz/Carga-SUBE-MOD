@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaSessionCompatApi21$QueueItem;
+.class public Landroid/support/v4/media/session/MediaSessionCompatApi21$QueueItem;
 .super Ljava/lang/Object;
 .source "MediaSessionCompatApi21.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "QueueItem"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 277
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method public static createItem(Ljava/lang/Object;J)Ljava/lang/Object;
     .locals 1
 
-    .line 266
+    .line 1
     new-instance v0, Landroid/media/session/MediaSession$QueueItem;
 
     check-cast p0, Landroid/media/MediaDescription;
@@ -40,7 +40,7 @@
 .method public static getDescription(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 270
+    .line 1
     check-cast p0, Landroid/media/session/MediaSession$QueueItem;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession$QueueItem;->getDescription()Landroid/media/MediaDescription;
@@ -53,7 +53,7 @@
 .method public static getQueueId(Ljava/lang/Object;)J
     .locals 2
 
-    .line 274
+    .line 1
     check-cast p0, Landroid/media/session/MediaSession$QueueItem;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession$QueueItem;->getQueueId()J

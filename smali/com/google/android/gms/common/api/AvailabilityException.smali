@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private final a:Landroidx/collection/ArrayMap;
+.field public final d:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArrayMap<",
-            "Lcom/google/android/gms/common/api/internal/at<",
+            "Lg/d/a/b/d/j/i/k0<",
             "*>;",
             "Lcom/google/android/gms/common/ConnectionResult;",
             ">;"
@@ -16,41 +16,17 @@
 .end field
 
 
-# direct methods
-.method public constructor <init>(Landroidx/collection/ArrayMap;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/collection/ArrayMap<",
-            "Lcom/google/android/gms/common/api/internal/at<",
-            "*>;",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lcom/google/android/gms/common/api/AvailabilityException;->a:Landroidx/collection/ArrayMap;
-
-    return-void
-.end method
-
-
 # virtual methods
 .method public getMessage()Ljava/lang/String;
     .locals 7
 
-    .line 11
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 12
-    iget-object v1, p0, Lcom/google/android/gms/common/api/AvailabilityException;->a:Landroidx/collection/ArrayMap;
+    .line 2
+    iget-object v1, p0, Lcom/google/android/gms/common/api/AvailabilityException;->d:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v1}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
 
@@ -73,19 +49,19 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/google/android/gms/common/api/internal/at;
+    check-cast v3, Lg/d/a/b/d/j/i/k0;
 
-    .line 13
-    iget-object v4, p0, Lcom/google/android/gms/common/api/AvailabilityException;->a:Landroidx/collection/ArrayMap;
+    .line 3
+    iget-object v4, p0, Lcom/google/android/gms/common/api/AvailabilityException;->d:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v4, v3}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v3}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 14
-    invoke-virtual {v4}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
+    .line 4
+    invoke-virtual {v4}, Lcom/google/android/gms/common/ConnectionResult;->x()Z
 
     move-result v5
 
@@ -93,59 +69,51 @@
 
     const/4 v2, 0x0
 
-    .line 1015
+    .line 5
     :cond_0
-    iget-object v3, v3, Lcom/google/android/gms/common/api/internal/at;->a:Lcom/google/android/gms/common/api/a;
+    iget-object v3, v3, Lg/d/a/b/d/j/i/k0;->c:Lg/d/a/b/d/j/a;
 
-    .line 1016
-    iget-object v3, v3, Lcom/google/android/gms/common/api/a;->c:Ljava/lang/String;
+    .line 6
+    iget-object v3, v3, Lg/d/a/b/d/j/a;->c:Ljava/lang/String;
 
-    .line 16
+    .line 7
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v5, 0x2
 
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-static {v3, v5}, Lg/b/a/a/a;->a(Ljava/lang/String;I)I
 
     move-result v5
 
-    add-int/lit8 v5, v5, 0x2
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v6
 
-    add-int/2addr v5, v6
+    add-int/2addr v6, v5
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, ": "
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 18
+    .line 8
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -155,7 +123,7 @@
 
     const-string v2, "None of the queried APIs are available. "
 
-    .line 20
+    .line 9
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -163,20 +131,20 @@
     :cond_2
     const-string v2, "Some of the queried APIs are unavailable. "
 
-    .line 21
+    .line 10
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
     const-string v2, "; "
 
-    .line 22
+    .line 11
     invoke-static {v2, v0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 23
+    .line 12
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

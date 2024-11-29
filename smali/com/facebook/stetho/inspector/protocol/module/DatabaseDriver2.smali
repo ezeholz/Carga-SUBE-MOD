@@ -19,7 +19,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 21
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;-><init>(Landroid/content/Context;)V
 
     return-void

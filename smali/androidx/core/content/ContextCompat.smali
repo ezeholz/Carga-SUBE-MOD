@@ -20,27 +20,27 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ContextCompat"
+.field public static final TAG:Ljava/lang/String; = "ContextCompat"
 
-.field private static final sLock:Ljava/lang/Object;
+.field public static final sLock:Ljava/lang/Object;
 
-.field private static final sSync:Ljava/lang/Object;
+.field public static final sSync:Ljava/lang/Object;
 
-.field private static sTempValue:Landroid/util/TypedValue;
+.field public static sTempValue:Landroid/util/TypedValue;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 159
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroidx/core/content/ContextCompat;->sLock:Ljava/lang/Object;
 
-    .line 162
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -50,10 +50,10 @@
     return-void
 .end method
 
-.method protected constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 170
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,10 +61,18 @@
 
 .method public static checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_0
 
-    .line 555
+    .line 1
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -79,7 +87,7 @@
 
     return p0
 
-    .line 552
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -92,15 +100,21 @@
 
 .method public static createDeviceProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 657
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 658
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api24Impl;->createDeviceProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
@@ -113,15 +127,15 @@
     return-object p0
 .end method
 
-.method private static createFilesDir(Ljava/io/File;)Ljava/io/File;
-    .locals 3
+.method public static createFilesDir(Ljava/io/File;)Ljava/io/File;
+    .locals 2
 
-    .line 610
+    .line 1
     sget-object v0, Landroidx/core/content/ContextCompat;->sSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 611
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -129,33 +143,23 @@
 
     if-nez v1, :cond_1
 
-    .line 612
+    .line 3
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 613
+    .line 4
     monitor-exit v0
 
     return-object p0
 
-    .line 617
+    .line 5
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Unable to create files subdir "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
     invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 620
+    .line 6
     :cond_1
     monitor-exit v0
 
@@ -164,7 +168,7 @@
     :catchall_0
     move-exception p0
 
-    .line 621
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -174,15 +178,21 @@
 
 .method public static getAttributionTag(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 183
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 184
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api30Impl;->getAttributionTag(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -197,28 +207,32 @@
 
 .method public static getCodeCacheDir(Landroid/content/Context;)Ljava/io/File;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 597
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 598
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api21Impl;->getCodeCacheDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p0
 
     return-object p0
 
-    .line 600
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    .line 601
+    .line 4
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
@@ -236,22 +250,32 @@
 
 .method public static getColor(Landroid/content/Context;I)I
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
-    .line 535
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 536
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat$Api23Impl;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 
     return p0
 
-    .line 538
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -266,8 +290,18 @@
 
 .method public static getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 516
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -285,22 +319,28 @@
 
 .method public static getDataDir(Landroid/content/Context;)Ljava/io/File;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 299
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 300
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api24Impl;->getDataDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p0
 
     return-object p0
 
-    .line 302
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
@@ -310,45 +350,49 @@
 
     if-eqz p0, :cond_1
 
-    .line 303
+    .line 4
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    :goto_0
+    return-object v0
 .end method
 
 .method public static getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 4
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 479
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 480
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat$Api21Impl;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 481
+    .line 3
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_1
-
-    .line 482
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -358,82 +402,25 @@
     move-result-object p0
 
     return-object p0
-
-    .line 489
-    :cond_1
-    sget-object v0, Landroidx/core/content/ContextCompat;->sLock:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 490
-    :try_start_0
-    sget-object v1, Landroidx/core/content/ContextCompat;->sTempValue:Landroid/util/TypedValue;
-
-    if-nez v1, :cond_2
-
-    .line 491
-    new-instance v1, Landroid/util/TypedValue;
-
-    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
-
-    sput-object v1, Landroidx/core/content/ContextCompat;->sTempValue:Landroid/util/TypedValue;
-
-    .line 493
-    :cond_2
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget-object v2, Landroidx/core/content/ContextCompat;->sTempValue:Landroid/util/TypedValue;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, p1, v2, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
-
-    .line 494
-    sget-object p1, Landroidx/core/content/ContextCompat;->sTempValue:Landroid/util/TypedValue;
-
-    iget p1, p1, Landroid/util/TypedValue;->resourceId:I
-
-    .line 495
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 496
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    .line 495
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
 .end method
 
 .method public static getExternalCacheDirs(Landroid/content/Context;)[Ljava/io/File;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 458
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 459
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api19Impl;->getExternalCacheDirs(Landroid/content/Context;)[Ljava/io/File;
 
     move-result-object p0
@@ -447,7 +434,7 @@
 
     const/4 v1, 0x0
 
-    .line 461
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getExternalCacheDir()Ljava/io/File;
 
     move-result-object p0
@@ -459,15 +446,25 @@
 
 .method public static getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 405
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 406
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat$Api19Impl;->getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object p0
@@ -481,7 +478,7 @@
 
     const/4 v1, 0x0
 
-    .line 408
+    .line 3
     invoke-virtual {p0, p1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
@@ -494,21 +491,21 @@
 .method public static getMainExecutor(Landroid/content/Context;)Ljava/util/concurrent/Executor;
     .locals 2
 
-    .line 684
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-lt v0, v1, :cond_0
 
-    .line 685
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api28Impl;->getMainExecutor(Landroid/content/Context;)Ljava/util/concurrent/Executor;
 
     move-result-object p0
 
     return-object p0
 
-    .line 687
+    .line 3
     :cond_0
     new-instance v0, Landroid/os/Handler;
 
@@ -527,28 +524,34 @@
 
 .method public static getNoBackupFilesDir(Landroid/content/Context;)Ljava/io/File;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 573
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 574
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api21Impl;->getNoBackupFilesDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p0
 
     return-object p0
 
-    .line 576
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    .line 577
+    .line 4
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
@@ -566,15 +569,21 @@
 
 .method public static getObbDirs(Landroid/content/Context;)[Ljava/io/File;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 352
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 353
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api19Impl;->getObbDirs(Landroid/content/Context;)[Ljava/io/File;
 
     move-result-object p0
@@ -588,7 +597,7 @@
 
     const/4 v1, 0x0
 
-    .line 355
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getObbDir()Ljava/io/File;
 
     move-result-object p0
@@ -600,6 +609,17 @@
 
 .method public static getSystemService(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -611,21 +631,21 @@
         }
     .end annotation
 
-    .line 719
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 720
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat$Api23Impl;->getSystemService(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
-    .line 723
+    .line 3
     :cond_0
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat;->getSystemServiceName(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
 
@@ -633,21 +653,33 @@
 
     if-eqz p1, :cond_1
 
-    .line 724
+    .line 4
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    goto :goto_0
 
     :cond_1
     const/4 p0, 0x0
 
+    :goto_0
     return-object p0
 .end method
 
 .method public static getSystemServiceName(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -658,21 +690,21 @@
         }
     .end annotation
 
-    .line 738
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 739
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat$Api23Impl;->getSystemServiceName(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 741
+    .line 3
     :cond_0
     sget-object p0, Landroidx/core/content/ContextCompat$LegacyServiceMapHolder;->SERVICES:Ljava/util/HashMap;
 
@@ -687,15 +719,19 @@
 
 .method public static isDeviceProtectedStorage(Landroid/content/Context;)Z
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 671
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 672
+    .line 2
     invoke-static {p0}, Landroidx/core/content/ContextCompat$Api24Impl;->isDeviceProtectedStorage(Landroid/content/Context;)Z
 
     move-result p0
@@ -710,10 +746,18 @@
 
 .method public static startActivities(Landroid/content/Context;[Landroid/content/Intent;)Z
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # [Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    .line 216
+    .line 1
     invoke-static {p0, p1, v0}, Landroidx/core/content/ContextCompat;->startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
 
     move-result p0
@@ -722,70 +766,76 @@
 .end method
 
 .method public static startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
-    .locals 2
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # [Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 248
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    .line 249
+    .line 2
     invoke-static {p0, p1, p2}, Landroidx/core/content/ContextCompat$Api16Impl;->startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    goto :goto_0
-
-    .line 251
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
-
-    :goto_0
     const/4 p0, 0x1
 
     return p0
 .end method
 
 .method public static startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-    .locals 2
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 275
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    .line 276
+    .line 1
     invoke-static {p0, p1, p2}, Landroidx/core/content/ContextCompat$Api16Impl;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-
-    return-void
-
-    .line 278
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
 
 .method public static startForegroundService(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 700
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 701
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat$Api26Impl;->startForegroundService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    return-void
+    goto :goto_0
 
-    .line 704
+    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
+    :goto_0
     return-void
 .end method

@@ -3,11 +3,17 @@
 .source "AppComponentFactory.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 40
+    .line 1
     invoke-direct {p0}, Landroid/app/AppComponentFactory;-><init>()V
 
     return-void
@@ -17,8 +23,22 @@
 # virtual methods
 .method public final instantiateActivity(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 50
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateActivityCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
 
     move-result-object p1
@@ -34,10 +54,24 @@
 
 .method public instantiateActivityCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 p3, 0x0
 
-    .line 137
+    .line 1
     :try_start_0
     invoke-static {p2, p3, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -51,7 +85,7 @@
 
     new-array p2, p3, [Ljava/lang/Class;
 
-    .line 138
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -77,7 +111,7 @@
     :catch_1
     move-exception p1
 
-    .line 140
+    .line 3
     :goto_0
     new-instance p2, Ljava/lang/RuntimeException;
 
@@ -90,8 +124,18 @@
 
 .method public final instantiateApplication(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 61
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/core/app/AppComponentFactory;->instantiateApplicationCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
 
     move-result-object p1
@@ -107,10 +151,20 @@
 
 .method public instantiateApplicationCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
     .locals 1
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 113
+    .line 1
     :try_start_0
     invoke-static {p2, v0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -124,7 +178,7 @@
 
     new-array p2, v0, [Ljava/lang/Class;
 
-    .line 114
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -150,7 +204,7 @@
     :catch_1
     move-exception p1
 
-    .line 116
+    .line 3
     :goto_0
     new-instance p2, Ljava/lang/RuntimeException;
 
@@ -163,8 +217,18 @@
 
 .method public final instantiateProvider(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 83
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/core/app/AppComponentFactory;->instantiateProviderCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
 
     move-result-object p1
@@ -180,10 +244,20 @@
 
 .method public instantiateProviderCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
     .locals 1
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 204
+    .line 1
     :try_start_0
     invoke-static {p2, v0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -197,7 +271,7 @@
 
     new-array p2, v0, [Ljava/lang/Class;
 
-    .line 205
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -223,7 +297,7 @@
     :catch_1
     move-exception p1
 
-    .line 207
+    .line 3
     :goto_0
     new-instance p2, Ljava/lang/RuntimeException;
 
@@ -236,8 +310,22 @@
 
 .method public final instantiateReceiver(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 72
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateReceiverCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
 
     move-result-object p1
@@ -253,10 +341,24 @@
 
 .method public instantiateReceiverCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 p3, 0x0
 
-    .line 157
+    .line 1
     :try_start_0
     invoke-static {p2, p3, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -270,7 +372,7 @@
 
     new-array p2, p3, [Ljava/lang/Class;
 
-    .line 158
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -296,7 +398,7 @@
     :catch_1
     move-exception p1
 
-    .line 160
+    .line 3
     :goto_0
     new-instance p2, Ljava/lang/RuntimeException;
 
@@ -309,8 +411,22 @@
 
 .method public final instantiateService(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 94
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateServiceCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
 
     move-result-object p1
@@ -326,10 +442,24 @@
 
 .method public instantiateServiceCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
     .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 p3, 0x0
 
-    .line 181
+    .line 1
     :try_start_0
     invoke-static {p2, p3, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -343,7 +473,7 @@
 
     new-array p2, p3, [Ljava/lang/Class;
 
-    .line 182
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -369,7 +499,7 @@
     :catch_1
     move-exception p1
 
-    .line 184
+    .line 3
     :goto_0
     new-instance p2, Ljava/lang/RuntimeException;
 

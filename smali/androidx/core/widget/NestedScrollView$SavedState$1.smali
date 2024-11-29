@@ -1,4 +1,4 @@
-.class Landroidx/core/widget/NestedScrollView$SavedState$1;
+.class public Landroidx/core/widget/NestedScrollView$SavedState$1;
 .super Ljava/lang/Object;
 .source "NestedScrollView.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,10 +27,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2126
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/core/widget/NestedScrollView$SavedState;
     .locals 1
 
-    .line 2129
+    .line 2
     new-instance v0, Landroidx/core/widget/NestedScrollView$SavedState;
 
     invoke-direct {v0, p1}, Landroidx/core/widget/NestedScrollView$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -52,7 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 2126
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/widget/NestedScrollView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/core/widget/NestedScrollView$SavedState;
 
     move-result-object p1
@@ -63,7 +63,7 @@
 .method public newArray(I)[Landroidx/core/widget/NestedScrollView$SavedState;
     .locals 0
 
-    .line 2134
+    .line 2
     new-array p1, p1, [Landroidx/core/widget/NestedScrollView$SavedState;
 
     return-object p1
@@ -72,7 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 2126
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/widget/NestedScrollView$SavedState$1;->newArray(I)[Landroidx/core/widget/NestedScrollView$SavedState;
 
     move-result-object p1

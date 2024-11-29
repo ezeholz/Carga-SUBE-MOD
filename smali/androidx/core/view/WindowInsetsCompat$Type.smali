@@ -21,43 +21,54 @@
 
 
 # static fields
-.field static final CAPTION_BAR:I = 0x4
+.field public static final CAPTION_BAR:I = 0x4
 
-.field static final DISPLAY_CUTOUT:I = 0x80
+.field public static final DISPLAY_CUTOUT:I = 0x80
 
-.field static final FIRST:I = 0x1
+.field public static final FIRST:I = 0x1
 
-.field static final IME:I = 0x8
+.field public static final IME:I = 0x8
 
-.field static final LAST:I = 0x100
+.field public static final LAST:I = 0x100
 
-.field static final MANDATORY_SYSTEM_GESTURES:I = 0x20
+.field public static final MANDATORY_SYSTEM_GESTURES:I = 0x20
 
-.field static final NAVIGATION_BARS:I = 0x2
+.field public static final NAVIGATION_BARS:I = 0x2
 
-.field static final SIZE:I = 0x9
+.field public static final SIZE:I = 0x9
 
-.field static final STATUS_BARS:I = 0x1
+.field public static final STATUS_BARS:I = 0x1
 
-.field static final SYSTEM_GESTURES:I = 0x10
+.field public static final SYSTEM_GESTURES:I = 0x10
 
-.field static final TAPPABLE_ELEMENT:I = 0x40
+.field public static final TAPPABLE_ELEMENT:I = 0x40
 
-.field static final WINDOW_DECOR:I = 0x100
+.field public static final WINDOW_DECOR:I = 0x100
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 1915
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static all()I
+.method public static all()I
     .locals 1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "WrongConstant"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -88,7 +99,7 @@
     return v0
 .end method
 
-.method static indexOf(I)I
+.method public static indexOf(I)I
     .locals 3
 
     const/4 v0, 0x1
@@ -129,17 +140,13 @@
 
     return v1
 
-    .line 2043
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p0
-
     const-string v1, "type needs to be >= FIRST and <= LAST, type="
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0}, Lg/b/a/a/a;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 

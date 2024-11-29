@@ -3,7 +3,7 @@
 .source "ViewModelProvider.kt"
 
 # interfaces
-.implements Lkotlin/g;
+.implements Lj/d;
 
 
 # annotations
@@ -13,14 +13,14 @@
         "Landroidx/lifecycle/ViewModel;",
         ">",
         "Ljava/lang/Object;",
-        "Lkotlin/g<",
+        "Lj/d<",
         "TVM;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private cached:Landroidx/lifecycle/ViewModel;
+.field public cached:Landroidx/lifecycle/ViewModel;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TVM;"
@@ -28,30 +28,30 @@
     .end annotation
 .end field
 
-.field private final factoryProducer:Lkotlin/d/a/a;
+.field public final factoryProducer:Lj/m/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/a<",
+            "Lj/m/b/a<",
             "Landroidx/lifecycle/ViewModelProvider$Factory;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final storeProducer:Lkotlin/d/a/a;
+.field public final storeProducer:Lj/m/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/a<",
+            "Lj/m/b/a<",
             "Landroidx/lifecycle/ViewModelStore;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final viewModelClass:Lkotlin/f/c;
+.field public final viewModelClass:Lj/o/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/f/c<",
+            "Lj/o/c<",
             "TVM;>;"
         }
     .end annotation
@@ -59,18 +59,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/f/c;Lkotlin/d/a/a;Lkotlin/d/a/a;)V
+.method public constructor <init>(Lj/o/c;Lj/m/b/a;Lj/m/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/f/c<",
+            "Lj/o/c<",
             "TVM;>;",
-            "Lkotlin/d/a/a<",
+            "Lj/m/b/a<",
             "+",
             "Landroidx/lifecycle/ViewModelStore;",
             ">;",
-            "Lkotlin/d/a/a<",
+            "Lj/m/b/a<",
             "+",
             "Landroidx/lifecycle/ViewModelProvider$Factory;",
             ">;)V"
@@ -79,31 +79,31 @@
 
     const-string v0, "viewModelClass"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "storeProducer"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "factoryProducer"
 
-    invoke-static {p3, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 41
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lkotlin/f/c;
+    iput-object p1, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lj/o/c;
 
-    iput-object p2, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lkotlin/d/a/a;
+    iput-object p2, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lj/m/b/a;
 
-    iput-object p3, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lkotlin/d/a/a;
+    iput-object p3, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lj/m/b/a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getValue()Landroidx/lifecycle/ViewModel;
+.method public getValue()Landroidx/lifecycle/ViewModel;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -111,65 +111,66 @@
         }
     .end annotation
 
-    .line 50
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
 
     if-nez v0, :cond_1
 
-    .line 52
-    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lkotlin/d/a/a;
+    .line 3
+    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lj/m/b/a;
 
-    invoke-interface {v0}, Lkotlin/d/a/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lj/m/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroidx/lifecycle/ViewModelProvider$Factory;
 
-    .line 53
-    iget-object v1, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lkotlin/d/a/a;
+    .line 4
+    iget-object v1, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lj/m/b/a;
 
-    invoke-interface {v1}, Lkotlin/d/a/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lj/m/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroidx/lifecycle/ViewModelStore;
 
-    .line 54
+    .line 5
     new-instance v2, Landroidx/lifecycle/ViewModelProvider;
 
     invoke-direct {v2, v1, v0}, Landroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;)V
 
-    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lkotlin/f/c;
+    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lj/o/c;
 
     const-string v1, "$this$java"
 
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 6
+    invoke-static {v0, v1}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1028
-    check-cast v0, Lkotlin/d/b/b;
+    .line 7
+    check-cast v0, Lj/m/c/b;
 
-    invoke-interface {v0}, Lkotlin/d/b/b;->a()Ljava/lang/Class;
+    invoke-interface {v0}, Lj/m/c/b;->b()Ljava/lang/Class;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 54
+    .line 8
     invoke-virtual {v2, v0}, Landroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object v0
 
-    .line 55
+    .line 9
     iput-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
 
     const-string v1, "ViewModelProvider(store,\u2026ed = it\n                }"
 
-    .line 54
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 10
+    invoke-static {v0, v1}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
+    goto :goto_0
 
-    .line 1028
+    .line 11
     :cond_0
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -180,13 +181,14 @@
     throw v0
 
     :cond_1
+    :goto_0
     return-object v0
 .end method
 
-.method public final bridge synthetic getValue()Ljava/lang/Object;
+.method public bridge synthetic getValue()Ljava/lang/Object;
     .locals 1
 
-    .line 41
+    .line 1
     invoke-virtual {p0}, Landroidx/lifecycle/ViewModelLazy;->getValue()Landroidx/lifecycle/ViewModel;
 
     move-result-object v0
@@ -194,20 +196,21 @@
     return-object v0
 .end method
 
-.method public final isInitialized()Z
+.method public isInitialized()Z
     .locals 1
 
-    .line 62
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method

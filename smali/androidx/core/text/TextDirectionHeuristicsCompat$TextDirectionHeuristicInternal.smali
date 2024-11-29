@@ -1,4 +1,4 @@
-.class Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;
+.class public Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;
 .super Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;
 .source "TextDirectionHeuristicsCompat.java"
 
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "TextDirectionHeuristicInternal"
 .end annotation
 
 
 # instance fields
-.field private final mDefaultIsRtl:Z
+.field public final mDefaultIsRtl:Z
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;Z)V
+.method public constructor <init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;Z)V
     .locals 0
 
-    .line 156
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;-><init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;)V
 
-    .line 157
+    .line 2
     iput-boolean p2, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;->mDefaultIsRtl:Z
 
     return-void
@@ -33,10 +33,10 @@
 
 
 # virtual methods
-.method protected defaultIsRtl()Z
+.method public defaultIsRtl()Z
     .locals 1
 
-    .line 162
+    .line 1
     iget-boolean v0, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;->mDefaultIsRtl:Z
 
     return v0

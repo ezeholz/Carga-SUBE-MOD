@@ -1,9 +1,13 @@
-.class Landroidx/media/MediaBrowserServiceCompatApi26;
+.class public Landroidx/media/MediaBrowserServiceCompatApi26;
 .super Ljava/lang/Object;
 .source "MediaBrowserServiceCompatApi26.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/media/MediaBrowserServiceCompatApi26$MediaBrowserServiceAdaptor;,
@@ -14,16 +18,16 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "MBSCompatApi26"
+.field public static final TAG:Ljava/lang/String; = "MBSCompatApi26"
 
-.field static sResultFlags:Ljava/lang/reflect/Field;
+.field public static sResultFlags:Ljava/lang/reflect/Field;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 41
+    .line 1
     :try_start_0
     const-class v0, Landroid/service/media/MediaBrowserService$Result;
 
@@ -33,11 +37,11 @@
 
     move-result-object v0
 
-    .line 42
     sput-object v0, Landroidx/media/MediaBrowserServiceCompatApi26;->sResultFlags:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
@@ -46,10 +50,10 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 113
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +62,7 @@
 .method public static createService(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi26$ServiceCompatProxy;)Ljava/lang/Object;
     .locals 1
 
-    .line 49
+    .line 1
     new-instance v0, Landroidx/media/MediaBrowserServiceCompatApi26$MediaBrowserServiceAdaptor;
 
     invoke-direct {v0, p0, p1}, Landroidx/media/MediaBrowserServiceCompatApi26$MediaBrowserServiceAdaptor;-><init>(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi26$ServiceCompatProxy;)V
@@ -69,7 +73,7 @@
 .method public static getBrowserRootHints(Ljava/lang/Object;)Landroid/os/Bundle;
     .locals 0
 
-    .line 57
+    .line 1
     check-cast p0, Landroid/service/media/MediaBrowserService;
 
     invoke-virtual {p0}, Landroid/service/media/MediaBrowserService;->getBrowserRootHints()Landroid/os/Bundle;
@@ -82,7 +86,7 @@
 .method public static notifyChildrenChanged(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 53
+    .line 1
     check-cast p0, Landroid/service/media/MediaBrowserService;
 
     invoke-virtual {p0, p1, p2}, Landroid/service/media/MediaBrowserService;->notifyChildrenChanged(Ljava/lang/String;Landroid/os/Bundle;)V

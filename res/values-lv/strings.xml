@@ -45,10 +45,6 @@
     <string name="common_open_on_phone">Atvērt tālrunī</string>
     <string name="common_signin_button_text">Pierakstīties</string>
     <string name="common_signin_button_text_long">Pierakstīties ar Google kontu</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">šādā datumā: %s</string>
-    <string name="joda_time_android_preposition_for_time">plkst. %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Meklēt</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

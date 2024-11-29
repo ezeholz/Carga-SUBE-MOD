@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
@@ -14,24 +14,24 @@
     .end annotation
 .end field
 
-.field private mEnabled:Z
+.field public mEnabled:Z
 
 
 # direct methods
 .method public constructor <init>(Z)V
     .locals 1
 
-    .line 54
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 2
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 55
+    .line 3
     iput-boolean p1, p0, Landroidx/activity/OnBackPressedCallback;->mEnabled:Z
 
     return-void
@@ -39,10 +39,14 @@
 
 
 # virtual methods
-.method addCancellable(Landroidx/activity/Cancellable;)V
+.method public addCancellable(Landroidx/activity/Cancellable;)V
     .locals 1
+    .param p1    # Landroidx/activity/Cancellable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 103
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -51,12 +55,16 @@
 .end method
 
 .method public abstract handleOnBackPressed()V
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 .end method
 
 .method public final isEnabled()Z
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 82
+    .line 1
     iget-boolean v0, p0, Landroidx/activity/OnBackPressedCallback;->mEnabled:Z
 
     return v0
@@ -64,8 +72,10 @@
 
 .method public final remove()V
     .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 91
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -85,7 +95,7 @@
 
     check-cast v1, Landroidx/activity/Cancellable;
 
-    .line 92
+    .line 2
     invoke-interface {v1}, Landroidx/activity/Cancellable;->cancel()V
 
     goto :goto_0
@@ -94,10 +104,14 @@
     return-void
 .end method
 
-.method removeCancellable(Landroidx/activity/Cancellable;)V
+.method public removeCancellable(Landroidx/activity/Cancellable;)V
     .locals 1
+    .param p1    # Landroidx/activity/Cancellable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 107
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -107,8 +121,10 @@
 
 .method public final setEnabled(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 71
+    .line 1
     iput-boolean p1, p0, Landroidx/activity/OnBackPressedCallback;->mEnabled:Z
 
     return-void

@@ -1,4 +1,4 @@
-.class Landroidx/transition/ViewOverlayApi14;
+.class public Landroidx/transition/ViewOverlayApi14;
 .super Ljava/lang/Object;
 .source "ViewOverlayApi14.java"
 
@@ -15,26 +15,26 @@
 
 
 # instance fields
-.field protected mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
+.field public mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 354
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;)V
     .locals 1
 
-    .line 47
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 2
     new-instance v0, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     invoke-direct {v0, p1, p2, p3, p0}, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;Landroidx/transition/ViewOverlayApi14;)V
@@ -44,17 +44,17 @@
     return-void
 .end method
 
-.method static createFrom(Landroid/view/View;)Landroidx/transition/ViewOverlayApi14;
+.method public static createFrom(Landroid/view/View;)Landroidx/transition/ViewOverlayApi14;
     .locals 5
 
-    .line 65
+    .line 1
     invoke-static {p0}, Landroidx/transition/ViewOverlayApi14;->getContentView(Landroid/view/View;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 67
+    .line 2
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
@@ -64,17 +64,17 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 69
+    .line 3
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 70
+    .line 4
     instance-of v4, v3, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     if-eqz v4, :cond_0
 
-    .line 71
+    .line 5
     check-cast v3, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     iget-object p0, v3, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;->mViewOverlay:Landroidx/transition/ViewOverlayApi14;
@@ -86,7 +86,7 @@
 
     goto :goto_0
 
-    .line 74
+    .line 6
     :cond_1
     new-instance v1, Landroidx/transition/ViewGroupOverlayApi14;
 
@@ -104,14 +104,14 @@
     return-object p0
 .end method
 
-.method static getContentView(Landroid/view/View;)Landroid/view/ViewGroup;
+.method public static getContentView(Landroid/view/View;)Landroid/view/ViewGroup;
     .locals 2
 
     :cond_0
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 54
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
     move-result v0
@@ -124,12 +124,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 55
+    .line 2
     check-cast p0, Landroid/view/ViewGroup;
 
     return-object p0
 
-    .line 57
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -139,7 +139,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 58
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -158,8 +158,12 @@
 # virtual methods
 .method public add(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 89
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi14;->mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     invoke-virtual {v0, p1}, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;->add(Landroid/graphics/drawable/Drawable;)V
@@ -170,7 +174,7 @@
 .method public clear()V
     .locals 1
 
-    .line 94
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi14;->mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     invoke-virtual {v0}, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;->clear()V
@@ -178,19 +182,19 @@
     return-void
 .end method
 
-.method getOverlayView()Landroid/view/ViewGroup;
+.method public getOverlayView()Landroid/view/ViewGroup;
     .locals 1
 
-    .line 84
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi14;->mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     return-object v0
 .end method
 
-.method isEmpty()Z
+.method public isEmpty()Z
     .locals 1
 
-    .line 103
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi14;->mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     invoke-virtual {v0}, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;->isEmpty()Z
@@ -202,8 +206,12 @@
 
 .method public remove(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 99
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi14;->mOverlayViewGroup:Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;
 
     invoke-virtual {v0, p1}, Landroidx/transition/ViewOverlayApi14$OverlayViewGroup;->remove(Landroid/graphics/drawable/Drawable;)V

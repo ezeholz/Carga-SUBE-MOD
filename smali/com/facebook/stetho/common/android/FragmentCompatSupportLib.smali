@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;
+.class public final Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;
 .super Lcom/facebook/stetho/common/android/FragmentCompat;
 .source "FragmentCompatSupportLib.java"
 
@@ -25,13 +25,13 @@
 
 
 # static fields
-.field private static final sDialogFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
+.field public static final sDialogFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
 
-.field private static final sFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
+.field public static final sFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
 
-.field private static final sFragmentActivityAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
+.field public static final sFragmentActivityAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
 
-.field private static final sFragmentManagerAccessor:Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
+.field public static final sFragmentManagerAccessor:Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection<",
@@ -44,10 +44,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 24
+    .line 1
     new-instance v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
 
     const/4 v1, 0x0
@@ -56,21 +56,21 @@
 
     sput-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
 
-    .line 26
+    .line 2
     new-instance v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
 
     invoke-direct {v0, v1}, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;-><init>(Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$1;)V
 
     sput-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sDialogFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
 
-    .line 29
+    .line 3
     new-instance v0, Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
 
     invoke-direct {v0}, Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;-><init>()V
 
     sput-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sFragmentManagerAccessor:Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
 
-    .line 30
+    .line 4
     new-instance v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
 
     invoke-direct {v0, v1}, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;-><init>(Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$1;)V
@@ -80,10 +80,10 @@
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 22
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/common/android/FragmentCompat;-><init>()V
 
     return-void
@@ -91,10 +91,10 @@
 
 
 # virtual methods
-.method public final bridge synthetic forDialogFragment()Lcom/facebook/stetho/common/android/DialogFragmentAccessor;
+.method public bridge synthetic forDialogFragment()Lcom/facebook/stetho/common/android/DialogFragmentAccessor;
     .locals 1
 
-    .line 22
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->forDialogFragment()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
 
     move-result-object v0
@@ -102,19 +102,19 @@
     return-object v0
 .end method
 
-.method public final forDialogFragment()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
+.method public forDialogFragment()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
     .locals 1
 
-    .line 55
+    .line 2
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sDialogFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$DialogFragmentAccessorSupportLib;
 
     return-object v0
 .end method
 
-.method public final bridge synthetic forFragment()Lcom/facebook/stetho/common/android/FragmentAccessor;
+.method public bridge synthetic forFragment()Lcom/facebook/stetho/common/android/FragmentAccessor;
     .locals 1
 
-    .line 22
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->forFragment()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
 
     move-result-object v0
@@ -122,19 +122,19 @@
     return-object v0
 .end method
 
-.method public final forFragment()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
+.method public forFragment()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
     .locals 1
 
-    .line 50
+    .line 2
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sFragmentAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentAccessorSupportLib;
 
     return-object v0
 .end method
 
-.method public final bridge synthetic forFragmentActivity()Lcom/facebook/stetho/common/android/FragmentActivityAccessor;
+.method public bridge synthetic forFragmentActivity()Lcom/facebook/stetho/common/android/FragmentActivityAccessor;
     .locals 1
 
-    .line 22
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->forFragmentActivity()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
 
     move-result-object v0
@@ -142,16 +142,16 @@
     return-object v0
 .end method
 
-.method public final forFragmentActivity()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
+.method public forFragmentActivity()Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
     .locals 1
 
-    .line 65
+    .line 2
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sFragmentActivityAccessor:Lcom/facebook/stetho/common/android/FragmentCompatSupportLib$FragmentActivityAccessorSupportLib;
 
     return-object v0
 .end method
 
-.method public final forFragmentManager()Lcom/facebook/stetho/common/android/FragmentManagerAccessor;
+.method public forFragmentManager()Lcom/facebook/stetho/common/android/FragmentManagerAccessor;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -163,13 +163,13 @@
         }
     .end annotation
 
-    .line 60
+    .line 1
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;->sFragmentManagerAccessor:Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
 
     return-object v0
 .end method
 
-.method public final getDialogFragmentClass()Ljava/lang/Class;
+.method public getDialogFragmentClass()Ljava/lang/Class;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -180,13 +180,13 @@
         }
     .end annotation
 
-    .line 40
+    .line 1
     const-class v0, Landroidx/fragment/app/DialogFragment;
 
     return-object v0
 .end method
 
-.method public final getFragmentActivityClass()Ljava/lang/Class;
+.method public getFragmentActivityClass()Ljava/lang/Class;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -197,13 +197,13 @@
         }
     .end annotation
 
-    .line 45
+    .line 1
     const-class v0, Landroidx/fragment/app/FragmentActivity;
 
     return-object v0
 .end method
 
-.method public final getFragmentClass()Ljava/lang/Class;
+.method public getFragmentClass()Ljava/lang/Class;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -214,7 +214,7 @@
         }
     .end annotation
 
-    .line 35
+    .line 1
     const-class v0, Landroidx/fragment/app/Fragment;
 
     return-object v0

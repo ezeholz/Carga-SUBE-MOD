@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/solver/Pools$SimplePool;
+.class public Landroidx/constraintlayout/solver/Pools$SimplePool;
 .super Ljava/lang/Object;
 .source "Pools.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SimplePool"
 .end annotation
 
@@ -29,28 +29,28 @@
 
 
 # instance fields
-.field private final mPool:[Ljava/lang/Object;
+.field public final mPool:[Ljava/lang/Object;
 
-.field private mPoolSize:I
+.field public mPoolSize:I
 
 
 # direct methods
-.method constructor <init>(I)V
+.method public constructor <init>(I)V
     .locals 1
 
-    .line 96
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-lez p1, :cond_0
 
-    .line 100
+    .line 2
     new-array p1, p1, [Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPool:[Ljava/lang/Object;
 
     return-void
 
-    .line 98
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -73,13 +73,13 @@
 
     const/4 v1, 0x0
 
-    .line 151
+    .line 1
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     if-ge v1, v2, :cond_1
 
-    .line 152
+    .line 2
     iget-object v2, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPool:[Ljava/lang/Object;
 
     aget-object v2, v2, v1
@@ -109,7 +109,7 @@
         }
     .end annotation
 
-    .line 106
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     const/4 v1, 0x0
@@ -118,17 +118,17 @@
 
     add-int/lit8 v2, v0, -0x1
 
-    .line 108
+    .line 2
     iget-object v3, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPool:[Ljava/lang/Object;
 
     aget-object v4, v3, v2
 
-    .line 109
+    .line 3
     aput-object v1, v3, v2
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 110
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     return-object v4
@@ -145,7 +145,7 @@
         }
     .end annotation
 
-    .line 123
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     iget-object v1, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPool:[Ljava/lang/Object;
@@ -154,14 +154,14 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 124
+    .line 2
     aput-object p1, v1, v0
 
     const/4 p1, 0x1
 
     add-int/2addr v0, p1
 
-    .line 125
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     return p1
@@ -180,12 +180,12 @@
         }
     .end annotation
 
-    .line 133
+    .line 1
     array-length v0, p1
 
     if-le p2, v0, :cond_0
 
-    .line 134
+    .line 2
     array-length p2, p1
 
     :cond_0
@@ -194,10 +194,10 @@
     :goto_0
     if-ge v0, p2, :cond_2
 
-    .line 137
+    .line 3
     aget-object v1, p1, v0
 
-    .line 143
+    .line 4
     iget v2, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     iget-object v3, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPool:[Ljava/lang/Object;
@@ -206,12 +206,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 144
+    .line 5
     aput-object v1, v3, v2
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 145
+    .line 6
     iput v2, p0, Landroidx/constraintlayout/solver/Pools$SimplePool;->mPoolSize:I
 
     :cond_1

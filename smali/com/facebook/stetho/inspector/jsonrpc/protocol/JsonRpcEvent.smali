@@ -3,6 +3,15 @@
 .source "JsonRpcEvent.java"
 
 
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "UsingDefaultJsonDeserializer",
+        "EmptyJsonPropertyUse"
+    }
+.end annotation
+
+
 # instance fields
 .field public method:Ljava/lang/String;
     .annotation runtime Lcom/facebook/stetho/json/annotation/JsonProperty;
@@ -20,7 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,13 +38,13 @@
 .method public constructor <init>(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 0
 
-    .line 30
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcEvent;->method:Ljava/lang/String;
 
-    .line 32
+    .line 4
     iput-object p2, p0, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcEvent;->params:Lorg/json/JSONObject;
 
     return-void

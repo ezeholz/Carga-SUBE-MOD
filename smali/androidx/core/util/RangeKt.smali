@@ -6,6 +6,10 @@
 # direct methods
 .method public static final and(Landroid/util/Range;Landroid/util/Range;)Landroid/util/Range;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -22,26 +26,30 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 48
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/Range;->intersect(Landroid/util/Range;)Landroid/util/Range;
 
     move-result-object p0
 
     const-string p1, "intersect(other)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
 .method public static final plus(Landroid/util/Range;Landroid/util/Range;)Landroid/util/Range;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -58,26 +66,30 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 39
+    .line 2
     invoke-virtual {p0, p1}, Landroid/util/Range;->extend(Landroid/util/Range;)Landroid/util/Range;
 
     move-result-object p0
 
     const-string p1, "extend(other)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
 .method public static final plus(Landroid/util/Range;Ljava/lang/Comparable;)Landroid/util/Range;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -92,26 +104,30 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "value"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 34
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/Range;->extend(Ljava/lang/Comparable;)Landroid/util/Range;
 
     move-result-object p0
 
     const-string p1, "extend(value)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
 .method public static final rangeTo(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -124,13 +140,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "that"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
+    .line 1
     new-instance v0, Landroid/util/Range;
 
     invoke-direct {v0, p0, p1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
@@ -138,8 +154,12 @@
     return-object v0
 .end method
 
-.method public static final toClosedRange(Landroid/util/Range;)Lkotlin/e/a;
+.method public static final toClosedRange(Landroid/util/Range;)Lj/n/a;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -147,33 +167,35 @@
             "-TT;>;>(",
             "Landroid/util/Range<",
             "TT;>;)",
-            "Lkotlin/e/a<",
+            "Lj/n/a<",
             "TT;>;"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
+    .line 1
     new-instance v0, Landroidx/core/util/RangeKt$toClosedRange$1;
 
     invoke-direct {v0, p0}, Landroidx/core/util/RangeKt$toClosedRange$1;-><init>(Landroid/util/Range;)V
 
-    check-cast v0, Lkotlin/e/a;
-
     return-object v0
 .end method
 
-.method public static final toRange(Lkotlin/e/a;)Landroid/util/Range;
+.method public static final toRange(Lj/n/a;)Landroid/util/Range;
     .locals 2
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
             "Ljava/lang/Comparable<",
             "-TT;>;>(",
-            "Lkotlin/e/a<",
+            "Lj/n/a<",
             "TT;>;)",
             "Landroid/util/Range<",
             "TT;>;"
@@ -182,16 +204,16 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 59
+    .line 1
     new-instance v0, Landroid/util/Range;
 
-    invoke-interface {p0}, Lkotlin/e/a;->getStart()Ljava/lang/Comparable;
+    invoke-interface {p0}, Lj/n/a;->getStart()Ljava/lang/Comparable;
 
     move-result-object v1
 
-    invoke-interface {p0}, Lkotlin/e/a;->getEndInclusive()Ljava/lang/Comparable;
+    invoke-interface {p0}, Lj/n/a;->getEndInclusive()Ljava/lang/Comparable;
 
     move-result-object p0
 

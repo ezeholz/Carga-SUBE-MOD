@@ -29,17 +29,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 16
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerNames:Ljava/util/ArrayList;
 
-    .line 18
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -54,12 +54,12 @@
 .method public addHeader(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 21
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 22
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerValues:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -69,8 +69,10 @@
 
 .method public getFirstHeaderValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 27
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -82,7 +84,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 28
+    .line 2
     iget-object v2, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerNames:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -95,7 +97,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 29
+    .line 3
     iget-object p1, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerValues:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -120,12 +122,12 @@
 .method public reset()V
     .locals 1
 
-    .line 36
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 37
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpMessage;->headerValues:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V

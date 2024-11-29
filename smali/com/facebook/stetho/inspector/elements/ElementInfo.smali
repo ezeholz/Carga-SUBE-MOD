@@ -20,7 +20,7 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -33,20 +33,20 @@
         }
     .end annotation
 
-    .line 29
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->element:Ljava/lang/Object;
 
-    .line 31
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->parentElement:Ljava/lang/Object;
 
-    .line 32
+    .line 4
     invoke-static {p3}, Lcom/facebook/stetho/common/ListUtil;->copyToImmutableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -58,7 +58,7 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
     const/4 v0, 0x1
@@ -67,18 +67,18 @@
 
     return v0
 
-    .line 41
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/facebook/stetho/inspector/elements/ElementInfo;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 42
+    .line 2
     check-cast p1, Lcom/facebook/stetho/inspector/elements/ElementInfo;
 
-    .line 43
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/ElementInfo;->element:Ljava/lang/Object;
 
     iget-object v3, p1, Lcom/facebook/stetho/inspector/elements/ElementInfo;->element:Ljava/lang/Object;
@@ -95,15 +95,21 @@
 
     iget-object p1, p1, Lcom/facebook/stetho/inspector/elements/ElementInfo;->children:Ljava/util/List;
 
-    .line 45
+    .line 4
     invoke-static {v1, p1}, Lcom/facebook/stetho/common/ListUtil;->identityEquals(Ljava/util/List;Ljava/util/List;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    return v0
+    goto :goto_0
 
     :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_2
     return v2
 .end method

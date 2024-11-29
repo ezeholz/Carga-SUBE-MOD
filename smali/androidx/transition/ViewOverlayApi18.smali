@@ -1,4 +1,4 @@
-.class Landroidx/transition/ViewOverlayApi18;
+.class public Landroidx/transition/ViewOverlayApi18;
 .super Ljava/lang/Object;
 .source "ViewOverlayApi18.java"
 
@@ -6,18 +6,28 @@
 .implements Landroidx/transition/ViewOverlayImpl;
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x12
+.end annotation
+
+
 # instance fields
-.field private final mViewOverlay:Landroid/view/ViewOverlay;
+.field public final mViewOverlay:Landroid/view/ViewOverlay;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 31
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getOverlay()Landroid/view/ViewOverlay;
 
     move-result-object p1
@@ -31,8 +41,12 @@
 # virtual methods
 .method public add(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 37
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi18;->mViewOverlay:Landroid/view/ViewOverlay;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewOverlay;->add(Landroid/graphics/drawable/Drawable;)V
@@ -43,7 +57,7 @@
 .method public clear()V
     .locals 1
 
-    .line 42
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi18;->mViewOverlay:Landroid/view/ViewOverlay;
 
     invoke-virtual {v0}, Landroid/view/ViewOverlay;->clear()V
@@ -53,8 +67,12 @@
 
 .method public remove(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 47
+    .line 1
     iget-object v0, p0, Landroidx/transition/ViewOverlayApi18;->mViewOverlay:Landroid/view/ViewOverlay;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V

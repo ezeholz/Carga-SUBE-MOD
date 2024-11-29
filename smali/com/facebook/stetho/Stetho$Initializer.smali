@@ -21,17 +21,17 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
 
 # direct methods
-.method protected constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 434
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 435
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -41,10 +41,10 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/facebook/stetho/Stetho$Initializer;)Landroid/content/Context;
+.method public static synthetic access$100(Lcom/facebook/stetho/Stetho$Initializer;)Landroid/content/Context;
     .locals 0
 
-    .line 431
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/Stetho$Initializer;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -52,7 +52,7 @@
 
 
 # virtual methods
-.method protected abstract getDumperPlugins()Ljava/lang/Iterable;
+.method public abstract getDumperPlugins()Ljava/lang/Iterable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -63,7 +63,7 @@
     .end annotation
 .end method
 
-.method protected abstract getInspectorModules()Ljava/lang/Iterable;
+.method public abstract getInspectorModules()Ljava/lang/Iterable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -74,15 +74,15 @@
     .end annotation
 .end method
 
-.method final start()V
+.method public final start()V
     .locals 5
 
-    .line 447
+    .line 1
     new-instance v0, Lcom/facebook/stetho/server/LocalSocketServer;
 
     const-string v1, "_devtools_remote"
 
-    .line 449
+    .line 2
     invoke-static {v1}, Lcom/facebook/stetho/server/AddressNameHelper;->createCustomAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -101,12 +101,12 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/facebook/stetho/server/LocalSocketServer;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/facebook/stetho/server/SocketHandler;)V
 
-    .line 452
+    .line 3
     new-instance v1, Lcom/facebook/stetho/server/ServerManager;
 
     invoke-direct {v1, v0}, Lcom/facebook/stetho/server/ServerManager;-><init>(Lcom/facebook/stetho/server/LocalSocketServer;)V
 
-    .line 453
+    .line 4
     invoke-virtual {v1}, Lcom/facebook/stetho/server/ServerManager;->start()V
 
     return-void

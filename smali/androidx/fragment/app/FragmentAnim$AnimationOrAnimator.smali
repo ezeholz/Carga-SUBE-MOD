@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;
+.class public Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;
 .super Ljava/lang/Object;
 .source "FragmentAnim.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AnimationOrAnimator"
 .end annotation
 
@@ -21,25 +21,25 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/animation/Animator;)V
+.method public constructor <init>(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 239
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 240
+    .line 6
     iput-object v0, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animation:Landroid/view/animation/Animation;
 
-    .line 241
+    .line 7
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animator:Landroid/animation/Animator;
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 243
+    .line 8
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -50,25 +50,25 @@
     throw p1
 .end method
 
-.method constructor <init>(Landroid/view/animation/Animation;)V
+.method public constructor <init>(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 231
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animation:Landroid/view/animation/Animation;
 
     const/4 v0, 0x0
 
-    .line 233
+    .line 3
     iput-object v0, p0, Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;->animator:Landroid/animation/Animator;
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 235
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 

@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/SavedStateHandleController;
+.class public final Landroidx/lifecycle/SavedStateHandleController;
 .super Ljava/lang/Object;
 .source "SavedStateHandleController.java"
 
@@ -15,44 +15,44 @@
 
 
 # static fields
-.field static final TAG_SAVED_STATE_HANDLE_CONTROLLER:Ljava/lang/String; = "androidx.lifecycle.savedstate.vm.tag"
+.field public static final TAG_SAVED_STATE_HANDLE_CONTROLLER:Ljava/lang/String; = "androidx.lifecycle.savedstate.vm.tag"
 
 
 # instance fields
-.field private final mHandle:Landroidx/lifecycle/SavedStateHandle;
+.field public final mHandle:Landroidx/lifecycle/SavedStateHandle;
 
-.field private mIsAttached:Z
+.field public mIsAttached:Z
 
-.field private final mKey:Ljava/lang/String;
+.field public final mKey:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Landroidx/lifecycle/SavedStateHandle;)V
+.method public constructor <init>(Ljava/lang/String;Landroidx/lifecycle/SavedStateHandle;)V
     .locals 1
 
-    .line 35
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 32
+    .line 2
     iput-boolean v0, p0, Landroidx/lifecycle/SavedStateHandleController;->mIsAttached:Z
 
-    .line 36
+    .line 3
     iput-object p1, p0, Landroidx/lifecycle/SavedStateHandleController;->mKey:Ljava/lang/String;
 
-    .line 37
+    .line 4
     iput-object p2, p0, Landroidx/lifecycle/SavedStateHandleController;->mHandle:Landroidx/lifecycle/SavedStateHandle;
 
     return-void
 .end method
 
-.method static attachHandleIfNeeded(Landroidx/lifecycle/ViewModel;Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
+.method public static attachHandleIfNeeded(Landroidx/lifecycle/ViewModel;Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
     .locals 1
 
     const-string v0, "androidx.lifecycle.savedstate.vm.tag"
 
-    .line 98
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/lifecycle/ViewModel;->getTag(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -61,59 +61,59 @@
 
     if-eqz p0, :cond_0
 
-    .line 100
+    .line 2
     invoke-virtual {p0}, Landroidx/lifecycle/SavedStateHandleController;->isAttached()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 101
+    .line 3
     invoke-virtual {p0, p1, p2}, Landroidx/lifecycle/SavedStateHandleController;->attachToLifecycle(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
 
-    .line 102
+    .line 4
     invoke-static {p1, p2}, Landroidx/lifecycle/SavedStateHandleController;->tryToAddRecreator(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
 
     :cond_0
     return-void
 .end method
 
-.method static create(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/lifecycle/SavedStateHandleController;
+.method public static create(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/lifecycle/SavedStateHandleController;
     .locals 1
 
-    .line 67
+    .line 1
     invoke-virtual {p0, p2}, Landroidx/savedstate/SavedStateRegistry;->consumeRestoredStateForKey(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 68
+    .line 2
     invoke-static {v0, p3}, Landroidx/lifecycle/SavedStateHandle;->createHandle(Landroid/os/Bundle;Landroid/os/Bundle;)Landroidx/lifecycle/SavedStateHandle;
 
     move-result-object p3
 
-    .line 69
+    .line 3
     new-instance v0, Landroidx/lifecycle/SavedStateHandleController;
 
     invoke-direct {v0, p2, p3}, Landroidx/lifecycle/SavedStateHandleController;-><init>(Ljava/lang/String;Landroidx/lifecycle/SavedStateHandle;)V
 
-    .line 70
+    .line 4
     invoke-virtual {v0, p0, p1}, Landroidx/lifecycle/SavedStateHandleController;->attachToLifecycle(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
 
-    .line 71
+    .line 5
     invoke-static {p0, p1}, Landroidx/lifecycle/SavedStateHandleController;->tryToAddRecreator(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
 
     return-object v0
 .end method
 
-.method private static tryToAddRecreator(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
+.method public static tryToAddRecreator(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
     .locals 2
 
-    .line 107
+    .line 1
     invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
 
-    .line 108
+    .line 2
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
 
     if-eq v0, v1, :cond_1
@@ -128,7 +128,7 @@
 
     goto :goto_0
 
-    .line 111
+    .line 3
     :cond_0
     new-instance v0, Landroidx/lifecycle/SavedStateHandleController$1;
 
@@ -136,37 +136,38 @@
 
     invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    return-void
+    goto :goto_1
 
-    .line 109
+    .line 4
     :cond_1
     :goto_0
     const-class p1, Landroidx/lifecycle/SavedStateHandleController$OnRecreation;
 
     invoke-virtual {p0, p1}, Landroidx/savedstate/SavedStateRegistry;->runOnNextRecreation(Ljava/lang/Class;)V
 
+    :goto_1
     return-void
 .end method
 
 
 # virtual methods
-.method final attachToLifecycle(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
+.method public attachToLifecycle(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
     .locals 1
 
-    .line 45
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/SavedStateHandleController;->mIsAttached:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 48
+    .line 2
     iput-boolean v0, p0, Landroidx/lifecycle/SavedStateHandleController;->mIsAttached:Z
 
-    .line 49
+    .line 3
     invoke-virtual {p2, p0}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 50
+    .line 4
     iget-object p2, p0, Landroidx/lifecycle/SavedStateHandleController;->mKey:Ljava/lang/String;
 
     iget-object v0, p0, Landroidx/lifecycle/SavedStateHandleController;->mHandle:Landroidx/lifecycle/SavedStateHandle;
@@ -179,7 +180,7 @@
 
     return-void
 
-    .line 46
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -190,38 +191,46 @@
     throw p1
 .end method
 
-.method final getHandle()Landroidx/lifecycle/SavedStateHandle;
+.method public getHandle()Landroidx/lifecycle/SavedStateHandle;
     .locals 1
 
-    .line 62
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/SavedStateHandleController;->mHandle:Landroidx/lifecycle/SavedStateHandle;
 
     return-object v0
 .end method
 
-.method final isAttached()Z
+.method public isAttached()Z
     .locals 1
 
-    .line 41
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/SavedStateHandleController;->mIsAttached:Z
 
     return v0
 .end method
 
-.method public final onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$Event;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 55
+    .line 1
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, v0, :cond_0
 
     const/4 p2, 0x0
 
-    .line 56
+    .line 2
     iput-boolean p2, p0, Landroidx/lifecycle/SavedStateHandleController;->mIsAttached:Z
 
-    .line 57
+    .line 3
     invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1

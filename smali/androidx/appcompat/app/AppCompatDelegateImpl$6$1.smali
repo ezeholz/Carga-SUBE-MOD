@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;
 .super Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
 .source "AppCompatDelegateImpl.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
+.field public final synthetic this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl$6;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl$6;)V
     .locals 0
 
-    .line 1144
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
     invoke-direct {p0}, Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/view/View;)V
     .locals 1
 
-    .line 1152
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -44,9 +44,9 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarContextView;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 1153
+    .line 2
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -57,7 +57,7 @@
 
     invoke-virtual {p1, v0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
-    .line 1154
+    .line 3
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
@@ -70,7 +70,7 @@
 .method public onAnimationStart(Landroid/view/View;)V
     .locals 1
 
-    .line 1147
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
     iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;

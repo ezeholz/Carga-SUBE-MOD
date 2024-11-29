@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/app/NotificationManagerCompat$Task;
+.class public interface abstract Landroidx/core/app/NotificationManagerCompat$Task;
 .super Ljava/lang/Object;
 .source "NotificationManagerCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "Task"
 .end annotation
 

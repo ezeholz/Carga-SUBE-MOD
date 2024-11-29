@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private mBinder:Landroid/support/customtabs/IPostMessageService$Stub;
+.field public mBinder:Landroid/support/customtabs/IPostMessageService$Stub;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 30
+    .line 1
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 31
+    .line 2
     new-instance v0, Landroidx/browser/customtabs/PostMessageService$1;
 
     invoke-direct {v0, p0}, Landroidx/browser/customtabs/PostMessageService$1;-><init>(Landroidx/browser/customtabs/PostMessageService;)V
@@ -29,7 +29,7 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    .line 48
+    .line 1
     iget-object p1, p0, Landroidx/browser/customtabs/PostMessageService;->mBinder:Landroid/support/customtabs/IPostMessageService$Stub;
 
     return-object p1

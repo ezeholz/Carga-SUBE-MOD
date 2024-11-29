@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field private final mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
+.field public final mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 29
+    .line 1
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 31
+    .line 2
     new-instance v0, Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/ServiceLifecycleDispatcher;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
@@ -32,7 +32,7 @@
 .method public getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 1
 
-    .line 75
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/LifecycleService;->mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ServiceLifecycleDispatcher;->getLifecycle()Landroidx/lifecycle/Lifecycle;
@@ -44,8 +44,13 @@
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 44
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
     iget-object p1, p0, Landroidx/lifecycle/LifecycleService;->mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
     invoke-virtual {p1}, Landroidx/lifecycle/ServiceLifecycleDispatcher;->onServicePreSuperOnBind()V
@@ -57,13 +62,15 @@
 
 .method public onCreate()V
     .locals 1
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 36
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/LifecycleService;->mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ServiceLifecycleDispatcher;->onServicePreSuperOnCreate()V
 
-    .line 37
+    .line 2
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     return-void
@@ -71,13 +78,15 @@
 
 .method public onDestroy()V
     .locals 1
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 69
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/LifecycleService;->mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ServiceLifecycleDispatcher;->onServicePreSuperOnDestroy()V
 
-    .line 70
+    .line 2
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
     return-void
@@ -85,13 +94,15 @@
 
 .method public onStart(Landroid/content/Intent;I)V
     .locals 1
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 52
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/LifecycleService;->mDispatcher:Landroidx/lifecycle/ServiceLifecycleDispatcher;
 
     invoke-virtual {v0}, Landroidx/lifecycle/ServiceLifecycleDispatcher;->onServicePreSuperOnStart()V
 
-    .line 53
+    .line 2
     invoke-super {p0, p1, p2}, Landroid/app/Service;->onStart(Landroid/content/Intent;I)V
 
     return-void
@@ -99,8 +110,10 @@
 
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 0
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
 
-    .line 63
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
     move-result p1

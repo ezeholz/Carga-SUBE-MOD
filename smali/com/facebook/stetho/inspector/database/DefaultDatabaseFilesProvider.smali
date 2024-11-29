@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 24
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/DefaultDatabaseFilesProvider;->mContext:Landroid/content/Context;
 
     return-void
@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public final getDatabaseFiles()Ljava/util/List;
+.method public getDatabaseFiles()Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -36,12 +36,12 @@
         }
     .end annotation
 
-    .line 30
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 31
+    .line 2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/database/DefaultDatabaseFilesProvider;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->databaseList()[Ljava/lang/String;
@@ -57,14 +57,14 @@
 
     aget-object v4, v1, v3
 
-    .line 32
+    .line 3
     iget-object v5, p0, Lcom/facebook/stetho/inspector/database/DefaultDatabaseFilesProvider;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, v4}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v4
 
-    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 

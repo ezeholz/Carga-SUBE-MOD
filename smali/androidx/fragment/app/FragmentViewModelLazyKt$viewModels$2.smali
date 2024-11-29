@@ -1,14 +1,14 @@
 .class public final Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$2;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "FragmentViewModelLazy.kt"
 
 # interfaces
-.implements Lkotlin/d/a/a;
+.implements Lj/m/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/FragmentViewModelLazyKt;->viewModels(Landroidx/fragment/app/Fragment;Lkotlin/d/a/a;Lkotlin/d/a/a;)Lkotlin/g;
+    value = Landroidx/fragment/app/FragmentViewModelLazyKt;->viewModels(Landroidx/fragment/app/Fragment;Lj/m/b/a;Lj/m/b/a;)Lj/d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/a<",
+        "Lj/m/c/j;",
+        "Lj/m/b/a<",
         "Landroidx/lifecycle/ViewModelStore;",
         ">;"
     }
@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field final synthetic $ownerProducer:Lkotlin/d/a/a;
+.field public final synthetic $ownerProducer:Lj/m/b/a;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/a;)V
+.method public constructor <init>(Lj/m/b/a;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$2;->$ownerProducer:Lkotlin/d/a/a;
+    iput-object p1, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$2;->$ownerProducer:Lj/m/b/a;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, p1}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
@@ -48,10 +48,10 @@
 .method public final invoke()Landroidx/lifecycle/ViewModelStore;
     .locals 2
 
-    .line 58
-    iget-object v0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$2;->$ownerProducer:Lkotlin/d/a/a;
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$2;->$ownerProducer:Lj/m/b/a;
 
-    invoke-interface {v0}, Lkotlin/d/a/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lj/m/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -63,12 +63,12 @@
 
     const-string v1, "ownerProducer().viewModelStore"
 
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public final bridge synthetic invoke()Ljava/lang/Object;
+.method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$2;->invoke()Landroidx/lifecycle/ViewModelStore;

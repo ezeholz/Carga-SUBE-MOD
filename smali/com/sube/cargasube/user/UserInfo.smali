@@ -4,52 +4,46 @@
 
 
 # static fields
-.field private static accessTokenKey:Ljava/lang/String; = "USER_ACCESS_TOKEN_KEY"
+.field public static accessTokenKey:Ljava/lang/String; = "USER_ACCESS_TOKEN_KEY"
 
-.field private static cardNumberKey:Ljava/lang/String; = "USER_CARD_NUMBER"
+.field public static cardNumberKey:Ljava/lang/String; = "USER_CARD_NUMBER"
 
-.field private static editor:Landroid/content/SharedPreferences$Editor; = null
+.field public static editor:Landroid/content/SharedPreferences$Editor; = null
 
-.field private static emailKey:Ljava/lang/String; = "USER_EMAIL"
+.field public static emailKey:Ljava/lang/String; = "USER_EMAIL"
 
-.field private static loginDocumentNumberKey:Ljava/lang/String; = "LOGIN_DOCUMENT_NUMBER"
+.field public static loginDocumentNumberKey:Ljava/lang/String; = "LOGIN_DOCUMENT_NUMBER"
 
-.field private static loginDocumentTypeKey:Ljava/lang/String; = "LOGIN_DOCUMENT_TYPE"
+.field public static loginDocumentTypeKey:Ljava/lang/String; = "LOGIN_DOCUMENT_TYPE"
 
-.field private static loginGenderKey:Ljava/lang/String; = "LOGIN_GENDER"
+.field public static loginGenderKey:Ljava/lang/String; = "LOGIN_GENDER"
 
-.field private static nightModeKey:Ljava/lang/String; = "NIGHT_MODE"
+.field public static nightModeKey:Ljava/lang/String; = "NIGHT_MODE"
 
-.field private static selectedPaymentMethodsKey:Ljava/lang/String; = "SELECTED_PAYMENT_METHODS"
+.field public static selectedPaymentMethodsKey:Ljava/lang/String; = "SELECTED_PAYMENT_METHODS"
 
-.field private static sharedPreferences:Landroid/content/SharedPreferences; = null
+.field public static sharedPreferences:Landroid/content/SharedPreferences; = null
 
-.field private static userInfo:Lcom/sube/cargasube/user/UserInfo; = null
+.field public static userInfo:Lcom/sube/cargasube/user/UserInfo; = null
 
-.field private static usernameKey:Ljava/lang/String; = "USER_USERNAME"
+.field public static usernameKey:Ljava/lang/String; = "USER_USERNAME"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 39
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 40
+    .line 3
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
@@ -62,19 +56,19 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/sube/cargasube/user/UserInfo;
     .locals 1
 
-    .line 34
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->userInfo:Lcom/sube/cargasube/user/UserInfo;
 
     if-nez v0, :cond_0
 
-    .line 35
+    .line 2
     new-instance v0, Lcom/sube/cargasube/user/UserInfo;
 
     invoke-direct {v0, p0}, Lcom/sube/cargasube/user/UserInfo;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/sube/cargasube/user/UserInfo;->userInfo:Lcom/sube/cargasube/user/UserInfo;
 
-    .line 36
+    .line 3
     :cond_0
     sget-object p0, Lcom/sube/cargasube/user/UserInfo;->userInfo:Lcom/sube/cargasube/user/UserInfo;
 
@@ -84,23 +78,23 @@
 .method private saveKeyValue(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 1
 
-    .line 53
+    .line 4
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 54
     sput-object v0, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
+    .line 5
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 55
+    .line 6
     sget-object p1, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -111,19 +105,19 @@
 .method private saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 47
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 48
     sput-object v0, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
+    .line 2
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 49
+    .line 3
     sget-object p1, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -143,19 +137,19 @@
         }
     .end annotation
 
-    .line 59
+    .line 7
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 60
     sput-object v0, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
+    .line 8
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
 
-    .line 61
+    .line 9
     sget-object p1, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -168,7 +162,7 @@
 .method public getAccessToken()Ljava/lang/String;
     .locals 3
 
-    .line 175
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->accessTokenKey:Ljava/lang/String;
@@ -185,7 +179,7 @@
 .method public getCardNumber()Ljava/lang/String;
     .locals 3
 
-    .line 142
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->cardNumberKey:Ljava/lang/String;
@@ -202,7 +196,7 @@
 .method public getEmail()Ljava/lang/String;
     .locals 3
 
-    .line 138
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->emailKey:Ljava/lang/String;
@@ -219,14 +213,14 @@
 .method public getFormattedCardNumber()Ljava/lang/String;
     .locals 6
 
-    .line 146
+    .line 1
     invoke-virtual {p0}, Lcom/sube/cargasube/user/UserInfo;->getCardNumber()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 147
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -241,7 +235,7 @@
 
     const/4 v4, 0x0
 
-    .line 148
+    .line 3
     invoke-virtual {v0, v4, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
@@ -273,7 +267,7 @@
 .method public getLoginDocumentNumber()Ljava/lang/String;
     .locals 3
 
-    .line 159
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->loginDocumentNumberKey:Ljava/lang/String;
@@ -290,7 +284,7 @@
 .method public getLoginDocumentType()Ljava/lang/Integer;
     .locals 3
 
-    .line 155
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->loginDocumentTypeKey:Ljava/lang/String;
@@ -311,7 +305,7 @@
 .method public getLoginGender()Ljava/lang/String;
     .locals 3
 
-    .line 163
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->loginGenderKey:Ljava/lang/String;
@@ -328,7 +322,7 @@
 .method public getNightMode()Ljava/lang/Integer;
     .locals 3
 
-    .line 134
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->nightModeKey:Ljava/lang/String;
@@ -357,7 +351,7 @@
         }
     .end annotation
 
-    .line 167
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->selectedPaymentMethodsKey:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/sube/cargasube/user/UserInfo;->loadOrderedList(Ljava/lang/String;)Ljava/util/List;
@@ -370,7 +364,7 @@
 .method public getUsername()Ljava/lang/String;
     .locals 3
 
-    .line 130
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     sget-object v1, Lcom/sube/cargasube/user/UserInfo;->usernameKey:Ljava/lang/String;
@@ -397,12 +391,12 @@
         }
     .end annotation
 
-    .line 72
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 75
+    .line 2
     :try_start_0
     new-instance v1, Lorg/json/JSONArray;
 
@@ -418,7 +412,7 @@
 
     const/4 p1, 0x0
 
-    .line 76
+    .line 3
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -426,7 +420,7 @@
 
     if-ge p1, v2, :cond_0
 
-    .line 77
+    .line 4
     invoke-virtual {v1, p1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -442,7 +436,7 @@
     :catch_0
     move-exception p1
 
-    .line 80
+    .line 5
     invoke-virtual {p1}, Lorg/json/JSONException;->printStackTrace()V
 
     :cond_0
@@ -452,7 +446,7 @@
 .method public removeFromSelectedPaymentMethods(Ljava/lang/String;)V
     .locals 2
 
-    .line 122
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->selectedPaymentMethodsKey:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/sube/cargasube/user/UserInfo;->loadOrderedList(Ljava/lang/String;)Ljava/util/List;
@@ -461,17 +455,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 124
+    .line 3
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 125
+    .line 4
     sget-object p1, Lcom/sube/cargasube/user/UserInfo;->selectedPaymentMethodsKey:Ljava/lang/String;
 
     invoke-virtual {p0, p1, v0}, Lcom/sube/cargasube/user/UserInfo;->saveOrderedList(Ljava/lang/String;Ljava/util/List;)V
@@ -483,7 +477,7 @@
 .method public saveAccessToken(Ljava/lang/String;)V
     .locals 1
 
-    .line 171
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->accessTokenKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V
@@ -494,7 +488,7 @@
 .method public saveCardNumber(Ljava/lang/String;)V
     .locals 1
 
-    .line 98
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->cardNumberKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V
@@ -505,7 +499,7 @@
 .method public saveEmail(Ljava/lang/String;)V
     .locals 1
 
-    .line 94
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->emailKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V
@@ -516,7 +510,7 @@
 .method public saveLoginDocumentNumber(Ljava/lang/String;)V
     .locals 1
 
-    .line 106
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->loginDocumentNumberKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V
@@ -527,7 +521,7 @@
 .method public saveLoginDocumentType(Ljava/lang/Integer;)V
     .locals 1
 
-    .line 102
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->loginDocumentTypeKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/Integer;)V
@@ -538,7 +532,7 @@
 .method public saveLoginGender(Ljava/lang/String;)V
     .locals 1
 
-    .line 110
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->loginGenderKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V
@@ -549,7 +543,7 @@
 .method public saveNewSelectedPaymentMethod(Ljava/lang/String;)V
     .locals 1
 
-    .line 114
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->selectedPaymentMethodsKey:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/sube/cargasube/user/UserInfo;->loadOrderedList(Ljava/lang/String;)Ljava/util/List;
@@ -558,10 +552,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 117
+    .line 3
     sget-object p1, Lcom/sube/cargasube/user/UserInfo;->selectedPaymentMethodsKey:Ljava/lang/String;
 
     invoke-virtual {p0, p1, v0}, Lcom/sube/cargasube/user/UserInfo;->saveOrderedList(Ljava/lang/String;Ljava/util/List;)V
@@ -573,7 +567,7 @@
 .method public saveNightMode(Ljava/lang/Integer;)V
     .locals 1
 
-    .line 90
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->nightModeKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/Integer;)V
@@ -593,28 +587,28 @@
         }
     .end annotation
 
-    .line 65
+    .line 1
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0, p2}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
 
-    .line 66
+    .line 2
     sget-object p2, Lcom/sube/cargasube/user/UserInfo;->sharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p2
 
-    .line 67
     sput-object p2, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
+    .line 3
     invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p2, p1, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 68
+    .line 4
     sget-object p1, Lcom/sube/cargasube/user/UserInfo;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -625,7 +619,7 @@
 .method public saveUsername(Ljava/lang/String;)V
     .locals 1
 
-    .line 86
+    .line 1
     sget-object v0, Lcom/sube/cargasube/user/UserInfo;->usernameKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, p1}, Lcom/sube/cargasube/user/UserInfo;->saveKeyValue(Ljava/lang/String;Ljava/lang/String;)V

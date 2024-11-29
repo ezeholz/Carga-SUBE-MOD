@@ -1,4 +1,4 @@
-.class Landroidx/transition/Transition$2;
+.class public Landroidx/transition/Transition$2;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "Transition.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/transition/Transition;
+.field public final synthetic this$0:Landroidx/transition/Transition;
 
-.field final synthetic val$runningAnimators:Landroidx/collection/ArrayMap;
+.field public final synthetic val$runningAnimators:Landroidx/collection/ArrayMap;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/Transition;Landroidx/collection/ArrayMap;)V
+.method public constructor <init>(Landroidx/transition/Transition;Landroidx/collection/ArrayMap;)V
     .locals 0
 
-    .line 896
+    .line 1
     iput-object p1, p0, Landroidx/transition/Transition$2;->this$0:Landroidx/transition/Transition;
 
     iput-object p2, p0, Landroidx/transition/Transition$2;->val$runningAnimators:Landroidx/collection/ArrayMap;
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 904
+    .line 1
     iget-object v0, p0, Landroidx/transition/Transition$2;->val$runningAnimators:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 905
+    .line 2
     iget-object v0, p0, Landroidx/transition/Transition$2;->this$0:Landroidx/transition/Transition;
 
     iget-object v0, v0, Landroidx/transition/Transition;->mCurrentAnimators:Ljava/util/ArrayList;
@@ -57,7 +57,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 899
+    .line 1
     iget-object v0, p0, Landroidx/transition/Transition$2;->this$0:Landroidx/transition/Transition;
 
     iget-object v0, v0, Landroidx/transition/Transition;->mCurrentAnimators:Ljava/util/ArrayList;

@@ -24,7 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 1
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final store(Ljava/lang/Object;)V
+.method public store(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -40,8 +40,8 @@
         }
     .end annotation
 
-    .line 17
-    invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/ArrayListAccumulator;->add(Ljava/lang/Object;)Z
+    .line 1
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

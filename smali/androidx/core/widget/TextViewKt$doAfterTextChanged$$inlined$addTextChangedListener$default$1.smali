@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->doAfterTextChanged(Landroid/widget/TextView;Lkotlin/d/a/b;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->doAfterTextChanged(Landroid/widget/TextView;Lj/m/b/l;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic $afterTextChanged:Lkotlin/d/a/b;
+.field public final synthetic $afterTextChanged:Lj/m/b/l;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/b;)V
+.method public constructor <init>(Lj/m/b/l;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/core/widget/TextViewKt$doAfterTextChanged$$inlined$addTextChangedListener$default$1;->$afterTextChanged:Lkotlin/d/a/b;
+    iput-object p1, p0, Landroidx/core/widget/TextViewKt$doAfterTextChanged$$inlined$addTextChangedListener$default$1;->$afterTextChanged:Lj/m/b/l;
 
-    .line 80
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,24 +35,24 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public afterTextChanged(Landroid/text/Editable;)V
     .locals 1
 
-    .line 82
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$doAfterTextChanged$$inlined$addTextChangedListener$default$1;->$afterTextChanged:Lkotlin/d/a/b;
+    .line 1
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$doAfterTextChanged$$inlined$addTextChangedListener$default$1;->$afterTextChanged:Lj/m/b/l;
 
-    invoke-interface {v0, p1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
     return-void
 .end method
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
     return-void

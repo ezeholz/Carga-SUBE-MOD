@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/CallbackWithHandler$2;
+.class public Landroidx/core/provider/CallbackWithHandler$2;
 .super Ljava/lang/Object;
 .source "CallbackWithHandler.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/provider/CallbackWithHandler;
+.field public final synthetic this$0:Landroidx/core/provider/CallbackWithHandler;
 
-.field final synthetic val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
+.field public final synthetic val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
-.field final synthetic val$reason:I
+.field public final synthetic val$reason:I
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/provider/CallbackWithHandler;Landroidx/core/provider/FontsContractCompat$FontRequestCallback;I)V
+.method public constructor <init>(Landroidx/core/provider/CallbackWithHandler;Landroidx/core/provider/FontsContractCompat$FontRequestCallback;I)V
     .locals 0
 
-    .line 68
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/CallbackWithHandler$2;->this$0:Landroidx/core/provider/CallbackWithHandler;
 
     iput-object p2, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 71
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
     iget v1, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$reason:I

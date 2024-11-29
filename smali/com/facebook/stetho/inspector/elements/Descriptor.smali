@@ -26,20 +26,20 @@
 
 
 # instance fields
-.field private mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
+.field public mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
 
 # direct methods
-.method protected constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method protected static parseSetAttributesAsTextArg(Ljava/lang/String;)Ljava/util/Map;
+.method public static parseSetAttributesAsTextArg(Ljava/lang/String;)Ljava/util/Map;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -53,17 +53,17 @@
         }
     .end annotation
 
-    .line 79
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 80
+    .line 2
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 82
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -81,7 +81,7 @@
     :goto_0
     if-ge v6, v2, :cond_4
 
-    .line 83
+    .line 4
     invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -90,12 +90,12 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 85
+    .line 5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 86
+    .line 6
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->setLength(I)V
 
     goto :goto_1
@@ -107,12 +107,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 89
+    .line 7
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 90
+    .line 8
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->setLength(I)V
 
     :cond_1
@@ -127,12 +127,12 @@
 
     if-nez v7, :cond_3
 
-    .line 94
-    invoke-interface {v1, v3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 9
+    invoke-virtual {v1, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 96
+    .line 10
     :cond_3
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -141,7 +141,7 @@
 
     goto :goto_0
 
-    .line 99
+    .line 11
     :cond_4
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
@@ -155,8 +155,8 @@
 
     if-nez p0, :cond_5
 
-    .line 100
-    invoke-interface {v1, v3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 12
+    invoke-virtual {v1, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_5
     return-object v1
@@ -167,12 +167,12 @@
 .method public final checkThreadAccess()Z
     .locals 1
 
-    .line 42
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/facebook/stetho/inspector/elements/Descriptor$Host;->checkThreadAccess()Z
+    invoke-interface {v0}, Lcom/facebook/stetho/common/ThreadBound;->checkThreadAccess()Z
 
     move-result v0
 
@@ -182,44 +182,45 @@
 .method public final getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
     .locals 1
 
-    .line 37
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Descriptor;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     return-object v0
 .end method
 
-.method final initialize(Lcom/facebook/stetho/inspector/elements/Descriptor$Host;)V
+.method public final initialize(Lcom/facebook/stetho/inspector/elements/Descriptor$Host;)V
     .locals 1
 
-    .line 27
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Descriptor;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNotNull(Ljava/lang/Object;)V
 
-    .line 29
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/Descriptor;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     return-void
 .end method
 
-.method final isInitialized()Z
+.method public final isInitialized()Z
     .locals 1
 
-    .line 33
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/Descriptor;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
@@ -235,12 +236,12 @@
         }
     .end annotation
 
-    .line 52
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor$Host;->postAndWait(Lcom/facebook/stetho/common/UncheckedCallable;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/common/ThreadBound;->postAndWait(Lcom/facebook/stetho/common/UncheckedCallable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -250,12 +251,12 @@
 .method public final postAndWait(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 57
+    .line 2
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor$Host;->postAndWait(Ljava/lang/Runnable;)V
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/common/ThreadBound;->postAndWait(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -263,12 +264,12 @@
 .method public final postDelayed(Ljava/lang/Runnable;J)V
     .locals 1
 
-    .line 62
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/Descriptor$Host;->postDelayed(Ljava/lang/Runnable;J)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/stetho/common/ThreadBound;->postDelayed(Ljava/lang/Runnable;J)V
 
     return-void
 .end method
@@ -276,12 +277,12 @@
 .method public final removeCallbacks(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 67
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor$Host;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/common/ThreadBound;->removeCallbacks(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -289,12 +290,12 @@
 .method public final verifyThreadAccess()V
     .locals 1
 
-    .line 47
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/facebook/stetho/inspector/elements/Descriptor$Host;->verifyThreadAccess()V
+    invoke-interface {v0}, Lcom/facebook/stetho/common/ThreadBound;->verifyThreadAccess()V
 
     return-void
 .end method

@@ -50,10 +50,6 @@
     <string name="com_facebook_smart_login_confirmation_continue_as">Continuar como %1$s</string>
     <string name="com_facebook_smart_login_confirmation_title">Confirmar login</string>
     <string name="com_facebook_tooltip_default">Você está no controle — escolha quais informações você quer compartilhar com os aplicativos.</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">em %s</string>
-    <string name="joda_time_android_preposition_for_time">às %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Pesquisar</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

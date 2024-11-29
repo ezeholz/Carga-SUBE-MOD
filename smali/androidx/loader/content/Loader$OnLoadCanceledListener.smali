@@ -25,6 +25,10 @@
 
 # virtual methods
 .method public abstract onLoadCanceled(Landroidx/loader/content/Loader;)V
+    .param p1    # Landroidx/loader/content/Loader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

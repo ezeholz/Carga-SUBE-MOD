@@ -7,22 +7,22 @@
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 37
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/model/ShareMessengerActionButton;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/share/model/ShareMessengerActionButton;->d:Ljava/lang/String;
 
     return-void
 .end method
@@ -40,8 +40,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 55
-    iget-object p2, p0, Lcom/facebook/share/model/ShareMessengerActionButton;->a:Ljava/lang/String;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/model/ShareMessengerActionButton;->d:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

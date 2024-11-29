@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;
+.class public Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;
 .super Ljava/lang/Object;
 .source "LifecycleRegistry.java"
 
@@ -9,32 +9,32 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ObserverWithState"
 .end annotation
 
 
 # instance fields
-.field mLifecycleObserver:Landroidx/lifecycle/LifecycleEventObserver;
+.field public mLifecycleObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
-.field mState:Landroidx/lifecycle/Lifecycle$State;
+.field public mState:Landroidx/lifecycle/Lifecycle$State;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/LifecycleObserver;Landroidx/lifecycle/Lifecycle$State;)V
+.method public constructor <init>(Landroidx/lifecycle/LifecycleObserver;Landroidx/lifecycle/Lifecycle$State;)V
     .locals 0
 
-    .line 353
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 354
+    .line 2
     invoke-static {p1}, Landroidx/lifecycle/Lifecycling;->lifecycleEventObserver(Ljava/lang/Object;)Landroidx/lifecycle/LifecycleEventObserver;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mLifecycleObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
-    .line 355
+    .line 3
     iput-object p2, p0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mState:Landroidx/lifecycle/Lifecycle$State;
 
     return-void
@@ -42,15 +42,15 @@
 
 
 # virtual methods
-.method dispatchEvent(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public dispatchEvent(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
 
-    .line 359
-    invoke-static {p2}, Landroidx/lifecycle/LifecycleRegistry;->getStateAfter(Landroidx/lifecycle/Lifecycle$Event;)Landroidx/lifecycle/Lifecycle$State;
+    .line 1
+    invoke-virtual {p2}, Landroidx/lifecycle/Lifecycle$Event;->getTargetState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
 
-    .line 360
+    .line 2
     iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mState:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-static {v1, v0}, Landroidx/lifecycle/LifecycleRegistry;->min(Landroidx/lifecycle/Lifecycle$State;Landroidx/lifecycle/Lifecycle$State;)Landroidx/lifecycle/Lifecycle$State;
@@ -59,12 +59,12 @@
 
     iput-object v1, p0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mState:Landroidx/lifecycle/Lifecycle$State;
 
-    .line 361
+    .line 3
     iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mLifecycleObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
     invoke-interface {v1, p1, p2}, Landroidx/lifecycle/LifecycleEventObserver;->onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
 
-    .line 362
+    .line 4
     iput-object v0, p0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mState:Landroidx/lifecycle/Lifecycle$State;
 
     return-void

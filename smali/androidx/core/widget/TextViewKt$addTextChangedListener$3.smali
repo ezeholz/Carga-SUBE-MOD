@@ -1,14 +1,14 @@
 .class public final Landroidx/core/widget/TextViewKt$addTextChangedListener$3;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "TextView.kt"
 
 # interfaces
-.implements Lkotlin/d/a/b;
+.implements Lj/m/b/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->addTextChangedListener$default(Landroid/widget/TextView;Lkotlin/d/a/r;Lkotlin/d/a/r;Lkotlin/d/a/b;ILjava/lang/Object;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->addTextChangedListener$default(Landroid/widget/TextView;Lj/m/b/r;Lj/m/b/r;Lj/m/b/l;ILjava/lang/Object;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,10 +18,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/b<",
+        "Lj/m/c/j;",
+        "Lj/m/b/l<",
         "Landroid/text/Editable;",
-        "Lkotlin/n;",
+        "Lj/i;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/core/widget/TextViewKt$addTextChangedListener$3;
@@ -49,22 +49,22 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, v0}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 78
+    .line 1
     check-cast p1, Landroid/text/Editable;
 
     invoke-virtual {p0, p1}, Landroidx/core/widget/TextViewKt$addTextChangedListener$3;->invoke(Landroid/text/Editable;)V
 
-    sget-object p1, Lkotlin/n;->a:Lkotlin/n;
+    sget-object p1, Lj/i;->a:Lj/i;
 
     return-object p1
 .end method

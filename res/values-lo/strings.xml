@@ -45,9 +45,6 @@
     <string name="common_open_on_phone">​ເປີດ​ໃນ​ໂທ​ລະ​ສັບ</string>
     <string name="common_signin_button_text">ລົງຊື່ເຂົ້າໃຊ້</string>
     <string name="common_signin_button_text_long">ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍ Google</string>
-    <string name="joda_time_android_preposition_for_date">ວັນທີ %s</string>
-    <string name="joda_time_android_preposition_for_time">ເວລາ %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">ຊອກຫາ</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

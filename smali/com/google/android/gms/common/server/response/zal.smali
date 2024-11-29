@@ -15,9 +15,11 @@
 
 
 # instance fields
-.field final a:Ljava/lang/String;
+.field public final d:I
 
-.field final b:Ljava/util/ArrayList;
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -27,24 +29,22 @@
     .end annotation
 .end field
 
-.field private final c:I
-
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 27
-    new-instance v0, Lcom/google/android/gms/common/server/response/l;
+    .line 1
+    new-instance v0, Lg/d/a/b/d/n/b/d;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/server/response/l;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/d/n/b/d;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/server/response/zal;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(ILjava/lang/String;Ljava/util/ArrayList;)V
+.method public constructor <init>(ILjava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -60,18 +60,18 @@
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     .line 2
-    iput p1, p0, Lcom/google/android/gms/common/server/response/zal;->c:I
+    iput p1, p0, Lcom/google/android/gms/common/server/response/zal;->d:I
 
     .line 3
-    iput-object p2, p0, Lcom/google/android/gms/common/server/response/zal;->a:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/common/server/response/zal;->e:Ljava/lang/String;
 
     .line 4
-    iput-object p3, p0, Lcom/google/android/gms/common/server/response/zal;->b:Ljava/util/ArrayList;
+    iput-object p3, p0, Lcom/google/android/gms/common/server/response/zal;->f:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/String;Ljava/util/Map;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/Map;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -84,16 +84,16 @@
         }
     .end annotation
 
-    .line 6
+    .line 5
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 7
-    iput v0, p0, Lcom/google/android/gms/common/server/response/zal;->c:I
+    .line 6
+    iput v0, p0, Lcom/google/android/gms/common/server/response/zal;->d:I
 
-    .line 8
-    iput-object p1, p0, Lcom/google/android/gms/common/server/response/zal;->a:Ljava/lang/String;
+    .line 7
+    iput-object p1, p0, Lcom/google/android/gms/common/server/response/zal;->e:Ljava/lang/String;
 
     if-nez p2, :cond_0
 
@@ -101,13 +101,13 @@
 
     goto :goto_1
 
-    .line 12
+    .line 8
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 13
+    .line 9
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -129,7 +129,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 14
+    .line 10
     new-instance v2, Lcom/google/android/gms/common/server/response/zam;
 
     invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -140,15 +140,15 @@
 
     invoke-direct {v2, v1, v3}, Lcom/google/android/gms/common/server/response/zam;-><init>(Ljava/lang/String;Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
 
-    .line 15
+    .line 11
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 18
+    .line 12
     :cond_1
     :goto_1
-    iput-object p1, p0, Lcom/google/android/gms/common/server/response/zal;->b:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/google/android/gms/common/server/response/zal;->f:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -156,38 +156,38 @@
 
 # virtual methods
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    .locals 3
 
-    const/16 p2, 0x4f45
-
-    .line 1017
-    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    .line 1
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result p2
 
-    .line 22
-    iget v0, p0, Lcom/google/android/gms/common/server/response/zal;->c:I
+    .line 2
+    iget v0, p0, Lcom/google/android/gms/common/server/response/zal;->d:I
 
     const/4 v1, 0x1
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v0}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    .line 23
-    iget-object v0, p0, Lcom/google/android/gms/common/server/response/zal;->a:Ljava/lang/String;
+    .line 3
+    iget-object v0, p0, Lcom/google/android/gms/common/server/response/zal;->e:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/4 v2, 0x2
 
-    .line 24
-    iget-object v0, p0, Lcom/google/android/gms/common/server/response/zal;->b:Ljava/util/ArrayList;
+    invoke-static {p1, v2, v0, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/4 v1, 0x3
+    .line 4
+    iget-object v0, p0, Lcom/google/android/gms/common/server/response/zal;->f:Ljava/util/ArrayList;
 
-    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;ILjava/util/List;)V
+    const/4 v2, 0x3
 
-    .line 1018
-    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    invoke-static {p1, v2, v0, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILjava/util/List;Z)V
+
+    .line 5
+    invoke-static {p1, p2}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     return-void
 .end method

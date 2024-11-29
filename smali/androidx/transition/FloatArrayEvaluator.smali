@@ -1,4 +1,4 @@
-.class Landroidx/transition/FloatArrayEvaluator;
+.class public Landroidx/transition/FloatArrayEvaluator;
 .super Ljava/lang/Object;
 .source "FloatArrayEvaluator.java"
 
@@ -17,17 +17,17 @@
 
 
 # instance fields
-.field private mArray:[F
+.field public mArray:[F
 
 
 # direct methods
-.method constructor <init>([F)V
+.method public constructor <init>([F)V
     .locals 0
 
-    .line 39
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 2
     iput-object p1, p0, Landroidx/transition/FloatArrayEvaluator;->mArray:[F
 
     return-void
@@ -38,7 +38,7 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 27
+    .line 1
     check-cast p2, [F
 
     check-cast p3, [F
@@ -53,12 +53,12 @@
 .method public evaluate(F[F[F)[F
     .locals 4
 
-    .line 57
+    .line 2
     iget-object v0, p0, Landroidx/transition/FloatArrayEvaluator;->mArray:[F
 
     if-nez v0, :cond_0
 
-    .line 59
+    .line 3
     array-length v0, p2
 
     new-array v0, v0, [F
@@ -66,25 +66,23 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 62
+    .line 4
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_1
 
-    .line 63
+    .line 5
     aget v2, p2, v1
 
-    .line 64
+    .line 6
     aget v3, p3, v1
 
-    sub-float/2addr v3, v2
+    invoke-static {v3, v2, p1, v2}, Lg/b/a/a/a;->a(FFFF)F
 
-    mul-float v3, v3, p1
+    move-result v2
 
-    add-float/2addr v2, v3
-
-    .line 65
+    .line 7
     aput v2, v0, v1
 
     add-int/lit8 v1, v1, 0x1

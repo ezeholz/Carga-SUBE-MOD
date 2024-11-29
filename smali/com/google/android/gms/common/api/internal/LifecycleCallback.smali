@@ -3,24 +3,26 @@
 
 
 # instance fields
-.field protected final a:Lcom/google/android/gms/common/api/internal/g;
+.field public final d:Lg/d/a/b/d/j/i/g;
 
 
 # direct methods
-.method protected constructor <init>(Lcom/google/android/gms/common/api/internal/g;)V
+.method public constructor <init>(Lg/d/a/b/d/j/i/g;)V
     .locals 0
 
-    .line 9
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
-    iput-object p1, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->a:Lcom/google/android/gms/common/api/internal/g;
+    .line 2
+    iput-object p1, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->d:Lg/d/a/b/d/j/i/g;
 
     return-void
 .end method
 
-.method private static getChimeraLifecycleFragmentImpl(Lcom/google/android/gms/common/api/internal/f;)Lcom/google/android/gms/common/api/internal/g;
+.method public static getChimeraLifecycleFragmentImpl(Lg/d/a/b/d/j/i/f;)Lg/d/a/b/d/j/i/g;
     .locals 1
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
 
     .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
@@ -34,51 +36,10 @@
 
 
 # virtual methods
-.method public final a()Landroid/app/Activity;
-    .locals 1
-
-    .line 12
-    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->a:Lcom/google/android/gms/common/api/internal/g;
-
-    invoke-interface {v0}, Lcom/google/android/gms/common/api/internal/g;->a()Landroid/app/Activity;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public a(IILandroid/content/Intent;)V
+.method public a()V
     .locals 0
-
-    return-void
-.end method
-
-.method public a(Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d()V
-    .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     return-void
 .end method

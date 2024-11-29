@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;
+.class public Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;
 .super Ljava/lang/Object;
 .source "AndroidDocumentProvider.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,16 +27,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
-.field final synthetic val$accumulator:Lcom/facebook/stetho/common/Accumulator;
+.field public final synthetic val$accumulator:Lcom/facebook/stetho/common/Accumulator;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/common/Accumulator;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
 
-    .line 253
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;->this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;->val$accumulator:Lcom/facebook/stetho/common/Accumulator;
@@ -51,21 +51,21 @@
 .method public store(Ljava/lang/Object;)V
     .locals 1
 
-    .line 256
+    .line 1
     instance-of v0, p1, Landroid/view/Window;
 
     if-eqz v0, :cond_0
 
-    .line 258
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;->val$accumulator:Lcom/facebook/stetho/common/Accumulator;
 
     check-cast p1, Landroid/view/Window;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/common/Accumulator;->store(Ljava/lang/Object;)V
 
-    return-void
+    goto :goto_0
 
-    .line 261
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;->this$0:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 
@@ -75,9 +75,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 263
-    invoke-virtual {v0, p1, p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+    .line 4
+    invoke-interface {v0, p1, p0}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
 
     :cond_1
+    :goto_0
     return-void
 .end method

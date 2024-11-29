@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$1;
+.class public Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$1;
 .super Ljava/lang/Object;
 .source "ViewDescriptor.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;)V
     .locals 0
 
-    .line 112
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$1;->this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public compare(Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;)I
     .locals 0
 
-    .line 115
+    .line 2
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;->getCSSName()Ljava/lang/String;
 
     move-result-object p1
@@ -66,7 +66,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 112
+    .line 1
     check-cast p1, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;
 
     check-cast p2, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;

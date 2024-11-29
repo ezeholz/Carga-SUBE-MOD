@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/SavedStateHandleController$1;
+.class public Landroidx/lifecycle/SavedStateHandleController$1;
 .super Ljava/lang/Object;
 .source "SavedStateHandleController.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$lifecycle:Landroidx/lifecycle/Lifecycle;
+.field public final synthetic val$lifecycle:Landroidx/lifecycle/Lifecycle;
 
-.field final synthetic val$registry:Landroidx/savedstate/SavedStateRegistry;
+.field public final synthetic val$registry:Landroidx/savedstate/SavedStateRegistry;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/savedstate/SavedStateRegistry;)V
+.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/savedstate/SavedStateRegistry;)V
     .locals 0
 
-    .line 111
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/SavedStateHandleController$1;->val$lifecycle:Landroidx/lifecycle/Lifecycle;
 
     iput-object p2, p0, Landroidx/lifecycle/SavedStateHandleController$1;->val$registry:Landroidx/savedstate/SavedStateRegistry;
@@ -39,20 +39,28 @@
 
 
 # virtual methods
-.method public final onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
+    .param p1    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$Event;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 115
+    .line 1
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 
-    .line 116
+    .line 2
     iget-object p1, p0, Landroidx/lifecycle/SavedStateHandleController$1;->val$lifecycle:Landroidx/lifecycle/Lifecycle;
 
     invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 117
+    .line 3
     iget-object p1, p0, Landroidx/lifecycle/SavedStateHandleController$1;->val$registry:Landroidx/savedstate/SavedStateRegistry;
 
     const-class p2, Landroidx/lifecycle/SavedStateHandleController$OnRecreation;

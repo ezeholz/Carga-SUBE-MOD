@@ -1,4 +1,4 @@
-.class Landroidx/core/content/res/ResourcesCompat$FontCallback$1;
+.class public Landroidx/core/content/res/ResourcesCompat$FontCallback$1;
 .super Ljava/lang/Object;
 .source "ResourcesCompat.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/content/res/ResourcesCompat$FontCallback;
+.field public final synthetic this$0:Landroidx/core/content/res/ResourcesCompat$FontCallback;
 
-.field final synthetic val$typeface:Landroid/graphics/Typeface;
+.field public final synthetic val$typeface:Landroid/graphics/Typeface;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/content/res/ResourcesCompat$FontCallback;Landroid/graphics/Typeface;)V
+.method public constructor <init>(Landroidx/core/content/res/ResourcesCompat$FontCallback;Landroid/graphics/Typeface;)V
     .locals 0
 
-    .line 436
+    .line 1
     iput-object p1, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$1;->this$0:Landroidx/core/content/res/ResourcesCompat$FontCallback;
 
     iput-object p2, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$1;->val$typeface:Landroid/graphics/Typeface;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 439
+    .line 1
     iget-object v0, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$1;->this$0:Landroidx/core/content/res/ResourcesCompat$FontCallback;
 
     iget-object v1, p0, Landroidx/core/content/res/ResourcesCompat$FontCallback$1;->val$typeface:Landroid/graphics/Typeface;

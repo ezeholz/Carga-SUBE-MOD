@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/DOM$3;
+.class public Lcom/facebook/stetho/inspector/protocol/module/DOM$3;
 .super Ljava/lang/Object;
 .source "DOM.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;)V
     .locals 0
 
-    .line 119
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$3;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 122
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$3;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/protocol/module/DOM;->access$300(Lcom/facebook/stetho/inspector/protocol/module/DOM;)Lcom/facebook/stetho/inspector/elements/Document;

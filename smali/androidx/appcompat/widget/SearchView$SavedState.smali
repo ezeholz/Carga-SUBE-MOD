@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/SearchView$SavedState;
+.class public Landroidx/appcompat/widget/SearchView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
 .source "SearchView.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field isIconified:Z
+.field public isIconified:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 1325
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/SearchView$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/SearchView$SavedState$1;-><init>()V
@@ -47,12 +47,12 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
-    .line 1308
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     const/4 p2, 0x0
 
-    .line 1309
+    .line 3
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object p1
@@ -68,10 +68,10 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcelable;)V
+.method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 1304
+    .line 1
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -82,14 +82,14 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1320
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "SearchView.SavedState{"
 
-    const-string v1, "SearchView.SavedState{"
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 1321
+    .line 2
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -122,10 +122,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1314
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1315
+    .line 2
     iget-boolean p2, p0, Landroidx/appcompat/widget/SearchView$SavedState;->isIconified:Z
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

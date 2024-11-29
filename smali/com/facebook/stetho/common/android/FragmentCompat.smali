@@ -27,20 +27,20 @@
 
 
 # static fields
-.field private static sFrameworkInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
+.field public static sFrameworkInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
-.field private static final sHasSupportFragment:Z
+.field public static final sHasSupportFragment:Z
 
-.field private static sSupportInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
+.field public static sSupportInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-string v0, "androidx.fragment.app.Fragment"
 
-    .line 48
+    .line 1
     invoke-static {v0}, Lcom/facebook/stetho/common/ReflectionUtil;->tryGetClassForName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -60,37 +60,31 @@
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 70
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static getFrameworkInstance()Lcom/facebook/stetho/common/android/FragmentCompat;
-    .locals 2
+    .locals 1
 
-    .line 54
+    .line 1
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompat;->sFrameworkInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
     if-nez v0, :cond_0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_0
-
-    .line 56
+    .line 2
     new-instance v0, Lcom/facebook/stetho/common/android/FragmentCompatFramework;
 
     invoke-direct {v0}, Lcom/facebook/stetho/common/android/FragmentCompatFramework;-><init>()V
 
     sput-object v0, Lcom/facebook/stetho/common/android/FragmentCompat;->sFrameworkInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
-    .line 58
+    .line 3
     :cond_0
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompat;->sFrameworkInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
@@ -100,7 +94,7 @@
 .method public static getSupportLibInstance()Lcom/facebook/stetho/common/android/FragmentCompat;
     .locals 1
 
-    .line 63
+    .line 1
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompat;->sSupportInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
     if-nez v0, :cond_0
@@ -109,14 +103,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 65
+    .line 2
     new-instance v0, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;
 
     invoke-direct {v0}, Lcom/facebook/stetho/common/android/FragmentCompatSupportLib;-><init>()V
 
     sput-object v0, Lcom/facebook/stetho/common/android/FragmentCompat;->sSupportInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 
-    .line 67
+    .line 3
     :cond_0
     sget-object v0, Lcom/facebook/stetho/common/android/FragmentCompat;->sSupportInstance:Lcom/facebook/stetho/common/android/FragmentCompat;
 

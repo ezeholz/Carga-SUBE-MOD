@@ -16,26 +16,34 @@
 
 
 # static fields
-.field private static final DEFAULT_KEY:Ljava/lang/String; = "androidx.lifecycle.ViewModelProvider.DefaultKey"
+.field public static final DEFAULT_KEY:Ljava/lang/String; = "androidx.lifecycle.ViewModelProvider.DefaultKey"
 
 
 # instance fields
-.field private final mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
+.field public final mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
-.field private final mViewModelStore:Landroidx/lifecycle/ViewModelStore;
+.field public final mViewModelStore:Landroidx/lifecycle/ViewModelStore;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;)V
     .locals 0
+    .param p1    # Landroidx/lifecycle/ViewModelStore;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/ViewModelProvider$Factory;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 125
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 126
+    .line 7
     iput-object p2, p0, Landroidx/lifecycle/ViewModelProvider;->mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
-    .line 127
+    .line 8
     iput-object p1, p0, Landroidx/lifecycle/ViewModelProvider;->mViewModelStore:Landroidx/lifecycle/ViewModelStore;
 
     return-void
@@ -43,8 +51,12 @@
 
 .method public constructor <init>(Landroidx/lifecycle/ViewModelStoreOwner;)V
     .locals 2
+    .param p1    # Landroidx/lifecycle/ViewModelStoreOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 99
+    .line 1
     invoke-interface {p1}, Landroidx/lifecycle/ViewModelStoreOwner;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
 
     move-result-object v0
@@ -53,22 +65,22 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast p1, Landroidx/lifecycle/HasDefaultViewModelProviderFactory;
 
-    .line 100
     invoke-interface {p1}, Landroidx/lifecycle/HasDefaultViewModelProviderFactory;->getDefaultViewModelProviderFactory()Landroidx/lifecycle/ViewModelProvider$Factory;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 101
+    .line 3
     :cond_0
     invoke-static {}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->getInstance()Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 
     move-result-object p1
 
-    .line 99
+    .line 4
     :goto_0
     invoke-direct {p0, v0, p1}, Landroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;)V
 
@@ -77,8 +89,16 @@
 
 .method public constructor <init>(Landroidx/lifecycle/ViewModelStoreOwner;Landroidx/lifecycle/ViewModelProvider$Factory;)V
     .locals 0
+    .param p1    # Landroidx/lifecycle/ViewModelStoreOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/ViewModelProvider$Factory;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 114
+    .line 5
     invoke-interface {p1}, Landroidx/lifecycle/ViewModelStoreOwner;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
 
     move-result-object p1
@@ -91,7 +111,17 @@
 
 # virtual methods
 .method public get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
-    .locals 2
+    .locals 3
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -102,21 +132,25 @@
         }
     .end annotation
 
-    .line 146
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 150
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    .line 2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "androidx.lifecycle.ViewModelProvider.DefaultKey:"
+    const-string v2, "androidx.lifecycle.ViewModelProvider.DefaultKey:"
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -126,7 +160,7 @@
 
     return-object p1
 
-    .line 148
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -139,6 +173,20 @@
 
 .method public get(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
     .locals 2
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -150,28 +198,28 @@
         }
     .end annotation
 
-    .line 171
+    .line 4
     iget-object v0, p0, Landroidx/lifecycle/ViewModelProvider;->mViewModelStore:Landroidx/lifecycle/ViewModelStore;
 
     invoke-virtual {v0, p1}, Landroidx/lifecycle/ViewModelStore;->get(Ljava/lang/String;)Landroidx/lifecycle/ViewModel;
 
     move-result-object v0
 
-    .line 173
+    .line 5
     invoke-virtual {p2, v0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 174
+    .line 6
     iget-object p1, p0, Landroidx/lifecycle/ViewModelProvider;->mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
     instance-of p2, p1, Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;
 
     if-eqz p2, :cond_0
 
-    .line 175
+    .line 7
     check-cast p1, Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;
 
     invoke-virtual {p1, v0}, Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;->onRequery(Landroidx/lifecycle/ViewModel;)V
@@ -179,7 +227,7 @@
     :cond_0
     return-object v0
 
-    .line 184
+    .line 8
     :cond_1
     iget-object v0, p0, Landroidx/lifecycle/ViewModelProvider;->mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
@@ -187,9 +235,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 185
-    check-cast v0, Landroidx/lifecycle/ViewModelProvider$KeyedFactory;
-
+    .line 9
     check-cast v0, Landroidx/lifecycle/ViewModelProvider$KeyedFactory;
 
     invoke-virtual {v0, p1, p2}, Landroidx/lifecycle/ViewModelProvider$KeyedFactory;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
@@ -198,13 +244,13 @@
 
     goto :goto_0
 
-    .line 187
+    .line 10
     :cond_2
     invoke-interface {v0, p2}, Landroidx/lifecycle/ViewModelProvider$Factory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p2
 
-    .line 189
+    .line 11
     :goto_0
     iget-object v0, p0, Landroidx/lifecycle/ViewModelProvider;->mViewModelStore:Landroidx/lifecycle/ViewModelStore;
 

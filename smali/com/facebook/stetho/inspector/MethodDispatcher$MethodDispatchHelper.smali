@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;
+.class public Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;
 .super Ljava/lang/Object;
 .source "MethodDispatcher.java"
 
@@ -9,33 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MethodDispatchHelper"
 .end annotation
 
 
 # instance fields
-.field private final mInstance:Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;
+.field public final mInstance:Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;
 
-.field private final mMethod:Ljava/lang/reflect/Method;
+.field public final mMethod:Ljava/lang/reflect/Method;
 
-.field private final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
+.field public final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/json/ObjectMapper;Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .line 88
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-    .line 90
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->mInstance:Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;
 
-    .line 91
+    .line 4
     iput-object p3, p0, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->mMethod:Ljava/lang/reflect/Method;
 
     return-void
@@ -46,7 +46,7 @@
 .method public invoke(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 4
 
-    .line 96
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->mMethod:Ljava/lang/reflect/Method;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->mInstance:Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsDomain;
@@ -69,18 +69,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 97
+    .line 2
     instance-of p2, p1, Lcom/facebook/stetho/inspector/jsonrpc/protocol/EmptyResult;
 
     if-eqz p2, :cond_0
 
     goto :goto_0
 
-    .line 100
+    .line 3
     :cond_0
     check-cast p1, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcResult;
 
-    .line 101
+    .line 4
     iget-object p2, p0, Lcom/facebook/stetho/inspector/MethodDispatcher$MethodDispatchHelper;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class v0, Lorg/json/JSONObject;
@@ -93,7 +93,7 @@
 
     return-object p1
 
-    .line 98
+    .line 5
     :cond_1
     :goto_0
     new-instance p1, Lorg/json/JSONObject;

@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ProcessLifecycleOwner$3;
+.class public Landroidx/lifecycle/ProcessLifecycleOwner$3;
 .super Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
 .source "ProcessLifecycleOwner.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
+.field public final synthetic this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
+.method public constructor <init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
     .locals 0
 
-    .line 158
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$3;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-direct {p0}, Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;-><init>()V
@@ -35,7 +35,7 @@
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 161
+    .line 1
     invoke-static {p1}, Landroidx/lifecycle/ReportFragment;->get(Landroid/app/Activity;)Landroidx/lifecycle/ReportFragment;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 .method public onActivityPaused(Landroid/app/Activity;)V
     .locals 0
 
-    .line 166
+    .line 1
     iget-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$3;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {p1}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityPaused()V
@@ -63,7 +63,7 @@
 .method public onActivityStopped(Landroid/app/Activity;)V
     .locals 0
 
-    .line 171
+    .line 1
     iget-object p1, p0, Landroidx/lifecycle/ProcessLifecycleOwner$3;->this$0:Landroidx/lifecycle/ProcessLifecycleOwner;
 
     invoke-virtual {p1}, Landroidx/lifecycle/ProcessLifecycleOwner;->activityStopped()V

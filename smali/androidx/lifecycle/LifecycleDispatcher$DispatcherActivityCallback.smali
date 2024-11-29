@@ -1,24 +1,27 @@
-.class Landroidx/lifecycle/LifecycleDispatcher$DispatcherActivityCallback;
+.class public Landroidx/lifecycle/LifecycleDispatcher$DispatcherActivityCallback;
 .super Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
 .source "LifecycleDispatcher.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/VisibleForTesting;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/lifecycle/LifecycleDispatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DispatcherActivityCallback"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 49
+    .line 1
     invoke-direct {p0}, Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;-><init>()V
 
     return-void
@@ -29,7 +32,7 @@
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 53
+    .line 1
     invoke-static {p1}, Landroidx/lifecycle/ReportFragment;->injectIfNeededIn(Landroid/app/Activity;)V
 
     return-void

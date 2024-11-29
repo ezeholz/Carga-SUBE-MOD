@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTransaction$Op;
+.class public final Landroidx/fragment/app/FragmentTransaction$Op;
 .super Ljava/lang/Object;
 .source "FragmentTransaction.java"
 
@@ -9,82 +9,84 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "Op"
 .end annotation
 
 
 # instance fields
-.field mCmd:I
+.field public mCmd:I
 
-.field mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
+.field public mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-.field mEnterAnim:I
+.field public mEnterAnim:I
 
-.field mExitAnim:I
+.field public mExitAnim:I
 
-.field mFragment:Landroidx/fragment/app/Fragment;
+.field public mFragment:Landroidx/fragment/app/Fragment;
 
-.field mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
+.field public mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-.field mPopEnterAnim:I
+.field public mPopEnterAnim:I
 
-.field mPopExitAnim:I
+.field public mPopExitAnim:I
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 73
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method constructor <init>(ILandroidx/fragment/app/Fragment;)V
+.method public constructor <init>(ILandroidx/fragment/app/Fragment;)V
     .locals 0
 
-    .line 76
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
+    .line 3
     iput p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mCmd:I
 
-    .line 78
+    .line 4
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
 
-    .line 79
+    .line 5
     sget-object p1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    .line 80
-    sget-object p1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
-
+    .line 6
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
 
     return-void
 .end method
 
-.method constructor <init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
+.method public constructor <init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
     .locals 0
+    .param p2    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 83
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
+    .line 8
     iput p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mCmd:I
 
-    .line 85
+    .line 9
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
 
-    .line 86
+    .line 10
     iget-object p1, p2, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    .line 87
+    .line 11
     iput-object p3, p0, Landroidx/fragment/app/FragmentTransaction$Op;->mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
 
     return-void

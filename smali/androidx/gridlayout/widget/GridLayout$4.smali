@@ -1,4 +1,4 @@
-.class final Landroidx/gridlayout/widget/GridLayout$4;
+.class public final Landroidx/gridlayout/widget/GridLayout$4;
 .super Landroidx/gridlayout/widget/GridLayout$Alignment;
 .source "GridLayout.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2736
+    .line 1
     invoke-direct {p0}, Landroidx/gridlayout/widget/GridLayout$Alignment;-><init>()V
 
     return-void
@@ -26,13 +26,13 @@
 
 
 # virtual methods
-.method public final getAlignmentValue(Landroid/view/View;II)I
+.method public getAlignmentValue(Landroid/view/View;II)I
     .locals 0
 
     return p2
 .end method
 
-.method final getDebugString()Ljava/lang/String;
+.method public getDebugString()Ljava/lang/String;
     .locals 1
 
     const-string v0, "TRAILING"
@@ -40,7 +40,7 @@
     return-object v0
 .end method
 
-.method final getGravityOffset(Landroid/view/View;I)I
+.method public getGravityOffset(Landroid/view/View;I)I
     .locals 0
 
     return p2

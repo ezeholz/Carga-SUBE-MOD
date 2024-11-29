@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$1;
+.class public Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$1;
 .super Ljava/lang/Object;
 .source "AndroidDocumentProvider.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
+.field public final synthetic this$1:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;)V
     .locals 0
 
-    .line 274
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$1;->this$1:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,17 +47,10 @@
 .method public apply(Landroid/view/View;)Z
     .locals 0
 
-    .line 277
+    .line 2
     instance-of p1, p1, Lcom/facebook/stetho/inspector/elements/android/DocumentHiddenView;
 
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
+    xor-int/lit8 p1, p1, 0x1
 
     return p1
 .end method
@@ -65,7 +58,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 274
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler$1;->apply(Landroid/view/View;)Z

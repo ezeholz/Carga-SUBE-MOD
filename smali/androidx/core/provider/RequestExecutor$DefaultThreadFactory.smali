@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;
+.class public Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;
 .super Ljava/lang/Object;
 .source "RequestExecutor.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DefaultThreadFactory"
 .end annotation
 
@@ -24,22 +24,26 @@
 
 
 # instance fields
-.field private mPriority:I
+.field public mPriority:I
 
-.field private mThreadName:Ljava/lang/String;
+.field public mThreadName:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 164
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 165
+    .line 2
     iput-object p1, p0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;->mThreadName:Ljava/lang/String;
 
-    .line 166
+    .line 3
     iput p2, p0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;->mPriority:I
 
     return-void
@@ -50,7 +54,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    .line 171
+    .line 1
     new-instance v0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory$ProcessPriorityThread;
 
     iget-object v1, p0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;->mThreadName:Ljava/lang/String;

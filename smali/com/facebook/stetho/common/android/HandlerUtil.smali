@@ -12,10 +12,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 18
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +24,7 @@
 .method public static checkThreadAccess(Landroid/os/Handler;)Z
     .locals 1
 
-    .line 28
+    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -37,11 +37,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -58,14 +59,14 @@
         }
     .end annotation
 
-    .line 52
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/common/android/HandlerUtil;->checkThreadAccess(Landroid/os/Handler;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 54
+    .line 2
     :try_start_0
     invoke-interface {p1}, Lcom/facebook/stetho/common/UncheckedCallable;->call()Ljava/lang/Object;
 
@@ -78,20 +79,20 @@
     :catch_0
     move-exception p0
 
-    .line 56
+    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw p1
 
-    .line 60
+    .line 4
     :cond_0
     new-instance v0, Lcom/facebook/stetho/common/android/HandlerUtil$1;
 
     invoke-direct {v0, p1}, Lcom/facebook/stetho/common/android/HandlerUtil$1;-><init>(Lcom/facebook/stetho/common/UncheckedCallable;)V
 
-    .line 67
+    .line 5
     invoke-virtual {v0, p0}, Lcom/facebook/stetho/common/android/HandlerUtil$WaitableRunnable;->invoke(Landroid/os/Handler;)Ljava/lang/Object;
 
     move-result-object p0
@@ -102,14 +103,14 @@
 .method public static postAndWait(Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 78
+    .line 6
     invoke-static {p0}, Lcom/facebook/stetho/common/android/HandlerUtil;->checkThreadAccess(Landroid/os/Handler;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 80
+    .line 7
     :try_start_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
     :try_end_0
@@ -120,20 +121,20 @@
     :catch_0
     move-exception p0
 
-    .line 83
+    .line 8
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw p1
 
-    .line 87
+    .line 9
     :cond_0
     new-instance v0, Lcom/facebook/stetho/common/android/HandlerUtil$2;
 
     invoke-direct {v0, p1}, Lcom/facebook/stetho/common/android/HandlerUtil$2;-><init>(Ljava/lang/Runnable;)V
 
-    .line 95
+    .line 10
     invoke-virtual {v0, p0}, Lcom/facebook/stetho/common/android/HandlerUtil$WaitableRunnable;->invoke(Landroid/os/Handler;)Ljava/lang/Object;
 
     return-void
@@ -142,7 +143,7 @@
 .method public static verifyThreadAccess(Landroid/os/Handler;)V
     .locals 0
 
-    .line 38
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/common/android/HandlerUtil;->checkThreadAccess(Landroid/os/Handler;)Z
 
     move-result p0

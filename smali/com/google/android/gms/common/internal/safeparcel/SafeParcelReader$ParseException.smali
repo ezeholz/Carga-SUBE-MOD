@@ -2,17 +2,6 @@
 .super Ljava/lang/RuntimeException;
 
 
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "ParseException"
-.end annotation
-
-
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Landroid/os/Parcel;)V
     .locals 3
@@ -26,15 +15,11 @@
 
     move-result p2
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/16 v1, 0x29
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-static {p1, v1}, Lg/b/a/a/a;->a(Ljava/lang/String;I)I
 
     move-result v1
-
-    add-int/lit8 v1, v1, 0x29
 
     new-instance v2, Ljava/lang/StringBuilder;
 

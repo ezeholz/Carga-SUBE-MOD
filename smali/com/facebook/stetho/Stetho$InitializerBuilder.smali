@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field mDumperPlugins:Lcom/facebook/stetho/DumperPluginsProvider;
+.field public mDumperPlugins:Lcom/facebook/stetho/DumperPluginsProvider;
 
-.field mInspectorModules:Lcom/facebook/stetho/InspectorModulesProvider;
+.field public mInspectorModules:Lcom/facebook/stetho/InspectorModulesProvider;
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 504
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 505
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -39,10 +39,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/content/Context;Lcom/facebook/stetho/Stetho$1;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lcom/facebook/stetho/Stetho$1;)V
     .locals 0
 
-    .line 498
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/Stetho$InitializerBuilder;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -53,7 +53,7 @@
 .method public build()Lcom/facebook/stetho/Stetho$Initializer;
     .locals 2
 
-    .line 532
+    .line 1
     new-instance v0, Lcom/facebook/stetho/Stetho$BuilderBasedInitializer;
 
     const/4 v1, 0x0
@@ -66,7 +66,7 @@
 .method public enableDumpapp(Lcom/facebook/stetho/DumperPluginsProvider;)Lcom/facebook/stetho/Stetho$InitializerBuilder;
     .locals 0
 
-    .line 522
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -81,7 +81,7 @@
 .method public enableWebKitInspector(Lcom/facebook/stetho/InspectorModulesProvider;)Lcom/facebook/stetho/Stetho$InitializerBuilder;
     .locals 0
 
-    .line 527
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/Stetho$InitializerBuilder;->mInspectorModules:Lcom/facebook/stetho/InspectorModulesProvider;
 
     return-object p0

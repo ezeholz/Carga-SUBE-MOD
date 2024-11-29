@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 30
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,16 +15,24 @@
 
 .method public static equals(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 51
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 52
-    invoke-static {p0, p1}, L$r8$backportedMethods$utility$Objects$2$equals;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 2
+    invoke-static {p0, p1}, Lb;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -35,7 +43,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 54
+    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -47,33 +55,38 @@
     :cond_1
     const/4 p0, 0x0
 
-    return p0
+    goto :goto_1
 
     :cond_2
     :goto_0
     const/4 p0, 0x1
 
+    :goto_1
     return p0
 .end method
 
 .method public static varargs hash([Ljava/lang/Object;)I
     .locals 2
+    .param p0    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 93
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 94
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
 
-    .line 96
+    .line 3
     :cond_0
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
@@ -84,24 +97,36 @@
 
 .method public static hashCode(Ljava/lang/Object;)I
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 
-    .line 66
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
 .method public static requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -117,12 +142,23 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 131
+    .line 1
     throw p0
 .end method
 
 .method public static requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -137,7 +173,7 @@
 
     return-object p0
 
-    .line 156
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -148,15 +184,23 @@
 
 .method public static toString(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-eqz p0, :cond_0
 
-    .line 111
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object p0
-
-    return-object p0
+    move-result-object p1
 
     :cond_0
     return-object p1

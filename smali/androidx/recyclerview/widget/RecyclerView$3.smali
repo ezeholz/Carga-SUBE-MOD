@@ -1,4 +1,4 @@
-.class final Landroidx/recyclerview/widget/RecyclerView$3;
+.class public final Landroidx/recyclerview/widget/RecyclerView$3;
 .super Ljava/lang/Object;
 .source "RecyclerView.java"
 
@@ -12,16 +12,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 600
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public final getInterpolation(F)F
+.method public getInterpolation(F)F
     .locals 2
 
     const/high16 v0, 0x3f800000    # 1.0f

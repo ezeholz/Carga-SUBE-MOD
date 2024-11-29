@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 19
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,10 +27,10 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 22
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
+    .line 3
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/protocol/module/SimpleBooleanResult;->result:Z
 
     return-void

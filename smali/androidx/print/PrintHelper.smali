@@ -15,20 +15,32 @@
 
 # static fields
 .field public static final COLOR_MODE_COLOR:I = 0x2
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "InlinedApi"
+        }
+    .end annotation
+.end field
 
 .field public static final COLOR_MODE_MONOCHROME:I = 0x1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "InlinedApi"
+        }
+    .end annotation
+.end field
 
-.field static final IS_MIN_MARGINS_HANDLING_CORRECT:Z
+.field public static final IS_MIN_MARGINS_HANDLING_CORRECT:Z
 
-.field private static final LOG_TAG:Ljava/lang/String; = "PrintHelper"
+.field public static final LOG_TAG:Ljava/lang/String; = "PrintHelper"
 
-.field private static final MAX_PRINT_SIZE:I = 0xdac
+.field public static final MAX_PRINT_SIZE:I = 0xdac
 
 .field public static final ORIENTATION_LANDSCAPE:I = 0x1
 
 .field public static final ORIENTATION_PORTRAIT:I = 0x2
 
-.field static final PRINT_ACTIVITY_RESPECTS_ORIENTATION:Z
+.field public static final PRINT_ACTIVITY_RESPECTS_ORIENTATION:Z
 
 .field public static final SCALE_MODE_FILL:I = 0x2
 
@@ -36,24 +48,24 @@
 
 
 # instance fields
-.field mColorMode:I
+.field public mColorMode:I
 
-.field final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
+.field public mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
 
-.field final mLock:Ljava/lang/Object;
+.field public final mLock:Ljava/lang/Object;
 
-.field mOrientation:I
+.field public mOrientation:I
 
-.field mScaleMode:I
+.field public mScaleMode:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
-    .line 70
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -65,8 +77,6 @@
     const/16 v4, 0x14
 
     if-lt v0, v4, :cond_1
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-le v0, v2, :cond_0
 
@@ -84,7 +94,7 @@
     :goto_1
     sput-boolean v0, Landroidx/print/PrintHelper;->PRINT_ACTIVITY_RESPECTS_ORIENTATION:Z
 
-    .line 78
+    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-eq v0, v2, :cond_2
@@ -99,16 +109,20 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 162
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 139
+    .line 2
     iput-object v0, p0, Landroidx/print/PrintHelper;->mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
 
-    .line 140
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -117,24 +131,24 @@
 
     const/4 v0, 0x2
 
-    .line 143
+    .line 4
     iput v0, p0, Landroidx/print/PrintHelper;->mScaleMode:I
 
-    .line 144
+    .line 5
     iput v0, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
     const/4 v0, 0x1
 
-    .line 145
+    .line 6
     iput v0, p0, Landroidx/print/PrintHelper;->mOrientation:I
 
-    .line 163
+    .line 7
     iput-object p1, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     return-void
 .end method
 
-.method static convertBitmapForColorMode(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
+.method public static convertBitmapForColorMode(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
     .locals 5
 
     const/4 v0, 0x1
@@ -143,7 +157,7 @@
 
     return-object p0
 
-    .line 820
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -159,54 +173,57 @@
 
     move-result-object p1
 
-    .line 822
+    .line 2
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 823
+    .line 3
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    .line 824
+    .line 4
     new-instance v2, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v2}, Landroid/graphics/ColorMatrix;-><init>()V
 
     const/4 v3, 0x0
 
-    .line 825
+    .line 5
     invoke-virtual {v2, v3}, Landroid/graphics/ColorMatrix;->setSaturation(F)V
 
-    .line 826
+    .line 6
     new-instance v4, Landroid/graphics/ColorMatrixColorFilter;
 
     invoke-direct {v4, v2}, Landroid/graphics/ColorMatrixColorFilter;-><init>(Landroid/graphics/ColorMatrix;)V
 
-    .line 827
+    .line 7
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 828
+    .line 8
     invoke-virtual {v0, p0, v3, v3, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     const/4 p0, 0x0
 
-    .line 829
+    .line 9
     invoke-virtual {v0, p0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     return-object p1
 .end method
 
-.method private static copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;
+.method public static copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;
     .locals 3
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x13
+    .end annotation
 
-    .line 558
+    .line 1
     new-instance v0, Landroid/print/PrintAttributes$Builder;
 
     invoke-direct {v0}, Landroid/print/PrintAttributes$Builder;-><init>()V
 
-    .line 559
+    .line 2
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getMediaSize()Landroid/print/PrintAttributes$MediaSize;
 
     move-result-object v1
@@ -215,7 +232,7 @@
 
     move-result-object v0
 
-    .line 560
+    .line 3
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getResolution()Landroid/print/PrintAttributes$Resolution;
 
     move-result-object v1
@@ -224,7 +241,7 @@
 
     move-result-object v0
 
-    .line 561
+    .line 4
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getMinMargins()Landroid/print/PrintAttributes$Margins;
 
     move-result-object v1
@@ -233,21 +250,21 @@
 
     move-result-object v0
 
-    .line 563
+    .line 5
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getColorMode()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 564
+    .line 6
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getColorMode()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/print/PrintAttributes$Builder;->setColorMode(I)Landroid/print/PrintAttributes$Builder;
 
-    .line 567
+    .line 7
     :cond_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -255,14 +272,14 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 568
+    .line 8
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getDuplexMode()I
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 569
+    .line 9
     invoke-virtual {p0}, Landroid/print/PrintAttributes;->getDuplexMode()I
 
     move-result p0
@@ -273,15 +290,15 @@
     return-object v0
 .end method
 
-.method static getMatrix(IILandroid/graphics/RectF;I)Landroid/graphics/Matrix;
+.method public static getMatrix(IILandroid/graphics/RectF;I)Landroid/graphics/Matrix;
     .locals 3
 
-    .line 589
+    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 592
+    .line 2
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v1
@@ -294,7 +311,7 @@
 
     if-ne p3, v2, :cond_0
 
-    .line 594
+    .line 3
     invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
 
     move-result p3
@@ -309,7 +326,7 @@
 
     goto :goto_0
 
-    .line 596
+    .line 4
     :cond_0
     invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
 
@@ -323,11 +340,11 @@
 
     move-result p3
 
-    .line 598
+    .line 5
     :goto_0
     invoke-virtual {v0, p3, p3}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 601
+    .line 6
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v1
@@ -340,7 +357,7 @@
 
     div-float/2addr v1, p0
 
-    .line 603
+    .line 7
     invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
 
     move-result p2
@@ -353,16 +370,16 @@
 
     div-float/2addr p2, p0
 
-    .line 605
+    .line 8
     invoke-virtual {v0, v1, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     return-object v0
 .end method
 
-.method static isPortrait(Landroid/graphics/Bitmap;)Z
+.method public static isPortrait(Landroid/graphics/Bitmap;)Z
     .locals 1
 
-    .line 546
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -375,11 +392,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -388,14 +406,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 796
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_2
 
     const/4 v1, 0x0
 
-    .line 801
+    .line 2
     :try_start_0
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -407,7 +425,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 802
+    .line 3
     :try_start_1
     invoke-static {p1, v1, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -417,7 +435,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 806
+    .line 4
     :try_start_2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -445,12 +463,12 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 809
+    .line 5
     :catch_1
     :cond_1
     throw p2
 
-    .line 797
+    .line 6
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -464,7 +482,7 @@
 .method public static systemSupportsPrint()Z
     .locals 2
 
-    .line 154
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -473,29 +491,30 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
 
 # virtual methods
-.method public final getColorMode()I
+.method public getColorMode()I
     .locals 1
 
-    .line 210
+    .line 1
     iget v0, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
     return v0
 .end method
 
-.method public final getOrientation()I
+.method public getOrientation()I
     .locals 2
 
-    .line 232
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -510,49 +529,49 @@
 
     return v0
 
-    .line 235
+    .line 2
     :cond_0
     iget v0, p0, Landroidx/print/PrintHelper;->mOrientation:I
 
     return v0
 .end method
 
-.method public final getScaleMode()I
+.method public getScaleMode()I
     .locals 1
 
-    .line 187
+    .line 1
     iget v0, p0, Landroidx/print/PrintHelper;->mScaleMode:I
 
     return v0
 .end method
 
-.method final loadConstrainedBitmap(Landroid/net/Uri;)Landroid/graphics/Bitmap;
+.method public loadConstrainedBitmap(Landroid/net/Uri;)Landroid/graphics/Bitmap;
     .locals 7
 
     if-eqz p1, :cond_4
 
-    .line 746
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_4
 
-    .line 750
+    .line 2
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 751
+    .line 3
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 752
+    .line 4
     invoke-direct {p0, p1, v0}, Landroidx/print/PrintHelper;->loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 754
+    .line 5
     iget v2, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 755
+    .line 6
     iget v0, v0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     const/4 v3, 0x0
@@ -563,7 +582,7 @@
 
     goto :goto_1
 
-    .line 763
+    .line 7
     :cond_0
     invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
 
@@ -585,7 +604,7 @@
     :cond_1
     if-lez v5, :cond_3
 
-    .line 772
+    .line 8
     invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -596,13 +615,13 @@
 
     goto :goto_1
 
-    .line 776
+    .line 9
     :cond_2
     iget-object v0, p0, Landroidx/print/PrintHelper;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 777
+    .line 10
     :try_start_0
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
@@ -610,40 +629,35 @@
 
     iput-object v2, p0, Landroidx/print/PrintHelper;->mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
 
-    .line 778
+    .line 11
     iput-boolean v1, v2, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
-    .line 779
-    iget-object v1, p0, Landroidx/print/PrintHelper;->mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
+    .line 12
+    iput v5, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    iput v5, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    .line 780
-    iget-object v1, p0, Landroidx/print/PrintHelper;->mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
-
-    .line 781
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 783
+    .line 14
     :try_start_1
-    invoke-direct {p0, p1, v1}, Landroidx/print/PrintHelper;->loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-direct {p0, p1, v2}, Landroidx/print/PrintHelper;->loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 785
+    .line 15
     iget-object v0, p0, Landroidx/print/PrintHelper;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 786
+    .line 16
     :try_start_2
     iput-object v3, p0, Landroidx/print/PrintHelper;->mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
 
-    .line 787
+    .line 17
     monitor-exit v0
 
     return-object p1
@@ -660,16 +674,16 @@
     :catchall_1
     move-exception p1
 
-    .line 785
+    .line 18
     iget-object v1, p0, Landroidx/print/PrintHelper;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 786
+    .line 19
     :try_start_3
     iput-object v3, p0, Landroidx/print/PrintHelper;->mDecodeOptions:Landroid/graphics/BitmapFactory$Options;
 
-    .line 787
+    .line 20
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
@@ -689,7 +703,7 @@
     :catchall_3
     move-exception p1
 
-    .line 781
+    .line 21
     :try_start_5
     monitor-exit v0
     :try_end_5
@@ -701,7 +715,7 @@
     :goto_1
     return-object v3
 
-    .line 747
+    .line 22
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -718,21 +732,41 @@
     goto :goto_2
 .end method
 
-.method public final printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+.method public printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    .line 246
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Landroidx/print/PrintHelper;->printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
 
     return-void
 .end method
 
-.method public final printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
+.method public printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
     .locals 9
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/print/PrintHelper$OnPrintFinishCallback;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 258
+    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -743,59 +777,59 @@
 
     goto :goto_1
 
-    .line 262
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     const-string v1, "print"
 
-    .line 263
+    .line 4
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/print/PrintManager;
 
-    .line 265
+    .line 5
     invoke-static {p2}, Landroidx/print/PrintHelper;->isPortrait(Landroid/graphics/Bitmap;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 266
+    .line 6
     sget-object v1, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_PORTRAIT:Landroid/print/PrintAttributes$MediaSize;
 
     goto :goto_0
 
-    .line 268
+    .line 7
     :cond_1
     sget-object v1, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_LANDSCAPE:Landroid/print/PrintAttributes$MediaSize;
 
-    .line 270
+    .line 8
     :goto_0
     new-instance v2, Landroid/print/PrintAttributes$Builder;
 
     invoke-direct {v2}, Landroid/print/PrintAttributes$Builder;-><init>()V
 
-    .line 271
+    .line 9
     invoke-virtual {v2, v1}, Landroid/print/PrintAttributes$Builder;->setMediaSize(Landroid/print/PrintAttributes$MediaSize;)Landroid/print/PrintAttributes$Builder;
 
     move-result-object v1
 
     iget v2, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
-    .line 272
+    .line 10
     invoke-virtual {v1, v2}, Landroid/print/PrintAttributes$Builder;->setColorMode(I)Landroid/print/PrintAttributes$Builder;
 
     move-result-object v1
 
-    .line 273
+    .line 11
     invoke-virtual {v1}, Landroid/print/PrintAttributes$Builder;->build()Landroid/print/PrintAttributes;
 
     move-result-object v1
 
-    .line 275
+    .line 12
     new-instance v8, Landroidx/print/PrintHelper$PrintBitmapAdapter;
 
     iget v5, p0, Landroidx/print/PrintHelper;->mScaleMode:I
@@ -819,21 +853,41 @@
     return-void
 .end method
 
-.method public final printBitmap(Ljava/lang/String;Landroid/net/Uri;)V
+.method public printBitmap(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    .line 340
+    .line 13
     invoke-virtual {p0, p1, p2, v0}, Landroidx/print/PrintHelper;->printBitmap(Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
 
     return-void
 .end method
 
-.method public final printBitmap(Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
+.method public printBitmap(Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
     .locals 8
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/print/PrintHelper$OnPrintFinishCallback;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 356
+    .line 14
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -842,7 +896,7 @@
 
     return-void
 
-    .line 360
+    .line 15
     :cond_0
     new-instance v0, Landroidx/print/PrintHelper$PrintUriAdapter;
 
@@ -860,29 +914,29 @@
 
     invoke-direct/range {v2 .. v7}, Landroidx/print/PrintHelper$PrintUriAdapter;-><init>(Landroidx/print/PrintHelper;Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;I)V
 
-    .line 363
+    .line 16
     iget-object p2, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     const-string p3, "print"
 
-    .line 364
+    .line 17
     invoke-virtual {p2, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/print/PrintManager;
 
-    .line 365
+    .line 18
     new-instance p3, Landroid/print/PrintAttributes$Builder;
 
     invoke-direct {p3}, Landroid/print/PrintAttributes$Builder;-><init>()V
 
-    .line 366
+    .line 19
     iget v1, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
     invoke-virtual {p3, v1}, Landroid/print/PrintAttributes$Builder;->setColorMode(I)Landroid/print/PrintAttributes$Builder;
 
-    .line 368
+    .line 20
     iget v1, p0, Landroidx/print/PrintHelper;->mOrientation:I
 
     const/4 v2, 0x1
@@ -898,64 +952,67 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 371
+    .line 21
     sget-object v1, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_PORTRAIT:Landroid/print/PrintAttributes$MediaSize;
 
     invoke-virtual {p3, v1}, Landroid/print/PrintAttributes$Builder;->setMediaSize(Landroid/print/PrintAttributes$MediaSize;)Landroid/print/PrintAttributes$Builder;
 
     goto :goto_1
 
-    .line 369
+    .line 22
     :cond_2
     :goto_0
     sget-object v1, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_LANDSCAPE:Landroid/print/PrintAttributes$MediaSize;
 
     invoke-virtual {p3, v1}, Landroid/print/PrintAttributes$Builder;->setMediaSize(Landroid/print/PrintAttributes$MediaSize;)Landroid/print/PrintAttributes$Builder;
 
-    .line 373
+    .line 23
     :cond_3
     :goto_1
     invoke-virtual {p3}, Landroid/print/PrintAttributes$Builder;->build()Landroid/print/PrintAttributes;
 
     move-result-object p3
 
-    .line 375
+    .line 24
     invoke-virtual {p2, p1, v0, p3}, Landroid/print/PrintManager;->print(Ljava/lang/String;Landroid/print/PrintDocumentAdapter;Landroid/print/PrintAttributes;)Landroid/print/PrintJob;
 
     return-void
 .end method
 
-.method public final setColorMode(I)V
+.method public setColorMode(I)V
     .locals 0
 
-    .line 199
+    .line 1
     iput p1, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
     return-void
 .end method
 
-.method public final setOrientation(I)V
+.method public setOrientation(I)V
     .locals 0
 
-    .line 221
+    .line 1
     iput p1, p0, Landroidx/print/PrintHelper;->mOrientation:I
 
     return-void
 .end method
 
-.method public final setScaleMode(I)V
+.method public setScaleMode(I)V
     .locals 0
 
-    .line 176
+    .line 1
     iput p1, p0, Landroidx/print/PrintHelper;->mScaleMode:I
 
     return-void
 .end method
 
-.method final writeBitmap(Landroid/print/PrintAttributes;ILandroid/graphics/Bitmap;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
+.method public writeBitmap(Landroid/print/PrintAttributes;ILandroid/graphics/Bitmap;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
     .locals 11
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x13
+    .end annotation
 
-    .line 626
+    .line 1
     sget-boolean v0, Landroidx/print/PrintHelper;->IS_MIN_MARGINS_HANDLING_CORRECT:Z
 
     const/4 v1, 0x0
@@ -966,7 +1023,7 @@
 
     goto :goto_0
 
-    .line 631
+    .line 2
     :cond_0
     invoke-static {p1}, Landroidx/print/PrintHelper;->copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;
 
@@ -976,7 +1033,7 @@
 
     invoke-direct {v2, v1, v1, v1, v1}, Landroid/print/PrintAttributes$Margins;-><init>(IIII)V
 
-    .line 632
+    .line 3
     invoke-virtual {v0, v2}, Landroid/print/PrintAttributes$Builder;->setMinMargins(Landroid/print/PrintAttributes$Margins;)Landroid/print/PrintAttributes$Builder;
 
     move-result-object v0
@@ -987,7 +1044,7 @@
 
     move-object v5, v0
 
-    .line 635
+    .line 4
     :goto_0
     new-instance v0, Landroidx/print/PrintHelper$1;
 
@@ -1011,8 +1068,8 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 734
-    invoke-virtual {v0, v1}, Landroidx/print/PrintHelper$1;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .line 5
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method

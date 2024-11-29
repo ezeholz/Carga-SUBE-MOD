@@ -20,6 +20,7 @@
     <attr name="actionMenuTextColor" format="reference|color" />
     <attr name="actionModeBackground" format="reference" />
     <attr name="actionModeCloseButtonStyle" format="reference" />
+    <attr name="actionModeCloseContentDescription" format="string" />
     <attr name="actionModeCloseDrawable" format="reference" />
     <attr name="actionModeCopyDrawable" format="reference" />
     <attr name="actionModeCutDrawable" format="reference" />
@@ -30,6 +31,7 @@
     <attr name="actionModeShareDrawable" format="reference" />
     <attr name="actionModeSplitBackground" format="reference" />
     <attr name="actionModeStyle" format="reference" />
+    <attr name="actionModeTheme" format="reference" />
     <attr name="actionModeWebSearchDrawable" format="reference" />
     <attr name="actionOverflowButtonStyle" format="reference" />
     <attr name="actionOverflowMenuStyle" format="reference" />
@@ -797,6 +799,31 @@
     <attr name="listPreferredItemPaddingStart" format="dimension" />
     <attr name="logo" format="reference" />
     <attr name="logoDescription" format="string" />
+    <attr name="lottieAnimationViewStyle" format="reference" />
+    <attr name="lottie_autoPlay" format="boolean" />
+    <attr name="lottie_cacheComposition" format="boolean" />
+    <attr name="lottie_clipToCompositionBounds" format="boolean" />
+    <attr name="lottie_colorFilter" format="color" />
+    <attr name="lottie_enableMergePathsForKitKatAndAbove" format="boolean" />
+    <attr name="lottie_fallbackRes" format="reference" />
+    <attr name="lottie_fileName" format="string" />
+    <attr name="lottie_ignoreDisabledSystemAnimations" format="boolean" />
+    <attr name="lottie_imageAssetsFolder" format="string" />
+    <attr name="lottie_loop" format="boolean" />
+    <attr name="lottie_progress" format="float" />
+    <attr name="lottie_rawRes" format="reference" />
+    <attr name="lottie_renderMode">
+        <enum name="automatic" value="0" />
+        <enum name="hardware" value="1" />
+        <enum name="software" value="2" />
+    </attr>
+    <attr name="lottie_repeatCount" format="integer" />
+    <attr name="lottie_repeatMode">
+        <enum name="restart" value="1" />
+        <enum name="reverse" value="2" />
+    </attr>
+    <attr name="lottie_speed" format="float" />
+    <attr name="lottie_url" format="string" />
     <attr name="materialAlertDialogBodyTextStyle" format="reference" />
     <attr name="materialAlertDialogTheme" format="reference" />
     <attr name="materialAlertDialogTitleIconStyle" format="reference" />

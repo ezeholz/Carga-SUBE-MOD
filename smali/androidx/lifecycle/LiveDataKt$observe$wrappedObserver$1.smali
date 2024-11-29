@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/LiveDataKt;->observe(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/LifecycleOwner;Lkotlin/d/a/b;)Landroidx/lifecycle/Observer;
+    value = Landroidx/lifecycle/LiveDataKt;->observe(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/LifecycleOwner;Lj/m/b/l;)Landroidx/lifecycle/Observer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,14 +29,14 @@
 
 
 # instance fields
-.field final synthetic $onChanged:Lkotlin/d/a/b;
+.field public final synthetic $onChanged:Lj/m/b/l;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/b;)V
+.method public constructor <init>(Lj/m/b/l;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lkotlin/d/a/b;
+    iput-object p1, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lj/m/b/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,10 +53,10 @@
         }
     .end annotation
 
-    .line 47
-    iget-object v0, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lkotlin/d/a/b;
+    .line 1
+    iget-object v0, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lj/m/b/l;
 
-    invoke-interface {v0, p1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

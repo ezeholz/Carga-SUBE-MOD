@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +16,7 @@
 .method public static awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 117
+    .line 1
     :catch_0
     :try_start_0
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
@@ -33,36 +33,37 @@
 
     if-eqz p1, :cond_0
 
-    .line 79
+    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
     :catch_0
     move-exception p0
 
     const-string p1, "Hiding IOException because another is pending"
 
-    .line 81
+    .line 2
     invoke-static {p0, p1}, Lcom/facebook/stetho/common/LogUtil;->e(Ljava/lang/Throwable;Ljava/lang/String;)V
 
-    return-void
+    goto :goto_0
 
-    .line 84
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
 .method public static copy(Ljava/io/InputStream;Ljava/io/OutputStream;[B)V
     .locals 2
 
-    .line 70
+    .line 1
     :goto_0
     invoke-virtual {p0, p2}, Ljava/io/InputStream;->read([B)I
 
@@ -74,7 +75,7 @@
 
     const/4 v1, 0x0
 
-    .line 71
+    .line 2
     invoke-virtual {p1, p2, v1, v0}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
@@ -95,7 +96,7 @@
         }
     .end annotation
 
-    .line 145
+    .line 5
     :catch_0
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
@@ -121,17 +122,17 @@
         }
     .end annotation
 
-    .line 129
+    .line 1
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
-    .line 130
+    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 133
+    .line 3
     :goto_0
     :try_start_0
     sget-object p3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -144,7 +145,7 @@
 
     return-object p0
 
-    .line 135
+    .line 4
     :catch_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -160,7 +161,7 @@
 .method public static joinUninterruptibly(Ljava/lang/Thread;)V
     .locals 0
 
-    .line 106
+    .line 1
     :catch_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Thread;->join()V
@@ -173,7 +174,7 @@
 .method public static readAsUTF8(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 2
 
-    .line 153
+    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -182,12 +183,12 @@
 
     new-array v1, v1, [B
 
-    .line 154
+    .line 2
     invoke-static {p0, v0, v1}, Lcom/facebook/stetho/common/Util;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;[B)V
 
     const-string p0, "UTF-8"
 
-    .line 155
+    .line 3
     invoke-virtual {v0, p0}, Ljava/io/ByteArrayOutputStream;->toString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -198,12 +199,12 @@
 .method public static sleepUninterruptibly(J)V
     .locals 5
 
-    .line 91
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 94
+    .line 2
     :cond_0
     :try_start_0
     invoke-static {p0, p1}, Ljava/lang/Thread;->sleep(J)V
@@ -212,7 +213,7 @@
 
     return-void
 
-    .line 97
+    .line 3
     :catch_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -238,7 +239,7 @@
 
     return-void
 
-    .line 50
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -254,7 +255,7 @@
 
     return-void
 
-    .line 56
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -270,13 +271,13 @@
 
     return-void
 
-    .line 62
+    .line 2
     :cond_0
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 63
+    .line 3
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
@@ -291,7 +292,7 @@
 
     return-void
 
-    .line 44
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -317,7 +318,7 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 26
+    .line 1
     throw p0
 .end method
 
@@ -333,10 +334,10 @@
         }
     .end annotation
 
-    .line 32
+    .line 2
     invoke-static {p0}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
+    .line 3
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -356,13 +357,13 @@
         }
     .end annotation
 
-    .line 37
+    .line 4
     invoke-static {p0}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
+    .line 5
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
+    .line 6
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void

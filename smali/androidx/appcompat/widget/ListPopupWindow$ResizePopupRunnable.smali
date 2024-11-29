@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;
+.class public Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;
 .super Ljava/lang/Object;
 .source "ListPopupWindow.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "ResizePopupRunnable"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ListPopupWindow;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
 
-    .line 1372
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,18 +36,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    .line 1377
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
     if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
     invoke-static {v0}, Landroidx/core/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
 
@@ -59,8 +55,8 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    .line 1378
-    invoke-virtual {v0}, Landroidx/appcompat/widget/DropDownListView;->getCount()I
+    .line 2
+    invoke-virtual {v0}, Landroid/widget/ListView;->getCount()I
 
     move-result v0
 
@@ -68,7 +64,7 @@
 
     iget-object v1, v1, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    invoke-virtual {v1}, Landroidx/appcompat/widget/DropDownListView;->getChildCount()I
+    invoke-virtual {v1}, Landroid/widget/ListView;->getChildCount()I
 
     move-result v1
 
@@ -78,27 +74,25 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    .line 1379
-    invoke-virtual {v0}, Landroidx/appcompat/widget/DropDownListView;->getChildCount()I
+    .line 3
+    invoke-virtual {v0}, Landroid/widget/ListView;->getChildCount()I
 
     move-result v0
 
     iget-object v1, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    iget v1, v1, Landroidx/appcompat/widget/ListPopupWindow;->mListItemExpandMaximum:I
+    iget v2, v1, Landroidx/appcompat/widget/ListPopupWindow;->mListItemExpandMaximum:I
 
-    if-gt v0, v1, :cond_0
+    if-gt v0, v2, :cond_0
 
-    .line 1380
-    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
+    .line 4
+    iget-object v0, v1, Landroidx/appcompat/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
-    .line 1381
+    .line 5
     iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->show()V

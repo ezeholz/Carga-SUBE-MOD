@@ -1,4 +1,4 @@
-.class Landroidx/transition/ChangeTransform$GhostListener;
+.class public Landroidx/transition/ChangeTransform$GhostListener;
 .super Landroidx/transition/TransitionListenerAdapter;
 .source "ChangeTransform.java"
 
@@ -9,28 +9,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "GhostListener"
 .end annotation
 
 
 # instance fields
-.field private mGhostView:Landroidx/transition/GhostViewImpl;
+.field public mGhostView:Landroidx/transition/GhostViewImpl;
 
-.field private mView:Landroid/view/View;
+.field public mView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Landroidx/transition/GhostViewImpl;)V
+.method public constructor <init>(Landroid/view/View;Landroidx/transition/GhostViewImpl;)V
     .locals 0
 
-    .line 518
+    .line 1
     invoke-direct {p0}, Landroidx/transition/TransitionListenerAdapter;-><init>()V
 
-    .line 519
+    .line 2
     iput-object p1, p0, Landroidx/transition/ChangeTransform$GhostListener;->mView:Landroid/view/View;
 
-    .line 520
+    .line 3
     iput-object p2, p0, Landroidx/transition/ChangeTransform$GhostListener;->mGhostView:Landroidx/transition/GhostViewImpl;
 
     return-void
@@ -40,16 +40,20 @@
 # virtual methods
 .method public onTransitionEnd(Landroidx/transition/Transition;)V
     .locals 2
+    .param p1    # Landroidx/transition/Transition;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 525
+    .line 1
     invoke-virtual {p1, p0}, Landroidx/transition/Transition;->removeListener(Landroidx/transition/Transition$TransitionListener;)Landroidx/transition/Transition;
 
-    .line 526
+    .line 2
     iget-object p1, p0, Landroidx/transition/ChangeTransform$GhostListener;->mView:Landroid/view/View;
 
     invoke-static {p1}, Landroidx/transition/GhostViewUtils;->removeGhost(Landroid/view/View;)V
 
-    .line 527
+    .line 3
     iget-object p1, p0, Landroidx/transition/ChangeTransform$GhostListener;->mView:Landroid/view/View;
 
     sget v0, Landroidx/transition/R$id;->transition_transform:I
@@ -58,7 +62,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 528
+    .line 4
     iget-object p1, p0, Landroidx/transition/ChangeTransform$GhostListener;->mView:Landroid/view/View;
 
     sget v0, Landroidx/transition/R$id;->parent_matrix:I
@@ -70,8 +74,12 @@
 
 .method public onTransitionPause(Landroidx/transition/Transition;)V
     .locals 1
+    .param p1    # Landroidx/transition/Transition;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 533
+    .line 1
     iget-object p1, p0, Landroidx/transition/ChangeTransform$GhostListener;->mGhostView:Landroidx/transition/GhostViewImpl;
 
     const/4 v0, 0x4
@@ -83,8 +91,12 @@
 
 .method public onTransitionResume(Landroidx/transition/Transition;)V
     .locals 1
+    .param p1    # Landroidx/transition/Transition;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 538
+    .line 1
     iget-object p1, p0, Landroidx/transition/ChangeTransform$GhostListener;->mGhostView:Landroidx/transition/GhostViewImpl;
 
     const/4 v0, 0x0

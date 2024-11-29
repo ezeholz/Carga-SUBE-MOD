@@ -4,18 +4,18 @@
 
 
 # static fields
-.field protected static final a:Z
+.field public static final d:Z
 
-.field protected static final b:[Ljava/lang/StackTraceElement;
+.field public static final e:[Ljava/lang/StackTraceElement;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     const-string v0, "surefire.test.class.path"
 
-    .line 30
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -32,20 +32,20 @@
     const/4 v0, 0x0
 
     :goto_0
-    sput-boolean v0, Lcom/google/zxing/ReaderException;->a:Z
+    sput-boolean v0, Lcom/google/zxing/ReaderException;->d:Z
 
     new-array v0, v1, [Ljava/lang/StackTraceElement;
 
-    .line 31
-    sput-object v0, Lcom/google/zxing/ReaderException;->b:[Ljava/lang/StackTraceElement;
+    .line 2
+    sput-object v0, Lcom/google/zxing/ReaderException;->e:[Ljava/lang/StackTraceElement;
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 33
+    .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     return-void
@@ -58,7 +58,7 @@
 
     monitor-enter p0
 
-    .line 44
+    .line 1
     monitor-exit p0
 
     const/4 v0, 0x0

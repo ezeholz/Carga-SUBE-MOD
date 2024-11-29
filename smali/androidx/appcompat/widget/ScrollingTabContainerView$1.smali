@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ScrollingTabContainerView$1;
+.class public Landroidx/appcompat/widget/ScrollingTabContainerView$1;
 .super Ljava/lang/Object;
 .source "ScrollingTabContainerView.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-.field final synthetic val$tabView:Landroid/view/View;
+.field public final synthetic val$tabView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ScrollingTabContainerView;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ScrollingTabContainerView;Landroid/view/View;)V
     .locals 0
 
-    .line 264
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$1;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
     iput-object p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$1;->val$tabView:Landroid/view/View;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 267
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$1;->val$tabView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
@@ -51,7 +51,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$1;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    invoke-virtual {v1}, Landroidx/appcompat/widget/ScrollingTabContainerView;->getWidth()I
+    invoke-virtual {v1}, Landroid/widget/HorizontalScrollView;->getWidth()I
 
     move-result v1
 
@@ -67,14 +67,14 @@
 
     sub-int/2addr v0, v1
 
-    .line 268
+    .line 2
     iget-object v1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$1;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Landroidx/appcompat/widget/ScrollingTabContainerView;->smoothScrollTo(II)V
+    invoke-virtual {v1, v0, v2}, Landroid/widget/HorizontalScrollView;->smoothScrollTo(II)V
 
-    .line 269
+    .line 3
     iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$1;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
     const/4 v1, 0x0

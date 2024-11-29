@@ -21,7 +21,7 @@
     <string name="abc_search_hint">തിരയുക…</string>
     <string name="abc_searchview_description_clear">ചോദ്യം മായ്‌ക്കുക</string>
     <string name="abc_searchview_description_query">ചോദ്യം തിരയുക</string>
-    <string name="abc_searchview_description_search">തിരയുക</string>
+    <string name="abc_searchview_description_search">Search</string>
     <string name="abc_searchview_description_submit">ചോദ്യം സമർപ്പിക്കുക</string>
     <string name="abc_searchview_description_voice">സംസാരത്തിലൂടെ തിരയുക</string>
     <string name="abc_shareactionprovider_share_with">ഇനിപ്പറയുന്നതുമായി പങ്കിടുക</string>
@@ -68,6 +68,6 @@
     <string name="common_open_on_phone">ഫോണിൽ തുറക്കുക</string>
     <string name="common_signin_button_text">സൈൻ ഇൻ ചെയ്യുക</string>
     <string name="common_signin_button_text_long">Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക</string>
-    <string name="search_menu_title">തിരയുക</string>
+    <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

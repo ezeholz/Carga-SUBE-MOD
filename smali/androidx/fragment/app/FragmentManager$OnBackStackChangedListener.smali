@@ -16,4 +16,6 @@
 
 # virtual methods
 .method public abstract onBackStackChanged()V
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 .end method

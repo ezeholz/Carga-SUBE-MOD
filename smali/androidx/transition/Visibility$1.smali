@@ -1,4 +1,4 @@
-.class Landroidx/transition/Visibility$1;
+.class public Landroidx/transition/Visibility$1;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "Visibility.java"
 
@@ -9,24 +9,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/transition/Visibility;
+.field public final synthetic this$0:Landroidx/transition/Visibility;
 
-.field final synthetic val$finalOverlayView:Landroid/view/View;
+.field public final synthetic val$finalOverlayView:Landroid/view/View;
 
-.field final synthetic val$overlay:Landroidx/transition/ViewGroupOverlayImpl;
+.field public final synthetic val$overlay:Landroidx/transition/ViewGroupOverlayImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/Visibility;Landroidx/transition/ViewGroupOverlayImpl;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/transition/Visibility;Landroidx/transition/ViewGroupOverlayImpl;Landroid/view/View;)V
     .locals 0
 
-    .line 413
+    .line 1
     iput-object p1, p0, Landroidx/transition/Visibility$1;->this$0:Landroidx/transition/Visibility;
 
     iput-object p2, p0, Landroidx/transition/Visibility$1;->val$overlay:Landroidx/transition/ViewGroupOverlayImpl;
@@ -43,7 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 416
+    .line 1
     iget-object p1, p0, Landroidx/transition/Visibility$1;->val$overlay:Landroidx/transition/ViewGroupOverlayImpl;
 
     iget-object v0, p0, Landroidx/transition/Visibility$1;->val$finalOverlayView:Landroid/view/View;

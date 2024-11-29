@@ -30,18 +30,18 @@
 
 
 # instance fields
-.field private mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
+.field public mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
 
-.field private final mInner:Ljava/lang/Object;
+.field public final mInner:Ljava/lang/Object;
 
-.field private mSessionToken2Bundle:Landroid/os/Bundle;
+.field public mSessionToken2Bundle:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 1726
+    .line 1
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;
 
     invoke-direct {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;-><init>()V
@@ -51,41 +51,41 @@
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 1556
+    .line 1
     invoke-direct {p0, p1, v0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)V
+.method public constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 1560
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
+.method public constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1563
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1564
+    .line 4
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
-    .line 1565
+    .line 5
     iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
 
-    .line 1566
+    .line 6
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSessionToken2Bundle:Landroid/os/Bundle;
 
     return-void
@@ -93,6 +93,11 @@
 
 .method public static fromBundle(Landroid/os/Bundle;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -103,26 +108,26 @@
     :cond_0
     const-string v1, "android.support.v4.media.session.EXTRA_BINDER"
 
-    .line 1720
+    .line 1
     invoke-static {p0, v1}, Landroidx/core/app/BundleCompat;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 1719
+    .line 2
     invoke-static {v1}, Landroid/support/v4/media/session/IMediaSession$Stub;->asInterface(Landroid/os/IBinder;)Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v1
 
     const-string v2, "android.support.v4.media.session.SESSION_TOKEN2_BUNDLE"
 
-    .line 1721
+    .line 3
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v2
 
     const-string v3, "android.support.v4.media.session.TOKEN"
 
-    .line 1722
+    .line 4
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
@@ -131,9 +136,9 @@
 
     if-nez p0, :cond_1
 
-    return-object v0
+    goto :goto_0
 
-    .line 1723
+    .line 5
     :cond_1
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -141,6 +146,7 @@
 
     invoke-direct {v0, p0, v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
 
+    :goto_0
     return-object v0
 .end method
 
@@ -149,7 +155,7 @@
 
     const/4 v0, 0x0
 
-    .line 1581
+    .line 1
     invoke-static {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->fromToken(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object p0
@@ -159,17 +165,22 @@
 
 .method public static fromToken(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     if-eqz p0, :cond_0
 
-    .line 1599
+    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 1600
+    .line 3
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     invoke-static {p0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->verifyToken(Ljava/lang/Object;)Ljava/lang/Object;
@@ -188,7 +199,7 @@
 
 
 # virtual methods
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -196,7 +207,7 @@
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 3
 
     const/4 v0, 0x1
@@ -205,7 +216,7 @@
 
     return v0
 
-    .line 1632
+    .line 1
     :cond_0
     instance-of v1, p1, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -215,26 +226,29 @@
 
     return v2
 
-    .line 1636
+    .line 2
     :cond_1
     check-cast p1, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    .line 1637
+    .line 3
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     if-nez v1, :cond_3
 
-    .line 1638
+    .line 4
     iget-object p1, p1, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     if-nez p1, :cond_2
 
-    return v0
+    goto :goto_0
 
     :cond_2
-    return v2
+    const/4 v0, 0x0
 
-    .line 1640
+    :goto_0
+    return v0
+
+    .line 5
     :cond_3
     iget-object p1, p1, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
@@ -242,7 +256,7 @@
 
     return v2
 
-    .line 1643
+    .line 6
     :cond_4
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -251,37 +265,47 @@
     return p1
 .end method
 
-.method public final getExtraBinder()Landroid/support/v4/media/session/IMediaSession;
+.method public getExtraBinder()Landroid/support/v4/media/session/IMediaSession;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 1664
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
 
     return-object v0
 .end method
 
-.method public final getSessionToken2Bundle()Landroid/os/Bundle;
+.method public getSessionToken2Bundle()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 1680
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSessionToken2Bundle:Landroid/os/Bundle;
 
     return-object v0
 .end method
 
-.method public final getToken()Ljava/lang/Object;
+.method public getToken()Ljava/lang/Object;
     .locals 1
 
-    .line 1656
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 1
 
-    .line 1621
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -290,7 +314,7 @@
 
     return v0
 
-    .line 1624
+    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -299,44 +323,59 @@
     return v0
 .end method
 
-.method public final setExtraBinder(Landroid/support/v4/media/session/IMediaSession;)V
+.method public setExtraBinder(Landroid/support/v4/media/session/IMediaSession;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 1672
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
 
     return-void
 .end method
 
-.method public final setSessionToken2Bundle(Landroid/os/Bundle;)V
+.method public setSessionToken2Bundle(Landroid/os/Bundle;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 1688
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSessionToken2Bundle:Landroid/os/Bundle;
 
     return-void
 .end method
 
-.method public final toBundle()Landroid/os/Bundle;
+.method public toBundle()Landroid/os/Bundle;
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 1696
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "android.support.v4.media.session.TOKEN"
 
-    .line 1697
+    .line 2
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1698
+    .line 3
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
 
     if-eqz v1, :cond_0
 
-    .line 1699
-    invoke-interface {v1}, Landroid/support/v4/media/session/IMediaSession;->asBinder()Landroid/os/IBinder;
+    .line 4
+    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v1
 
@@ -344,7 +383,7 @@
 
     invoke-static {v0, v2, v1}, Landroidx/core/app/BundleCompat;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 1701
+    .line 5
     :cond_0
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSessionToken2Bundle:Landroid/os/Bundle;
 
@@ -352,33 +391,33 @@
 
     const-string v2, "android.support.v4.media.session.SESSION_TOKEN2_BUNDLE"
 
-    .line 1702
+    .line 6
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_1
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 1612
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 1613
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    return-void
+    goto :goto_0
 
-    .line 1615
+    .line 3
     :cond_0
     iget-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
@@ -386,5 +425,6 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    :goto_0
     return-void
 .end method

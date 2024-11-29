@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 33
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,16 +16,9 @@
 .method public static query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/CancellationSignal;)Landroid/database/Cursor;
     .locals 7
 
-    .line 74
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_2
-
     if-eqz p6, :cond_0
 
-    .line 79
+    .line 1
     :try_start_0
     invoke-virtual {p6}, Landroidx/core/os/CancellationSignal;->getCancellationSignalObject()Ljava/lang/Object;
 
@@ -41,7 +34,7 @@
     :cond_0
     const/4 p6, 0x0
 
-    .line 80
+    .line 2
     :goto_0
     move-object v6, p6
 
@@ -59,7 +52,7 @@
 
     move-object v5, p5
 
-    .line 81
+    .line 3
     invoke-virtual/range {v0 .. v6}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object p0
@@ -68,34 +61,20 @@
 
     return-object p0
 
-    .line 84
+    .line 4
     :goto_1
     instance-of p1, p0, Landroid/os/OperationCanceledException;
 
     if-eqz p1, :cond_1
 
-    .line 87
+    .line 5
     new-instance p0, Landroidx/core/os/OperationCanceledException;
 
     invoke-direct {p0}, Landroidx/core/os/OperationCanceledException;-><init>()V
 
     throw p0
 
-    .line 90
+    .line 6
     :cond_1
     throw p0
-
-    :cond_2
-    if-eqz p6, :cond_3
-
-    .line 97
-    invoke-virtual {p6}, Landroidx/core/os/CancellationSignal;->throwIfCanceled()V
-
-    .line 99
-    :cond_3
-    invoke-virtual/range {p0 .. p5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-
-    return-object p0
 .end method

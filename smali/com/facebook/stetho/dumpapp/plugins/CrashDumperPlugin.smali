@@ -15,20 +15,20 @@
 
 
 # static fields
-.field private static final NAME:Ljava/lang/String; = "crash"
+.field public static final NAME:Ljava/lang/String; = "crash"
 
-.field private static final OPTION_EXIT_DEFAULT:Ljava/lang/String; = "0"
+.field public static final OPTION_EXIT_DEFAULT:Ljava/lang/String; = "0"
 
-.field private static final OPTION_KILL_DEFAULT:Ljava/lang/String; = "9"
+.field public static final OPTION_KILL_DEFAULT:Ljava/lang/String; = "9"
 
-.field private static final OPTION_THROW_DEFAULT:Ljava/lang/String; = "java.lang.Error"
+.field public static final OPTION_THROW_DEFAULT:Ljava/lang/String; = "java.lang.Error"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 41
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,12 +48,12 @@
 
     const-string v0, "9"
 
-    .line 95
+    .line 1
     invoke-static {p2, v0}, Lcom/facebook/stetho/dumpapp/ArgsHelper;->nextOptionalArg(Ljava/util/Iterator;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 97
+    .line 2
     :try_start_0
     new-instance v0, Ljava/lang/ProcessBuilder;
 
@@ -71,13 +71,17 @@
 
     aput-object v3, v2, v1
 
-    const-string v1, "-"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object p2
+    const-string v3, "-"
 
-    invoke-virtual {v1, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
@@ -87,7 +91,7 @@
 
     const/4 p2, 0x2
 
-    .line 98
+    .line 3
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
@@ -102,25 +106,25 @@
 
     move-result-object p2
 
-    .line 99
+    .line 4
     invoke-virtual {p2, v1}, Ljava/lang/ProcessBuilder;->redirectErrorStream(Z)Ljava/lang/ProcessBuilder;
 
     move-result-object p2
 
-    .line 100
+    .line 5
     invoke-virtual {p2}, Ljava/lang/ProcessBuilder;->start()Ljava/lang/Process;
 
     move-result-object p2
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 105
+    .line 6
     :try_start_1
     invoke-virtual {p2}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 106
+    .line 7
     invoke-virtual {p1}, Lcom/facebook/stetho/dumpapp/DumperContext;->getStdout()Ljava/io/PrintStream;
 
     move-result-object p1
@@ -133,7 +137,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 108
+    .line 8
     :try_start_2
     invoke-virtual {p2}, Ljava/lang/Process;->destroy()V
 
@@ -144,7 +148,7 @@
 
     invoke-virtual {p2}, Ljava/lang/Process;->destroy()V
 
-    .line 109
+    .line 9
     throw p1
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -152,16 +156,20 @@
     :catch_0
     move-exception p1
 
-    .line 111
+    .line 10
     new-instance p2, Lcom/facebook/stetho/dumpapp/DumpException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Failed to invoke kill: "
+    const-string v1, "Failed to invoke kill: "
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -183,12 +191,12 @@
 
     const-string v0, "0"
 
-    .line 90
+    .line 1
     invoke-static {p1, v0}, Lcom/facebook/stetho/dumpapp/ArgsHelper;->nextOptionalArg(Ljava/util/Iterator;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 91
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
@@ -211,12 +219,12 @@
 
     const-string v0, "java.lang.Error"
 
-    .line 116
+    .line 1
     invoke-static {p1, v0}, Lcom/facebook/stetho/dumpapp/ArgsHelper;->nextOptionalArg(Ljava/util/Iterator;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 119
+    .line 2
     :try_start_0
     invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -226,14 +234,14 @@
 
     new-array v1, v0, [Ljava/lang/Class;
 
-    .line 121
+    .line 3
     const-class v2, Ljava/lang/String;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    .line 122
+    .line 4
     invoke-static {p1, v1}, Lcom/facebook/stetho/dumpapp/plugins/CrashDumperPlugin;->tryGetDeclaredConstructor(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v1
@@ -246,7 +254,7 @@
 
     aput-object v0, p1, v3
 
-    .line 124
+    .line 5
     invoke-virtual {v1, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -258,21 +266,21 @@
     :cond_0
     new-array v0, v3, [Ljava/lang/Class;
 
-    .line 127
+    .line 6
     invoke-virtual {p1, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
 
     new-array v0, v3, [Ljava/lang/Object;
 
-    .line 128
+    .line 7
     invoke-virtual {p1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Throwable;
 
-    .line 131
+    .line 8
     :goto_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -282,10 +290,10 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 132
+    .line 9
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 134
+    .line 10
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->joinUninterruptibly(Ljava/lang/Thread;)V
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_5
@@ -300,7 +308,7 @@
     :catch_0
     move-exception p1
 
-    .line 145
+    .line 11
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -334,17 +342,21 @@
     :catch_5
     move-exception p1
 
-    .line 141
+    .line 12
     :goto_1
     new-instance v0, Lcom/facebook/stetho/dumpapp/DumpException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Invalid supplied Throwable class: "
+    const-string v2, "Invalid supplied Throwable class: "
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -354,9 +366,9 @@
 .end method
 
 .method private doUsage(Ljava/io/PrintStream;)V
-    .locals 3
+    .locals 2
 
-    .line 73
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,24 +377,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "<command> [command-options]"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    .line 74
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "throw"
+    const-string v1, "<command> [command-options]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -392,90 +387,69 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 75
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Usage: dumpapp crash throw"
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "       dumpapp crash "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "kill"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 2
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 76
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "       dumpapp crash kill"
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "exit"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 3
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 77
+    const-string v0, "       dumpapp crash exit"
+
+    .line 4
+    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 5
     invoke-virtual {p1}, Ljava/io/PrintStream;->println()V
 
     const-string v0, "dumpapp crash throw: Throw an uncaught exception (simulates a program crash)"
 
-    .line 78
+    .line 6
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     const-string v0, "    <Throwable>: Throwable class to use (default: java.lang.Error)"
 
-    .line 79
+    .line 7
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 80
+    .line 8
     invoke-virtual {p1}, Ljava/io/PrintStream;->println()V
 
     const-string v0, "dumpapp crash kill: Send a signal to this process (simulates the low memory killer)"
 
-    .line 81
+    .line 9
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     const-string v0, "    <SIGNAL>: Either signal name or number to send (default: 9)"
 
-    .line 82
+    .line 10
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     const-string v0, "              See `adb shell kill -l` for more information"
 
-    .line 83
+    .line 11
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 84
+    .line 12
     invoke-virtual {p1}, Ljava/io/PrintStream;->println()V
 
     const-string v0, "dumpapp crash exit: Invoke System.exit (simulates an abnormal Android exit strategy)"
 
-    .line 85
+    .line 13
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     const-string v0, "    <code>: Exit code (default: 0)"
 
-    .line 86
+    .line 14
     invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static varargs tryGetDeclaredConstructor(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+.method public static varargs tryGetDeclaredConstructor(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -491,7 +465,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
@@ -512,7 +486,7 @@
 .method public dump(Lcom/facebook/stetho/dumpapp/DumperContext;)V
     .locals 3
 
-    .line 51
+    .line 1
     invoke-virtual {p1}, Lcom/facebook/stetho/dumpapp/DumperContext;->getArgsAsList()Ljava/util/List;
 
     move-result-object v0
@@ -523,56 +497,56 @@
 
     const/4 v1, 0x0
 
-    .line 53
+    .line 2
     invoke-static {v0, v1}, Lcom/facebook/stetho/dumpapp/ArgsHelper;->nextOptionalArg(Ljava/util/Iterator;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "throw"
 
-    .line 54
+    .line 3
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 55
+    .line 4
     invoke-direct {p0, v0}, Lcom/facebook/stetho/dumpapp/plugins/CrashDumperPlugin;->doUncaughtException(Ljava/util/Iterator;)V
 
-    return-void
+    goto :goto_0
 
     :cond_0
     const-string v2, "kill"
 
-    .line 56
+    .line 5
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 57
+    .line 6
     invoke-direct {p0, p1, v0}, Lcom/facebook/stetho/dumpapp/plugins/CrashDumperPlugin;->doKill(Lcom/facebook/stetho/dumpapp/DumperContext;Ljava/util/Iterator;)V
 
-    return-void
+    goto :goto_0
 
     :cond_1
     const-string v2, "exit"
 
-    .line 58
+    .line 7
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 59
+    .line 8
     invoke-direct {p0, v0}, Lcom/facebook/stetho/dumpapp/plugins/CrashDumperPlugin;->doSystemExit(Ljava/util/Iterator;)V
 
-    return-void
+    goto :goto_0
 
-    .line 61
+    .line 9
     :cond_2
     invoke-virtual {p1}, Lcom/facebook/stetho/dumpapp/DumperContext;->getStdout()Ljava/io/PrintStream;
 
@@ -582,19 +556,16 @@
 
     if-nez v1, :cond_3
 
+    :goto_0
     return-void
 
-    .line 63
+    .line 10
     :cond_3
     new-instance p1, Lcom/facebook/stetho/dumpapp/DumpUsageException;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v0, "Unsupported command: "
 
-    move-result-object v0
-
-    const-string v1, "Unsupported command: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

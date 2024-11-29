@@ -12,15 +12,15 @@
 
 
 # instance fields
-.field private final mDisconnectObservable:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
+.field public final mDisconnectObservable:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
 
-.field private mNextRequestId:J
+.field public mNextRequestId:J
 
-.field private final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
+.field public final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-.field private final mPeer:Lcom/facebook/stetho/websocket/SimpleSession;
+.field public final mPeer:Lcom/facebook/stetho/websocket/SimpleSession;
 
-.field private final mPendingRequests:Ljava/util/Map;
+.field public final mPendingRequests:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -36,17 +36,17 @@
 .method public constructor <init>(Lcom/facebook/stetho/json/ObjectMapper;Lcom/facebook/stetho/websocket/SimpleSession;)V
     .locals 2
 
-    .line 42
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mPendingRequests:Ljava/util/Map;
 
-    .line 40
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
 
     const/4 v1, 0x0
@@ -55,10 +55,10 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mDisconnectObservable:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
 
-    .line 43
+    .line 4
     iput-object p1, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-    .line 44
+    .line 5
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -75,7 +75,7 @@
 
     monitor-enter p0
 
-    .line 81
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mNextRequestId:J
 
@@ -85,7 +85,7 @@
 
     iput-wide v2, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mNextRequestId:J
 
-    .line 82
+    .line 2
     iget-object v2, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mPendingRequests:Ljava/util/Map;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -100,7 +100,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 83
+    .line 3
     monitor-exit p0
 
     return-wide v0
@@ -120,7 +120,7 @@
 
     monitor-enter p0
 
-    .line 87
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mPendingRequests:Ljava/util/Map;
 
@@ -151,7 +151,7 @@
 .method public getWebSocket()Lcom/facebook/stetho/websocket/SimpleSession;
     .locals 1
 
-    .line 48
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mPeer:Lcom/facebook/stetho/websocket/SimpleSession;
 
     return-object v0
@@ -160,7 +160,7 @@
 .method public invokeDisconnectReceivers()V
     .locals 1
 
-    .line 77
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mDisconnectObservable:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;->onDisconnect()V
@@ -171,12 +171,12 @@
 .method public invokeMethod(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
     .locals 2
 
-    .line 54
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p3, :cond_0
 
-    .line 56
+    .line 2
     invoke-direct {p0, p3}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->preparePendingRequest(Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)J
 
     move-result-wide v0
@@ -190,7 +190,7 @@
     :cond_0
     const/4 p3, 0x0
 
-    .line 59
+    .line 3
     :goto_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
@@ -202,12 +202,12 @@
 
     check-cast p2, Lorg/json/JSONObject;
 
-    .line 61
+    .line 4
     new-instance v0, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcRequest;
 
     invoke-direct {v0, p3, p1, p2}, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcRequest;-><init>(Ljava/lang/Long;Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 63
+    .line 5
     iget-object p1, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class p2, Lorg/json/JSONObject;
@@ -218,12 +218,12 @@
 
     check-cast p1, Lorg/json/JSONObject;
 
-    .line 64
+    .line 6
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 65
+    .line 7
     iget-object p2, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mPeer:Lcom/facebook/stetho/websocket/SimpleSession;
 
     invoke-interface {p2, p1}, Lcom/facebook/stetho/websocket/SimpleSession;->sendText(Ljava/lang/String;)V
@@ -234,10 +234,10 @@
 .method public registerDisconnectReceiver(Lcom/facebook/stetho/inspector/jsonrpc/DisconnectReceiver;)V
     .locals 1
 
-    .line 69
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mDisconnectObservable:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;->registerObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -245,10 +245,10 @@
 .method public unregisterDisconnectReceiver(Lcom/facebook/stetho/inspector/jsonrpc/DisconnectReceiver;)V
     .locals 1
 
-    .line 73
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->mDisconnectObservable:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer$DisconnectObservable;->unregisterObserver(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V
 
     return-void
 .end method

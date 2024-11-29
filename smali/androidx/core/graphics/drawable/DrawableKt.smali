@@ -6,12 +6,20 @@
 # direct methods
 .method public static final toBitmap(Landroid/graphics/drawable/Drawable;IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 6
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 47
+    .line 1
     instance-of v0, p0, Landroid/graphics/drawable/BitmapDrawable;
 
     const-string v1, "bitmap"
@@ -20,7 +28,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 48
+    .line 2
     move-object v0, p0
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
@@ -35,7 +43,7 @@
 
     if-ne v0, p3, :cond_2
 
-    .line 51
+    .line 3
     :cond_0
     check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -51,16 +59,16 @@
 
     if-ne p2, p3, :cond_1
 
-    .line 52
+    .line 4
     invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    invoke-static {p0, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 
-    .line 54
+    .line 5
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -74,11 +82,11 @@
 
     const-string p1, "createScaledBitmap(bitmap, width, height, true)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 
-    .line 58
+    .line 6
     :cond_2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -86,23 +94,23 @@
 
     const-string v2, "bounds"
 
-    invoke-static {v0, v2}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 83
+    .line 7
     iget v2, v0, Landroid/graphics/Rect;->left:I
 
-    .line 84
+    .line 8
     iget v3, v0, Landroid/graphics/Rect;->top:I
 
-    .line 85
+    .line 9
     iget v4, v0, Landroid/graphics/Rect;->right:I
 
-    .line 86
+    .line 10
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
     if-nez p3, :cond_3
 
-    .line 60
+    .line 11
     sget-object p3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     :cond_3
@@ -112,21 +120,21 @@
 
     const/4 v5, 0x0
 
-    .line 61
+    .line 12
     invoke-virtual {p0, v5, v5, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 62
+    .line 13
     new-instance p1, Landroid/graphics/Canvas;
 
     invoke-direct {p1, p3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 64
+    .line 14
     invoke-virtual {p0, v2, v3, v4, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 65
-    invoke-static {p3, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 15
+    invoke-static {p3, v1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p3
 .end method
@@ -138,7 +146,7 @@
 
     if-eqz p5, :cond_0
 
-    .line 43
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result p1
@@ -148,7 +156,7 @@
 
     if-eqz p5, :cond_1
 
-    .line 44
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result p2
@@ -160,7 +168,7 @@
 
     const/4 p3, 0x0
 
-    .line 42
+    .line 3
     :cond_2
     invoke-static {p0, p1, p2, p3}, Landroidx/core/graphics/drawable/DrawableKt;->toBitmap(Landroid/graphics/drawable/Drawable;IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
@@ -171,12 +179,28 @@
 
 .method public static final updateBounds(Landroid/graphics/drawable/Drawable;IIII)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 80
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     return-void
@@ -189,7 +213,7 @@
 
     if-eqz p6, :cond_0
 
-    .line 75
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p1
@@ -201,7 +225,7 @@
 
     if-eqz p6, :cond_1
 
-    .line 76
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p2
@@ -213,7 +237,7 @@
 
     if-eqz p6, :cond_2
 
-    .line 77
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p3
@@ -225,14 +249,14 @@
 
     if-eqz p5, :cond_3
 
-    .line 78
+    .line 4
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p4
 
     iget p4, p4, Landroid/graphics/Rect;->bottom:I
 
-    .line 74
+    .line 5
     :cond_3
     invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/graphics/drawable/DrawableKt;->updateBounds(Landroid/graphics/drawable/Drawable;IIII)V
 

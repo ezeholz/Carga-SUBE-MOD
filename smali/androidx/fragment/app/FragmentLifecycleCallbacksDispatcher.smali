@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
+.class public Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 .super Ljava/lang/Object;
 .source "FragmentLifecycleCallbacksDispatcher.java"
 
@@ -12,9 +12,15 @@
 
 
 # instance fields
-.field private final mFragmentManager:Landroidx/fragment/app/FragmentManager;
+.field public final mFragmentManager:Landroidx/fragment/app/FragmentManager;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private final mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
@@ -26,20 +32,24 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/FragmentManager;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 1
+    .param p1    # Landroidx/fragment/app/FragmentManager;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 53
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 2
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 54
+    .line 3
     iput-object p1, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     return-void
@@ -47,10 +57,18 @@
 
 
 # virtual methods
-.method dispatchOnFragmentActivityCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
+.method public dispatchOnFragmentActivityCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 154
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -59,22 +77,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 157
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 158
+    .line 4
     invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentActivityCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
 
-    .line 160
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -98,12 +116,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 161
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 162
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -117,69 +135,84 @@
     return-void
 .end method
 
-.method dispatchOnFragmentAttached(Landroidx/fragment/app/Fragment;Landroid/content/Context;Z)V
-    .locals 3
+.method public dispatchOnFragmentAttached(Landroidx/fragment/app/Fragment;Z)V
+    .locals 4
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 107
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 109
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentHostCallback;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 110
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
+    .line 2
+    iget-object v1, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    .line 111
-    invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentAttached(Landroidx/fragment/app/Fragment;Landroid/content/Context;Z)V
-
-    .line 113
-    :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;
+    if-eqz v1, :cond_0
 
-    if-eqz p3, :cond_2
+    .line 3
+    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
-    .line 114
-    iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
+    move-result-object v1
 
-    if-eqz v2, :cond_1
+    .line 4
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
-    .line 115
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    .line 5
+    invoke-virtual {v1, p1, v2}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentAttached(Landroidx/fragment/app/Fragment;Z)V
+
+    .line 6
+    :cond_0
+    iget-object v1, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;
+
+    if-eqz p2, :cond_2
+
+    .line 7
+    iget-boolean v3, v2, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
+
+    if-eqz v3, :cond_1
+
+    .line 8
     :cond_2
-    iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
+    iget-object v2, v2, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
-    iget-object v2, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
+    iget-object v3, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v1, v2, p1, p2}, Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;->onFragmentAttached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
+    invoke-virtual {v2, v3, p1, v0}, Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;->onFragmentAttached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -187,10 +220,18 @@
     return-void
 .end method
 
-.method dispatchOnFragmentCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
+.method public dispatchOnFragmentCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 138
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -199,22 +240,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 141
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 142
+    .line 4
     invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
 
-    .line 144
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -238,12 +279,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 145
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 146
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -257,10 +298,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentDestroyed(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentDestroyed(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 271
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -269,22 +314,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 273
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 274
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 275
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentDestroyed(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 277
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -308,12 +353,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 278
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 279
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -327,10 +372,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentDetached(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentDetached(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 285
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -339,22 +388,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 287
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 288
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 289
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentDetached(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 291
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -378,12 +427,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 292
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 293
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -397,10 +446,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentPaused(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentPaused(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 213
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -409,22 +462,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 215
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 216
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 217
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentPaused(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 219
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -448,12 +501,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 220
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 221
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -467,69 +520,84 @@
     return-void
 .end method
 
-.method dispatchOnFragmentPreAttached(Landroidx/fragment/app/Fragment;Landroid/content/Context;Z)V
-    .locals 3
+.method public dispatchOnFragmentPreAttached(Landroidx/fragment/app/Fragment;Z)V
+    .locals 4
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 92
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 94
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentHostCallback;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 95
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
+    .line 2
+    iget-object v1, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    .line 96
-    invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentPreAttached(Landroidx/fragment/app/Fragment;Landroid/content/Context;Z)V
-
-    .line 98
-    :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;
+    if-eqz v1, :cond_0
 
-    if-eqz p3, :cond_2
+    .line 3
+    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
-    .line 99
-    iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
+    move-result-object v1
 
-    if-eqz v2, :cond_1
+    .line 4
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
-    .line 100
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    .line 5
+    invoke-virtual {v1, p1, v2}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentPreAttached(Landroidx/fragment/app/Fragment;Z)V
+
+    .line 6
+    :cond_0
+    iget-object v1, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;
+
+    if-eqz p2, :cond_2
+
+    .line 7
+    iget-boolean v3, v2, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
+
+    if-eqz v3, :cond_1
+
+    .line 8
     :cond_2
-    iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
+    iget-object v2, v2, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
-    iget-object v2, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
+    iget-object v3, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v1, v2, p1, p2}, Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;->onFragmentPreAttached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
+    invoke-virtual {v2, v3, p1, v0}, Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;->onFragmentPreAttached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -537,10 +605,18 @@
     return-void
 .end method
 
-.method dispatchOnFragmentPreCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
+.method public dispatchOnFragmentPreCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 122
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -549,22 +625,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 125
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 126
+    .line 4
     invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentPreCreated(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
 
-    .line 128
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -588,12 +664,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 129
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 130
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -607,10 +683,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentResumed(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentResumed(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 199
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -619,22 +699,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 201
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 202
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 203
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentResumed(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 205
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -658,12 +738,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 206
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 207
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -677,10 +757,18 @@
     return-void
 .end method
 
-.method dispatchOnFragmentSaveInstanceState(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
+.method public dispatchOnFragmentSaveInstanceState(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 242
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -689,22 +777,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 244
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 245
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 246
+    .line 4
     invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentSaveInstanceState(Landroidx/fragment/app/Fragment;Landroid/os/Bundle;Z)V
 
-    .line 248
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -728,12 +816,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 249
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 250
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -747,10 +835,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentStarted(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentStarted(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 185
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -759,22 +851,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 187
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 188
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 189
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentStarted(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 191
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -798,12 +890,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 192
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 193
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -817,10 +909,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentStopped(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentStopped(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 227
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -829,22 +925,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 229
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 230
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 231
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentStopped(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 233
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -868,12 +964,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 234
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 235
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -887,10 +983,22 @@
     return-void
 .end method
 
-.method dispatchOnFragmentViewCreated(Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;Z)V
+.method public dispatchOnFragmentViewCreated(Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 170
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -899,22 +1007,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 172
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 173
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 174
+    .line 4
     invoke-virtual {v0, p1, p2, p3, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentViewCreated(Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;Z)V
 
-    .line 176
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -938,12 +1046,12 @@
 
     if-eqz p4, :cond_2
 
-    .line 177
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 178
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -957,10 +1065,14 @@
     return-void
 .end method
 
-.method dispatchOnFragmentViewDestroyed(Landroidx/fragment/app/Fragment;Z)V
+.method public dispatchOnFragmentViewDestroyed(Landroidx/fragment/app/Fragment;Z)V
     .locals 3
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 257
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getParent()Landroidx/fragment/app/Fragment;
@@ -969,22 +1081,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 259
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 260
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getLifecycleCallbacksDispatcher()Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 261
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->dispatchOnFragmentViewDestroyed(Landroidx/fragment/app/Fragment;Z)V
 
-    .line 263
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -1008,12 +1120,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 264
+    .line 6
     iget-boolean v2, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mRecursive:Z
 
     if-eqz v2, :cond_1
 
-    .line 265
+    .line 7
     :cond_2
     iget-object v1, v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;->mCallback:Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 
@@ -1029,8 +1141,12 @@
 
 .method public registerFragmentLifecycleCallbacks(Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;Z)V
     .locals 2
+    .param p1    # Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 68
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v1, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder;
@@ -1044,15 +1160,19 @@
 
 .method public unregisterFragmentLifecycleCallbacks(Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;)V
     .locals 4
+    .param p1    # Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 80
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 81
+    .line 2
     :try_start_0
     iget-object v2, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -1063,7 +1183,7 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 82
+    .line 3
     iget-object v3, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -1076,7 +1196,7 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 83
+    .line 4
     iget-object p1, p0, Landroidx/fragment/app/FragmentLifecycleCallbacksDispatcher;->mLifecycleCallbacks:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(I)Ljava/lang/Object;
@@ -1088,7 +1208,7 @@
 
     goto :goto_0
 
-    .line 87
+    .line 5
     :cond_1
     :goto_1
     monitor-exit v0

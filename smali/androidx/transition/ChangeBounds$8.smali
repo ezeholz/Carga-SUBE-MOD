@@ -1,4 +1,4 @@
-.class Landroidx/transition/ChangeBounds$8;
+.class public Landroidx/transition/ChangeBounds$8;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "ChangeBounds.java"
 
@@ -9,34 +9,34 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private mIsCanceled:Z
+.field public mIsCanceled:Z
 
-.field final synthetic this$0:Landroidx/transition/ChangeBounds;
+.field public final synthetic this$0:Landroidx/transition/ChangeBounds;
 
-.field final synthetic val$endBottom:I
+.field public final synthetic val$endBottom:I
 
-.field final synthetic val$endLeft:I
+.field public final synthetic val$endLeft:I
 
-.field final synthetic val$endRight:I
+.field public final synthetic val$endRight:I
 
-.field final synthetic val$endTop:I
+.field public final synthetic val$endTop:I
 
-.field final synthetic val$finalClip:Landroid/graphics/Rect;
+.field public final synthetic val$finalClip:Landroid/graphics/Rect;
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/View;Landroid/graphics/Rect;IIII)V
+.method public constructor <init>(Landroidx/transition/ChangeBounds;Landroid/view/View;Landroid/graphics/Rect;IIII)V
     .locals 0
 
-    .line 367
+    .line 1
     iput-object p1, p0, Landroidx/transition/ChangeBounds$8;->this$0:Landroidx/transition/ChangeBounds;
 
     iput-object p2, p0, Landroidx/transition/ChangeBounds$8;->val$view:Landroid/view/View;
@@ -63,7 +63,7 @@
 
     const/4 p1, 0x1
 
-    .line 372
+    .line 1
     iput-boolean p1, p0, Landroidx/transition/ChangeBounds$8;->mIsCanceled:Z
 
     return-void
@@ -72,19 +72,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 377
+    .line 1
     iget-boolean p1, p0, Landroidx/transition/ChangeBounds$8;->mIsCanceled:Z
 
     if-nez p1, :cond_0
 
-    .line 378
+    .line 2
     iget-object p1, p0, Landroidx/transition/ChangeBounds$8;->val$view:Landroid/view/View;
 
     iget-object v0, p0, Landroidx/transition/ChangeBounds$8;->val$finalClip:Landroid/graphics/Rect;
 
     invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 379
+    .line 3
     iget-object p1, p0, Landroidx/transition/ChangeBounds$8;->val$view:Landroid/view/View;
 
     iget v0, p0, Landroidx/transition/ChangeBounds$8;->val$endLeft:I

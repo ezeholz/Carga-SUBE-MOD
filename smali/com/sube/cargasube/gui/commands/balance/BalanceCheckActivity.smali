@@ -1,5 +1,5 @@
 .class public Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;
-.super Lcom/sube/cargasube/gui/commands/common/view/a;
+.super Lg/f/a/c/b/b/a/a;
 .source "BalanceCheckActivity.java"
 
 
@@ -7,33 +7,25 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 18
-    invoke-direct {p0}, Lcom/sube/cargasube/gui/commands/common/view/a;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lg/f/a/c/b/b/a/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    const v0, 0x7f0d001e
-
-    return v0
-.end method
-
-.method public final a(Landroid/nfc/Tag;[BLandroid/content/Context;)Lcom/sube/subemobileclient/core/a/b/b/c;
+.method public a(Landroid/nfc/Tag;[BLandroid/content/Context;)Lg/f/b/d/e/b/d/c;
     .locals 8
 
-    .line 93
-    new-instance v7, Lcom/sube/subemobileclient/core/a;
+    .line 1
+    new-instance v7, Lg/f/b/d/a;
 
-    iget-object v4, p0, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->a:Ljava/lang/String;
+    iget-object v4, p0, Lg/f/a/c/b/b/a/a;->i:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->b:Ljava/lang/String;
+    iget-object v0, p0, Lg/f/a/c/b/b/a/a;->j:Ljava/lang/String;
 
-    .line 96
+    .line 2
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -42,7 +34,10 @@
 
     move-result-object v5
 
-    const-string v6, "1.5.10b-39"
+    .line 3
+    invoke-static {}, Lg/d/a/b/d/m/q/a;->b()Ljava/lang/String;
+
+    move-result-object v6
 
     move-object v0, v7
 
@@ -52,207 +47,223 @@
 
     move-object v3, p2
 
-    .line 97
-    invoke-direct/range {v0 .. v6}, Lcom/sube/subemobileclient/core/a;-><init>(Landroid/content/Context;Landroid/nfc/Tag;[BLjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lg/f/b/d/a;-><init>(Landroid/content/Context;Landroid/nfc/Tag;[BLjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)V
 
-    .line 7135
-    new-instance p1, Lcom/sube/subemobileclient/core/operations/a/a;
+    .line 4
+    new-instance p1, Lg/f/b/d/f/a/a;
 
-    invoke-direct {p1}, Lcom/sube/subemobileclient/core/operations/a/a;-><init>()V
+    invoke-direct {p1}, Lg/f/b/d/f/a/a;-><init>()V
 
-    .line 7136
-    invoke-virtual {v7, p1}, Lcom/sube/subemobileclient/core/a;->a(Lcom/sube/subemobileclient/core/operations/common/a;)Lcom/sube/subemobileclient/core/a/b/b/c;
+    .line 5
+    invoke-virtual {v7, p1}, Lg/f/b/d/a;->a(Lg/f/b/d/f/b/a;)Lg/f/b/d/e/b/d/c;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Lcom/sube/subemobileclient/core/a/b/b/c;)V
-    .locals 4
+.method public a(Lg/f/b/d/e/b/d/c;)V
+    .locals 5
 
     if-eqz p1, :cond_1
 
-    .line 1110
-    iget-object v0, p1, Lcom/sube/subemobileclient/core/a/b/b/c;->h:Lcom/sube/subemobileclient/core/a/b/b/a/a/a;
+    .line 6
+    iget-object v0, p1, Lg/f/b/d/e/b/d/c;->f:Lg/f/b/d/e/b/d/d/f/a;
 
     if-eqz v0, :cond_1
 
-    .line 2110
-    iget-object v0, p1, Lcom/sube/subemobileclient/core/a/b/b/c;->h:Lcom/sube/subemobileclient/core/a/b/b/a/a/a;
+    .line 7
+    iget-object v0, v0, Lg/f/b/d/e/b/d/b;->a:Ljava/lang/Boolean;
 
-    .line 3026
-    iget-object v0, v0, Lcom/sube/subemobileclient/core/a/b/b/b;->a:Ljava/lang/Boolean;
-
-    .line 61
+    .line 8
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    const-string v1, "try_balance_check"
+    const v1, 0x7f0a00ac
 
-    const-string v2, "success"
+    const-string v2, "try_balance_check"
+
+    const-string v3, "success"
 
     if-eqz v0, :cond_0
 
-    .line 62
+    .line 9
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    .line 63
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    .line 10
+    invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 64
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->getApplicationContext()Landroid/content/Context;
+    .line 11
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2, v1, v0}, Lcom/sube/cargasube/a/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {v3, v2, v0}, Lg/d/a/b/d/m/q/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 66
-    new-instance v0, Lcom/sube/cargasube/gui/commands/balance/a;
+    .line 12
+    new-instance v0, Lg/f/a/c/b/a/a;
 
-    invoke-direct {v0}, Lcom/sube/cargasube/gui/commands/balance/a;-><init>()V
+    invoke-direct {v0}, Lg/f/a/c/b/a/a;-><init>()V
 
-    .line 67
-    new-instance v1, Landroid/os/Bundle;
+    .line 13
+    new-instance v2, Landroid/os/Bundle;
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 3110
-    iget-object v2, p1, Lcom/sube/subemobileclient/core/a/b/b/c;->h:Lcom/sube/subemobileclient/core/a/b/b/a/a/a;
+    .line 14
+    iget-object v3, p1, Lg/f/b/d/e/b/d/c;->f:Lg/f/b/d/e/b/d/d/f/a;
 
-    .line 4031
-    iget-object v2, v2, Lcom/sube/subemobileclient/core/a/b/b/a/a/a;->c:Ljava/lang/String;
+    .line 15
+    iget-object v3, v3, Lg/f/b/d/e/b/d/d/f/a;->c:Ljava/lang/String;
 
-    const-string v3, "PRINTED_NUMBER_KEY"
+    const-string v4, "PRINTED_NUMBER_KEY"
 
-    .line 68
-    invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    .line 16
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4110
-    iget-object p1, p1, Lcom/sube/subemobileclient/core/a/b/b/c;->h:Lcom/sube/subemobileclient/core/a/b/b/a/a/a;
+    .line 17
+    iget-object p1, p1, Lg/f/b/d/e/b/d/c;->f:Lg/f/b/d/e/b/d/d/f/a;
 
-    .line 5039
-    iget p1, p1, Lcom/sube/subemobileclient/core/a/b/b/a/a/a;->d:I
+    .line 18
+    iget p1, p1, Lg/f/b/d/e/b/d/d/f/a;->d:I
 
-    const-string v2, "BALANCE_KEY"
+    const-string v3, "BALANCE_KEY"
 
-    .line 69
-    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    .line 19
+    invoke-virtual {v2, v3, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 71
-    invoke-virtual {v0, v1}, Lcom/sube/cargasube/gui/commands/balance/a;->setArguments(Landroid/os/Bundle;)V
+    .line 20
+    invoke-virtual {v0, v2}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 73
-    iget-object p1, p0, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->d:Lcom/sube/cargasube/gui/commands/common/view/a/d;
+    .line 21
+    iget-object p1, p0, Lg/f/a/c/b/b/a/a;->l:Lg/f/a/c/b/b/a/f/d;
 
-    invoke-virtual {p1, v0}, Lcom/sube/cargasube/gui/commands/common/view/a/d;->b(Landroidx/fragment/app/Fragment;)V
+    .line 22
+    iget-object p1, p1, Lg/f/a/c/b/b/a/f/d;->a:Landroidx/fragment/app/FragmentManager;
 
-    return-void
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
-    .line 75
+    move-result-object p1
+
+    .line 23
+    invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+
+    .line 24
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
+
+    goto :goto_0
+
+    .line 25
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    .line 76
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    .line 26
+    invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 77
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->getApplicationContext()Landroid/content/Context;
+    .line 27
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2, v1, v0}, Lcom/sube/cargasube/a/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {v3, v2, v0}, Lg/d/a/b/d/m/q/a;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 79
-    new-instance v0, Lcom/sube/cargasube/gui/commands/common/view/a/a;
+    .line 28
+    new-instance v0, Lg/f/a/c/b/b/a/f/a;
 
-    invoke-direct {v0}, Lcom/sube/cargasube/gui/commands/common/view/a/a;-><init>()V
+    invoke-direct {v0}, Lg/f/a/c/b/b/a/f/a;-><init>()V
 
-    .line 80
-    new-instance v1, Landroid/os/Bundle;
+    .line 29
+    new-instance v2, Landroid/os/Bundle;
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 5110
-    iget-object p1, p1, Lcom/sube/subemobileclient/core/a/b/b/c;->h:Lcom/sube/subemobileclient/core/a/b/b/a/a/a;
+    .line 30
+    iget-object p1, p1, Lg/f/b/d/e/b/d/c;->f:Lg/f/b/d/e/b/d/d/f/a;
 
-    .line 6031
-    iget-object p1, p1, Lcom/sube/subemobileclient/core/a/b/b/b;->b:Ljava/lang/String;
+    .line 31
+    iget-object p1, p1, Lg/f/b/d/e/b/d/b;->b:Ljava/lang/String;
 
-    const-string v2, "ERROR_TEXT_KEY"
+    const-string v3, "ERROR_TEXT_KEY"
 
-    .line 81
-    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    .line 32
+    invoke-virtual {v2, v3, p1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 84
-    invoke-virtual {v0, v1}, Lcom/sube/cargasube/gui/commands/common/view/a/a;->setArguments(Landroid/os/Bundle;)V
+    .line 33
+    invoke-virtual {v0, v2}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 86
-    iget-object p1, p0, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->d:Lcom/sube/cargasube/gui/commands/common/view/a/d;
+    .line 34
+    iget-object p1, p0, Lg/f/a/c/b/b/a/a;->l:Lg/f/a/c/b/b/a/f/d;
 
-    invoke-virtual {p1, v0}, Lcom/sube/cargasube/gui/commands/common/view/a/d;->b(Landroidx/fragment/app/Fragment;)V
+    .line 35
+    iget-object p1, p1, Lg/f/a/c/b/b/a/f/d;->a:Landroidx/fragment/app/FragmentManager;
+
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
+
+    move-result-object p1
+
+    .line 36
+    invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+
+    .line 37
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
-.method public final b()Ljava/lang/CharSequence;
+.method public f()I
     .locals 1
 
-    const v0, 0x7f1200d7
-
-    .line 40
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()Ljava/lang/CharSequence;
-    .locals 1
-
-    const v0, 0x7f1200d0
-
-    .line 45
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/CharSequence;
-    .locals 1
-
-    const v0, 0x7f1200d3
-
-    .line 50
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final e()I
-    .locals 1
-
-    const v0, 0x7f0800a2
+    const v0, 0x7f0d001e
 
     return v0
 .end method
 
-.method public final f()Lcom/sube/subemobileclient/core/a/b/b/c;
+.method public g()Ljava/lang/CharSequence;
+    .locals 1
+
+    const v0, 0x7f1200d4
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public i()I
+    .locals 1
+
+    const v0, 0x7f0800a3
+
+    return v0
+.end method
+
+.method public j()Ljava/lang/CharSequence;
+    .locals 1
+
+    const v0, 0x7f1200cd
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public k()Lg/f/b/d/e/b/d/c;
     .locals 1
 
     const/4 v0, 0x0
@@ -260,40 +271,51 @@
     return-object v0
 .end method
 
+.method public l()Ljava/lang/CharSequence;
+    .locals 1
+
+    const v0, 0x7f1200d0
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 22
-    invoke-super {p0, p1}, Lcom/sube/cargasube/gui/commands/common/view/a;->onCreate(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Lg/f/a/c/b/b/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 24
+    .line 2
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     const v0, 0x7f12008c
 
-    .line 27
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->getString(I)Ljava/lang/String;
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "MESSAGE_KEY"
 
-    .line 25
+    .line 4
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 29
-    new-instance v0, Lcom/sube/cargasube/gui/commands/common/view/a/b;
+    .line 5
+    new-instance v0, Lg/f/a/c/b/b/a/f/b;
 
-    invoke-direct {v0}, Lcom/sube/cargasube/gui/commands/common/view/a/b;-><init>()V
+    invoke-direct {v0}, Lg/f/a/c/b/b/a/f/b;-><init>()V
 
-    iput-object v0, p0, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->e:Lcom/sube/cargasube/gui/commands/common/view/a/b;
+    iput-object v0, p0, Lg/f/a/c/b/b/a/a;->m:Lg/f/a/c/b/b/a/f/b;
 
-    .line 30
-    iget-object v0, p0, Lcom/sube/cargasube/gui/commands/balance/BalanceCheckActivity;->e:Lcom/sube/cargasube/gui/commands/common/view/a/b;
-
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/commands/common/view/a/b;->setArguments(Landroid/os/Bundle;)V
+    .line 6
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-void
 .end method

@@ -1,31 +1,35 @@
-.class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;
+.class public Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "VectorDrawableCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "VectorDrawableDelegateState"
 .end annotation
 
 
 # instance fields
-.field private final mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
+.field public final mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
 
 # direct methods
 .method public constructor <init>(Landroid/graphics/drawable/Drawable$ConstantState;)V
     .locals 0
 
-    .line 975
+    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 976
+    .line 2
     iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;->mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     return-void
@@ -36,7 +40,7 @@
 .method public canApplyTheme()Z
     .locals 1
 
-    .line 1003
+    .line 1
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;->mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->canApplyTheme()Z
@@ -49,7 +53,7 @@
 .method public getChangingConfigurations()I
     .locals 1
 
-    .line 1008
+    .line 1
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;->mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
@@ -62,12 +66,12 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 981
+    .line 1
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
     invoke-direct {v0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;-><init>()V
 
-    .line 982
+    .line 2
     iget-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;->mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
@@ -76,7 +80,7 @@
 
     check-cast v1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCommon;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -84,12 +88,12 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 988
+    .line 3
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
     invoke-direct {v0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;-><init>()V
 
-    .line 989
+    .line 4
     iget-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;->mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
@@ -98,7 +102,7 @@
 
     check-cast p1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCommon;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -106,22 +110,22 @@
 .method public newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 995
+    .line 5
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 
     invoke-direct {v0}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;-><init>()V
 
-    .line 996
+    .line 6
     iget-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableDelegateState;->mDelegateState:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 997
+    .line 7
     invoke-virtual {v1, p1, p2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     check-cast p1, Landroid/graphics/drawable/VectorDrawable;
 
-    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCommon;->mDelegateDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method

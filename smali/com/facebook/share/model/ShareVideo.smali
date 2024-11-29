@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/ShareVideo$a;
+        Lcom/facebook/share/model/ShareVideo$b;
     }
 .end annotation
 
@@ -24,30 +24,30 @@
 
 
 # instance fields
-.field final b:Landroid/net/Uri;
+.field public final e:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 64
-    new-instance v0, Lcom/facebook/share/model/ShareVideo$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareVideo$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareVideo$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareVideo$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareVideo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 42
+    .line 4
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareMedia;-><init>(Landroid/os/Parcel;)V
 
-    .line 43
+    .line 5
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -60,38 +60,29 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    iput-object p1, p0, Lcom/facebook/share/model/ShareVideo;->b:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/facebook/share/model/ShareVideo;->e:Landroid/net/Uri;
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/facebook/share/model/ShareVideo$a;)V
+.method public synthetic constructor <init>(Lcom/facebook/share/model/ShareVideo$b;Lcom/facebook/share/model/ShareVideo$a;)V
     .locals 0
 
-    .line 37
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareMedia;-><init>(Lcom/facebook/share/model/ShareMedia$a;)V
 
-    .line 1086
-    iget-object p1, p1, Lcom/facebook/share/model/ShareVideo$a;->b:Landroid/net/Uri;
+    .line 2
+    iget-object p1, p1, Lcom/facebook/share/model/ShareVideo$b;->b:Landroid/net/Uri;
 
-    .line 38
-    iput-object p1, p0, Lcom/facebook/share/model/ShareVideo;->b:Landroid/net/Uri;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/facebook/share/model/ShareVideo$a;B)V
-    .locals 0
-
-    .line 33
-    invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareVideo;-><init>(Lcom/facebook/share/model/ShareVideo$a;)V
+    .line 3
+    iput-object p1, p0, Lcom/facebook/share/model/ShareVideo;->e:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -99,14 +90,16 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 60
-    invoke-super {p0, p1, p2}, Lcom/facebook/share/model/ShareMedia;->writeToParcel(Landroid/os/Parcel;I)V
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/model/ShareMedia;->d:Landroid/os/Bundle;
 
-    .line 61
-    iget-object p2, p0, Lcom/facebook/share/model/ShareVideo;->b:Landroid/net/Uri;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    .line 2
+    iget-object p2, p0, Lcom/facebook/share/model/ShareVideo;->e:Landroid/net/Uri;
 
     const/4 v0, 0x0
 

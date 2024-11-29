@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field private mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
+.field public mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/facebook/stetho/inspector/elements/Descriptor<",
@@ -35,7 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 37
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;-><init>()V
 
     return-void
@@ -53,12 +53,12 @@
         }
     .end annotation
 
-    .line 126
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
+    invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
 
-    .line 127
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
 
     return-void
@@ -75,12 +75,12 @@
         }
     .end annotation
 
-    .line 117
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+    invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
 
-    .line 118
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
 
     return-void
@@ -96,12 +96,12 @@
         }
     .end annotation
 
-    .line 171
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
+    invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
 
-    .line 172
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
 
     return-void
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 98
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetLocalName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 89
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetNodeName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    .line 80
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
 
     move-result-object p1
@@ -167,7 +167,7 @@
         }
     .end annotation
 
-    .line 107
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetNodeValue(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -185,12 +185,12 @@
         }
     .end annotation
 
-    .line 144
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
+    invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
 
-    .line 145
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
 
     return-void
@@ -207,18 +207,18 @@
         }
     .end annotation
 
-    .line 153
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
 
-    .line 154
+    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onGetStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
 
     return-void
 .end method
 
-.method final getSuper()Lcom/facebook/stetho/inspector/elements/Descriptor;
+.method public final getSuper()Lcom/facebook/stetho/inspector/elements/Descriptor;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -228,7 +228,7 @@
         }
     .end annotation
 
-    .line 55
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
     return-object v0
@@ -242,21 +242,21 @@
         }
     .end annotation
 
-    .line 60
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->verifyThreadAccess()V
 
-    .line 61
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->hook(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->hook(Ljava/lang/Object;)V
 
-    .line 62
+    .line 3
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onHook(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method protected onGetAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
+.method public onGetAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -269,7 +269,7 @@
     return-void
 .end method
 
-.method protected onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+.method public onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -283,7 +283,7 @@
     return-void
 .end method
 
-.method protected onGetComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
+.method public onGetComputedStyles(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/ComputedStyleAccumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -296,7 +296,7 @@
     return-void
 .end method
 
-.method protected onGetLocalName(Ljava/lang/Object;)Ljava/lang/String;
+.method public onGetLocalName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -305,17 +305,17 @@
         }
     .end annotation
 
-    .line 102
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getLocalName(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getLocalName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected onGetNodeName(Ljava/lang/Object;)Ljava/lang/String;
+.method public onGetNodeName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -324,17 +324,17 @@
         }
     .end annotation
 
-    .line 93
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getNodeName(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getNodeName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected onGetNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
+.method public onGetNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -343,10 +343,10 @@
         }
     .end annotation
 
-    .line 84
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getNodeType(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeType;
 
     move-result-object p1
 
@@ -362,17 +362,17 @@
         }
     .end annotation
 
-    .line 112
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getNodeValue(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getNodeValue(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected onGetStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
+.method public onGetStyleRuleNames(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/StyleRuleNameAccumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -385,7 +385,7 @@
     return-void
 .end method
 
-.method protected onGetStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
+.method public onGetStyles(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/elements/StyleAccumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -399,7 +399,7 @@
     return-void
 .end method
 
-.method protected onHook(Ljava/lang/Object;)V
+.method public onHook(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -410,7 +410,7 @@
     return-void
 .end method
 
-.method protected onSetAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
+.method public onSetAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -420,15 +420,15 @@
         }
     .end annotation
 
-    .line 139
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method protected onSetStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public onSetStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -443,7 +443,7 @@
     return-void
 .end method
 
-.method protected onUnhook(Ljava/lang/Object;)V
+.method public onUnhook(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -464,7 +464,7 @@
         }
     .end annotation
 
-    .line 135
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onSetAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
@@ -482,12 +482,12 @@
         }
     .end annotation
 
-    .line 162
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/Descriptor;->setStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->setStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
+    .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onSetStyle(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -503,22 +503,22 @@
         }
     .end annotation
 
-    .line 44
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
     if-eq p1, v0, :cond_1
 
     if-nez v0, :cond_0
 
-    .line 50
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
     goto :goto_0
 
-    .line 48
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -539,16 +539,16 @@
         }
     .end annotation
 
-    .line 70
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->verifyThreadAccess()V
 
-    .line 71
+    .line 2
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->onUnhook(Ljava/lang/Object;)V
 
-    .line 72
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;->mSuper:Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->unhook(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->unhook(Ljava/lang/Object;)V
 
     return-void
 .end method

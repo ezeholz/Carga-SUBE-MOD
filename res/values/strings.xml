@@ -44,7 +44,6 @@ tiempo real"</string>
     <string name="action_settings">Configuración</string>
     <string name="action_share">Compartir</string>
     <string name="after_open_form_login_button_text">INGRESAR</string>
-    <string name="alto_viaje_web">https://www.altoviaje.com.ar/</string>
     <string name="app_name">Carga SUBE</string>
     <string name="app_update_dialog_message">Actualizá tu app para seguir cargando desde el celular.</string>
     <string name="app_update_dialog_negative">Salir</string>
@@ -58,18 +57,22 @@ tiempo real"</string>
     <string name="before_open_form_login_button_text">INGRESÁ</string>
     <string name="billetera_pais_deeplink">https://ar.billeterapais.com/deeplink/sube</string>
     <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
-    <string name="card_issue_error_message">"Tarjeta bloqueada 
-¿Tenés dudas? Contactanos por redes sociales"</string>
+    <string name="card_issue_error_message">"Tarjeta bloqueada.
+
+Escribinos para que podamos ayudarte."</string>
     <string name="card_number_copied">N° de tarjeta copiado</string>
     <string name="card_number_label_result_message">Número de tarjeta</string>
-    <string name="card_problem_error_message">Tu tarjeta no pudo ser leída. Acercate a un centro de atención para revisarla. Encontrá el más cercano en argentina.gob.ar/SUBE</string>
+    <string name="card_problem_error_message">"Tarjeta invalida.
+
+Escribinos para que podamos ayudarte."</string>
     <string name="cencosud_package_name">io.gonative.android.jbwbaw</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern">%1$d / %2$d</string>
     <string name="chip_text">Chip text</string>
+    <string name="claro_pay_deeplink">https://claropay.com.ar/TarjetasSube</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
-    <string name="com.crashlytics.android.build_id">aac8f10d8abe47d2aba59ae73d28a1a0</string>
+    <string name="com.crashlytics.android.build_id">c42b518086d9410ba49e2a9682911ec7</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -148,31 +151,29 @@ tiempo real"</string>
     <string name="in_progress_recharges_count_message">"Cargas acreditadas: "</string>
     <string name="internet_connectivity_needed">Necesitás conexión a Internet</string>
     <string name="internet_connectivity_reestablished">Conexión reestablecida</string>
-    <string name="invalid_card_error">¡Ups! Esa tarjeta no es una SUBE</string>
-    <string name="joda_time_android_date_time">%1$s, %2$s</string>
-    <string name="joda_time_android_preposition_for_date">on %s</string>
-    <string name="joda_time_android_preposition_for_time">at %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
+    <string name="invalid_card_error">Esa tarjeta no es una SUBE</string>
     <string name="last_uses_extended_title">Mis movimientos</string>
     <string name="last_uses_feedback_expired_token">Es necesario reiniciar la sesión</string>
     <string name="last_uses_feedback_net_error">Ocurrió un error, por favor volver a intentar</string>
-    <string name="last_uses_feedback_no_card">" Asociá tu nueva tarjeta desde "<a href="https://www.argentina.gob.ar/SUBE"><b><u>argentina.gob.ar/SUBE</u></b></a>"
+    <string name="last_uses_feedback_no_card">" Asociá tu nueva tarjeta desde "<u><b><a href="https://www.argentina.gob.ar/SUBE">argentina.gob.ar/SUBE</a></b></u>"
 
  ¿Tenés Tarifa Social?
  Obtené tu Pin SUBE desde
- "<a href="https://servicioscorp.anses.gob.ar/clavelogon/logon.aspx?system=mianses"><b><u>Mi ANSES</u></b></a>" o en un
- "<a href="https://tarjetasube.sube.gob.ar/SubeWeb/WebForms/admin/Views/mapa-sube.aspx?id=3"><b><u>Centro de Atención</u></b></a>.</string>
+ "<u><b><a href="https://servicioscorp.anses.gob.ar/clavelogon/logon.aspx?system=mianses">Mi ANSES</a></b></u>" o en un
+ "<u><b><a href="https://tarjetasube.sube.gob.ar/SubeWeb/WebForms/admin/Views/mapa-sube.aspx?id=3">Centro de Atención</a></b></u>.</string>
     <string name="last_uses_feedback_no_results">No registramos operaciones en esta SUBE en los últimos meses.</string>
     <string name="last_uses_token_alert">"Vas a ver los movimientos
 dentro de las 24 h."</string>
-    <string name="lgserver_invalid_card">"Tarjeta bloqueada 
-¿Tenés dudas? Contactanos por redes sociales"</string>
+    <string name="lgserver_invalid_card">"Tarjeta bloqueada.
+
+Escribinos para que podamos ayudarte."</string>
     <string name="lgserver_no_pending_recharges">No tenés cargas pendientes para acreditar</string>
     <string name="lgserver_recharges_applied">No tenés cargas pendientes para acreditar</string>
     <string name="lgserver_recharges_exceeds_max_balance">Alcanzaste el tope de saldo en tu tarjeta. Tu carga queda pendiente</string>
     <string name="login_button_text">Ingresar</string>
-    <string name="mercadopago_deeplink">https://s9p2q.app.goo.gl/?link=https://www.mercadopago.com.ar/sube&amp;apn=com.mercadopago.wallet&amp;isi=925436649&amp;ibi=com.mercadopago.MercadoPago&amp;ius=mercadopago&amp;efr=1</string>
+    <string name="mercadopago_deeplink" formatted="false">https://app.adjust.com/l5m6f7k?deep_link=mercadopago%3A%2F%2Fsp-prepaid%3Fvertical_key%3Dtransport%26site_id%3DMLA%26source%3D6&amp;campaign=carga_sube</string>
     <string name="messenger_send_button_text">Send</string>
+    <string name="modo_deeplink">https://modo.onelink.me/8iqJ/sube</string>
     <string name="moni_deeplink">https://moni.com.ar/pay_sube/</string>
     <string name="movypay_deeplink">http://mvypy.co/2</string>
     <string name="mtrl_badge_numberless_content_description">New notification</string>
@@ -241,22 +242,28 @@ Use: %1$s"</string>
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="paymovil_package_name">ar.com.paymovil</string>
-    <string name="pim_package_name">com.nacionservicios.pim</string>
     <string name="play_url">https://play.google.com/store/apps/details?id=</string>
+    <string name="prex_deeplink">https://prex.onelink.me/8kFG/Sube</string>
     <string name="project_id">carga-sube-beta</string>
-    <string name="reading_card_error">Hubo un problema de lectura de la tarjeta. Volvé a intentar</string>
-    <string name="recharge_origin_alto_viaje">Alto Viaje</string>
-    <string name="recharge_origin_alto_viaje_color">\#009ACF</string>
-    <string name="recharge_origin_alto_viaje_handle">altoviaje</string>
+    <string name="reading_card_error">"Hubo un problema de lectura de la tarjeta.
+
+Volvé a intentar"</string>
+    <string name="reba_deeplink">https://reba.page.link/nBmg</string>
     <string name="recharge_origin_billetera_pais">Billetera País</string>
     <string name="recharge_origin_billetera_pais_color">\#0066AF</string>
     <string name="recharge_origin_billetera_pais_handle">billeterapais</string>
     <string name="recharge_origin_cencosud">Cencosud</string>
     <string name="recharge_origin_cencosud_color">\#005AA9</string>
     <string name="recharge_origin_cencosud_handle">cencosud</string>
+    <string name="recharge_origin_claro_pay">Claro Pay</string>
+    <string name="recharge_origin_claro_pay_color">\#ffffff</string>
+    <string name="recharge_origin_claro_pay_handle">claro_pay</string>
     <string name="recharge_origin_mercado_pago">Mercado Pago</string>
-    <string name="recharge_origin_mercado_pago_color">\#60a4d5</string>
+    <string name="recharge_origin_mercado_pago_color">\#00B1EA</string>
     <string name="recharge_origin_mercado_pago_handle">mercadopago</string>
+    <string name="recharge_origin_modo">MODO</string>
+    <string name="recharge_origin_modo_color">\#263144</string>
+    <string name="recharge_origin_modo_handle">modo</string>
     <string name="recharge_origin_moni">Moni</string>
     <string name="recharge_origin_moni_color">\#0A528D</string>
     <string name="recharge_origin_moni_handle">moni</string>
@@ -272,12 +279,12 @@ Use: %1$s"</string>
     <string name="recharge_origin_paymovil">Paymovil</string>
     <string name="recharge_origin_paymovil_color">\#8BB53B</string>
     <string name="recharge_origin_paymovil_handle">paymovil</string>
-    <string name="recharge_origin_pim">pim</string>
-    <string name="recharge_origin_pim_color">\#003383</string>
-    <string name="recharge_origin_pim_handle">pim</string>
-    <string name="recharge_origin_todopago">Todo Pago</string>
-    <string name="recharge_origin_todopago_color">\#BE2D75</string>
-    <string name="recharge_origin_todopago_handle">todopago</string>
+    <string name="recharge_origin_prex">Prex</string>
+    <string name="recharge_origin_prex_color">\#5C19AE</string>
+    <string name="recharge_origin_prex_handle">prex</string>
+    <string name="recharge_origin_reba">Reba</string>
+    <string name="recharge_origin_reba_color">\#06D274</string>
+    <string name="recharge_origin_reba_handle">reba</string>
     <string name="recharge_origin_uala">Ualá</string>
     <string name="recharge_origin_uala_color">\#FD6766</string>
     <string name="recharge_origin_uala_handle">uala</string>
@@ -296,10 +303,16 @@ Use: %1$s"</string>
     <string name="server_communication_error">Volvé a intentar</string>
     <string name="server_ip_value">sv.sube.gob.ar</string>
     <string name="server_port_value">13000</string>
+    <string name="shutdown_after_message_body">Descargala ahora y realizá todas las gestiones de tu tarjeta en un solo lugar.</string>
+    <string name="shutdown_after_message_title">¡Hay una nueva app SUBE!</string>
+    <string name="shutdown_before_appbar_title">Descargá la nueva app SUBE</string>
+    <string name="shutdown_before_message_body">¡Descargá la nueva <b>APP SUBE!</b> Todas las funcionalidades en un solo lugar.</string>
+    <string name="shutdown_before_message_title">Esta app dejará de funcionar a partir del 1/6/24</string>
+    <string name="shutdown_download_button_text">Descargar</string>
+    <string name="shutdown_warning">Disponible únicamente para Android 6 o superior.</string>
     <string name="spinner_error_no_selected_item">Seleccioná una opción</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="to_login_form_button_text">Ingresar</string>
-    <string name="todopago_package_name">com.prisma.todopago</string>
     <string name="total_recharges_command_result_message">Saldo acreditado:</string>
     <string name="tutorial_discover_extra_text">"Elegí la forma de pago y acreditá
  al apoyar tu SUBE."</string>
@@ -317,11 +330,9 @@ novedades"</b></string>
     <string name="user_qty_limit_exceeded_dialog_message">¡Gracias por querer ser parte del grupo de testers! Superamos las descargas de la instancia de prueba. Ingresá en argentina.gob.ar/carga-sube-beta para más info</string>
     <string name="user_qty_limit_exceeded_dialog_positive">Salir</string>
     <string name="valepei_package_name">ar.com.redlink.vale</string>
-    <string name="web_login_url">https://tarjetasube.sube.gob.ar/SubeWeb/Webforms/Account/Views/login-m.aspx</string>
     <string name="web_url_ayuda">https://www.argentina.gob.ar/carga-sube-beta</string>
     <string name="web_url_card_registration">https://tarjetasube.sube.gob.ar/subeweb/WebForms/Account/Views/clave-sube-registro.aspx</string>
     <string name="web_url_key_recovery">https://tarjetasube.sube.gob.ar/SubeWeb/WebForms/Account/Views/clave-sube-olvido.aspx</string>
     <string name="web_url_red_sube">https://www.argentina.gob.ar/redsube</string>
     <string name="web_url_stay_at_home">https://www.argentina.gob.ar/noticias/recomendaciones-para-viajar-en-transporte-publico</string>
-    <string name="APKTOOL_DUMMY_50" />
 </resources>

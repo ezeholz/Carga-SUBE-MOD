@@ -1,17 +1,6 @@
-.class Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;
+.class public Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
 .source "BottomNavigationView.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/material/bottomnavigation/BottomNavigationView;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
-    name = "SavedState"
-.end annotation
 
 
 # static fields
@@ -27,17 +16,20 @@
 
 
 # instance fields
-.field a:Landroid/os/Bundle;
+.field public d:Landroid/os/Bundle;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 773
-    new-instance v0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState$1;
+    .line 1
+    new-instance v0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState$a;
 
-    invoke-direct {v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState$a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -46,25 +38,20 @@
 
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 759
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 1770
+    .line 2
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;->a:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcelable;)V
-    .locals 0
-
-    .line 755
-    invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
+    iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;->d:Landroid/os/Bundle;
 
     return-void
 .end method
@@ -73,12 +60,16 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 765
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 766
-    iget-object p2, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;->a:Landroid/os/Bundle;
+    .line 2
+    iget-object p2, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$SavedState;->d:Landroid/os/Bundle;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 

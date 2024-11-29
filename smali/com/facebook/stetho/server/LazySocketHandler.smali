@@ -7,19 +7,19 @@
 
 
 # instance fields
-.field private mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
+.field public mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
 
-.field private final mSocketHandlerFactory:Lcom/facebook/stetho/server/SocketHandlerFactory;
+.field public final mSocketHandlerFactory:Lcom/facebook/stetho/server/SocketHandlerFactory;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/server/SocketHandlerFactory;)V
     .locals 0
 
-    .line 30
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/server/LazySocketHandler;->mSocketHandlerFactory:Lcom/facebook/stetho/server/SocketHandlerFactory;
 
     return-void
@@ -30,13 +30,13 @@
 
     monitor-enter p0
 
-    .line 41
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/server/LazySocketHandler;->mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
 
     if-nez v0, :cond_0
 
-    .line 42
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/server/LazySocketHandler;->mSocketHandlerFactory:Lcom/facebook/stetho/server/SocketHandlerFactory;
 
     invoke-interface {v0}, Lcom/facebook/stetho/server/SocketHandlerFactory;->create()Lcom/facebook/stetho/server/SocketHandler;
@@ -45,7 +45,7 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/server/LazySocketHandler;->mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
 
-    .line 44
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/server/LazySocketHandler;->mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
     :try_end_0
@@ -68,7 +68,7 @@
 .method public onAccepted(Landroid/net/LocalSocket;)V
     .locals 1
 
-    .line 36
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/server/LazySocketHandler;->getSocketHandler()Lcom/facebook/stetho/server/SocketHandler;
 
     move-result-object v0

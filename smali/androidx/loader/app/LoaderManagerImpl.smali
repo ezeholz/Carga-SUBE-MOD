@@ -1,4 +1,4 @@
-.class Landroidx/loader/app/LoaderManagerImpl;
+.class public Landroidx/loader/app/LoaderManagerImpl;
 .super Landroidx/loader/app/LoaderManager;
 .source "LoaderManagerImpl.java"
 
@@ -14,34 +14,42 @@
 
 
 # static fields
-.field static DEBUG:Z = false
+.field public static DEBUG:Z = false
 
-.field static final TAG:Ljava/lang/String; = "LoaderManager"
+.field public static final TAG:Ljava/lang/String; = "LoaderManager"
 
 
 # instance fields
-.field private final mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
+.field public final mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private final mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
+.field public final mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/ViewModelStore;)V
     .locals 0
+    .param p1    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/ViewModelStore;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    return-void
-.end method
-
-.method constructor <init>(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/ViewModelStore;)V
-    .locals 0
-
-    .line 371
+    .line 1
     invoke-direct {p0}, Landroidx/loader/app/LoaderManager;-><init>()V
 
-    .line 372
+    .line 2
     iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
 
-    .line 373
+    .line 3
     invoke-static {p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->getInstance(Landroidx/lifecycle/ViewModelStore;)Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     move-result-object p1
@@ -53,6 +61,24 @@
 
 .method private createAndInstallLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;Landroidx/loader/content/Loader;)Landroidx/loader/content/Loader;
     .locals 2
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/loader/content/Loader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<D:",
@@ -68,20 +94,20 @@
         }
     .end annotation
 
-    .line 382
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->startCreatingLoader()V
 
-    .line 383
+    .line 2
     invoke-interface {p3, p1, p2}, Landroidx/loader/app/LoaderManager$LoaderCallbacks;->onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 388
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -92,7 +118,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 389
+    .line 4
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -109,17 +135,21 @@
 
     goto :goto_0
 
-    .line 390
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Object returned from onCreateLoader must not be a non-static inner member class: "
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object p3
+    const-string p3, "Object returned from onCreateLoader must not be a non-static inner member class: "
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
@@ -127,27 +157,31 @@
 
     throw p1
 
-    .line 394
+    .line 6
     :cond_1
     :goto_0
     new-instance v1, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;
 
     invoke-direct {v1, p1, p2, v0, p4}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;-><init>(ILandroid/os/Bundle;Landroidx/loader/content/Loader;Landroidx/loader/content/Loader;)V
 
-    .line 395
+    .line 7
     sget-boolean p2, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     if-eqz p2, :cond_2
 
     new-instance p2, Ljava/lang/StringBuilder;
 
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string p4, "  Created new loader "
 
-    invoke-direct {p2, p4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 396
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 8
     :cond_2
     iget-object p2, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
@@ -155,12 +189,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 398
+    .line 9
     iget-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->finishCreatingLoader()V
 
-    .line 400
+    .line 10
     iget-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
 
     invoke-virtual {v1, p1, p3}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->setCallback(Landroidx/lifecycle/LifecycleOwner;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
@@ -169,7 +203,7 @@
 
     return-object p1
 
-    .line 385
+    .line 11
     :cond_3
     :try_start_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -185,7 +219,7 @@
     :catchall_0
     move-exception p1
 
-    .line 398
+    .line 12
     iget-object p2, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->finishCreatingLoader()V
@@ -197,8 +231,10 @@
 # virtual methods
 .method public destroyLoader(I)V
     .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 453
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->isCreatingLoader()Z
@@ -207,7 +243,7 @@
 
     if-nez v0, :cond_3
 
-    .line 456
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -218,16 +254,18 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 460
+    .line 3
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "destroyLoader in "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -237,7 +275,9 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 461
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
@@ -249,10 +289,10 @@
 
     const/4 v1, 0x1
 
-    .line 463
+    .line 5
     invoke-virtual {v0, v1}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->destroy(Z)Landroidx/loader/content/Loader;
 
-    .line 464
+    .line 6
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0, p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->removeLoader(I)V
@@ -260,7 +300,7 @@
     :cond_1
     return-void
 
-    .line 457
+    .line 7
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -270,7 +310,7 @@
 
     throw p1
 
-    .line 454
+    .line 8
     :cond_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -286,7 +326,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 498
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -296,6 +336,9 @@
 
 .method public getLoader(I)Landroidx/loader/content/Loader;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<D:",
@@ -306,7 +349,7 @@
         }
     .end annotation
 
-    .line 471
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->isCreatingLoader()Z
@@ -315,7 +358,7 @@
 
     if-nez v0, :cond_1
 
-    .line 475
+    .line 2
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0, p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->getLoader(I)Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;
@@ -324,19 +367,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 476
+    .line 3
     invoke-virtual {p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->getLoader()Landroidx/loader/content/Loader;
 
     move-result-object p1
 
-    return-object p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     return-object p1
 
-    .line 472
+    .line 4
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -350,7 +394,7 @@
 .method public hasRunningLoaders()Z
     .locals 1
 
-    .line 503
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->hasRunningLoaders()Z
@@ -362,6 +406,20 @@
 
 .method public initLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
     .locals 3
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<D:",
@@ -375,7 +433,7 @@
         }
     .end annotation
 
-    .line 408
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->isCreatingLoader()Z
@@ -384,7 +442,7 @@
 
     if-nez v0, :cond_4
 
-    .line 411
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -395,23 +453,25 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 415
+    .line 3
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0, p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->getLoader(I)Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;
 
     move-result-object v0
 
-    .line 417
+    .line 4
     sget-boolean v1, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "initLoader in "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -421,19 +481,21 @@
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     :cond_0
     if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 421
+    .line 5
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/loader/app/LoaderManagerImpl;->createAndInstallLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;Landroidx/loader/content/Loader;)Landroidx/loader/content/Loader;
 
     move-result-object p1
 
     return-object p1
 
-    .line 423
+    .line 6
     :cond_1
     sget-boolean p1, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
@@ -441,13 +503,17 @@
 
     new-instance p1, Ljava/lang/StringBuilder;
 
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string p2, "  Re-using existing loader "
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 424
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 7
     :cond_2
     iget-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
 
@@ -457,7 +523,7 @@
 
     return-object p1
 
-    .line 412
+    .line 8
     :cond_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -467,7 +533,7 @@
 
     throw p1
 
-    .line 409
+    .line 9
     :cond_4
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -481,7 +547,7 @@
 .method public markForRedelivery()V
     .locals 1
 
-    .line 481
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->markForRedelivery()V
@@ -491,6 +557,20 @@
 
 .method public restartLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)Landroidx/loader/content/Loader;
     .locals 2
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<D:",
@@ -504,7 +584,7 @@
         }
     .end annotation
 
-    .line 433
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->isCreatingLoader()Z
@@ -513,7 +593,7 @@
 
     if-nez v0, :cond_3
 
-    .line 436
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -524,16 +604,18 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 440
+    .line 3
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "restartLoader in "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -543,7 +625,9 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 441
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
@@ -557,12 +641,12 @@
 
     const/4 v1, 0x0
 
-    .line 444
+    .line 5
     invoke-virtual {v0, v1}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->destroy(Z)Landroidx/loader/content/Loader;
 
     move-result-object v1
 
-    .line 447
+    .line 6
     :cond_1
     invoke-direct {p0, p1, p2, p3, v1}, Landroidx/loader/app/LoaderManagerImpl;->createAndInstallLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;Landroidx/loader/content/Loader;)Landroidx/loader/content/Loader;
 
@@ -570,7 +654,7 @@
 
     return-object p1
 
-    .line 437
+    .line 7
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -580,7 +664,7 @@
 
     throw p1
 
-    .line 434
+    .line 8
     :cond_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -594,7 +678,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 486
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
@@ -603,10 +687,10 @@
 
     const-string v1, "LoaderManager{"
 
-    .line 487
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 488
+    .line 3
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -619,20 +703,20 @@
 
     const-string v1, " in "
 
-    .line 489
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 490
+    .line 5
     iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLifecycleOwner:Landroidx/lifecycle/LifecycleOwner;
 
     invoke-static {v1, v0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string v1, "}}"
 
-    .line 491
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 492
+    .line 7
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

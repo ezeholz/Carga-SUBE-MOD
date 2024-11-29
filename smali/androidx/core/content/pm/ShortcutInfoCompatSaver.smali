@@ -4,6 +4,12 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;
@@ -24,7 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +39,9 @@
 
 # virtual methods
 .method public abstract addShortcuts(Ljava/util/List;)Ljava/lang/Object;
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,6 +54,9 @@
 
 .method public getShortcuts()Ljava/util/List;
     .locals 1
+    .annotation build Landroidx/annotation/WorkerThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -54,7 +66,7 @@
         }
     .end annotation
 
-    .line 48
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -63,6 +75,9 @@
 .end method
 
 .method public abstract removeAllShortcuts()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -71,6 +86,9 @@
 .end method
 
 .method public abstract removeShortcuts(Ljava/util/List;)Ljava/lang/Object;
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

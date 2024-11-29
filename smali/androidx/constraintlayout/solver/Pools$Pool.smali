@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/constraintlayout/solver/Pools$Pool;
+.class public interface abstract Landroidx/constraintlayout/solver/Pools$Pool;
 .super Ljava/lang/Object;
 .source "Pools.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "Pool"
 .end annotation
 

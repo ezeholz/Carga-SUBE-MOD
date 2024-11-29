@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/AbsActionBarView$1;
+.class public Landroidx/appcompat/widget/AbsActionBarView$1;
 .super Ljava/lang/Object;
 .source "AbsActionBarView.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/AbsActionBarView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/AbsActionBarView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/AbsActionBarView;)V
+.method public constructor <init>(Landroidx/appcompat/widget/AbsActionBarView;)V
     .locals 0
 
-    .line 201
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/AbsActionBarView$1;->this$0:Landroidx/appcompat/widget/AbsActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 204
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/AbsActionBarView$1;->this$0:Landroidx/appcompat/widget/AbsActionBarView;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/AbsActionBarView;->showOverflowMenu()Z

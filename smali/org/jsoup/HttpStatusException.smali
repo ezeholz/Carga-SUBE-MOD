@@ -3,17 +3,11 @@
 .source "HttpStatusException.java"
 
 
-# instance fields
-.field private a:I
-
-.field private b:Ljava/lang/String;
-
-
 # virtual methods
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 28
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -28,7 +22,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lorg/jsoup/HttpStatusException;->a:I
+    const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -36,7 +30,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lorg/jsoup/HttpStatusException;->b:Ljava/lang/String;
+    const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

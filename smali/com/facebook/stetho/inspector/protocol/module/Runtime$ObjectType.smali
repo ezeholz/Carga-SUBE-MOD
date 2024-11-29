@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
+.field public static final synthetic $VALUES:[Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
 .field public static final enum BOOLEAN:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
@@ -41,14 +41,14 @@
 
 
 # instance fields
-.field private final mProtocolValue:Ljava/lang/String;
+.field public final mProtocolValue:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 10
 
-    .line 554
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v1, 0x0
@@ -61,7 +61,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->OBJECT:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 555
+    .line 2
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v2, 0x1
@@ -74,7 +74,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->FUNCTION:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 556
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v3, 0x2
@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->UNDEFINED:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 557
+    .line 4
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v4, 0x3
@@ -100,7 +100,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->STRING:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 558
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v5, 0x4
@@ -113,7 +113,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->NUMBER:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 559
+    .line 6
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v6, 0x5
@@ -126,7 +126,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->BOOLEAN:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 560
+    .line 7
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     const/4 v7, 0x6
@@ -143,7 +143,7 @@
 
     new-array v8, v8, [Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
-    .line 553
+    .line 8
     sget-object v9, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->OBJECT:Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     aput-object v9, v8, v1
@@ -175,7 +175,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -185,10 +185,10 @@
         }
     .end annotation
 
-    .line 564
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 565
+    .line 2
     iput-object p3, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->mProtocolValue:Ljava/lang/String;
 
     return-void
@@ -197,7 +197,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
     .locals 1
 
-    .line 553
+    .line 1
     const-class v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -212,7 +212,7 @@
 .method public static values()[Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
     .locals 1
 
-    .line 553
+    .line 1
     sget-object v0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->$VALUES:[Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;
 
     invoke-virtual {v0}, [Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->clone()Ljava/lang/Object;
@@ -226,12 +226,12 @@
 
 
 # virtual methods
-.method public final getProtocolValue()Ljava/lang/String;
+.method public getProtocolValue()Ljava/lang/String;
     .locals 1
     .annotation runtime Lcom/facebook/stetho/json/annotation/JsonValue;
     .end annotation
 
-    .line 570
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$ObjectType;->mProtocolValue:Ljava/lang/String;
 
     return-object v0

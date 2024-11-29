@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/multidex/MultiDex$V14$ElementConstructor;
+.class public interface abstract Landroidx/multidex/MultiDex$V14$ElementConstructor;
 .super Ljava/lang/Object;
 .source "MultiDex.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "ElementConstructor"
 .end annotation
 

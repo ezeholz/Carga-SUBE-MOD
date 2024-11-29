@@ -12,27 +12,27 @@
 
 
 # static fields
-.field static final OP_ADD:I = 0x1
+.field public static final OP_ADD:I = 0x1
 
-.field static final OP_ATTACH:I = 0x7
+.field public static final OP_ATTACH:I = 0x7
 
-.field static final OP_DETACH:I = 0x6
+.field public static final OP_DETACH:I = 0x6
 
-.field static final OP_HIDE:I = 0x4
+.field public static final OP_HIDE:I = 0x4
 
-.field static final OP_NULL:I = 0x0
+.field public static final OP_NULL:I = 0x0
 
-.field static final OP_REMOVE:I = 0x3
+.field public static final OP_REMOVE:I = 0x3
 
-.field static final OP_REPLACE:I = 0x2
+.field public static final OP_REPLACE:I = 0x2
 
-.field static final OP_SET_MAX_LIFECYCLE:I = 0xa
+.field public static final OP_SET_MAX_LIFECYCLE:I = 0xa
 
-.field static final OP_SET_PRIMARY_NAV:I = 0x8
+.field public static final OP_SET_PRIMARY_NAV:I = 0x8
 
-.field static final OP_SHOW:I = 0x5
+.field public static final OP_SHOW:I = 0x5
 
-.field static final OP_UNSET_PRIMARY_NAV:I = 0x9
+.field public static final OP_UNSET_PRIMARY_NAV:I = 0x9
 
 .field public static final TRANSIT_ENTER_MASK:I = 0x1000
 
@@ -50,21 +50,21 @@
 
 
 # instance fields
-.field mAddToBackStack:Z
+.field public mAddToBackStack:Z
 
-.field mAllowAddToBackStack:Z
+.field public mAllowAddToBackStack:Z
 
-.field mBreadCrumbShortTitleRes:I
+.field public mBreadCrumbShortTitleRes:I
 
-.field mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
+.field public mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
-.field mBreadCrumbTitleRes:I
+.field public mBreadCrumbTitleRes:I
 
-.field mBreadCrumbTitleText:Ljava/lang/CharSequence;
+.field public mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
-.field private final mClassLoader:Ljava/lang/ClassLoader;
+.field public final mClassLoader:Ljava/lang/ClassLoader;
 
-.field mCommitRunnables:Ljava/util/ArrayList;
+.field public mCommitRunnables:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -74,15 +74,18 @@
     .end annotation
 .end field
 
-.field mEnterAnim:I
+.field public mEnterAnim:I
 
-.field mExitAnim:I
+.field public mExitAnim:I
 
-.field private final mFragmentFactory:Landroidx/fragment/app/FragmentFactory;
+.field public final mFragmentFactory:Landroidx/fragment/app/FragmentFactory;
 
-.field mName:Ljava/lang/String;
+.field public mName:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field mOps:Ljava/util/ArrayList;
+.field public mOps:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -92,13 +95,13 @@
     .end annotation
 .end field
 
-.field mPopEnterAnim:I
+.field public mPopEnterAnim:I
 
-.field mPopExitAnim:I
+.field public mPopExitAnim:I
 
-.field mReorderingAllowed:Z
+.field public mReorderingAllowed:Z
 
-.field mSharedElementSourceNames:Ljava/util/ArrayList;
+.field public mSharedElementSourceNames:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -108,7 +111,7 @@
     .end annotation
 .end field
 
-.field mSharedElementTargetNames:Ljava/util/ArrayList;
+.field public mSharedElementTargetNames:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -118,7 +121,7 @@
     .end annotation
 .end field
 
-.field mTransition:I
+.field public mTransition:I
 
 
 # direct methods
@@ -127,10 +130,10 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 120
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -139,32 +142,40 @@
 
     const/4 v0, 0x1
 
-    .line 101
+    .line 3
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAllowAddToBackStack:Z
 
     const/4 v0, 0x0
 
-    .line 111
+    .line 4
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mReorderingAllowed:Z
 
     const/4 v0, 0x0
 
-    .line 121
+    .line 5
     iput-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mFragmentFactory:Landroidx/fragment/app/FragmentFactory;
 
-    .line 122
+    .line 6
     iput-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mClassLoader:Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
-.method constructor <init>(Landroidx/fragment/app/FragmentFactory;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentFactory;Ljava/lang/ClassLoader;)V
     .locals 1
+    .param p1    # Landroidx/fragment/app/FragmentFactory;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 126
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -173,18 +184,18 @@
 
     const/4 v0, 0x1
 
-    .line 101
+    .line 9
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAllowAddToBackStack:Z
 
     const/4 v0, 0x0
 
-    .line 111
+    .line 10
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mReorderingAllowed:Z
 
-    .line 127
+    .line 11
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mFragmentFactory:Landroidx/fragment/app/FragmentFactory;
 
-    .line 128
+    .line 12
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransaction;->mClassLoader:Ljava/lang/ClassLoader;
 
     return-void
@@ -192,6 +203,17 @@
 
 .method private createFragment(Ljava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
     .locals 2
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -205,17 +227,17 @@
         }
     .end annotation
 
-    .line 142
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mFragmentFactory:Landroidx/fragment/app/FragmentFactory;
 
     if-eqz v0, :cond_2
 
-    .line 146
+    .line 2
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransaction;->mClassLoader:Ljava/lang/ClassLoader;
 
     if-eqz v1, :cond_1
 
-    .line 150
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -226,13 +248,13 @@
 
     if-eqz p2, :cond_0
 
-    .line 152
+    .line 4
     invoke-virtual {p1, p2}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     :cond_0
     return-object p1
 
-    .line 147
+    .line 5
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -242,7 +264,7 @@
 
     throw p1
 
-    .line 143
+    .line 6
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -257,12 +279,22 @@
 # virtual methods
 .method public add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 189
+    .line 4
     invoke-virtual {p0, p1, p2, v0, v1}, Landroidx/fragment/app/FragmentTransaction;->doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
 
     return-object p0
@@ -270,10 +302,24 @@
 
 .method public add(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 234
+    .line 6
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/fragment/app/FragmentTransaction;->doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
 
     return-object p0
@@ -281,6 +327,21 @@
 
 .method public final add(ILjava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -294,7 +355,7 @@
         }
     .end annotation
 
-    .line 181
+    .line 3
     invoke-direct {p0, p2, p3}, Landroidx/fragment/app/FragmentTransaction;->createFragment(Ljava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
 
     move-result-object p2
@@ -308,6 +369,25 @@
 
 .method public final add(ILjava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -322,7 +402,7 @@
         }
     .end annotation
 
-    .line 213
+    .line 5
     invoke-direct {p0, p2, p3}, Landroidx/fragment/app/FragmentTransaction;->createFragment(Ljava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
 
     move-result-object p2
@@ -334,13 +414,25 @@
     return-object p1
 .end method
 
-.method add(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
+.method public add(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 240
+    .line 7
     iput-object p1, p2, Landroidx/fragment/app/Fragment;->mContainer:Landroid/view/ViewGroup;
 
-    .line 241
+    .line 8
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
 
     move-result p1
@@ -354,12 +446,22 @@
 
 .method public add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 171
+    .line 2
     invoke-virtual {p0, v0, p1, p2, v1}, Landroidx/fragment/app/FragmentTransaction;->doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
 
     return-object p0
@@ -367,6 +469,21 @@
 
 .method public final add(Ljava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -381,7 +498,7 @@
         }
     .end annotation
 
-    .line 163
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/fragment/app/FragmentTransaction;->createFragment(Ljava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
 
     move-result-object p1
@@ -393,30 +510,30 @@
     return-object p1
 .end method
 
-.method addOp(Landroidx/fragment/app/FragmentTransaction$Op;)V
+.method public addOp(Landroidx/fragment/app/FragmentTransaction$Op;)V
     .locals 1
 
-    .line 132
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mOps:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 133
+    .line 2
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mEnterAnim:I
 
     iput v0, p1, Landroidx/fragment/app/FragmentTransaction$Op;->mEnterAnim:I
 
-    .line 134
+    .line 3
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mExitAnim:I
 
     iput v0, p1, Landroidx/fragment/app/FragmentTransaction$Op;->mExitAnim:I
 
-    .line 135
+    .line 4
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mPopEnterAnim:I
 
     iput v0, p1, Landroidx/fragment/app/FragmentTransaction$Op;->mPopEnterAnim:I
 
-    .line 136
+    .line 5
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mPopExitAnim:I
 
     iput v0, p1, Landroidx/fragment/app/FragmentTransaction$Op;->mPopExitAnim:I
@@ -425,35 +542,45 @@
 .end method
 
 .method public addSharedElement(Landroid/view/View;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
-    .locals 3
+    .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 592
+    .line 1
     invoke-static {}, Landroidx/fragment/app/FragmentTransition;->supportsTransition()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 593
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 598
+    .line 3
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 599
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
-    .line 600
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -462,7 +589,7 @@
 
     goto :goto_0
 
-    .line 601
+    .line 6
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mSharedElementTargetNames:Ljava/util/ArrayList;
 
@@ -474,7 +601,7 @@
 
     if-nez v0, :cond_2
 
-    .line 604
+    .line 7
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -483,34 +610,26 @@
 
     if-nez v0, :cond_1
 
-    .line 609
+    .line 8
     :goto_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 610
+    .line 9
     iget-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mSharedElementTargetNames:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 605
+    .line 10
     :cond_1
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "A shared element with the source name \'"
 
-    const-string v2, "A shared element with the source name \'"
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -518,21 +637,13 @@
 
     throw p2
 
-    .line 602
+    .line 11
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "A shared element with the target name \'"
 
-    const-string v2, "A shared element with the target name \'"
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p2, v1}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -540,7 +651,7 @@
 
     throw p1
 
-    .line 595
+    .line 12
     :cond_3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -557,23 +668,29 @@
 
 .method public addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 651
+    .line 1
     iget-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAllowAddToBackStack:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 655
+    .line 2
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAddToBackStack:Z
 
-    .line 656
+    .line 3
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mName:Ljava/lang/String;
 
     return-object p0
 
-    .line 652
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -586,8 +703,14 @@
 
 .method public attach(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 424
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/4 v1, 0x7
@@ -613,8 +736,14 @@
 
 .method public detach(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 407
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/4 v1, 0x6
@@ -628,20 +757,22 @@
 
 .method public disallowAddToBackStack()Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 678
+    .line 1
     iget-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAddToBackStack:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 682
+    .line 2
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAllowAddToBackStack:Z
 
     return-object p0
 
-    .line 679
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -652,20 +783,24 @@
     throw v0
 .end method
 
-.method doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
+.method public doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
     .locals 3
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 245
+    .line 1
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 246
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getModifiers()I
 
     move-result v1
 
-    .line 247
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Class;->isAnonymousClass()Z
 
     move-result v2
@@ -678,7 +813,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 248
+    .line 4
     invoke-virtual {v0}, Ljava/lang/Class;->isMemberClass()Z
 
     move-result v2
@@ -698,12 +833,10 @@
 
     if-eqz p3, :cond_3
 
-    .line 255
+    .line 5
     iget-object v2, p2, Landroidx/fragment/app/Fragment;->mTag:Ljava/lang/String;
 
     if-eqz v2, :cond_2
-
-    iget-object v2, p2, Landroidx/fragment/app/Fragment;->mTag:Ljava/lang/String;
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -713,15 +846,17 @@
 
     goto :goto_0
 
-    .line 256
+    .line 6
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-instance p4, Ljava/lang/StringBuilder;
 
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Can\'t change tag of fragment "
 
-    invoke-direct {p4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -743,7 +878,7 @@
 
     throw p1
 
-    .line 260
+    .line 7
     :cond_2
     :goto_0
     iput-object p3, p2, Landroidx/fragment/app/Fragment;->mTag:Ljava/lang/String;
@@ -755,26 +890,26 @@
 
     if-eq p1, v2, :cond_6
 
-    .line 268
+    .line 8
     iget p3, p2, Landroidx/fragment/app/Fragment;->mFragmentId:I
 
     if-eqz p3, :cond_5
-
-    iget p3, p2, Landroidx/fragment/app/Fragment;->mFragmentId:I
 
     if-ne p3, p1, :cond_4
 
     goto :goto_1
 
-    .line 269
+    .line 9
     :cond_4
     new-instance p3, Ljava/lang/IllegalStateException;
 
     new-instance p4, Ljava/lang/StringBuilder;
 
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Can\'t change container ID of fragment "
 
-    invoke-direct {p4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -796,7 +931,7 @@
 
     throw p3
 
-    .line 273
+    .line 10
     :cond_5
     :goto_1
     iput p1, p2, Landroidx/fragment/app/Fragment;->mFragmentId:I
@@ -805,15 +940,17 @@
 
     goto :goto_2
 
-    .line 265
+    .line 11
     :cond_6
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p4, Ljava/lang/StringBuilder;
 
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v0, "Can\'t add fragment "
 
-    invoke-direct {p4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -835,7 +972,7 @@
 
     throw p1
 
-    .line 276
+    .line 12
     :cond_7
     :goto_2
     new-instance p1, Landroidx/fragment/app/FragmentTransaction$Op;
@@ -846,15 +983,15 @@
 
     return-void
 
-    .line 249
+    .line 13
     :cond_8
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string p2, "Fragment "
 
-    const-string p3, "Fragment "
+    invoke-static {p2}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p2
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -877,8 +1014,14 @@
 
 .method public hide(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 373
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/4 v1, 0x4
@@ -893,7 +1036,7 @@
 .method public isAddToBackStackAllowed()Z
     .locals 1
 
-    .line 668
+    .line 1
     iget-boolean v0, p0, Landroidx/fragment/app/FragmentTransaction;->mAllowAddToBackStack:Z
 
     return v0
@@ -902,7 +1045,7 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 477
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mOps:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -914,8 +1057,14 @@
 
 .method public remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 357
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/4 v1, 0x3
@@ -929,10 +1078,20 @@
 
 .method public replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 293
+    .line 2
     invoke-virtual {p0, p1, p2, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
@@ -942,17 +1101,31 @@
 
 .method public replace(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x2
 
-    .line 343
+    .line 4
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/fragment/app/FragmentTransaction;->doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
 
     return-object p0
 
-    .line 341
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -965,6 +1138,21 @@
 
 .method public final replace(ILjava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -980,7 +1168,7 @@
 
     const/4 v0, 0x0
 
-    .line 285
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILjava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
@@ -990,6 +1178,25 @@
 
 .method public final replace(ILjava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -1004,7 +1211,7 @@
         }
     .end annotation
 
-    .line 318
+    .line 3
     invoke-direct {p0, p2, p3}, Landroidx/fragment/app/FragmentTransaction;->createFragment(Ljava/lang/Class;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
 
     move-result-object p2
@@ -1018,23 +1225,29 @@
 
 .method public runOnCommit(Ljava/lang/Runnable;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 814
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->disallowAddToBackStack()Landroidx/fragment/app/FragmentTransaction;
 
-    .line 815
+    .line 2
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mCommitRunnables:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 816
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mCommitRunnables:Ljava/util/ArrayList;
 
-    .line 818
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mCommitRunnables:Ljava/util/ArrayList;
 
@@ -1045,10 +1258,13 @@
 
 .method public setAllowOptimization(Z)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 788
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentTransaction;->setReorderingAllowed(Z)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
@@ -1058,15 +1274,22 @@
 
 .method public setBreadCrumbShortTitle(I)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 728
+    .line 1
     iput p1, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleRes:I
 
     const/4 p1, 0x0
 
-    .line 729
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
     return-object p0
@@ -1074,15 +1297,22 @@
 
 .method public setBreadCrumbShortTitle(Ljava/lang/CharSequence;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     const/4 v0, 0x0
 
-    .line 743
+    .line 3
     iput v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleRes:I
 
-    .line 744
+    .line 4
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
     return-object p0
@@ -1090,15 +1320,22 @@
 
 .method public setBreadCrumbTitle(I)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 697
+    .line 1
     iput p1, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleRes:I
 
     const/4 p1, 0x0
 
-    .line 698
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
     return-object p0
@@ -1106,15 +1343,22 @@
 
 .method public setBreadCrumbTitle(Ljava/lang/CharSequence;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     const/4 v0, 0x0
 
-    .line 712
+    .line 3
     iput v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleRes:I
 
-    .line 713
+    .line 4
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
     return-object p0
@@ -1122,10 +1366,26 @@
 
 .method public setCustomAnimations(II)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/AnimRes;
+        .end annotation
+
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/AnimRes;
+        .end annotation
+
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 534
+    .line 1
     invoke-virtual {p0, p1, p2, v0, v0}, Landroidx/fragment/app/FragmentTransaction;->setCustomAnimations(IIII)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
@@ -1135,17 +1395,47 @@
 
 .method public setCustomAnimations(IIII)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/AnimRes;
+        .end annotation
 
-    .line 571
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/AnimRes;
+        .end annotation
+
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/AnimRes;
+        .end annotation
+
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/AnimRes;
+        .end annotation
+
+        .annotation build Landroidx/annotation/AnimatorRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 2
     iput p1, p0, Landroidx/fragment/app/FragmentTransaction;->mEnterAnim:I
 
-    .line 572
+    .line 3
     iput p2, p0, Landroidx/fragment/app/FragmentTransaction;->mExitAnim:I
 
-    .line 573
+    .line 4
     iput p3, p0, Landroidx/fragment/app/FragmentTransaction;->mPopEnterAnim:I
 
-    .line 574
+    .line 5
     iput p4, p0, Landroidx/fragment/app/FragmentTransaction;->mPopExitAnim:I
 
     return-object p0
@@ -1153,8 +1443,18 @@
 
 .method public setMaxLifecycle(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/Lifecycle$State;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 468
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/16 v1, 0xa
@@ -1168,8 +1468,14 @@
 
 .method public setPrimaryNavigationFragment(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 447
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/16 v1, 0x8
@@ -1183,8 +1489,10 @@
 
 .method public setReorderingAllowed(Z)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 778
+    .line 1
     iput-boolean p1, p0, Landroidx/fragment/app/FragmentTransaction;->mReorderingAllowed:Z
 
     return-object p0
@@ -1192,8 +1500,10 @@
 
 .method public setTransition(I)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 622
+    .line 1
     iput p1, p0, Landroidx/fragment/app/FragmentTransaction;->mTransition:I
 
     return-object p0
@@ -1201,6 +1511,13 @@
 
 .method public setTransitionStyle(I)Landroidx/fragment/app/FragmentTransaction;
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1209,8 +1526,14 @@
 
 .method public show(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
     .locals 2
+    .param p1    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 389
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentTransaction$Op;
 
     const/4 v1, 0x5

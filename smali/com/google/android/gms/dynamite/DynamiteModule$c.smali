@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/DynamiteModule$c;
+.class public final Lcom/google/android/gms/dynamite/DynamiteModule$c;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -11,15 +11,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "c"
 .end annotation
 
 
 # instance fields
-.field private final a:I
-
-.field private final b:I
+.field public final a:I
 
 
 # direct methods
@@ -32,11 +30,6 @@
     .line 2
     iput p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$c;->a:I
 
-    const/4 p1, 0x0
-
-    .line 3
-    iput p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$c;->b:I
-
     return-void
 .end method
 
@@ -45,7 +38,7 @@
 .method public final a(Landroid/content/Context;Ljava/lang/String;)I
     .locals 0
 
-    .line 6
+    .line 1
     iget p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$c;->a:I
 
     return p1

@@ -1,4 +1,4 @@
-.class final Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;
+.class public final Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;
 .super Ljava/lang/Object;
 .source "JobIntentService.java"
 
@@ -12,27 +12,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "WrapperWorkItem"
 .end annotation
 
 
 # instance fields
-.field final mJobWork:Landroid/app/job/JobWorkItem;
+.field public final mJobWork:Landroid/app/job/JobWorkItem;
 
-.field final synthetic this$0:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
+.field public final synthetic this$0:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/app/JobIntentService$JobServiceEngineImpl;Landroid/app/job/JobWorkItem;)V
+.method public constructor <init>(Landroidx/core/app/JobIntentService$JobServiceEngineImpl;Landroid/app/job/JobWorkItem;)V
     .locals 0
 
-    .line 259
+    .line 1
     iput-object p1, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;->this$0:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
+    .line 2
     iput-object p2, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;->mJobWork:Landroid/app/job/JobWorkItem;
 
     return-void
@@ -40,17 +40,17 @@
 
 
 # virtual methods
-.method public final complete()V
+.method public complete()V
     .locals 3
 
-    .line 270
+    .line 1
     iget-object v0, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;->this$0:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 
     iget-object v0, v0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 271
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;->this$0:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 
@@ -58,7 +58,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 272
+    .line 3
     iget-object v1, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;->this$0:Landroidx/core/app/JobIntentService$JobServiceEngineImpl;
 
     iget-object v1, v1, Landroidx/core/app/JobIntentService$JobServiceEngineImpl;->mParams:Landroid/app/job/JobParameters;
@@ -67,7 +67,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/job/JobParameters;->completeWork(Landroid/app/job/JobWorkItem;)V
 
-    .line 274
+    .line 4
     :cond_0
     monitor-exit v0
 
@@ -83,10 +83,10 @@
     throw v1
 .end method
 
-.method public final getIntent()Landroid/content/Intent;
+.method public getIntent()Landroid/content/Intent;
     .locals 1
 
-    .line 265
+    .line 1
     iget-object v0, p0, Landroidx/core/app/JobIntentService$JobServiceEngineImpl$WrapperWorkItem;->mJobWork:Landroid/app/job/JobWorkItem;
 
     invoke-virtual {v0}, Landroid/app/job/JobWorkItem;->getIntent()Landroid/content/Intent;

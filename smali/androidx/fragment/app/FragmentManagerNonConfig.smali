@@ -9,7 +9,10 @@
 
 
 # instance fields
-.field private final mChildNonConfigs:Ljava/util/Map;
+.field public final mChildNonConfigs:Ljava/util/Map;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -20,7 +23,10 @@
     .end annotation
 .end field
 
-.field private final mFragments:Ljava/util/Collection;
+.field public final mFragments:Ljava/util/Collection;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection<",
@@ -30,7 +36,10 @@
     .end annotation
 .end field
 
-.field private final mViewModelStores:Ljava/util/Map;
+.field public final mViewModelStores:Ljava/util/Map;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -43,8 +52,20 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/util/Collection;Ljava/util/Map;Ljava/util/Map;)V
+.method public constructor <init>(Ljava/util/Collection;Ljava/util/Map;Ljava/util/Map;)V
     .locals 0
+    .param p1    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -62,16 +83,16 @@
         }
     .end annotation
 
-    .line 49
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mFragments:Ljava/util/Collection;
 
-    .line 51
+    .line 3
     iput-object p2, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mChildNonConfigs:Ljava/util/Map;
 
-    .line 52
+    .line 4
     iput-object p3, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mViewModelStores:Ljava/util/Map;
 
     return-void
@@ -79,8 +100,11 @@
 
 
 # virtual methods
-.method getChildNonConfigs()Ljava/util/Map;
+.method public getChildNonConfigs()Ljava/util/Map;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -91,14 +115,17 @@
         }
     .end annotation
 
-    .line 76
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mChildNonConfigs:Ljava/util/Map;
 
     return-object v0
 .end method
 
-.method getFragments()Ljava/util/Collection;
+.method public getFragments()Ljava/util/Collection;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -108,14 +135,17 @@
         }
     .end annotation
 
-    .line 68
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mFragments:Ljava/util/Collection;
 
     return-object v0
 .end method
 
-.method getViewModelStores()Ljava/util/Map;
+.method public getViewModelStores()Ljava/util/Map;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -126,16 +156,16 @@
         }
     .end annotation
 
-    .line 84
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mViewModelStores:Ljava/util/Map;
 
     return-object v0
 .end method
 
-.method isRetaining(Landroidx/fragment/app/Fragment;)Z
+.method public isRetaining(Landroidx/fragment/app/Fragment;)Z
     .locals 1
 
-    .line 57
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mFragments:Ljava/util/Collection;
 
     if-nez v0, :cond_0
@@ -144,7 +174,7 @@
 
     return p1
 
-    .line 60
+    .line 2
     :cond_0
     invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 

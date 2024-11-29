@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;
+.class public Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;
 .super Ljava/lang/Object;
 .source "MediaBrowserServiceCompat.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
+.field public final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
 
 # direct methods
-.method constructor <init>(Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;)V
+.method public constructor <init>(Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;)V
     .locals 0
 
-    .line 723
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;->this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,22 +38,20 @@
 .method public run()V
     .locals 2
 
-    .line 726
+    .line 1
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;->this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->this$0:Landroidx/media/MediaBrowserServiceCompat;
+    iget-object v1, v0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-    iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat;->mConnections:Landroidx/collection/ArrayMap;
+    iget-object v1, v1, Landroidx/media/MediaBrowserServiceCompat;->mConnections:Landroidx/collection/ArrayMap;
 
-    iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;->this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
+    iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->callbacks:Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
-    iget-object v1, v1, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->callbacks:Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;
+    invoke-interface {v0}, Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
-    invoke-interface {v1}, Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;->asBinder()Landroid/os/IBinder;
+    move-result-object v0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

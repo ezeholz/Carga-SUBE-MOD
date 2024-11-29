@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;
+.class public Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "IMediaControllerCallback.java"
 
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Proxy"
 .end annotation
 
 
 # instance fields
-.field private mRemote:Landroid/os/IBinder;
+.field public mRemote:Landroid/os/IBinder;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/IBinder;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 189
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 190
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -39,7 +39,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .line 194
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -56,7 +56,7 @@
 .method public onCaptioningEnabledChanged(Z)V
     .locals 4
 
-    .line 360
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -64,7 +64,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 362
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -78,11 +78,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 363
+    .line 3
     :goto_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 364
+    .line 4
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xb
@@ -93,7 +93,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 367
+    .line 5
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -109,7 +109,7 @@
 .method public onEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 202
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -117,10 +117,10 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 204
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 205
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     const/4 p1, 0x0
@@ -129,19 +129,19 @@
 
     if-eqz p2, :cond_0
 
-    .line 207
+    .line 4
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 208
+    .line 5
     invoke-virtual {p2, v0, p1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 211
+    .line 6
     :cond_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 213
+    .line 7
     :goto_0
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -151,7 +151,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 216
+    .line 8
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -167,7 +167,7 @@
 .method public onExtrasChanged(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 300
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -175,7 +175,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 302
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -184,19 +184,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 304
+    .line 3
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 305
+    .line 4
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 308
+    .line 5
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 310
+    .line 6
     :goto_0
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -208,7 +208,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 313
+    .line 7
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -224,7 +224,7 @@
 .method public onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 4
 
-    .line 252
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -232,7 +232,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 254
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -241,19 +241,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 256
+    .line 3
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 257
+    .line 4
     invoke-virtual {p1, v0, v2}, Landroid/support/v4/media/MediaMetadataCompat;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 260
+    .line 5
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 262
+    .line 6
     :goto_0
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -265,7 +265,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 265
+    .line 7
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -281,7 +281,7 @@
 .method public onPlaybackStateChanged(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     .locals 4
 
-    .line 234
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -289,7 +289,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 236
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -298,19 +298,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 238
+    .line 3
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 239
+    .line 4
     invoke-virtual {p1, v0, v2}, Landroid/support/v4/media/session/PlaybackStateCompat;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 242
+    .line 5
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 244
+    .line 6
     :goto_0
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -322,7 +322,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
+    .line 7
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -346,7 +346,7 @@
         }
     .end annotation
 
-    .line 270
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -354,13 +354,13 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 272
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 273
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 274
+    .line 4
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v1, 0x5
@@ -373,7 +373,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 277
+    .line 5
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -389,7 +389,7 @@
 .method public onQueueTitleChanged(Ljava/lang/CharSequence;)V
     .locals 4
 
-    .line 282
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -397,7 +397,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 284
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -406,19 +406,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 286
+    .line 3
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 287
+    .line 4
     invoke-static {p1, v0, v2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 290
+    .line 5
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 292
+    .line 6
     :goto_0
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -430,7 +430,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 295
+    .line 7
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -446,7 +446,7 @@
 .method public onRepeatModeChanged(I)V
     .locals 4
 
-    .line 336
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -454,13 +454,13 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 338
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 339
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 340
+    .line 4
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v1, 0x9
@@ -473,7 +473,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 343
+    .line 5
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -489,7 +489,7 @@
 .method public onSessionDestroyed()V
     .locals 5
 
-    .line 221
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -497,10 +497,10 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 223
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 224
+    .line 3
     iget-object v1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -513,7 +513,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 227
+    .line 4
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -529,7 +529,7 @@
 .method public onSessionReady()V
     .locals 5
 
-    .line 384
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -537,10 +537,10 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 386
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 387
+    .line 3
     iget-object v1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xd
@@ -553,7 +553,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 390
+    .line 4
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -569,7 +569,7 @@
 .method public onShuffleModeChanged(I)V
     .locals 4
 
-    .line 372
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -577,13 +577,13 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 374
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 375
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 376
+    .line 4
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v1, 0xc
@@ -596,7 +596,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 379
+    .line 5
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -612,7 +612,7 @@
 .method public onShuffleModeChangedRemoved(Z)V
     .locals 4
 
-    .line 348
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -620,7 +620,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 350
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -634,11 +634,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 351
+    .line 3
     :goto_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 352
+    .line 4
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xa
@@ -649,7 +649,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 355
+    .line 5
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -665,7 +665,7 @@
 .method public onVolumeInfoChanged(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
     .locals 4
 
-    .line 318
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -673,7 +673,7 @@
     :try_start_0
     const-string v1, "android.support.v4.media.session.IMediaControllerCallback"
 
-    .line 320
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x1
@@ -682,19 +682,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 322
+    .line 3
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 323
+    .line 4
     invoke-virtual {p1, v0, v2}, Landroid/support/v4/media/session/ParcelableVolumeInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 326
+    .line 5
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 328
+    .line 6
     :goto_0
     iget-object p1, p0, Landroid/support/v4/media/session/IMediaControllerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -706,7 +706,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 331
+    .line 7
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void

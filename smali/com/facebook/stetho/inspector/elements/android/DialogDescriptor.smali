@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;
+.class public final Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;
 .super Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;
 .source "DialogDescriptor.java"
 
@@ -20,10 +20,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 22
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;-><init>()V
 
     return-void
@@ -31,27 +31,27 @@
 
 
 # virtual methods
-.method public final getElementToHighlightAtPosition(Landroid/app/Dialog;IILandroid/graphics/Rect;)Ljava/lang/Object;
+.method public getElementToHighlightAtPosition(Landroid/app/Dialog;IILandroid/graphics/Rect;)Ljava/lang/Object;
     .locals 3
 
-    .line 52
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
+    .line 2
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    .line 56
+    .line 3
     instance-of v1, v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 57
+    .line 4
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    .line 58
+    .line 5
     check-cast v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;->getHighlightableDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
@@ -68,21 +68,22 @@
     :goto_0
     if-nez v0, :cond_1
 
-    return-object v2
+    goto :goto_1
 
-    .line 63
+    .line 6
     :cond_1
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;->getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
+    :goto_1
+    return-object v2
 .end method
 
-.method public final bridge synthetic getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
+.method public bridge synthetic getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
     .locals 0
 
-    .line 22
+    .line 1
     check-cast p1, Landroid/app/Dialog;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;->getElementToHighlightAtPosition(Landroid/app/Dialog;IILandroid/graphics/Rect;)Ljava/lang/Object;
@@ -92,27 +93,27 @@
     return-object p1
 .end method
 
-.method public final getViewAndBoundsForHighlighting(Landroid/app/Dialog;Landroid/graphics/Rect;)Landroid/view/View;
+.method public getViewAndBoundsForHighlighting(Landroid/app/Dialog;Landroid/graphics/Rect;)Landroid/view/View;
     .locals 3
 
-    .line 35
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
+    .line 2
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    .line 39
+    .line 3
     instance-of v1, v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 40
+    .line 4
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    .line 41
+    .line 5
     check-cast v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;->getHighlightableDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
@@ -129,21 +130,22 @@
     :goto_0
     if-nez v0, :cond_1
 
-    return-object v2
+    goto :goto_1
 
-    .line 46
+    .line 6
     :cond_1
     invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;->getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
+    :goto_1
+    return-object v2
 .end method
 
-.method public final bridge synthetic getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
+.method public bridge synthetic getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
     .locals 0
 
-    .line 22
+    .line 1
     check-cast p1, Landroid/app/Dialog;
 
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;->getViewAndBoundsForHighlighting(Landroid/app/Dialog;Landroid/graphics/Rect;)Landroid/view/View;
@@ -153,7 +155,7 @@
     return-object p1
 .end method
 
-.method protected final onGetChildren(Landroid/app/Dialog;Lcom/facebook/stetho/common/Accumulator;)V
+.method public onGetChildren(Landroid/app/Dialog;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -165,24 +167,24 @@
         }
     .end annotation
 
-    .line 26
+    .line 2
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 28
+    .line 3
     invoke-interface {p2, p1}, Lcom/facebook/stetho/common/Accumulator;->store(Ljava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final bridge synthetic onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+.method public bridge synthetic onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
 
-    .line 22
+    .line 1
     check-cast p1, Landroid/app/Dialog;
 
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;->onGetChildren(Landroid/app/Dialog;Lcom/facebook/stetho/common/Accumulator;)V

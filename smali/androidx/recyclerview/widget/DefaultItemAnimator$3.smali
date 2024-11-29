@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/DefaultItemAnimator$3;
+.class public Landroidx/recyclerview/widget/DefaultItemAnimator$3;
 .super Ljava/lang/Object;
 .source "DefaultItemAnimator.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
-.field final synthetic val$additions:Ljava/util/ArrayList;
+.field public final synthetic val$additions:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/DefaultItemAnimator;Ljava/util/ArrayList;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/DefaultItemAnimator;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 168
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$3;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$3;->val$additions:Ljava/util/ArrayList;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 171
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$3;->val$additions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -62,20 +62,20 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 172
+    .line 2
     iget-object v2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$3;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->animateAddImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     goto :goto_0
 
-    .line 174
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$3;->val$additions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 175
+    .line 4
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$3;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;

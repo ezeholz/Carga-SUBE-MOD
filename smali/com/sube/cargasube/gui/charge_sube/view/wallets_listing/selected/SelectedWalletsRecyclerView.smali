@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public a:Landroidx/recyclerview/widget/LinearLayoutManager;
+.field public d:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-.field public b:Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/selected/c;
+.field public e:Lg/f/a/c/a/c/a/b/c;
 
 
 # direct methods
@@ -15,9 +15,9 @@
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 49
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -28,9 +28,9 @@
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 50
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -41,9 +41,9 @@
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void

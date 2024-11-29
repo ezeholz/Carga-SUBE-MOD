@@ -45,9 +45,6 @@
     <string name="common_open_on_phone">Telefonda açın</string>
     <string name="common_signin_button_text">Daxil olun</string>
     <string name="common_signin_button_text_long">Google ilə daxil olun</string>
-    <string name="joda_time_android_preposition_for_date">%s tarixində</string>
-    <string name="joda_time_android_preposition_for_time">saat %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Axtarın</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

@@ -21,7 +21,7 @@
     <string name="abc_search_hint">शोधा…</string>
     <string name="abc_searchview_description_clear">क्‍वेरी साफ करा</string>
     <string name="abc_searchview_description_query">शोध क्वेरी</string>
-    <string name="abc_searchview_description_search">शोध</string>
+    <string name="abc_searchview_description_search">Search</string>
     <string name="abc_searchview_description_submit">क्वेरी सबमिट करा</string>
     <string name="abc_searchview_description_voice">व्हॉइस शोध</string>
     <string name="abc_shareactionprovider_share_with">यांच्यासोबत शेअर करा</string>
@@ -68,6 +68,6 @@
     <string name="common_open_on_phone">फोनवर उघडा</string>
     <string name="common_signin_button_text">साइन इन करा</string>
     <string name="common_signin_button_text_long">Google सह साइन इन करा</string>
-    <string name="search_menu_title">शोध</string>
+    <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">९९९+</string>
 </resources>

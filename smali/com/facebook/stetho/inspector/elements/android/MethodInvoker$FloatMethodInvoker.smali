@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$FloatMethodInvoker;
+.class public Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$FloatMethodInvoker;
 .super Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$TypedMethodInvoker;
 .source "MethodInvoker.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "FloatMethodInvoker"
 .end annotation
 
@@ -23,10 +23,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 112
+    .line 1
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$TypedMethodInvoker;-><init>(Ljava/lang/Class;)V
@@ -36,10 +36,10 @@
 
 
 # virtual methods
-.method convertArgument(Ljava/lang/String;)Ljava/lang/Float;
+.method public convertArgument(Ljava/lang/String;)Ljava/lang/Float;
     .locals 0
 
-    .line 117
+    .line 2
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p1
@@ -51,10 +51,10 @@
     return-object p1
 .end method
 
-.method bridge synthetic convertArgument(Ljava/lang/String;)Ljava/lang/Object;
+.method public bridge synthetic convertArgument(Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
-    .line 110
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$FloatMethodInvoker;->convertArgument(Ljava/lang/String;)Ljava/lang/Float;
 
     move-result-object p1

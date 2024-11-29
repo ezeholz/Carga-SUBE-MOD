@@ -309,6 +309,7 @@
         <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="actionBarWidgetTheme">@null</item>
+        <item name="actionModeTheme">?actionBarTheme</item>
         <item name="colorPrimary">@color/primary_material_dark</item>
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
@@ -828,6 +829,7 @@
         <item name="actionMenuTextColor">?android:textColorPrimaryDisableOnly</item>
         <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
         <item name="actionModeCloseButtonStyle">@style/Widget.AppCompat.ActionButton.CloseMode</item>
+        <item name="actionModeCloseContentDescription">@string/abc_action_mode_done</item>
         <item name="actionModeCloseDrawable">@drawable/abc_ic_ab_back_material</item>
         <item name="actionModeCopyDrawable">@drawable/abc_ic_menu_copy_mtrl_am_alpha</item>
         <item name="actionModeCutDrawable">@drawable/abc_ic_menu_cut_mtrl_alpha</item>
@@ -836,6 +838,7 @@
         <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
         <item name="actionModeSplitBackground">?colorPrimaryDark</item>
         <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
+        <item name="actionModeTheme">?actionBarTheme</item>
         <item name="actionOverflowButtonStyle">@style/Widget.AppCompat.ActionButton.Overflow</item>
         <item name="actionOverflowMenuStyle">@style/Widget.AppCompat.PopupMenu.Overflow</item>
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
@@ -917,7 +920,6 @@
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
-        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
         <item name="windowActionBar">true</item>
         <item name="windowActionBarOverlay">false</item>
         <item name="windowActionModeOverlay">false</item>
@@ -972,6 +974,7 @@
         <item name="actionMenuTextColor">?android:textColorPrimaryDisableOnly</item>
         <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
         <item name="actionModeCloseButtonStyle">@style/Widget.AppCompat.ActionButton.CloseMode</item>
+        <item name="actionModeCloseContentDescription">@string/abc_action_mode_done</item>
         <item name="actionModeCloseDrawable">@drawable/abc_ic_ab_back_material</item>
         <item name="actionModeCopyDrawable">@drawable/abc_ic_menu_copy_mtrl_am_alpha</item>
         <item name="actionModeCutDrawable">@drawable/abc_ic_menu_cut_mtrl_alpha</item>
@@ -980,6 +983,7 @@
         <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
         <item name="actionModeSplitBackground">?colorPrimaryDark</item>
         <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
+        <item name="actionModeTheme">?actionBarTheme</item>
         <item name="actionOverflowButtonStyle">@style/Widget.AppCompat.Light.ActionButton.Overflow</item>
         <item name="actionOverflowMenuStyle">@style/Widget.AppCompat.Light.PopupMenu.Overflow</item>
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
@@ -1061,7 +1065,6 @@
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
-        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
         <item name="windowActionBar">true</item>
         <item name="windowActionBarOverlay">false</item>
         <item name="windowActionModeOverlay">false</item>
@@ -1135,6 +1138,8 @@
         <item name="android:paddingLeft">@dimen/abc_action_bar_default_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_default_padding_end_material</item>
         <item name="android:minHeight">?actionBarSize</item>
+        <item name="android:paddingStart">@dimen/abc_action_bar_default_padding_start_material</item>
+        <item name="android:paddingEnd">@dimen/abc_action_bar_default_padding_end_material</item>
         <item name="buttonGravity">top</item>
         <item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>
         <item name="collapseIcon">?homeAsUpIndicator</item>
@@ -1213,11 +1218,21 @@
         <item name="srcCompat">@drawable/abc_ic_menu_overflow_material</item>
     </style>
     <style name="Base.Widget.AppCompat.ActionMode" parent="">
+        <item name="android:paddingLeft">@dimen/abc_action_bar_default_padding_start_material</item>
+        <item name="android:paddingRight">@dimen/abc_action_bar_default_padding_end_material</item>
+        <item name="android:minHeight">?actionBarSize</item>
+        <item name="android:paddingStart">@dimen/abc_action_bar_default_padding_start_material</item>
+        <item name="android:paddingEnd">@dimen/abc_action_bar_default_padding_end_material</item>
         <item name="background">?actionModeBackground</item>
         <item name="backgroundSplit">?actionModeSplitBackground</item>
+        <item name="buttonGravity">top</item>
         <item name="closeItemLayout">@layout/abc_action_mode_close_item_material</item>
+        <item name="contentInsetStart">16.0dip</item>
+        <item name="contentInsetStartWithNavigation">@dimen/abc_action_bar_content_inset_with_nav</item>
         <item name="height">?actionBarSize</item>
+        <item name="maxButtonHeight">@dimen/abc_action_bar_default_height_material</item>
         <item name="subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle</item>
+        <item name="titleMargin">4.0dip</item>
         <item name="titleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Title</item>
     </style>
     <style name="Base.Widget.AppCompat.ActivityChooserView" parent="">
@@ -1676,9 +1691,9 @@
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
         <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_dark</item>
-        <item name="android:textSelectHandleLeft">@drawable/abc_text_select_handle_left_mtrl_dark</item>
-        <item name="android:textSelectHandleRight">@drawable/abc_text_select_handle_right_mtrl_dark</item>
-        <item name="android:textSelectHandle">@drawable/abc_text_select_handle_middle_mtrl_dark</item>
+        <item name="android:textSelectHandleLeft">@drawable/abc_text_select_handle_left_mtrl</item>
+        <item name="android:textSelectHandleRight">@drawable/abc_text_select_handle_right_mtrl</item>
+        <item name="android:textSelectHandle">@drawable/abc_text_select_handle_middle_mtrl</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:textColorAlertDialogListItem">@color/abc_primary_text_material_dark</item>
         <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
@@ -1733,9 +1748,9 @@
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
         <item name="android:textColorPrimaryInverseDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
         <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_light</item>
-        <item name="android:textSelectHandleLeft">@drawable/abc_text_select_handle_left_mtrl_light</item>
-        <item name="android:textSelectHandleRight">@drawable/abc_text_select_handle_right_mtrl_light</item>
-        <item name="android:textSelectHandle">@drawable/abc_text_select_handle_middle_mtrl_light</item>
+        <item name="android:textSelectHandleLeft">@drawable/abc_text_select_handle_left_mtrl</item>
+        <item name="android:textSelectHandleRight">@drawable/abc_text_select_handle_right_mtrl</item>
+        <item name="android:textSelectHandle">@drawable/abc_text_select_handle_middle_mtrl</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
         <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
@@ -2136,6 +2151,7 @@
     <style name="Theme.AppCompat.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Dialog.Alert" />
     <style name="Theme.AppCompat.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Dialog.MinWidth" />
     <style name="Theme.AppCompat.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.DialogWhenLarge" />
+    <style name="Theme.AppCompat.Empty" parent="" />
     <style name="Theme.AppCompat.Light" parent="@style/Base.Theme.AppCompat.Light" />
     <style name="Theme.AppCompat.Light.DarkActionBar" parent="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
     <style name="Theme.AppCompat.Light.Dialog" parent="@style/Base.Theme.AppCompat.Light.Dialog" />
@@ -2264,6 +2280,14 @@
     <style name="Theme.MaterialComponents.NoActionBar.Bridge" parent="@style/Theme.MaterialComponents.Bridge">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.PlayCore.Transparent" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
     </style>
     <style name="ThemeOverlay.AppCompat" parent="@style/Base.ThemeOverlay.AppCompat" />
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.ActionBar" />

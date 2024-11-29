@@ -21,24 +21,25 @@
         "Ljava/lang/Object;",
         "Ljava/util/Iterator<",
         "Landroid/view/MenuItem;",
-        ">;"
+        ">;",
+        "Ljava/lang/Object;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $this_iterator:Landroid/view/Menu;
+.field public final synthetic $this_iterator:Landroid/view/Menu;
 
-.field private index:I
+.field public index:I
 
 
 # direct methods
-.method constructor <init>(Landroid/view/Menu;)V
+.method public constructor <init>(Landroid/view/Menu;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/view/MenuKt$iterator$1;->$this_iterator:Landroid/view/Menu;
 
-    .line 70
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,10 +47,10 @@
 
 
 # virtual methods
-.method public final hasNext()Z
+.method public hasNext()Z
     .locals 2
 
-    .line 72
+    .line 1
     iget v0, p0, Landroidx/core/view/MenuKt$iterator$1;->index:I
 
     iget-object v1, p0, Landroidx/core/view/MenuKt$iterator$1;->$this_iterator:Landroid/view/Menu;
@@ -62,18 +63,19 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method public final next()Landroid/view/MenuItem;
+.method public next()Landroid/view/MenuItem;
     .locals 3
 
-    .line 73
+    .line 2
     iget-object v0, p0, Landroidx/core/view/MenuKt$iterator$1;->$this_iterator:Landroid/view/Menu;
 
     iget v1, p0, Landroidx/core/view/MenuKt$iterator$1;->index:I
@@ -98,10 +100,10 @@
     throw v0
 .end method
 
-.method public final bridge synthetic next()Ljava/lang/Object;
+.method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 70
+    .line 1
     invoke-virtual {p0}, Landroidx/core/view/MenuKt$iterator$1;->next()Landroid/view/MenuItem;
 
     move-result-object v0
@@ -109,10 +111,10 @@
     return-object v0
 .end method
 
-.method public final remove()V
+.method public remove()V
     .locals 2
 
-    .line 74
+    .line 1
     iget-object v0, p0, Landroidx/core/view/MenuKt$iterator$1;->$this_iterator:Landroid/view/Menu;
 
     iget v1, p0, Landroidx/core/view/MenuKt$iterator$1;->index:I

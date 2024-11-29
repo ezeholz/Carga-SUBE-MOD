@@ -1,17 +1,17 @@
-.class Landroidx/transition/ViewUtilsBase;
+.class public Landroidx/transition/ViewUtilsBase;
 .super Ljava/lang/Object;
 .source "ViewUtilsBase.java"
 
 
 # instance fields
-.field private mMatrixValues:[F
+.field public mMatrixValues:[F
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 25
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,15 +21,19 @@
 # virtual methods
 .method public clearNonTransitionAlpha(Landroid/view/View;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 56
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 57
+    .line 2
     sget v0, Landroidx/transition/R$id;->save_non_transition_alpha:I
 
     const/4 v1, 0x0
@@ -42,8 +46,12 @@
 
 .method public getTransitionAlpha(Landroid/view/View;)F
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 39
+    .line 1
     sget v0, Landroidx/transition/R$id;->save_non_transition_alpha:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -54,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result p1
@@ -67,7 +75,7 @@
 
     return p1
 
-    .line 43
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
@@ -78,8 +86,12 @@
 
 .method public saveNonTransitionAlpha(Landroid/view/View;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 48
+    .line 1
     sget v0, Landroidx/transition/R$id;->save_non_transition_alpha:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -88,7 +100,7 @@
 
     if-nez v0, :cond_0
 
-    .line 49
+    .line 2
     sget v0, Landroidx/transition/R$id;->save_non_transition_alpha:I
 
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
@@ -107,6 +119,10 @@
 
 .method public setAnimationMatrix(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 9
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -116,7 +132,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 93
+    .line 1
     invoke-virtual {p2}, Landroid/graphics/Matrix;->isIdentity()Z
 
     move-result v3
@@ -125,7 +141,7 @@
 
     goto :goto_1
 
-    .line 102
+    .line 2
     :cond_0
     iget-object v3, p0, Landroidx/transition/ViewUtilsBase;->mMatrixValues:[F
 
@@ -135,16 +151,16 @@
 
     new-array v3, v3, [F
 
-    .line 104
+    .line 3
     iput-object v3, p0, Landroidx/transition/ViewUtilsBase;->mMatrixValues:[F
 
-    .line 106
+    .line 4
     :cond_1
     invoke-virtual {p2, v3}, Landroid/graphics/Matrix;->getValues([F)V
 
     const/4 p2, 0x3
 
-    .line 107
+    .line 5
     aget p2, v3, p2
 
     mul-float v4, p2, p2
@@ -153,7 +169,7 @@
 
     float-to-double v4, v0
 
-    .line 108
+    .line 6
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v4
@@ -184,7 +200,7 @@
 
     float-to-double v7, v0
 
-    .line 110
+    .line 7
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v5
@@ -195,50 +211,50 @@
 
     double-to-float p2, v5
 
-    .line 111
+    .line 8
     aget v4, v3, v4
 
     div-float/2addr v4, v0
 
     const/4 v5, 0x4
 
-    .line 112
+    .line 9
     aget v5, v3, v5
 
     div-float/2addr v5, v0
 
-    .line 113
+    .line 10
     aget v0, v3, v1
 
     const/4 v1, 0x5
 
-    .line 114
+    .line 11
     aget v1, v3, v1
 
-    .line 115
+    .line 12
     invoke-virtual {p1, v2}, Landroid/view/View;->setPivotX(F)V
 
-    .line 116
+    .line 13
     invoke-virtual {p1, v2}, Landroid/view/View;->setPivotY(F)V
 
-    .line 117
+    .line 14
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 118
+    .line 15
     invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 119
+    .line 16
     invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
 
-    .line 120
+    .line 17
     invoke-virtual {p1, v4}, Landroid/view/View;->setScaleX(F)V
 
-    .line 121
+    .line 18
     invoke-virtual {p1, v5}, Landroid/view/View;->setScaleY(F)V
 
-    return-void
+    goto :goto_2
 
-    .line 94
+    .line 19
     :cond_3
     :goto_1
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -251,7 +267,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setPivotX(F)V
 
-    .line 95
+    .line 20
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p2
@@ -262,37 +278,38 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setPivotY(F)V
 
-    .line 96
+    .line 21
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 97
+    .line 22
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 98
+    .line 23
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 99
+    .line 24
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 100
+    .line 25
     invoke-virtual {p1, v2}, Landroid/view/View;->setRotation(F)V
 
+    :goto_2
     return-void
 .end method
 
 .method public setLeftTopRightBottom(Landroid/view/View;IIII)V
     .locals 0
 
-    .line 126
+    .line 1
     invoke-virtual {p1, p2}, Landroid/view/View;->setLeft(I)V
 
-    .line 127
+    .line 2
     invoke-virtual {p1, p3}, Landroid/view/View;->setTop(I)V
 
-    .line 128
+    .line 3
     invoke-virtual {p1, p4}, Landroid/view/View;->setRight(I)V
 
-    .line 129
+    .line 4
     invoke-virtual {p1, p5}, Landroid/view/View;->setBottom(I)V
 
     return-void
@@ -300,8 +317,12 @@
 
 .method public setTransitionAlpha(Landroid/view/View;F)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 30
+    .line 1
     sget v0, Landroidx/transition/R$id;->save_non_transition_alpha:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -312,7 +333,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 32
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
@@ -321,35 +342,44 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    return-void
+    goto :goto_0
 
-    .line 34
+    .line 3
     :cond_0
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
+    :goto_0
     return-void
 .end method
 
 .method public transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 62
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 63
+    .line 2
     instance-of v1, v0, Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 64
+    .line 3
     check-cast v0, Landroid/view/View;
 
-    .line 65
+    .line 4
     invoke-virtual {p0, v0, p2}, Landroidx/transition/ViewUtilsBase;->transformMatrixToGlobal(Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    .line 66
+    .line 5
     invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
 
     move-result v1
@@ -368,7 +398,7 @@
 
     invoke-virtual {p2, v1, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    .line 68
+    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -384,19 +414,19 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    .line 69
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object p1
 
-    .line 70
+    .line 8
     invoke-virtual {p1}, Landroid/graphics/Matrix;->isIdentity()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 71
+    .line 9
     invoke-virtual {p2, p1}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
     :cond_1
@@ -405,24 +435,32 @@
 
 .method public transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 76
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 77
+    .line 2
     instance-of v1, v0, Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 78
+    .line 3
     check-cast v0, Landroid/view/View;
 
-    .line 79
+    .line 4
     invoke-virtual {p0, v0, p2}, Landroidx/transition/ViewUtilsBase;->transformMatrixToLocal(Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    .line 80
+    .line 5
     invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
 
     move-result v1
@@ -437,7 +475,7 @@
 
     invoke-virtual {p2, v1, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 82
+    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -453,31 +491,31 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 83
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object p1
 
-    .line 84
+    .line 8
     invoke-virtual {p1}, Landroid/graphics/Matrix;->isIdentity()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 85
+    .line 9
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 86
+    .line 10
     invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 87
+    .line 11
     invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
     :cond_1

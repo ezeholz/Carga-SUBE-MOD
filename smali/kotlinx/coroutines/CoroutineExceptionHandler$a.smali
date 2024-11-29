@@ -3,7 +3,7 @@
 .source "CoroutineExceptionHandler.kt"
 
 # interfaces
-.implements Lkotlin/b/f$c;
+.implements Lj/k/f$b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/b/f$c<",
+        "Lj/k/f$b<",
         "Lkotlinx/coroutines/CoroutineExceptionHandler;",
         ">;"
     }
@@ -27,14 +27,14 @@
 
 
 # static fields
-.field static final synthetic a:Lkotlinx/coroutines/CoroutineExceptionHandler$a;
+.field public static final synthetic a:Lkotlinx/coroutines/CoroutineExceptionHandler$a;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 73
+    .line 1
     new-instance v0, Lkotlinx/coroutines/CoroutineExceptionHandler$a;
 
     invoke-direct {v0}, Lkotlinx/coroutines/CoroutineExceptionHandler$a;-><init>()V
@@ -44,10 +44,10 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 73
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

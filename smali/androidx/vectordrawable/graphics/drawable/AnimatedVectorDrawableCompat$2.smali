@@ -1,4 +1,4 @@
-.class Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$2;
+.class public Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$2;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "AnimatedVectorDrawableCompat.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
+.field public final synthetic this$0:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
 
 # direct methods
-.method constructor <init>(Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;)V
+.method public constructor <init>(Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;)V
     .locals 0
 
-    .line 788
+    .line 1
     iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$2;->this$0:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 801
+    .line 1
     new-instance p1, Ljava/util/ArrayList;
 
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$2;->this$0:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
@@ -44,7 +44,7 @@
 
     invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 803
+    .line 2
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -54,7 +54,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 805
+    .line 3
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -76,7 +76,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 791
+    .line 1
     new-instance p1, Ljava/util/ArrayList;
 
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat$2;->this$0:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
@@ -85,7 +85,7 @@
 
     invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 793
+    .line 2
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -95,7 +95,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 795
+    .line 3
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2

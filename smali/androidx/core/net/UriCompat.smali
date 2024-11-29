@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 28
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,13 +15,19 @@
 
 .method public static toSafeString(Landroid/net/Uri;)Ljava/lang/String;
     .locals 7
+    .param p0    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 40
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 41
+    .line 2
     invoke-virtual {p0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v1
@@ -34,7 +40,7 @@
 
     const-string v4, "tel"
 
-    .line 43
+    .line 3
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
@@ -51,7 +57,7 @@
 
     const-string v4, "sms"
 
-    .line 44
+    .line 4
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
@@ -68,7 +74,7 @@
 
     const-string v4, "mailto"
 
-    .line 45
+    .line 5
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
@@ -88,7 +94,7 @@
     :cond_0
     const-string v4, "http"
 
-    .line 60
+    .line 6
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
@@ -105,7 +111,7 @@
 
     const-string v4, "ftp"
 
-    .line 61
+    .line 7
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
@@ -120,13 +126,13 @@
 
     if-eqz v4, :cond_8
 
-    .line 62
     :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "//"
 
-    const-string v4, "//"
+    .line 8
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     invoke-virtual {p0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
@@ -148,7 +154,7 @@
     :goto_0
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
+    .line 9
     invoke-virtual {p0}, Landroid/net/Uri;->getPort()I
 
     move-result v4
@@ -157,11 +163,11 @@
 
     if-eq v4, v6, :cond_3
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const-string v4, ":"
 
-    const-string v5, ":"
+    invoke-static {v4}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v4
 
     invoke-virtual {p0}, Landroid/net/Uri;->getPort()I
 
@@ -174,36 +180,32 @@
     move-result-object v5
 
     :cond_3
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     const-string p0, "/..."
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v5, p0}, Lg/b/a/a/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_5
 
-    .line 46
+    .line 10
     :cond_4
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 47
+    .line 11
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
+    .line 12
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     if-eqz v1, :cond_7
 
     const/4 v0, 0x0
 
-    .line 50
+    .line 13
     :goto_2
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -211,7 +213,7 @@
 
     if-ge v0, v2, :cond_7
 
-    .line 51
+    .line 14
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -231,12 +233,12 @@
     :cond_5
     const/16 v2, 0x78
 
-    .line 55
+    .line 15
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_4
 
-    .line 53
+    .line 16
     :cond_6
     :goto_3
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -246,7 +248,7 @@
 
     goto :goto_2
 
-    .line 59
+    .line 17
     :cond_7
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -254,7 +256,7 @@
 
     return-object p0
 
-    .line 70
+    .line 18
     :cond_8
     :goto_5
     new-instance p0, Ljava/lang/StringBuilder;
@@ -263,19 +265,19 @@
 
     if-eqz v0, :cond_9
 
-    .line 72
+    .line 19
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 73
+    .line 20
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_9
     if-eqz v1, :cond_a
 
-    .line 76
+    .line 21
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 78
+    .line 22
     :cond_a
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

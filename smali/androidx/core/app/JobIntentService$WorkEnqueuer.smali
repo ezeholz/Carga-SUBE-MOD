@@ -1,4 +1,4 @@
-.class abstract Landroidx/core/app/JobIntentService$WorkEnqueuer;
+.class public abstract Landroidx/core/app/JobIntentService$WorkEnqueuer;
 .super Ljava/lang/Object;
 .source "JobIntentService.java"
 
@@ -9,27 +9,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x408
+    accessFlags = 0x409
     name = "WorkEnqueuer"
 .end annotation
 
 
 # instance fields
-.field final mComponentName:Landroid/content/ComponentName;
+.field public final mComponentName:Landroid/content/ComponentName;
 
-.field mHasJobId:Z
+.field public mHasJobId:Z
 
-.field mJobId:I
+.field public mJobId:I
 
 
 # direct methods
-.method constructor <init>(Landroid/content/ComponentName;)V
+.method public constructor <init>(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 122
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 123
+    .line 2
     iput-object p1, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -37,56 +37,53 @@
 
 
 # virtual methods
-.method abstract enqueueWork(Landroid/content/Intent;)V
+.method public abstract enqueueWork(Landroid/content/Intent;)V
 .end method
 
-.method ensureJobId(I)V
+.method public ensureJobId(I)V
     .locals 3
 
-    .line 127
+    .line 1
     iget-boolean v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mHasJobId:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 128
+    .line 2
     iput-boolean v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mHasJobId:Z
 
-    .line 129
+    .line 3
     iput p1, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mJobId:I
 
-    return-void
+    goto :goto_0
 
-    .line 130
+    .line 4
     :cond_0
     iget v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mJobId:I
 
     if-ne v0, p1, :cond_1
 
+    :goto_0
     return-void
 
-    .line 131
+    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Given job ID "
 
-    const-string v2, "Given job ID "
+    const-string v2, " is different than previous "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, p1, v2}, Lg/b/a/a/a;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string p1, " is different than previous "
+    iget v1, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mJobId:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget p1, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mJobId:I
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 

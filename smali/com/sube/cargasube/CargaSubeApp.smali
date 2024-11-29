@@ -3,15 +3,11 @@
 .source "CargaSubeApp.java"
 
 
-# static fields
-.field private static a:Lcom/google/firebase/analytics/FirebaseAnalytics;
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 1
     invoke-direct {p0}, Landroidx/multidex/MultiDexApplication;-><init>()V
 
     return-void
@@ -22,12 +18,14 @@
 .method public onCreate()V
     .locals 3
 
-    .line 21
-    invoke-static {p0}, Lcom/google/android/play/core/missingsplits/b;->a(Landroid/content/Context;)Lcom/google/android/play/core/missingsplits/a;
+    .line 1
+    invoke-static {p0}, Lg/d/a/d/a/e/b;->a(Landroid/content/Context;)Lg/d/a/d/a/e/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/google/android/play/core/missingsplits/a;->a()Z
+    check-cast v0, Lg/d/a/d/a/e/d;
+
+    invoke-virtual {v0}, Lg/d/a/d/a/e/d;->a()Z
 
     move-result v0
 
@@ -35,21 +33,17 @@
 
     return-void
 
-    .line 26
+    .line 2
     :cond_0
-    invoke-super {p0}, Landroidx/multidex/MultiDexApplication;->onCreate()V
+    invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
-    .line 36
+    .line 3
     invoke-static {p0}, Lcom/sube/cargasube/State;->getInstance(Landroid/content/Context;)Lcom/sube/cargasube/State;
 
-    .line 44
+    .line 4
     invoke-static {p0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/firebase/analytics/FirebaseAnalytics;
 
-    move-result-object v0
-
-    sput-object v0, Lcom/sube/cargasube/CargaSubeApp;->a:Lcom/google/firebase/analytics/FirebaseAnalytics;
-
-    .line 45
+    .line 5
     invoke-static {p0}, Lcom/sube/cargasube/user/UserInfo;->getInstance(Landroid/content/Context;)Lcom/sube/cargasube/user/UserInfo;
 
     move-result-object v0
@@ -60,7 +54,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 46
+    .line 6
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -69,15 +63,15 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 47
+    .line 7
     invoke-static {v2}, Landroidx/appcompat/app/AppCompatDelegate;->setDefaultNightMode(I)V
 
-    return-void
+    goto :goto_0
 
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 48
+    .line 8
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -86,9 +80,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 49
+    .line 9
     invoke-static {v1}, Landroidx/appcompat/app/AppCompatDelegate;->setDefaultNightMode(I)V
 
     :cond_2
+    :goto_0
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;
+.class public Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;
 .super Ljava/lang/Object;
 .source "Snapshot.java"
 
@@ -9,55 +9,55 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Connection"
 .end annotation
 
 
 # instance fields
-.field private mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+.field public mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-.field private mCreator:I
+.field public mCreator:I
 
-.field private mMargin:I
+.field public mMargin:I
 
-.field private mStrengh:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
+.field public mStrengh:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
 
-.field private mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
+.field public mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;)V
     .locals 1
 
-    .line 47
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    .line 49
+    .line 3
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getTarget()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    .line 50
+    .line 4
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getMargin()I
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mMargin:I
 
-    .line 51
+    .line 5
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getStrength()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mStrengh:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
 
-    .line 52
+    .line 6
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getConnectionCreator()I
 
     move-result p1
@@ -72,7 +72,7 @@
 .method public applyTo(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
     .locals 4
 
-    .line 81
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getType()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    .line 82
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     iget v1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mMargin:I
@@ -100,7 +100,7 @@
 .method public updateFrom(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
     .locals 1
 
-    .line 61
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getType()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Type;
@@ -115,14 +115,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 63
+    .line 2
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getTarget()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
-    .line 64
+    .line 3
     iget-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getMargin()I
@@ -131,7 +131,7 @@
 
     iput p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mMargin:I
 
-    .line 65
+    .line 4
     iget-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getStrength()Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
@@ -140,7 +140,7 @@
 
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mStrengh:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
 
-    .line 66
+    .line 5
     iget-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mAnchor:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;->getConnectionCreator()I
@@ -149,26 +149,27 @@
 
     iput p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mCreator:I
 
-    return-void
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 68
+    .line 6
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mTarget:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor;
 
     const/4 p1, 0x0
 
-    .line 69
+    .line 7
     iput p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mMargin:I
 
-    .line 70
+    .line 8
     sget-object v0, Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;->STRONG:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mStrengh:Landroidx/constraintlayout/solver/widgets/ConstraintAnchor$Strength;
 
-    .line 71
+    .line 9
     iput p1, p0, Landroidx/constraintlayout/solver/widgets/Snapshot$Connection;->mCreator:I
 
+    :goto_0
     return-void
 .end method

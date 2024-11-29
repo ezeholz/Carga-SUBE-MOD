@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/DOMStorage$DOMStorageAssignmentException;
+.class public Lcom/facebook/stetho/inspector/protocol/module/DOMStorage$DOMStorageAssignmentException;
 .super Ljava/lang/Exception;
 .source "DOMStorage.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DOMStorageAssignmentException"
 .end annotation
 
@@ -18,7 +18,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 232
+    .line 1
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     return-void

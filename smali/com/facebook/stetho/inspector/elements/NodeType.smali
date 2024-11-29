@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/facebook/stetho/inspector/elements/NodeType;
+.field public static final synthetic $VALUES:[Lcom/facebook/stetho/inspector/elements/NodeType;
 
 .field public static final enum COMMENT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
@@ -32,14 +32,14 @@
 
 
 # instance fields
-.field private final mValue:I
+.field public final mValue:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 11
 
-    .line 15
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const/4 v1, 0x0
@@ -52,7 +52,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->ELEMENT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 16
+    .line 2
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const/4 v3, 0x3
@@ -63,7 +63,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->TEXT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 17
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const/4 v4, 0x7
@@ -76,7 +76,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->PROCESSING_INSTRUCTION_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 18
+    .line 4
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const-string v6, "COMMENT_NODE"
@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->COMMENT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 19
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const/4 v6, 0x4
@@ -100,7 +100,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->DOCUMENT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 20
+    .line 6
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const/4 v7, 0x5
@@ -113,7 +113,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->DOCUMENT_TYPE_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 21
+    .line 7
     new-instance v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     const/4 v8, 0x6
@@ -128,7 +128,7 @@
 
     new-array v4, v4, [Lcom/facebook/stetho/inspector/elements/NodeType;
 
-    .line 14
+    .line 8
     sget-object v9, Lcom/facebook/stetho/inspector/elements/NodeType;->ELEMENT_NODE:Lcom/facebook/stetho/inspector/elements/NodeType;
 
     aput-object v9, v4, v1
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -168,10 +168,10 @@
         }
     .end annotation
 
-    .line 25
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 26
+    .line 2
     iput p3, p0, Lcom/facebook/stetho/inspector/elements/NodeType;->mValue:I
 
     return-void
@@ -180,7 +180,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/stetho/inspector/elements/NodeType;
     .locals 1
 
-    .line 14
+    .line 1
     const-class v0, Lcom/facebook/stetho/inspector/elements/NodeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -195,7 +195,7 @@
 .method public static values()[Lcom/facebook/stetho/inspector/elements/NodeType;
     .locals 1
 
-    .line 14
+    .line 1
     sget-object v0, Lcom/facebook/stetho/inspector/elements/NodeType;->$VALUES:[Lcom/facebook/stetho/inspector/elements/NodeType;
 
     invoke-virtual {v0}, [Lcom/facebook/stetho/inspector/elements/NodeType;->clone()Ljava/lang/Object;
@@ -209,12 +209,12 @@
 
 
 # virtual methods
-.method public final getProtocolValue()I
+.method public getProtocolValue()I
     .locals 1
     .annotation runtime Lcom/facebook/stetho/json/annotation/JsonValue;
     .end annotation
 
-    .line 31
+    .line 1
     iget v0, p0, Lcom/facebook/stetho/inspector/elements/NodeType;->mValue:I
 
     return v0

@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTransition$2;
+.class public Landroidx/fragment/app/FragmentTransition$2;
 .super Ljava/lang/Object;
 .source "FragmentTransition.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$exitingViews:Ljava/util/ArrayList;
+.field public final synthetic val$exitingViews:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/ArrayList;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 329
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$2;->val$exitingViews:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,10 +35,10 @@
 
 
 # virtual methods
-.method public final run()V
+.method public run()V
     .locals 2
 
-    .line 332
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$2;->val$exitingViews:Ljava/util/ArrayList;
 
     const/4 v1, 0x4

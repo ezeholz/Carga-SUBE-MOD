@@ -17,7 +17,7 @@
 
 
 # static fields
-.field private static final invokers:Ljava/util/List;
+.field public static final invokers:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -29,14 +29,14 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$TypedMethodInvoker;
 
-    .line 26
+    .line 1
     new-instance v1, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$StringMethodInvoker;
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$StringMethodInvoker;-><init>()V
@@ -89,7 +89,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 24
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -100,10 +100,10 @@
 .method public invoke(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 38
+    .line 1
     invoke-static {p1, p2, p3}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 39
+    .line 2
     sget-object v0, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker;->invokers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -115,7 +115,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 41
+    .line 3
     sget-object v2, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker;->invokers:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -124,7 +124,7 @@
 
     check-cast v2, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$TypedMethodInvoker;
 
-    .line 42
+    .line 4
     invoke-virtual {v2, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/android/MethodInvoker$TypedMethodInvoker;->invoke(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
@@ -138,13 +138,15 @@
 
     goto :goto_0
 
-    .line 46
+    .line 5
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string p3, "Method with name "
 
-    invoke-direct {p1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

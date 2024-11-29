@@ -19,42 +19,38 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
+.method public static synthetic access$000(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->doErrorPrint(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static doErrorPrint(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
+.method public static doErrorPrint(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
     .locals 1
 
-    .line 112
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "\n"
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 1
+    invoke-static {p2, v0}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "\n"
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->readAsUTF8(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -63,10 +59,10 @@
     return-void
 .end method
 
-.method private static getErrorAsyncPrettyPrinter(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
+.method public static getErrorAsyncPrettyPrinter(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
     .locals 1
 
-    .line 118
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$2;
 
     invoke-direct {v0, p0, p1}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$2;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -74,10 +70,10 @@
     return-object v0
 .end method
 
-.method private static parseURL(Ljava/lang/String;)Ljava/net/URL;
+.method public static parseURL(Ljava/lang/String;)Ljava/net/URL;
     .locals 1
 
-    .line 104
+    .line 1
     :try_start_0
     new-instance v0, Ljava/net/URL;
 
@@ -95,13 +91,13 @@
 
 
 # virtual methods
-.method protected abstract doPrint(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
+.method public abstract doPrint(Ljava/io/PrintWriter;Ljava/io/InputStream;Ljava/lang/String;)V
 .end method
 
 .method public getInstance(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
     .locals 3
 
-    .line 28
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->matchAndParseHeader(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;
 
     move-result-object v0
@@ -112,27 +108,27 @@
 
     return-object v1
 
-    .line 32
+    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;->getSchemaUri()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 33
+    .line 3
     invoke-static {v2}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->parseURL(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    .line 35
+    .line 4
     invoke-static {p1, p2}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;->getErrorAsyncPrettyPrinter(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
 
     move-result-object p1
 
     return-object p1
 
-    .line 37
+    .line 5
     :cond_1
     invoke-static {}, Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinterExecutorHolder;->getExecutorService()Ljava/util/concurrent/ExecutorService;
 
@@ -142,7 +138,7 @@
 
     return-object v1
 
-    .line 42
+    .line 6
     :cond_2
     new-instance p2, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$Request;
 
@@ -152,7 +148,7 @@
 
     move-result-object p1
 
-    .line 43
+    .line 7
     new-instance p2, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;
 
     invoke-direct {p2, p0, p1, v0}, Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$1;-><init>(Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory;Ljava/util/concurrent/Future;Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;)V
@@ -160,5 +156,5 @@
     return-object p2
 .end method
 
-.method protected abstract matchAndParseHeader(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;
+.method public abstract matchAndParseHeader(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/DownloadingAsyncPrettyPrinterFactory$MatchResult;
 .end method

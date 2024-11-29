@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;
+.class public Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;
 .super Ljava/lang/Object;
 .source "RecyclerView.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
     .locals 0
 
-    .line 7559
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public getChildAt(I)Landroid/view/View;
     .locals 1
 
-    .line 7562
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
@@ -51,21 +51,21 @@
 .method public getChildEnd(Landroid/view/View;)I
     .locals 2
 
-    .line 7585
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
-    .line 7586
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedRight(Landroid/view/View;)I
 
     move-result p1
 
-    iget v0, v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->rightMargin:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     add-int/2addr p1, v0
 
@@ -75,21 +75,21 @@
 .method public getChildStart(Landroid/view/View;)I
     .locals 2
 
-    .line 7578
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
-    .line 7579
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedLeft(Landroid/view/View;)I
 
     move-result p1
 
-    iget v0, v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->leftMargin:I
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     sub-int/2addr p1, v0
 
@@ -99,7 +99,7 @@
 .method public getParentEnd()I
     .locals 2
 
-    .line 7572
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidth()I
@@ -120,7 +120,7 @@
 .method public getParentStart()I
     .locals 1
 
-    .line 7567
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$1;->this$0:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingLeft()I

@@ -27,16 +27,16 @@
 
 
 # instance fields
-.field expandedMenuItemId:I
+.field public expandedMenuItemId:I
 
-.field isOverflowOpen:Z
+.field public isOverflowOpen:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 2425
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/Toolbar$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/Toolbar$SavedState$1;-><init>()V
@@ -51,7 +51,7 @@
 
     const/4 v0, 0x0
 
-    .line 2405
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/Toolbar$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
@@ -60,17 +60,17 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
-    .line 2409
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 2410
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
     iput p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
 
-    .line 2411
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -93,7 +93,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 2415
+    .line 5
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -104,15 +104,15 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 2420
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2421
+    .line 2
     iget p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->expandedMenuItemId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2422
+    .line 3
     iget-boolean p2, p0, Landroidx/appcompat/widget/Toolbar$SavedState;->isOverflowOpen:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

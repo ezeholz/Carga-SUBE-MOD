@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.sube.cargasube" platformBuildVersionCode="31" platformBuildVersionName="12">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.sube.cargasube" platformBuildVersionCode="33" platformBuildVersionName="13">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-feature android:name="android.hardware.nfc" android:required="true"/>
@@ -11,10 +11,11 @@
     <permission android:name="com.sube.cargasube.permission.RSYS_SHOW_IAM" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.sube.cargasube.CargaSubeApp" android:supportsRtl="true" android:theme="@style/AppTheme">
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.sube.cargasube.gui.splash.view.SplashActivity" android:screenOrientation="portrait" android:theme="@style/SplashTheme">
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.sube.cargasube.gui.splash.SplashActivity" android:screenOrientation="portrait" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -24,12 +25,13 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity-alias android:exported="false" android:name="com.sube.cargasube.SplashActivity" android:targetActivity="com.sube.cargasube.gui.splash.view.SplashActivity">
+        <activity-alias android:exported="true" android:name="com.sube.cargasube.SplashActivity" android:targetActivity="com.sube.cargasube.gui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
+        <activity android:launchMode="singleInstance" android:name="com.sube.cargasube.gui.shutdown.view.ShutdownActivity" android:screenOrientation="portrait"/>
         <activity android:launchMode="singleInstance" android:name="com.sube.cargasube.gui.tutorial.TutorialFragmentActivity" android:screenOrientation="portrait"/>
         <activity android:launchMode="singleInstance" android:name="com.sube.cargasube.gui.login.pre_form.PreFormLoginActivity" android:screenOrientation="portrait" android:theme="@style/AppThemeLight"/>
         <activity android:name="com.sube.cargasube.gui.menu.uses_extended.LastUsesExtendedActivity" android:screenOrientation="portrait"/>
@@ -79,10 +81,15 @@
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
         <provider android:authorities="com.sube.cargasube.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
         <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11003"/>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"/>
         <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
         <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
         <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
         <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
-        <meta-data android:name="com.android.vending.derived.apk.id" android:value="6"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="7"/>
     </application>
 </manifest>

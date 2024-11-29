@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
+.field public final mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/facebook/stetho/inspector/network/MimeMatcher<",
@@ -19,24 +19,24 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 17
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
+    .line 2
     new-instance v0, Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/network/MimeMatcher;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
-    .line 19
+    .line 3
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->STYLESHEET:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
 
     const-string v2, "text/css"
 
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->addRule(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 20
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->IMAGE:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -45,7 +45,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->addRule(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 21
+    .line 5
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->SCRIPT:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -54,7 +54,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->addRule(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 25
+    .line 6
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->XHR:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->addRule(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 26
+    .line 7
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->XHR:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -72,7 +72,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->addRule(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 29
+    .line 8
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->DOCUMENT:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->addRule(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 33
+    .line 9
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->OTHER:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -98,12 +98,12 @@
 .method public determineResourceType(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
     .locals 1
 
-    .line 37
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->stripContentExtras(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 38
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResourceTypeHelper;->mMimeMatcher:Lcom/facebook/stetho/inspector/network/MimeMatcher;
 
     invoke-virtual {v0, p1}, Lcom/facebook/stetho/inspector/network/MimeMatcher;->match(Ljava/lang/String;)Ljava/lang/Object;
@@ -120,7 +120,7 @@
 
     const/16 v0, 0x3b
 
-    .line 47
+    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -129,7 +129,7 @@
 
     const/4 v1, 0x0
 
-    .line 48
+    .line 2
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p1

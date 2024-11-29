@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/ShareHashtag$a;
+        Lcom/facebook/share/model/ShareHashtag$b;
     }
 .end annotation
 
@@ -27,59 +27,50 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 60
-    new-instance v0, Lcom/facebook/share/model/ShareHashtag$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareHashtag$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareHashtag$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareHashtag$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareHashtag;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 38
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/model/ShareHashtag;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/share/model/ShareHashtag;->d:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/facebook/share/model/ShareHashtag$a;)V
+.method public synthetic constructor <init>(Lcom/facebook/share/model/ShareHashtag$b;Lcom/facebook/share/model/ShareHashtag$a;)V
     .locals 0
 
-    .line 34
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1073
-    iget-object p1, p1, Lcom/facebook/share/model/ShareHashtag$a;->a:Ljava/lang/String;
+    .line 2
+    iget-object p1, p1, Lcom/facebook/share/model/ShareHashtag$b;->a:Ljava/lang/String;
 
-    .line 35
-    iput-object p1, p0, Lcom/facebook/share/model/ShareHashtag;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/facebook/share/model/ShareHashtag$a;B)V
-    .locals 0
-
-    .line 30
-    invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareHashtag;-><init>(Lcom/facebook/share/model/ShareHashtag$a;)V
+    .line 3
+    iput-object p1, p0, Lcom/facebook/share/model/ShareHashtag;->d:Ljava/lang/String;
 
     return-void
 .end method
@@ -97,8 +88,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 56
-    iget-object p2, p0, Lcom/facebook/share/model/ShareHashtag;->a:Ljava/lang/String;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/model/ShareHashtag;->d:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

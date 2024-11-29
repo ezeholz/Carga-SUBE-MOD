@@ -45,10 +45,6 @@
     <string name="common_open_on_phone">Отвори на телефону</string>
     <string name="common_signin_button_text">Пријави ме</string>
     <string name="common_signin_button_text_long">Пријави ме на Google</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">дана %s</string>
-    <string name="joda_time_android_preposition_for_time">у %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Претражите</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

@@ -14,37 +14,37 @@
 
 
 # static fields
-.field public static final bottom:I = 0x7f0a0055
+.field public static final bottom:I = 0x7f0a0056
 
-.field public static final end:I = 0x7f0a0099
+.field public static final end:I = 0x7f0a009b
 
-.field public static final gone:I = 0x7f0a00ae
+.field public static final gone:I = 0x7f0a00b0
 
-.field public static final invisible:I = 0x7f0a00d8
+.field public static final invisible:I = 0x7f0a00db
 
-.field public static final left:I = 0x7f0a00ec
+.field public static final left:I = 0x7f0a00ef
 
-.field public static final packed:I = 0x7f0a012d
+.field public static final packed:I = 0x7f0a0132
 
-.field public static final parent:I = 0x7f0a0132
+.field public static final parent:I = 0x7f0a0137
 
-.field public static final percent:I = 0x7f0a0137
+.field public static final percent:I = 0x7f0a013c
 
-.field public static final right:I = 0x7f0a0142
+.field public static final right:I = 0x7f0a014a
 
-.field public static final spread:I = 0x7f0a016f
+.field public static final spread:I = 0x7f0a0179
 
-.field public static final spread_inside:I = 0x7f0a0170
+.field public static final spread_inside:I = 0x7f0a017a
 
-.field public static final start:I = 0x7f0a0175
+.field public static final start:I = 0x7f0a017f
 
-.field public static final top:I = 0x7f0a01c9
+.field public static final top:I = 0x7f0a01d6
 
-.field public static final wrap:I = 0x7f0a01e0
+.field public static final wrap:I = 0x7f0a01f0
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

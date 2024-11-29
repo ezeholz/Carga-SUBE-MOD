@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 22
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +16,7 @@
 .method public static findChildIndex(Landroid/view/ViewGroup;Landroid/view/View;)I
     .locals 3
 
-    .line 26
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -26,7 +26,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 28
+    .line 2
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2

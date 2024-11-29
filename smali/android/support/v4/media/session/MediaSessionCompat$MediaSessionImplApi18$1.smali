@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18$1;
+.class public Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18$1;
 .super Ljava/lang/Object;
 .source "MediaSessionCompat.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;
+.field public final synthetic this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;)V
+.method public constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;)V
     .locals 0
 
-    .line 3226
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public onPlaybackPositionUpdate(J)V
     .locals 6
 
-    .line 3229
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;
 
-    .line 3230
+    .line 2
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
@@ -54,8 +54,8 @@
 
     const/4 v5, 0x0
 
-    .line 3229
-    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi18;->postToHandler(IIILjava/lang/Object;Landroid/os/Bundle;)V
+    .line 3
+    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->postToHandler(IIILjava/lang/Object;Landroid/os/Bundle;)V
 
     return-void
 .end method

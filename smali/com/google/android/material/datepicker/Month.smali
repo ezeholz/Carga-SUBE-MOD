@@ -3,18 +3,18 @@
 .source "Month.java"
 
 # interfaces
-.implements Landroid/os/Parcelable;
 .implements Ljava/lang/Comparable;
+.implements Landroid/os/Parcelable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Landroid/os/Parcelable;",
         "Ljava/lang/Comparable<",
         "Lcom/google/android/material/datepicker/Month;",
-        ">;"
+        ">;",
+        "Landroid/os/Parcelable;"
     }
 .end annotation
 
@@ -32,59 +32,69 @@
 
 
 # instance fields
-.field final a:Ljava/util/Calendar;
+.field public final d:Ljava/util/Calendar;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field final b:Ljava/lang/String;
+.field public final e:Ljava/lang/String;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field final c:I
+.field public final f:I
 
-.field final d:I
+.field public final g:I
 
-.field final e:I
+.field public final h:I
 
-.field final f:I
+.field public final i:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 191
-    new-instance v0, Lcom/google/android/material/datepicker/Month$1;
+    .line 1
+    new-instance v0, Lcom/google/android/material/datepicker/Month$a;
 
-    invoke-direct {v0}, Lcom/google/android/material/datepicker/Month$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/datepicker/Month$a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/datepicker/Month;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/util/Calendar;)V
+.method public constructor <init>(Ljava/util/Calendar;)V
     .locals 3
+    .param p1    # Ljava/util/Calendar;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 58
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 2
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
-    .line 60
+    .line 3
     invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcom/google/android/material/datepicker/d;->a(J)J
+    invoke-static {v1, v2}, Lg/d/a/b/d/m/q/a;->a(J)J
 
     move-result-wide v1
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 61
-    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 4
+    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     const/4 v0, 0x2
 
@@ -92,10 +102,10 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/datepicker/Month;->c:I
+    iput p1, p0, Lcom/google/android/material/datepicker/Month;->f:I
 
-    .line 62
-    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 5
+    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     const/4 v0, 0x1
 
@@ -103,10 +113,10 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/datepicker/Month;->d:I
+    iput p1, p0, Lcom/google/android/material/datepicker/Month;->g:I
 
-    .line 63
-    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 6
+    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     const/4 v0, 0x7
 
@@ -114,10 +124,10 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/datepicker/Month;->e:I
+    iput p1, p0, Lcom/google/android/material/datepicker/Month;->h:I
 
-    .line 64
-    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 7
+    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     const/4 v0, 0x5
 
@@ -125,12 +135,12 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/google/android/material/datepicker/Month;->f:I
+    iput p1, p0, Lcom/google/android/material/datepicker/Month;->i:I
 
-    .line 65
+    .line 8
     new-instance p1, Ljava/text/SimpleDateFormat;
 
-    .line 66
+    .line 9
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -139,7 +149,7 @@
 
     invoke-direct {p1, v1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
@@ -149,22 +159,55 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/datepicker/Month;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/Month;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a()Lcom/google/android/material/datepicker/Month;
-    .locals 3
+.method public static a(II)Lcom/google/android/material/datepicker/Month;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 100
+    .line 1
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
+
+    const/4 v1, 0x1
+
+    .line 3
+    invoke-virtual {v0, v1, p0}, Ljava/util/Calendar;->set(II)V
+
+    const/4 p0, 0x2
+
+    .line 4
+    invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->set(II)V
+
+    .line 5
+    new-instance p0, Lcom/google/android/material/datepicker/Month;
+
+    invoke-direct {p0, v0}, Lcom/google/android/material/datepicker/Month;-><init>(Ljava/util/Calendar;)V
+
+    return-object p0
+.end method
+
+.method public static h()Lcom/google/android/material/datepicker/Month;
+    .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 101
+    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
@@ -182,44 +225,19 @@
     return-object v0
 .end method
 
-.method static a(II)Lcom/google/android/material/datepicker/Month;
-    .locals 2
-
-    .line 90
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    .line 91
-    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
-
-    const/4 v1, 0x1
-
-    .line 92
-    invoke-virtual {v0, v1, p0}, Ljava/util/Calendar;->set(II)V
-
-    const/4 p0, 0x2
-
-    .line 93
-    invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->set(II)V
-
-    .line 94
-    new-instance p0, Lcom/google/android/material/datepicker/Month;
-
-    invoke-direct {p0, v0}, Lcom/google/android/material/datepicker/Month;-><init>(Ljava/util/Calendar;)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a(Lcom/google/android/material/datepicker/Month;)I
+.method public a(Lcom/google/android/material/datepicker/Month;)I
     .locals 1
+    .param p1    # Lcom/google/android/material/datepicker/Month;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 132
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 6
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
-    iget-object p1, p1, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    iget-object p1, p1, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->compareTo(Ljava/util/Calendar;)I
 
@@ -228,11 +246,11 @@
     return p1
 .end method
 
-.method final a(I)J
+.method public a(I)J
     .locals 2
 
-    .line 166
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 7
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->clone()Ljava/lang/Object;
 
@@ -242,10 +260,10 @@
 
     const/4 v1, 0x5
 
-    .line 167
+    .line 8
     invoke-virtual {v0, v1, p1}, Ljava/util/Calendar;->set(II)V
 
-    .line 168
+    .line 9
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
@@ -253,67 +271,40 @@
     return-wide v0
 .end method
 
-.method final b()I
+.method public b(Lcom/google/android/material/datepicker/Month;)I
     .locals 2
+    .param p1    # Lcom/google/android/material/datepicker/Month;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 105
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
-
-    const/4 v1, 0x7
-
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
-
-    invoke-virtual {v1}, Ljava/util/Calendar;->getFirstDayOfWeek()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    if-gez v0, :cond_0
-
-    .line 107
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->e:I
-
-    add-int/2addr v0, v1
-
-    :cond_0
-    return v0
-.end method
-
-.method final b(Lcom/google/android/material/datepicker/Month;)I
-    .locals 2
-
-    .line 145
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     instance-of v0, v0, Ljava/util/GregorianCalendar;
 
     if-eqz v0, :cond_0
 
-    .line 146
-    iget v0, p1, Lcom/google/android/material/datepicker/Month;->d:I
+    .line 2
+    iget v0, p1, Lcom/google/android/material/datepicker/Month;->g:I
 
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->d:I
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->g:I
 
     sub-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0xc
 
-    iget p1, p1, Lcom/google/android/material/datepicker/Month;->c:I
+    iget p1, p1, Lcom/google/android/material/datepicker/Month;->f:I
 
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->c:I
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->f:I
 
     sub-int/2addr p1, v1
 
-    add-int/2addr v0, p1
+    add-int/2addr p1, v0
 
-    return v0
+    return p1
 
-    .line 148
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -324,11 +315,13 @@
     throw p1
 .end method
 
-.method final b(I)Lcom/google/android/material/datepicker/Month;
+.method public c(I)Lcom/google/android/material/datepicker/Month;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 177
-    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->a:Ljava/util/Calendar;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->clone()Ljava/lang/Object;
 
@@ -338,10 +331,10 @@
 
     const/4 v1, 0x2
 
-    .line 178
+    .line 2
     invoke-virtual {v0, v1, p1}, Ljava/util/Calendar;->add(II)V
 
-    .line 179
+    .line 3
     new-instance p1, Lcom/google/android/material/datepicker/Month;
 
     invoke-direct {p1, v0}, Lcom/google/android/material/datepicker/Month;-><init>(Ljava/util/Calendar;)V
@@ -349,10 +342,14 @@
     return-object p1
 .end method
 
-.method public final synthetic compareTo(Ljava/lang/Object;)I
+.method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 31
+    .line 1
     check-cast p1, Lcom/google/android/material/datepicker/Month;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/Month;->a(Lcom/google/android/material/datepicker/Month;)I
@@ -362,7 +359,7 @@
     return p1
 .end method
 
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -370,7 +367,7 @@
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
     const/4 v0, 0x1
@@ -379,7 +376,7 @@
 
     return v0
 
-    .line 117
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/material/datepicker/Month;
 
@@ -389,38 +386,72 @@
 
     return v2
 
-    .line 120
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/material/datepicker/Month;
 
-    .line 121
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->c:I
+    .line 3
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->f:I
 
-    iget v3, p1, Lcom/google/android/material/datepicker/Month;->c:I
+    iget v3, p1, Lcom/google/android/material/datepicker/Month;->f:I
 
     if-ne v1, v3, :cond_2
 
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->d:I
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->g:I
 
-    iget p1, p1, Lcom/google/android/material/datepicker/Month;->d:I
+    iget p1, p1, Lcom/google/android/material/datepicker/Month;->g:I
 
     if-ne v1, p1, :cond_2
 
-    return v0
+    goto :goto_0
 
     :cond_2
-    return v2
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
-.method public final hashCode()I
+.method public f()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
+
+    const/4 v1, 0x7
+
+    invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/material/datepicker/Month;->d:Ljava/util/Calendar;
+
+    invoke-virtual {v1}, Ljava/util/Calendar;->getFirstDayOfWeek()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    if-gez v0, :cond_0
+
+    .line 2
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->h:I
+
+    add-int/2addr v0, v1
+
+    :cond_0
+    return v0
+.end method
+
+.method public hashCode()I
     .locals 3
 
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 126
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->c:I
+    .line 1
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->f:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -430,7 +461,7 @@
 
     aput-object v1, v0, v2
 
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->d:I
+    iget v1, p0, Lcom/google/android/material/datepicker/Month;->g:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -440,7 +471,7 @@
 
     aput-object v1, v0, v2
 
-    .line 127
+    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
@@ -448,16 +479,20 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 215
-    iget p2, p0, Lcom/google/android/material/datepicker/Month;->d:I
+    .line 1
+    iget p2, p0, Lcom/google/android/material/datepicker/Month;->g:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 216
-    iget p2, p0, Lcom/google/android/material/datepicker/Month;->c:I
+    .line 2
+    iget p2, p0, Lcom/google/android/material/datepicker/Month;->f:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

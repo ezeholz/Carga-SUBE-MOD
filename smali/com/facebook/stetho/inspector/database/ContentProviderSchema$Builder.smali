@@ -15,23 +15,23 @@
 
 
 # instance fields
-.field private mTable:Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
+.field public mTable:Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 38
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Builder;)Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
+.method public static synthetic access$000(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Builder;)Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
     .locals 0
 
-    .line 38
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Builder;->mTable:Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
 
     return-object p0
@@ -42,7 +42,7 @@
 .method public build()Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
     .locals 2
 
-    .line 48
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
 
     const/4 v1, 0x0
@@ -55,7 +55,7 @@
 .method public table(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;)Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Builder;
     .locals 0
 
-    .line 43
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Builder;->mTable:Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
 
     return-object p0

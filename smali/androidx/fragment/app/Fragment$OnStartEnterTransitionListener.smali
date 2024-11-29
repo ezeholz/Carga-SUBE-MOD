@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/fragment/app/Fragment$OnStartEnterTransitionListener;
+.class public interface abstract Landroidx/fragment/app/Fragment$OnStartEnterTransitionListener;
 .super Ljava/lang/Object;
 .source "Fragment.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "OnStartEnterTransitionListener"
 .end annotation
 

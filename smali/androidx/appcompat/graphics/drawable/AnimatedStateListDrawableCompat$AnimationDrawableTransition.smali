@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;
+.class public Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;
 .super Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;
 .source "AnimatedStateListDrawableCompat.java"
 
@@ -9,27 +9,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AnimationDrawableTransition"
 .end annotation
 
 
 # instance fields
-.field private final mAnim:Landroid/animation/ObjectAnimator;
+.field public final mAnim:Landroid/animation/ObjectAnimator;
 
-.field private final mHasReversibleFlag:Z
+.field public final mHasReversibleFlag:Z
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/drawable/AnimationDrawable;ZZ)V
+.method public constructor <init>(Landroid/graphics/drawable/AnimationDrawable;ZZ)V
     .locals 5
 
     const/4 v0, 0x0
 
-    .line 392
+    .line 1
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;-><init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$1;)V
 
-    .line 393
+    .line 2
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
     move-result v0
@@ -57,7 +57,7 @@
     :cond_1
     sub-int/2addr v0, v3
 
-    .line 396
+    .line 3
     :goto_1
     new-instance v4, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$FrameInterpolator;
 
@@ -73,23 +73,15 @@
 
     const-string v0, "currentIndex"
 
-    .line 399
+    .line 4
     invoke-static {p1, v0, p2}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
 
-    .line 400
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x12
-
-    if-lt p2, v0, :cond_2
-
-    .line 401
+    .line 5
     invoke-virtual {p1, v3}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 403
-    :cond_2
+    .line 6
     invoke-virtual {v4}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$FrameInterpolator;->getTotalDuration()I
 
     move-result p2
@@ -98,13 +90,13 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 404
+    .line 7
     invoke-virtual {p1, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 405
+    .line 8
     iput-boolean p3, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mHasReversibleFlag:Z
 
-    .line 406
+    .line 9
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     return-void
@@ -115,7 +107,7 @@
 .method public canReverse()Z
     .locals 1
 
-    .line 411
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mHasReversibleFlag:Z
 
     return v0
@@ -124,7 +116,7 @@
 .method public reverse()V
     .locals 1
 
-    .line 421
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->reverse()V
@@ -135,7 +127,7 @@
 .method public start()V
     .locals 1
 
-    .line 416
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
@@ -146,7 +138,7 @@
 .method public stop()V
     .locals 1
 
-    .line 426
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimationDrawableTransition;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V

@@ -5,6 +5,11 @@
 .implements Landroid/os/Parcelable;
 
 
+# annotations
+.annotation build Lcom/google/android/gms/common/annotation/KeepName;
+.end annotation
+
+
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
@@ -18,17 +23,17 @@
 
 
 # instance fields
-.field private a:Landroid/os/IBinder;
+.field public d:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 16
-    new-instance v0, Lcom/google/android/gms/common/internal/ae;
+    .line 1
+    new-instance v0, Lg/d/a/b/d/m/c0;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/internal/ae;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/d/m/c0;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/internal/BinderWrapper;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -44,37 +49,28 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->a:Landroid/os/IBinder;
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->d:Landroid/os/IBinder;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/os/Parcel;Lg/d/a/b/d/m/c0;)V
+    .locals 0
 
-    .line 8
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    const/4 p2, 0x0
 
-    .line 9
-    iput-object v0, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->a:Landroid/os/IBinder;
+    .line 4
+    iput-object p2, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->d:Landroid/os/IBinder;
 
-    .line 10
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->a:Landroid/os/IBinder;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/os/Parcel;B)V
-    .locals 0
-
-    .line 15
-    invoke-direct {p0, p1}, Lcom/google/android/gms/common/internal/BinderWrapper;-><init>(Landroid/os/Parcel;)V
+    iput-object p1, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->d:Landroid/os/IBinder;
 
     return-void
 .end method
@@ -92,8 +88,8 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 13
-    iget-object p2, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->a:Landroid/os/IBinder;
+    .line 1
+    iget-object p2, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->d:Landroid/os/IBinder;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 

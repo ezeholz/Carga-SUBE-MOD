@@ -1,4 +1,4 @@
-.class final Landroidx/media/VolumeProviderCompatApi21$1;
+.class public final Landroidx/media/VolumeProviderCompatApi21$1;
 .super Landroid/media/VolumeProvider;
 .source "VolumeProviderCompatApi21.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$delegate:Landroidx/media/VolumeProviderCompatApi21$Delegate;
+.field public final synthetic val$delegate:Landroidx/media/VolumeProviderCompatApi21$Delegate;
 
 
 # direct methods
-.method constructor <init>(IIILandroidx/media/VolumeProviderCompatApi21$Delegate;)V
+.method public constructor <init>(IIILandroidx/media/VolumeProviderCompatApi21$Delegate;)V
     .locals 0
 
-    .line 27
+    .line 1
     iput-object p4, p0, Landroidx/media/VolumeProviderCompatApi21$1;->val$delegate:Landroidx/media/VolumeProviderCompatApi21$Delegate;
 
     invoke-direct {p0, p1, p2, p3}, Landroid/media/VolumeProvider;-><init>(III)V
@@ -32,10 +32,10 @@
 
 
 # virtual methods
-.method public final onAdjustVolume(I)V
+.method public onAdjustVolume(I)V
     .locals 1
 
-    .line 35
+    .line 1
     iget-object v0, p0, Landroidx/media/VolumeProviderCompatApi21$1;->val$delegate:Landroidx/media/VolumeProviderCompatApi21$Delegate;
 
     invoke-interface {v0, p1}, Landroidx/media/VolumeProviderCompatApi21$Delegate;->onAdjustVolume(I)V
@@ -43,10 +43,10 @@
     return-void
 .end method
 
-.method public final onSetVolumeTo(I)V
+.method public onSetVolumeTo(I)V
     .locals 1
 
-    .line 30
+    .line 1
     iget-object v0, p0, Landroidx/media/VolumeProviderCompatApi21$1;->val$delegate:Landroidx/media/VolumeProviderCompatApi21$Delegate;
 
     invoke-interface {v0, p1}, Landroidx/media/VolumeProviderCompatApi21$Delegate;->onSetVolumeTo(I)V

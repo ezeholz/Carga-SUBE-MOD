@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/constraintlayout/solver/LinearSystem$Row;
+.class public interface abstract Landroidx/constraintlayout/solver/LinearSystem$Row;
 .super Ljava/lang/Object;
 .source "LinearSystem.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "Row"
 .end annotation
 

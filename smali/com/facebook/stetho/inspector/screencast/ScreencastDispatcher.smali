@@ -14,51 +14,51 @@
 
 
 # static fields
-.field private static final FRAME_DELAY:J = 0xc8L
+.field public static final FRAME_DELAY:J = 0xc8L
 
 
 # instance fields
-.field private final mActivityTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
+.field public final mActivityTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
-.field private mBackgroundHandler:Landroid/os/Handler;
+.field public mBackgroundHandler:Landroid/os/Handler;
 
-.field private mBitmap:Landroid/graphics/Bitmap;
+.field public mBitmap:Landroid/graphics/Bitmap;
 
-.field private final mBitmapFetchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
+.field public final mBitmapFetchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
 
-.field private mCanvas:Landroid/graphics/Canvas;
+.field public mCanvas:Landroid/graphics/Canvas;
 
-.field private mEvent:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
+.field public mEvent:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
 
-.field private final mEventDispatchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
+.field public final mEventDispatchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
 
-.field private mHandlerThread:Landroid/os/HandlerThread;
+.field public mHandlerThread:Landroid/os/HandlerThread;
 
-.field private mIsRunning:Z
+.field public mIsRunning:Z
 
-.field private final mMainHandler:Landroid/os/Handler;
+.field public final mMainHandler:Landroid/os/Handler;
 
-.field private mMetadata:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;
+.field public mMetadata:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;
 
-.field private mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
+.field public mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
-.field private mRequest:Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;
+.field public mRequest:Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;
 
-.field private mStream:Ljava/io/ByteArrayOutputStream;
+.field public mStream:Ljava/io/ByteArrayOutputStream;
 
-.field private final mTempDst:Landroid/graphics/RectF;
+.field public final mTempDst:Landroid/graphics/RectF;
 
-.field private final mTempSrc:Landroid/graphics/RectF;
+.field public final mTempSrc:Landroid/graphics/RectF;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    .line 51
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -69,7 +69,7 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mMainHandler:Landroid/os/Handler;
 
-    .line 34
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
 
     const/4 v1, 0x0
@@ -78,42 +78,42 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBitmapFetchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
 
-    .line 35
+    .line 4
     invoke-static {}, Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;->get()Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mActivityTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
-    .line 36
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
 
     invoke-direct {v0, p0, v1}, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;-><init>(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$1;)V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mEventDispatchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
 
-    .line 37
+    .line 6
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mTempSrc:Landroid/graphics/RectF;
 
-    .line 38
+    .line 7
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mTempDst:Landroid/graphics/RectF;
 
-    .line 48
+    .line 8
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mEvent:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
 
-    .line 49
+    .line 9
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;-><init>()V
@@ -123,190 +123,190 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/Canvas;
+.method public static synthetic access$1000(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/Canvas;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mCanvas:Landroid/graphics/Canvas;
 
     return-object p0
 .end method
 
-.method static synthetic access$1002(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Landroid/graphics/Canvas;)Landroid/graphics/Canvas;
+.method public static synthetic access$1002(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Landroid/graphics/Canvas;)Landroid/graphics/Canvas;
     .locals 0
 
-    .line 30
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mCanvas:Landroid/graphics/Canvas;
 
     return-object p1
 .end method
 
-.method static synthetic access$1100(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/RectF;
+.method public static synthetic access$1100(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/RectF;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mTempSrc:Landroid/graphics/RectF;
 
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/RectF;
+.method public static synthetic access$1200(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/RectF;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mTempDst:Landroid/graphics/RectF;
 
     return-object p0
 .end method
 
-.method static synthetic access$1300(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Ljava/io/ByteArrayOutputStream;
+.method public static synthetic access$1300(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Ljava/io/ByteArrayOutputStream;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mStream:Ljava/io/ByteArrayOutputStream;
 
     return-object p0
 .end method
 
-.method static synthetic access$1302(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Ljava/io/ByteArrayOutputStream;)Ljava/io/ByteArrayOutputStream;
+.method public static synthetic access$1302(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Ljava/io/ByteArrayOutputStream;)Ljava/io/ByteArrayOutputStream;
     .locals 0
 
-    .line 30
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mStream:Ljava/io/ByteArrayOutputStream;
 
     return-object p1
 .end method
 
-.method static synthetic access$1400(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
+.method public static synthetic access$1400(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mEvent:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEvent;
 
     return-object p0
 .end method
 
-.method static synthetic access$1500(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;
+.method public static synthetic access$1500(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mMetadata:Lcom/facebook/stetho/inspector/protocol/module/Page$ScreencastFrameEventMetadata;
 
     return-object p0
 .end method
 
-.method static synthetic access$1600(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
+.method public static synthetic access$1600(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
     return-object p0
 .end method
 
-.method static synthetic access$1700(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/os/Handler;
+.method public static synthetic access$1700(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/os/Handler;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mMainHandler:Landroid/os/Handler;
 
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/os/HandlerThread;
+.method public static synthetic access$1800(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/os/HandlerThread;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mHandlerThread:Landroid/os/HandlerThread;
 
     return-object p0
 .end method
 
-.method static synthetic access$1802(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Landroid/os/HandlerThread;)Landroid/os/HandlerThread;
+.method public static synthetic access$1802(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Landroid/os/HandlerThread;)Landroid/os/HandlerThread;
     .locals 0
 
-    .line 30
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mHandlerThread:Landroid/os/HandlerThread;
 
     return-object p1
 .end method
 
-.method static synthetic access$1900(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
+.method public static synthetic access$1900(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBitmapFetchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
+.method public static synthetic access$300(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mEventDispatchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$EventDispatchRunnable;
 
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/os/Handler;
+.method public static synthetic access$500(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/os/Handler;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBackgroundHandler:Landroid/os/Handler;
 
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Z
+.method public static synthetic access$600(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Z
     .locals 0
 
-    .line 30
+    .line 1
     iget-boolean p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mIsRunning:Z
 
     return p0
 .end method
 
-.method static synthetic access$602(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Z)Z
+.method public static synthetic access$602(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Z)Z
     .locals 0
 
-    .line 30
+    .line 1
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mIsRunning:Z
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
+.method public static synthetic access$700(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mActivityTracker:Lcom/facebook/stetho/inspector/elements/android/ActivityTracker;
 
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/Bitmap;
+.method public static synthetic access$800(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBitmap:Landroid/graphics/Bitmap;
 
     return-object p0
 .end method
 
-.method static synthetic access$802(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+.method public static synthetic access$802(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 30
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBitmap:Landroid/graphics/Bitmap;
 
     return-object p1
 .end method
 
-.method static synthetic access$900(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;
+.method public static synthetic access$900(Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;)Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;
     .locals 0
 
-    .line 30
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mRequest:Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;
 
     return-object p0
@@ -314,18 +314,18 @@
 
 
 # virtual methods
-.method public final startScreencast(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;)V
+.method public startScreencast(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;)V
     .locals 2
 
     const-string v0, "Starting screencast"
 
-    .line 55
+    .line 1
     invoke-static {v0}, Lcom/facebook/stetho/common/LogUtil;->d(Ljava/lang/String;)V
 
-    .line 56
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mRequest:Lcom/facebook/stetho/inspector/protocol/module/Page$StartScreencastRequest;
 
-    .line 57
+    .line 3
     new-instance p2, Landroid/os/HandlerThread;
 
     const-string v0, "Screencast Thread"
@@ -334,25 +334,25 @@
 
     iput-object p2, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 58
+    .line 4
     invoke-virtual {p2}, Landroid/os/HandlerThread;->start()V
 
-    .line 59
+    .line 5
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mPeer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
     const/4 p1, 0x1
 
-    .line 60
+    .line 6
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mIsRunning:Z
 
-    .line 61
+    .line 7
     new-instance p1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mStream:Ljava/io/ByteArrayOutputStream;
 
-    .line 62
+    .line 8
     new-instance p1, Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mHandlerThread:Landroid/os/HandlerThread;
@@ -365,7 +365,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBackgroundHandler:Landroid/os/Handler;
 
-    .line 63
+    .line 9
     iget-object p1, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mMainHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBitmapFetchRunnable:Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$BitmapFetchRunnable;
@@ -377,15 +377,15 @@
     return-void
 .end method
 
-.method public final stopScreencast()V
+.method public stopScreencast()V
     .locals 3
 
     const-string v0, "Stopping screencast"
 
-    .line 67
+    .line 1
     invoke-static {v0}, Lcom/facebook/stetho/common/LogUtil;->d(Ljava/lang/String;)V
 
-    .line 68
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher;->mBackgroundHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/facebook/stetho/inspector/screencast/ScreencastDispatcher$CancellationRunnable;

@@ -17,88 +17,106 @@
     .end annotation
 .end field
 
-.field private static final a:Ljava/lang/String;
+.field public static final j:Ljava/lang/String;
 
 
 # instance fields
-.field private final b:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final c:Ljava/lang/String;
+.field public final e:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final d:Ljava/lang/String;
+.field public final f:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final e:Ljava/lang/String;
+.field public final g:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final f:Ljava/lang/String;
+.field public final h:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final g:Landroid/net/Uri;
+.field public final i:Landroid/net/Uri;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 41
+    .line 1
     const-class v0, Lcom/facebook/Profile;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/facebook/Profile;->a:Ljava/lang/String;
+    sput-object v0, Lcom/facebook/Profile;->j:Ljava/lang/String;
 
-    .line 305
-    new-instance v0, Lcom/facebook/Profile$2;
+    .line 2
+    new-instance v0, Lcom/facebook/Profile$a;
 
-    invoke-direct {v0}, Lcom/facebook/Profile$2;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/Profile$a;-><init>()V
 
     sput-object v0, Lcom/facebook/Profile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/os/Parcel;Lg/c/o;)V
+    .locals 0
 
-    .line 280
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 281
+    .line 18
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
-    .line 282
+    .line 19
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
-    .line 283
+    .line 20
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
 
-    .line 284
+    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
-    .line 285
+    .line 22
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
+    iput-object p2, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
 
-    .line 286
+    .line 23
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -109,115 +127,126 @@
 
     goto :goto_0
 
-    .line 287
+    .line 24
     :cond_0
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     :goto_0
-    iput-object p1, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/os/Parcel;B)V
-    .locals 0
-
-    .line 39
-    invoke-direct {p0, p1}, Lcom/facebook/Profile;-><init>(Landroid/os/Parcel;)V
+    iput-object p1, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)V
     .locals 1
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p6    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 137
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "id"
 
-    .line 138
-    invoke-static {p1, v0}, Lcom/facebook/internal/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {p1, v0}, Lg/c/z/w;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 140
-    iput-object p1, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
+    .line 3
+    iput-object p1, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
-    .line 141
-    iput-object p2, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    .line 4
+    iput-object p2, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
-    .line 142
-    iput-object p3, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    .line 5
+    iput-object p3, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
 
-    .line 143
-    iput-object p4, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    .line 6
+    iput-object p4, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
-    .line 144
-    iput-object p5, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
+    .line 7
+    iput-object p5, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
 
-    .line 145
-    iput-object p6, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
+    .line 8
+    iput-object p6, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
     return-void
 .end method
 
-.method constructor <init>(Lorg/json/JSONObject;)V
+.method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
 
-    .line 270
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     const-string v1, "id"
 
-    .line 271
-    invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
-
-    const-string v1, "first_name"
-
-    .line 272
-    invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
-
-    const-string v1, "middle_name"
-
-    .line 273
+    .line 10
     invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
-    const-string v1, "last_name"
+    const-string v1, "first_name"
 
-    .line 274
+    .line 11
     invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
-    const-string v1, "name"
+    const-string v1, "middle_name"
 
-    .line 275
+    .line 12
     invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
 
+    const-string v1, "last_name"
+
+    .line 13
+    invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
+
+    const-string v1, "name"
+
+    .line 14
+    invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
+
     const-string v1, "link_uri"
 
-    .line 276
+    .line 15
     invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -226,14 +255,14 @@
 
     goto :goto_0
 
-    .line 277
+    .line 16
     :cond_0
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     :goto_0
-    iput-object v0, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
     return-void
 .end method
@@ -241,153 +270,20 @@
 .method public static a()Lcom/facebook/Profile;
     .locals 1
 
-    .line 63
-    invoke-static {}, Lcom/facebook/l;->a()Lcom/facebook/l;
+    .line 1
+    invoke-static {}, Lg/c/q;->a()Lg/c/q;
 
     move-result-object v0
 
-    .line 1071
-    iget-object v0, v0, Lcom/facebook/l;->b:Lcom/facebook/Profile;
-
-    return-object v0
-.end method
-
-.method public static a(Lcom/facebook/Profile;)V
-    .locals 2
-
-    .line 74
-    invoke-static {}, Lcom/facebook/l;->a()Lcom/facebook/l;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    .line 1086
-    invoke-virtual {v0, p0, v1}, Lcom/facebook/l;->a(Lcom/facebook/Profile;Z)V
-
-    return-void
-.end method
-
-.method public static b()V
-    .locals 2
-
-    .line 83
-    invoke-static {}, Lcom/facebook/AccessToken;->a()Lcom/facebook/AccessToken;
-
-    move-result-object v0
-
-    .line 84
-    invoke-static {}, Lcom/facebook/AccessToken;->b()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 85
-    invoke-static {v0}, Lcom/facebook/Profile;->a(Lcom/facebook/Profile;)V
-
-    return-void
-
-    .line 1225
-    :cond_0
-    iget-object v0, v0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
-
-    .line 89
-    new-instance v1, Lcom/facebook/Profile$1;
-
-    invoke-direct {v1}, Lcom/facebook/Profile$1;-><init>()V
-
-    invoke-static {v0, v1}, Lcom/facebook/internal/u;->a(Ljava/lang/String;Lcom/facebook/internal/u$a;)V
-
-    return-void
-.end method
-
-.method static synthetic d()Ljava/lang/String;
-    .locals 1
-
-    .line 39
-    sget-object v0, Lcom/facebook/Profile;->a:Ljava/lang/String;
+    .line 2
+    iget-object v0, v0, Lg/c/q;->c:Lcom/facebook/Profile;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method final c()Lorg/json/JSONObject;
-    .locals 3
-
-    .line 254
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    :try_start_0
-    const-string v1, "id"
-
-    .line 256
-    iget-object v2, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "first_name"
-
-    .line 257
-    iget-object v2, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "middle_name"
-
-    .line 258
-    iget-object v2, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "last_name"
-
-    .line 259
-    iget-object v2, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "name"
-
-    .line 260
-    iget-object v2, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 261
-    iget-object v1, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "link_uri"
-
-    .line 262
-    iget-object v2, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    :cond_0
-    :goto_0
-    return-object v0
-.end method
-
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -395,7 +291,7 @@
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
     const/4 v0, 0x1
@@ -404,7 +300,7 @@
 
     return v0
 
-    .line 215
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/facebook/Profile;
 
@@ -414,14 +310,14 @@
 
     return v2
 
-    .line 219
+    .line 2
     :cond_1
     check-cast p1, Lcom/facebook/Profile;
 
-    .line 221
-    iget-object v1, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
+    .line 3
+    iget-object v1, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/facebook/Profile;->b:Ljava/lang/String;
+    iget-object v3, p1, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -429,137 +325,128 @@
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
     if-nez v1, :cond_3
 
-    iget-object p1, p1, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    iget-object p1, p1, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
     if-nez p1, :cond_2
 
-    return v0
+    goto :goto_0
 
     :cond_2
-    return v2
+    const/4 v0, 0x0
+
+    goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    iget-object v3, p1, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
-    .line 222
+    .line 4
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
+
+    if-nez v1, :cond_4
+
+    iget-object p1, p1, Lcom/facebook/Profile;->f:Ljava/lang/String;
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/facebook/Profile;->f:Ljava/lang/String;
+
+    .line 5
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    iget-object v1, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
     if-nez v1, :cond_5
 
-    iget-object p1, p1, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    iget-object p1, p1, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_2
 
-    return v0
-
-    :cond_4
-    return v2
+    goto :goto_0
 
     :cond_5
-    iget-object v1, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    iget-object v3, p1, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
-    .line 223
+    .line 6
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
+
+    if-nez v1, :cond_6
+
+    iget-object p1, p1, Lcom/facebook/Profile;->h:Ljava/lang/String;
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v1, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/facebook/Profile;->h:Ljava/lang/String;
+
+    .line 7
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    iget-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
     if-nez v1, :cond_7
 
-    iget-object p1, p1, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    iget-object p1, p1, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_2
 
-    return v0
-
-    :cond_6
-    return v2
+    goto :goto_0
 
     :cond_7
-    iget-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
-    iget-object v3, p1, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    iget-object p1, p1, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
-    .line 224
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    iget-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
-
-    if-nez v1, :cond_9
-
-    iget-object p1, p1, Lcom/facebook/Profile;->f:Ljava/lang/String;
-
-    if-nez p1, :cond_8
-
-    return v0
-
-    :cond_8
-    return v2
-
-    :cond_9
-    iget-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/facebook/Profile;->f:Ljava/lang/String;
-
-    .line 225
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    iget-object v1, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    if-nez v1, :cond_b
-
-    iget-object p1, p1, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    if-nez p1, :cond_a
-
-    return v0
-
-    :cond_a
-    return v2
-
-    :cond_b
-    iget-object v0, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    iget-object p1, p1, Lcom/facebook/Profile;->g:Landroid/net/Uri;
-
-    .line 226
+    .line 8
     invoke-virtual {v0, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v0
 
-    return p1
+    :goto_0
+    return v0
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 2
 
-    .line 233
-    iget-object v0, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -567,74 +454,74 @@
 
     add-int/lit16 v0, v0, 0x20f
 
-    .line 234
-    iget-object v1, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
+    .line 2
+    iget-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 235
+    .line 3
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 237
+    .line 4
     :cond_0
-    iget-object v1, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 238
+    .line 5
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 240
+    .line 6
     :cond_1
-    iget-object v1, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 241
+    .line 7
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 243
+    .line 8
     :cond_2
-    iget-object v1, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 244
+    .line 9
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 246
+    .line 10
     :cond_3
-    iget-object v1, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
     if-eqz v1, :cond_4
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 247
+    .line 11
     invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
     move-result v1
@@ -645,36 +532,36 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 297
-    iget-object p2, p0, Lcom/facebook/Profile;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 298
-    iget-object p2, p0, Lcom/facebook/Profile;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 299
+    .line 1
     iget-object p2, p0, Lcom/facebook/Profile;->d:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 300
+    .line 2
     iget-object p2, p0, Lcom/facebook/Profile;->e:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 301
+    .line 3
     iget-object p2, p0, Lcom/facebook/Profile;->f:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 302
-    iget-object p2, p0, Lcom/facebook/Profile;->g:Landroid/net/Uri;
+    .line 4
+    iget-object p2, p0, Lcom/facebook/Profile;->g:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 5
+    iget-object p2, p0, Lcom/facebook/Profile;->h:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 6
+    iget-object p2, p0, Lcom/facebook/Profile;->i:Landroid/net/Uri;
 
     if-nez p2, :cond_0
 

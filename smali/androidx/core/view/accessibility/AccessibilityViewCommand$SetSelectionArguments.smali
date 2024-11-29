@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 113
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;-><init>()V
 
     return-void
@@ -26,11 +26,11 @@
 
 
 # virtual methods
-.method public final getEnd()I
+.method public getEnd()I
     .locals 2
 
-    .line 126
-    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$SetSelectionArguments;->mBundle:Landroid/os/Bundle;
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     const-string v1, "ACTION_ARGUMENT_SELECTION_END_INT"
 
@@ -41,11 +41,11 @@
     return v0
 .end method
 
-.method public final getStart()I
+.method public getStart()I
     .locals 2
 
-    .line 119
-    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$SetSelectionArguments;->mBundle:Landroid/os/Bundle;
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     const-string v1, "ACTION_ARGUMENT_SELECTION_START_INT"
 

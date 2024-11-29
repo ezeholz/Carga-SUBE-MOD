@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;
+.class public final Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;
 .super Ljava/lang/Object;
 .source "DispatchQueue.kt"
 
@@ -12,19 +12,19 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic $runnable$inlined:Ljava/lang/Runnable;
+.field public final synthetic $runnable$inlined:Ljava/lang/Runnable;
 
-.field final synthetic this$0:Landroidx/lifecycle/DispatchQueue;
+.field public final synthetic this$0:Landroidx/lifecycle/DispatchQueue;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
+.method public constructor <init>(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;->this$0:Landroidx/lifecycle/DispatchQueue;
@@ -41,7 +41,7 @@
 .method public final run()V
     .locals 2
 
-    .line 93
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;->this$0:Landroidx/lifecycle/DispatchQueue;
 
     iget-object v1, p0, Landroidx/lifecycle/DispatchQueue$runOrEnqueue$$inlined$with$lambda$1;->$runnable$inlined:Ljava/lang/Runnable;

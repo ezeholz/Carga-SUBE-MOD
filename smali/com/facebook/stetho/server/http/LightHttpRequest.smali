@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/server/http/LightHttpMessage;-><init>()V
 
     return-void
@@ -26,18 +26,18 @@
 .method public reset()V
     .locals 1
 
-    .line 21
+    .line 1
     invoke-super {p0}, Lcom/facebook/stetho/server/http/LightHttpMessage;->reset()V
 
     const/4 v0, 0x0
 
-    .line 22
+    .line 2
     iput-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpRequest;->method:Ljava/lang/String;
 
-    .line 23
+    .line 3
     iput-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpRequest;->uri:Landroid/net/Uri;
 
-    .line 24
+    .line 4
     iput-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpRequest;->protocol:Ljava/lang/String;
 
     return-void

@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/internal/CheckableImageButton$SavedState;
@@ -15,17 +21,17 @@
 
 
 # static fields
-.field private static final b:[I
+.field public static final f:[I
 
 
 # instance fields
-.field a:Z
+.field public d:Z
 
-.field private c:Z
+.field public e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -38,8 +44,8 @@
 
     aput v2, v0, v1
 
-    .line 41
-    sput-object v0, Lcom/google/android/material/internal/CheckableImageButton;->b:[I
+    .line 1
+    sput-object v0, Lcom/google/android/material/internal/CheckableImageButton;->f:[I
 
     return-void
 .end method
@@ -49,7 +55,7 @@
 
     const/4 v0, 0x0
 
-    .line 47
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/material/internal/CheckableImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -58,7 +64,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 51
+    .line 2
     sget v0, Landroidx/appcompat/R$attr;->imageButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/internal/CheckableImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -69,18 +75,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 55
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x1
 
-    .line 44
-    iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->a:Z
+    .line 4
+    iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->e:Z
 
-    .line 57
-    new-instance p1, Lcom/google/android/material/internal/CheckableImageButton$1;
+    .line 5
+    new-instance p1, Lcom/google/android/material/internal/CheckableImageButton$a;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/internal/CheckableImageButton$1;-><init>(Lcom/google/android/material/internal/CheckableImageButton;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/internal/CheckableImageButton$a;-><init>(Lcom/google/android/material/internal/CheckableImageButton;)V
 
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
@@ -92,8 +98,8 @@
 .method public isChecked()Z
     .locals 1
 
-    .line 87
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->c:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
     return v0
 .end method
@@ -101,90 +107,92 @@
 .method public onCreateDrawableState(I)[I
     .locals 1
 
-    .line 97
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->c:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
     if-eqz v0, :cond_0
 
-    .line 98
-    sget-object v0, Lcom/google/android/material/internal/CheckableImageButton;->b:[I
+    .line 2
+    sget-object v0, Lcom/google/android/material/internal/CheckableImageButton;->f:[I
 
     array-length v0, v0
 
     add-int/2addr p1, v0
 
-    .line 99
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->onCreateDrawableState(I)[I
+    .line 3
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
-    sget-object v0, Lcom/google/android/material/internal/CheckableImageButton;->b:[I
+    sget-object v0, Lcom/google/android/material/internal/CheckableImageButton;->f:[I
 
-    .line 98
-    invoke-static {p1, v0}, Lcom/google/android/material/internal/CheckableImageButton;->mergeDrawableStates([I[I)[I
+    .line 4
+    invoke-static {p1, v0}, Landroid/widget/ImageButton;->mergeDrawableStates([I[I)[I
 
     move-result-object p1
 
     return-object p1
 
-    .line 102
+    .line 5
     :cond_0
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->onCreateDrawableState(I)[I
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    .line 117
+    .line 1
     instance-of v0, p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;
 
     if-nez v0, :cond_0
 
-    .line 118
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    .line 2
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
-    .line 121
+    .line 3
     :cond_0
     check-cast p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;
 
-    .line 122
-    invoke-virtual {p1}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->getSuperState()Landroid/os/Parcelable;
+    .line 4
+    invoke-virtual {p1}, Landroidx/customview/view/AbsSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Landroidx/appcompat/widget/AppCompatImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, v0}, Landroid/widget/ImageButton;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 123
-    iget-boolean p1, p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->a:Z
+    .line 5
+    iget-boolean p1, p1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->d:Z
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->setChecked(Z)V
 
     return-void
 .end method
 
-.method protected onSaveInstanceState()Landroid/os/Parcelable;
+.method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 109
-    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageButton;->onSaveInstanceState()Landroid/os/Parcelable;
+    .line 1
+    invoke-super {p0}, Landroid/widget/ImageButton;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 110
+    .line 2
     new-instance v1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;
 
     invoke-direct {v1, v0}, Lcom/google/android/material/internal/CheckableImageButton$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 111
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->c:Z
+    .line 3
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
-    iput-boolean v0, v1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->a:Z
+    iput-boolean v0, v1, Lcom/google/android/material/internal/CheckableImageButton$SavedState;->d:Z
 
     return-object v1
 .end method
@@ -192,18 +200,18 @@
 .method public setCheckable(Z)V
     .locals 1
 
-    .line 128
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->a:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->e:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 129
-    iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->a:Z
+    .line 2
+    iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->e:Z
 
     const/4 p1, 0x0
 
-    .line 130
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->sendAccessibilityEvent(I)V
+    .line 3
+    invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
@@ -212,25 +220,25 @@
 .method public setChecked(Z)V
     .locals 1
 
-    .line 78
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->a:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->e:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->c:Z
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 79
-    iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->c:Z
+    .line 2
+    iput-boolean p1, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
-    .line 80
-    invoke-virtual {p0}, Lcom/google/android/material/internal/CheckableImageButton;->refreshDrawableState()V
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/ImageButton;->refreshDrawableState()V
 
     const/16 p1, 0x800
 
-    .line 81
-    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/CheckableImageButton;->sendAccessibilityEvent(I)V
+    .line 4
+    invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
@@ -239,8 +247,8 @@
 .method public toggle()V
     .locals 1
 
-    .line 92
-    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->c:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
     xor-int/lit8 v0, v0, 0x1
 

@@ -1,4 +1,4 @@
-.class Landroidx/browser/customtabs/CustomTabsService$1$1;
+.class public Landroidx/browser/customtabs/CustomTabsService$1$1;
 .super Ljava/lang/Object;
 .source "CustomTabsService.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/browser/customtabs/CustomTabsService$1;
+.field public final synthetic this$1:Landroidx/browser/customtabs/CustomTabsService$1;
 
-.field final synthetic val$sessionToken:Landroidx/browser/customtabs/CustomTabsSessionToken;
+.field public final synthetic val$sessionToken:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/customtabs/CustomTabsService$1;Landroidx/browser/customtabs/CustomTabsSessionToken;)V
+.method public constructor <init>(Landroidx/browser/customtabs/CustomTabsService$1;Landroidx/browser/customtabs/CustomTabsSessionToken;)V
     .locals 0
 
-    .line 115
+    .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsService$1$1;->this$1:Landroidx/browser/customtabs/CustomTabsService$1;
 
     iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsService$1$1;->val$sessionToken:Landroidx/browser/customtabs/CustomTabsSessionToken;
@@ -42,7 +42,7 @@
 .method public binderDied()V
     .locals 2
 
-    .line 118
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsService$1$1;->this$1:Landroidx/browser/customtabs/CustomTabsService$1;
 
     iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsService$1;->this$0:Landroidx/browser/customtabs/CustomTabsService;

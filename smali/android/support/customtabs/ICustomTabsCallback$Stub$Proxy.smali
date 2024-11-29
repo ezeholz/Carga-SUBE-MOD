@@ -1,4 +1,4 @@
-.class Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;
+.class public Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "ICustomTabsCallback.java"
 
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Proxy"
 .end annotation
 
 
 # instance fields
-.field private mRemote:Landroid/os/IBinder;
+.field public mRemote:Landroid/os/IBinder;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/IBinder;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 143
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 144
+    .line 2
     iput-object p1, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -39,7 +39,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .line 148
+    .line 1
     iget-object v0, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -48,12 +48,12 @@
 .method public extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 3
 
-    .line 178
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 179
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -61,10 +61,10 @@
     :try_start_0
     const-string v2, "android.support.customtabs.ICustomTabsCallback"
 
-    .line 181
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 182
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     const/4 p1, 0x0
@@ -73,19 +73,19 @@
 
     const/4 v2, 0x1
 
-    .line 184
+    .line 5
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 185
+    .line 6
     invoke-virtual {p2, v0, p1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 188
+    .line 7
     :cond_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 190
+    .line 8
     :goto_0
     iget-object p2, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -93,15 +93,15 @@
 
     invoke-interface {p2, v2, v0, v1, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 191
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 194
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 195
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -109,10 +109,10 @@
     :catchall_0
     move-exception p1
 
-    .line 194
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 195
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1
@@ -129,12 +129,12 @@
 .method public onMessageChannelReady(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 200
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 201
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -142,7 +142,7 @@
     :try_start_0
     const-string v2, "android.support.customtabs.ICustomTabsCallback"
 
-    .line 203
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v2, 0x0
@@ -151,19 +151,19 @@
 
     const/4 v3, 0x1
 
-    .line 205
+    .line 4
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 206
+    .line 5
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 209
+    .line 6
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 211
+    .line 7
     :goto_0
     iget-object p1, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -171,15 +171,15 @@
 
     invoke-interface {p1, v3, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 212
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 215
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 216
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -187,10 +187,10 @@
     :catchall_0
     move-exception p1
 
-    .line 215
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 216
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1
@@ -199,12 +199,12 @@
 .method public onNavigationEvent(ILandroid/os/Bundle;)V
     .locals 3
 
-    .line 156
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 157
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -212,10 +212,10 @@
     :try_start_0
     const-string v2, "android.support.customtabs.ICustomTabsCallback"
 
-    .line 159
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 160
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 p1, 0x0
@@ -224,19 +224,19 @@
 
     const/4 v2, 0x1
 
-    .line 162
+    .line 5
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 163
+    .line 6
     invoke-virtual {p2, v0, p1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 166
+    .line 7
     :cond_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 168
+    .line 8
     :goto_0
     iget-object p2, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -244,15 +244,15 @@
 
     invoke-interface {p2, v2, v0, v1, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 169
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 172
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 173
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -260,10 +260,10 @@
     :catchall_0
     move-exception p1
 
-    .line 172
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 173
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1
@@ -272,12 +272,12 @@
 .method public onPostMessage(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 3
 
-    .line 221
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 222
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -285,10 +285,10 @@
     :try_start_0
     const-string v2, "android.support.customtabs.ICustomTabsCallback"
 
-    .line 224
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 225
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     const/4 p1, 0x0
@@ -297,19 +297,19 @@
 
     const/4 v2, 0x1
 
-    .line 227
+    .line 5
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 228
+    .line 6
     invoke-virtual {p2, v0, p1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 231
+    .line 7
     :cond_0
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 233
+    .line 8
     :goto_0
     iget-object p2, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -317,15 +317,15 @@
 
     invoke-interface {p2, v2, v0, v1, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 234
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 237
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 238
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -333,10 +333,10 @@
     :catchall_0
     move-exception p1
 
-    .line 237
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 238
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1
@@ -345,12 +345,12 @@
 .method public onRelationshipValidationResult(ILandroid/net/Uri;ZLandroid/os/Bundle;)V
     .locals 3
 
-    .line 243
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 244
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -358,10 +358,10 @@
     :try_start_0
     const-string v2, "android.support.customtabs.ICustomTabsCallback"
 
-    .line 246
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 247
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 p1, 0x1
@@ -370,15 +370,15 @@
 
     if-eqz p2, :cond_0
 
-    .line 249
+    .line 5
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 250
+    .line 6
     invoke-virtual {p2, v0, v2}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 253
+    .line 7
     :cond_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -392,25 +392,25 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 255
+    .line 8
     :goto_1
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     if-eqz p4, :cond_2
 
-    .line 257
+    .line 9
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
+    .line 10
     invoke-virtual {p4, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_2
 
-    .line 261
+    .line 11
     :cond_2
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 263
+    .line 12
     :goto_2
     iget-object p1, p0, Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -418,15 +418,15 @@
 
     invoke-interface {p1, p2, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 264
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 267
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 268
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -434,10 +434,10 @@
     :catchall_0
     move-exception p1
 
-    .line 267
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 268
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1

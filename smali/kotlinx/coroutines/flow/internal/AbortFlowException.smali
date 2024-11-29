@@ -9,7 +9,7 @@
 
     const-string v0, "Flow was aborted, no more elements needed"
 
-    .line 9
+    .line 1
     invoke-direct {p0, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -17,23 +17,17 @@
 
 
 # virtual methods
-.method public final fillInStackTrace()Ljava/lang/Throwable;
+.method public fillInStackTrace()Ljava/lang/Throwable;
     .locals 1
 
-    .line 11
-    invoke-static {}, Lkotlinx/coroutines/x;->b()Z
-
-    move-result v0
+    .line 1
+    sget-boolean v0, Le/a/d0;->b:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Ljava/util/concurrent/CancellationException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    .line 12
     :cond_0
-    move-object v0, p0
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    return-object v0
+    return-object p0
 .end method

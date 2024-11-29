@@ -34,13 +34,13 @@
 
 .field public static final TextAppearance_Compat_Notification_Title_Media:I = 0x7f13016d
 
-.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f13024b
+.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f13024d
 
-.field public static final Widget_Compat_NotificationActionText:I = 0x7f13024c
+.field public static final Widget_Compat_NotificationActionText:I = 0x7f13024e
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

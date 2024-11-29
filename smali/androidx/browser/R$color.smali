@@ -14,25 +14,25 @@
 
 
 # static fields
-.field public static final browser_actions_bg_grey:I = 0x7f060026
+.field public static final browser_actions_bg_grey:I = 0x7f060027
 
-.field public static final browser_actions_divider_color:I = 0x7f060027
+.field public static final browser_actions_divider_color:I = 0x7f060028
 
-.field public static final browser_actions_text_color:I = 0x7f060028
+.field public static final browser_actions_text_color:I = 0x7f060029
 
-.field public static final browser_actions_title_color:I = 0x7f060029
+.field public static final browser_actions_title_color:I = 0x7f06002a
 
-.field public static final notification_action_color_filter:I = 0x7f0600d8
+.field public static final notification_action_color_filter:I = 0x7f0600d9
 
-.field public static final notification_icon_bg_color:I = 0x7f0600d9
+.field public static final notification_icon_bg_color:I = 0x7f0600da
 
-.field public static final ripple_material_light:I = 0x7f0600e4
+.field public static final ripple_material_light:I = 0x7f0600e5
 
-.field public static final secondary_text_default_material_light:I = 0x7f0600e6
+.field public static final secondary_text_default_material_light:I = 0x7f0600e7
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

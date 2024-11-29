@@ -16,4 +16,10 @@
 
 # virtual methods
 .method public abstract extend(Landroidx/core/app/NotificationCompat$Action$Builder;)Landroidx/core/app/NotificationCompat$Action$Builder;
+    .param p1    # Landroidx/core/app/NotificationCompat$Action$Builder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method

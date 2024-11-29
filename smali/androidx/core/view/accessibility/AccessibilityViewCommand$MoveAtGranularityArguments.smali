@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 64
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;-><init>()V
 
     return-void
@@ -26,11 +26,11 @@
 
 
 # virtual methods
-.method public final getExtendSelection()Z
+.method public getExtendSelection()Z
     .locals 2
 
-    .line 88
-    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$MoveAtGranularityArguments;->mBundle:Landroid/os/Bundle;
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     const-string v1, "ACTION_ARGUMENT_EXTEND_SELECTION_BOOLEAN"
 
@@ -41,11 +41,11 @@
     return v0
 .end method
 
-.method public final getGranularity()I
+.method public getGranularity()I
     .locals 2
 
-    .line 80
-    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$MoveAtGranularityArguments;->mBundle:Landroid/os/Bundle;
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     const-string v1, "ACTION_ARGUMENT_MOVEMENT_GRANULARITY_INT"
 

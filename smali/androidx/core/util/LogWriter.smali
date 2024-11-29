@@ -4,24 +4,30 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # instance fields
-.field private mBuilder:Ljava/lang/StringBuilder;
+.field public mBuilder:Ljava/lang/StringBuilder;
 
-.field private final mTag:Ljava/lang/String;
+.field public final mTag:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 43
+    .line 1
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
-    .line 35
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
@@ -30,7 +36,7 @@
 
     iput-object v0, p0, Landroidx/core/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 44
+    .line 3
     iput-object p1, p0, Landroidx/core/util/LogWriter;->mTag:Ljava/lang/String;
 
     return-void
@@ -39,7 +45,7 @@
 .method private flushBuilder()V
     .locals 3
 
-    .line 68
+    .line 1
     iget-object v0, p0, Landroidx/core/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -48,7 +54,12 @@
 
     if-lez v0, :cond_0
 
-    .line 70
+    .line 2
+    iget-object v0, p0, Landroidx/core/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 3
     iget-object v0, p0, Landroidx/core/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
@@ -68,7 +79,7 @@
 .method public close()V
     .locals 0
 
-    .line 48
+    .line 1
     invoke-direct {p0}, Landroidx/core/util/LogWriter;->flushBuilder()V
 
     return-void
@@ -77,7 +88,7 @@
 .method public flush()V
     .locals 0
 
-    .line 52
+    .line 1
     invoke-direct {p0}, Landroidx/core/util/LogWriter;->flushBuilder()V
 
     return-void
@@ -93,19 +104,19 @@
 
     add-int v1, p2, v0
 
-    .line 57
+    .line 1
     aget-char v1, p1, v1
 
     const/16 v2, 0xa
 
     if-ne v1, v2, :cond_0
 
-    .line 59
+    .line 2
     invoke-direct {p0}, Landroidx/core/util/LogWriter;->flushBuilder()V
 
     goto :goto_1
 
-    .line 62
+    .line 3
     :cond_0
     iget-object v2, p0, Landroidx/core/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
 

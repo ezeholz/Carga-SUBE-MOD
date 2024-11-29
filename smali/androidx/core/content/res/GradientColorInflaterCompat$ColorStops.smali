@@ -1,4 +1,4 @@
-.class final Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;
+.class public final Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;
 .super Ljava/lang/Object;
 .source "GradientColorInflaterCompat.java"
 
@@ -9,22 +9,30 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "ColorStops"
 .end annotation
 
 
 # instance fields
-.field final mColors:[I
+.field public final mColors:[I
 
-.field final mOffsets:[F
+.field public final mOffsets:[F
 
 
 # direct methods
-.method constructor <init>(II)V
+.method public constructor <init>(II)V
     .locals 3
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
-    .line 227
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
@@ -39,12 +47,12 @@
 
     aput p2, v1, p1
 
-    .line 228
+    .line 8
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     new-array p1, v0, [F
 
-    .line 229
+    .line 9
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -58,10 +66,22 @@
     .end array-data
 .end method
 
-.method constructor <init>(III)V
+.method public constructor <init>(III)V
     .locals 3
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
-    .line 232
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
@@ -80,12 +100,12 @@
 
     aput p3, v1, p1
 
-    .line 233
+    .line 11
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     new-array p1, v0, [F
 
-    .line 234
+    .line 12
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -102,8 +122,16 @@
     .end array-data
 .end method
 
-.method constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
     .locals 4
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -116,20 +144,20 @@
         }
     .end annotation
 
-    .line 217
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 219
+    .line 3
     new-array v1, v0, [I
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
-    .line 220
+    .line 4
     new-array v1, v0, [F
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -139,7 +167,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 222
+    .line 5
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -154,7 +182,7 @@
 
     aput v3, v2, v1
 
-    .line 223
+    .line 6
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
 
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;

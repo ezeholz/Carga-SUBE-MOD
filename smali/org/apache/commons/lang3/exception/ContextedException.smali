@@ -3,43 +3,43 @@
 .source "ContextedException.java"
 
 # interfaces
-.implements Lorg/apache/commons/lang3/exception/b;
+.implements Lm/a/a/b/c/b;
 
 
 # static fields
-.field private static final serialVersionUID:J = 0x132dd72L
+.field public static final serialVersionUID:J = 0x132dd72L
 
 
 # instance fields
-.field private final a:Lorg/apache/commons/lang3/exception/b;
+.field public final d:Lm/a/a/b/c/b;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 100
+    .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 101
-    new-instance v0, Lorg/apache/commons/lang3/exception/a;
+    .line 2
+    new-instance v0, Lm/a/a/b/c/a;
 
-    invoke-direct {v0}, Lorg/apache/commons/lang3/exception/a;-><init>()V
+    invoke-direct {v0}, Lm/a/a/b/c/a;-><init>()V
 
-    iput-object v0, p0, Lorg/apache/commons/lang3/exception/ContextedException;->a:Lorg/apache/commons/lang3/exception/b;
+    iput-object v0, p0, Lorg/apache/commons/lang3/exception/ContextedException;->d:Lm/a/a/b/c/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/lang/String;
+.method public a(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 254
-    iget-object v0, p0, Lorg/apache/commons/lang3/exception/ContextedException;->a:Lorg/apache/commons/lang3/exception/b;
+    .line 1
+    iget-object v0, p0, Lorg/apache/commons/lang3/exception/ContextedException;->d:Lm/a/a/b/c/b;
 
-    invoke-interface {v0, p1}, Lorg/apache/commons/lang3/exception/b;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lm/a/a/b/c/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -49,7 +49,7 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .line 235
+    .line 1
     invoke-super {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0

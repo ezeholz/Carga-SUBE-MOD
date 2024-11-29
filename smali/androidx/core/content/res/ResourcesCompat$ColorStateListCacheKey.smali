@@ -1,4 +1,4 @@
-.class final Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;
+.class public final Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;
 .super Ljava/lang/Object;
 .source "ResourcesCompat.java"
 
@@ -9,28 +9,39 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "ColorStateListCacheKey"
 .end annotation
 
 
 # instance fields
-.field final mResources:Landroid/content/res/Resources;
+.field public final mResources:Landroid/content/res/Resources;
 
-.field final mTheme:Landroid/content/res/Resources$Theme;
+.field public final mTheme:Landroid/content/res/Resources$Theme;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
+.method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
     .locals 0
+    .param p1    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 290
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 291
+    .line 2
     iput-object p1, p0, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;->mResources:Landroid/content/res/Resources;
 
-    .line 292
+    .line 3
     iput-object p2, p0, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;->mTheme:Landroid/content/res/Resources$Theme;
 
     return-void
@@ -38,7 +49,7 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
     const/4 v0, 0x1
@@ -50,12 +61,10 @@
     :cond_0
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    .line 298
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
+    .line 1
+    const-class v2, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -63,13 +72,13 @@
 
     if-eq v2, v3, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 299
+    .line 2
     :cond_1
     check-cast p1, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;
 
-    .line 300
+    .line 3
     iget-object v2, p0, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;->mResources:Landroid/content/res/Resources;
 
     iget-object v3, p1, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;->mResources:Landroid/content/res/Resources;
@@ -84,28 +93,34 @@
 
     iget-object p1, p1, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;->mTheme:Landroid/content/res/Resources$Theme;
 
-    .line 301
+    .line 4
     invoke-static {v2, p1}, Landroidx/core/util/ObjectsCompat;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    return v0
+    goto :goto_0
 
     :cond_2
+    const/4 v0, 0x0
+
     :goto_0
+    return v0
+
+    :cond_3
+    :goto_1
     return v1
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 3
 
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 306
+    .line 1
     iget-object v1, p0, Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;->mResources:Landroid/content/res/Resources;
 
     const/4 v2, 0x0

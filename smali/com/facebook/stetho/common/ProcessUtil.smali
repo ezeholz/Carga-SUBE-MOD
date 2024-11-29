@@ -4,18 +4,18 @@
 
 
 # static fields
-.field private static final CMDLINE_BUFFER_SIZE:I = 0x40
+.field public static final CMDLINE_BUFFER_SIZE:I = 0x40
 
-.field private static sProcessName:Ljava/lang/String;
+.field public static sProcessName:Ljava/lang/String;
 
-.field private static sProcessNameRead:Z
+.field public static sProcessNameRead:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 16
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 
     monitor-enter v0
 
-    .line 35
+    .line 1
     :try_start_0
     sget-boolean v1, Lcom/facebook/stetho/common/ProcessUtil;->sProcessNameRead:Z
 
@@ -36,12 +36,12 @@
 
     const/4 v1, 0x1
 
-    .line 36
+    .line 2
     sput-boolean v1, Lcom/facebook/stetho/common/ProcessUtil;->sProcessNameRead:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
+    .line 3
     :try_start_1
     invoke-static {}, Lcom/facebook/stetho/common/ProcessUtil;->readProcessName()Ljava/lang/String;
 
@@ -52,7 +52,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 42
+    .line 4
     :catch_0
     :cond_0
     :try_start_2
@@ -72,18 +72,18 @@
     throw v1
 .end method
 
-.method private static indexOf([BIIB)I
+.method public static indexOf([BIIB)I
     .locals 0
 
     const/4 p1, 0x0
 
-    .line 62
+    .line 1
     :goto_0
     array-length p2, p0
 
     if-ge p1, p2, :cond_1
 
-    .line 63
+    .line 2
     aget-byte p2, p0, p1
 
     if-ne p2, p3, :cond_0
@@ -101,14 +101,14 @@
     return p0
 .end method
 
-.method private static readProcessName()Ljava/lang/String;
+.method public static readProcessName()Ljava/lang/String;
     .locals 7
 
     const/16 v0, 0x40
 
     new-array v0, v0, [B
 
-    .line 49
+    .line 1
     new-instance v1, Ljava/io/FileInputStream;
 
     const-string v2, "/proc/self/cmdline"
@@ -119,7 +119,7 @@
 
     const/4 v3, 0x0
 
-    .line 52
+    .line 2
     :try_start_0
     invoke-virtual {v1, v0}, Ljava/io/FileInputStream;->read([B)I
 
@@ -127,13 +127,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 54
+    .line 3
     :try_start_1
     invoke-static {v0, v3, v4, v3}, Lcom/facebook/stetho/common/ProcessUtil;->indexOf([BIIB)I
 
     move-result v5
 
-    .line 55
+    .line 4
     new-instance v6, Ljava/lang/String;
 
     if-lez v5, :cond_0
@@ -145,7 +145,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 57
+    .line 5
     invoke-static {v1, v3}, Lcom/facebook/stetho/common/Util;->close(Ljava/io/Closeable;Z)V
 
     return-object v6
@@ -165,6 +165,6 @@
 
     invoke-static {v1, v2}, Lcom/facebook/stetho/common/Util;->close(Ljava/io/Closeable;Z)V
 
-    .line 58
+    .line 6
     throw v0
 .end method

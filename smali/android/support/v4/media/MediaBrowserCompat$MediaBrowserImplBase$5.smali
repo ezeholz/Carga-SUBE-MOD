@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;
+.class public Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;
 .super Ljava/lang/Object;
 .source "MediaBrowserCompat.java"
 
@@ -12,26 +12,26 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;
+.field public final synthetic this$0:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;
 
-.field final synthetic val$callback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;
+.field public final synthetic val$callback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;
 
-.field final synthetic val$extras:Landroid/os/Bundle;
+.field public final synthetic val$extras:Landroid/os/Bundle;
 
-.field final synthetic val$query:Ljava/lang/String;
+.field public final synthetic val$query:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;Ljava/lang/String;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1288
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;->this$0:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;->val$callback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;
@@ -50,7 +50,7 @@
 .method public run()V
     .locals 3
 
-    .line 1291
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;->val$callback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$5;->val$query:Ljava/lang/String;

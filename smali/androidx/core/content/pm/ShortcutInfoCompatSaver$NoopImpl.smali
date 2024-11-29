@@ -4,6 +4,12 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/content/pm/ShortcutInfoCompatSaver;
 .end annotation
@@ -26,7 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 57
+    .line 1
     invoke-direct {p0}, Landroidx/core/content/pm/ShortcutInfoCompatSaver;-><init>()V
 
     return-void
@@ -37,7 +43,7 @@
 .method public bridge synthetic addShortcuts(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
 
-    .line 56
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;->addShortcuts(Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object p1
@@ -65,7 +71,7 @@
 .method public bridge synthetic removeAllShortcuts()Ljava/lang/Object;
     .locals 1
 
-    .line 56
+    .line 1
     invoke-virtual {p0}, Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;->removeAllShortcuts()Ljava/lang/Void;
 
     move-result-object v0
@@ -84,7 +90,7 @@
 .method public bridge synthetic removeShortcuts(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
 
-    .line 56
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;->removeShortcuts(Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object p1

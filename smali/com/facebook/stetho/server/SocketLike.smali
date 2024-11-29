@@ -4,22 +4,22 @@
 
 
 # instance fields
-.field private final mLeakyInput:Lcom/facebook/stetho/server/LeakyBufferedInputStream;
+.field public final mLeakyInput:Lcom/facebook/stetho/server/LeakyBufferedInputStream;
 
-.field private final mSocket:Landroid/net/LocalSocket;
+.field public final mSocket:Landroid/net/LocalSocket;
 
 
 # direct methods
 .method public constructor <init>(Landroid/net/LocalSocket;Lcom/facebook/stetho/server/LeakyBufferedInputStream;)V
     .locals 0
 
-    .line 35
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 3
     iput-object p1, p0, Lcom/facebook/stetho/server/SocketLike;->mSocket:Landroid/net/LocalSocket;
 
-    .line 37
+    .line 4
     iput-object p2, p0, Lcom/facebook/stetho/server/SocketLike;->mLeakyInput:Lcom/facebook/stetho/server/LeakyBufferedInputStream;
 
     return-void
@@ -28,7 +28,7 @@
 .method public constructor <init>(Lcom/facebook/stetho/server/SocketLike;Lcom/facebook/stetho/server/LeakyBufferedInputStream;)V
     .locals 0
 
-    .line 32
+    .line 1
     iget-object p1, p1, Lcom/facebook/stetho/server/SocketLike;->mSocket:Landroid/net/LocalSocket;
 
     invoke-direct {p0, p1, p2}, Lcom/facebook/stetho/server/SocketLike;-><init>(Landroid/net/LocalSocket;Lcom/facebook/stetho/server/LeakyBufferedInputStream;)V
@@ -41,7 +41,7 @@
 .method public getInput()Ljava/io/InputStream;
     .locals 1
 
-    .line 41
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/SocketLike;->mLeakyInput:Lcom/facebook/stetho/server/LeakyBufferedInputStream;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->leakBufferAndStream()Ljava/io/InputStream;
@@ -54,7 +54,7 @@
 .method public getOutput()Ljava/io/OutputStream;
     .locals 1
 
-    .line 45
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/SocketLike;->mSocket:Landroid/net/LocalSocket;
 
     invoke-virtual {v0}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;

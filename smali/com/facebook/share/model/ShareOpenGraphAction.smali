@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/ShareOpenGraphAction$a;
+        Lcom/facebook/share/model/ShareOpenGraphAction$b;
     }
 .end annotation
 
@@ -14,7 +14,7 @@
     value = {
         "Lcom/facebook/share/model/ShareOpenGraphValueContainer<",
         "Lcom/facebook/share/model/ShareOpenGraphAction;",
-        "Lcom/facebook/share/model/ShareOpenGraphAction$a;",
+        "Lcom/facebook/share/model/ShareOpenGraphAction$b;",
         ">;"
     }
 .end annotation
@@ -33,42 +33,33 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 56
-    new-instance v0, Lcom/facebook/share/model/ShareOpenGraphAction$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareOpenGraphAction$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareOpenGraphAction$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareOpenGraphAction$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareOpenGraphAction;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 42
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareOpenGraphValueContainer;-><init>(Landroid/os/Parcel;)V
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/facebook/share/model/ShareOpenGraphAction$a;)V
+.method public synthetic constructor <init>(Lcom/facebook/share/model/ShareOpenGraphAction$b;Lcom/facebook/share/model/ShareOpenGraphAction$a;)V
     .locals 0
 
-    .line 38
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareOpenGraphValueContainer;-><init>(Lcom/facebook/share/model/ShareOpenGraphValueContainer$a;)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/facebook/share/model/ShareOpenGraphAction$a;B)V
-    .locals 0
-
-    .line 34
-    invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareOpenGraphAction;-><init>(Lcom/facebook/share/model/ShareOpenGraphAction$a;)V
 
     return-void
 .end method

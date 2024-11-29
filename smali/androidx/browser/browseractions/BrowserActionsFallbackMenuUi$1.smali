@@ -1,4 +1,4 @@
-.class Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$1;
+.class public Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$1;
 .super Ljava/lang/Object;
 .source "BrowserActionsFallbackMenuUi.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
+.field public final synthetic this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;Landroid/view/View;)V
     .locals 0
 
-    .line 91
+    .line 1
     iput-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$1;->this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
 
     iput-object p2, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$1;->val$view:Landroid/view/View;
@@ -42,7 +42,7 @@
 .method public onShow(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 94
+    .line 1
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$1;->this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;
 
     iget-object p1, p1, Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi;->mMenuUiListener:Landroidx/browser/browseractions/BrowserActionsFallbackMenuUi$BrowserActionsFallMenuUiListener;

@@ -1,4 +1,4 @@
-.class Landroidx/transition/Transition$ArrayListManager;
+.class public Landroidx/transition/Transition$ArrayListManager;
 .super Ljava/lang/Object;
 .source "Transition.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ArrayListManager"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2382
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static add(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
+.method public static add(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -40,12 +40,12 @@
 
     if-nez p0, :cond_0
 
-    .line 2394
+    .line 1
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2396
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -53,14 +53,14 @@
 
     if-nez v0, :cond_1
 
-    .line 2397
+    .line 3
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
     return-object p0
 .end method
 
-.method static remove(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
+.method public static remove(Ljava/util/ArrayList;Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,10 +76,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 2409
+    .line 1
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2410
+    .line 2
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p1

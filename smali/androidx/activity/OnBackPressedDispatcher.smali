@@ -13,9 +13,12 @@
 
 
 # instance fields
-.field private final mFallbackOnBackPressed:Ljava/lang/Runnable;
+.field public final mFallbackOnBackPressed:Ljava/lang/Runnable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field final mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
+.field public final mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayDeque<",
@@ -32,7 +35,7 @@
 
     const/4 v0, 0x0
 
-    .line 67
+    .line 1
     invoke-direct {p0, v0}, Landroidx/activity/OnBackPressedDispatcher;-><init>(Ljava/lang/Runnable;)V
 
     return-void
@@ -40,18 +43,22 @@
 
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 1
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 77
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 3
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
 
-    .line 78
+    .line 4
     iput-object p1, p0, Landroidx/activity/OnBackPressedDispatcher;->mFallbackOnBackPressed:Ljava/lang/Runnable;
 
     return-void
@@ -59,24 +66,46 @@
 
 
 # virtual methods
-.method public final addCallback(Landroidx/activity/OnBackPressedCallback;)V
+.method public addCallback(Landroidx/activity/OnBackPressedCallback;)V
     .locals 0
+    .param p1    # Landroidx/activity/OnBackPressedCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 97
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/activity/OnBackPressedDispatcher;->addCancellableCallback(Landroidx/activity/OnBackPressedCallback;)Landroidx/activity/Cancellable;
 
     return-void
 .end method
 
-.method public final addCallback(Landroidx/lifecycle/LifecycleOwner;Landroidx/activity/OnBackPressedCallback;)V
+.method public addCallback(Landroidx/lifecycle/LifecycleOwner;Landroidx/activity/OnBackPressedCallback;)V
     .locals 2
+    .param p1    # Landroidx/lifecycle/LifecycleOwner;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/activity/OnBackPressedCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "LambdaLast"
+        }
+    .end annotation
 
-    .line 148
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .line 2
     invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    .line 149
+    .line 3
     invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -87,7 +116,7 @@
 
     return-void
 
-    .line 153
+    .line 4
     :cond_0
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;
 
@@ -98,37 +127,48 @@
     return-void
 .end method
 
-.method final addCancellableCallback(Landroidx/activity/OnBackPressedCallback;)Landroidx/activity/Cancellable;
+.method public addCancellableCallback(Landroidx/activity/OnBackPressedCallback;)Landroidx/activity/Cancellable;
     .locals 1
+    .param p1    # Landroidx/activity/OnBackPressedCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 114
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 115
+    .line 2
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;
 
     invoke-direct {v0, p0, p1}, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/activity/OnBackPressedCallback;)V
 
-    .line 116
+    .line 3
     invoke-virtual {p1, v0}, Landroidx/activity/OnBackPressedCallback;->addCancellable(Landroidx/activity/Cancellable;)V
 
     return-object v0
 .end method
 
-.method public final hasEnabledCallbacks()Z
+.method public hasEnabledCallbacks()Z
     .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 165
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
 
-    .line 166
+    .line 2
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 167
+    .line 3
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -136,7 +176,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 168
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -159,18 +199,20 @@
     return v0
 .end method
 
-.method public final onBackPressed()V
+.method public onBackPressed()V
     .locals 3
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 187
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
 
-    .line 188
+    .line 2
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 189
+    .line 3
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -178,32 +220,32 @@
 
     if-eqz v1, :cond_1
 
-    .line 190
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroidx/activity/OnBackPressedCallback;
 
-    .line 191
+    .line 5
     invoke-virtual {v1}, Landroidx/activity/OnBackPressedCallback;->isEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 192
+    .line 6
     invoke-virtual {v1}, Landroidx/activity/OnBackPressedCallback;->handleOnBackPressed()V
 
     return-void
 
-    .line 196
+    .line 7
     :cond_1
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher;->mFallbackOnBackPressed:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_2
 
-    .line 197
+    .line 8
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     :cond_2

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/view/menu/MenuPopupHelper$1;
+.class public Landroidx/appcompat/view/menu/MenuPopupHelper$1;
 .super Ljava/lang/Object;
 .source "MenuPopupHelper.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/view/menu/MenuPopupHelper;
+.field public final synthetic this$0:Landroidx/appcompat/view/menu/MenuPopupHelper;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/view/menu/MenuPopupHelper;)V
+.method public constructor <init>(Landroidx/appcompat/view/menu/MenuPopupHelper;)V
     .locals 0
 
-    .line 334
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuPopupHelper$1;->this$0:Landroidx/appcompat/view/menu/MenuPopupHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDismiss()V
     .locals 1
 
-    .line 337
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper$1;->this$0:Landroidx/appcompat/view/menu/MenuPopupHelper;
 
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->onDismiss()V

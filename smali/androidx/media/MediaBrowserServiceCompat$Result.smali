@@ -24,27 +24,27 @@
 
 
 # instance fields
-.field private final mDebug:Ljava/lang/Object;
+.field public final mDebug:Ljava/lang/Object;
 
-.field private mDetachCalled:Z
+.field public mDetachCalled:Z
 
-.field private mFlags:I
+.field public mFlags:I
 
-.field private mSendErrorCalled:Z
+.field public mSendErrorCalled:Z
 
-.field private mSendProgressUpdateCalled:Z
+.field public mSendProgressUpdateCalled:Z
 
-.field private mSendResultCalled:Z
+.field public mSendResultCalled:Z
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .line 760
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 761
+    .line 2
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
     return-void
@@ -60,14 +60,14 @@
     :cond_0
     const-string v0, "android.media.browse.extra.DOWNLOAD_PROGRESS"
 
-    .line 867
+    .line 1
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 868
+    .line 2
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
 
     move-result p1
@@ -86,7 +86,7 @@
 
     goto :goto_0
 
-    .line 870
+    .line 3
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -106,37 +106,37 @@
 .method public detach()V
     .locals 3
 
-    .line 812
+    .line 1
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDetachCalled:Z
 
     if-nez v0, :cond_2
 
-    .line 816
+    .line 2
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendResultCalled:Z
 
     if-nez v0, :cond_1
 
-    .line 820
+    .line 3
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendErrorCalled:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 824
+    .line 4
     iput-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDetachCalled:Z
 
     return-void
 
-    .line 821
+    .line 5
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "detach() called when sendError() had already been called for: "
 
-    const-string v2, "detach() called when sendError() had already been called for: "
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -150,15 +150,15 @@
 
     throw v0
 
-    .line 817
+    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "detach() called when sendResult() had already been called for: "
 
-    const-string v2, "detach() called when sendResult() had already been called for: "
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -172,15 +172,15 @@
 
     throw v0
 
-    .line 813
+    .line 7
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "detach() called when detach() had already been called for: "
 
-    const-string v2, "detach() called when detach() had already been called for: "
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -195,19 +195,19 @@
     throw v0
 .end method
 
-.method getFlags()I
+.method public getFlags()I
     .locals 1
 
-    .line 836
+    .line 1
     iget v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mFlags:I
 
     return v0
 .end method
 
-.method isDone()Z
+.method public isDone()Z
     .locals 1
 
-    .line 828
+    .line 1
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDetachCalled:Z
 
     if-nez v0, :cond_1
@@ -225,26 +225,27 @@
     :cond_0
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_1
 
     :cond_1
     :goto_0
     const/4 v0, 0x1
 
+    :goto_1
     return v0
 .end method
 
-.method onErrorSent(Landroid/os/Bundle;)V
+.method public onErrorSent(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 859
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "It is not supported to send an error for "
 
-    const-string v1, "It is not supported to send an error for "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -259,17 +260,17 @@
     throw p1
 .end method
 
-.method onProgressUpdateSent(Landroid/os/Bundle;)V
+.method public onProgressUpdateSent(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 850
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "It is not supported to send an interim update for "
 
-    const-string v1, "It is not supported to send an interim update for "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -284,7 +285,7 @@
     throw p1
 .end method
 
-.method onResultSent(Ljava/lang/Object;)V
+.method public onResultSent(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -298,7 +299,7 @@
 .method public sendError(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 799
+    .line 1
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendResultCalled:Z
 
     if-nez v0, :cond_0
@@ -309,23 +310,23 @@
 
     const/4 v0, 0x1
 
-    .line 803
+    .line 2
     iput-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendErrorCalled:Z
 
-    .line 804
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/media/MediaBrowserServiceCompat$Result;->onErrorSent(Landroid/os/Bundle;)V
 
     return-void
 
-    .line 800
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "sendError() called when either sendResult() or sendError() had already been called for: "
 
-    const-string v1, "sendError() called when either sendResult() or sendError() had already been called for: "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -343,7 +344,7 @@
 .method public sendProgressUpdate(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 783
+    .line 1
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendResultCalled:Z
 
     if-nez v0, :cond_0
@@ -352,28 +353,28 @@
 
     if-nez v0, :cond_0
 
-    .line 787
+    .line 2
     invoke-direct {p0, p1}, Landroidx/media/MediaBrowserServiceCompat$Result;->checkExtraFields(Landroid/os/Bundle;)V
 
     const/4 v0, 0x1
 
-    .line 788
+    .line 3
     iput-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendProgressUpdateCalled:Z
 
-    .line 789
+    .line 4
     invoke-virtual {p0, p1}, Landroidx/media/MediaBrowserServiceCompat$Result;->onProgressUpdateSent(Landroid/os/Bundle;)V
 
     return-void
 
-    .line 784
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "sendProgressUpdate() called when either sendResult() or sendError() had already been called for: "
 
-    const-string v1, "sendProgressUpdate() called when either sendResult() or sendError() had already been called for: "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -396,7 +397,7 @@
         }
     .end annotation
 
-    .line 768
+    .line 1
     iget-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendResultCalled:Z
 
     if-nez v0, :cond_0
@@ -407,23 +408,23 @@
 
     const/4 v0, 0x1
 
-    .line 772
+    .line 2
     iput-boolean v0, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mSendResultCalled:Z
 
-    .line 773
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/media/MediaBrowserServiceCompat$Result;->onResultSent(Ljava/lang/Object;)V
 
     return-void
 
-    .line 769
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "sendResult() called when either sendResult() or sendError() had already been called for: "
 
-    const-string v1, "sendResult() called when either sendResult() or sendError() had already been called for: "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mDebug:Ljava/lang/Object;
 
@@ -438,10 +439,10 @@
     throw p1
 .end method
 
-.method setFlags(I)V
+.method public setFlags(I)V
     .locals 0
 
-    .line 832
+    .line 1
     iput p1, p0, Landroidx/media/MediaBrowserServiceCompat$Result;->mFlags:I
 
     return-void

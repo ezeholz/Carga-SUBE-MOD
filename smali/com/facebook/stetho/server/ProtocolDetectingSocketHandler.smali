@@ -15,11 +15,11 @@
 
 
 # static fields
-.field private static final SENSING_BUFFER_SIZE:I = 0x100
+.field public static final SENSING_BUFFER_SIZE:I = 0x100
 
 
 # instance fields
-.field private final mHandlers:Ljava/util/ArrayList;
+.field public final mHandlers:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -34,10 +34,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 39
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/server/SecureSocketHandler;-><init>(Landroid/content/Context;)V
 
-    .line 36
+    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     const/4 v0, 0x2
@@ -54,7 +54,7 @@
 .method public addHandler(Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;Lcom/facebook/stetho/server/SocketLikeHandler;)V
     .locals 3
 
-    .line 43
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->mHandlers:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$HandlerInfo;
@@ -68,13 +68,13 @@
     return-void
 .end method
 
-.method protected onSecured(Landroid/net/LocalSocket;)V
+.method public onSecured(Landroid/net/LocalSocket;)V
     .locals 6
 
-    .line 48
+    .line 1
     new-instance v0, Lcom/facebook/stetho/server/LeakyBufferedInputStream;
 
-    .line 49
+    .line 2
     invoke-virtual {p1}, Landroid/net/LocalSocket;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -83,7 +83,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 52
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->mHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -94,7 +94,7 @@
 
     const/4 v1, 0x0
 
-    .line 56
+    .line 4
     iget-object v3, p0, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->mHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -104,7 +104,7 @@
     :goto_0
     if-ge v1, v3, :cond_1
 
-    .line 57
+    .line 5
     iget-object v4, p0, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->mHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -113,27 +113,27 @@
 
     check-cast v4, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$HandlerInfo;
 
-    .line 58
+    .line 6
     invoke-virtual {v0, v2}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->mark(I)V
 
-    .line 59
+    .line 7
     iget-object v5, v4, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$HandlerInfo;->magicMatcher:Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;
 
     invoke-interface {v5, v0}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;->matches(Ljava/io/InputStream;)Z
 
     move-result v5
 
-    .line 60
+    .line 8
     invoke-virtual {v0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->reset()V
 
     if-eqz v5, :cond_0
 
-    .line 62
+    .line 9
     new-instance v1, Lcom/facebook/stetho/server/SocketLike;
 
     invoke-direct {v1, p1, v0}, Lcom/facebook/stetho/server/SocketLike;-><init>(Landroid/net/LocalSocket;Lcom/facebook/stetho/server/LeakyBufferedInputStream;)V
 
-    .line 63
+    .line 10
     iget-object p1, v4, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$HandlerInfo;->handler:Lcom/facebook/stetho/server/SocketLikeHandler;
 
     invoke-interface {p1, v1}, Lcom/facebook/stetho/server/SocketLikeHandler;->onAccepted(Lcom/facebook/stetho/server/SocketLike;)V
@@ -145,17 +145,17 @@
 
     goto :goto_0
 
-    .line 68
+    .line 11
     :cond_1
     new-instance p1, Ljava/io/IOException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "No matching handler, firstByte="
 
-    const-string v2, "No matching handler, firstByte="
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/facebook/stetho/server/LeakyBufferedInputStream;->read()I
+    invoke-virtual {v0}, Ljava/io/BufferedInputStream;->read()I
 
     move-result v0
 
@@ -169,7 +169,7 @@
 
     throw p1
 
-    .line 53
+    .line 12
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 

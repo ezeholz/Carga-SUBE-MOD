@@ -7,7 +7,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 17
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/dumpapp/DumpException;-><init>(Ljava/lang/String;)V
 
     return-void

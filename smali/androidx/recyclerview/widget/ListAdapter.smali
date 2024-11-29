@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
+.field public final mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/AsyncListDiffer<",
@@ -27,7 +27,7 @@
     .end annotation
 .end field
 
-.field private final mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
+.field public final mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/AsyncListDiffer$ListListener<",
@@ -38,8 +38,12 @@
 
 
 # direct methods
-.method protected constructor <init>(Landroidx/recyclerview/widget/AsyncDifferConfig;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/AsyncDifferConfig;)V
     .locals 2
+    .param p1    # Landroidx/recyclerview/widget/AsyncDifferConfig;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,17 +52,17 @@
         }
     .end annotation
 
-    .line 114
+    .line 6
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 97
+    .line 7
     new-instance v0, Landroidx/recyclerview/widget/ListAdapter$1;
 
     invoke-direct {v0, p0}, Landroidx/recyclerview/widget/ListAdapter$1;-><init>(Landroidx/recyclerview/widget/ListAdapter;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
-    .line 115
+    .line 8
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer;
 
     new-instance v1, Landroidx/recyclerview/widget/AdapterListUpdateCallback;
@@ -69,7 +73,7 @@
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    .line 116
+    .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/ListAdapter;->mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->addListListener(Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;)V
@@ -77,8 +81,12 @@
     return-void
 .end method
 
-.method protected constructor <init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 3
+    .param p1    # Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -87,17 +95,17 @@
         }
     .end annotation
 
-    .line 107
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 97
+    .line 2
     new-instance v0, Landroidx/recyclerview/widget/ListAdapter$1;
 
     invoke-direct {v0, p0}, Landroidx/recyclerview/widget/ListAdapter$1;-><init>(Landroidx/recyclerview/widget/ListAdapter;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
-    .line 108
+    .line 3
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer;
 
     new-instance v1, Landroidx/recyclerview/widget/AdapterListUpdateCallback;
@@ -108,7 +116,7 @@
 
     invoke-direct {v2, p1}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;-><init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
 
-    .line 109
+    .line 4
     invoke-virtual {v2}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->build()Landroidx/recyclerview/widget/AsyncDifferConfig;
 
     move-result-object p1
@@ -117,7 +125,7 @@
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-    .line 110
+    .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/ListAdapter;->mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->addListListener(Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;)V
@@ -129,6 +137,9 @@
 # virtual methods
 .method public getCurrentList()Ljava/util/List;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -137,7 +148,7 @@
         }
     .end annotation
 
-    .line 173
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -147,7 +158,7 @@
     return-object v0
 .end method
 
-.method protected getItem(I)Ljava/lang/Object;
+.method public getItem(I)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -155,7 +166,7 @@
         }
     .end annotation
 
-    .line 150
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -172,7 +183,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 155
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -188,6 +199,14 @@
 
 .method public onCurrentListChanged(Ljava/util/List;Ljava/util/List;)V
     .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -203,6 +222,10 @@
 
 .method public submitList(Ljava/util/List;)V
     .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -211,7 +234,7 @@
         }
     .end annotation
 
-    .line 128
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;)V
@@ -221,6 +244,14 @@
 
 .method public submitList(Ljava/util/List;Ljava/lang/Runnable;)V
     .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -231,7 +262,7 @@
         }
     .end annotation
 
-    .line 146
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;Ljava/lang/Runnable;)V

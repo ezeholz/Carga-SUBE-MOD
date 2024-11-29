@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
+.class public Landroidx/lifecycle/EmptyActivityLifecycleCallbacks;
 .super Ljava/lang/Object;
 .source "EmptyActivityLifecycleCallbacks.java"
 
@@ -7,10 +7,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,4 +1,4 @@
-.class Landroidx/browser/customtabs/CustomTabsSessionToken$1;
+.class public Landroidx/browser/customtabs/CustomTabsSessionToken$1;
 .super Landroidx/browser/customtabs/CustomTabsCallback;
 .source "CustomTabsSessionToken.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
+.field public final synthetic this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/customtabs/CustomTabsSessionToken;)V
+.method public constructor <init>(Landroidx/browser/customtabs/CustomTabsSessionToken;)V
     .locals 0
 
-    .line 91
+    .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsSessionToken$1;->this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
     invoke-direct {p0}, Landroidx/browser/customtabs/CustomTabsCallback;-><init>()V
@@ -35,7 +35,7 @@
 .method public extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 105
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken$1;->this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
@@ -52,7 +52,7 @@
 .method public onMessageChannelReady(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 114
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken$1;->this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
@@ -69,7 +69,7 @@
 .method public onNavigationEvent(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 96
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken$1;->this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
@@ -86,7 +86,7 @@
 .method public onPostMessage(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 123
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken$1;->this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
@@ -103,7 +103,7 @@
 .method public onRelationshipValidationResult(ILandroid/net/Uri;ZLandroid/os/Bundle;)V
     .locals 1
 
-    .line 133
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsSessionToken$1;->this$0:Landroidx/browser/customtabs/CustomTabsSessionToken;
 

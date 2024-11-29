@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/view/inputmethod/InputContentInfoCompat$InputContentInfoCompatImpl;
+.class public interface abstract Landroidx/core/view/inputmethod/InputContentInfoCompat$InputContentInfoCompatImpl;
 .super Ljava/lang/Object;
 .source "InputContentInfoCompat.java"
 
@@ -9,22 +9,30 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "InputContentInfoCompatImpl"
 .end annotation
 
 
 # virtual methods
 .method public abstract getContentUri()Landroid/net/Uri;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getDescription()Landroid/content/ClipDescription;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getInputContentInfo()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract getLinkUri()Landroid/net/Uri;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract releasePermission()V

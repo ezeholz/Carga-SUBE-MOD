@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
+.field public static final synthetic $VALUES:[Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
 .field public static final enum HTML:Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
@@ -24,14 +24,14 @@
 
 
 # instance fields
-.field private final mResourceType:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
+.field public final mResourceType:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 6
 
-    .line 15
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->XHR:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -44,7 +44,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->JSON:Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
-    .line 16
+    .line 2
     new-instance v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->DOCUMENT:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->HTML:Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
-    .line 17
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
     sget-object v1, Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;->DOCUMENT:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
@@ -74,7 +74,7 @@
 
     new-array v1, v1, [Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
-    .line 14
+    .line 4
     sget-object v5, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->JSON:Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
     aput-object v5, v1, v2
@@ -90,7 +90,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;ILcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;)V
+.method public constructor <init>(Ljava/lang/String;ILcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -100,10 +100,10 @@
         }
     .end annotation
 
-    .line 21
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 22
+    .line 2
     iput-object p3, p0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->mResourceType:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
 
     return-void
@@ -112,7 +112,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
     .locals 1
 
-    .line 14
+    .line 1
     const-class v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +127,7 @@
 .method public static values()[Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
     .locals 1
 
-    .line 14
+    .line 1
     sget-object v0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->$VALUES:[Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;
 
     invoke-virtual {v0}, [Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->clone()Ljava/lang/Object;
@@ -141,10 +141,10 @@
 
 
 # virtual methods
-.method public final getResourceType()Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
+.method public getResourceType()Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
     .locals 1
 
-    .line 30
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/PrettyPrinterDisplayType;->mResourceType:Lcom/facebook/stetho/inspector/protocol/module/Page$ResourceType;
 
     return-object v0

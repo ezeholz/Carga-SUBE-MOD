@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewKt;->doOnLayout(Landroid/view/View;Lkotlin/d/a/b;)V
+    value = Landroidx/core/view/ViewKt;->doOnLayout(Landroid/view/View;Lj/m/b/l;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic $action$inlined:Lkotlin/d/a/b;
+.field public final synthetic $action$inlined:Lj/m/b/l;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/b;)V
+.method public constructor <init>(Lj/m/b/l;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/core/view/ViewKt$doOnLayout$$inlined$doOnNextLayout$1;->$action$inlined:Lkotlin/d/a/b;
+    iput-object p1, p0, Landroidx/core/view/ViewKt$doOnLayout$$inlined$doOnNextLayout$1;->$action$inlined:Lj/m/b/l;
 
-    .line 38
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,24 +35,20 @@
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+.method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
     const-string p2, "view"
 
-    invoke-static {p1, p2}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 50
-    move-object p2, p0
+    .line 1
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    check-cast p2, Landroid/view/View$OnLayoutChangeListener;
+    .line 2
+    iget-object p2, p0, Landroidx/core/view/ViewKt$doOnLayout$$inlined$doOnNextLayout$1;->$action$inlined:Lj/m/b/l;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    .line 412
-    iget-object p2, p0, Landroidx/core/view/ViewKt$doOnLayout$$inlined$doOnNextLayout$1;->$action$inlined:Lkotlin/d/a/b;
-
-    invoke-interface {p2, p1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

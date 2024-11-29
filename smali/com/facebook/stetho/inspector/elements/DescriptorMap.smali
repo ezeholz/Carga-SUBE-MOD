@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
+.field public mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
-.field private mIsInitializing:Z
+.field public mIsInitializing:Z
 
-.field private final mMap:Ljava/util/Map;
+.field public final mMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -28,10 +28,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 19
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
+    .line 2
     new-instance v0, Ljava/util/IdentityHashMap;
 
     invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
@@ -55,7 +55,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 93
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -68,7 +68,7 @@
 
     return-object v0
 
-    .line 97
+    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -84,41 +84,41 @@
 
 
 # virtual methods
-.method public final beginInit()Lcom/facebook/stetho/inspector/elements/DescriptorMap;
+.method public beginInit()Lcom/facebook/stetho/inspector/elements/DescriptorMap;
     .locals 1
 
-    .line 25
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIf(Z)V
 
     const/4 v0, 0x1
 
-    .line 26
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
     return-object p0
 .end method
 
-.method public final endInit()Lcom/facebook/stetho/inspector/elements/DescriptorMap;
+.method public endInit()Lcom/facebook/stetho/inspector/elements/DescriptorMap;
     .locals 4
 
-    .line 61
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNot(Z)V
 
-    .line 62
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    .line 64
+    .line 3
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
-    .line 66
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -142,7 +142,7 @@
 
     check-cast v1, Ljava/lang/Class;
 
-    .line 67
+    .line 5
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -151,30 +151,30 @@
 
     check-cast v2, Lcom/facebook/stetho/inspector/elements/Descriptor;
 
-    .line 69
+    .line 6
     instance-of v3, v2, Lcom/facebook/stetho/inspector/elements/ChainedDescriptor;
 
     if-eqz v3, :cond_0
 
-    .line 70
+    .line 7
     move-object v3, v2
 
     check-cast v3, Lcom/facebook/stetho/inspector/elements/ChainedDescriptor;
 
-    .line 71
+    .line 8
     invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 72
+    .line 9
     invoke-direct {p0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->getImpl(Ljava/lang/Class;)Lcom/facebook/stetho/inspector/elements/Descriptor;
 
     move-result-object v1
 
-    .line 73
+    .line 10
     invoke-interface {v3, v1}, Lcom/facebook/stetho/inspector/elements/ChainedDescriptor;->setSuper(Lcom/facebook/stetho/inspector/elements/Descriptor;)V
 
-    .line 76
+    .line 11
     :cond_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
@@ -186,7 +186,7 @@
     return-object p0
 .end method
 
-.method public final get(Ljava/lang/Class;)Lcom/facebook/stetho/inspector/elements/Descriptor;
+.method public get(Ljava/lang/Class;)Lcom/facebook/stetho/inspector/elements/Descriptor;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -197,15 +197,15 @@
         }
     .end annotation
 
-    .line 84
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
+    .line 2
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIf(Z)V
 
-    .line 86
+    .line 3
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->getImpl(Ljava/lang/Class;)Lcom/facebook/stetho/inspector/elements/Descriptor;
 
     move-result-object p1
@@ -213,7 +213,7 @@
     return-object p1
 .end method
 
-.method public final registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
+.method public registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -226,25 +226,25 @@
         }
     .end annotation
 
-    .line 32
+    .line 2
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
+    .line 3
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
+    .line 4
     invoke-virtual {p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->isInitialized()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIf(Z)V
 
-    .line 35
+    .line 5
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNot(Z)V
 
-    .line 38
+    .line 6
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -253,7 +253,7 @@
 
     if-nez v0, :cond_1
 
-    .line 43
+    .line 7
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->containsValue(Ljava/lang/Object;)Z
@@ -262,14 +262,14 @@
 
     if-nez v0, :cond_0
 
-    .line 47
+    .line 8
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 
-    .line 44
+    .line 9
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -277,7 +277,7 @@
 
     throw p1
 
-    .line 39
+    .line 10
     :cond_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -286,10 +286,10 @@
     throw p1
 .end method
 
-.method public final bridge synthetic registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorRegistrar;
+.method public bridge synthetic registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorRegistrar;
     .locals 0
 
-    .line 19
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -297,23 +297,23 @@
     return-object p1
 .end method
 
-.method public final setHost(Lcom/facebook/stetho/inspector/elements/Descriptor$Host;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
+.method public setHost(Lcom/facebook/stetho/inspector/elements/Descriptor$Host;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
     .locals 1
 
-    .line 52
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
+    .line 2
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mIsInitializing:Z
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNot(Z)V
 
-    .line 54
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     invoke-static {v0}, Lcom/facebook/stetho/common/Util;->throwIfNotNull(Ljava/lang/Object;)V
 
-    .line 56
+    .line 4
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->mHost:Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     return-object p0

@@ -1,9 +1,13 @@
-.class Landroidx/media/MediaBrowserServiceCompatApi21;
+.class public Landroidx/media/MediaBrowserServiceCompatApi21;
 .super Ljava/lang/Object;
 .source "MediaBrowserServiceCompatApi21.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;,
@@ -15,10 +19,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 135
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +31,7 @@
 .method public static createService(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;)Ljava/lang/Object;
     .locals 1
 
-    .line 38
+    .line 1
     new-instance v0, Landroidx/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;
 
     invoke-direct {v0, p0, p1}, Landroidx/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;-><init>(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;)V
@@ -38,7 +42,7 @@
 .method public static notifyChildrenChanged(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
 
-    .line 54
+    .line 1
     check-cast p0, Landroid/service/media/MediaBrowserService;
 
     invoke-virtual {p0, p1}, Landroid/service/media/MediaBrowserService;->notifyChildrenChanged(Ljava/lang/String;)V
@@ -49,7 +53,7 @@
 .method public static onBind(Ljava/lang/Object;Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    .line 46
+    .line 1
     check-cast p0, Landroid/service/media/MediaBrowserService;
 
     invoke-virtual {p0, p1}, Landroid/service/media/MediaBrowserService;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;
@@ -62,7 +66,7 @@
 .method public static onCreate(Ljava/lang/Object;)V
     .locals 0
 
-    .line 42
+    .line 1
     check-cast p0, Landroid/service/media/MediaBrowserService;
 
     invoke-virtual {p0}, Landroid/service/media/MediaBrowserService;->onCreate()V
@@ -73,7 +77,7 @@
 .method public static setSessionToken(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 50
+    .line 1
     check-cast p0, Landroid/service/media/MediaBrowserService;
 
     check-cast p1, Landroid/media/session/MediaSession$Token;

@@ -4,25 +4,25 @@
 
 
 # static fields
-.field private static final ATTRS:[I
+.field public static final ATTRS:[I
 
 .field public static final HORIZONTAL:I = 0x0
 
-.field private static final TAG:Ljava/lang/String; = "DividerItem"
+.field public static final TAG:Ljava/lang/String; = "DividerItem"
 
 .field public static final VERTICAL:I = 0x1
 
 
 # instance fields
-.field private final mBounds:Landroid/graphics/Rect;
+.field public final mBounds:Landroid/graphics/Rect;
 
-.field private mDivider:Landroid/graphics/drawable/Drawable;
+.field public mDivider:Landroid/graphics/drawable/Drawable;
 
-.field private mOrientation:I
+.field public mOrientation:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -35,7 +35,7 @@
 
     aput v2, v0, v1
 
-    .line 48
+    .line 1
     sput-object v0, Landroidx/recyclerview/widget/DividerItemDecoration;->ATTRS:[I
 
     return-void
@@ -44,17 +44,17 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    .line 66
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 57
+    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
-    .line 67
+    .line 3
     sget-object v0, Landroidx/recyclerview/widget/DividerItemDecoration;->ATTRS:[I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
@@ -63,17 +63,17 @@
 
     const/4 v0, 0x0
 
-    .line 68
+    .line 4
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    .line 73
+    .line 5
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 74
+    .line 6
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/DividerItemDecoration;->setOrientation(I)V
 
     return-void
@@ -82,10 +82,10 @@
 .method private drawHorizontal(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 7
 
-    .line 151
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 155
+    .line 2
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getClipToPadding()Z
 
     move-result v0
@@ -94,66 +94,66 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingTop()I
+    .line 3
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v0
 
-    .line 157
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getHeight()I
+    .line 4
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v2
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingBottom()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
-    .line 158
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingLeft()I
+    .line 5
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v3
 
-    .line 159
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
+    .line 6
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v4
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingRight()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v5
 
     sub-int/2addr v4, v5
 
-    .line 158
+    .line 7
     invoke-virtual {p1, v3, v0, v4, v2}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
     goto :goto_0
 
-    .line 162
+    .line 8
     :cond_0
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getHeight()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v2
 
     const/4 v0, 0x0
 
-    .line 165
+    .line 9
     :goto_0
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildCount()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
     :goto_1
     if-ge v1, v3, :cond_1
 
-    .line 167
-    invoke-virtual {p2, v1}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
+    .line 10
+    invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 168
+    .line 11
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v5
@@ -162,7 +162,7 @@
 
     invoke-virtual {v5, v4, v6}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 169
+    .line 12
     iget-object v5, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->right:I
@@ -175,23 +175,23 @@
 
     move-result v4
 
-    add-int/2addr v5, v4
+    add-int/2addr v4, v5
 
-    .line 170
-    iget-object v4, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
+    .line 13
+    iget-object v5, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    move-result v4
+    move-result v5
 
-    sub-int v4, v5, v4
+    sub-int v5, v4, v5
 
-    .line 171
+    .line 14
     iget-object v6, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v6, v4, v0, v5, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v6, v5, v0, v4, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 172
+    .line 15
     iget-object v4, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -200,7 +200,7 @@
 
     goto :goto_1
 
-    .line 174
+    .line 16
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -210,10 +210,10 @@
 .method private drawVertical(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 7
 
-    .line 124
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 128
+    .line 2
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getClipToPadding()Z
 
     move-result v0
@@ -222,71 +222,71 @@
 
     if-eqz v0, :cond_0
 
-    .line 129
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingLeft()I
+    .line 3
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v0
 
-    .line 130
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
+    .line 4
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingRight()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
-    .line 131
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingTop()I
+    .line 5
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v3
 
-    .line 132
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getHeight()I
+    .line 6
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v4
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getPaddingBottom()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v5
 
     sub-int/2addr v4, v5
 
-    .line 131
+    .line 7
     invoke-virtual {p1, v0, v3, v2, v4}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
     goto :goto_0
 
-    .line 135
+    .line 8
     :cond_0
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v2
 
     const/4 v0, 0x0
 
-    .line 138
+    .line 9
     :goto_0
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildCount()I
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
     :goto_1
     if-ge v1, v3, :cond_1
 
-    .line 140
-    invoke-virtual {p2, v1}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
+    .line 10
+    invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 141
+    .line 11
     iget-object v5, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v4, v5}, Landroidx/recyclerview/widget/RecyclerView;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 142
+    .line 12
     iget-object v5, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->bottom:I
@@ -299,23 +299,23 @@
 
     move-result v4
 
-    add-int/2addr v5, v4
+    add-int/2addr v4, v5
 
-    .line 143
-    iget-object v4, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
+    .line 13
+    iget-object v5, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    move-result v4
+    move-result v5
 
-    sub-int v4, v5, v4
+    sub-int v5, v4, v5
 
-    .line 144
+    .line 14
     iget-object v6, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v6, v0, v4, v2, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v6, v0, v5, v2, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 145
+    .line 15
     iget-object v4, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -324,7 +324,7 @@
 
     goto :goto_1
 
-    .line 147
+    .line 16
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -335,8 +335,10 @@
 # virtual methods
 .method public getDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 108
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -345,19 +347,19 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 1
 
-    .line 180
+    .line 1
     iget-object p2, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     const/4 p3, 0x0
 
     if-nez p2, :cond_0
 
-    .line 181
+    .line 2
     invoke-virtual {p1, p3, p3, p3, p3}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 
-    .line 184
+    .line 3
     :cond_0
     iget p4, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mOrientation:I
 
@@ -365,16 +367,16 @@
 
     if-ne p4, v0, :cond_1
 
-    .line 185
+    .line 4
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result p2
 
     invoke-virtual {p1, p3, p3, p3, p2}, Landroid/graphics/Rect;->set(IIII)V
 
-    return-void
+    goto :goto_0
 
-    .line 187
+    .line 5
     :cond_1
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -382,13 +384,14 @@
 
     invoke-virtual {p1, p3, p3, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
+    :goto_0
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 1
 
-    .line 113
+    .line 1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object p3
@@ -401,7 +404,7 @@
 
     goto :goto_0
 
-    .line 116
+    .line 2
     :cond_0
     iget p3, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mOrientation:I
 
@@ -409,12 +412,12 @@
 
     if-ne p3, v0, :cond_1
 
-    .line 117
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/DividerItemDecoration;->drawVertical(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
 
-    return-void
+    goto :goto_0
 
-    .line 119
+    .line 4
     :cond_1
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/DividerItemDecoration;->drawHorizontal(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
 
@@ -425,15 +428,19 @@
 
 .method public setDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_0
 
-    .line 100
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     return-void
 
-    .line 98
+    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -455,7 +462,7 @@
 
     goto :goto_0
 
-    .line 85
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -465,7 +472,7 @@
 
     throw p1
 
-    .line 88
+    .line 2
     :cond_1
     :goto_0
     iput p1, p0, Landroidx/recyclerview/widget/DividerItemDecoration;->mOrientation:I

@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/AsyncListDiffer$1;
+.class public Landroidx/recyclerview/widget/AsyncListDiffer$1;
 .super Ljava/lang/Object;
 .source "AsyncListDiffer.java"
 
@@ -12,28 +12,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-.field final synthetic val$commitCallback:Ljava/lang/Runnable;
+.field public final synthetic val$commitCallback:Ljava/lang/Runnable;
 
-.field final synthetic val$newList:Ljava/util/List;
+.field public final synthetic val$newList:Ljava/util/List;
 
-.field final synthetic val$oldList:Ljava/util/List;
+.field public final synthetic val$oldList:Ljava/util/List;
 
-.field final synthetic val$runGeneration:I
+.field public final synthetic val$runGeneration:I
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer;Ljava/util/List;Ljava/util/List;ILjava/lang/Runnable;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer;Ljava/util/List;Ljava/util/List;ILjava/lang/Runnable;)V
     .locals 0
 
-    .line 289
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$oldList:Ljava/util/List;
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 3
 
-    .line 292
+    .line 1
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;
 
     invoke-direct {v0, p0}, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;-><init>(Landroidx/recyclerview/widget/AsyncListDiffer$1;)V
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    .line 347
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/AsyncListDiffer;->mMainThreadExecutor:Ljava/util/concurrent/Executor;

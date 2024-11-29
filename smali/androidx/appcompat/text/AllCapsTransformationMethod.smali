@@ -6,18 +6,26 @@
 .implements Landroid/text/method/TransformationMethod;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # instance fields
-.field private mLocale:Ljava/util/Locale;
+.field public mLocale:Ljava/util/Locale;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 37
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -40,7 +48,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 43
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -51,11 +59,12 @@
 
     move-result-object p1
 
-    return-object p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    :goto_0
     return-object p1
 .end method
 

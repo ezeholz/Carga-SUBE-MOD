@@ -1,4 +1,4 @@
-.class Landroidx/viewpager/widget/ViewPager$ViewPositionComparator;
+.class public Landroidx/viewpager/widget/ViewPager$ViewPositionComparator;
 .super Ljava/lang/Object;
 .source "ViewPager.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ViewPositionComparator"
 .end annotation
 
@@ -27,10 +27,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 3157
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,42 +41,40 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 2
 
-    .line 3160
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;
 
-    .line 3161
+    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
     check-cast p2, Landroidx/viewpager/widget/ViewPager$LayoutParams;
 
-    .line 3162
+    .line 4
     iget-boolean v0, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
 
     iget-boolean v1, p2, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
 
     if-eq v0, v1, :cond_1
 
-    .line 3163
-    iget-boolean p1, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
-
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_0
     const/4 p1, -0x1
 
+    :goto_0
     return p1
 
-    .line 3165
+    .line 5
     :cond_1
     iget p1, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->position:I
 
@@ -90,7 +88,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 3157
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

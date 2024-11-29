@@ -1,4 +1,4 @@
-.class Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
+.class public Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 .super Ljava/lang/Object;
 .source "LoaderManagerImpl.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "LoaderObserver"
 .end annotation
 
@@ -29,7 +29,10 @@
 
 
 # instance fields
-.field private final mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+.field public final mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/app/LoaderManager$LoaderCallbacks<",
@@ -38,9 +41,12 @@
     .end annotation
 .end field
 
-.field private mDeliveredData:Z
+.field public mDeliveredData:Z
 
-.field private final mLoader:Landroidx/loader/content/Loader;
+.field public final mLoader:Landroidx/loader/content/Loader;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader<",
@@ -51,8 +57,16 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
+.method public constructor <init>(Landroidx/loader/content/Loader;Landroidx/loader/app/LoaderManager$LoaderCallbacks;)V
     .locals 1
+    .param p1    # Landroidx/loader/content/Loader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/loader/app/LoaderManager$LoaderCallbacks;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -63,18 +77,18 @@
         }
     .end annotation
 
-    .line 239
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 237
+    .line 2
     iput-boolean v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mDeliveredData:Z
 
-    .line 240
+    .line 3
     iput-object p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mLoader:Landroidx/loader/content/Loader;
 
-    .line 241
+    .line 4
     iput-object p2, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
 
     return-void
@@ -85,7 +99,7 @@
 .method public dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 272
+    .line 1
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p1, "mDeliveredData="
@@ -99,10 +113,10 @@
     return-void
 .end method
 
-.method hasDeliveredData()Z
+.method public hasDeliveredData()Z
     .locals 1
 
-    .line 255
+    .line 1
     iget-boolean v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mDeliveredData:Z
 
     return v0
@@ -110,23 +124,27 @@
 
 .method public onChanged(Ljava/lang/Object;)V
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;)V"
         }
     .end annotation
 
-    .line 246
+    .line 1
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 247
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "  onLoadFinished in "
 
-    const-string v1, "  onLoadFinished in "
+    .line 2
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mLoader:Landroidx/loader/content/Loader;
 
@@ -138,14 +156,16 @@
 
     iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mLoader:Landroidx/loader/content/Loader;
 
-    .line 248
+    .line 3
     invoke-virtual {v1, p1}, Landroidx/loader/content/Loader;->dataToString(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 250
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
 
@@ -155,36 +175,40 @@
 
     const/4 p1, 0x1
 
-    .line 251
+    .line 5
     iput-boolean p1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mDeliveredData:Z
 
     return-void
 .end method
 
-.method reset()V
+.method public reset()V
     .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 260
+    .line 1
     iget-boolean v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mDeliveredData:Z
 
     if-eqz v0, :cond_1
 
-    .line 261
+    .line 2
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "  Resetting: "
 
-    const-string v1, "  Resetting: "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mLoader:Landroidx/loader/content/Loader;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 262
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
 
@@ -199,7 +223,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 268
+    .line 1
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->mCallback:Landroidx/loader/app/LoaderManager$LoaderCallbacks;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

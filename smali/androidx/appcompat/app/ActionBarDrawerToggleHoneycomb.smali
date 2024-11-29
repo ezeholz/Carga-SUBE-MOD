@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;
+.class public Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;
 .super Ljava/lang/Object;
 .source "ActionBarDrawerToggleHoneycomb.java"
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ActionBarDrawerToggleHC"
+.field public static final TAG:Ljava/lang/String; = "ActionBarDrawerToggleHC"
 
-.field private static final THEME_ATTRS:[I
+.field public static final THEME_ATTRS:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x1
@@ -31,16 +31,16 @@
 
     aput v2, v0, v1
 
-    .line 45
+    .line 1
     sput-object v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;->THEME_ATTRS:[I
 
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 138
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +49,7 @@
 .method public static getThemeUpIndicator(Landroid/app/Activity;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 90
+    .line 1
     sget-object v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;->THEME_ATTRS:[I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
@@ -58,12 +58,12 @@
 
     const/4 v0, 0x0
 
-    .line 91
+    .line 2
     invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 92
+    .line 3
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v0
@@ -74,24 +74,24 @@
 
     if-nez p0, :cond_0
 
-    .line 71
+    .line 1
     new-instance p0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;
 
     invoke-direct {p0, p1}, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-><init>(Landroid/app/Activity;)V
 
-    .line 73
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeAsUpIndicator:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 75
+    .line 3
     :try_start_0
     invoke-virtual {p1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object p1
 
-    .line 76
+    .line 4
     iget-object v0, p0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeActionContentDescription:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -108,14 +108,14 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 77
+    .line 5
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x13
 
     if-gt p2, v0, :cond_1
 
-    .line 80
+    .line 6
     invoke-virtual {p1}, Landroid/app/ActionBar;->getSubtitle()Ljava/lang/CharSequence;
 
     move-result-object p2
@@ -132,23 +132,23 @@
 .method public static setActionBarUpIndicator(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;
     .locals 5
 
-    .line 51
+    .line 1
     new-instance v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-><init>(Landroid/app/Activity;)V
 
-    .line 52
+    .line 2
     iget-object v1, v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeAsUpIndicator:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 54
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object p0
 
-    .line 55
+    .line 4
     iget-object v1, v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeAsUpIndicator:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -161,7 +161,7 @@
 
     invoke-virtual {v1, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
+    .line 5
     iget-object p1, v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeActionContentDescription:Ljava/lang/reflect/Method;
 
     new-array v1, v2, [Ljava/lang/Object;
@@ -178,15 +178,13 @@
 
     goto :goto_0
 
-    .line 60
+    .line 6
     :cond_0
     iget-object p0, v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->upIndicatorView:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_1
 
-    .line 61
-    iget-object p0, v0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->upIndicatorView:Landroid/widget/ImageView;
-
+    .line 7
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :catch_0

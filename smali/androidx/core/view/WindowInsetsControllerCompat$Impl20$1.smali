@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;
+.class public Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;
 .super Ljava/lang/Object;
 .source "WindowInsetsControllerCompat.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl20;
+.field public final synthetic this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl20;
 
-.field final synthetic val$finalView:Landroid/view/View;
+.field public final synthetic val$finalView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/view/WindowInsetsControllerCompat$Impl20;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/core/view/WindowInsetsControllerCompat$Impl20;Landroid/view/View;)V
     .locals 0
 
-    .line 442
+    .line 1
     iput-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;->this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl20;
 
     iput-object p2, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;->val$finalView:Landroid/view/View;
@@ -42,24 +42,24 @@
 .method public run()V
     .locals 3
 
-    .line 445
+    .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;->val$finalView:Landroid/view/View;
 
-    .line 446
+    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string v1, "input_method"
 
-    .line 447
+    .line 3
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 448
+    .line 4
     iget-object v1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;->val$finalView:Landroid/view/View;
 
     const/4 v2, 0x0

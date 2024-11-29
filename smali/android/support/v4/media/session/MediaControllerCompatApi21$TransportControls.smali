@@ -15,10 +15,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 190
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method public static fastForward(Ljava/lang/Object;)V
     .locals 0
 
-    .line 155
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->fastForward()V
@@ -38,7 +38,7 @@
 .method public static pause(Ljava/lang/Object;)V
     .locals 0
 
-    .line 143
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->pause()V
@@ -49,7 +49,7 @@
 .method public static play(Ljava/lang/Object;)V
     .locals 0
 
-    .line 139
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->play()V
@@ -60,7 +60,7 @@
 .method public static playFromMediaId(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 175
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->playFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -71,7 +71,7 @@
 .method public static playFromSearch(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 179
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->playFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -82,7 +82,7 @@
 .method public static rewind(Ljava/lang/Object;)V
     .locals 0
 
-    .line 159
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->rewind()V
@@ -93,7 +93,7 @@
 .method public static seekTo(Ljava/lang/Object;J)V
     .locals 0
 
-    .line 151
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->seekTo(J)V
@@ -104,7 +104,7 @@
 .method public static sendCustomAction(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 187
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -115,7 +115,7 @@
 .method public static setRating(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 171
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     check-cast p1, Landroid/media/Rating;
@@ -128,7 +128,7 @@
 .method public static skipToNext(Ljava/lang/Object;)V
     .locals 0
 
-    .line 163
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->skipToNext()V
@@ -139,7 +139,7 @@
 .method public static skipToPrevious(Ljava/lang/Object;)V
     .locals 0
 
-    .line 167
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->skipToPrevious()V
@@ -150,7 +150,7 @@
 .method public static skipToQueueItem(Ljava/lang/Object;J)V
     .locals 0
 
-    .line 183
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->skipToQueueItem(J)V
@@ -161,7 +161,7 @@
 .method public static stop(Ljava/lang/Object;)V
     .locals 0
 
-    .line 147
+    .line 1
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->stop()V

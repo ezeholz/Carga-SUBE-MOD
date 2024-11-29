@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;
+.class public final Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;
 .super Ljava/util/AbstractList;
 .source "ListUtil.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "FourItemImmutableList"
 .end annotation
 
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field private final mItem0:Ljava/lang/Object;
+.field public final mItem0:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -38,7 +38,7 @@
     .end annotation
 .end field
 
-.field private final mItem1:Ljava/lang/Object;
+.field public final mItem1:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field private final mItem2:Ljava/lang/Object;
+.field public final mItem2:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -54,7 +54,7 @@
     .end annotation
 .end field
 
-.field private final mItem3:Ljava/lang/Object;
+.field public final mItem3:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -72,19 +72,19 @@
         }
     .end annotation
 
-    .line 189
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 190
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem0:Ljava/lang/Object;
 
-    .line 191
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem1:Ljava/lang/Object;
 
-    .line 192
+    .line 4
     iput-object p3, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem2:Ljava/lang/Object;
 
-    .line 193
+    .line 5
     iput-object p4, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem3:Ljava/lang/Object;
 
     return-void
@@ -92,7 +92,7 @@
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
+.method public get(I)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -114,12 +114,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 206
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem3:Ljava/lang/Object;
 
     return-object p1
 
-    .line 208
+    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -127,26 +127,26 @@
 
     throw p1
 
-    .line 204
+    .line 3
     :cond_1
     iget-object p1, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem2:Ljava/lang/Object;
 
     return-object p1
 
-    .line 202
+    .line 4
     :cond_2
     iget-object p1, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem1:Ljava/lang/Object;
 
     return-object p1
 
-    .line 200
+    .line 5
     :cond_3
     iget-object p1, p0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;->mItem0:Ljava/lang/Object;
 
     return-object p1
 .end method
 
-.method public final size()I
+.method public size()I
     .locals 1
 
     const/4 v0, 0x4

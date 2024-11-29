@@ -6,6 +6,9 @@
 # direct methods
 .method public static final synthetic get(Landroidx/lifecycle/ViewModelProvider;)Landroidx/lifecycle/ViewModel;
     .locals 1
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<VM:",
@@ -18,20 +21,12 @@
 
     const-string v0, "$this$get"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 29
-    invoke-static {}, Lkotlin/d/b/h;->b()V
+    .line 1
+    invoke-static {}, Lj/m/c/i;->a()V
 
-    const-class v0, Landroidx/lifecycle/ViewModel;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0, v0}, Landroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
-
-    move-result-object p0
-
-    const-string v0, "get(VM::class.java)"
-
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-object p0
+    throw p0
 .end method

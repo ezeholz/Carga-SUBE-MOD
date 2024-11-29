@@ -1,4 +1,4 @@
-.class Landroidx/core/net/DatagramSocketWrapper$DatagramSocketImplWrapper;
+.class public Landroidx/core/net/DatagramSocketWrapper$DatagramSocketImplWrapper;
 .super Ljava/net/SocketImpl;
 .source "DatagramSocketWrapper.java"
 
@@ -9,37 +9,37 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DatagramSocketImplWrapper"
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Ljava/net/DatagramSocket;Ljava/io/FileDescriptor;)V
+.method public constructor <init>(Ljava/net/DatagramSocket;Ljava/io/FileDescriptor;)V
     .locals 0
 
-    .line 40
+    .line 1
     invoke-direct {p0}, Ljava/net/SocketImpl;-><init>()V
 
-    .line 41
+    .line 2
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->getLocalPort()I
 
     move-result p1
 
-    iput p1, p0, Landroidx/core/net/DatagramSocketWrapper$DatagramSocketImplWrapper;->localport:I
+    iput p1, p0, Ljava/net/SocketImpl;->localport:I
 
-    .line 42
-    iput-object p2, p0, Landroidx/core/net/DatagramSocketWrapper$DatagramSocketImplWrapper;->fd:Ljava/io/FileDescriptor;
+    .line 3
+    iput-object p2, p0, Ljava/net/SocketImpl;->fd:Ljava/io/FileDescriptor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected accept(Ljava/net/SocketImpl;)V
+.method public accept(Ljava/net/SocketImpl;)V
     .locals 0
 
-    .line 47
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -47,10 +47,10 @@
     throw p1
 .end method
 
-.method protected available()I
+.method public available()I
     .locals 1
 
-    .line 52
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -58,10 +58,10 @@
     throw v0
 .end method
 
-.method protected bind(Ljava/net/InetAddress;I)V
+.method public bind(Ljava/net/InetAddress;I)V
     .locals 0
 
-    .line 57
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -69,10 +69,10 @@
     throw p1
 .end method
 
-.method protected close()V
+.method public close()V
     .locals 1
 
-    .line 62
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -80,10 +80,10 @@
     throw v0
 .end method
 
-.method protected connect(Ljava/lang/String;I)V
+.method public connect(Ljava/lang/String;I)V
     .locals 0
 
-    .line 67
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -91,10 +91,10 @@
     throw p1
 .end method
 
-.method protected connect(Ljava/net/InetAddress;I)V
+.method public connect(Ljava/net/InetAddress;I)V
     .locals 0
 
-    .line 72
+    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -102,10 +102,10 @@
     throw p1
 .end method
 
-.method protected connect(Ljava/net/SocketAddress;I)V
+.method public connect(Ljava/net/SocketAddress;I)V
     .locals 0
 
-    .line 97
+    .line 3
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -113,10 +113,10 @@
     throw p1
 .end method
 
-.method protected create(Z)V
+.method public create(Z)V
     .locals 0
 
-    .line 77
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -124,10 +124,10 @@
     throw p1
 .end method
 
-.method protected getInputStream()Ljava/io/InputStream;
+.method public getInputStream()Ljava/io/InputStream;
     .locals 1
 
-    .line 82
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -138,7 +138,7 @@
 .method public getOption(I)Ljava/lang/Object;
     .locals 0
 
-    .line 107
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -146,10 +146,10 @@
     throw p1
 .end method
 
-.method protected getOutputStream()Ljava/io/OutputStream;
+.method public getOutputStream()Ljava/io/OutputStream;
     .locals 1
 
-    .line 87
+    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -157,10 +157,10 @@
     throw v0
 .end method
 
-.method protected listen(I)V
+.method public listen(I)V
     .locals 0
 
-    .line 92
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -168,10 +168,10 @@
     throw p1
 .end method
 
-.method protected sendUrgentData(I)V
+.method public sendUrgentData(I)V
     .locals 0
 
-    .line 102
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -182,7 +182,7 @@
 .method public setOption(ILjava/lang/Object;)V
     .locals 0
 
-    .line 112
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V

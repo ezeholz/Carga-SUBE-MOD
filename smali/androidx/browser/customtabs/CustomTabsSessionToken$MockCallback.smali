@@ -1,4 +1,4 @@
-.class Landroidx/browser/customtabs/CustomTabsSessionToken$MockCallback;
+.class public Landroidx/browser/customtabs/CustomTabsSessionToken$MockCallback;
 .super Landroid/support/customtabs/ICustomTabsCallback$Stub;
 .source "CustomTabsSessionToken.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MockCallback"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 41
+    .line 1
     invoke-direct {p0}, Landroid/support/customtabs/ICustomTabsCallback$Stub;-><init>()V
 
     return-void

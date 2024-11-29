@@ -7,17 +7,24 @@
 
 
 # instance fields
-.field private final mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+.field public final mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 35
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     return-void
@@ -25,10 +32,10 @@
 
 
 # virtual methods
-.method public final onChanged(IILjava/lang/Object;)V
+.method public onChanged(IILjava/lang/Object;)V
     .locals 1
 
-    .line 60
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeChanged(IILjava/lang/Object;)V
@@ -36,10 +43,10 @@
     return-void
 .end method
 
-.method public final onInserted(II)V
+.method public onInserted(II)V
     .locals 1
 
-    .line 42
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeInserted(II)V
@@ -47,10 +54,10 @@
     return-void
 .end method
 
-.method public final onMoved(II)V
+.method public onMoved(II)V
     .locals 1
 
-    .line 54
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemMoved(II)V
@@ -58,10 +65,10 @@
     return-void
 .end method
 
-.method public final onRemoved(II)V
+.method public onRemoved(II)V
     .locals 1
 
-    .line 48
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AdapterListUpdateCallback;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeRemoved(II)V

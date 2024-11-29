@@ -1,37 +1,43 @@
-.class Landroidx/transition/ViewGroupUtilsApi18;
+.class public Landroidx/transition/ViewGroupUtilsApi18;
 .super Ljava/lang/Object;
 .source "ViewGroupUtilsApi18.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x12
+.end annotation
+
+
 # static fields
-.field private static final TAG:Ljava/lang/String; = "ViewUtilsApi18"
+.field public static final TAG:Ljava/lang/String; = "ViewUtilsApi18"
 
-.field private static sSuppressLayoutMethod:Ljava/lang/reflect/Method;
+.field public static sSuppressLayoutMethod:Ljava/lang/reflect/Method;
 
-.field private static sSuppressLayoutMethodFetched:Z
+.field public static sSuppressLayoutMethodFetched:Z
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 62
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private static fetchSuppressLayoutMethod()V
+.method public static fetchSuppressLayoutMethod()V
     .locals 6
 
-    .line 50
+    .line 1
     sget-boolean v0, Landroidx/transition/ViewGroupUtilsApi18;->sSuppressLayoutMethodFetched:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 52
+    .line 2
     :try_start_0
     const-class v1, Landroid/view/ViewGroup;
 
@@ -49,14 +55,14 @@
 
     move-result-object v1
 
-    .line 54
     sput-object v1, Landroidx/transition/ViewGroupUtilsApi18;->sSuppressLayoutMethod:Ljava/lang/reflect/Method;
 
+    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
+    .line 4
     :catch_0
     sput-boolean v0, Landroidx/transition/ViewGroupUtilsApi18;->sSuppressLayoutMethodFetched:Z
 
@@ -64,13 +70,17 @@
     return-void
 .end method
 
-.method static suppressLayout(Landroid/view/ViewGroup;Z)V
+.method public static suppressLayout(Landroid/view/ViewGroup;Z)V
     .locals 3
+    .param p0    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 37
+    .line 1
     invoke-static {}, Landroidx/transition/ViewGroupUtilsApi18;->fetchSuppressLayoutMethod()V
 
-    .line 38
+    .line 2
     sget-object v0, Landroidx/transition/ViewGroupUtilsApi18;->sSuppressLayoutMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
@@ -82,7 +92,7 @@
 
     const/4 v2, 0x0
 
-    .line 40
+    .line 3
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1

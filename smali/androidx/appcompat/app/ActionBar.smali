@@ -48,7 +48,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 92
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,6 +81,11 @@
 
 .method public closeOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -89,6 +94,11 @@
 
 .method public collapseActionView()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -97,6 +107,11 @@
 
 .method public dispatchMenuVisibilityChanged(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
@@ -142,11 +157,16 @@
 .end method
 
 .method public abstract getSelectedTab()Landroidx/appcompat/app/ActionBar$Tab;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public abstract getSubtitle()Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract getTabAt(I)Landroidx/appcompat/app/ActionBar$Tab;
@@ -168,6 +188,8 @@
 .end method
 
 .method public abstract getTitle()Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method
 
 .method public abstract hide()V
@@ -175,6 +197,11 @@
 
 .method public invalidateOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -194,6 +221,11 @@
 
 .method public isTitleTruncated()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -207,11 +239,16 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method onDestroy()V
+.method public onDestroy()V
     .locals 0
 
     return-void
@@ -219,6 +256,11 @@
 
 .method public onKeyShortcut(ILandroid/view/KeyEvent;)Z
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -227,6 +269,11 @@
 
 .method public onMenuKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -235,6 +282,11 @@
 
 .method public openOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -259,8 +311,13 @@
     .end annotation
 .end method
 
-.method requestFocus()Z
+.method public requestFocus()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -273,6 +330,10 @@
 .end method
 
 .method public abstract setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setCustomView(I)V
@@ -286,6 +347,11 @@
 
 .method public setDefaultDisplayHomeAsUpEnabled(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
@@ -322,7 +388,7 @@
 
     return-void
 
-    .line 1022
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -340,7 +406,7 @@
 
     return-void
 
-    .line 1007
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -358,7 +424,7 @@
 
     return-void
 
-    .line 967
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -371,24 +437,40 @@
 
 .method public setHomeActionContentDescription(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public setHomeActionContentDescription(Ljava/lang/CharSequence;)V
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public setHomeAsUpIndicator(I)V
     .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
 .method public setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
     .locals 0
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     return-void
 .end method
@@ -400,6 +482,10 @@
 .end method
 
 .method public abstract setIcon(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setIcon(Landroid/graphics/drawable/Drawable;)V
@@ -411,6 +497,10 @@
 .end method
 
 .method public abstract setLogo(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setLogo(Landroid/graphics/drawable/Drawable;)V
@@ -428,6 +518,11 @@
 
 .method public setShowHideAnimationEnabled(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
@@ -451,6 +546,10 @@
 .end method
 
 .method public abstract setTitle(I)V
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setTitle(Ljava/lang/CharSequence;)V
@@ -458,6 +557,11 @@
 
 .method public setWindowTitle(Ljava/lang/CharSequence;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     return-void
 .end method
@@ -467,6 +571,11 @@
 
 .method public startActionMode(Landroidx/appcompat/view/ActionMode$Callback;)Landroidx/appcompat/view/ActionMode;
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     const/4 p1, 0x0
 

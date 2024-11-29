@@ -9,13 +9,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "item"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 34
+    .line 1
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result v0
@@ -29,12 +29,12 @@
     :goto_0
     add-int/lit8 v3, v2, 0x1
 
-    .line 35
+    .line 2
     invoke-interface {p0, v2}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -59,29 +59,29 @@
     return v1
 .end method
 
-.method public static final forEach(Landroid/view/Menu;Lkotlin/d/a/b;)V
+.method public static final forEach(Landroid/view/Menu;Lj/m/b/l;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/Menu;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/view/MenuItem;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 56
+    .line 1
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result v0
@@ -93,16 +93,16 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 57
+    .line 2
     invoke-interface {p0, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v1
 
     const-string v3, "getItem(index)"
 
-    invoke-static {v1, v3}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-lt v2, v0, :cond_0
 
@@ -118,31 +118,31 @@
     return-void
 .end method
 
-.method public static final forEachIndexed(Landroid/view/Menu;Lkotlin/d/a/m;)V
+.method public static final forEachIndexed(Landroid/view/Menu;Lj/m/b/p;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/Menu;",
-            "Lkotlin/d/a/m<",
+            "Lj/m/b/p<",
             "-",
             "Ljava/lang/Integer;",
             "-",
             "Landroid/view/MenuItem;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 63
+    .line 1
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result v0
@@ -154,7 +154,7 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 64
+    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -165,9 +165,9 @@
 
     const-string v4, "getItem(index)"
 
-    invoke-static {v1, v4}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v3, v1}, Lkotlin/d/a/m;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3, v1}, Lj/m/b/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-lt v2, v0, :cond_0
 
@@ -188,28 +188,28 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 29
+    .line 1
     invoke-interface {p0, p1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object p0
 
     const-string p1, "getItem(index)"
 
-    invoke-static {p0, p1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static final getChildren(Landroid/view/Menu;)Lkotlin/g/e;
+.method public static final getChildren(Landroid/view/Menu;)Lj/p/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/Menu;",
             ")",
-            "Lkotlin/g/e<",
+            "Lj/p/e<",
             "Landroid/view/MenuItem;",
             ">;"
         }
@@ -217,14 +217,12 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 79
+    .line 1
     new-instance v0, Landroidx/core/view/MenuKt$children$1;
 
     invoke-direct {v0, p0}, Landroidx/core/view/MenuKt$children$1;-><init>(Landroid/view/Menu;)V
-
-    check-cast v0, Lkotlin/g/e;
 
     return-object v0
 .end method
@@ -234,9 +232,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 46
+    .line 1
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result p0
@@ -249,9 +247,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 49
+    .line 1
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result p0
@@ -260,11 +258,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -273,9 +272,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
+    .line 1
     invoke-interface {p0}, Landroid/view/Menu;->size()I
 
     move-result p0
@@ -284,11 +283,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -307,14 +307,12 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 70
+    .line 1
     new-instance v0, Landroidx/core/view/MenuKt$iterator$1;
 
     invoke-direct {v0, p0}, Landroidx/core/view/MenuKt$iterator$1;-><init>(Landroid/view/Menu;)V
-
-    check-cast v0, Ljava/util/Iterator;
 
     return-object v0
 .end method
@@ -324,13 +322,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "item"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 43
+    .line 1
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result p1

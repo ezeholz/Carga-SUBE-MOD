@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/share/model/CameraEffectArguments$a;
+        Lcom/facebook/share/model/CameraEffectArguments$b;
     }
 .end annotation
 
@@ -27,33 +27,31 @@
 
 
 # instance fields
-.field private final a:Landroid/os/Bundle;
+.field public final d:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 100
-    new-instance v0, Lcom/facebook/share/model/CameraEffectArguments$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/CameraEffectArguments$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/CameraEffectArguments$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/CameraEffectArguments$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/CameraEffectArguments;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 40
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
+    .line 5
+    const-class v0, Lcom/facebook/share/model/CameraEffectArguments;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -63,42 +61,24 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/model/CameraEffectArguments;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/facebook/share/model/CameraEffectArguments;->d:Landroid/os/Bundle;
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/facebook/share/model/CameraEffectArguments$a;)V
+.method public synthetic constructor <init>(Lcom/facebook/share/model/CameraEffectArguments$b;Lcom/facebook/share/model/CameraEffectArguments$a;)V
     .locals 0
 
-    .line 36
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1115
-    iget-object p1, p1, Lcom/facebook/share/model/CameraEffectArguments$a;->a:Landroid/os/Bundle;
+    .line 2
+    iget-object p1, p1, Lcom/facebook/share/model/CameraEffectArguments$b;->a:Landroid/os/Bundle;
 
-    .line 37
-    iput-object p1, p0, Lcom/facebook/share/model/CameraEffectArguments;->a:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/facebook/share/model/CameraEffectArguments$a;B)V
-    .locals 0
-
-    .line 32
-    invoke-direct {p0, p1}, Lcom/facebook/share/model/CameraEffectArguments;-><init>(Lcom/facebook/share/model/CameraEffectArguments$a;)V
+    .line 3
+    iput-object p1, p0, Lcom/facebook/share/model/CameraEffectArguments;->d:Landroid/os/Bundle;
 
     return-void
-.end method
-
-.method static synthetic a(Lcom/facebook/share/model/CameraEffectArguments;)Landroid/os/Bundle;
-    .locals 0
-
-    .line 32
-    iget-object p0, p0, Lcom/facebook/share/model/CameraEffectArguments;->a:Landroid/os/Bundle;
-
-    return-object p0
 .end method
 
 
@@ -114,8 +94,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 97
-    iget-object p2, p0, Lcom/facebook/share/model/CameraEffectArguments;->a:Landroid/os/Bundle;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/model/CameraEffectArguments;->d:Landroid/os/Bundle;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 

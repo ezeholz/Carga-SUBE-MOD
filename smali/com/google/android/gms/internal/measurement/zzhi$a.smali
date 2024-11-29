@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/measurement/zzhi$a;
+.class public final Lcom/google/android/gms/internal/measurement/zzhi$a;
 .super Lcom/google/android/gms/internal/measurement/zzhi;
 .source "com.google.android.gms:play-services-measurement-base@@18.0.0"
 
@@ -9,60 +9,57 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "a"
 .end annotation
 
 
 # instance fields
-.field private final d:[B
+.field public final d:[B
 
-.field private final e:I
+.field public final e:I
 
-.field private final f:I
-
-.field private g:I
+.field public f:I
 
 
 # direct methods
-.method constructor <init>([BI)V
+.method public constructor <init>([BI)V
     .locals 3
 
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;-><init>(B)V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;-><init>(Lg/d/a/b/g/e/o5;)V
 
     if-eqz p1, :cond_1
 
-    or-int/lit8 v1, p2, 0x0
+    or-int/lit8 v0, p2, 0x0
 
-    .line 4
-    array-length v2, p1
+    .line 2
+    array-length v1, p1
 
-    sub-int/2addr v2, p2
+    sub-int/2addr v1, p2
 
-    or-int/2addr v1, v2
+    or-int/2addr v0, v1
 
-    if-ltz v1, :cond_0
+    const/4 v1, 0x0
 
-    .line 8
+    if-ltz v0, :cond_0
+
+    .line 3
     iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    .line 9
-    iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
+    .line 4
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 10
-    iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    .line 11
-    iput p2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    .line 5
+    iput p2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
     return-void
 
-    .line 5
+    .line 6
     :cond_0
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/4 v2, 0x3
 
@@ -70,20 +67,20 @@
 
     array-length p1, p1
 
-    .line 6
+    .line 7
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    aput-object p1, v2, v0
+    aput-object p1, v2, v1
 
     const/4 p1, 0x1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    aput-object v0, v2, p1
+    aput-object v1, v2, p1
 
     const/4 p1, 0x2
 
@@ -95,16 +92,16 @@
 
     const-string p1, "Array range is invalid. Buffer.length=%d, offset=%d, length=%d"
 
-    .line 7
+    .line 8
     invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
-    .line 3
+    .line 9
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -115,92 +112,33 @@
     throw p1
 .end method
 
-.method private final b([BII)V
-    .locals 3
-
-    .line 147
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
-
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 148
-    iget p1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    .line 151
-    new-instance p2, Lcom/google/android/gms/internal/measurement/zzhi$zza;
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    .line 152
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    aput-object p3, v0, v1
-
-    const-string p3, "Pos: %d, limit: %d, len: %d"
-
-    invoke-static {p3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3, p1}, Lcom/google/android/gms/internal/measurement/zzhi$zza;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
-.end method
-
 
 # virtual methods
+.method public final a()I
+    .locals 2
+
+    .line 13
+    iget v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
+
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
 .method public final a(B)V
     .locals 4
 
-    .line 72
+    .line 4
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     aput-byte p1, v0, v1
     :try_end_0
@@ -211,7 +149,7 @@
     :catch_0
     move-exception p1
 
-    .line 75
+    .line 5
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
 
     const/4 v1, 0x3
@@ -220,16 +158,16 @@
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 76
+    .line 6
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -263,16 +201,16 @@
 
     if-ltz p1, :cond_0
 
-    .line 78
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
+    .line 7
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
 
     return-void
 
     :cond_0
     int-to-long v0, p1
 
-    .line 79
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/measurement/zzhi;->a(J)V
+    .line 8
+    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a(J)V
 
     return-void
 .end method
@@ -282,148 +220,33 @@
 
     shl-int/lit8 p1, p1, 0x3
 
-    or-int/2addr p1, p2
+    or-int/lit8 p1, p1, 0x0
 
-    .line 15
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
 
-    return-void
-.end method
+    if-ltz p2, :cond_0
 
-.method public final a(IJ)V
-    .locals 1
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
 
-    const/4 v0, 0x0
+    goto :goto_0
 
-    .line 26
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 27
-    invoke-virtual {p0, p2, p3}, Lcom/google/android/gms/internal/measurement/zzhi;->a(J)V
-
-    return-void
-.end method
-
-.method public final a(ILcom/google/android/gms/internal/measurement/fg;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    .line 38
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 39
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->a(Lcom/google/android/gms/internal/measurement/fg;)V
-
-    return-void
-.end method
-
-.method public final a(ILcom/google/android/gms/internal/measurement/hw;)V
-    .locals 3
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    .line 57
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    const/4 v2, 0x2
-
-    .line 58
-    invoke-virtual {p0, v2, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->c(II)V
-
-    .line 60
-    invoke-virtual {p0, v0, v2}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 61
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->a(Lcom/google/android/gms/internal/measurement/hw;)V
-
-    const/4 p1, 0x4
-
-    .line 62
-    invoke-virtual {p0, v1, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    return-void
-.end method
-
-.method final a(ILcom/google/android/gms/internal/measurement/hw;Lcom/google/android/gms/internal/measurement/ip;)V
-    .locals 2
-
-    const/4 v0, 0x2
-
-    .line 47
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 48
-    move-object p1, p2
-
-    check-cast p1, Lcom/google/android/gms/internal/measurement/ey;
-
-    .line 49
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/measurement/ey;->k()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    .line 51
-    invoke-interface {p3, p1}, Lcom/google/android/gms/internal/measurement/ip;->b(Ljava/lang/Object;)I
-
-    move-result v0
-
-    .line 52
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/measurement/ey;->b(I)V
-
-    .line 54
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
+    int-to-long p1, p2
 
-    .line 55
-    iget-object p1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->c:Lcom/google/android/gms/internal/measurement/fz;
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a(J)V
 
-    invoke-interface {p3, p2, p1}, Lcom/google/android/gms/internal/measurement/ip;->a(Ljava/lang/Object;Lcom/google/android/gms/internal/measurement/jx;)V
-
-    return-void
-.end method
-
-.method public final a(ILjava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    .line 35
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 36
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->a(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final a(IZ)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 32
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    int-to-byte p1, p2
-
-    .line 33
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->a(B)V
-
+    :goto_0
     return-void
 .end method
 
 .method public final a(J)V
     .locals 9
 
-    .line 2254
-    sget-boolean v0, Lcom/google/android/gms/internal/measurement/zzhi;->b:Z
+    .line 14
+    sget-boolean v0, Lcom/google/android/gms/internal/measurement/zzhi;->c:Z
 
     const/4 v1, 0x7
 
@@ -433,8 +256,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 121
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi;->h()I
+    .line 15
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a()I
 
     move-result v0
 
@@ -449,14 +272,14 @@
 
     if-nez v0, :cond_0
 
-    .line 123
+    .line 16
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
@@ -464,19 +287,19 @@
 
     int-to-byte p1, p2
 
-    invoke-static {v0, v1, v2, p1}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, p1}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     return-void
 
-    .line 125
+    .line 17
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v6, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v6, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v7, v6, 0x1
 
-    iput v7, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v7, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v6, v6
 
@@ -488,7 +311,7 @@
 
     int-to-byte v8, v8
 
-    invoke-static {v0, v6, v7, v8}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v6, v7, v8}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     ushr-long/2addr p1, v1
 
@@ -502,15 +325,15 @@
 
     if-nez v0, :cond_2
 
-    .line 128
+    .line 18
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     long-to-int p2, p1
 
@@ -520,15 +343,15 @@
 
     return-void
 
-    .line 130
+    .line 19
     :cond_2
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v6, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v6, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v7, v6, 0x1
 
-    iput v7, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v7, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     long-to-int v7, p1
 
@@ -549,7 +372,7 @@
     :catch_0
     move-exception p1
 
-    .line 133
+    .line 20
     new-instance p2, Lcom/google/android/gms/internal/measurement/zzhi$zza;
 
     const/4 v0, 0x3
@@ -558,16 +381,16 @@
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 134
+    .line 21
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -602,124 +425,24 @@
     goto :goto_2
 .end method
 
-.method public final a(Lcom/google/android/gms/internal/measurement/fg;)V
-    .locals 1
+.method public final a([BII)V
+    .locals 3
 
-    .line 41
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/measurement/fg;->a()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
-
-    .line 42
-    invoke-virtual {p1, p0}, Lcom/google/android/gms/internal/measurement/fg;->a(Lcom/google/android/gms/internal/measurement/fh;)V
-
-    return-void
-.end method
-
-.method public final a(Lcom/google/android/gms/internal/measurement/hw;)V
-    .locals 1
-
-    .line 69
-    invoke-interface {p1}, Lcom/google/android/gms/internal/measurement/hw;->o()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
-
-    .line 70
-    invoke-interface {p1, p0}, Lcom/google/android/gms/internal/measurement/hw;->a(Lcom/google/android/gms/internal/measurement/zzhi;)V
-
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;)V
-    .locals 8
-
-    .line 155
-    iget v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    .line 156
+    .line 9
     :try_start_0
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    move-result v1
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    mul-int/lit8 v1, v1, 0x3
+    invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 157
-    invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->n(I)I
+    .line 10
+    iget p1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    move-result v1
+    add-int/2addr p1, p3
 
-    .line 158
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-static {v2}, Lcom/google/android/gms/internal/measurement/zzhi$a;->n(I)I
-
-    move-result v2
-
-    if-ne v2, v1, :cond_0
-
-    add-int v1, v0, v2
-
-    .line 160
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    .line 161
-    iget-object v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi;->h()I
-
-    move-result v4
-
-    invoke-static {p1, v3, v1, v4}, Lcom/google/android/gms/internal/measurement/jn;->a(Ljava/lang/CharSequence;[BII)I
-
-    move-result v1
-
-    .line 162
-    iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    sub-int v3, v1, v0
-
-    sub-int/2addr v3, v2
-
-    .line 164
-    invoke-virtual {p0, v3}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
-
-    .line 165
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    return-void
-
-    .line 167
-    :cond_0
-    invoke-static {p1}, Lcom/google/android/gms/internal/measurement/jn;->a(Ljava/lang/CharSequence;)I
-
-    move-result v1
-
-    .line 168
-    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
-
-    .line 169
-    iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
-
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi;->h()I
-
-    move-result v3
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/internal/measurement/jn;->a(Ljava/lang/CharSequence;[BII)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput p1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
     :try_end_0
-    .catch Lcom/google/android/gms/internal/measurement/jr; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
@@ -727,116 +450,70 @@
     :catch_0
     move-exception p1
 
-    .line 176
-    new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
+    .line 11
+    new-instance p2, Lcom/google/android/gms/internal/measurement/zzhi$zza;
 
-    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$zza;-><init>(Ljava/lang/Throwable;)V
+    const/4 v0, 0x3
 
-    throw v0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    :catch_1
-    move-exception v1
+    const/4 v1, 0x0
 
-    move-object v7, v1
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 172
-    iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    .line 12
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 3231
-    sget-object v2, Lcom/google/android/gms/internal/measurement/zzhi;->a:Ljava/util/logging/Logger;
+    move-result-object v2
 
-    sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+    aput-object v2, v0, v1
 
-    const-string v4, "com.google.protobuf.CodedOutputStream"
+    const/4 v1, 0x1
 
-    const-string v5, "inefficientWriteStringNoTag"
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
-    const-string v6, "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual/range {v2 .. v7}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v2
 
-    .line 3232
-    sget-object v0, Lcom/google/android/gms/internal/measurement/gq;->a:Ljava/nio/charset/Charset;
+    aput-object v2, v0, v1
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    const/4 v1, 0x2
 
-    move-result-object p1
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 3233
-    :try_start_1
-    array-length v0, p1
+    move-result-object p3
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
+    aput-object p3, v0, v1
 
-    const/4 v0, 0x0
+    const-string p3, "Pos: %d, limit: %d, len: %d"
 
-    .line 3234
-    array-length v1, p1
+    invoke-static {p3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/gms/internal/measurement/fh;->a([BII)V
-    :try_end_1
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Lcom/google/android/gms/internal/measurement/zzhi$zza; {:try_start_1 .. :try_end_1} :catch_2
+    move-result-object p3
 
-    return-void
+    invoke-direct {p2, p3, p1}, Lcom/google/android/gms/internal/measurement/zzhi$zza;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :catch_2
-    move-exception p1
-
-    .line 3238
-    throw p1
-
-    :catch_3
-    move-exception p1
-
-    .line 3237
-    new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
-
-    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$zza;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final a([BI)V
-    .locals 1
-
-    .line 44
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
-
-    const/4 v0, 0x0
-
-    .line 45
-    invoke-direct {p0, p1, v0, p2}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b([BII)V
-
-    return-void
-.end method
-
-.method public final a([BII)V
-    .locals 0
-
-    .line 153
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b([BII)V
-
-    return-void
+    throw p2
 .end method
 
 .method public final b(I)V
     .locals 4
 
-    .line 1254
-    sget-boolean v0, Lcom/google/android/gms/internal/measurement/zzhi;->b:Z
+    .line 41
+    sget-boolean v0, Lcom/google/android/gms/internal/measurement/zzhi;->c:Z
 
     if-eqz v0, :cond_4
 
-    .line 82
-    invoke-static {}, Lcom/google/android/gms/internal/measurement/fd;->a()Z
+    .line 42
+    invoke-static {}, Lg/d/a/b/g/e/z4;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 83
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi;->h()I
+    .line 43
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a()I
 
     move-result v0
 
@@ -848,32 +525,32 @@
 
     if-nez v0, :cond_0
 
-    .line 85
+    .line 44
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v1, v2, p1}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, p1}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     return-void
 
-    .line 87
+    .line 45
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
@@ -881,7 +558,7 @@
 
     int-to-byte v3, v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, v3}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     ushr-int/lit8 p1, p1, 0x7
 
@@ -889,32 +566,32 @@
 
     if-nez v0, :cond_1
 
-    .line 90
+    .line 46
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v1, v2, p1}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, p1}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     return-void
 
-    .line 92
+    .line 47
     :cond_1
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
@@ -922,7 +599,7 @@
 
     int-to-byte v3, v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, v3}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     ushr-int/lit8 p1, p1, 0x7
 
@@ -930,32 +607,32 @@
 
     if-nez v0, :cond_2
 
-    .line 95
+    .line 48
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v1, v2, p1}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, p1}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     return-void
 
-    .line 97
+    .line 49
     :cond_2
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
@@ -963,7 +640,7 @@
 
     int-to-byte v3, v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, v3}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     ushr-int/lit8 p1, p1, 0x7
 
@@ -971,32 +648,32 @@
 
     if-nez v0, :cond_3
 
-    .line 100
+    .line 50
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v1, v2, p1}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, p1}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     return-void
 
-    .line 102
+    .line 51
     :cond_3
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
@@ -1004,24 +681,24 @@
 
     int-to-byte v3, v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, v3}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     ushr-int/lit8 p1, p1, 0x7
 
-    .line 104
+    .line 52
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v1, v2, p1}, Lcom/google/android/gms/internal/measurement/jl;->a([BJB)V
+    invoke-static {v0, v1, v2, p1}, Lg/d/a/b/g/e/u8;->a([BJB)V
 
     return-void
 
@@ -1031,15 +708,15 @@
 
     if-nez v0, :cond_5
 
-    .line 106
+    .line 53
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-byte p1, p1
 
@@ -1047,15 +724,15 @@
 
     return-void
 
-    .line 108
+    .line 54
     :cond_5
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     and-int/lit8 v2, p1, 0x7f
 
@@ -1074,7 +751,7 @@
     :catch_0
     move-exception p1
 
-    .line 111
+    .line 55
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
 
     const/4 v1, 0x3
@@ -1083,16 +760,16 @@
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 112
+    .line 56
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1127,86 +804,34 @@
     goto :goto_1
 .end method
 
-.method public final b(II)V
-    .locals 1
+.method public final b(ILg/d/a/b/g/e/c5;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    shl-int/lit8 p1, p1, 0x3
 
-    .line 17
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
+    or-int/lit8 p1, p1, 0x2
 
-    .line 18
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->a(I)V
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
 
-    return-void
-.end method
-
-.method public final b(ILcom/google/android/gms/internal/measurement/fg;)V
-    .locals 3
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    .line 64
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    const/4 v2, 0x2
-
-    .line 65
-    invoke-virtual {p0, v2, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->c(II)V
-
-    .line 66
-    invoke-virtual {p0, v0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->a(ILcom/google/android/gms/internal/measurement/fg;)V
-
-    const/4 p1, 0x4
-
-    .line 67
-    invoke-virtual {p0, v1, p1}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(Lg/d/a/b/g/e/c5;)V
 
     return-void
 .end method
 
-.method public final c(II)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 20
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 21
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
-
-    return-void
-.end method
-
-.method public final c(IJ)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 29
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
-
-    .line 30
-    invoke-virtual {p0, p2, p3}, Lcom/google/android/gms/internal/measurement/zzhi;->c(J)V
-
-    return-void
-.end method
-
-.method public final c(J)V
+.method public final b(J)V
     .locals 5
 
-    .line 135
+    .line 7
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     long-to-int v3, p1
 
@@ -1214,12 +839,12 @@
 
     aput-byte v3, v0, v1
 
-    .line 136
+    .line 8
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v1, v2, 0x1
 
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v3, 0x8
 
@@ -1231,12 +856,12 @@
 
     aput-byte v3, v0, v2
 
-    .line 137
+    .line 9
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v3, 0x10
 
@@ -1248,12 +873,12 @@
 
     aput-byte v3, v0, v1
 
-    .line 138
+    .line 10
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v1, v2, 0x1
 
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v3, 0x18
 
@@ -1265,12 +890,12 @@
 
     aput-byte v3, v0, v2
 
-    .line 139
+    .line 11
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v3, 0x20
 
@@ -1282,12 +907,12 @@
 
     aput-byte v3, v0, v1
 
-    .line 140
+    .line 12
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v1, v2, 0x1
 
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v3, 0x28
 
@@ -1299,12 +924,12 @@
 
     aput-byte v3, v0, v2
 
-    .line 141
+    .line 13
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v3, 0x30
 
@@ -1316,12 +941,12 @@
 
     aput-byte v3, v0, v1
 
-    .line 142
+    .line 14
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v1, v2, 0x1
 
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     const/16 v1, 0x38
 
@@ -1340,7 +965,7 @@
     :catch_0
     move-exception p1
 
-    .line 145
+    .line 15
     new-instance p2, Lcom/google/android/gms/internal/measurement/zzhi$zza;
 
     const/4 v0, 0x3
@@ -1349,16 +974,16 @@
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 146
+    .line 16
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1387,29 +1012,230 @@
     throw p2
 .end method
 
-.method public final d(I)V
+.method public final b(Lg/d/a/b/g/e/c5;)V
+    .locals 2
+
+    .line 3
+    invoke-virtual {p1}, Lg/d/a/b/g/e/c5;->a()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
+
+    .line 4
+    check-cast p1, Lg/d/a/b/g/e/k5;
+
+    .line 5
+    iget-object v0, p1, Lg/d/a/b/g/e/k5;->g:[B
+
+    invoke-virtual {p1}, Lg/d/a/b/g/e/k5;->c()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Lg/d/a/b/g/e/k5;->a()I
+
+    move-result p1
+
+    .line 6
+    invoke-virtual {p0, v0, v1, p1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a([BII)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;)V
+    .locals 8
+
+    .line 17
+    iget v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    .line 18
+    :try_start_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x3
+
+    .line 19
+    invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzhi;->h(I)I
+
+    move-result v1
+
+    .line 20
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-static {v2}, Lcom/google/android/gms/internal/measurement/zzhi;->h(I)I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_0
+
+    add-int v1, v0, v2
+
+    .line 21
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    .line 22
+    iget-object v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a()I
+
+    move-result v4
+
+    .line 23
+    sget-object v5, Lg/d/a/b/g/e/w8;->a:Lg/d/a/b/g/e/y8;
+
+    invoke-virtual {v5, p1, v3, v1, v4}, Lg/d/a/b/g/e/y8;->a(Ljava/lang/CharSequence;[BII)I
+
+    move-result v1
+
+    .line 24
+    iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    sub-int v3, v1, v0
+
+    sub-int/2addr v3, v2
+
+    .line 25
+    invoke-virtual {p0, v3}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
+
+    .line 26
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    return-void
+
+    .line 27
+    :cond_0
+    invoke-static {p1}, Lg/d/a/b/g/e/w8;->a(Ljava/lang/CharSequence;)I
+
+    move-result v1
+
+    .line 28
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
+
+    .line 29
+    iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
+
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a()I
+
+    move-result v3
+
+    .line 30
+    sget-object v4, Lg/d/a/b/g/e/w8;->a:Lg/d/a/b/g/e/y8;
+
+    invoke-virtual {v4, p1, v1, v2, v3}, Lg/d/a/b/g/e/y8;->a(Ljava/lang/CharSequence;[BII)I
+
+    move-result v1
+
+    .line 31
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    :try_end_0
+    .catch Lg/d/a/b/g/e/a9; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 32
+    new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$zza;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception v1
+
+    move-object v7, v1
+
+    .line 33
+    iput v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+
+    .line 34
+    sget-object v2, Lcom/google/android/gms/internal/measurement/zzhi;->b:Ljava/util/logging/Logger;
+
+    sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    const-string v4, "com.google.protobuf.CodedOutputStream"
+
+    const-string v5, "inefficientWriteStringNoTag"
+
+    const-string v6, "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!"
+
+    invoke-virtual/range {v2 .. v7}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 35
+    sget-object v0, Lg/d/a/b/g/e/h6;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
+
+    .line 36
+    :try_start_1
+    array-length v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->b(I)V
+
+    const/4 v0, 0x0
+
+    .line 37
+    array-length v1, p1
+
+    .line 38
+    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->a([BII)V
+    :try_end_1
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Lcom/google/android/gms/internal/measurement/zzhi$zza; {:try_start_1 .. :try_end_1} :catch_2
+
+    return-void
+
+    :catch_2
+    move-exception p1
+
+    .line 39
+    throw p1
+
+    :catch_3
+    move-exception p1
+
+    .line 40
+    new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$zza;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final c(I)V
     .locals 4
 
-    .line 113
+    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     int-to-byte v3, p1
 
     aput-byte v3, v0, v1
 
-    .line 114
+    .line 4
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v1, v2, 0x1
 
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     shr-int/lit8 v3, p1, 0x8
 
@@ -1417,12 +1243,12 @@
 
     aput-byte v3, v0, v2
 
-    .line 115
+    .line 5
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     shr-int/lit8 v3, p1, 0x10
 
@@ -1430,12 +1256,12 @@
 
     aput-byte v3, v0, v1
 
-    .line 116
+    .line 6
     iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->d:[B
 
     add-int/lit8 v1, v2, 0x1
 
-    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iput v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
     ushr-int/lit8 p1, p1, 0x18
 
@@ -1450,7 +1276,7 @@
     :catch_0
     move-exception p1
 
-    .line 119
+    .line 7
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzhi$zza;
 
     const/4 v1, 0x3
@@ -1459,16 +1285,16 @@
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    iget v3, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
 
-    .line 120
+    .line 8
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    iget v2, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->e:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1497,29 +1323,47 @@
     throw v0
 .end method
 
-.method public final e(II)V
+.method public final c(Lg/d/a/b/g/e/n7;)V
     .locals 1
 
-    const/4 v0, 0x5
+    .line 1
+    invoke-interface {p1}, Lg/d/a/b/g/e/n7;->c()I
 
-    .line 23
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzhi;->a(II)V
+    move-result v0
 
-    .line 24
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi;->d(I)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
+
+    .line 2
+    invoke-interface {p1, p0}, Lg/d/a/b/g/e/n7;->a(Lcom/google/android/gms/internal/measurement/zzhi;)V
 
     return-void
 .end method
 
-.method public final h()I
-    .locals 2
+.method public final f(II)V
+    .locals 0
 
-    .line 177
-    iget v0, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->f:I
+    shl-int/lit8 p1, p1, 0x3
 
-    iget v1, p0, Lcom/google/android/gms/internal/measurement/zzhi$a;->g:I
+    or-int/2addr p1, p2
 
-    sub-int/2addr v0, v1
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
 
-    return v0
+    return-void
+.end method
+
+.method public final g(II)V
+    .locals 0
+
+    shl-int/lit8 p1, p1, 0x3
+
+    or-int/lit8 p1, p1, 0x0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
+
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/measurement/zzhi$a;->b(I)V
+
+    return-void
 .end method

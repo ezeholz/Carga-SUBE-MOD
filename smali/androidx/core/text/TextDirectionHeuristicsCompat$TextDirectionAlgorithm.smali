@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;
+.class public interface abstract Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;
 .super Ljava/lang/Object;
 .source "TextDirectionHeuristicsCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "TextDirectionAlgorithm"
 .end annotation
 

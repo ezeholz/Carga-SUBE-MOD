@@ -1,4 +1,4 @@
-.class interface abstract Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
+.class public interface abstract Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 .super Ljava/lang/Object;
 .source "AndroidDescriptorHost.java"
 

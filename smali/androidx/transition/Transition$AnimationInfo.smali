@@ -1,4 +1,4 @@
-.class Landroidx/transition/Transition$AnimationInfo;
+.class public Landroidx/transition/Transition$AnimationInfo;
 .super Ljava/lang/Object;
 .source "Transition.java"
 
@@ -9,43 +9,43 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AnimationInfo"
 .end annotation
 
 
 # instance fields
-.field mName:Ljava/lang/String;
+.field public mName:Ljava/lang/String;
 
-.field mTransition:Landroidx/transition/Transition;
+.field public mTransition:Landroidx/transition/Transition;
 
-.field mValues:Landroidx/transition/TransitionValues;
+.field public mValues:Landroidx/transition/TransitionValues;
 
-.field mView:Landroid/view/View;
+.field public mView:Landroid/view/View;
 
-.field mWindowId:Landroidx/transition/WindowIdImpl;
+.field public mWindowId:Landroidx/transition/WindowIdImpl;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Ljava/lang/String;Landroidx/transition/Transition;Landroidx/transition/WindowIdImpl;Landroidx/transition/TransitionValues;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;Landroidx/transition/Transition;Landroidx/transition/WindowIdImpl;Landroidx/transition/TransitionValues;)V
     .locals 0
 
-    .line 2363
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2364
+    .line 2
     iput-object p1, p0, Landroidx/transition/Transition$AnimationInfo;->mView:Landroid/view/View;
 
-    .line 2365
+    .line 3
     iput-object p2, p0, Landroidx/transition/Transition$AnimationInfo;->mName:Ljava/lang/String;
 
-    .line 2366
+    .line 4
     iput-object p5, p0, Landroidx/transition/Transition$AnimationInfo;->mValues:Landroidx/transition/TransitionValues;
 
-    .line 2367
+    .line 5
     iput-object p4, p0, Landroidx/transition/Transition$AnimationInfo;->mWindowId:Landroidx/transition/WindowIdImpl;
 
-    .line 2368
+    .line 6
     iput-object p3, p0, Landroidx/transition/Transition$AnimationInfo;->mTransition:Landroidx/transition/Transition;
 
     return-void

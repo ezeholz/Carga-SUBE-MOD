@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field private final c:Ljava/util/List;
+.field public final j:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -39,55 +39,53 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 67
-    new-instance v0, Lcom/facebook/share/model/ShareMediaContent$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/model/ShareMediaContent$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/model/ShareMediaContent$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/model/ShareMediaContent$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/model/ShareMediaContent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 41
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareContent;-><init>(Landroid/os/Parcel;)V
 
-    .line 42
+    .line 2
     const-class v0, Lcom/facebook/share/model/ShareMedia;
 
-    .line 43
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 42
+    .line 4
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, [Lcom/facebook/share/model/ShareMedia;
 
-    check-cast p1, [Lcom/facebook/share/model/ShareMedia;
-
-    .line 44
+    .line 5
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/model/ShareMediaContent;->c:Ljava/util/List;
+    iput-object p1, p0, Lcom/facebook/share/model/ShareMediaContent;->j:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -95,20 +93,18 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 62
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/facebook/share/model/ShareContent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 63
-    iget-object v0, p0, Lcom/facebook/share/model/ShareMediaContent;->c:Ljava/util/List;
+    .line 2
+    iget-object v0, p0, Lcom/facebook/share/model/ShareMediaContent;->j:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v0
-
-    check-cast v0, [Lcom/facebook/share/model/ShareMedia;
 
     check-cast v0, [Lcom/facebook/share/model/ShareMedia;
 

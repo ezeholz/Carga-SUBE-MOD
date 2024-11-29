@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/ToolbarActionBar$2;
+.class public Landroidx/appcompat/app/ToolbarActionBar$2;
 .super Ljava/lang/Object;
 .source "ToolbarActionBar.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/ToolbarActionBar;
+.field public final synthetic this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/ToolbarActionBar;)V
+.method public constructor <init>(Landroidx/appcompat/app/ToolbarActionBar;)V
     .locals 0
 
-    .line 61
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/ToolbarActionBar$2;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 64
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$2;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     iget-object v0, v0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;

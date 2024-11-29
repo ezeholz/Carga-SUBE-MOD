@@ -15,10 +15,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 68
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 41
+    .line 1
     new-instance v0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
 
     invoke-direct {v0, p0}, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;-><init>(Landroidx/core/os/ParcelableCompatCreatorCallbacks;)V

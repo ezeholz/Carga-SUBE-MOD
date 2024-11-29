@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptor;
+.class public Landroidx/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptor;
 .super Landroidx/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;
 .source "MediaBrowserServiceCompatApi23.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MediaBrowserServiceAdaptor"
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi23$ServiceCompatProxy;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi23$ServiceCompatProxy;)V
     .locals 0
 
-    .line 39
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;-><init>(Landroid/content/Context;Landroidx/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;)V
 
     return-void
@@ -38,8 +38,8 @@
         }
     .end annotation
 
-    .line 44
-    iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptor;->mServiceProxy:Landroidx/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;
+    .line 1
+    iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptor;->mServiceProxy:Landroidx/media/MediaBrowserServiceCompatApi21$ServiceCompatProxy;
 
     check-cast v0, Landroidx/media/MediaBrowserServiceCompatApi23$ServiceCompatProxy;
 

@@ -4,14 +4,14 @@
 
 
 # static fields
-.field static final serialVersionUID:J = 0x1L
+.field public static final serialVersionUID:J = 0x1L
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 33
+    .line 1
     invoke-direct {p0}, Lcom/facebook/FacebookException;-><init>()V
 
     return-void
@@ -20,7 +20,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 42
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     return-void

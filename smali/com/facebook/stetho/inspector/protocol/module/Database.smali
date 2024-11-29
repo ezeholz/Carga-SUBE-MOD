@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDriver;,
@@ -24,17 +28,17 @@
 
 
 # static fields
-.field private static final MAX_BLOB_LENGTH:I = 0x200
+.field public static final MAX_BLOB_LENGTH:I = 0x200
 
-.field private static final MAX_EXECUTE_RESULTS:I = 0xfa
+.field public static final MAX_EXECUTE_RESULTS:I = 0xfa
 
-.field private static final UNKNOWN_BLOB_LABEL:Ljava/lang/String; = "{blob}"
+.field public static final UNKNOWN_BLOB_LABEL:Ljava/lang/String; = "{blob}"
 
 
 # instance fields
-.field private final mChromePeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
+.field public final mChromePeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
-.field private mDatabaseDrivers:Ljava/util/List;
+.field public mDatabaseDrivers:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -44,33 +48,33 @@
     .end annotation
 .end field
 
-.field private final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
+.field public final mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
-.field private final mPeerListener:Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
+.field public final mPeerListener:Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 3
 
-    .line 75
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mDatabaseDrivers:Ljava/util/List;
 
-    .line 77
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mChromePeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
-    .line 78
+    .line 4
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mDatabaseDrivers:Ljava/util/List;
@@ -81,12 +85,12 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mPeerListener:Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
 
-    .line 79
+    .line 5
     iget-object v1, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mChromePeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     invoke-virtual {v1, v0}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->setListener(Lcom/facebook/stetho/inspector/helper/PeerRegistrationListener;)V
 
-    .line 80
+    .line 6
     new-instance v0, Lcom/facebook/stetho/json/ObjectMapper;
 
     invoke-direct {v0}, Lcom/facebook/stetho/json/ObjectMapper;-><init>()V
@@ -96,10 +100,10 @@
     return-void
 .end method
 
-.method static synthetic access$200(Landroid/database/Cursor;I)Ljava/util/ArrayList;
+.method public static synthetic access$200(Landroid/database/Cursor;I)Ljava/util/ArrayList;
     .locals 0
 
-    .line 45
+    .line 1
     invoke-static {p0, p1}, Lcom/facebook/stetho/inspector/protocol/module/Database;->flattenRows(Landroid/database/Cursor;I)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -107,24 +111,24 @@
     return-object p0
 .end method
 
-.method private static blobToString([B)Ljava/lang/String;
+.method public static blobToString([B)Ljava/lang/String;
     .locals 2
 
-    .line 223
+    .line 1
     array-length v0, p0
 
     const/16 v1, 0x200
 
     if-gt v0, v1, :cond_0
 
-    .line 224
+    .line 2
     invoke-static {p0}, Lcom/facebook/stetho/inspector/protocol/module/Database;->fastIsAscii([B)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 226
+    .line 3
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
@@ -143,10 +147,10 @@
     return-object p0
 .end method
 
-.method private static fastIsAscii([B)Z
+.method public static fastIsAscii([B)Z
     .locals 4
 
-    .line 236
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -175,7 +179,7 @@
     return p0
 .end method
 
-.method private static flattenRows(Landroid/database/Cursor;I)Ljava/util/ArrayList;
+.method public static flattenRows(Landroid/database/Cursor;I)Ljava/util/ArrayList;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -201,16 +205,16 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 189
+    .line 1
     :goto_0
     invoke-static {v2}, Lcom/facebook/stetho/common/Util;->throwIfNot(Z)V
 
-    .line 190
+    .line 2
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 191
+    .line 3
     invoke-interface {p0}, Landroid/database/Cursor;->getColumnCount()I
 
     move-result v3
@@ -220,7 +224,7 @@
     :goto_1
     if-ge v4, p1, :cond_6
 
-    .line 192
+    .line 4
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v5
@@ -232,7 +236,7 @@
     :goto_2
     if-ge v5, v3, :cond_5
 
-    .line 194
+    .line 5
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getType(I)I
 
     move-result v6
@@ -249,7 +253,7 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 209
+    .line 6
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -258,7 +262,7 @@
 
     goto :goto_3
 
-    .line 205
+    .line 7
     :cond_1
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getBlob(I)[B
 
@@ -272,7 +276,7 @@
 
     goto :goto_3
 
-    .line 202
+    .line 8
     :cond_2
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getDouble(I)D
 
@@ -286,7 +290,7 @@
 
     goto :goto_3
 
-    .line 199
+    .line 9
     :cond_3
     invoke-interface {p0, v5}, Landroid/database/Cursor;->getLong(I)J
 
@@ -303,7 +307,7 @@
     :cond_4
     const/4 v6, 0x0
 
-    .line 196
+    .line 10
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_3
@@ -316,7 +320,7 @@
 
     goto :goto_1
 
-    .line 214
+    .line 11
     :cond_6
     invoke-interface {p0}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -329,7 +333,7 @@
 
     const-string p0, "{truncated}"
 
-    .line 216
+    .line 12
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v0, v0, 0x1
@@ -345,7 +349,7 @@
 .method public add(Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;)V
     .locals 1
 
-    .line 84
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mDatabaseDrivers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -358,7 +362,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 94
+    .line 1
     iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mChromePeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->removePeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
@@ -371,7 +375,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 89
+    .line 1
     iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mChromePeerManager:Lcom/facebook/stetho/inspector/helper/ChromePeerManager;
 
     invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->addPeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)Z
@@ -384,7 +388,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 122
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class v0, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLRequest;
@@ -395,17 +399,17 @@
 
     check-cast p1, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLRequest;
 
-    .line 125
+    .line 2
     iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mPeerListener:Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
 
     iget-object v0, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLRequest;->databaseId:Ljava/lang/String;
 
-    .line 126
+    .line 3
     invoke-virtual {p2, v0}, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->getDatabaseDescriptorHolder(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;
 
     move-result-object p2
 
-    .line 129
+    .line 4
     :try_start_0
     iget-object v0, p2, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;->driver:Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;
 
@@ -417,7 +421,7 @@
 
     invoke-direct {v2, p0}, Lcom/facebook/stetho/inspector/protocol/module/Database$1;-><init>(Lcom/facebook/stetho/inspector/protocol/module/Database;)V
 
-    invoke-virtual {v0, p2, v1, v2}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;->executeSQL(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
+    invoke-virtual {v0, p2, v1, v2}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->executeSQL(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
 
     move-result-object p1
     :try_end_0
@@ -432,7 +436,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 168
+    .line 5
     iget-object p1, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLRequest;->query:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -443,27 +447,27 @@
 
     invoke-static {p2, p1, v0}, Lcom/facebook/stetho/common/LogUtil;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 170
+    .line 6
     new-instance p1, Lcom/facebook/stetho/inspector/protocol/module/Database$Error;
 
     invoke-direct {p1}, Lcom/facebook/stetho/inspector/protocol/module/Database$Error;-><init>()V
 
-    .line 171
+    .line 7
     iput v1, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$Error;->code:I
 
-    .line 172
+    .line 8
     invoke-virtual {p2}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$Error;->message:Ljava/lang/String;
 
-    .line 173
+    .line 9
     new-instance p2, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
 
     invoke-direct {p2}, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;-><init>()V
 
-    .line 174
+    .line 10
     iput-object p1, p2, Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;->sqlError:Lcom/facebook/stetho/inspector/protocol/module/Database$Error;
 
     return-object p2
@@ -474,7 +478,7 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 100
+    .line 1
     iget-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mObjectMapper:Lcom/facebook/stetho/json/ObjectMapper;
 
     const-class v0, Lcom/facebook/stetho/inspector/protocol/module/Database$GetDatabaseTableNamesRequest;
@@ -485,31 +489,31 @@
 
     check-cast p1, Lcom/facebook/stetho/inspector/protocol/module/Database$GetDatabaseTableNamesRequest;
 
-    .line 103
+    .line 2
     iget-object p1, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$GetDatabaseTableNamesRequest;->databaseId:Ljava/lang/String;
 
-    .line 104
+    .line 3
     iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/Database;->mPeerListener:Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
 
-    .line 105
+    .line 4
     invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->getDatabaseDescriptorHolder(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    .line 108
+    .line 5
     :try_start_0
     new-instance v0, Lcom/facebook/stetho/inspector/protocol/module/Database$GetDatabaseTableNamesResponse;
 
     invoke-direct {v0, p2}, Lcom/facebook/stetho/inspector/protocol/module/Database$GetDatabaseTableNamesResponse;-><init>(Lcom/facebook/stetho/inspector/protocol/module/Database$1;)V
 
-    .line 109
+    .line 6
     iget-object v1, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;->driver:Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;
 
     iget-object p1, p1, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;->descriptor:Lcom/facebook/stetho/inspector/protocol/module/DatabaseDescriptor;
 
-    invoke-virtual {v1, p1}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;->getTableNames(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->getTableNames(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
@@ -522,14 +526,14 @@
     :catch_0
     move-exception p1
 
-    .line 112
+    .line 7
     new-instance v0, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcException;
 
     new-instance v1, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError;
 
     sget-object v2, Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;->INVALID_REQUEST:Lcom/facebook/stetho/inspector/jsonrpc/protocol/JsonRpcError$ErrorCode;
 
-    .line 115
+    .line 8
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteException;->toString()Ljava/lang/String;
 
     move-result-object p1

@@ -16,62 +16,53 @@
 
 
 # instance fields
-.field public a:I
+.field public d:I
 
-.field public b:I
+.field public e:I
 
-.field public c:I
+.field public f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 56
-    new-instance v0, Lcom/rd/draw/data/PositionSavedState$1;
+    .line 1
+    new-instance v0, Lcom/rd/draw/data/PositionSavedState$a;
 
-    invoke-direct {v0}, Lcom/rd/draw/data/PositionSavedState$1;-><init>()V
+    invoke-direct {v0}, Lcom/rd/draw/data/PositionSavedState$a;-><init>()V
 
     sput-object v0, Lcom/rd/draw/data/PositionSavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/os/Parcel;Lcom/rd/draw/data/PositionSavedState$a;)V
+    .locals 0
 
-    .line 18
+    .line 2
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 19
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result v0
+    move-result p2
 
-    iput v0, p0, Lcom/rd/draw/data/PositionSavedState;->a:I
+    iput p2, p0, Lcom/rd/draw/data/PositionSavedState;->d:I
 
-    .line 20
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result v0
+    move-result p2
 
-    iput v0, p0, Lcom/rd/draw/data/PositionSavedState;->b:I
+    iput p2, p0, Lcom/rd/draw/data/PositionSavedState;->e:I
 
-    .line 21
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    iput p1, p0, Lcom/rd/draw/data/PositionSavedState;->c:I
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/os/Parcel;B)V
-    .locals 0
-
-    .line 7
-    invoke-direct {p0, p1}, Lcom/rd/draw/data/PositionSavedState;-><init>(Landroid/os/Parcel;)V
+    iput p1, p0, Lcom/rd/draw/data/PositionSavedState;->f:I
 
     return-void
 .end method
@@ -79,7 +70,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 14
+    .line 1
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -90,21 +81,21 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 50
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 51
-    iget p2, p0, Lcom/rd/draw/data/PositionSavedState;->a:I
+    .line 2
+    iget p2, p0, Lcom/rd/draw/data/PositionSavedState;->d:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 52
-    iget p2, p0, Lcom/rd/draw/data/PositionSavedState;->b:I
+    .line 3
+    iget p2, p0, Lcom/rd/draw/data/PositionSavedState;->e:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 53
-    iget p2, p0, Lcom/rd/draw/data/PositionSavedState;->c:I
+    .line 4
+    iget p2, p0, Lcom/rd/draw/data/PositionSavedState;->f:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

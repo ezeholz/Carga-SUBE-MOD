@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;
+.class public Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;
 .super Ljava/lang/Object;
 .source "ServiceLifecycleDispatcher.java"
 
@@ -12,35 +12,39 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DispatchRunnable"
 .end annotation
 
 
 # instance fields
-.field final mEvent:Landroidx/lifecycle/Lifecycle$Event;
+.field public final mEvent:Landroidx/lifecycle/Lifecycle$Event;
 
-.field private final mRegistry:Landroidx/lifecycle/LifecycleRegistry;
+.field public final mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
-.field private mWasExecuted:Z
+.field public mWasExecuted:Z
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/LifecycleRegistry;Landroidx/lifecycle/Lifecycle$Event;)V
+.method public constructor <init>(Landroidx/lifecycle/LifecycleRegistry;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
+    .param p1    # Landroidx/lifecycle/LifecycleRegistry;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 96
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 94
+    .line 2
     iput-boolean v0, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mWasExecuted:Z
 
-    .line 97
+    .line 3
     iput-object p1, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
-    .line 98
+    .line 4
     iput-object p2, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mEvent:Landroidx/lifecycle/Lifecycle$Event;
 
     return-void
@@ -51,12 +55,12 @@
 .method public run()V
     .locals 2
 
-    .line 103
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mWasExecuted:Z
 
     if-nez v0, :cond_0
 
-    .line 104
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
     iget-object v1, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mEvent:Landroidx/lifecycle/Lifecycle$Event;
@@ -65,7 +69,7 @@
 
     const/4 v0, 0x1
 
-    .line 105
+    .line 3
     iput-boolean v0, p0, Landroidx/lifecycle/ServiceLifecycleDispatcher$DispatchRunnable;->mWasExecuted:Z
 
     :cond_0

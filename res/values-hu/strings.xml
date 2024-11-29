@@ -68,10 +68,6 @@
     <string name="common_open_on_phone">Megnyitás a telefonon</string>
     <string name="common_signin_button_text">Bejelentkezés</string>
     <string name="common_signin_button_text_long">Bejelentkezés Google-fiókkal</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">e napon: %s</string>
-    <string name="joda_time_android_preposition_for_time">%s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Keresés</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

@@ -1,4 +1,4 @@
-.class Landroidx/transition/ChangeTransform$Transforms;
+.class public Landroidx/transition/ChangeTransform$Transforms;
 .super Ljava/lang/Object;
 .source "ChangeTransform.java"
 
@@ -9,86 +9,86 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Transforms"
 .end annotation
 
 
 # instance fields
-.field final mRotationX:F
+.field public final mRotationX:F
 
-.field final mRotationY:F
+.field public final mRotationY:F
 
-.field final mRotationZ:F
+.field public final mRotationZ:F
 
-.field final mScaleX:F
+.field public final mScaleX:F
 
-.field final mScaleY:F
+.field public final mScaleY:F
 
-.field final mTranslationX:F
+.field public final mTranslationX:F
 
-.field final mTranslationY:F
+.field public final mTranslationY:F
 
-.field final mTranslationZ:F
+.field public final mTranslationZ:F
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 466
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 467
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationX:F
 
-    .line 468
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationY:F
 
-    .line 469
+    .line 4
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getTranslationZ(Landroid/view/View;)F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationZ:F
 
-    .line 470
+    .line 5
     invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mScaleX:F
 
-    .line 471
+    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mScaleY:F
 
-    .line 472
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mRotationX:F
 
-    .line 473
+    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mRotationY:F
 
-    .line 474
+    .line 9
     invoke-virtual {p1}, Landroid/view/View;->getRotation()F
 
     move-result p1
@@ -103,7 +103,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 484
+    .line 1
     instance-of v0, p1, Landroidx/transition/ChangeTransform$Transforms;
 
     const/4 v1, 0x0
@@ -112,11 +112,11 @@
 
     return v1
 
-    .line 487
+    .line 2
     :cond_0
     check-cast p1, Landroidx/transition/ChangeTransform$Transforms;
 
-    .line 488
+    .line 3
     iget v0, p1, Landroidx/transition/ChangeTransform$Transforms;->mTranslationX:F
 
     iget v2, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationX:F
@@ -181,9 +181,7 @@
 
     if-nez p1, :cond_1
 
-    const/4 p1, 0x1
-
-    return p1
+    const/4 v1, 0x1
 
     :cond_1
     return v1
@@ -192,7 +190,7 @@
 .method public hashCode()I
     .locals 5
 
-    .line 500
+    .line 1
     iget v0, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationX:F
 
     const/4 v1, 0x0
@@ -215,7 +213,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 501
+    .line 2
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationY:F
 
     cmpl-float v4, v3, v2
@@ -236,7 +234,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 502
+    .line 3
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationZ:F
 
     cmpl-float v4, v3, v2
@@ -257,7 +255,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 503
+    .line 4
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mScaleX:F
 
     cmpl-float v4, v3, v2
@@ -278,7 +276,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 504
+    .line 5
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mScaleY:F
 
     cmpl-float v4, v3, v2
@@ -299,7 +297,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 505
+    .line 6
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mRotationX:F
 
     cmpl-float v4, v3, v2
@@ -320,7 +318,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 506
+    .line 7
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mRotationY:F
 
     cmpl-float v4, v3, v2
@@ -341,7 +339,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 507
+    .line 8
     iget v3, p0, Landroidx/transition/ChangeTransform$Transforms;->mRotationZ:F
 
     cmpl-float v2, v3, v2
@@ -361,7 +359,7 @@
 .method public restore(Landroid/view/View;)V
     .locals 9
 
-    .line 478
+    .line 1
     iget v1, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationX:F
 
     iget v2, p0, Landroidx/transition/ChangeTransform$Transforms;->mTranslationY:F

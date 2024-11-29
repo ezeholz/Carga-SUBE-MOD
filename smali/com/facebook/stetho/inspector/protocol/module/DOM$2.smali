@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/DOM$2;
+.class public Lcom/facebook/stetho/inspector/protocol/module/DOM$2;
 .super Ljava/lang/Object;
 .source "DOM.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
-.field final synthetic val$contentColor:Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;
+.field public final synthetic val$contentColor:Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;
 
-.field final synthetic val$request:Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightNodeRequest;
+.field public final synthetic val$request:Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightNodeRequest;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightNodeRequest;Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightNodeRequest;Lcom/facebook/stetho/inspector/protocol/module/DOM$RGBAColor;)V
     .locals 0
 
-    .line 106
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$2;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     iput-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$2;->val$request:Lcom/facebook/stetho/inspector/protocol/module/DOM$HighlightNodeRequest;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 109
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$2;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/protocol/module/DOM;->access$300(Lcom/facebook/stetho/inspector/protocol/module/DOM;)Lcom/facebook/stetho/inspector/elements/Document;
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 111
+    .line 2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$2;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-static {v1}, Lcom/facebook/stetho/inspector/protocol/module/DOM;->access$300(Lcom/facebook/stetho/inspector/protocol/module/DOM;)Lcom/facebook/stetho/inspector/elements/Document;

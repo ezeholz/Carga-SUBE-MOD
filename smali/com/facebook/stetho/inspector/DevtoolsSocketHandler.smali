@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field private final mModules:Ljava/lang/Iterable;
+.field public final mModules:Ljava/lang/Iterable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Iterable<",
@@ -19,7 +19,7 @@
     .end annotation
 .end field
 
-.field private final mServer:Lcom/facebook/stetho/server/http/LightHttpServer;
+.field public final mServer:Lcom/facebook/stetho/server/http/LightHttpServer;
 
 
 # direct methods
@@ -35,16 +35,16 @@
         }
     .end annotation
 
-    .line 30
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/DevtoolsSocketHandler;->mContext:Landroid/content/Context;
 
-    .line 32
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/DevtoolsSocketHandler;->mModules:Ljava/lang/Iterable;
 
-    .line 33
+    .line 4
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/DevtoolsSocketHandler;->createServer()Lcom/facebook/stetho/server/http/LightHttpServer;
 
     move-result-object p1
@@ -57,12 +57,12 @@
 .method private createServer()Lcom/facebook/stetho/server/http/LightHttpServer;
     .locals 5
 
-    .line 37
+    .line 1
     new-instance v0, Lcom/facebook/stetho/server/http/HandlerRegistry;
 
     invoke-direct {v0}, Lcom/facebook/stetho/server/http/HandlerRegistry;-><init>()V
 
-    .line 38
+    .line 2
     new-instance v1, Lcom/facebook/stetho/inspector/ChromeDiscoveryHandler;
 
     iget-object v2, p0, Lcom/facebook/stetho/inspector/DevtoolsSocketHandler;->mContext:Landroid/content/Context;
@@ -71,10 +71,10 @@
 
     invoke-direct {v1, v2, v3}, Lcom/facebook/stetho/inspector/ChromeDiscoveryHandler;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 42
+    .line 3
     invoke-virtual {v1, v0}, Lcom/facebook/stetho/inspector/ChromeDiscoveryHandler;->register(Lcom/facebook/stetho/server/http/HandlerRegistry;)V
 
-    .line 43
+    .line 4
     new-instance v1, Lcom/facebook/stetho/server/http/ExactPathMatcher;
 
     invoke-direct {v1, v3}, Lcom/facebook/stetho/server/http/ExactPathMatcher;-><init>(Ljava/lang/String;)V
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/facebook/stetho/server/http/HandlerRegistry;->register(Lcom/facebook/stetho/server/http/PathMatcher;Lcom/facebook/stetho/server/http/HttpHandler;)V
 
-    .line 47
+    .line 5
     new-instance v1, Lcom/facebook/stetho/server/http/LightHttpServer;
 
     invoke-direct {v1, v0}, Lcom/facebook/stetho/server/http/LightHttpServer;-><init>(Lcom/facebook/stetho/server/http/HandlerRegistry;)V
@@ -104,7 +104,7 @@
 .method public onAccepted(Lcom/facebook/stetho/server/SocketLike;)V
     .locals 1
 
-    .line 52
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/DevtoolsSocketHandler;->mServer:Lcom/facebook/stetho/server/http/LightHttpServer;
 
     invoke-virtual {v0, p1}, Lcom/facebook/stetho/server/http/LightHttpServer;->serve(Lcom/facebook/stetho/server/SocketLike;)V

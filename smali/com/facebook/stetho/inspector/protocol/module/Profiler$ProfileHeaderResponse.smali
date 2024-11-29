@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/Profiler$ProfileHeaderResponse;
+.class public Lcom/facebook/stetho/inspector/protocol/module/Profiler$ProfileHeaderResponse;
 .super Ljava/lang/Object;
 .source "Profiler.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ProfileHeaderResponse"
 .end annotation
 
@@ -34,19 +34,19 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 46
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/Profiler$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/Profiler$1;)V
     .locals 0
 
-    .line 46
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/protocol/module/Profiler$ProfileHeaderResponse;-><init>()V
 
     return-void

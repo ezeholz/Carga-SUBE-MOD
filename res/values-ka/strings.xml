@@ -45,9 +45,6 @@
     <string name="common_open_on_phone">ტელეფონში გახსნა</string>
     <string name="common_signin_button_text">შესვლა</string>
     <string name="common_signin_button_text_long">Google-ით შესვლა</string>
-    <string name="joda_time_android_preposition_for_date">თარიღი: %s</string>
-    <string name="joda_time_android_preposition_for_time">%s-ზე</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">ძიება</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

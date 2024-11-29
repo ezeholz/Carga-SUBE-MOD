@@ -18,10 +18,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 18
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,14 +41,14 @@
         }
     .end annotation
 
-    .line 44
+    .line 1
     instance-of v0, p0, Lcom/facebook/stetho/common/ListUtil$ImmutableList;
 
     if-eqz v0, :cond_0
 
     return-object p0
 
-    .line 47
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -78,23 +78,23 @@
 
     if-eq v0, v6, :cond_1
 
-    .line 63
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 64
+    .line 4
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;
 
     invoke-direct {v0, p0}, Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;-><init>([Ljava/lang/Object;)V
 
     return-object v0
 
-    .line 60
+    .line 5
     :cond_1
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$FiveItemImmutableList;
 
-    .line 61
+    .line 6
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -131,7 +131,7 @@
 
     return-object v0
 
-    .line 58
+    .line 7
     :cond_2
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$FourItemImmutableList;
 
@@ -155,7 +155,7 @@
 
     return-object v0
 
-    .line 56
+    .line 8
     :cond_3
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$ThreeItemImmutableList;
 
@@ -175,7 +175,7 @@
 
     return-object v0
 
-    .line 54
+    .line 9
     :cond_4
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$TwoItemImmutableList;
 
@@ -191,7 +191,7 @@
 
     return-object v0
 
-    .line 52
+    .line 10
     :cond_5
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;
 
@@ -203,7 +203,7 @@
 
     return-object v0
 
-    .line 50
+    .line 11
     :cond_6
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -232,13 +232,13 @@
 
     return v0
 
-    .line 28
+    .line 1
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 29
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -255,7 +255,7 @@
     :goto_0
     if-ge v2, v1, :cond_3
 
-    .line 33
+    .line 3
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -289,7 +289,7 @@
         }
     .end annotation
 
-    .line 69
+    .line 1
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;
 
     invoke-direct {v0, p0}, Lcom/facebook/stetho/common/ListUtil$OneItemImmutableList;-><init>(Ljava/lang/Object;)V
@@ -309,7 +309,7 @@
         }
     .end annotation
 
-    .line 73
+    .line 2
     new-instance v0, Lcom/facebook/stetho/common/ListUtil$TwoItemImmutableList;
 
     invoke-direct {v0, p0, p1}, Lcom/facebook/stetho/common/ListUtil$TwoItemImmutableList;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V

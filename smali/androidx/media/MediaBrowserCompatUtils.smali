@@ -3,11 +3,19 @@
 .source "MediaBrowserCompatUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 77
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,76 +41,85 @@
 
     if-nez p0, :cond_2
 
-    .line 35
+    .line 1
     invoke-virtual {p1, v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
     if-ne p0, v4, :cond_1
 
-    .line 36
+    .line 2
     invoke-virtual {p1, v2, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
     if-ne p0, v4, :cond_1
 
-    return v0
+    goto :goto_0
 
     :cond_1
-    return v1
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 
     :cond_2
     if-nez p1, :cond_4
 
-    .line 38
+    .line 3
     invoke-virtual {p0, v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p1, v4, :cond_3
 
-    .line 39
+    .line 4
     invoke-virtual {p0, v2, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
     if-ne p0, v4, :cond_3
 
-    return v0
+    goto :goto_1
 
     :cond_3
-    return v1
+    const/4 v0, 0x0
 
-    .line 41
+    :goto_1
+    return v0
+
+    .line 5
     :cond_4
     invoke-virtual {p0, v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 42
+    .line 6
     invoke-virtual {p1, v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
     if-ne v5, v3, :cond_5
 
-    .line 43
+    .line 7
     invoke-virtual {p0, v2, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 44
+    .line 8
     invoke-virtual {p1, v2, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ne p0, p1, :cond_5
 
-    return v0
+    goto :goto_2
 
     :cond_5
-    return v1
+    const/4 v0, 0x0
+
+    :goto_2
+    return v0
 .end method
 
 .method public static hasDuplicatedItems(Landroid/os/Bundle;Landroid/os/Bundle;)Z
@@ -118,7 +135,7 @@
 
     goto :goto_0
 
-    .line 49
+    .line 1
     :cond_0
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -131,7 +148,7 @@
 
     goto :goto_1
 
-    .line 50
+    .line 2
     :cond_1
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -146,7 +163,7 @@
 
     goto :goto_2
 
-    .line 52
+    .line 3
     :cond_2
     invoke-virtual {p0, v3, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -159,7 +176,7 @@
 
     goto :goto_3
 
-    .line 54
+    .line 4
     :cond_3
     invoke-virtual {p1, v3, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -218,8 +235,11 @@
 
     if-lt v3, v2, :cond_8
 
-    return v4
+    goto :goto_8
 
     :cond_8
-    return v5
+    const/4 v4, 0x0
+
+    :goto_8
+    return v4
 .end method

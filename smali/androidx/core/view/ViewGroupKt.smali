@@ -9,13 +9,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "view"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 35
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
     move-result p0
@@ -26,37 +26,38 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
-.method public static final forEach(Landroid/view/ViewGroup;Lkotlin/d/a/b;)V
+.method public static final forEach(Landroid/view/ViewGroup;Lj/m/b/l;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 54
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -68,16 +69,16 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 55
+    .line 2
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     const-string v3, "getChildAt(index)"
 
-    invoke-static {v1, v3}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-lt v2, v0, :cond_0
 
@@ -93,31 +94,31 @@
     return-void
 .end method
 
-.method public static final forEachIndexed(Landroid/view/ViewGroup;Lkotlin/d/a/m;)V
+.method public static final forEachIndexed(Landroid/view/ViewGroup;Lj/m/b/p;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/d/a/m<",
+            "Lj/m/b/p<",
             "-",
             "Ljava/lang/Integer;",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 61
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -129,7 +130,7 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 62
+    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -140,9 +141,9 @@
 
     const-string v4, "getChildAt(index)"
 
-    invoke-static {v1, v4}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v3, v1}, Lkotlin/d/a/m;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3, v1}, Lj/m/b/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-lt v2, v0, :cond_0
 
@@ -163,9 +164,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 32
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -177,25 +178,21 @@
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Index: "
 
-    const-string v2, "Index: "
+    const-string v2, ", Size: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, p1, v2}, Lg/b/a/a/a;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", Size: "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -204,14 +201,14 @@
     throw v0
 .end method
 
-.method public static final getChildren(Landroid/view/ViewGroup;)Lkotlin/g/e;
+.method public static final getChildren(Landroid/view/ViewGroup;)Lj/p/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lkotlin/g/e<",
+            "Lj/p/e<",
             "Landroid/view/View;",
             ">;"
         }
@@ -219,26 +216,24 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 81
+    .line 1
     new-instance v0, Landroidx/core/view/ViewGroupKt$children$1;
 
     invoke-direct {v0, p0}, Landroidx/core/view/ViewGroupKt$children$1;-><init>(Landroid/view/ViewGroup;)V
 
-    check-cast v0, Lkotlin/g/e;
-
     return-object v0
 .end method
 
-.method public static final getDescendants(Landroid/view/ViewGroup;)Lkotlin/g/e;
+.method public static final getDescendants(Landroid/view/ViewGroup;)Lj/p/e;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lkotlin/g/e<",
+            "Lj/p/e<",
             "Landroid/view/View;",
             ">;"
         }
@@ -246,20 +241,24 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 95
+    .line 1
     new-instance v0, Landroidx/core/view/ViewGroupKt$descendants$1;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroidx/core/view/ViewGroupKt$descendants$1;-><init>(Landroid/view/ViewGroup;Lkotlin/b/d;)V
+    invoke-direct {v0, p0, v1}, Landroidx/core/view/ViewGroupKt$descendants$1;-><init>(Landroid/view/ViewGroup;Lj/k/d;)V
 
-    check-cast v0, Lkotlin/d/a/m;
+    const-string p0, "block"
 
-    invoke-static {v0}, Lkotlin/g/h;->a(Lkotlin/d/a/m;)Lkotlin/g/e;
+    .line 2
+    invoke-static {v0, p0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object p0
+    .line 3
+    new-instance p0, Lj/p/h;
+
+    invoke-direct {p0, v0}, Lj/p/h;-><init>(Lj/m/b/p;)V
 
     return-object p0
 .end method
@@ -269,9 +268,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 44
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p0
@@ -284,9 +283,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 47
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p0
@@ -295,11 +294,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -308,9 +308,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 50
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p0
@@ -319,11 +319,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -342,14 +343,12 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 67
+    .line 1
     new-instance v0, Landroidx/core/view/ViewGroupKt$iterator$1;
 
     invoke-direct {v0, p0}, Landroidx/core/view/ViewGroupKt$iterator$1;-><init>(Landroid/view/ViewGroup;)V
-
-    check-cast v0, Ljava/util/Iterator;
 
     return-object v0
 .end method
@@ -359,13 +358,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "view"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 41
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     return-void
@@ -376,13 +375,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "view"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 38
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-void
@@ -390,12 +389,16 @@
 
 .method public static final setMargins(Landroid/view/ViewGroup$MarginLayoutParams;I)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 111
+    .line 1
     invoke-virtual {p0, p1, p1, p1, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     return-void
@@ -403,12 +406,28 @@
 
 .method public static final updateMargins(Landroid/view/ViewGroup$MarginLayoutParams;IIII)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 126
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     return-void
@@ -421,7 +440,7 @@
 
     if-eqz p6, :cond_0
 
-    .line 120
+    .line 1
     iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     :cond_0
@@ -448,9 +467,9 @@
     :cond_3
     const-string p5, "<this>"
 
-    invoke-static {p0, p5}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p5}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 126
+    .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     return-void
@@ -458,21 +477,40 @@
 
 .method public static final updateMarginsRelative(Landroid/view/ViewGroup$MarginLayoutParams;IIII)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 142
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    .line 143
+    .line 2
     iput p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 144
+    .line 3
     invoke-virtual {p0, p3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    .line 145
+    .line 4
     iput p4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     return-void
@@ -485,7 +523,7 @@
 
     if-eqz p6, :cond_0
 
-    .line 137
+    .line 1
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
 
     move-result p1
@@ -495,7 +533,7 @@
 
     if-eqz p6, :cond_1
 
-    .line 136
+    .line 2
     iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     :cond_1
@@ -503,7 +541,7 @@
 
     if-eqz p6, :cond_2
 
-    .line 139
+    .line 3
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginEnd()I
 
     move-result p3
@@ -513,24 +551,24 @@
 
     if-eqz p5, :cond_3
 
-    .line 136
+    .line 4
     iget p4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     :cond_3
     const-string p5, "<this>"
 
-    invoke-static {p0, p5}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p5}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 142
+    .line 5
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    .line 143
+    .line 6
     iput p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 144
+    .line 7
     invoke-virtual {p0, p3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    .line 145
+    .line 8
     iput p4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     return-void

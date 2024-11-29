@@ -1,4 +1,4 @@
-.class synthetic Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$1;
+.class public synthetic Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays$1;
 .super Ljava/lang/Object;
 .source "ViewHighlightOverlays.java"
 
@@ -9,6 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1009
     name = null
 .end annotation

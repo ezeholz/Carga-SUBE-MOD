@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/AsyncListDiffer$1$1;
+.class public Landroidx/recyclerview/widget/AsyncListDiffer$1$1;
 .super Landroidx/recyclerview/widget/DiffUtil$Callback;
 .source "AsyncListDiffer.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
+.field public final synthetic this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer$1;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer$1;)V
     .locals 0
 
-    .line 292
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$Callback;-><init>()V
@@ -35,7 +35,7 @@
 .method public areContentsTheSame(II)Z
     .locals 1
 
-    .line 316
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$oldList:Ljava/util/List;
@@ -44,7 +44,7 @@
 
     move-result-object p1
 
-    .line 317
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$newList:Ljava/util/List;
@@ -57,7 +57,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 319
+    .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
@@ -83,7 +83,7 @@
 
     return p1
 
-    .line 328
+    .line 4
     :cond_1
     new-instance p1, Ljava/lang/AssertionError;
 
@@ -95,7 +95,7 @@
 .method public areItemsTheSame(II)Z
     .locals 1
 
-    .line 305
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$oldList:Ljava/util/List;
@@ -104,7 +104,7 @@
 
     move-result-object p1
 
-    .line 306
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$newList:Ljava/util/List;
@@ -117,7 +117,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 308
+    .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
@@ -141,18 +141,21 @@
 
     const/4 p1, 0x1
 
-    return p1
+    goto :goto_0
 
     :cond_1
     const/4 p1, 0x0
 
+    :goto_0
     return p1
 .end method
 
 .method public getChangePayload(II)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 334
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$oldList:Ljava/util/List;
@@ -161,7 +164,7 @@
 
     move-result-object p1
 
-    .line 335
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$newList:Ljava/util/List;
@@ -174,7 +177,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 337
+    .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
@@ -191,7 +194,7 @@
 
     return-object p1
 
-    .line 343
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/AssertionError;
 
@@ -203,7 +206,7 @@
 .method public getNewListSize()I
     .locals 1
 
-    .line 300
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$newList:Ljava/util/List;
@@ -218,7 +221,7 @@
 .method public getOldListSize()I
     .locals 1
 
-    .line 295
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$1;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$oldList:Ljava/util/List;

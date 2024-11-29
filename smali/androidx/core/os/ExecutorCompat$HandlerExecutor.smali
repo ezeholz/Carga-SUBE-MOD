@@ -1,4 +1,4 @@
-.class Landroidx/core/os/ExecutorCompat$HandlerExecutor;
+.class public Landroidx/core/os/ExecutorCompat$HandlerExecutor;
 .super Ljava/lang/Object;
 .source "ExecutorCompat.java"
 
@@ -12,23 +12,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "HandlerExecutor"
 .end annotation
 
 
 # instance fields
-.field private final mHandler:Landroid/os/Handler;
+.field public final mHandler:Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Handler;)V
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
+    .param p1    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 45
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 2
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -44,8 +48,12 @@
 # virtual methods
 .method public execute(Ljava/lang/Runnable;)V
     .locals 2
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 51
+    .line 1
     iget-object v0, p0, Landroidx/core/os/ExecutorCompat$HandlerExecutor;->mHandler:Landroid/os/Handler;
 
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -62,7 +70,7 @@
 
     return-void
 
-    .line 52
+    .line 2
     :cond_0
     new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 

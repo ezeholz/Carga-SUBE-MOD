@@ -37,79 +37,77 @@
 
 .field public static final SCROLL_STATE_SETTLING:I = 0x2
 
-.field static sFeatureEnhancedA11yEnabled:Z = true
+.field public static sFeatureEnhancedA11yEnabled:Z = true
 
 
 # instance fields
-.field mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
+.field public mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
-.field mCurrentItem:I
+.field public mCurrentItem:I
 
-.field private mCurrentItemDataSetChangeObserver:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
+.field public mCurrentItemDataSetChangeObserver:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
-.field mCurrentItemDirty:Z
+.field public mCurrentItemDirty:Z
 
-.field private mExternalPageChangeCallbacks:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
+.field public mExternalPageChangeCallbacks:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
-.field private mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
+.field public mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
 
-.field mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
+.field public mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-.field private mOffscreenPageLimit:I
+.field public mOffscreenPageLimit:I
 
-.field private mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
+.field public mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
-.field private mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
+.field public mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
 
-.field private mPagerSnapHelper:Landroidx/recyclerview/widget/PagerSnapHelper;
+.field public mPagerSnapHelper:Landroidx/recyclerview/widget/PagerSnapHelper;
 
-.field private mPendingAdapterState:Landroid/os/Parcelable;
+.field public mPendingAdapterState:Landroid/os/Parcelable;
 
-.field private mPendingCurrentItem:I
+.field public mPendingCurrentItem:I
 
-.field private mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
+.field public mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
+.field public mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
-.field private mSavedItemAnimatorPresent:Z
+.field public mSavedItemAnimatorPresent:Z
 
-.field mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
+.field public mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
-.field private final mTmpChildRect:Landroid/graphics/Rect;
+.field public final mTmpChildRect:Landroid/graphics/Rect;
 
-.field private final mTmpContainerRect:Landroid/graphics/Rect;
+.field public final mTmpContainerRect:Landroid/graphics/Rect;
 
-.field private mUserInputEnabled:Z
+.field public mUserInputEnabled:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 157
+    .line 1
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 124
+    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
-    .line 125
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
 
-    .line 127
+    .line 4
     new-instance v0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     const/4 v1, 0x3
@@ -120,10 +118,10 @@
 
     const/4 v0, 0x0
 
-    .line 131
+    .line 5
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
-    .line 132
+    .line 6
     new-instance v1, Landroidx/viewpager2/widget/ViewPager2$1;
 
     invoke-direct {v1, p0}, Landroidx/viewpager2/widget/ViewPager2$1;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
@@ -132,26 +130,26 @@
 
     const/4 v1, -0x1
 
-    .line 142
+    .line 7
     iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v2, 0x0
 
-    .line 150
+    .line 8
     iput-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
-    .line 151
+    .line 9
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
     const/4 v0, 0x1
 
-    .line 152
+    .line 10
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
 
-    .line 153
+    .line 11
     iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mOffscreenPageLimit:I
 
-    .line 158
+    .line 12
     invoke-direct {p0, p1, v2}, Landroidx/viewpager2/widget/ViewPager2;->initialize(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -159,25 +157,33 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 162
+    .line 13
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 124
+    .line 14
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
-    .line 125
+    .line 15
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
 
-    .line 127
+    .line 16
     new-instance v0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     const/4 v1, 0x3
@@ -188,10 +194,10 @@
 
     const/4 v0, 0x0
 
-    .line 131
+    .line 17
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
-    .line 132
+    .line 18
     new-instance v1, Landroidx/viewpager2/widget/ViewPager2$1;
 
     invoke-direct {v1, p0}, Landroidx/viewpager2/widget/ViewPager2$1;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
@@ -200,26 +206,26 @@
 
     const/4 v1, -0x1
 
-    .line 142
+    .line 19
     iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v2, 0x0
 
-    .line 150
+    .line 20
     iput-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
-    .line 151
+    .line 21
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
     const/4 v0, 0x1
 
-    .line 152
+    .line 22
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
 
-    .line 153
+    .line 23
     iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mOffscreenPageLimit:I
 
-    .line 163
+    .line 24
     invoke-direct {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->initialize(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -227,25 +233,33 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 167
+    .line 25
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 124
+    .line 26
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
-    .line 125
+    .line 27
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
 
-    .line 127
+    .line 28
     new-instance p3, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     const/4 v0, 0x3
@@ -256,10 +270,10 @@
 
     const/4 p3, 0x0
 
-    .line 131
+    .line 29
     iput-boolean p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
-    .line 132
+    .line 30
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$1;
 
     invoke-direct {v0, p0}, Landroidx/viewpager2/widget/ViewPager2$1;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
@@ -268,26 +282,26 @@
 
     const/4 v0, -0x1
 
-    .line 142
+    .line 31
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v1, 0x0
 
-    .line 150
+    .line 32
     iput-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
-    .line 151
+    .line 33
     iput-boolean p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
     const/4 p3, 0x1
 
-    .line 152
+    .line 34
     iput-boolean p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
 
-    .line 153
+    .line 35
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mOffscreenPageLimit:I
 
-    .line 168
+    .line 36
     invoke-direct {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->initialize(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -295,25 +309,36 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
 
-    .line 174
+    .line 37
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 124
+    .line 38
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
-    .line 125
+    .line 39
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
 
-    .line 127
+    .line 40
     new-instance p3, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     const/4 p4, 0x3
@@ -324,10 +349,10 @@
 
     const/4 p3, 0x0
 
-    .line 131
+    .line 41
     iput-boolean p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
-    .line 132
+    .line 42
     new-instance p4, Landroidx/viewpager2/widget/ViewPager2$1;
 
     invoke-direct {p4, p0}, Landroidx/viewpager2/widget/ViewPager2$1;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
@@ -336,26 +361,26 @@
 
     const/4 p4, -0x1
 
-    .line 142
+    .line 43
     iput p4, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v0, 0x0
 
-    .line 150
+    .line 44
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
-    .line 151
+    .line 45
     iput-boolean p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
     const/4 p3, 0x1
 
-    .line 152
+    .line 46
     iput-boolean p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
 
-    .line 153
+    .line 47
     iput p4, p0, Landroidx/viewpager2/widget/ViewPager2;->mOffscreenPageLimit:I
 
-    .line 175
+    .line 48
     invoke-direct {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->initialize(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -364,7 +389,7 @@
 .method private enforceChildFillListener()Landroidx/recyclerview/widget/RecyclerView$OnChildAttachStateChangeListener;
     .locals 1
 
-    .line 250
+    .line 1
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$3;
 
     invoke-direct {v0, p0}, Landroidx/viewpager2/widget/ViewPager2$3;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
@@ -375,7 +400,7 @@
 .method private initialize(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 179
+    .line 1
     sget-boolean v0, Landroidx/viewpager2/widget/ViewPager2;->sFeatureEnhancedA11yEnabled:Z
 
     if-eqz v0, :cond_0
@@ -394,43 +419,43 @@
     :goto_0
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
-    .line 183
+    .line 2
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$RecyclerViewImpl;
 
     invoke-direct {v0, p0, p1}, Landroidx/viewpager2/widget/ViewPager2$RecyclerViewImpl;-><init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/content/Context;)V
 
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 184
+    .line 3
     invoke-static {}, Landroidx/core/view/ViewCompat;->generateViewId()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setId(I)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setId(I)V
 
-    .line 186
+    .line 4
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;
 
     invoke-direct {v0, p0, p1}, Landroidx/viewpager2/widget/ViewPager2$LinearLayoutManagerImpl;-><init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/content/Context;)V
 
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 187
+    .line 5
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 188
+    .line 6
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setScrollingTouchSlop(I)V
 
-    .line 189
+    .line 7
     invoke-direct {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->setOrientation(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 191
+    .line 8
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance p2, Landroid/view/ViewGroup$LayoutParams;
@@ -439,9 +464,9 @@
 
     invoke-direct {p2, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 193
+    .line 9
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2;->enforceChildFillListener()Landroidx/recyclerview/widget/RecyclerView$OnChildAttachStateChangeListener;
@@ -450,14 +475,14 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->addOnChildAttachStateChangeListener(Landroidx/recyclerview/widget/RecyclerView$OnChildAttachStateChangeListener;)V
 
-    .line 197
+    .line 10
     new-instance p1, Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/widget/ScrollEventAdapter;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
 
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
-    .line 199
+    .line 11
     new-instance p2, Landroidx/viewpager2/widget/FakeDrag;
 
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -466,26 +491,26 @@
 
     iput-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
 
-    .line 200
+    .line 12
     new-instance p1, Landroidx/viewpager2/widget/ViewPager2$PagerSnapHelperImpl;
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/widget/ViewPager2$PagerSnapHelperImpl;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
 
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPagerSnapHelper:Landroidx/recyclerview/widget/PagerSnapHelper;
 
-    .line 201
+    .line 13
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/PagerSnapHelper;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/SnapHelper;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 204
+    .line 14
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
-    .line 206
+    .line 15
     new-instance p1, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     const/4 p2, 0x3
@@ -494,22 +519,22 @@
 
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
-    .line 207
+    .line 16
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {p2, p1}, Landroidx/viewpager2/widget/ScrollEventAdapter;->setOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
 
-    .line 211
+    .line 17
     new-instance p1, Landroidx/viewpager2/widget/ViewPager2$2;
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/widget/ViewPager2$2;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
 
-    .line 230
+    .line 18
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     invoke-virtual {p2, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->addOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
 
-    .line 233
+    .line 19
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
@@ -518,14 +543,14 @@
 
     invoke-virtual {p1, p2, v0}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onInitialize(Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 234
+    .line 20
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mExternalPageChangeCallbacks:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     invoke-virtual {p1, p2}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->addOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
 
-    .line 238
+    .line 21
     new-instance p1, Landroidx/viewpager2/widget/PageTransformerAdapter;
 
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -534,27 +559,31 @@
 
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
 
-    .line 239
+    .line 22
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     invoke-virtual {p2, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->addOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
 
-    .line 241
+    .line 23
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, p2, v0}, Landroidx/viewpager2/widget/ViewPager2;->attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, p1, p2, v0}, Landroid/view/ViewGroup;->attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
 .method private registerCurrentItemDataSetTracker(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -565,7 +594,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 457
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDataSetChangeObserver:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
@@ -577,7 +606,7 @@
 .method private restorePendingState()V
     .locals 4
 
-    .line 327
+    .line 1
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v1, -0x1
@@ -586,7 +615,7 @@
 
     return-void
 
-    .line 331
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -596,18 +625,18 @@
 
     return-void
 
-    .line 335
+    .line 3
     :cond_1
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingAdapterState:Landroid/os/Parcelable;
 
     if-eqz v2, :cond_3
 
-    .line 336
+    .line 4
     instance-of v3, v0, Landroidx/viewpager2/adapter/StatefulAdapter;
 
     if-eqz v3, :cond_2
 
-    .line 337
+    .line 5
     move-object v3, v0
 
     check-cast v3, Landroidx/viewpager2/adapter/StatefulAdapter;
@@ -617,13 +646,13 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 339
+    .line 6
     iput-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingAdapterState:Landroid/os/Parcelable;
 
     :cond_3
     const/4 v2, 0x0
 
-    .line 342
+    .line 7
     iget v3, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
@@ -642,15 +671,15 @@
 
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
-    .line 343
+    .line 8
     iput v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
-    .line 344
+    .line 9
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 345
+    .line 10
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onRestorePendingState()V
@@ -661,21 +690,21 @@
 .method private setOrientation(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 8
 
-    .line 279
+    .line 1
     sget-object v0, Landroidx/viewpager2/R$styleable;->ViewPager2:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 280
+    .line 2
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1d
 
     if-lt v1, v2, :cond_0
 
-    .line 281
+    .line 3
     sget-object v3, Landroidx/viewpager2/R$styleable;->ViewPager2:[I
 
     const/4 v6, 0x0
@@ -690,26 +719,26 @@
 
     move-object v5, v0
 
-    invoke-virtual/range {v1 .. v7}, Landroidx/viewpager2/widget/ViewPager2;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-virtual/range {v1 .. v7}, Landroid/view/ViewGroup;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
-    .line 284
+    .line 4
     :cond_0
     :try_start_0
     sget p1, Landroidx/viewpager2/R$styleable;->ViewPager2_android_orientation:I
 
     const/4 p2, 0x0
 
-    .line 285
+    .line 5
     invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p1
 
-    .line 284
+    .line 6
     invoke-virtual {p0, p1}, Landroidx/viewpager2/widget/ViewPager2;->setOrientation(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 287
+    .line 7
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -719,12 +748,16 @@
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 288
+    .line 8
     throw p1
 .end method
 
 .method private unregisterCurrentItemDataSetTracker(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -735,7 +768,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 463
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDataSetChangeObserver:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
@@ -746,10 +779,14 @@
 
 
 # virtual methods
-.method public final addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+.method public addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1113
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -757,10 +794,14 @@
     return-void
 .end method
 
-.method public final addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;I)V
+.method public addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;I)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1132
+    .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;I)V
@@ -768,10 +809,10 @@
     return-void
 .end method
 
-.method public final beginFakeDrag()Z
+.method public beginFakeDrag()Z
     .locals 1
 
-    .line 699
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/FakeDrag;->beginFakeDrag()Z
@@ -781,7 +822,7 @@
     return v0
 .end method
 
-.method protected final dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
+.method public dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -792,8 +833,8 @@
         }
     .end annotation
 
-    .line 351
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getId()I
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getId()I
 
     move-result v0
 
@@ -803,47 +844,47 @@
 
     check-cast v0, Landroid/os/Parcelable;
 
-    .line 352
+    .line 2
     instance-of v1, v0, Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     if-eqz v1, :cond_0
 
-    .line 353
+    .line 3
     check-cast v0, Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     iget v0, v0, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mRecyclerViewId:I
 
-    .line 354
+    .line 4
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getId()I
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getId()I
 
     move-result v1
 
-    .line 355
+    .line 5
     invoke-virtual {p1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {p1, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 356
+    .line 6
     invoke-virtual {p1, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 359
+    .line 7
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
 
-    .line 362
+    .line 8
     invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2;->restorePendingState()V
 
     return-void
 .end method
 
-.method public final endFakeDrag()Z
+.method public endFakeDrag()Z
     .locals 1
 
-    .line 735
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/FakeDrag;->endFakeDrag()Z
@@ -853,10 +894,20 @@
     return v0
 .end method
 
-.method public final fakeDragBy(F)Z
+.method public fakeDragBy(F)Z
     .locals 1
+    .param p1    # F
+        .annotation build Landroid/annotation/SuppressLint;
+            value = {
+                "SupportAnnotationUsage"
+            }
+        .end annotation
 
-    .line 721
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/FakeDrag;->fakeDragBy(F)Z
@@ -866,10 +917,13 @@
     return p1
 .end method
 
-.method public final getAccessibilityClassName()Ljava/lang/CharSequence;
+.method public getAccessibilityClassName()Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
 
-    .line 272
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->handlesGetAccessibilityClassName()Z
@@ -878,7 +932,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 273
+    .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onGetAccessibilityClassName()Ljava/lang/String;
@@ -887,7 +941,7 @@
 
     return-object v0
 
-    .line 275
+    .line 3
     :cond_0
     invoke-super {p0}, Landroid/view/ViewGroup;->getAccessibilityClassName()Ljava/lang/CharSequence;
 
@@ -896,10 +950,12 @@
     return-object v0
 .end method
 
-.method public final getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+.method public getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 469
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
@@ -909,19 +965,21 @@
     return-object v0
 .end method
 
-.method public final getCurrentItem()I
+.method public getCurrentItem()I
     .locals 1
 
-    .line 661
+    .line 1
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
     return v0
 .end method
 
-.method public final getItemDecorationAt(I)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+.method public getItemDecorationAt(I)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1144
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->getItemDecorationAt(I)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
@@ -931,10 +989,10 @@
     return-object p1
 .end method
 
-.method public final getItemDecorationCount()I
+.method public getItemDecorationCount()I
     .locals 1
 
-    .line 1153
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getItemDecorationCount()I
@@ -944,19 +1002,19 @@
     return v0
 .end method
 
-.method public final getOffscreenPageLimit()I
+.method public getOffscreenPageLimit()I
     .locals 1
 
-    .line 836
+    .line 1
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mOffscreenPageLimit:I
 
     return v0
 .end method
 
-.method public final getOrientation()I
+.method public getOrientation()I
     .locals 1
 
-    .line 559
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getOrientation()I
@@ -966,28 +1024,46 @@
     return v0
 .end method
 
-.method final getPageSize()I
+.method public getPageSize()I
     .locals 2
 
-    .line 543
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 544
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getWidth()I
+    .line 2
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
+
+    move-result v1
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v1
 
@@ -995,30 +1071,12 @@
     sub-int/2addr v0, v1
 
     return v0
-
-    .line 545
-    :cond_0
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getHeight()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingTop()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingBottom()I
-
-    move-result v1
-
-    goto :goto_0
 .end method
 
-.method public final getScrollState()I
+.method public getScrollState()I
     .locals 1
 
-    .line 673
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ScrollEventAdapter;->getScrollState()I
@@ -1028,10 +1086,10 @@
     return v0
 .end method
 
-.method public final invalidateItemDecorations()V
+.method public invalidateItemDecorations()V
     .locals 1
 
-    .line 1161
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->invalidateItemDecorations()V
@@ -1039,10 +1097,10 @@
     return-void
 .end method
 
-.method public final isFakeDragging()Z
+.method public isFakeDragging()Z
     .locals 1
 
-    .line 747
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mFakeDragger:Landroidx/viewpager2/widget/FakeDrag;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/FakeDrag;->isFakeDragging()Z
@@ -1052,13 +1110,13 @@
     return v0
 .end method
 
-.method final isRtl()Z
+.method public isRtl()Z
     .locals 2
 
-    .line 563
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getLayoutDirection()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getLayoutDirection()I
 
     move-result v0
 
@@ -1066,30 +1124,31 @@
 
     if-ne v0, v1, :cond_0
 
-    return v1
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    return v0
+    :goto_0
+    return v1
 .end method
 
-.method public final isUserInputEnabled()Z
+.method public isUserInputEnabled()Z
     .locals 1
 
-    .line 789
+    .line 1
     iget-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
 
     return v0
 .end method
 
-.method public final onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 1
 
-    .line 925
+    .line 1
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 926
+    .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
@@ -1097,38 +1156,38 @@
     return-void
 .end method
 
-.method protected final onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 3
 
-    .line 503
+    .line 1
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getMeasuredWidth()I
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result p1
 
-    .line 504
+    .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getMeasuredHeight()I
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
     move-result v0
 
-    .line 508
+    .line 3
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v2
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 509
+    .line 4
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
     sub-int/2addr p4, p2
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result p2
 
@@ -1136,21 +1195,21 @@
 
     iput p4, v1, Landroid/graphics/Rect;->right:I
 
-    .line 510
+    .line 5
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result p4
 
     iput p4, p2, Landroid/graphics/Rect;->top:I
 
-    .line 511
+    .line 6
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
     sub-int/2addr p5, p3
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result p3
 
@@ -1158,7 +1217,7 @@
 
     iput p5, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 513
+    .line 7
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpContainerRect:Landroid/graphics/Rect;
 
     iget-object p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
@@ -1167,160 +1226,154 @@
 
     invoke-static {p4, p1, v0, p2, p3}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 514
+    .line 8
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
 
-    iget p2, p2, Landroid/graphics/Rect;->left:I
+    iget p3, p2, Landroid/graphics/Rect;->left:I
 
-    iget-object p3, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
+    iget p4, p2, Landroid/graphics/Rect;->top:I
 
-    iget p3, p3, Landroid/graphics/Rect;->top:I
+    iget p5, p2, Landroid/graphics/Rect;->right:I
 
-    iget-object p4, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
-    iget p4, p4, Landroid/graphics/Rect;->right:I
+    invoke-virtual {p1, p3, p4, p5, p2}, Landroid/view/ViewGroup;->layout(IIII)V
 
-    iget-object p5, p0, Landroidx/viewpager2/widget/ViewPager2;->mTmpChildRect:Landroid/graphics/Rect;
-
-    iget p5, p5, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroidx/recyclerview/widget/RecyclerView;->layout(IIII)V
-
-    .line 517
+    .line 9
     iget-boolean p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
     if-eqz p1, :cond_0
 
-    .line 518
+    .line 10
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->updateCurrentItem()V
 
     :cond_0
     return-void
 .end method
 
-.method protected final onMeasure(II)V
+.method public onMeasure(II)V
     .locals 5
 
-    .line 485
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, v0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v0, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
-    .line 486
+    .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getMeasuredWidth()I
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v0
 
-    .line 487
+    .line 3
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getMeasuredHeight()I
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 488
+    .line 4
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getMeasuredState()I
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->getMeasuredState()I
 
     move-result v2
 
-    .line 490
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingLeft()I
+    .line 5
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v3
 
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingRight()I
 
     move-result v4
 
-    add-int/2addr v3, v4
+    add-int/2addr v4, v3
 
-    add-int/2addr v0, v3
+    add-int/2addr v4, v0
 
-    .line 491
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPaddingBottom()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    add-int/2addr v1, v3
-
-    .line 493
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getSuggestedMinimumWidth()I
-
-    move-result v3
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
+    .line 6
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v0
 
-    .line 494
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getSuggestedMinimumHeight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
     move-result v3
 
-    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
+    add-int/2addr v3, v0
+
+    add-int/2addr v3, v1
+
+    .line 7
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getSuggestedMinimumWidth()I
+
+    move-result v0
+
+    invoke-static {v4, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    .line 8
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getSuggestedMinimumHeight()I
 
     move-result v1
 
-    .line 496
-    invoke-static {v0, p1, v2}, Landroidx/viewpager2/widget/ViewPager2;->resolveSizeAndState(III)I
+    invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    .line 9
+    invoke-static {v0, p1, v2}, Landroid/view/ViewGroup;->resolveSizeAndState(III)I
 
     move-result p1
 
     shl-int/lit8 v0, v2, 0x10
 
-    .line 497
-    invoke-static {v1, p2, v0}, Landroidx/viewpager2/widget/ViewPager2;->resolveSizeAndState(III)I
+    .line 10
+    invoke-static {v1, p2, v0}, Landroid/view/ViewGroup;->resolveSizeAndState(III)I
 
     move-result p2
 
-    .line 496
-    invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->setMeasuredDimension(II)V
+    .line 11
+    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     return-void
 .end method
 
-.method protected final onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    .line 315
+    .line 1
     instance-of v0, p1, Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     if-nez v0, :cond_0
 
-    .line 316
+    .line 2
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
-    .line 320
+    .line 3
     :cond_0
     check-cast p1, Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
-    .line 321
-    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->getSuperState()Landroid/os/Parcelable;
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View$BaseSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 322
+    .line 5
     iget v0, p1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mCurrentItem:I
 
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
-    .line 323
+    .line 6
     iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mAdapterState:Landroid/os/Parcelable;
 
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingAdapterState:Landroid/os/Parcelable;
@@ -1328,29 +1381,31 @@
     return-void
 .end method
 
-.method protected final onSaveInstanceState()Landroid/os/Parcelable;
+.method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 295
+    .line 1
     invoke-super {p0}, Landroid/view/ViewGroup;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 296
+    .line 2
     new-instance v1, Landroidx/viewpager2/widget/ViewPager2$SavedState;
 
     invoke-direct {v1, v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 298
+    .line 3
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getId()I
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getId()I
 
     move-result v0
 
     iput v0, v1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mRecyclerViewId:I
 
-    .line 299
+    .line 4
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v2, -0x1
@@ -1362,17 +1417,17 @@
     :cond_0
     iput v0, v1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mCurrentItem:I
 
-    .line 301
+    .line 5
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingAdapterState:Landroid/os/Parcelable;
 
     if-eqz v0, :cond_1
 
-    .line 302
+    .line 6
     iput-object v0, v1, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mAdapterState:Landroid/os/Parcelable;
 
     goto :goto_0
 
-    .line 304
+    .line 7
     :cond_1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1380,12 +1435,12 @@
 
     move-result-object v0
 
-    .line 305
+    .line 8
     instance-of v2, v0, Landroidx/viewpager2/adapter/StatefulAdapter;
 
     if-eqz v2, :cond_2
 
-    .line 306
+    .line 9
     check-cast v0, Landroidx/viewpager2/adapter/StatefulAdapter;
 
     invoke-interface {v0}, Landroidx/viewpager2/adapter/StatefulAdapter;->saveState()Landroid/os/Parcelable;
@@ -1399,20 +1454,18 @@
     return-object v1
 .end method
 
-.method public final onViewAdded(Landroid/view/View;)V
+.method public onViewAdded(Landroid/view/View;)V
     .locals 2
 
-    .line 475
+    .line 1
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 476
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
+    .line 2
+    const-class v1, Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -1433,10 +1486,13 @@
     throw p1
 .end method
 
-.method public final performAccessibilityAction(ILandroid/os/Bundle;)Z
+.method public performAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
 
-    .line 932
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->handlesPerformAccessibilityAction(ILandroid/os/Bundle;)Z
@@ -1445,7 +1501,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 933
+    .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onPerformAccessibilityAction(ILandroid/os/Bundle;)Z
@@ -1454,7 +1510,7 @@
 
     return p1
 
-    .line 935
+    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
@@ -1463,10 +1519,14 @@
     return p1
 .end method
 
-.method public final registerOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
+.method public registerOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
     .locals 1
+    .param p1    # Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 848
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mExternalPageChangeCallbacks:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->addOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
@@ -1474,10 +1534,14 @@
     return-void
 .end method
 
-.method public final removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
+.method public removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
     .locals 1
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1184
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -1485,10 +1549,10 @@
     return-void
 .end method
 
-.method public final removeItemDecorationAt(I)V
+.method public removeItemDecorationAt(I)V
     .locals 1
 
-    .line 1171
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecorationAt(I)V
@@ -1496,10 +1560,10 @@
     return-void
 .end method
 
-.method public final requestTransform()V
+.method public requestTransform()V
     .locals 5
 
-    .line 906
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/PageTransformerAdapter;->getPageTransformer()Landroidx/viewpager2/widget/ViewPager2$PageTransformer;
@@ -1510,7 +1574,7 @@
 
     return-void
 
-    .line 909
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
@@ -1522,14 +1586,14 @@
 
     int-to-double v3, v2
 
-    .line 911
+    .line 3
     invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
 
     sub-double/2addr v0, v3
 
     double-to-float v0, v0
 
-    .line 912
+    .line 4
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getPageSize()I
 
     move-result v1
@@ -1542,7 +1606,7 @@
 
     move-result v1
 
-    .line 913
+    .line 5
     iget-object v3, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
 
     invoke-virtual {v3, v2, v0, v1}, Landroidx/viewpager2/widget/PageTransformerAdapter;->onPageScrolled(IFI)V
@@ -1550,75 +1614,79 @@
     return-void
 .end method
 
-.method public final setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+.method public setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 2
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 445
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    .line 446
+    .line 2
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v1, v0}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onDetachAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 447
+    .line 3
     invoke-direct {p0, v0}, Landroidx/viewpager2/widget/ViewPager2;->unregisterCurrentItemDataSetTracker(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 448
+    .line 4
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     const/4 v0, 0x0
 
-    .line 449
+    .line 5
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
-    .line 450
+    .line 6
     invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2;->restorePendingState()V
 
-    .line 451
+    .line 7
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onAttachAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 452
+    .line 8
     invoke-direct {p0, p1}, Landroidx/viewpager2/widget/ViewPager2;->registerCurrentItemDataSetTracker(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
 .end method
 
-.method public final setCurrentItem(I)V
+.method public setCurrentItem(I)V
     .locals 1
 
     const/4 v0, 0x1
 
-    .line 577
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->setCurrentItem(IZ)V
 
     return-void
 .end method
 
-.method public final setCurrentItem(IZ)V
+.method public setCurrentItem(IZ)V
     .locals 1
 
-    .line 589
+    .line 2
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->isFakeDragging()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 593
+    .line 3
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2;->setCurrentItemInternal(IZ)V
 
     return-void
 
-    .line 590
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1629,10 +1697,10 @@
     throw p1
 .end method
 
-.method final setCurrentItemInternal(IZ)V
+.method public setCurrentItemInternal(IZ)V
     .locals 8
 
-    .line 600
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
@@ -1641,14 +1709,14 @@
 
     if-nez v0, :cond_1
 
-    .line 603
+    .line 2
     iget p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mPendingCurrentItem:I
 
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_0
 
-    .line 604
+    .line 3
     invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -1658,7 +1726,7 @@
     :cond_0
     return-void
 
-    .line 608
+    .line 4
     :cond_1
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -1668,13 +1736,13 @@
 
     return-void
 
-    .line 612
+    .line 5
     :cond_2
     invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    .line 613
+    .line 6
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
     move-result v0
@@ -1685,7 +1753,7 @@
 
     move-result p1
 
-    .line 615
+    .line 7
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
     if-ne p1, v0, :cond_3
@@ -1700,7 +1768,7 @@
 
     return-void
 
-    .line 619
+    .line 8
     :cond_3
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
@@ -1710,21 +1778,21 @@
 
     return-void
 
-    .line 627
+    .line 9
     :cond_4
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
     int-to-double v0, v0
 
-    .line 628
+    .line 10
     iput p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
-    .line 629
+    .line 11
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {v2}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onSetNewCurrentItem()V
 
-    .line 631
+    .line 12
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {v2}, Landroidx/viewpager2/widget/ScrollEventAdapter;->isIdle()Z
@@ -1733,14 +1801,14 @@
 
     if-nez v2, :cond_5
 
-    .line 633
+    .line 13
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ScrollEventAdapter;->getRelativeScrollPosition()D
 
     move-result-wide v0
 
-    .line 638
+    .line 14
     :cond_5
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mScrollEventAdapter:Landroidx/viewpager2/widget/ScrollEventAdapter;
 
@@ -1748,7 +1816,7 @@
 
     if-nez p2, :cond_6
 
-    .line 640
+    .line 15
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
@@ -1758,7 +1826,7 @@
     :cond_6
     int-to-double v2, p1
 
-    .line 645
+    .line 16
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     sub-double v4, v2, v0
@@ -1773,7 +1841,7 @@
 
     if-lez p2, :cond_8
 
-    .line 646
+    .line 17
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     cmpl-double v4, v2, v0
@@ -1790,33 +1858,37 @@
     :goto_0
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 648
+    .line 18
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$SmoothScrollToPosition;
 
     invoke-direct {v0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$SmoothScrollToPosition;-><init>(ILandroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
-    return-void
+    goto :goto_1
 
-    .line 650
+    .line 19
     :cond_8
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->smoothScrollToPosition(I)V
 
+    :goto_1
     return-void
 .end method
 
-.method public final setLayoutDirection(I)V
+.method public setLayoutDirection(I)V
     .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
-    .line 919
+    .line 1
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->setLayoutDirection(I)V
 
-    .line 920
+    .line 2
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onSetLayoutDirection()V
@@ -1824,10 +1896,12 @@
     return-void
 .end method
 
-.method public final setOffscreenPageLimit(I)V
+.method public setOffscreenPageLimit(I)V
     .locals 1
 
-    if-gtz p1, :cond_1
+    const/4 v0, 0x1
+
+    if-ge p1, v0, :cond_1
 
     const/4 v0, -0x1
 
@@ -1835,7 +1909,7 @@
 
     goto :goto_0
 
-    .line 819
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1845,12 +1919,12 @@
 
     throw p1
 
-    .line 822
+    .line 2
     :cond_1
     :goto_0
     iput p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mOffscreenPageLimit:I
 
-    .line 824
+    .line 3
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
@@ -1858,15 +1932,15 @@
     return-void
 .end method
 
-.method public final setOrientation(I)V
+.method public setOrientation(I)V
     .locals 1
 
-    .line 554
+    .line 9
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 555
+    .line 10
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onSetOrientation()V
@@ -1874,19 +1948,23 @@
     return-void
 .end method
 
-.method public final setPageTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
+.method public setPageTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
     .locals 3
+    .param p1    # Landroidx/viewpager2/widget/ViewPager2$PageTransformer;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1
 
-    .line 877
+    .line 1
     iget-boolean v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
     if-nez v1, :cond_0
 
-    .line 878
+    .line 2
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getItemAnimator()Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
@@ -1897,10 +1975,10 @@
 
     const/4 v1, 0x1
 
-    .line 879
+    .line 3
     iput-boolean v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
-    .line 881
+    .line 4
     :cond_0
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1908,28 +1986,28 @@
 
     goto :goto_0
 
-    .line 883
+    .line 5
     :cond_1
     iget-boolean v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
     if-eqz v1, :cond_2
 
-    .line 884
+    .line 6
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 885
+    .line 7
     iput-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
     const/4 v0, 0x0
 
-    .line 886
+    .line 8
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mSavedItemAnimatorPresent:Z
 
-    .line 892
+    .line 9
     :cond_2
     :goto_0
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
@@ -1942,25 +2020,25 @@
 
     return-void
 
-    .line 895
+    .line 10
     :cond_3
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageTransformerAdapter:Landroidx/viewpager2/widget/PageTransformerAdapter;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/PageTransformerAdapter;->setPageTransformer(Landroidx/viewpager2/widget/ViewPager2$PageTransformer;)V
 
-    .line 896
+    .line 11
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->requestTransform()V
 
     return-void
 .end method
 
-.method public final setUserInputEnabled(Z)V
+.method public setUserInputEnabled(Z)V
     .locals 0
 
-    .line 778
+    .line 1
     iput-boolean p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
 
-    .line 779
+    .line 2
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onSetUserInputEnabled()V
@@ -1968,10 +2046,10 @@
     return-void
 .end method
 
-.method final snapToPage()V
+.method public snapToPage()V
     .locals 4
 
-    .line 756
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPagerSnapHelper:Landroidx/recyclerview/widget/PagerSnapHelper;
 
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -1984,7 +2062,7 @@
 
     return-void
 
-    .line 760
+    .line 2
     :cond_0
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPagerSnapHelper:Landroidx/recyclerview/widget/PagerSnapHelper;
 
@@ -1996,7 +2074,7 @@
 
     const/4 v1, 0x0
 
-    .line 762
+    .line 3
     aget v2, v0, v1
 
     const/4 v3, 0x1
@@ -2007,7 +2085,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 763
+    .line 4
     :cond_1
     iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -2021,10 +2099,14 @@
     return-void
 .end method
 
-.method public final unregisterOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
+.method public unregisterOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
     .locals 1
+    .param p1    # Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 858
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mExternalPageChangeCallbacks:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->removeOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
@@ -2032,15 +2114,15 @@
     return-void
 .end method
 
-.method final updateCurrentItem()V
+.method public updateCurrentItem()V
     .locals 2
 
-    .line 524
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mPagerSnapHelper:Landroidx/recyclerview/widget/PagerSnapHelper;
 
     if-eqz v0, :cond_2
 
-    .line 528
+    .line 2
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/PagerSnapHelper;->findSnapView(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;
@@ -2051,15 +2133,15 @@
 
     return-void
 
-    .line 532
+    .line 3
     :cond_0
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getPosition(Landroid/view/View;)I
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v0
 
-    .line 534
+    .line 4
     iget v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
     if-eq v0, v1, :cond_1
@@ -2070,7 +2152,7 @@
 
     if-nez v1, :cond_1
 
-    .line 536
+    .line 5
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mPageChangeEventDispatcher:Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 
     invoke-virtual {v1, v0}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->onPageSelected(I)V
@@ -2078,12 +2160,12 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 539
+    .line 6
     iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItemDirty:Z
 
     return-void
 
-    .line 525
+    .line 7
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 

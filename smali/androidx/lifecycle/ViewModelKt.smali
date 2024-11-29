@@ -4,66 +4,66 @@
 
 
 # static fields
-.field private static final JOB_KEY:Ljava/lang/String; = "androidx.lifecycle.ViewModelCoroutineScope.JOB_KEY"
+.field public static final JOB_KEY:Ljava/lang/String; = "androidx.lifecycle.ViewModelCoroutineScope.JOB_KEY"
 
 
 # direct methods
-.method public static final getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/t;
+.method public static final getViewModelScope(Landroidx/lifecycle/ViewModel;)Le/a/a0;
     .locals 4
 
     const-string v0, "$this$viewModelScope"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "androidx.lifecycle.ViewModelCoroutineScope.JOB_KEY"
 
-    .line 37
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/lifecycle/ViewModel;->getTag(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lkotlinx/coroutines/t;
+    check-cast v1, Le/a/a0;
 
     if-eqz v1, :cond_0
 
     return-object v1
 
-    .line 42
+    .line 2
     :cond_0
     new-instance v1, Landroidx/lifecycle/CloseableCoroutineScope;
 
-    .line 1032
-    invoke-static {}, Lkotlinx/coroutines/bf;->a()Lkotlinx/coroutines/i;
+    const/4 v2, 0x0
+
+    .line 3
+    new-instance v3, Le/a/m1;
+
+    invoke-direct {v3, v2}, Le/a/m1;-><init>(Le/a/a1;)V
+
+    .line 4
+    invoke-static {}, Le/a/l0;->a()Le/a/g1;
 
     move-result-object v2
 
-    .line 42
-    invoke-static {}, Lkotlinx/coroutines/ae;->b()Lkotlinx/coroutines/az;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lkotlinx/coroutines/az;->a()Lkotlinx/coroutines/az;
-
-    move-result-object v3
-
-    check-cast v3, Lkotlin/b/f;
-
-    invoke-interface {v2, v3}, Lkotlinx/coroutines/i;->plus(Lkotlin/b/f;)Lkotlin/b/f;
+    invoke-virtual {v2}, Le/a/g1;->j()Le/a/g1;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Landroidx/lifecycle/CloseableCoroutineScope;-><init>(Lkotlin/b/f;)V
+    invoke-interface {v3, v2}, Lj/k/f;->plus(Lj/k/f;)Lj/k/f;
 
-    .line 41
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroidx/lifecycle/CloseableCoroutineScope;-><init>(Lj/k/f;)V
+
+    .line 5
     invoke-virtual {p0, v0, v1}, Landroidx/lifecycle/ViewModel;->setTagIfAbsent(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     const-string v0, "setTagIfAbsent(JOB_KEY,\n\u2026patchers.Main.immediate))"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p0, Lkotlinx/coroutines/t;
+    check-cast p0, Le/a/a0;
 
     return-object p0
 .end method

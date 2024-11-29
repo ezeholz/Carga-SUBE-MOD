@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/database/DatabaseDriver2Adapter$StringDatabaseDescriptor;
+.class public Lcom/facebook/stetho/inspector/database/DatabaseDriver2Adapter$StringDatabaseDescriptor;
 .super Ljava/lang/Object;
 .source "DatabaseDriver2Adapter.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "StringDatabaseDescriptor"
 .end annotation
 
@@ -25,10 +25,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 52
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/DatabaseDriver2Adapter$StringDatabaseDescriptor;->name:Ljava/lang/String;
 
     return-void
@@ -39,7 +39,7 @@
 .method public name()Ljava/lang/String;
     .locals 1
 
-    .line 58
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/database/DatabaseDriver2Adapter$StringDatabaseDescriptor;->name:Ljava/lang/String;
 
     return-object v0

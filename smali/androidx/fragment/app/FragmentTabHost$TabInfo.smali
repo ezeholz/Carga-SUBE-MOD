@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTabHost$TabInfo;
+.class public final Landroidx/fragment/app/FragmentTabHost$TabInfo;
 .super Ljava/lang/Object;
 .source "FragmentTabHost.java"
 
@@ -9,15 +9,21 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "TabInfo"
 .end annotation
 
 
 # instance fields
-.field final args:Landroid/os/Bundle;
+.field public final args:Landroid/os/Bundle;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field final clss:Ljava/lang/Class;
+.field public final clss:Ljava/lang/Class;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -26,14 +32,29 @@
     .end annotation
 .end field
 
-.field fragment:Landroidx/fragment/app/Fragment;
+.field public fragment:Landroidx/fragment/app/Fragment;
 
-.field final tag:Ljava/lang/String;
+.field public final tag:Ljava/lang/String;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Bundle;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Class;Landroid/os/Bundle;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,16 +66,16 @@
         }
     .end annotation
 
-    .line 66
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentTabHost$TabInfo;->tag:Ljava/lang/String;
 
-    .line 68
+    .line 3
     iput-object p2, p0, Landroidx/fragment/app/FragmentTabHost$TabInfo;->clss:Ljava/lang/Class;
 
-    .line 69
+    .line 4
     iput-object p3, p0, Landroidx/fragment/app/FragmentTabHost$TabInfo;->args:Landroid/os/Bundle;
 
     return-void

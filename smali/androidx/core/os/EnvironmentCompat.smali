@@ -6,14 +6,14 @@
 # static fields
 .field public static final MEDIA_UNKNOWN:Ljava/lang/String; = "unknown"
 
-.field private static final TAG:Ljava/lang/String; = "EnvironmentCompat"
+.field public static final TAG:Ljava/lang/String; = "EnvironmentCompat"
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 81
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,61 +21,64 @@
 
 .method public static getStorageState(Ljava/io/File;)Ljava/lang/String;
     .locals 2
+    .param p0    # Ljava/io/File;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 59
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 60
+    .line 2
     invoke-static {p0}, Landroid/os/Environment;->getExternalStorageState(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 61
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_1
 
-    .line 62
+    .line 3
     invoke-static {p0}, Landroid/os/Environment;->getStorageState(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 66
+    .line 4
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 68
+    .line 5
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 69
+    .line 6
     invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
+    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 72
+    .line 8
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object p0
@@ -87,14 +90,18 @@
     :catch_0
     move-exception p0
 
-    .line 75
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "Failed to resolve canonical path: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     :cond_2
     const-string p0, "unknown"

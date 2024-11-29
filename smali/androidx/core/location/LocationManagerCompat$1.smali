@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$1;
+.class public Landroidx/core/location/LocationManagerCompat$1;
 .super Ljava/lang/Object;
 .source "LocationManagerCompat.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$consumer:Landroidx/core/util/Consumer;
+.field public final synthetic val$consumer:Landroidx/core/util/Consumer;
 
-.field final synthetic val$location:Landroid/location/Location;
+.field public final synthetic val$location:Landroid/location/Location;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/util/Consumer;Landroid/location/Location;)V
+.method public constructor <init>(Landroidx/core/util/Consumer;Landroid/location/Location;)V
     .locals 0
 
-    .line 159
+    .line 1
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$1;->val$consumer:Landroidx/core/util/Consumer;
 
     iput-object p2, p0, Landroidx/core/location/LocationManagerCompat$1;->val$location:Landroid/location/Location;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 162
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$1;->val$consumer:Landroidx/core/util/Consumer;
 
     iget-object v1, p0, Landroidx/core/location/LocationManagerCompat$1;->val$location:Landroid/location/Location;

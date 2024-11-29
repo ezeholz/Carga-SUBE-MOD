@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;
+.class public Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;
 .super Ljava/lang/Object;
 .source "WindowInsetsControllerCompat.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
+.field public final synthetic this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
 
-.field final synthetic val$listener:Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;
+.field public final synthetic val$listener:Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/view/WindowInsetsControllerCompat$Impl30;Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;)V
+.method public constructor <init>(Landroidx/core/view/WindowInsetsControllerCompat$Impl30;Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;)V
     .locals 0
 
-    .line 737
+    .line 1
     iput-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;->this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
 
     iput-object p2, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;->val$listener:Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;
@@ -40,19 +40,21 @@
 
 # virtual methods
 .method public onControllableInsetsChanged(Landroid/view/WindowInsetsController;I)V
-    .locals 1
+    .locals 2
+    .param p1    # Landroid/view/WindowInsetsController;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 743
+    .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;->this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
 
-    iget-object v0, v0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30;->mInsetsController:Landroid/view/WindowInsetsController;
+    iget-object v1, v0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30;->mInsetsController:Landroid/view/WindowInsetsController;
 
-    if-ne v0, p1, :cond_0
+    if-ne v1, p1, :cond_0
 
-    .line 744
+    .line 2
     iget-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;->val$listener:Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;
-
-    iget-object v0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$2;->this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
 
     iget-object v0, v0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30;->mCompatController:Landroidx/core/view/WindowInsetsControllerCompat;
 

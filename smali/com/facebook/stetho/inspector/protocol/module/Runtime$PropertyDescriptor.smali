@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;
+.class public Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;
 .super Ljava/lang/Object;
 .source "Runtime.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "PropertyDescriptor"
 .end annotation
 
@@ -53,35 +53,35 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
-    .line 533
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 540
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;->isOwn:Z
 
     const/4 v1, 0x0
 
-    .line 543
+    .line 3
     iput-boolean v1, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;->configurable:Z
 
-    .line 546
+    .line 4
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;->enumerable:Z
 
-    .line 549
+    .line 5
     iput-boolean v1, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;->writable:Z
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/Runtime$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/Runtime$1;)V
     .locals 0
 
-    .line 533
+    .line 6
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/protocol/module/Runtime$PropertyDescriptor;-><init>()V
 
     return-void

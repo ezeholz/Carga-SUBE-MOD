@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/SelfDestructiveThread$2$1;
+.class public Landroidx/core/provider/SelfDestructiveThread$2$1;
 .super Ljava/lang/Object;
 .source "SelfDestructiveThread.java"
 
@@ -12,22 +12,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/core/provider/SelfDestructiveThread$2;
+.field public final synthetic this$1:Landroidx/core/provider/SelfDestructiveThread$2;
 
-.field final synthetic val$result:Ljava/lang/Object;
+.field public final synthetic val$result:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/provider/SelfDestructiveThread$2;Ljava/lang/Object;)V
+.method public constructor <init>(Landroidx/core/provider/SelfDestructiveThread$2;Ljava/lang/Object;)V
     .locals 0
 
-    .line 152
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/SelfDestructiveThread$2$1;->this$1:Landroidx/core/provider/SelfDestructiveThread$2;
 
     iput-object p2, p0, Landroidx/core/provider/SelfDestructiveThread$2$1;->val$result:Ljava/lang/Object;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 155
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread$2$1;->this$1:Landroidx/core/provider/SelfDestructiveThread$2;
 
     iget-object v0, v0, Landroidx/core/provider/SelfDestructiveThread$2;->val$reply:Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;

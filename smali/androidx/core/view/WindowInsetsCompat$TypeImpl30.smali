@@ -1,30 +1,34 @@
-.class final Landroidx/core/view/WindowInsetsCompat$TypeImpl30;
+.class public final Landroidx/core/view/WindowInsetsCompat$TypeImpl30;
 .super Ljava/lang/Object;
 .source "WindowInsetsCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1e
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/view/WindowInsetsCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "TypeImpl30"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 2059
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static toPlatformType(I)I
+.method public static toPlatformType(I)I
     .locals 4
 
     const/4 v0, 0x1
@@ -74,7 +78,7 @@
 
     goto :goto_2
 
-    .line 2093
+    .line 1
     :cond_0
     invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
 
@@ -82,7 +86,7 @@
 
     goto :goto_1
 
-    .line 2090
+    .line 2
     :cond_1
     invoke-static {}, Landroid/view/WindowInsets$Type;->tappableElement()I
 
@@ -90,7 +94,7 @@
 
     goto :goto_1
 
-    .line 2087
+    .line 3
     :cond_2
     invoke-static {}, Landroid/view/WindowInsets$Type;->mandatorySystemGestures()I
 
@@ -98,7 +102,7 @@
 
     goto :goto_1
 
-    .line 2084
+    .line 4
     :cond_3
     invoke-static {}, Landroid/view/WindowInsets$Type;->systemGestures()I
 
@@ -106,7 +110,7 @@
 
     goto :goto_1
 
-    .line 2081
+    .line 5
     :cond_4
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
@@ -114,7 +118,7 @@
 
     goto :goto_1
 
-    .line 2078
+    .line 6
     :cond_5
     invoke-static {}, Landroid/view/WindowInsets$Type;->captionBar()I
 
@@ -122,7 +126,7 @@
 
     goto :goto_1
 
-    .line 2075
+    .line 7
     :cond_6
     invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
 
@@ -130,7 +134,7 @@
 
     goto :goto_1
 
-    .line 2072
+    .line 8
     :cond_7
     invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 

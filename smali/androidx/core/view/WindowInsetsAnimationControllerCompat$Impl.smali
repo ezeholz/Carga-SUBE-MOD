@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl;
+.class public Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl;
 .super Ljava/lang/Object;
 .source "WindowInsetsAnimationControllerCompat.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Impl"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 239
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method finish(Z)V
+.method public finish(Z)V
     .locals 0
 
     return-void
@@ -42,6 +42,10 @@
 
 .method public getCurrentFraction()F
     .locals 1
+    .annotation build Landroidx/annotation/FloatRange;
+        from = 0.0
+        to = 1.0
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -50,8 +54,10 @@
 
 .method public getCurrentInsets()Landroidx/core/graphics/Insets;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 255
+    .line 1
     sget-object v0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     return-object v0
@@ -59,8 +65,10 @@
 
 .method public getHiddenStateInsets()Landroidx/core/graphics/Insets;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 245
+    .line 1
     sget-object v0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     return-object v0
@@ -68,8 +76,10 @@
 
 .method public getShownStateInsets()Landroidx/core/graphics/Insets;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 250
+    .line 1
     sget-object v0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     return-object v0
@@ -83,7 +93,7 @@
     return v0
 .end method
 
-.method isCancelled()Z
+.method public isCancelled()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -91,7 +101,7 @@
     return v0
 .end method
 
-.method isFinished()Z
+.method public isFinished()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -109,6 +119,22 @@
 
 .method public setInsetsAndAlpha(Landroidx/core/graphics/Insets;FF)V
     .locals 0
+    .param p1    # Landroidx/core/graphics/Insets;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .param p3    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
 
     return-void
 .end method

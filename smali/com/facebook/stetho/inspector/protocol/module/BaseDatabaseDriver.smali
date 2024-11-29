@@ -21,17 +21,17 @@
 
 
 # instance fields
-.field protected mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 26
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->mContext:Landroid/content/Context;
 
     return-void
@@ -55,7 +55,7 @@
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .line 31
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->mContext:Landroid/content/Context;
 
     return-object v0

@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/domstorage/SharedPreferencesHelper$1;
+.class public final Lcom/facebook/stetho/inspector/domstorage/SharedPreferencesHelper$1;
 .super Ljava/lang/Object;
 .source "SharedPreferencesHelper.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -28,10 +28,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 55
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,10 +39,10 @@
 
 
 # virtual methods
-.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 55
+    .line 1
     check-cast p1, Ljava/util/Map$Entry;
 
     check-cast p2, Ljava/util/Map$Entry;
@@ -54,7 +54,7 @@
     return p1
 .end method
 
-.method public final compare(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
+.method public compare(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)I
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -68,7 +68,7 @@
         }
     .end annotation
 
-    .line 58
+    .line 2
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1

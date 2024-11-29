@@ -1,4 +1,4 @@
-.class Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog$1;
+.class public Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog$1;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "BrowserActionsFallbackMenuDialog.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;
+.field public final synthetic this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;
 
-.field final synthetic val$isEnterAnimation:Z
+.field public final synthetic val$isEnterAnimation:Z
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;Z)V
+.method public constructor <init>(Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;Z)V
     .locals 0
 
-    .line 80
+    .line 1
     iput-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog$1;->this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;
 
     iput-boolean p2, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog$1;->val$isEnterAnimation:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 83
+    .line 1
     iget-boolean p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog$1;->val$isEnterAnimation:Z
 
     if-nez p1, :cond_0
 
-    .line 84
+    .line 2
     iget-object p1, p0, Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog$1;->this$0:Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;
 
     invoke-static {p1}, Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;->access$001(Landroidx/browser/browseractions/BrowserActionsFallbackMenuDialog;)V

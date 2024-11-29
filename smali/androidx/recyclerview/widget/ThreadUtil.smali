@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/recyclerview/widget/ThreadUtil;
+.class public interface abstract Landroidx/recyclerview/widget/ThreadUtil;
 .super Ljava/lang/Object;
 .source "ThreadUtil.java"
 

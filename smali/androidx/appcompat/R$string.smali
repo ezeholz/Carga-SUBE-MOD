@@ -68,13 +68,13 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f12001a
 
-.field public static final search_menu_title:I = 0x7f120118
+.field public static final search_menu_title:I = 0x7f120119
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f12011d
+.field public static final status_bar_notification_info_overflow:I = 0x7f120125
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

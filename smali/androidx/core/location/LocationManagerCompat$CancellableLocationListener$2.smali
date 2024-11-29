@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$CancellableLocationListener$2;
+.class public Landroidx/core/location/LocationManagerCompat$CancellableLocationListener$2;
 .super Ljava/lang/Object;
 .source "LocationManagerCompat.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/location/LocationManagerCompat$CancellableLocationListener;
+.field public final synthetic this$0:Landroidx/core/location/LocationManagerCompat$CancellableLocationListener;
 
-.field final synthetic val$consumer:Landroidx/core/util/Consumer;
+.field public final synthetic val$consumer:Landroidx/core/util/Consumer;
 
-.field final synthetic val$location:Landroid/location/Location;
+.field public final synthetic val$location:Landroid/location/Location;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/location/LocationManagerCompat$CancellableLocationListener;Landroidx/core/util/Consumer;Landroid/location/Location;)V
+.method public constructor <init>(Landroidx/core/location/LocationManagerCompat$CancellableLocationListener;Landroidx/core/util/Consumer;Landroid/location/Location;)V
     .locals 0
 
-    .line 750
+    .line 1
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$CancellableLocationListener$2;->this$0:Landroidx/core/location/LocationManagerCompat$CancellableLocationListener;
 
     iput-object p2, p0, Landroidx/core/location/LocationManagerCompat$CancellableLocationListener$2;->val$consumer:Landroidx/core/util/Consumer;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 753
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$CancellableLocationListener$2;->val$consumer:Landroidx/core/util/Consumer;
 
     iget-object v1, p0, Landroidx/core/location/LocationManagerCompat$CancellableLocationListener$2;->val$location:Landroid/location/Location;

@@ -1,4 +1,4 @@
-.class final Landroidx/browser/customtabs/CustomTabsClient$1;
+.class public final Landroidx/browser/customtabs/CustomTabsClient$1;
 .super Landroidx/browser/customtabs/CustomTabsServiceConnection;
 .source "CustomTabsClient.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$applicationContext:Landroid/content/Context;
+.field public final synthetic val$applicationContext:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 141
+    .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient$1;->val$applicationContext:Landroid/content/Context;
 
     invoke-direct {p0}, Landroidx/browser/customtabs/CustomTabsServiceConnection;-><init>()V
@@ -37,10 +37,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 145
+    .line 1
     invoke-virtual {p2, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->warmup(J)Z
 
-    .line 149
+    .line 2
     iget-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient$1;->val$applicationContext:Landroid/content/Context;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V

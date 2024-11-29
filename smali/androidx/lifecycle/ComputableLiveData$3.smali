@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ComputableLiveData$3;
+.class public Landroidx/lifecycle/ComputableLiveData$3;
 .super Ljava/lang/Object;
 .source "ComputableLiveData.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
+.field public final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
+.method public constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
     .locals 0
 
-    .line 124
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +37,10 @@
 # virtual methods
 .method public run()V
     .locals 4
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 128
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     iget-object v0, v0, Landroidx/lifecycle/ComputableLiveData;->mLiveData:Landroidx/lifecycle/LiveData;
@@ -47,7 +49,7 @@
 
     move-result v0
 
-    .line 129
+    .line 2
     iget-object v1, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     iget-object v1, v1, Landroidx/lifecycle/ComputableLiveData;->mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -64,16 +66,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 131
+    .line 3
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
-    iget-object v0, v0, Landroidx/lifecycle/ComputableLiveData;->mExecutor:Ljava/util/concurrent/Executor;
+    iget-object v1, v0, Landroidx/lifecycle/ComputableLiveData;->mExecutor:Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
+    iget-object v0, v0, Landroidx/lifecycle/ComputableLiveData;->mRefreshRunnable:Ljava/lang/Runnable;
 
-    iget-object v1, v1, Landroidx/lifecycle/ComputableLiveData;->mRefreshRunnable:Ljava/lang/Runnable;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void

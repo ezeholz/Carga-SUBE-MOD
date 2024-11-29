@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/common/android/HandlerUtil$2;
+.class public final Lcom/facebook/stetho/common/android/HandlerUtil$2;
 .super Lcom/facebook/stetho/common/android/HandlerUtil$WaitableRunnable;
 .source "HandlerUtil.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
@@ -23,14 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$r:Ljava/lang/Runnable;
+.field public final synthetic val$r:Ljava/lang/Runnable;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Runnable;)V
+.method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 87
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/common/android/HandlerUtil$2;->val$r:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Lcom/facebook/stetho/common/android/HandlerUtil$WaitableRunnable;-><init>()V
@@ -40,10 +40,10 @@
 
 
 # virtual methods
-.method protected final bridge synthetic onRun()Ljava/lang/Object;
+.method public bridge synthetic onRun()Ljava/lang/Object;
     .locals 1
 
-    .line 87
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/common/android/HandlerUtil$2;->onRun()Ljava/lang/Void;
 
     move-result-object v0
@@ -51,10 +51,10 @@
     return-object v0
 .end method
 
-.method protected final onRun()Ljava/lang/Void;
+.method public onRun()Ljava/lang/Void;
     .locals 1
 
-    .line 90
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/common/android/HandlerUtil$2;->val$r:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V

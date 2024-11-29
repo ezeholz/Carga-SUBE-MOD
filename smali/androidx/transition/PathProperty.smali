@@ -1,4 +1,4 @@
-.class Landroidx/transition/PathProperty;
+.class public Landroidx/transition/PathProperty;
 .super Landroid/util/Property;
 .source "PathProperty.java"
 
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field private mCurrentFraction:F
+.field public mCurrentFraction:F
 
-.field private final mPathLength:F
+.field public final mPathLength:F
 
-.field private final mPathMeasure:Landroid/graphics/PathMeasure;
+.field public final mPathMeasure:Landroid/graphics/PathMeasure;
 
-.field private final mPointF:Landroid/graphics/PointF;
+.field public final mPointF:Landroid/graphics/PointF;
 
-.field private final mPosition:[F
+.field public final mPosition:[F
 
-.field private final mProperty:Landroid/util/Property;
+.field public final mProperty:Landroid/util/Property;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Property<",
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/util/Property;Landroid/graphics/Path;)V
+.method public constructor <init>(Landroid/util/Property;Landroid/graphics/Path;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
         }
     .end annotation
 
-    .line 45
+    .line 1
     const-class v0, Ljava/lang/Float;
 
     invoke-virtual {p1}, Landroid/util/Property;->getName()Ljava/lang/String;
@@ -68,20 +68,20 @@
 
     new-array v0, v0, [F
 
-    .line 40
+    .line 2
     iput-object v0, p0, Landroidx/transition/PathProperty;->mPosition:[F
 
-    .line 41
+    .line 3
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroidx/transition/PathProperty;->mPointF:Landroid/graphics/PointF;
 
-    .line 46
+    .line 4
     iput-object p1, p0, Landroidx/transition/PathProperty;->mProperty:Landroid/util/Property;
 
-    .line 47
+    .line 5
     new-instance p1, Landroid/graphics/PathMeasure;
 
     const/4 v0, 0x0
@@ -90,7 +90,7 @@
 
     iput-object p1, p0, Landroidx/transition/PathProperty;->mPathMeasure:Landroid/graphics/PathMeasure;
 
-    .line 48
+    .line 6
     invoke-virtual {p1}, Landroid/graphics/PathMeasure;->getLength()F
 
     move-result p1
@@ -111,7 +111,7 @@
         }
     .end annotation
 
-    .line 53
+    .line 2
     iget p1, p0, Landroidx/transition/PathProperty;->mCurrentFraction:F
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -124,7 +124,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 35
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/transition/PathProperty;->get(Ljava/lang/Object;)Ljava/lang/Float;
 
     move-result-object p1
@@ -142,14 +142,14 @@
         }
     .end annotation
 
-    .line 58
+    .line 2
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
     iput v0, p0, Landroidx/transition/PathProperty;->mCurrentFraction:F
 
-    .line 59
+    .line 3
     iget-object v0, p0, Landroidx/transition/PathProperty;->mPathMeasure:Landroid/graphics/PathMeasure;
 
     iget v1, p0, Landroidx/transition/PathProperty;->mPathLength:F
@@ -158,42 +158,36 @@
 
     move-result p2
 
-    mul-float v1, v1, p2
+    mul-float p2, p2, v1
 
-    iget-object p2, p0, Landroidx/transition/PathProperty;->mPosition:[F
+    iget-object v1, p0, Landroidx/transition/PathProperty;->mPosition:[F
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p2, v2}, Landroid/graphics/PathMeasure;->getPosTan(F[F[F)Z
+    invoke-virtual {v0, p2, v1, v2}, Landroid/graphics/PathMeasure;->getPosTan(F[F[F)Z
 
-    .line 60
+    .line 4
     iget-object p2, p0, Landroidx/transition/PathProperty;->mPointF:Landroid/graphics/PointF;
 
     iget-object v0, p0, Landroidx/transition/PathProperty;->mPosition:[F
 
     const/4 v1, 0x0
 
-    aget v0, v0, v1
+    aget v1, v0, v1
 
-    iput v0, p2, Landroid/graphics/PointF;->x:F
-
-    .line 61
-    iget-object p2, p0, Landroidx/transition/PathProperty;->mPointF:Landroid/graphics/PointF;
-
-    iget-object v0, p0, Landroidx/transition/PathProperty;->mPosition:[F
+    iput v1, p2, Landroid/graphics/PointF;->x:F
 
     const/4 v1, 0x1
 
+    .line 5
     aget v0, v0, v1
 
     iput v0, p2, Landroid/graphics/PointF;->y:F
 
-    .line 62
-    iget-object p2, p0, Landroidx/transition/PathProperty;->mProperty:Landroid/util/Property;
+    .line 6
+    iget-object v0, p0, Landroidx/transition/PathProperty;->mProperty:Landroid/util/Property;
 
-    iget-object v0, p0, Landroidx/transition/PathProperty;->mPointF:Landroid/graphics/PointF;
-
-    invoke-virtual {p2, p1, v0}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Landroid/util/Property;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -201,7 +195,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 35
+    .line 1
     check-cast p2, Ljava/lang/Float;
 
     invoke-virtual {p0, p1, p2}, Landroidx/transition/PathProperty;->set(Ljava/lang/Object;Ljava/lang/Float;)V

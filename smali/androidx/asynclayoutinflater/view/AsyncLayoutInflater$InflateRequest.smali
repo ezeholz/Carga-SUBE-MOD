@@ -1,4 +1,4 @@
-.class Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateRequest;
+.class public Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$InflateRequest;
 .super Ljava/lang/Object;
 .source "AsyncLayoutInflater.java"
 
@@ -9,28 +9,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "InflateRequest"
 .end annotation
 
 
 # instance fields
-.field callback:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$OnInflateFinishedListener;
+.field public callback:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$OnInflateFinishedListener;
 
-.field inflater:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;
+.field public inflater:Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;
 
-.field parent:Landroid/view/ViewGroup;
+.field public parent:Landroid/view/ViewGroup;
 
-.field resid:I
+.field public resid:I
 
-.field view:Landroid/view/View;
+.field public view:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 122
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

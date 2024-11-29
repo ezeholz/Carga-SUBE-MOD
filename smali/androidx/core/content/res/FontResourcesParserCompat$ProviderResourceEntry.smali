@@ -18,22 +18,32 @@
 
 
 # instance fields
-.field private final mRequest:Landroidx/core/provider/FontRequest;
+.field public final mRequest:Landroidx/core/provider/FontRequest;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private final mStrategy:I
+.field public final mStrategy:I
 
-.field private final mSystemFontFamilyName:Ljava/lang/String;
+.field public final mSystemFontFamilyName:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final mTimeoutMs:I
+.field public final mTimeoutMs:I
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/provider/FontRequest;II)V
     .locals 1
+    .param p1    # Landroidx/core/provider/FontRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    .line 95
+    .line 6
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;-><init>(Landroidx/core/provider/FontRequest;IILjava/lang/String;)V
 
     return-void
@@ -41,20 +51,33 @@
 
 .method public constructor <init>(Landroidx/core/provider/FontRequest;IILjava/lang/String;)V
     .locals 0
+    .param p1    # Landroidx/core/provider/FontRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 86
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
+    .line 2
     iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mRequest:Landroidx/core/provider/FontRequest;
 
-    .line 88
+    .line 3
     iput p2, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mStrategy:I
 
-    .line 89
+    .line 4
     iput p3, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mTimeoutMs:I
 
-    .line 90
+    .line 5
     iput-object p4, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mSystemFontFamilyName:Ljava/lang/String;
 
     return-void
@@ -62,37 +85,47 @@
 
 
 # virtual methods
-.method public final getFetchStrategy()I
+.method public getFetchStrategy()I
     .locals 1
 
-    .line 103
+    .line 1
     iget v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mStrategy:I
 
     return v0
 .end method
 
-.method public final getRequest()Landroidx/core/provider/FontRequest;
+.method public getRequest()Landroidx/core/provider/FontRequest;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 99
+    .line 1
     iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mRequest:Landroidx/core/provider/FontRequest;
 
     return-object v0
 .end method
 
-.method public final getSystemFontFamilyName()Ljava/lang/String;
+.method public getSystemFontFamilyName()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 113
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mSystemFontFamilyName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final getTimeout()I
+.method public getTimeout()I
     .locals 1
 
-    .line 107
+    .line 1
     iget v0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mTimeoutMs:I
 
     return v0

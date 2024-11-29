@@ -15,45 +15,45 @@
 
 
 # instance fields
-.field private mProjection:[Ljava/lang/String;
+.field public mProjection:[Ljava/lang/String;
 
-.field private mTableName:Ljava/lang/String;
+.field public mTableName:Ljava/lang/String;
 
-.field private mUri:Landroid/net/Uri;
+.field public mUri:Landroid/net/Uri;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 68
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;)Landroid/net/Uri;
+.method public static synthetic access$500(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;)Landroid/net/Uri;
     .locals 0
 
-    .line 68
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;->mUri:Landroid/net/Uri;
 
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;)[Ljava/lang/String;
+.method public static synthetic access$600(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;)[Ljava/lang/String;
     .locals 0
 
-    .line 68
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;->mProjection:[Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;)Ljava/lang/String;
+.method public static synthetic access$700(Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 68
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;->mTableName:Ljava/lang/String;
 
     return-object p0
@@ -64,7 +64,7 @@
 .method public build()Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
     .locals 2
 
-    .line 92
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table;
 
     const/4 v1, 0x0
@@ -77,7 +77,7 @@
 .method public name(Ljava/lang/String;)Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;
     .locals 0
 
-    .line 87
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;->mTableName:Ljava/lang/String;
 
     return-object p0
@@ -86,7 +86,7 @@
 .method public projection([Ljava/lang/String;)Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;
     .locals 0
 
-    .line 81
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;->mProjection:[Ljava/lang/String;
 
     return-object p0
@@ -95,7 +95,7 @@
 .method public uri(Landroid/net/Uri;)Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;
     .locals 0
 
-    .line 75
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderSchema$Table$Builder;->mUri:Landroid/net/Uri;
 
     return-object p0

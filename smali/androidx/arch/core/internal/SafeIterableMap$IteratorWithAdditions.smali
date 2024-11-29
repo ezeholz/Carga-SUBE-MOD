@@ -3,8 +3,8 @@
 .source "SafeIterableMap.java"
 
 # interfaces
-.implements Landroidx/arch/core/internal/SafeIterableMap$SupportRemove;
 .implements Ljava/util/Iterator;
+.implements Landroidx/arch/core/internal/SafeIterableMap$SupportRemove;
 
 
 # annotations
@@ -20,19 +20,19 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Landroidx/arch/core/internal/SafeIterableMap$SupportRemove<",
-        "TK;TV;>;",
         "Ljava/util/Iterator<",
         "Ljava/util/Map$Entry<",
-        "TK;TV;>;>;"
+        "TK;TV;>;>;",
+        "Landroidx/arch/core/internal/SafeIterableMap$SupportRemove<",
+        "TK;TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private mBeforeStart:Z
+.field public mBeforeStart:Z
 
-.field private mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field public mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -41,21 +41,21 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Landroidx/arch/core/internal/SafeIterableMap;
+.field public final synthetic this$0:Landroidx/arch/core/internal/SafeIterableMap;
 
 
 # direct methods
-.method constructor <init>(Landroidx/arch/core/internal/SafeIterableMap;)V
+.method public constructor <init>(Landroidx/arch/core/internal/SafeIterableMap;)V
     .locals 0
 
-    .line 318
+    .line 1
     iput-object p1, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->this$0:Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x1
 
-    .line 316
+    .line 2
     iput-boolean p1, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mBeforeStart:Z
 
     return-void
@@ -66,7 +66,7 @@
 .method public hasNext()Z
     .locals 3
 
-    .line 332
+    .line 1
     iget-boolean v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mBeforeStart:Z
 
     const/4 v1, 0x1
@@ -75,19 +75,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 333
+    .line 2
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->this$0:Landroidx/arch/core/internal/SafeIterableMap;
 
     iget-object v0, v0, Landroidx/arch/core/internal/SafeIterableMap;->mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     if-eqz v0, :cond_0
 
-    return v1
+    goto :goto_0
 
     :cond_0
-    return v2
+    const/4 v1, 0x0
 
-    .line 335
+    :goto_0
+    return v1
+
+    .line 3
     :cond_1
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
@@ -97,16 +100,19 @@
 
     if-eqz v0, :cond_2
 
-    return v1
+    goto :goto_1
 
     :cond_2
-    return v2
+    const/4 v1, 0x0
+
+    :goto_1
+    return v1
 .end method
 
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 314
+    .line 1
     invoke-virtual {p0}, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->next()Ljava/util/Map$Entry;
 
     move-result-object v0
@@ -124,24 +130,26 @@
         }
     .end annotation
 
-    .line 340
+    .line 2
     iget-boolean v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mBeforeStart:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 341
+    .line 3
     iput-boolean v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mBeforeStart:Z
 
-    .line 342
+    .line 4
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->this$0:Landroidx/arch/core/internal/SafeIterableMap;
 
     iget-object v0, v0, Landroidx/arch/core/internal/SafeIterableMap;->mStart:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
-    goto :goto_0
+    iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
-    .line 344
+    goto :goto_1
+
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
@@ -157,11 +165,19 @@
     :goto_0
     iput-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
+    .line 6
+    :goto_1
+    iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+
     return-object v0
 .end method
 
 .method public supportRemove(Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
     .locals 1
+    .param p1    # Landroidx/arch/core/internal/SafeIterableMap$Entry;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -170,12 +186,12 @@
         }
     .end annotation
 
-    .line 324
+    .line 1
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     if-ne p1, v0, :cond_1
 
-    .line 325
+    .line 2
     iget-object p1, v0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     iput-object p1, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mCurrent:Landroidx/arch/core/internal/SafeIterableMap$Entry;
@@ -189,7 +205,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 326
+    .line 3
     :goto_0
     iput-boolean p1, p0, Landroidx/arch/core/internal/SafeIterableMap$IteratorWithAdditions;->mBeforeStart:Z
 

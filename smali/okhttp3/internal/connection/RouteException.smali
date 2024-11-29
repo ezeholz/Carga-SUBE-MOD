@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field public a:Ljava/io/IOException;
+.field public d:Ljava/io/IOException;
 
-.field public b:Ljava/io/IOException;
+.field public e:Ljava/io/IOException;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/IOException;)V
     .locals 0
 
-    .line 31
+    .line 1
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 32
-    iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->a:Ljava/io/IOException;
+    .line 2
+    iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->d:Ljava/io/IOException;
 
-    .line 33
-    iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->b:Ljava/io/IOException;
+    .line 3
+    iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->e:Ljava/io/IOException;
 
     return-void
 .end method

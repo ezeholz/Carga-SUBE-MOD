@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$2;
+.class public Landroidx/viewpager2/widget/ViewPager2$2;
 .super Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
 .source "ViewPager2.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
-    .line 211
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$2;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;-><init>()V
@@ -37,7 +37,7 @@
 
     if-nez p1, :cond_0
 
-    .line 223
+    .line 1
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$2;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->updateCurrentItem()V
@@ -47,24 +47,20 @@
 .end method
 
 .method public onPageSelected(I)V
-    .locals 1
+    .locals 2
 
-    .line 214
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$2;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget v0, v0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
+    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
-    if-eq v0, p1, :cond_0
+    if-eq v1, p1, :cond_0
 
-    .line 215
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$2;->this$0:Landroidx/viewpager2/widget/ViewPager2;
-
+    .line 2
     iput p1, v0, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
 
-    .line 216
-    iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$2;->this$0:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
+    .line 3
+    iget-object p1, v0, Landroidx/viewpager2/widget/ViewPager2;->mAccessibilityProvider:Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->onSetNewCurrentItem()V
 

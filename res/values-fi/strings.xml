@@ -68,10 +68,6 @@
     <string name="common_open_on_phone">Avaa puhelimessa</string>
     <string name="common_signin_button_text">Kirjaudu sisään</string>
     <string name="common_signin_button_text_long">Kirjaudu Google-tilille</string>
-    <string name="joda_time_android_date_time">%2$s %1$s</string>
-    <string name="joda_time_android_preposition_for_date">päivä: %s</string>
-    <string name="joda_time_android_preposition_for_time">klo %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Haku</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

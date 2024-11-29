@@ -27,10 +27,6 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="joda_time_android_date_time">%1$s, %2$s</string>
-    <string name="joda_time_android_preposition_for_date">on %s</string>
-    <string name="joda_time_android_preposition_for_time">at %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

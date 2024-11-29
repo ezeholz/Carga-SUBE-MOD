@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;
+.class public final Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;
 .super Lcom/facebook/stetho/inspector/helper/PeersRegisteredListener;
 .source "DOM.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "PeerManagerListener"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;)V
     .locals 0
 
-    .line 394
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/helper/PeersRegisteredListener;-><init>()V
@@ -30,10 +30,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;Lcom/facebook/stetho/inspector/protocol/module/DOM$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;Lcom/facebook/stetho/inspector/protocol/module/DOM$1;)V
     .locals 0
 
-    .line 394
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;-><init>(Lcom/facebook/stetho/inspector/protocol/module/DOM;)V
 
     return-void
@@ -41,12 +41,12 @@
 
 
 # virtual methods
-.method public final declared-synchronized onFirstPeerRegistered()V
+.method public declared-synchronized onFirstPeerRegistered()V
     .locals 2
 
     monitor-enter p0
 
-    .line 397
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/Document;->addRef()V
 
-    .line 398
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/protocol/module/DOM;->access$300(Lcom/facebook/stetho/inspector/protocol/module/DOM;)Lcom/facebook/stetho/inspector/elements/Document;
@@ -73,7 +73,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 399
+    .line 3
     monitor-exit p0
 
     return-void
@@ -86,12 +86,12 @@
     throw v0
 .end method
 
-.method public final declared-synchronized onLastPeerUnregistered()V
+.method public declared-synchronized onLastPeerUnregistered()V
     .locals 2
 
     monitor-enter p0
 
-    .line 403
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
@@ -101,7 +101,7 @@
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 404
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/protocol/module/DOM;->access$300(Lcom/facebook/stetho/inspector/protocol/module/DOM;)Lcom/facebook/stetho/inspector/elements/Document;
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, v1}, Lcom/facebook/stetho/inspector/elements/Document;->removeUpdateListener(Lcom/facebook/stetho/inspector/elements/Document$UpdateListener;)V
 
-    .line 405
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/DOM$PeerManagerListener;->this$0:Lcom/facebook/stetho/inspector/protocol/module/DOM;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/protocol/module/DOM;->access$300(Lcom/facebook/stetho/inspector/protocol/module/DOM;)Lcom/facebook/stetho/inspector/elements/Document;
@@ -127,7 +127,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 406
+    .line 4
     monitor-exit p0
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
+.class public Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;
 .super Lcom/facebook/stetho/inspector/helper/PeersRegisteredListener;
 .source "Database.java"
 
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DatabasePeerRegistrationListener"
 .end annotation
 
 
 # instance fields
-.field private final mDatabaseDrivers:Ljava/util/List;
+.field public final mDatabaseDrivers:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field private final mDatabaseHolders:Landroid/util/SparseArray;
+.field public final mDatabaseHolders:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -35,11 +35,11 @@
     .end annotation
 .end field
 
-.field private final mDatabaseIdMapper:Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
+.field public final mDatabaseIdMapper:Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
 
 # direct methods
-.method private constructor <init>(Ljava/util/List;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -50,33 +50,33 @@
         }
     .end annotation
 
-    .line 254
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/helper/PeersRegisteredListener;-><init>()V
 
-    .line 248
+    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
-    .line 251
+    .line 4
     new-instance v0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseIdMapper:Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
-    .line 255
+    .line 5
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseDrivers:Ljava/util/List;
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/util/List;Lcom/facebook/stetho/inspector/protocol/module/Database$1;)V
+.method public synthetic constructor <init>(Ljava/util/List;Lcom/facebook/stetho/inspector/protocol/module/Database$1;)V
     .locals 0
 
-    .line 245
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;-><init>(Ljava/util/List;)V
 
     return-void
@@ -87,7 +87,7 @@
 .method public getDatabaseDescriptorHolder(Ljava/lang/String;)Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;
     .locals 1
 
-    .line 259
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -108,7 +108,7 @@
 
     monitor-enter p0
 
-    .line 264
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseDrivers:Ljava/util/List;
 
@@ -129,8 +129,8 @@
 
     check-cast v1, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;
 
-    .line 265
-    invoke-virtual {v1}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;->getDatabaseNames()Ljava/util/List;
+    .line 2
+    invoke-virtual {v1}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->getDatabaseNames()Ljava/util/List;
 
     move-result-object v2
 
@@ -152,7 +152,7 @@
 
     check-cast v3, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDescriptor;
 
-    .line 266
+    .line 3
     iget-object v4, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseIdMapper:Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
     invoke-virtual {v4, v3}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->getIdForObject(Ljava/lang/Object;)Ljava/lang/Integer;
@@ -161,7 +161,7 @@
 
     if-nez v4, :cond_1
 
-    .line 268
+    .line 4
     iget-object v4, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseIdMapper:Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
     invoke-virtual {v4, v3}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->putObject(Ljava/lang/Object;)I
@@ -172,10 +172,10 @@
 
     move-result-object v4
 
-    .line 269
+    .line 5
     iget-object v5, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
-    .line 270
+    .line 6
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
@@ -184,14 +184,14 @@
 
     invoke-direct {v6, v1, v3}, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;-><init>(Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;Lcom/facebook/stetho/inspector/protocol/module/DatabaseDescriptor;)V
 
-    .line 269
+    .line 7
     invoke-virtual {v5, v4, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 275
+    .line 8
     :cond_2
     monitor-exit p0
 
@@ -216,20 +216,20 @@
 
     monitor-enter p0
 
-    .line 279
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseIdMapper:Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->clear()V
 
-    .line 280
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 281
+    .line 3
     monitor-exit p0
 
     return-void
@@ -249,7 +249,7 @@
 
     const/4 v0, 0x0
 
-    .line 285
+    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
@@ -260,14 +260,14 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 286
+    .line 2
     iget-object v2, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 287
+    .line 3
     iget-object v3, p0, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabasePeerRegistrationListener;->mDatabaseHolders:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -276,19 +276,19 @@
 
     check-cast v3, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;
 
-    .line 289
+    .line 4
     new-instance v4, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseObject;
 
     invoke-direct {v4}, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseObject;-><init>()V
 
-    .line 290
+    .line 5
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v4, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseObject;->id:Ljava/lang/String;
 
-    .line 291
+    .line 6
     iget-object v2, v3, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;->descriptor:Lcom/facebook/stetho/inspector/protocol/module/DatabaseDescriptor;
 
     invoke-interface {v2}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDescriptor;->name()Ljava/lang/String;
@@ -297,10 +297,10 @@
 
     iput-object v2, v4, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseObject;->name:Ljava/lang/String;
 
-    .line 292
+    .line 7
     iget-object v2, v3, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseDescriptorHolder;->driver:Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;
 
-    invoke-virtual {v2}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -312,22 +312,22 @@
 
     const-string v2, "N/A"
 
-    .line 293
+    .line 8
     iput-object v2, v4, Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseObject;->version:Ljava/lang/String;
 
-    .line 294
+    .line 9
     new-instance v2, Lcom/facebook/stetho/inspector/protocol/module/Database$AddDatabaseEvent;
 
     invoke-direct {v2}, Lcom/facebook/stetho/inspector/protocol/module/Database$AddDatabaseEvent;-><init>()V
 
-    .line 295
+    .line 10
     iput-object v4, v2, Lcom/facebook/stetho/inspector/protocol/module/Database$AddDatabaseEvent;->database:Lcom/facebook/stetho/inspector/protocol/module/Database$DatabaseObject;
 
     const-string v3, "Database.addDatabase"
 
     const/4 v4, 0x0
 
-    .line 296
+    .line 11
     invoke-virtual {p1, v3, v2, v4}, Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;->invokeMethod(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/stetho/inspector/jsonrpc/PendingRequestCallback;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -336,7 +336,7 @@
 
     goto :goto_0
 
-    .line 298
+    .line 12
     :cond_0
     monitor-exit p0
 
@@ -361,7 +361,7 @@
 
     monitor-enter p0
 
-    .line 303
+    .line 1
     monitor-exit p0
 
     return-void

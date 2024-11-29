@@ -1,4 +1,4 @@
-.class Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;
+.class public Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;
 .super Ljava/lang/Object;
 .source "DeviceShareDialogFragment.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "RequestState"
 .end annotation
 
@@ -30,53 +30,53 @@
 
 
 # instance fields
-.field a:Ljava/lang/String;
+.field public d:Ljava/lang/String;
 
-.field b:J
+.field public e:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 295
-    new-instance v0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 259
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method protected constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 278
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->d:Ljava/lang/String;
 
-    .line 280
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->b:J
+    iput-wide v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->e:J
 
     return-void
 .end method
@@ -94,13 +94,13 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 290
-    iget-object p2, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->a:Ljava/lang/String;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->d:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 291
-    iget-wide v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->b:J
+    .line 2
+    iget-wide v0, p0, Lcom/facebook/share/internal/DeviceShareDialogFragment$RequestState;->e:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 

@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
+.class public interface abstract Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 .super Ljava/lang/Object;
 .source "RecyclerView.java"
 
@@ -9,11 +9,15 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "ItemAnimatorListener"
 .end annotation
 
 
 # virtual methods
 .method public abstract onAnimationFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

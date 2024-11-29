@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;
+.class public Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;
 .super Ljava/lang/Object;
 .source "ActionBarDrawerToggleHoneycomb.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SetIndicatorInfo"
 .end annotation
 
@@ -23,17 +23,17 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 6
 
-    .line 101
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 103
+    .line 2
     :try_start_0
     const-class v2, Landroid/app/ActionBar;
 
@@ -51,7 +51,7 @@
 
     iput-object v2, p0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeAsUpIndicator:Ljava/lang/reflect/Method;
 
-    .line 105
+    .line 3
     const-class v2, Landroid/app/ActionBar;
 
     const-string v3, "setHomeActionContentDescription"
@@ -77,7 +77,7 @@
 
     const v2, 0x102002c
 
-    .line 114
+    .line 4
     invoke-virtual {p1, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -86,7 +86,7 @@
 
     return-void
 
-    .line 120
+    .line 5
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -94,7 +94,7 @@
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    .line 121
+    .line 6
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
@@ -105,18 +105,18 @@
 
     return-void
 
-    .line 127
+    .line 7
     :cond_1
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 128
+    .line 8
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 129
+    .line 9
     invoke-virtual {v0}, Landroid/view/View;->getId()I
 
     move-result v1
@@ -125,7 +125,7 @@
 
     move-object v0, p1
 
-    .line 131
+    .line 10
     :cond_2
     nop
 
@@ -133,7 +133,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 133
+    .line 11
     check-cast v0, Landroid/widget/ImageView;
 
     iput-object v0, p0, Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->upIndicatorView:Landroid/widget/ImageView;

@@ -1,4 +1,4 @@
-.class final Landroidx/collection/MapCollections$MapIterator;
+.class public final Landroidx/collection/MapCollections$MapIterator;
 .super Ljava/lang/Object;
 .source "MapCollections.java"
 
@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "MapIterator"
 .end annotation
 
@@ -30,30 +30,30 @@
 
 
 # instance fields
-.field mEnd:I
+.field public mEnd:I
 
-.field mEntryValid:Z
+.field public mEntryValid:Z
 
-.field mIndex:I
+.field public mIndex:I
 
-.field final synthetic this$0:Landroidx/collection/MapCollections;
+.field public final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method constructor <init>(Landroidx/collection/MapCollections;)V
+.method public constructor <init>(Landroidx/collection/MapCollections;)V
     .locals 1
 
-    .line 79
+    .line 1
     iput-object p1, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 77
+    .line 2
     iput-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
-    .line 80
+    .line 3
     invoke-virtual {p1}, Landroidx/collection/MapCollections;->colGetSize()I
 
     move-result p1
@@ -64,7 +64,7 @@
 
     const/4 p1, -0x1
 
-    .line 81
+    .line 4
     iput p1, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
     return-void
@@ -72,15 +72,15 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 137
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     if-eqz v0, :cond_2
 
-    .line 141
+    .line 2
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
@@ -89,11 +89,11 @@
 
     return v1
 
-    .line 144
+    .line 3
     :cond_0
     check-cast p1, Ljava/util/Map$Entry;
 
-    .line 145
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -110,20 +110,20 @@
 
     move-result v0
 
+    const/4 v2, 0x1
+
     if-eqz v0, :cond_1
 
-    .line 146
+    .line 5
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
-    iget v2, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
+    iget v3, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v2, v3}, Landroidx/collection/MapCollections;->colGetEntry(II)Ljava/lang/Object;
+    invoke-virtual {v0, v3, v2}, Landroidx/collection/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -133,12 +133,12 @@
 
     if-eqz p1, :cond_1
 
-    return v3
+    const/4 v1, 0x1
 
     :cond_1
     return v1
 
-    .line 138
+    .line 6
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -149,7 +149,7 @@
     throw p1
 .end method
 
-.method public final getKey()Ljava/lang/Object;
+.method public getKey()Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -157,12 +157,12 @@
         }
     .end annotation
 
-    .line 110
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 2
     iget-object v0, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
@@ -175,7 +175,7 @@
 
     return-object v0
 
-    .line 111
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -186,7 +186,7 @@
     throw v0
 .end method
 
-.method public final getValue()Ljava/lang/Object;
+.method public getValue()Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -194,12 +194,12 @@
         }
     .end annotation
 
-    .line 119
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 2
     iget-object v0, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
@@ -212,7 +212,7 @@
 
     return-object v0
 
-    .line 120
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -223,10 +223,10 @@
     throw v0
 .end method
 
-.method public final hasNext()Z
+.method public hasNext()Z
     .locals 2
 
-    .line 86
+    .line 1
     iget v0, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
     iget v1, p0, Landroidx/collection/MapCollections$MapIterator;->mEnd:I
@@ -235,23 +235,24 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 5
 
-    .line 151
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     if-eqz v0, :cond_2
 
-    .line 155
+    .line 2
     iget-object v0, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
@@ -262,7 +263,7 @@
 
     move-result-object v0
 
-    .line 156
+    .line 3
     iget-object v1, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v3, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
@@ -279,7 +280,7 @@
 
     goto :goto_0
 
-    .line 157
+    .line 4
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -290,7 +291,7 @@
 
     goto :goto_1
 
-    .line 158
+    .line 5
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -301,7 +302,7 @@
 
     return v0
 
-    .line 152
+    .line 6
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -312,10 +313,10 @@
     throw v0
 .end method
 
-.method public final bridge synthetic next()Ljava/lang/Object;
+.method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 74
+    .line 1
     invoke-virtual {p0}, Landroidx/collection/MapCollections$MapIterator;->next()Ljava/util/Map$Entry;
 
     move-result-object v0
@@ -323,7 +324,7 @@
     return-object v0
 .end method
 
-.method public final next()Ljava/util/Map$Entry;
+.method public next()Ljava/util/Map$Entry;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -333,14 +334,14 @@
         }
     .end annotation
 
-    .line 91
+    .line 2
     invoke-virtual {p0}, Landroidx/collection/MapCollections$MapIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 92
+    .line 3
     iget v0, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
     const/4 v1, 0x1
@@ -349,12 +350,12 @@
 
     iput v0, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
-    .line 93
+    .line 4
     iput-boolean v1, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     return-object p0
 
-    .line 91
+    .line 5
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -363,29 +364,29 @@
     throw v0
 .end method
 
-.method public final remove()V
+.method public remove()V
     .locals 2
 
-    .line 99
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 102
+    .line 2
     iget-object v0, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
     invoke-virtual {v0, v1}, Landroidx/collection/MapCollections;->colRemoveAt(I)V
 
-    .line 103
+    .line 3
     iget v0, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
 
-    .line 104
+    .line 4
     iget v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEnd:I
 
     add-int/lit8 v0, v0, -0x1
@@ -394,12 +395,12 @@
 
     const/4 v0, 0x0
 
-    .line 105
+    .line 5
     iput-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     return-void
 
-    .line 100
+    .line 6
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -408,7 +409,7 @@
     throw v0
 .end method
 
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+.method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -416,12 +417,12 @@
         }
     .end annotation
 
-    .line 128
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$MapIterator;->mEntryValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 132
+    .line 2
     iget-object v0, p0, Landroidx/collection/MapCollections$MapIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$MapIterator;->mIndex:I
@@ -432,7 +433,7 @@
 
     return-object p1
 
-    .line 129
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -443,10 +444,10 @@
     throw p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 163
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

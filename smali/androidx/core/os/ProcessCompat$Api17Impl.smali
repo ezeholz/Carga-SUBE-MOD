@@ -1,32 +1,36 @@
-.class Landroidx/core/os/ProcessCompat$Api17Impl;
+.class public Landroidx/core/os/ProcessCompat$Api17Impl;
 .super Ljava/lang/Object;
 .source "ProcessCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x11
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/os/ProcessCompat;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Api17Impl"
 .end annotation
 
 
 # static fields
-.field private static sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
+.field public static sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
 
-.field private static sResolved:Z
+.field public static sResolved:Z
 
-.field private static final sResolvedLock:Ljava/lang/Object;
+.field public static final sResolvedLock:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 81
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -36,21 +40,26 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 86
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static isApplicationUid(I)Z
+.method public static isApplicationUid(I)Z
     .locals 7
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "DiscouragedPrivateApi"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 96
+    .line 1
     :try_start_0
     sget-object v1, Landroidx/core/os/ProcessCompat$Api17Impl;->sResolvedLock:Ljava/lang/Object;
 
@@ -58,7 +67,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
+    .line 2
     :try_start_1
     sget-boolean v2, Landroidx/core/os/ProcessCompat$Api17Impl;->sResolved:Z
 
@@ -66,10 +75,10 @@
 
     if-nez v2, :cond_0
 
-    .line 98
+    .line 3
     sput-boolean v0, Landroidx/core/os/ProcessCompat$Api17Impl;->sResolved:Z
 
-    .line 99
+    .line 4
     const-class v2, Landroid/os/UserHandle;
 
     const-string v4, "isApp"
@@ -86,19 +95,19 @@
 
     sput-object v2, Landroidx/core/os/ProcessCompat$Api17Impl;->sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
 
-    .line 102
+    .line 5
     :cond_0
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 103
+    .line 6
     :try_start_2
     sget-object v1, Landroidx/core/os/ProcessCompat$Api17Impl;->sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_2
 
-    .line 104
+    .line 7
     sget-object v1, Landroidx/core/os/ProcessCompat$Api17Impl;->sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -121,7 +130,7 @@
 
     goto :goto_0
 
-    .line 107
+    .line 8
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -134,7 +143,7 @@
     :catchall_0
     move-exception p0
 
-    .line 102
+    .line 9
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -148,7 +157,7 @@
     :catch_0
     move-exception p0
 
-    .line 111
+    .line 10
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2

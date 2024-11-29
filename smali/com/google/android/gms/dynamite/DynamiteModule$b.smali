@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/DynamiteModule$b;
+.class public final Lcom/google/android/gms/dynamite/DynamiteModule$b;
 .super Ljava/lang/Object;
 
 
@@ -8,7 +8,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
@@ -27,11 +27,11 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(B)V
+.method public synthetic constructor <init>(Lg/d/a/b/f/a;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0}, Lcom/google/android/gms/dynamite/DynamiteModule$b;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

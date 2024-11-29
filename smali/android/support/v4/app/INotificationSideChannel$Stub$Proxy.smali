@@ -1,4 +1,4 @@
-.class Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;
+.class public Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "INotificationSideChannel.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Proxy"
 .end annotation
 
@@ -22,17 +22,17 @@
 
 
 # instance fields
-.field private mRemote:Landroid/os/IBinder;
+.field public mRemote:Landroid/os/IBinder;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/IBinder;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 126
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
+    .line 2
     iput-object p1, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -43,7 +43,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .line 131
+    .line 1
     iget-object v0, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -52,7 +52,7 @@
 .method public cancel(Ljava/lang/String;ILjava/lang/String;)V
     .locals 5
 
-    .line 170
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -60,19 +60,19 @@
     :try_start_0
     const-string v1, "android.support.v4.app.INotificationSideChannel"
 
-    .line 172
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 173
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 174
+    .line 4
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 175
+    .line 5
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 176
+    .line 6
     iget-object v1, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -87,14 +87,14 @@
 
     if-nez v1, :cond_0
 
-    .line 177
+    .line 7
     invoke-static {}, Landroid/support/v4/app/INotificationSideChannel$Stub;->getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 178
+    .line 8
     invoke-static {}, Landroid/support/v4/app/INotificationSideChannel$Stub;->getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object v1
@@ -103,7 +103,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 183
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -118,14 +118,14 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 184
+    .line 10
     throw p1
 .end method
 
 .method public cancelAll(Ljava/lang/String;)V
     .locals 5
 
-    .line 191
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -133,13 +133,13 @@
     :try_start_0
     const-string v1, "android.support.v4.app.INotificationSideChannel"
 
-    .line 193
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 194
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 195
+    .line 4
     iget-object v1, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -154,14 +154,14 @@
 
     if-nez v1, :cond_0
 
-    .line 196
+    .line 5
     invoke-static {}, Landroid/support/v4/app/INotificationSideChannel$Stub;->getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 197
+    .line 6
     invoke-static {}, Landroid/support/v4/app/INotificationSideChannel$Stub;->getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object v1
@@ -170,7 +170,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 202
+    .line 7
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -185,7 +185,7 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 203
+    .line 8
     throw p1
 .end method
 
@@ -200,7 +200,7 @@
 .method public notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
     .locals 4
 
-    .line 142
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -208,16 +208,16 @@
     :try_start_0
     const-string v1, "android.support.v4.app.INotificationSideChannel"
 
-    .line 144
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 145
+    .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 146
+    .line 4
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 147
+    .line 5
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     const/4 v1, 0x0
@@ -226,19 +226,19 @@
 
     if-eqz p4, :cond_0
 
-    .line 149
+    .line 6
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 150
+    .line 7
     invoke-virtual {p4, v0, v1}, Landroid/app/Notification;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 153
+    .line 8
     :cond_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 155
+    .line 9
     :goto_0
     iget-object v1, p0, Landroid/support/v4/app/INotificationSideChannel$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -250,14 +250,14 @@
 
     if-nez v1, :cond_1
 
-    .line 156
+    .line 10
     invoke-static {}, Landroid/support/v4/app/INotificationSideChannel$Stub;->getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 157
+    .line 11
     invoke-static {}, Landroid/support/v4/app/INotificationSideChannel$Stub;->getDefaultImpl()Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object v1
@@ -266,7 +266,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 162
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -281,6 +281,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 163
+    .line 13
     throw p1
 .end method

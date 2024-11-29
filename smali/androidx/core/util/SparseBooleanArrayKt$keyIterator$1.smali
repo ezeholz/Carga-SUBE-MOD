@@ -1,11 +1,11 @@
 .class public final Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;
-.super Lkotlin/a/v;
+.super Lj/j/g;
 .source "SparseBooleanArray.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/util/SparseBooleanArrayKt;->keyIterator(Landroid/util/SparseBooleanArray;)Lkotlin/a/v;
+    value = Landroidx/core/util/SparseBooleanArrayKt;->keyIterator(Landroid/util/SparseBooleanArray;)Lj/j/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field final synthetic $this_keyIterator:Landroid/util/SparseBooleanArray;
+.field public final synthetic $this_keyIterator:Landroid/util/SparseBooleanArray;
 
-.field private index:I
+.field public index:I
 
 
 # direct methods
-.method constructor <init>(Landroid/util/SparseBooleanArray;)V
+.method public constructor <init>(Landroid/util/SparseBooleanArray;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->$this_keyIterator:Landroid/util/SparseBooleanArray;
 
-    .line 83
-    invoke-direct {p0}, Lkotlin/a/v;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lj/j/g;-><init>()V
 
     return-void
 .end method
@@ -37,16 +37,16 @@
 .method public final getIndex()I
     .locals 1
 
-    .line 84
+    .line 1
     iget v0, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->index:I
 
     return v0
 .end method
 
-.method public final hasNext()Z
+.method public hasNext()Z
     .locals 2
 
-    .line 85
+    .line 1
     iget v0, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->index:I
 
     iget-object v1, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->$this_keyIterator:Landroid/util/SparseBooleanArray;
@@ -59,18 +59,19 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method public final nextInt()I
+.method public nextInt()I
     .locals 3
 
-    .line 86
+    .line 1
     iget-object v0, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->$this_keyIterator:Landroid/util/SparseBooleanArray;
 
     iget v1, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->index:I
@@ -89,7 +90,7 @@
 .method public final setIndex(I)V
     .locals 0
 
-    .line 84
+    .line 1
     iput p1, p0, Landroidx/core/util/SparseBooleanArrayKt$keyIterator$1;->index:I
 
     return-void

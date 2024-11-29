@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/FacebookRequestError$a;,
-        Lcom/facebook/FacebookRequestError$b;
+        Lcom/facebook/FacebookRequestError$b;,
+        Lcom/facebook/FacebookRequestError$c;
     }
 .end annotation
 
@@ -26,257 +26,248 @@
     .end annotation
 .end field
 
-.field static final a:Lcom/facebook/FacebookRequestError$b;
+.field public static final n:Lcom/facebook/FacebookRequestError$c;
 
 
 # instance fields
-.field final b:I
+.field public final d:Lcom/facebook/FacebookRequestError$b;
 
-.field public final c:I
+.field public final e:I
 
-.field public final d:I
+.field public final f:I
 
-.field final e:Ljava/lang/String;
+.field public final g:I
 
-.field public final f:Lcom/facebook/FacebookException;
+.field public final h:Ljava/lang/String;
 
-.field private final g:I
+.field public final i:Ljava/lang/String;
 
-.field private final h:Ljava/lang/String;
+.field public final j:Ljava/lang/String;
 
-.field private final i:Ljava/lang/String;
+.field public final k:Ljava/lang/String;
 
-.field private final j:Ljava/lang/String;
+.field public final l:Ljava/lang/Object;
 
-.field private final k:Ljava/lang/String;
-
-.field private final l:Lorg/json/JSONObject;
-
-.field private final m:Lorg/json/JSONObject;
-
-.field private final n:Ljava/lang/Object;
-
-.field private final o:Ljava/net/HttpURLConnection;
+.field public final m:Lcom/facebook/FacebookException;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 4
 
-    .line 84
-    new-instance v0, Lcom/facebook/FacebookRequestError$b;
+    .line 1
+    new-instance v0, Lcom/facebook/FacebookRequestError$c;
 
-    const/4 v1, 0x0
+    const/16 v1, 0xc8
 
-    invoke-direct {v0, v1}, Lcom/facebook/FacebookRequestError$b;-><init>(B)V
+    const/16 v2, 0x12b
 
-    sput-object v0, Lcom/facebook/FacebookRequestError;->a:Lcom/facebook/FacebookRequestError$b;
+    const/4 v3, 0x0
 
-    .line 451
-    new-instance v0, Lcom/facebook/FacebookRequestError$1;
+    invoke-direct {v0, v1, v2, v3}, Lcom/facebook/FacebookRequestError$c;-><init>(IILcom/facebook/FacebookRequestError$a;)V
 
-    invoke-direct {v0}, Lcom/facebook/FacebookRequestError$1;-><init>()V
+    sput-object v0, Lcom/facebook/FacebookRequestError;->n:Lcom/facebook/FacebookRequestError$c;
+
+    .line 2
+    new-instance v0, Lcom/facebook/FacebookRequestError$a;
+
+    invoke-direct {v0}, Lcom/facebook/FacebookRequestError$a;-><init>()V
 
     sput-object v0, Lcom/facebook/FacebookRequestError;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method private constructor <init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;Lcom/facebook/FacebookException;)V
+.method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;Lcom/facebook/FacebookException;)V
     .locals 0
 
-    .line 114
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
-    iput p1, p0, Lcom/facebook/FacebookRequestError;->b:I
+    .line 2
+    iput p1, p0, Lcom/facebook/FacebookRequestError;->e:I
 
-    .line 116
-    iput p2, p0, Lcom/facebook/FacebookRequestError;->c:I
+    .line 3
+    iput p2, p0, Lcom/facebook/FacebookRequestError;->f:I
 
-    .line 117
-    iput p3, p0, Lcom/facebook/FacebookRequestError;->d:I
+    .line 4
+    iput p3, p0, Lcom/facebook/FacebookRequestError;->g:I
 
-    .line 118
-    iput-object p4, p0, Lcom/facebook/FacebookRequestError;->e:Ljava/lang/String;
+    .line 5
+    iput-object p4, p0, Lcom/facebook/FacebookRequestError;->h:Ljava/lang/String;
 
-    .line 119
-    iput-object p5, p0, Lcom/facebook/FacebookRequestError;->h:Ljava/lang/String;
+    .line 6
+    iput-object p5, p0, Lcom/facebook/FacebookRequestError;->i:Ljava/lang/String;
 
-    .line 120
-    iput-object p9, p0, Lcom/facebook/FacebookRequestError;->m:Lorg/json/JSONObject;
+    .line 7
+    iput-object p11, p0, Lcom/facebook/FacebookRequestError;->l:Ljava/lang/Object;
 
-    .line 121
-    iput-object p10, p0, Lcom/facebook/FacebookRequestError;->l:Lorg/json/JSONObject;
+    .line 8
+    iput-object p6, p0, Lcom/facebook/FacebookRequestError;->j:Ljava/lang/String;
 
-    .line 122
-    iput-object p11, p0, Lcom/facebook/FacebookRequestError;->n:Ljava/lang/Object;
-
-    .line 123
-    iput-object p12, p0, Lcom/facebook/FacebookRequestError;->o:Ljava/net/HttpURLConnection;
-
-    .line 124
-    iput-object p6, p0, Lcom/facebook/FacebookRequestError;->i:Ljava/lang/String;
-
-    .line 125
-    iput-object p7, p0, Lcom/facebook/FacebookRequestError;->j:Ljava/lang/String;
+    .line 9
+    iput-object p7, p0, Lcom/facebook/FacebookRequestError;->k:Ljava/lang/String;
 
     const/4 p1, 0x1
 
     if-eqz p13, :cond_0
 
-    .line 129
-    iput-object p13, p0, Lcom/facebook/FacebookRequestError;->f:Lcom/facebook/FacebookException;
+    .line 10
+    iput-object p13, p0, Lcom/facebook/FacebookRequestError;->m:Lcom/facebook/FacebookException;
 
     const/4 p4, 0x1
 
     goto :goto_0
 
-    .line 132
+    .line 11
     :cond_0
     new-instance p4, Lcom/facebook/FacebookServiceException;
 
     invoke-direct {p4, p0, p5}, Lcom/facebook/FacebookServiceException;-><init>(Lcom/facebook/FacebookRequestError;Ljava/lang/String;)V
 
-    iput-object p4, p0, Lcom/facebook/FacebookRequestError;->f:Lcom/facebook/FacebookException;
+    iput-object p4, p0, Lcom/facebook/FacebookRequestError;->m:Lcom/facebook/FacebookException;
 
     const/4 p4, 0x0
 
-    .line 135
+    .line 12
     :goto_0
-    invoke-static {}, Lcom/facebook/FacebookRequestError;->b()Lcom/facebook/internal/g;
+    invoke-static {}, Lcom/facebook/FacebookRequestError;->b()Lg/c/z/h;
 
     move-result-object p5
 
-    if-nez p4, :cond_7
+    const/4 p6, 0x0
 
-    if-eqz p8, :cond_1
+    if-eqz p4, :cond_1
 
-    .line 1111
-    sget p2, Lcom/facebook/FacebookRequestError$a;->c:I
+    .line 13
+    sget-object p2, Lcom/facebook/FacebookRequestError$b;->e:Lcom/facebook/FacebookRequestError$b;
 
     goto/16 :goto_1
 
-    .line 1114
     :cond_1
-    iget-object p4, p5, Lcom/facebook/internal/g;->a:Ljava/util/Map;
+    if-eqz p5, :cond_b
 
-    if-eqz p4, :cond_3
+    if-eqz p8, :cond_2
 
-    iget-object p4, p5, Lcom/facebook/internal/g;->a:Ljava/util/Map;
+    .line 14
+    sget-object p2, Lcom/facebook/FacebookRequestError$b;->f:Lcom/facebook/FacebookRequestError$b;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    goto/16 :goto_1
 
-    move-result-object p6
-
-    invoke-interface {p4, p6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p4
-
-    if-eqz p4, :cond_3
-
-    .line 1115
-    iget-object p4, p5, Lcom/facebook/internal/g;->a:Ljava/util/Map;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p6
-
-    invoke-interface {p4, p6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Ljava/util/Set;
-
-    if-eqz p4, :cond_2
-
-    .line 1116
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p6
-
-    invoke-interface {p4, p6}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p4
-
-    if-eqz p4, :cond_3
-
-    .line 1117
+    .line 15
     :cond_2
-    sget p2, Lcom/facebook/FacebookRequestError$a;->b:I
-
-    goto :goto_1
-
-    .line 1121
-    :cond_3
-    iget-object p4, p5, Lcom/facebook/internal/g;->c:Ljava/util/Map;
-
-    if-eqz p4, :cond_5
-
-    iget-object p4, p5, Lcom/facebook/internal/g;->c:Ljava/util/Map;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p6
-
-    invoke-interface {p4, p6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p4
-
-    if-eqz p4, :cond_5
-
-    .line 1122
-    iget-object p4, p5, Lcom/facebook/internal/g;->c:Ljava/util/Map;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p6
-
-    invoke-interface {p4, p6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Ljava/util/Set;
+    iget-object p4, p5, Lg/c/z/h;->a:Ljava/util/Map;
 
     if-eqz p4, :cond_4
 
-    .line 1123
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p6
+    move-result-object p7
 
-    invoke-interface {p4, p6}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-interface {p4, p7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result p4
 
-    if-eqz p4, :cond_5
+    if-eqz p4, :cond_4
 
-    .line 1124
-    :cond_4
-    sget p2, Lcom/facebook/FacebookRequestError$a;->a:I
-
-    goto :goto_1
-
-    .line 1128
-    :cond_5
-    iget-object p4, p5, Lcom/facebook/internal/g;->b:Ljava/util/Map;
-
-    if-eqz p4, :cond_7
-
-    iget-object p4, p5, Lcom/facebook/internal/g;->b:Ljava/util/Map;
+    .line 16
+    iget-object p4, p5, Lg/c/z/h;->a:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p6
+    move-result-object p7
 
-    invoke-interface {p4, p6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {p4, p7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Ljava/util/Set;
+
+    if-eqz p4, :cond_3
+
+    .line 17
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p7
+
+    invoke-interface {p4, p7}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p4
 
-    if-eqz p4, :cond_7
+    if-eqz p4, :cond_4
 
-    .line 1129
-    iget-object p4, p5, Lcom/facebook/internal/g;->b:Ljava/util/Map;
+    .line 18
+    :cond_3
+    sget-object p2, Lcom/facebook/FacebookRequestError$b;->e:Lcom/facebook/FacebookRequestError$b;
+
+    goto :goto_1
+
+    .line 19
+    :cond_4
+    iget-object p4, p5, Lg/c/z/h;->c:Ljava/util/Map;
+
+    if-eqz p4, :cond_6
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p7
+
+    invoke-interface {p4, p7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_6
+
+    .line 20
+    iget-object p4, p5, Lg/c/z/h;->c:Ljava/util/Map;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p7
+
+    invoke-interface {p4, p7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Ljava/util/Set;
+
+    if-eqz p4, :cond_5
+
+    .line 21
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p7
+
+    invoke-interface {p4, p7}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_6
+
+    .line 22
+    :cond_5
+    sget-object p2, Lcom/facebook/FacebookRequestError$b;->d:Lcom/facebook/FacebookRequestError$b;
+
+    goto :goto_1
+
+    .line 23
+    :cond_6
+    iget-object p4, p5, Lg/c/z/h;->b:Ljava/util/Map;
+
+    if-eqz p4, :cond_8
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p7
+
+    invoke-interface {p4, p7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_8
+
+    .line 24
+    iget-object p4, p5, Lg/c/z/h;->b:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -288,9 +279,9 @@
 
     check-cast p2, Ljava/util/Set;
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
-    .line 1130
+    .line 25
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -299,64 +290,44 @@
 
     move-result p2
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_8
 
-    .line 1131
-    :cond_6
-    sget p2, Lcom/facebook/FacebookRequestError$a;->c:I
+    .line 26
+    :cond_7
+    sget-object p2, Lcom/facebook/FacebookRequestError$b;->f:Lcom/facebook/FacebookRequestError$b;
 
     goto :goto_1
 
-    .line 1134
-    :cond_7
-    sget p2, Lcom/facebook/FacebookRequestError$a;->b:I
+    .line 27
+    :cond_8
+    sget-object p2, Lcom/facebook/FacebookRequestError$b;->e:Lcom/facebook/FacebookRequestError$b;
 
-    .line 138
+    .line 28
     :goto_1
-    iput p2, p0, Lcom/facebook/FacebookRequestError;->g:I
+    iput-object p2, p0, Lcom/facebook/FacebookRequestError;->d:Lcom/facebook/FacebookRequestError$b;
 
-    .line 2094
-    sget-object p3, Lcom/facebook/internal/g$3;->a:[I
+    if-eqz p5, :cond_a
 
-    sub-int/2addr p2, p1
+    .line 29
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
-    aget p2, p3, p2
+    move-result p2
 
-    if-eq p2, p1, :cond_a
-
-    const/4 p1, 0x2
+    if-eqz p2, :cond_9
 
     if-eq p2, p1, :cond_9
 
-    const/4 p1, 0x3
+    const/4 p1, 0x2
 
-    if-eq p2, p1, :cond_8
-
-    const/4 p1, 0x0
-
-    goto :goto_2
-
-    .line 2100
-    :cond_8
-    iget-object p1, p5, Lcom/facebook/internal/g;->e:Ljava/lang/String;
-
-    goto :goto_2
-
-    .line 2098
     :cond_9
-    iget-object p1, p5, Lcom/facebook/internal/g;->f:Ljava/lang/String;
-
-    goto :goto_2
-
-    .line 2096
-    :cond_a
-    iget-object p1, p5, Lcom/facebook/internal/g;->d:Ljava/lang/String;
-
-    .line 139
-    :goto_2
-    iput-object p1, p0, Lcom/facebook/FacebookRequestError;->k:Ljava/lang/String;
-
     return-void
+
+    :cond_a
+    throw p6
+
+    .line 30
+    :cond_b
+    throw p6
 .end method
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
@@ -390,85 +361,18 @@
 
     move-object/from16 v5, p3
 
-    .line 161
+    .line 32
     invoke-direct/range {v0 .. v13}, Lcom/facebook/FacebookRequestError;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;Lcom/facebook/FacebookException;)V
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 14
-
-    .line 464
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    .line 465
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    .line 466
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v3
-
-    .line 467
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 468
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 469
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 470
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v7
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    move-object v0, p0
-
-    .line 463
-    invoke-direct/range {v0 .. v13}, Lcom/facebook/FacebookRequestError;-><init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;Lcom/facebook/FacebookException;)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/os/Parcel;B)V
-    .locals 0
-
-    .line 44
-    invoke-direct {p0, p1}, Lcom/facebook/FacebookRequestError;-><init>(Landroid/os/Parcel;)V
-
-    return-void
-.end method
-
-.method constructor <init>(Ljava/net/HttpURLConnection;Ljava/lang/Exception;)V
+.method public constructor <init>(Ljava/net/HttpURLConnection;Ljava/lang/Exception;)V
     .locals 16
 
     move-object/from16 v0, p2
 
-    .line 143
+    .line 31
     instance-of v1, v0, Lcom/facebook/FacebookException;
 
     if-eqz v1, :cond_0
@@ -518,7 +422,7 @@
     return-void
 .end method
 
-.method static a(Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;)Lcom/facebook/FacebookRequestError;
+.method public static a(Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;)Lcom/facebook/FacebookRequestError;
     .locals 19
 
     move-object/from16 v10, p0
@@ -535,7 +439,7 @@
 
     const/4 v14, 0x0
 
-    .line 343
+    .line 3
     :try_start_0
     invoke-virtual {v10, v4}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
@@ -543,13 +447,13 @@
 
     if-eqz v5, :cond_6
 
-    .line 344
+    .line 4
     invoke-virtual {v10, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 345
-    invoke-static {v10, v3, v2}, Lcom/facebook/internal/u;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    .line 5
+    invoke-static {v10, v3, v2}, Lg/c/z/u;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -559,17 +463,17 @@
 
     if-eqz v6, :cond_3
 
-    .line 348
+    .line 6
     instance-of v9, v6, Lorg/json/JSONObject;
 
     if-eqz v9, :cond_3
 
-    .line 349
+    .line 7
     move-object v9, v6
 
     check-cast v9, Lorg/json/JSONObject;
 
-    .line 362
+    .line 8
     invoke-virtual {v9, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v6
@@ -582,9 +486,9 @@
 
     if-eqz v6, :cond_0
 
-    .line 365
+    .line 9
     :try_start_1
-    invoke-static {v9, v1, v14}, Lcom/facebook/internal/u;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v9, v1, v14}, Lg/c/z/u;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -592,45 +496,45 @@
 
     const-string v1, "type"
 
-    .line 367
+    .line 10
     invoke-virtual {v0, v1, v14}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v6, "message"
 
-    .line 368
+    .line 11
     invoke-virtual {v0, v6, v14}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 369
+    .line 12
     invoke-virtual {v0, v4, v12}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 370
+    .line 13
     invoke-virtual {v0, v11, v12}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v11
 
     const-string v12, "error_user_msg"
 
-    .line 371
+    .line 14
     invoke-virtual {v0, v12, v14}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
     const-string v13, "error_user_title"
 
-    .line 372
+    .line 15
     invoke-virtual {v0, v13, v14}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
     const-string v15, "is_transient"
 
-    .line 373
+    .line 16
     invoke-virtual {v0, v15, v8}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -649,7 +553,7 @@
 
     goto :goto_1
 
-    .line 375
+    .line 17
     :cond_0
     invoke-virtual {v9, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
@@ -670,7 +574,7 @@
 
     if-nez v1, :cond_2
 
-    .line 376
+    .line 18
     invoke-virtual {v9, v6}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v1
@@ -690,32 +594,32 @@
 
     const/4 v0, 0x0
 
-    const/4 v4, 0x0
+    const/4 v4, -0x1
 
-    const/4 v6, 0x0
+    const/4 v6, -0x1
 
     const/16 v16, 0x0
 
     goto :goto_1
 
-    .line 377
+    .line 19
     :cond_2
     :goto_0
     invoke-virtual {v9, v6, v14}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 378
+    .line 20
     invoke-virtual {v9, v4, v14}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 379
+    .line 21
     invoke-virtual {v9, v0, v12}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 380
+    .line 22
     invoke-virtual {v9, v11, v12}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
     move-result v6
@@ -737,7 +641,7 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    .line 385
+    .line 23
     new-instance v17, Lcom/facebook/FacebookRequestError;
 
     const/16 v18, 0x0
@@ -772,16 +676,16 @@
 
     return-object v17
 
-    .line 404
+    .line 24
     :cond_3
-    sget-object v0, Lcom/facebook/FacebookRequestError;->a:Lcom/facebook/FacebookRequestError$b;
+    sget-object v0, Lcom/facebook/FacebookRequestError;->n:Lcom/facebook/FacebookRequestError$c;
 
-    .line 3080
-    iget v1, v0, Lcom/facebook/FacebookRequestError$b;->a:I
+    .line 25
+    iget v1, v0, Lcom/facebook/FacebookRequestError$c;->a:I
 
     if-gt v1, v5, :cond_4
 
-    iget v0, v0, Lcom/facebook/FacebookRequestError$b;->b:I
+    iget v0, v0, Lcom/facebook/FacebookRequestError$c;->b:I
 
     if-gt v5, v0, :cond_4
 
@@ -793,7 +697,7 @@
     :goto_2
     if-nez v7, :cond_6
 
-    .line 405
+    .line 26
     new-instance v15, Lcom/facebook/FacebookRequestError;
 
     const/4 v4, -0x1
@@ -810,15 +714,15 @@
 
     const/4 v12, 0x0
 
-    .line 414
+    .line 27
     invoke-virtual {v10, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 415
-    invoke-static {v10, v3, v2}, Lcom/facebook/internal/u;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    .line 28
+    invoke-static {v10, v3, v2}, Lg/c/z/u;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -873,27 +777,27 @@
     return-object v14
 .end method
 
-.method private static declared-synchronized b()Lcom/facebook/internal/g;
+.method public static declared-synchronized b()Lg/c/z/h;
     .locals 2
 
     const-class v0, Lcom/facebook/FacebookRequestError;
 
     monitor-enter v0
 
-    .line 434
+    .line 1
     :try_start_0
-    invoke-static {}, Lcom/facebook/d;->j()Ljava/lang/String;
+    invoke-static {}, Lg/c/e;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/facebook/internal/l;->a(Ljava/lang/String;)Lcom/facebook/internal/k;
+    invoke-static {v1}, Lg/c/z/m;->b(Ljava/lang/String;)Lg/c/z/l;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 436
-    invoke-static {}, Lcom/facebook/internal/g;->a()Lcom/facebook/internal/g;
+    .line 2
+    invoke-static {}, Lg/c/z/h;->a()Lg/c/z/h;
 
     move-result-object v1
     :try_end_0
@@ -903,14 +807,14 @@
 
     return-object v1
 
-    .line 3122
+    .line 3
     :cond_0
     :try_start_1
-    iget-object v1, v1, Lcom/facebook/internal/k;->f:Lcom/facebook/internal/g;
+    iget-object v1, v1, Lg/c/z/l;->f:Lg/c/z/h;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 438
+    .line 4
     monitor-exit v0
 
     return-object v1
@@ -925,28 +829,28 @@
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
-    .line 232
-    iget-object v0, p0, Lcom/facebook/FacebookRequestError;->h:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Lcom/facebook/FacebookRequestError;->i:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 235
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/facebook/FacebookRequestError;->f:Lcom/facebook/FacebookException;
+    iget-object v0, p0, Lcom/facebook/FacebookRequestError;->m:Lcom/facebook/FacebookException;
 
-    invoke-virtual {v0}, Lcom/facebook/FacebookException;->getLocalizedMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->getLocalizedMessage()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final describeContents()I
+.method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -954,57 +858,57 @@
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 324
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "{HttpStatus: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lcom/facebook/FacebookRequestError;->b:I
+    iget v1, p0, Lcom/facebook/FacebookRequestError;->e:I
 
-    .line 325
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", errorCode: "
 
-    .line 326
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/facebook/FacebookRequestError;->c:I
+    iget v1, p0, Lcom/facebook/FacebookRequestError;->f:I
 
-    .line 327
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", subErrorCode: "
 
-    .line 328
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/facebook/FacebookRequestError;->d:I
+    iget v1, p0, Lcom/facebook/FacebookRequestError;->g:I
 
-    .line 329
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", errorType: "
 
-    .line 330
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/facebook/FacebookRequestError;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/FacebookRequestError;->h:Ljava/lang/String;
 
-    .line 331
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ", errorMessage: "
 
-    .line 332
+    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 333
+    .line 10
     invoke-virtual {p0}, Lcom/facebook/FacebookRequestError;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -1013,10 +917,10 @@
 
     const-string v1, "}"
 
-    .line 334
+    .line 11
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 335
+    .line 12
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1024,41 +928,41 @@
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 442
-    iget p2, p0, Lcom/facebook/FacebookRequestError;->b:I
+    .line 1
+    iget p2, p0, Lcom/facebook/FacebookRequestError;->e:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 443
-    iget p2, p0, Lcom/facebook/FacebookRequestError;->c:I
+    .line 2
+    iget p2, p0, Lcom/facebook/FacebookRequestError;->f:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 444
-    iget p2, p0, Lcom/facebook/FacebookRequestError;->d:I
+    .line 3
+    iget p2, p0, Lcom/facebook/FacebookRequestError;->g:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 445
-    iget-object p2, p0, Lcom/facebook/FacebookRequestError;->e:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 446
+    .line 4
     iget-object p2, p0, Lcom/facebook/FacebookRequestError;->h:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 447
+    .line 5
     iget-object p2, p0, Lcom/facebook/FacebookRequestError;->i:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 448
+    .line 6
     iget-object p2, p0, Lcom/facebook/FacebookRequestError;->j:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 7
+    iget-object p2, p0, Lcom/facebook/FacebookRequestError;->k:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

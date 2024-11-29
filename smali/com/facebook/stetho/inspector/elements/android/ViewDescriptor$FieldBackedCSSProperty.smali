@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$FieldBackedCSSProperty;
+.class public final Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$FieldBackedCSSProperty;
 .super Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;
 .source "ViewDescriptor.java"
 
@@ -9,33 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "FieldBackedCSSProperty"
 .end annotation
 
 
 # instance fields
-.field private final mField:Ljava/lang/reflect/Field;
+.field public final mField:Ljava/lang/reflect/Field;
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;Ljava/lang/reflect/Field;Ljava/lang/String;Landroid/view/ViewDebug$ExportedProperty;)V
     .locals 0
 
-    .line 520
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$FieldBackedCSSProperty;->this$0:Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;
 
-    .line 521
+    .line 2
     invoke-direct {p0, p1, p3, p4}, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$ViewCSSProperty;-><init>(Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;Ljava/lang/String;Landroid/view/ViewDebug$ExportedProperty;)V
 
-    .line 522
+    .line 3
     iput-object p2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$FieldBackedCSSProperty;->mField:Ljava/lang/reflect/Field;
 
     const/4 p1, 0x1
 
-    .line 523
+    .line 4
     invoke-virtual {p2, p1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     return-void
@@ -43,10 +43,10 @@
 
 
 # virtual methods
-.method public final getValue(Landroid/view/View;)Ljava/lang/Object;
+.method public getValue(Landroid/view/View;)Ljava/lang/Object;
     .locals 1
 
-    .line 528
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor$FieldBackedCSSProperty;->mField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;

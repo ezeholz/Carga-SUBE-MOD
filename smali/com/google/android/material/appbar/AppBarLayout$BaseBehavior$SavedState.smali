@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xc
+    accessFlags = 0x9
     name = "SavedState"
 .end annotation
 
@@ -27,21 +27,21 @@
 
 
 # instance fields
-.field a:I
+.field public d:I
 
-.field b:F
+.field public e:F
 
-.field c:Z
+.field public f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 1855
-    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$1;
+    .line 1
+    new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$a;
 
-    invoke-direct {v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState$a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -50,25 +50,29 @@
 
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1837
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 1838
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->a:I
+    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->d:I
 
-    .line 1839
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->b:F
+    iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->e:F
 
-    .line 1840
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -83,7 +87,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->c:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->f:Z
 
     return-void
 .end method
@@ -91,7 +95,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 1844
+    .line 5
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -101,22 +105,26 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1849
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1850
-    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->a:I
+    .line 2
+    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->d:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1851
-    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->b:F
+    .line 3
+    iget p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->e:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1852
-    iget-boolean p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->c:Z
+    .line 4
+    iget-boolean p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$SavedState;->f:Z
 
     int-to-byte p2, p2
 

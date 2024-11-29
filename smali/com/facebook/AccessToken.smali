@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/AccessToken$a;
+        Lcom/facebook/AccessToken$b;
     }
 .end annotation
 
@@ -25,19 +25,19 @@
     .end annotation
 .end field
 
-.field private static final j:Ljava/util/Date;
+.field public static final m:Ljava/util/Date;
 
-.field private static final k:Ljava/util/Date;
+.field public static final n:Ljava/util/Date;
 
-.field private static final l:Ljava/util/Date;
+.field public static final o:Ljava/util/Date;
 
-.field private static final m:Lcom/facebook/c;
+.field public static final p:Lg/c/d;
 
 
 # instance fields
-.field final a:Ljava/util/Date;
+.field public final d:Ljava/util/Date;
 
-.field final b:Ljava/util/Set;
+.field public final e:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -47,7 +47,7 @@
     .end annotation
 .end field
 
-.field final c:Ljava/util/Set;
+.field public final f:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -56,65 +56,65 @@
         }
     .end annotation
 .end field
-
-.field public final d:Ljava/lang/String;
-
-.field final e:Lcom/facebook/c;
-
-.field final f:Ljava/util/Date;
 
 .field public final g:Ljava/lang/String;
 
-.field public final h:Ljava/lang/String;
+.field public final h:Lg/c/d;
 
-.field final i:Ljava/util/Date;
+.field public final i:Ljava/util/Date;
+
+.field public final j:Ljava/lang/String;
+
+.field public final k:Ljava/lang/String;
+
+.field public final l:Ljava/util/Date;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
-    .line 59
+    .line 1
     new-instance v0, Ljava/util/Date;
 
     const-wide v1, 0x7fffffffffffffffL
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    .line 60
-    sput-object v0, Lcom/facebook/AccessToken;->j:Ljava/util/Date;
+    sput-object v0, Lcom/facebook/AccessToken;->m:Ljava/util/Date;
 
-    sput-object v0, Lcom/facebook/AccessToken;->k:Ljava/util/Date;
+    .line 2
+    sput-object v0, Lcom/facebook/AccessToken;->n:Ljava/util/Date;
 
-    .line 61
+    .line 3
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    sput-object v0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
+    sput-object v0, Lcom/facebook/AccessToken;->o:Ljava/util/Date;
 
-    .line 62
-    sget-object v0, Lcom/facebook/c;->b:Lcom/facebook/c;
+    .line 4
+    sget-object v0, Lg/c/d;->f:Lg/c/d;
 
-    sput-object v0, Lcom/facebook/AccessToken;->m:Lcom/facebook/c;
+    sput-object v0, Lcom/facebook/AccessToken;->p:Lg/c/d;
 
-    .line 688
-    new-instance v0, Lcom/facebook/AccessToken$1;
+    .line 5
+    new-instance v0, Lcom/facebook/AccessToken$a;
 
-    invoke-direct {v0}, Lcom/facebook/AccessToken$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/AccessToken$a;-><init>()V
 
     sput-object v0, Lcom/facebook/AccessToken;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    .line 653
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 654
+    .line 15
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -123,17 +123,17 @@
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
-    iput-object v0, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
+    iput-object v0, p0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
 
-    .line 655
+    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 656
+    .line 17
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 657
+    .line 18
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
@@ -142,15 +142,15 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    iput-object v1, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
-    .line 658
+    .line 19
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 659
+    .line 20
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 660
+    .line 21
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
@@ -159,52 +159,27 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
+    iput-object v0, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
 
-    .line 662
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
-
-    .line 663
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/facebook/c;->valueOf(Ljava/lang/String;)Lcom/facebook/c;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
-
-    .line 664
-    new-instance v0, Ljava/util/Date;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v1
-
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
-
-    iput-object v0, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
-
-    .line 665
+    .line 22
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
-    .line 666
+    .line 23
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
+    invoke-static {v0}, Lg/c/d;->valueOf(Ljava/lang/String;)Lg/c/d;
 
-    .line 667
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/facebook/AccessToken;->h:Lg/c/d;
+
+    .line 24
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -215,11 +190,60 @@
 
     iput-object v0, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
 
+    .line 25
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
+
+    .line 26
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
+
+    .line 27
+    new-instance v0, Ljava/util/Date;
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v1
+
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
+
+    iput-object v0, p0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
+
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Lcom/facebook/c;Ljava/util/Date;Ljava/util/Date;Ljava/util/Date;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Lg/c/d;Ljava/util/Date;Ljava/util/Date;Ljava/util/Date;)V
     .locals 1
+    .param p4    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p5    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p6    # Lg/c/d;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p7    # Ljava/util/Date;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p8    # Ljava/util/Date;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p9    # Ljava/util/Date;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -232,7 +256,7 @@
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;",
-            "Lcom/facebook/c;",
+            "Lg/c/d;",
             "Ljava/util/Date;",
             "Ljava/util/Date;",
             "Ljava/util/Date;",
@@ -240,36 +264,36 @@
         }
     .end annotation
 
-    .line 130
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "accessToken"
 
-    .line 131
-    invoke-static {p1, v0}, Lcom/facebook/internal/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {p1, v0}, Lg/c/z/w;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "applicationId"
 
-    .line 132
-    invoke-static {p2, v0}, Lcom/facebook/internal/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p2, v0}, Lg/c/z/w;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "userId"
 
-    .line 133
-    invoke-static {p3, v0}, Lcom/facebook/internal/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-static {p3, v0}, Lg/c/z/w;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p7, :cond_0
 
     goto :goto_0
 
-    .line 135
+    .line 5
     :cond_0
-    sget-object p7, Lcom/facebook/AccessToken;->k:Ljava/util/Date;
+    sget-object p7, Lcom/facebook/AccessToken;->n:Ljava/util/Date;
 
     :goto_0
-    iput-object p7, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
+    iput-object p7, p0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
 
-    .line 136
+    .line 6
     new-instance p7, Ljava/util/HashSet;
 
     if-eqz p4, :cond_1
@@ -286,9 +310,9 @@
 
     move-result-object p4
 
-    iput-object p4, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    iput-object p4, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
-    .line 138
+    .line 7
     new-instance p4, Ljava/util/HashSet;
 
     if-eqz p5, :cond_2
@@ -305,42 +329,42 @@
 
     move-result-object p4
 
-    iput-object p4, p0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
+    iput-object p4, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
 
-    .line 142
-    iput-object p1, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
+    .line 8
+    iput-object p1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
     if-eqz p6, :cond_3
 
     goto :goto_3
 
-    .line 143
+    .line 9
     :cond_3
-    sget-object p6, Lcom/facebook/AccessToken;->m:Lcom/facebook/c;
+    sget-object p6, Lcom/facebook/AccessToken;->p:Lg/c/d;
 
     :goto_3
-    iput-object p6, p0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
+    iput-object p6, p0, Lcom/facebook/AccessToken;->h:Lg/c/d;
 
     if-eqz p8, :cond_4
 
     goto :goto_4
 
-    .line 144
+    .line 10
     :cond_4
-    sget-object p8, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
+    sget-object p8, Lcom/facebook/AccessToken;->o:Ljava/util/Date;
 
     :goto_4
-    iput-object p8, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
+    iput-object p8, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
 
-    .line 145
-    iput-object p2, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
+    .line 11
+    iput-object p2, p0, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
 
-    .line 146
-    iput-object p3, p0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
+    .line 12
+    iput-object p3, p0, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
 
     if-eqz p9, :cond_5
 
-    .line 148
+    .line 13
     invoke-virtual {p9}, Ljava/util/Date;->getTime()J
 
     move-result-wide p1
@@ -354,127 +378,20 @@
     goto :goto_5
 
     :cond_5
-    sget-object p9, Lcom/facebook/AccessToken;->k:Ljava/util/Date;
+    sget-object p9, Lcom/facebook/AccessToken;->n:Ljava/util/Date;
 
     :goto_5
-    iput-object p9, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
+    iput-object p9, p0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
 
     return-void
 .end method
 
-.method public static a()Lcom/facebook/AccessToken;
-    .locals 1
-
-    .line 159
-    invoke-static {}, Lcom/facebook/b;->a()Lcom/facebook/b;
-
-    move-result-object v0
-
-    .line 1100
-    iget-object v0, v0, Lcom/facebook/b;->b:Lcom/facebook/AccessToken;
-
-    return-object v0
-.end method
-
-.method static a(Landroid/os/Bundle;)Lcom/facebook/AccessToken;
-    .locals 11
-
-    const-string v0, "com.facebook.TokenCachingStrategy.Permissions"
-
-    .line 487
-    invoke-static {p0, v0}, Lcom/facebook/AccessToken;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v5
-
-    const-string v0, "com.facebook.TokenCachingStrategy.DeclinedPermissions"
-
-    .line 490
-    invoke-static {p0, v0}, Lcom/facebook/AccessToken;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v6
-
-    .line 494
-    invoke-static {p0}, Lcom/facebook/i;->d(Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 495
-    invoke-static {v0}, Lcom/facebook/internal/u;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 496
-    invoke-static {}, Lcom/facebook/d;->j()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
-    move-object v3, v0
-
-    .line 499
-    invoke-static {p0}, Lcom/facebook/i;->b(Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 501
-    invoke-static {v2}, Lcom/facebook/internal/u;->e(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    :try_start_0
-    const-string v1, "id"
-
-    .line 503
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 510
-    new-instance v0, Lcom/facebook/AccessToken;
-
-    .line 516
-    invoke-static {p0}, Lcom/facebook/i;->c(Landroid/os/Bundle;)Lcom/facebook/c;
-
-    move-result-object v7
-
-    const-string v1, "com.facebook.TokenCachingStrategy.ExpirationDate"
-
-    .line 517
-    invoke-static {p0, v1}, Lcom/facebook/i;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
-
-    move-result-object v8
-
-    const-string v1, "com.facebook.TokenCachingStrategy.LastRefreshDate"
-
-    .line 520
-    invoke-static {p0, v1}, Lcom/facebook/i;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
-
-    move-result-object v9
-
-    const/4 v10, 0x0
-
-    move-object v1, v0
-
-    invoke-direct/range {v1 .. v10}, Lcom/facebook/AccessToken;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Lcom/facebook/c;Ljava/util/Date;Ljava/util/Date;Ljava/util/Date;)V
-
-    return-object v0
-
-    :catch_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method static a(Lorg/json/JSONObject;)Lcom/facebook/AccessToken;
+.method public static a(Lorg/json/JSONObject;)Lcom/facebook/AccessToken;
     .locals 12
 
     const-string v0, "version"
 
-    .line 577
+    .line 19
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v0
@@ -485,12 +402,12 @@
 
     const-string v0, "token"
 
-    .line 582
+    .line 20
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 583
+    .line 21
     new-instance v8, Ljava/util/Date;
 
     const-string v0, "expires_at"
@@ -503,19 +420,19 @@
 
     const-string v0, "permissions"
 
-    .line 584
+    .line 22
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
 
     const-string v1, "declined_permissions"
 
-    .line 585
+    .line 23
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 586
+    .line 24
     new-instance v9, Ljava/util/Date;
 
     const-string v3, "last_refresh"
@@ -528,63 +445,63 @@
 
     const-string v3, "source"
 
-    .line 587
+    .line 25
     invoke-virtual {p0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/facebook/c;->valueOf(Ljava/lang/String;)Lcom/facebook/c;
+    invoke-static {v3}, Lg/c/d;->valueOf(Ljava/lang/String;)Lg/c/d;
 
     move-result-object v7
 
     const-string v3, "application_id"
 
-    .line 588
+    .line 26
     invoke-virtual {p0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "user_id"
 
-    .line 589
+    .line 27
     invoke-virtual {p0, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 590
+    .line 28
     new-instance v10, Ljava/util/Date;
 
     const-wide/16 v5, 0x0
 
     const-string v11, "data_access_expiration_time"
 
-    .line 591
+    .line 29
     invoke-virtual {p0, v11, v5, v6}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
 
     move-result-wide v5
 
     invoke-direct {v10, v5, v6}, Ljava/util/Date;-><init>(J)V
 
-    .line 593
+    .line 30
     new-instance p0, Lcom/facebook/AccessToken;
 
-    .line 597
-    invoke-static {v0}, Lcom/facebook/internal/u;->a(Lorg/json/JSONArray;)Ljava/util/List;
+    .line 31
+    invoke-static {v0}, Lg/c/z/u;->a(Lorg/json/JSONArray;)Ljava/util/List;
 
     move-result-object v5
 
-    .line 598
-    invoke-static {v1}, Lcom/facebook/internal/u;->a(Lorg/json/JSONArray;)Ljava/util/List;
+    .line 32
+    invoke-static {v1}, Lg/c/z/u;->a(Lorg/json/JSONArray;)Ljava/util/List;
 
     move-result-object v6
 
     move-object v1, p0
 
-    invoke-direct/range {v1 .. v10}, Lcom/facebook/AccessToken;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Lcom/facebook/c;Ljava/util/Date;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-direct/range {v1 .. v10}, Lcom/facebook/AccessToken;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Lg/c/d;Ljava/util/Date;Ljava/util/Date;Ljava/util/Date;)V
 
     return-object p0
 
-    .line 579
+    .line 33
     :cond_0
     new-instance p0, Lcom/facebook/FacebookException;
 
@@ -595,7 +512,7 @@
     throw p0
 .end method
 
-.method private static a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/List;
+.method public static a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/List;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -609,21 +526,21 @@
         }
     .end annotation
 
-    .line 529
+    .line 3
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 532
+    .line 4
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 534
+    .line 5
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
@@ -637,21 +554,57 @@
     return-object p0
 .end method
 
-.method public static b()Z
-    .locals 1
+.method public static a(Lcom/facebook/AccessToken;)V
+    .locals 2
 
-    .line 168
-    invoke-static {}, Lcom/facebook/b;->a()Lcom/facebook/b;
+    .line 1
+    invoke-static {}, Lg/c/c;->a()Lg/c/c;
 
     move-result-object v0
 
-    .line 2100
-    iget-object v0, v0, Lcom/facebook/b;->b:Lcom/facebook/AccessToken;
+    const/4 v1, 0x1
+
+    .line 2
+    invoke-virtual {v0, p0, v1}, Lg/c/c;->a(Lcom/facebook/AccessToken;Z)V
+
+    return-void
+.end method
+
+.method public static b()Lcom/facebook/AccessToken;
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lg/c/c;->a()Lg/c/c;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v0, v0, Lg/c/c;->c:Lcom/facebook/AccessToken;
+
+    return-object v0
+.end method
+
+.method public static c()Z
+    .locals 2
+
+    .line 1
+    invoke-static {}, Lg/c/c;->a()Lg/c/c;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v0, v0, Lg/c/c;->c:Lcom/facebook/AccessToken;
 
     if-eqz v0, :cond_0
 
-    .line 169
-    invoke-virtual {v0}, Lcom/facebook/AccessToken;->e()Z
+    .line 3
+    new-instance v1, Ljava/util/Date;
+
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
+
+    iget-object v0, v0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
+
+    invoke-virtual {v1, v0}, Ljava/util/Date;->after(Ljava/util/Date;)Z
 
     move-result v0
 
@@ -659,256 +612,21 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
-.end method
-
-.method static c()V
-    .locals 12
-
-    .line 182
-    invoke-static {}, Lcom/facebook/b;->a()Lcom/facebook/b;
-
-    move-result-object v0
-
-    .line 3100
-    iget-object v0, v0, Lcom/facebook/b;->b:Lcom/facebook/AccessToken;
-
-    if-eqz v0, :cond_0
-
-    .line 3474
-    new-instance v11, Lcom/facebook/AccessToken;
-
-    iget-object v2, v0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
-
-    iget-object v3, v0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
-
-    .line 4307
-    iget-object v4, v0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
-
-    .line 5257
-    iget-object v5, v0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
-
-    .line 5270
-    iget-object v6, v0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
-
-    .line 3479
-    iget-object v7, v0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
-
-    new-instance v8, Ljava/util/Date;
-
-    invoke-direct {v8}, Ljava/util/Date;-><init>()V
-
-    new-instance v9, Ljava/util/Date;
-
-    invoke-direct {v9}, Ljava/util/Date;-><init>()V
-
-    iget-object v10, v0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
-
-    move-object v1, v11
-
-    invoke-direct/range {v1 .. v10}, Lcom/facebook/AccessToken;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;Lcom/facebook/c;Ljava/util/Date;Ljava/util/Date;Ljava/util/Date;)V
-
-    .line 6194
-    invoke-static {}, Lcom/facebook/b;->a()Lcom/facebook/b;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    .line 7115
-    invoke-virtual {v0, v11, v1}, Lcom/facebook/b;->a(Lcom/facebook/AccessToken;Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static d()V
-    .locals 3
-
-    .line 194
-    invoke-static {}, Lcom/facebook/b;->a()Lcom/facebook/b;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    .line 8115
-    invoke-virtual {v0, v1, v2}, Lcom/facebook/b;->a(Lcom/facebook/AccessToken;Z)V
-
-    return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e()Z
-    .locals 2
-
-    .line 545
-    new-instance v0, Ljava/util/Date;
-
-    invoke-direct {v0}, Ljava/util/Date;-><init>()V
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
-
-    invoke-virtual {v0, v1}, Ljava/util/Date;->after(Ljava/util/Date;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public a()Lorg/json/JSONObject;
     .locals 4
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    .line 407
-    :cond_0
-    instance-of v1, p1, Lcom/facebook/AccessToken;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    .line 411
-    :cond_1
-    check-cast p1, Lcom/facebook/AccessToken;
-
-    .line 413
-    iget-object v1, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
-
-    invoke-virtual {v1, v3}, Ljava/util/Date;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
-
-    .line 414
-    invoke-interface {v1, v3}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
-
-    .line 415
-    invoke-interface {v1, v3}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
-
-    .line 416
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
-
-    if-ne v1, v3, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
-
-    .line 418
-    invoke-virtual {v1, v3}, Ljava/util/Date;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p1, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
-
-    if-nez v1, :cond_3
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v3, p1, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
-
-    .line 421
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    :goto_0
-    iget-object v1, p0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
-
-    .line 422
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
-
-    iget-object p1, p1, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
-
-    .line 423
-    invoke-virtual {v1, p1}, Ljava/util/Date;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method final f()Lorg/json/JSONObject;
-    .locals 4
-
-    .line 558
+    .line 6
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -917,18 +635,18 @@
 
     const/4 v2, 0x1
 
-    .line 560
+    .line 7
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 561
-    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
+    .line 8
+    iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
     const-string v2, "token"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 562
-    iget-object v1, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
+    .line 9
+    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
@@ -938,32 +656,32 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 563
+    .line 10
     new-instance v1, Lorg/json/JSONArray;
 
-    iget-object v2, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    iget-object v2, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
     invoke-direct {v1, v2}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
 
     const-string v2, "permissions"
 
-    .line 564
+    .line 11
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 565
+    .line 12
     new-instance v1, Lorg/json/JSONArray;
 
-    iget-object v2, p0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
+    iget-object v2, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
 
     invoke-direct {v1, v2}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
 
     const-string v2, "declined_permissions"
 
-    .line 566
+    .line 13
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 567
-    iget-object v1, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
+    .line 14
+    iget-object v1, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
@@ -973,10 +691,10 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 568
-    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
+    .line 15
+    iget-object v1, p0, Lcom/facebook/AccessToken;->h:Lg/c/d;
 
-    invoke-virtual {v1}, Lcom/facebook/c;->name()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -984,22 +702,22 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 569
-    iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
+    .line 16
+    iget-object v1, p0, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
 
     const-string v2, "application_id"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 570
-    iget-object v1, p0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
+    .line 17
+    iget-object v1, p0, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
 
     const-string v2, "user_id"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 571
-    iget-object v1, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
+    .line 18
+    iget-object v1, p0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
@@ -1012,11 +730,155 @@
     return-object v0
 .end method
 
-.method public final hashCode()I
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    .line 1
+    :cond_0
+    instance-of v1, p1, Lcom/facebook/AccessToken;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    .line 2
+    :cond_1
+    check-cast p1, Lcom/facebook/AccessToken;
+
+    .line 3
+    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
+
+    invoke-virtual {v1, v3}, Ljava/util/Date;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
+
+    .line 4
+    invoke-interface {v1, v3}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
+
+    .line 5
+    invoke-interface {v1, v3}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
+
+    .line 6
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->h:Lg/c/d;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->h:Lg/c/d;
+
+    if-ne v1, v3, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
+
+    .line 7
+    invoke-virtual {v1, v3}, Ljava/util/Date;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p1, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v3, p1, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
+
+    .line 8
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :goto_0
+    iget-object v1, p0, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
+
+    .line 9
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
+
+    iget-object p1, p1, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
+
+    .line 10
+    invoke-virtual {v1, p1}, Ljava/util/Date;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v0, 0x0
+
+    :goto_1
+    return v0
+.end method
+
+.method public hashCode()I
     .locals 2
 
-    .line 430
-    iget-object v0, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
+    .line 1
+    iget-object v0, p0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
 
     invoke-virtual {v0}, Ljava/util/Date;->hashCode()I
 
@@ -1026,123 +888,117 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 431
-    iget-object v1, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    .line 2
+    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    .line 432
-    iget-object v1, p0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
+    .line 3
+    iget-object v0, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
 
-    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
+    invoke-interface {v0}, Ljava/util/Set;->hashCode()I
 
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 433
-    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
+    move-result v0
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 434
-    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
-
-    invoke-virtual {v1}, Lcom/facebook/c;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 435
-    iget-object v1, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
-
-    invoke-virtual {v1}, Ljava/util/Date;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 436
+    .line 4
     iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
-    :goto_0
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    .line 437
-    iget-object v1, p0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
+    .line 5
+    iget-object v0, p0, Lcom/facebook/AccessToken;->h:Lg/c/d;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->hashCode()I
 
-    move-result v1
+    move-result v0
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 438
+    .line 6
     iget-object v1, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->hashCode()I
 
     move-result v1
 
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 7
+    iget-object v0, p0, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 8
+    iget-object v0, p0, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
     add-int/2addr v0, v1
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 9
+    iget-object v1, p0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
+
+    invoke-virtual {v1}, Ljava/util/Date;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 391
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "{AccessToken"
-
-    .line 393
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "{AccessToken"
 
     const-string v1, " token:"
 
-    .line 394
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1
+    invoke-static {v0, v1}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8633
-    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
     const-string v2, "null"
 
@@ -1152,39 +1008,39 @@
 
     goto :goto_0
 
-    .line 8635
+    .line 3
     :cond_0
-    sget-object v1, Lcom/facebook/j;->b:Lcom/facebook/j;
+    sget-object v1, Lg/c/n;->e:Lg/c/n;
 
-    invoke-static {v1}, Lcom/facebook/d;->a(Lcom/facebook/j;)Z
+    invoke-static {v1}, Lg/c/e;->a(Lg/c/n;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 8636
-    iget-object v1, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
+    .line 4
+    iget-object v1, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_1
     const-string v1, "ACCESS_TOKEN_REMOVED"
 
-    .line 394
+    .line 5
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, " permissions:"
 
-    .line 8643
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8644
-    iget-object v1, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    .line 7
+    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
     if-nez v1, :cond_2
 
-    .line 8645
+    .line 8
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -1192,11 +1048,11 @@
     :cond_2
     const-string v1, "["
 
-    .line 8647
+    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8648
-    iget-object v1, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    .line 10
+    iget-object v1, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
     const-string v2, ", "
 
@@ -1208,16 +1064,16 @@
 
     const-string v1, "]"
 
-    .line 8649
+    .line 11
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
     const-string v1, "}"
 
-    .line 396
+    .line 12
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 398
+    .line 13
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1225,11 +1081,11 @@
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 677
-    iget-object p2, p0, Lcom/facebook/AccessToken;->a:Ljava/util/Date;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/AccessToken;->d:Ljava/util/Date;
 
     invoke-virtual {p2}, Ljava/util/Date;->getTime()J
 
@@ -1237,40 +1093,40 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 678
+    .line 2
     new-instance p2, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/facebook/AccessToken;->b:Ljava/util/Set;
+    iget-object v0, p0, Lcom/facebook/AccessToken;->e:Ljava/util/Set;
 
     invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 679
+    .line 3
     new-instance p2, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/facebook/AccessToken;->c:Ljava/util/Set;
+    iget-object v0, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Set;
 
     invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 680
-    iget-object p2, p0, Lcom/facebook/AccessToken;->d:Ljava/lang/String;
+    .line 4
+    iget-object p2, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 681
-    iget-object p2, p0, Lcom/facebook/AccessToken;->e:Lcom/facebook/c;
+    .line 5
+    iget-object p2, p0, Lcom/facebook/AccessToken;->h:Lg/c/d;
 
-    invoke-virtual {p2}, Lcom/facebook/c;->name()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 682
-    iget-object p2, p0, Lcom/facebook/AccessToken;->f:Ljava/util/Date;
+    .line 6
+    iget-object p2, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
 
     invoke-virtual {p2}, Ljava/util/Date;->getTime()J
 
@@ -1278,18 +1134,18 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 683
-    iget-object p2, p0, Lcom/facebook/AccessToken;->g:Ljava/lang/String;
+    .line 7
+    iget-object p2, p0, Lcom/facebook/AccessToken;->j:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 684
-    iget-object p2, p0, Lcom/facebook/AccessToken;->h:Ljava/lang/String;
+    .line 8
+    iget-object p2, p0, Lcom/facebook/AccessToken;->k:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 685
-    iget-object p2, p0, Lcom/facebook/AccessToken;->i:Ljava/util/Date;
+    .line 9
+    iget-object p2, p0, Lcom/facebook/AccessToken;->l:Ljava/util/Date;
 
     invoke-virtual {p2}, Ljava/util/Date;->getTime()J
 

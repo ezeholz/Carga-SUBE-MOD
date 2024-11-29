@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;
+.class public Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;
 .super Ljava/lang/Object;
 .source "FragmentCompatFramework.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "FragmentAccessorFrameworkHoneycomb"
 .end annotation
 
@@ -28,19 +28,19 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 79
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/common/android/FragmentCompatFramework$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/common/android/FragmentCompatFramework$1;)V
     .locals 0
 
-    .line 79
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;-><init>()V
 
     return-void
@@ -59,7 +59,7 @@
 .method public bridge synthetic getChildFragmentManager(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 79
+    .line 1
     check-cast p1, Landroid/app/Fragment;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;->getChildFragmentManager(Landroid/app/Fragment;)Landroid/app/FragmentManager;
@@ -72,7 +72,7 @@
 .method public getFragmentManager(Landroid/app/Fragment;)Landroid/app/FragmentManager;
     .locals 0
 
-    .line 84
+    .line 2
     invoke-virtual {p1}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object p1
@@ -83,7 +83,7 @@
 .method public bridge synthetic getFragmentManager(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 79
+    .line 1
     check-cast p1, Landroid/app/Fragment;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;->getFragmentManager(Landroid/app/Fragment;)Landroid/app/FragmentManager;
@@ -96,7 +96,7 @@
 .method public getId(Landroid/app/Fragment;)I
     .locals 0
 
-    .line 94
+    .line 2
     invoke-virtual {p1}, Landroid/app/Fragment;->getId()I
 
     move-result p1
@@ -107,7 +107,7 @@
 .method public bridge synthetic getId(Ljava/lang/Object;)I
     .locals 0
 
-    .line 79
+    .line 1
     check-cast p1, Landroid/app/Fragment;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;->getId(Landroid/app/Fragment;)I
@@ -120,7 +120,7 @@
 .method public getResources(Landroid/app/Fragment;)Landroid/content/res/Resources;
     .locals 0
 
-    .line 89
+    .line 2
     invoke-virtual {p1}, Landroid/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -131,7 +131,7 @@
 .method public bridge synthetic getResources(Ljava/lang/Object;)Landroid/content/res/Resources;
     .locals 0
 
-    .line 79
+    .line 1
     check-cast p1, Landroid/app/Fragment;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;->getResources(Landroid/app/Fragment;)Landroid/content/res/Resources;
@@ -144,7 +144,7 @@
 .method public getTag(Landroid/app/Fragment;)Ljava/lang/String;
     .locals 0
 
-    .line 100
+    .line 2
     invoke-virtual {p1}, Landroid/app/Fragment;->getTag()Ljava/lang/String;
 
     move-result-object p1
@@ -155,7 +155,7 @@
 .method public bridge synthetic getTag(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 79
+    .line 1
     check-cast p1, Landroid/app/Fragment;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;->getTag(Landroid/app/Fragment;)Ljava/lang/String;
@@ -168,7 +168,7 @@
 .method public getView(Landroid/app/Fragment;)Landroid/view/View;
     .locals 0
 
-    .line 106
+    .line 2
     invoke-virtual {p1}, Landroid/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object p1
@@ -179,7 +179,7 @@
 .method public bridge synthetic getView(Ljava/lang/Object;)Landroid/view/View;
     .locals 0
 
-    .line 79
+    .line 1
     check-cast p1, Landroid/app/Fragment;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/common/android/FragmentCompatFramework$FragmentAccessorFrameworkHoneycomb;->getView(Landroid/app/Fragment;)Landroid/view/View;

@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;
+.class public final Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;
 .super Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;
 .source "FragmentDescriptor.java"
 
@@ -20,23 +20,23 @@
 
 
 # static fields
-.field private static final ID_ATTRIBUTE_NAME:Ljava/lang/String; = "id"
+.field public static final ID_ATTRIBUTE_NAME:Ljava/lang/String; = "id"
 
-.field private static final TAG_ATTRIBUTE_NAME:Ljava/lang/String; = "tag"
+.field public static final TAG_ATTRIBUTE_NAME:Ljava/lang/String; = "tag"
 
 
 # instance fields
-.field private final mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
+.field public final mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/common/android/FragmentCompat;)V
+.method public constructor <init>(Lcom/facebook/stetho/common/android/FragmentCompat;)V
     .locals 0
 
-    .line 48
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/AbstractChainedDescriptor;-><init>()V
 
-    .line 49
+    .line 2
     invoke-virtual {p1}, Lcom/facebook/stetho/common/android/FragmentCompat;->forFragment()Lcom/facebook/stetho/common/android/FragmentAccessor;
 
     move-result-object p1
@@ -46,12 +46,12 @@
     return-void
 .end method
 
-.method private static maybeRegister(Lcom/facebook/stetho/inspector/elements/DescriptorMap;Lcom/facebook/stetho/common/android/FragmentCompat;)V
+.method public static maybeRegister(Lcom/facebook/stetho/inspector/elements/DescriptorMap;Lcom/facebook/stetho/common/android/FragmentCompat;)V
     .locals 4
 
     if-eqz p1, :cond_0
 
-    .line 42
+    .line 1
     invoke-virtual {p1}, Lcom/facebook/stetho/common/android/FragmentCompat;->getFragmentClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -62,7 +62,7 @@
 
     const/4 v2, 0x0
 
-    .line 43
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -73,7 +73,7 @@
 
     invoke-static {v2, v1}, Lcom/facebook/stetho/common/LogUtil;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 44
+    .line 3
     new-instance v1, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;
 
     invoke-direct {v1, p1}, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;-><init>(Lcom/facebook/stetho/common/android/FragmentCompat;)V
@@ -87,14 +87,14 @@
 .method public static register(Lcom/facebook/stetho/inspector/elements/DescriptorMap;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
     .locals 1
 
-    .line 35
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/common/android/FragmentCompat;->getSupportLibInstance()Lcom/facebook/stetho/common/android/FragmentCompat;
 
     move-result-object v0
 
     invoke-static {p0, v0}, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->maybeRegister(Lcom/facebook/stetho/inspector/elements/DescriptorMap;Lcom/facebook/stetho/common/android/FragmentCompat;)V
 
-    .line 36
+    .line 2
     invoke-static {}, Lcom/facebook/stetho/common/android/FragmentCompat;->getFrameworkInstance()Lcom/facebook/stetho/common/android/FragmentCompat;
 
     move-result-object v0
@@ -106,29 +106,29 @@
 
 
 # virtual methods
-.method public final getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
+.method public getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
     .locals 3
 
-    .line 86
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getHost()Lcom/facebook/stetho/inspector/elements/Descriptor$Host;
 
     move-result-object v0
 
-    .line 90
+    .line 2
     instance-of v1, v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 91
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
     invoke-interface {v1, p1}, Lcom/facebook/stetho/common/android/FragmentAccessor;->getView(Ljava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
-    .line 92
+    .line 4
     check-cast v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDescriptorHost;->getHighlightableDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
@@ -145,21 +145,22 @@
     :goto_0
     if-nez v0, :cond_1
 
-    return-object v2
+    goto :goto_1
 
-    .line 97
+    .line 5
     :cond_1
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;->getElementToHighlightAtPosition(Ljava/lang/Object;IILandroid/graphics/Rect;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
+    :goto_1
+    return-object v2
 .end method
 
-.method public final getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
+.method public getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
     .locals 0
 
-    .line 80
+    .line 1
     iget-object p2, p0, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
     invoke-interface {p2, p1}, Lcom/facebook/stetho/common/android/FragmentAccessor;->getView(Ljava/lang/Object;)Landroid/view/View;
@@ -169,10 +170,10 @@
     return-object p1
 .end method
 
-.method public final onGetAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
+.method public onGetAttributes(Ljava/lang/Object;Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;)V
     .locals 2
 
-    .line 54
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/common/android/FragmentAccessor;->getId(Ljava/lang/Object;)I
@@ -181,25 +182,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 56
+    .line 2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
-    .line 58
+    .line 3
     invoke-interface {v1, p1}, Lcom/facebook/stetho/common/android/FragmentAccessor;->getResources(Ljava/lang/Object;)Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 56
+    .line 4
     invoke-static {p1, v1, v0}, Lcom/facebook/stetho/common/android/ResourcesUtil;->getIdStringQuietly(Ljava/lang/Object;Landroid/content/res/Resources;I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "id"
 
-    .line 60
+    .line 5
     invoke-interface {p2, v1, v0}, Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;->store(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
@@ -209,7 +210,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 64
+    .line 7
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -218,14 +219,14 @@
 
     const-string v0, "tag"
 
-    .line 65
+    .line 8
     invoke-interface {p2, v0, p1}, Lcom/facebook/stetho/inspector/elements/AttributeAccumulator;->store(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
 .end method
 
-.method public final onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+.method public onGetChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -237,7 +238,7 @@
         }
     .end annotation
 
-    .line 71
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->mAccessor:Lcom/facebook/stetho/common/android/FragmentAccessor;
 
     invoke-interface {v0, p1}, Lcom/facebook/stetho/common/android/FragmentAccessor;->getView(Ljava/lang/Object;)Landroid/view/View;
@@ -246,7 +247,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 73
+    .line 2
     invoke-interface {p2, p1}, Lcom/facebook/stetho/common/Accumulator;->store(Ljava/lang/Object;)V
 
     :cond_0

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;
+.class public Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;
 .super Landroidx/core/view/ActionProvider;
 .source "MenuItemWrapperICS.java"
 
@@ -9,28 +9,28 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "ActionProviderWrapper"
 .end annotation
 
 
 # instance fields
-.field final mInner:Landroid/view/ActionProvider;
+.field public final mInner:Landroid/view/ActionProvider;
 
-.field final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
+.field public final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
     .locals 0
 
-    .line 432
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
-    .line 433
+    .line 2
     invoke-direct {p0, p2}, Landroidx/core/view/ActionProvider;-><init>(Landroid/content/Context;)V
 
-    .line 434
+    .line 3
     iput-object p3, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     return-void
@@ -41,7 +41,7 @@
 .method public hasSubMenu()Z
     .locals 1
 
-    .line 449
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     invoke-virtual {v0}, Landroid/view/ActionProvider;->hasSubMenu()Z
@@ -54,7 +54,7 @@
 .method public onCreateActionView()Landroid/view/View;
     .locals 1
 
-    .line 439
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     invoke-virtual {v0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
@@ -67,7 +67,7 @@
 .method public onPerformDefaultAction()Z
     .locals 1
 
-    .line 444
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     invoke-virtual {v0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
@@ -80,12 +80,12 @@
 .method public onPrepareSubMenu(Landroid/view/SubMenu;)V
     .locals 2
 
-    .line 454
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->this$0:Landroidx/appcompat/view/menu/MenuItemWrapperICS;
 
-    invoke-virtual {v1, p1}, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->getSubMenuWrapper(Landroid/view/SubMenu;)Landroid/view/SubMenu;
+    invoke-virtual {v1, p1}, Landroidx/appcompat/view/menu/BaseMenuWrapper;->getSubMenuWrapper(Landroid/view/SubMenu;)Landroid/view/SubMenu;
 
     move-result-object p1
 

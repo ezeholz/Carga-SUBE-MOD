@@ -13,36 +13,36 @@
     .end annotation
 .end field
 
-.field public static final a:Lcom/google/android/gms/common/ConnectionResult;
+.field public static final h:Lcom/google/android/gms/common/ConnectionResult;
 
 
 # instance fields
-.field public final b:I
+.field public final d:I
 
-.field public final c:Landroid/app/PendingIntent;
+.field public final e:I
 
-.field public final d:Ljava/lang/String;
+.field public final f:Landroid/app/PendingIntent;
 
-.field private final e:I
+.field public final g:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 80
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/ConnectionResult;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/google/android/gms/common/ConnectionResult;-><init>(I)V
 
-    sput-object v0, Lcom/google/android/gms/common/ConnectionResult;->a:Lcom/google/android/gms/common/ConnectionResult;
+    sput-object v0, Lcom/google/android/gms/common/ConnectionResult;->h:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 81
-    new-instance v0, Lcom/google/android/gms/common/j;
+    .line 2
+    new-instance v0, Lg/d/a/b/d/r;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/j;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/d/r;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/ConnectionResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -50,35 +50,47 @@
 .end method
 
 .method public constructor <init>(I)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 7
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;B)V
-
-    return-void
-.end method
-
-.method constructor <init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
+    const/4 v0, 0x1
+
     .line 2
-    iput p1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
+    iput v0, p0, Lcom/google/android/gms/common/ConnectionResult;->d:I
 
     .line 3
-    iput p2, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
+    iput p1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
+
+    const/4 p1, 0x0
 
     .line 4
-    iput-object p3, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
+    iput-object p1, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
 
     .line 5
-    iput-object p4, p0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
+    .locals 0
+
+    .line 6
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+
+    .line 7
+    iput p1, p0, Lcom/google/android/gms/common/ConnectionResult;->d:I
+
+    .line 8
+    iput p2, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
+
+    .line 9
+    iput-object p3, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
+
+    .line 10
+    iput-object p4, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
     return-void
 .end method
@@ -86,28 +98,29 @@
 .method public constructor <init>(ILandroid/app/PendingIntent;)V
     .locals 1
 
-    const/4 v0, 0x0
-
-    .line 9
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;B)V
-
-    return-void
-.end method
-
-.method private constructor <init>(ILandroid/app/PendingIntent;B)V
-    .locals 1
-
-    const/4 p3, 0x1
-
-    const/4 v0, 0x0
-
     .line 11
-    invoke-direct {p0, p3, p1, p2, v0}, Lcom/google/android/gms/common/ConnectionResult;-><init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 12
+    iput v0, p0, Lcom/google/android/gms/common/ConnectionResult;->d:I
+
+    .line 13
+    iput p1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
+
+    .line 14
+    iput-object p2, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
+
+    const/4 p1, 0x0
+
+    .line 15
+    iput-object p1, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static a(I)Ljava/lang/String;
+.method public static a(I)Ljava/lang/String;
     .locals 2
 
     const/16 v0, 0x63
@@ -124,7 +137,7 @@
 
     const/16 v0, 0x1f
 
-    .line 49
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -300,46 +313,6 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    .line 19
-    iget v0, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    .line 20
-    iget v0, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -349,7 +322,7 @@
 
     return v0
 
-    .line 52
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/common/ConnectionResult;
 
@@ -359,34 +332,34 @@
 
     return v2
 
-    .line 54
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 55
-    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
+    .line 3
+    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
 
-    iget v3, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
+    iget v3, p1, Lcom/google/android/gms/common/ConnectionResult;->e:I
 
     if-ne v1, v3, :cond_2
 
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
 
-    iget-object v3, p1, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
+    iget-object v3, p1, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
 
-    .line 56
-    invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/n;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 4
+    invoke-static {v1, v3}, Lg/a/a/w0/d;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
-    iget-object p1, p1, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
+    iget-object p1, p1, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
-    .line 57
-    invoke-static {v1, p1}, Lcom/google/android/gms/common/internal/n;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 5
+    invoke-static {v1, p1}, Lg/a/a/w0/d;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -405,8 +378,8 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 59
-    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
+    .line 1
+    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -416,19 +389,19 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    .line 1002
+    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
@@ -439,44 +412,38 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .line 60
-    invoke-static {p0}, Lcom/google/android/gms/common/internal/n;->a(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/n$a;
+    .line 1
+    invoke-static {p0}, Lg/a/a/w0/d;->b(Ljava/lang/Object;)Lg/d/a/b/d/m/m;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
+    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
 
-    .line 61
+    .line 2
     invoke-static {v1}, Lcom/google/android/gms/common/ConnectionResult;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "statusCode"
 
-    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/n$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/n$a;
+    invoke-virtual {v0, v2, v1}, Lg/d/a/b/d/m/m;->a(Ljava/lang/String;Ljava/lang/Object;)Lg/d/a/b/d/m/m;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
 
     const-string v2, "resolution"
 
-    .line 62
-    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/n$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/n$a;
+    .line 3
+    invoke-virtual {v0, v2, v1}, Lg/d/a/b/d/m/m;->a(Ljava/lang/String;Ljava/lang/Object;)Lg/d/a/b/d/m/m;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
     const-string v2, "message"
 
-    .line 63
-    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/n$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/n$a;
+    .line 4
+    invoke-virtual {v0, v2, v1}, Lg/d/a/b/d/m/m;->a(Ljava/lang/String;Ljava/lang/Object;)Lg/d/a/b/d/m/m;
 
-    move-result-object v0
-
-    .line 64
-    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/n$a;->toString()Ljava/lang/String;
+    .line 5
+    invoke-virtual {v0}, Lg/d/a/b/d/m/m;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -484,48 +451,66 @@
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    .locals 4
 
-    const/16 v0, 0x4f45
-
-    .line 1017
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    .line 1
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result v0
 
-    .line 68
-    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
+    .line 2
+    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->d:I
 
     const/4 v2, 0x1
 
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    invoke-static {p1, v2, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    .line 1021
-    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
+    .line 3
+    iget v1, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
 
     const/4 v2, 0x2
 
-    .line 71
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    .line 4
+    invoke-static {p1, v2, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    .line 1022
-    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
+    .line 5
+    iget-object v1, p0, Lcom/google/android/gms/common/ConnectionResult;->f:Landroid/app/PendingIntent;
 
     const/4 v2, 0x3
 
-    .line 74
-    invoke-static {p1, v2, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    const/4 v3, 0x0
 
-    .line 1023
-    iget-object p2, p0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
+    .line 6
+    invoke-static {p1, v2, v1, p2, v3}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
+
+    .line 7
+    iget-object p2, p0, Lcom/google/android/gms/common/ConnectionResult;->g:Ljava/lang/String;
 
     const/4 v1, 0x4
 
-    .line 77
-    invoke-static {p1, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILjava/lang/String;)V
+    .line 8
+    invoke-static {p1, v1, p2, v3}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    .line 2018
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    .line 9
+    invoke-static {p1, v0}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     return-void
+.end method
+
+.method public final x()Z
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

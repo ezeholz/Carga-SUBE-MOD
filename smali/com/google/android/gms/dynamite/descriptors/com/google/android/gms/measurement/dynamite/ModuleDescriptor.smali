@@ -3,6 +3,11 @@
 .source "com.google.android.gms:play-services-measurement-sdk@@18.0.0"
 
 
+# annotations
+.annotation build Lcom/google/android/gms/common/util/DynamiteApi;
+.end annotation
+
+
 # static fields
 .field public static final MODULE_ID:Ljava/lang/String; = "com.google.android.gms.measurement.dynamite"
 

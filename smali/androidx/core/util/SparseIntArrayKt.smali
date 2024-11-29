@@ -9,9 +9,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 27
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result p0
@@ -20,11 +20,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -33,9 +34,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 41
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result p0
@@ -44,11 +45,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -57,9 +59,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 44
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->indexOfValue(I)I
 
     move-result p0
@@ -68,39 +70,40 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
-.method public static final forEach(Landroid/util/SparseIntArray;Lkotlin/d/a/m;)V
+.method public static final forEach(Landroid/util/SparseIntArray;Lj/m/b/p;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/util/SparseIntArray;",
-            "Lkotlin/d/a/m<",
+            "Lj/m/b/p<",
             "-",
             "Ljava/lang/Integer;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 75
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
 
     move-result v0
@@ -112,7 +115,7 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 76
+    .line 2
     invoke-virtual {p0, v1}, Landroid/util/SparseIntArray;->keyAt(I)I
 
     move-result v3
@@ -129,7 +132,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v3, v1}, Lkotlin/d/a/m;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3, v1}, Lj/m/b/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-lt v2, v0, :cond_0
 
@@ -150,9 +153,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 48
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseIntArray;->get(II)I
 
     move-result p0
@@ -160,14 +163,14 @@
     return p0
 .end method
 
-.method public static final getOrElse(Landroid/util/SparseIntArray;ILkotlin/d/a/a;)I
+.method public static final getOrElse(Landroid/util/SparseIntArray;ILj/m/b/a;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/util/SparseIntArray;",
             "I",
-            "Lkotlin/d/a/a<",
+            "Lj/m/b/a<",
             "Ljava/lang/Integer;",
             ">;)I"
         }
@@ -175,13 +178,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "defaultValue"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result p1
@@ -192,10 +195,10 @@
 
     move-result p0
 
-    return p0
+    goto :goto_0
 
     :cond_0
-    invoke-interface {p2}, Lkotlin/d/a/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lj/m/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -205,6 +208,7 @@
 
     move-result p0
 
+    :goto_0
     return p0
 .end method
 
@@ -213,9 +217,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 24
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
 
     move-result p0
@@ -228,9 +232,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 55
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
 
     move-result p0
@@ -239,11 +243,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -252,9 +257,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 58
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
 
     move-result p0
@@ -263,27 +268,26 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
-.method public static final keyIterator(Landroid/util/SparseIntArray;)Lkotlin/a/v;
+.method public static final keyIterator(Landroid/util/SparseIntArray;)Lj/j/g;
     .locals 1
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 81
+    .line 1
     new-instance v0, Landroidx/core/util/SparseIntArrayKt$keyIterator$1;
 
     invoke-direct {v0, p0}, Landroidx/core/util/SparseIntArrayKt$keyIterator$1;-><init>(Landroid/util/SparseIntArray;)V
-
-    check-cast v0, Lkotlin/a/v;
 
     return-object v0
 .end method
@@ -293,13 +297,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 34
+    .line 1
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
@@ -310,14 +314,14 @@
 
     move-result v2
 
-    add-int/2addr v1, v2
+    add-int/2addr v2, v1
 
-    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
+    invoke-direct {v0, v2}, Landroid/util/SparseIntArray;-><init>(I)V
 
-    .line 35
+    .line 2
     invoke-static {v0, p0}, Landroidx/core/util/SparseIntArrayKt;->putAll(Landroid/util/SparseIntArray;Landroid/util/SparseIntArray;)V
 
-    .line 36
+    .line 3
     invoke-static {v0, p1}, Landroidx/core/util/SparseIntArrayKt;->putAll(Landroid/util/SparseIntArray;Landroid/util/SparseIntArray;)V
 
     return-object v0
@@ -328,13 +332,13 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 95
+    .line 1
     invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
 
     move-result v0
@@ -346,7 +350,7 @@
     :goto_0
     add-int/lit8 v2, v1, 0x1
 
-    .line 96
+    .line 2
     invoke-virtual {p1, v1}, Landroid/util/SparseIntArray;->keyAt(I)I
 
     move-result v3
@@ -355,7 +359,7 @@
 
     move-result v1
 
-    .line 71
+    .line 3
     invoke-virtual {p0, v3, v1}, Landroid/util/SparseIntArray;->put(II)V
 
     if-lt v2, v0, :cond_0
@@ -377,23 +381,23 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 62
+    .line 1
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
-    .line 63
+    .line 2
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->valueAt(I)I
 
     move-result v0
 
     if-ne p2, v0, :cond_0
 
-    .line 64
+    .line 3
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->removeAt(I)V
 
     const/4 p0, 0x1
@@ -411,27 +415,25 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
 
     return-void
 .end method
 
-.method public static final valueIterator(Landroid/util/SparseIntArray;)Lkotlin/a/v;
+.method public static final valueIterator(Landroid/util/SparseIntArray;)Lj/j/g;
     .locals 1
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 88
+    .line 1
     new-instance v0, Landroidx/core/util/SparseIntArrayKt$valueIterator$1;
 
     invoke-direct {v0, p0}, Landroidx/core/util/SparseIntArrayKt$valueIterator$1;-><init>(Landroid/util/SparseIntArray;)V
-
-    check-cast v0, Lkotlin/a/v;
 
     return-object v0
 .end method

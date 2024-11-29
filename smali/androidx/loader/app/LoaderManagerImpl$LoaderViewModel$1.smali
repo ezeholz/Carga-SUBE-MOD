@@ -1,4 +1,4 @@
-.class final Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel$1;
+.class public final Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel$1;
 .super Ljava/lang/Object;
 .source "LoaderManagerImpl.java"
 
@@ -12,16 +12,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 281
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,8 +29,15 @@
 
 
 # virtual methods
-.method public final create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+.method public create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
     .locals 0
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -41,7 +48,7 @@
         }
     .end annotation
 
-    .line 286
+    .line 1
     new-instance p1, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-direct {p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;-><init>()V

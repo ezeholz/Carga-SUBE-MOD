@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaSessionCompat$2;
+.class public Landroid/support/v4/media/session/MediaSessionCompat$2;
 .super Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 .source "MediaSessionCompat.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroid/support/v4/media/session/MediaSessionCompat;
+.field public final synthetic this$0:Landroid/support/v4/media/session/MediaSessionCompat;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat;)V
+.method public constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat;)V
     .locals 0
 
-    .line 500
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$2;->this$0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;-><init>()V

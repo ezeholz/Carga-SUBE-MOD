@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;
+.class public Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;
 .super Ljava/lang/Object;
 .source "ContentProviderDatabaseDriver.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ContentProviderDatabaseDescriptor"
 .end annotation
 
@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 100
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

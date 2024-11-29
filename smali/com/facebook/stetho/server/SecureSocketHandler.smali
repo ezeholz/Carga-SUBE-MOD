@@ -7,43 +7,43 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 25
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/server/SecureSocketHandler;->mContext:Landroid/content/Context;
 
     return-void
 .end method
 
-.method private static enforcePermission(Landroid/content/Context;Landroid/net/LocalSocket;)V
+.method public static enforcePermission(Landroid/content/Context;Landroid/net/LocalSocket;)V
     .locals 4
 
-    .line 43
+    .line 1
     invoke-virtual {p1}, Landroid/net/LocalSocket;->getPeerCredentials()Landroid/net/Credentials;
 
     move-result-object p1
 
-    .line 45
+    .line 2
     invoke-virtual {p1}, Landroid/net/Credentials;->getUid()I
 
     move-result v0
 
-    .line 46
+    .line 3
     invoke-virtual {p1}, Landroid/net/Credentials;->getPid()I
 
     move-result p1
 
     const/4 v1, 0x2
 
-    .line 48
+    .line 4
     invoke-static {v1}, Lcom/facebook/stetho/common/LogUtil;->isLoggable(I)Z
 
     move-result v2
@@ -54,7 +54,7 @@
 
     const/4 v2, 0x0
 
-    .line 49
+    .line 5
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -76,7 +76,7 @@
     :cond_0
     const-string v1, "android.permission.DUMP"
 
-    .line 53
+    .line 6
     invoke-virtual {p0, v1, p1, v0}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result p0
@@ -85,15 +85,17 @@
 
     return-void
 
-    .line 55
+    .line 7
     :cond_1
     new-instance p0, Lcom/facebook/stetho/server/PeerAuthorizationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Peer pid="
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -121,32 +123,32 @@
 
 # virtual methods
 .method public final onAccepted(Landroid/net/LocalSocket;)V
-    .locals 2
+    .locals 1
 
-    .line 32
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/server/SecureSocketHandler;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/facebook/stetho/server/SecureSocketHandler;->enforcePermission(Landroid/content/Context;Landroid/net/LocalSocket;)V
 
-    .line 33
+    .line 2
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/server/SecureSocketHandler;->onSecured(Landroid/net/LocalSocket;)V
     :try_end_0
     .catch Lcom/facebook/stetho/server/PeerAuthorizationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
     :catch_0
     move-exception p1
 
-    .line 35
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Unauthorized request: "
 
-    const-string v1, "Unauthorized request: "
+    .line 3
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p1}, Lcom/facebook/stetho/server/PeerAuthorizationException;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -158,8 +160,9 @@
 
     invoke-static {p1}, Lcom/facebook/stetho/common/LogUtil;->e(Ljava/lang/String;)V
 
+    :goto_0
     return-void
 .end method
 
-.method protected abstract onSecured(Landroid/net/LocalSocket;)V
+.method public abstract onSecured(Landroid/net/LocalSocket;)V
 .end method

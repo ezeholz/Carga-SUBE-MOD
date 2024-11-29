@@ -68,10 +68,6 @@
     <string name="common_open_on_phone">Ouvrir sur le téléphone</string>
     <string name="common_signin_button_text">Se connecter</string>
     <string name="common_signin_button_text_long">Se connecter avec Google</string>
-    <string name="joda_time_android_date_time">%1$s à %2$s</string>
-    <string name="joda_time_android_preposition_for_date">le %s</string>
-    <string name="joda_time_android_preposition_for_time">à %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Rechercher</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

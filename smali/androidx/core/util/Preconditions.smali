@@ -3,11 +3,19 @@
 .source "Preconditions.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 240
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +28,7 @@
 
     return-void
 
-    .line 38
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -31,12 +39,16 @@
 
 .method public static checkArgument(ZLjava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 
     return-void
 
-    .line 52
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -51,6 +63,10 @@
 
 .method public static checkArgumentInRange(IIILjava/lang/String;)I
     .locals 5
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x2
 
@@ -66,7 +82,7 @@
 
     return p0
 
-    .line 232
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -76,7 +92,7 @@
 
     aput-object p3, v3, v2
 
-    .line 234
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -91,7 +107,7 @@
 
     const-string p1, "%s is out of range of [%d, %d] (too high)"
 
-    .line 233
+    .line 3
     invoke-static {v4, p1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -100,7 +116,7 @@
 
     throw p0
 
-    .line 228
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -110,7 +126,7 @@
 
     aput-object p3, v3, v2
 
-    .line 230
+    .line 5
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -125,7 +141,7 @@
 
     const-string p1, "%s is out of range of [%d, %d] (too low)"
 
-    .line 229
+    .line 6
     invoke-static {v4, p1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -137,12 +153,15 @@
 
 .method public static checkArgumentNonnegative(I)I
     .locals 0
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x0L
+    .end annotation
 
     if-ltz p0, :cond_0
 
     return p0
 
-    .line 207
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -153,12 +172,19 @@
 
 .method public static checkArgumentNonnegative(ILjava/lang/String;)I
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x0L
+    .end annotation
 
     if-ltz p0, :cond_0
 
     return p0
 
-    .line 191
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -168,7 +194,7 @@
 .end method
 
 .method public static checkFlagsArgument(II)I
-    .locals 3
+    .locals 2
 
     and-int v0, p0, p1
 
@@ -176,17 +202,17 @@
 
     return p0
 
-    .line 173
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Requested flags 0x"
 
-    const-string v2, "Requested flags 0x"
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    .line 174
+    .line 2
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -197,7 +223,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 175
+    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -219,6 +245,13 @@
 
 .method public static checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -234,12 +267,23 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 119
+    .line 1
     throw p0
 .end method
 
 .method public static checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -254,7 +298,7 @@
 
     return-object p0
 
-    .line 136
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -272,7 +316,7 @@
 
     const/4 v0, 0x0
 
-    .line 163
+    .line 2
     invoke-static {p0, v0}, Landroidx/core/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
     return-void
@@ -280,12 +324,16 @@
 
 .method public static checkState(ZLjava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p0, :cond_0
 
     return-void
 
-    .line 151
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -296,6 +344,13 @@
 
 .method public static checkStringNotEmpty(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 1
+    .param p0    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -304,7 +359,7 @@
         }
     .end annotation
 
-    .line 66
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -313,7 +368,7 @@
 
     return-object p0
 
-    .line 67
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -324,6 +379,17 @@
 
 .method public static checkStringNotEmpty(Ljava/lang/CharSequence;Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
+    .param p0    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -334,7 +400,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 3
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -343,7 +409,7 @@
 
     return-object p0
 
-    .line 85
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -358,6 +424,21 @@
 
 .method public static varargs checkStringNotEmpty(Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
+    .param p0    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -370,7 +451,7 @@
         }
     .end annotation
 
-    .line 103
+    .line 5
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -379,7 +460,7 @@
 
     return-object p0
 
-    .line 104
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

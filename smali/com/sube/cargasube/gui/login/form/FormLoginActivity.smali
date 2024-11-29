@@ -1,131 +1,152 @@
 .class public Lcom/sube/cargasube/gui/login/form/FormLoginActivity;
-.super Lcom/sube/cargasube/gui/common/view/b;
+.super Lg/f/a/c/c/a/g;
 .source "FormLoginActivity.java"
 
 # interfaces
-.implements Lcom/sube/cargasube/gui/common/view/a/a/a$a;
-.implements Lcom/sube/cargasube/gui/common/view/a/b/a$a;
-.implements Lcom/sube/cargasube/gui/common/view/a/b/b$a;
+.implements Lg/f/a/c/c/a/j/c/a$a;
+.implements Lg/f/a/c/c/a/j/c/b$a;
+.implements Lg/f/a/c/c/a/j/b/a$a;
 
 
 # instance fields
-.field private a:Lcom/sube/cargasube/gui/common/a/a;
+.field public f:Lg/f/a/c/c/b/a;
 
-.field private b:Landroid/widget/ImageView;
+.field public g:Landroid/widget/ImageView;
 
-.field private c:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
+.field public h:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
 
-.field private d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
+.field public i:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-.field private e:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
+.field public j:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
 
-.field private f:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
+.field public k:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
 
-.field private h:Landroid/widget/TextView;
+.field public l:Landroid/widget/TextView;
 
-.field private i:Lcom/google/android/material/button/MaterialButton;
+.field public m:Lcom/google/android/material/button/MaterialButton;
 
-.field private j:Lcom/google/android/material/switchmaterial/SwitchMaterial;
+.field public n:Lcom/google/android/material/switchmaterial/SwitchMaterial;
 
-.field private k:Landroid/widget/ProgressBar;
+.field public o:Landroid/widget/ProgressBar;
 
-.field private l:Lcom/sube/cargasube/gui/login/b/b;
+.field public p:Lg/f/a/c/d/d/c;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 44
-    invoke-direct {p0}, Lcom/sube/cargasube/gui/common/view/b;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lg/f/a/c/c/a/g;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+.method public static synthetic a(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 5155
-    invoke-direct {p0, v0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->b(Z)V
+    .line 1
+    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->c(Z)V
 
     return-void
 .end method
 
-.method static synthetic b(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Lcom/google/android/material/switchmaterial/SwitchMaterial;
-    .locals 0
-
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->j:Lcom/google/android/material/switchmaterial/SwitchMaterial;
-
-    return-object p0
-.end method
-
-.method private b()V
+.method public static synthetic b(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
     .locals 2
 
-    .line 403
+    if-eqz p0, :cond_0
+
+    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/sube/cargasube/gui/login/pre_form/PreFormLoginActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 404
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->startActivity(Landroid/content/Intent;)V
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 405
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->finish()V
+    .line 3
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+
+    return-void
+
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 4
+    throw p0
+.end method
+
+
+# virtual methods
+.method public a()V
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method
 
-.method private b(Z)V
+.method public c()V
     .locals 1
 
-    .line 163
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->b:Landroid/widget/ImageView;
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->c(Z)V
+
+    return-void
+.end method
+
+.method public final c(Z)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->g:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 164
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->c:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
+    .line 3
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->h:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
 
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setEnabled(Z)V
 
-    .line 165
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
+    .line 4
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setEnabled(Z)V
 
-    .line 166
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->e:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
+    .line 5
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->j:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
 
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setEnabled(Z)V
 
-    .line 167
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->f:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
+    .line 6
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->k:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
 
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setEnabled(Z)V
 
-    .line 168
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->h:Landroid/widget/TextView;
+    .line 7
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->l:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 169
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/google/android/material/button/MaterialButton;
+    .line 8
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->m:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/button/MaterialButton;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 170
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->j:Lcom/google/android/material/switchmaterial/SwitchMaterial;
+    .line 9
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->n:Lcom/google/android/material/switchmaterial/SwitchMaterial;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/switchmaterial/SwitchMaterial;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/widget/CompoundButton;->setEnabled(Z)V
 
-    .line 171
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->k:Landroid/widget/ProgressBar;
+    .line 10
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->o:Landroid/widget/ProgressBar;
 
     if-eqz p1, :cond_0
 
@@ -142,462 +163,291 @@
     return-void
 .end method
 
-.method static synthetic c(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
+.method public d()V
     .locals 0
 
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->c:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
-
-    return-object p0
-.end method
-
-.method static synthetic d(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
-    .locals 0
-
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
-
-    return-object p0
-.end method
-
-.method static synthetic e(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
-    .locals 0
-
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->e:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
-
-    return-object p0
-.end method
-
-.method static synthetic f(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
-    .locals 0
-
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->f:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
-
-    return-object p0
-.end method
-
-.method static synthetic g(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Lcom/sube/cargasube/gui/common/a/a;
-    .locals 0
-
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->a:Lcom/sube/cargasube/gui/common/a/a;
-
-    return-object p0
-.end method
-
-.method static synthetic h(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)Landroid/widget/ProgressBar;
-    .locals 0
-
-    .line 44
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->k:Landroid/widget/ProgressBar;
-
-    return-object p0
-.end method
-
-.method static synthetic i(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
-    .locals 6
-
-    .line 5282
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->j:Lcom/google/android/material/switchmaterial/SwitchMaterial;
-
-    invoke-virtual {v0}, Lcom/google/android/material/switchmaterial/SwitchMaterial;->isChecked()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->c:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
-
-    invoke-virtual {v0}, Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    .line 5283
-    :goto_1
-    iget-object v3, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
-
-    invoke-virtual {v3}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->g()Z
-
-    move-result v3
-
-    .line 5284
-    iget-object v4, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->e:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
-
-    invoke-virtual {v4}, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->e()Z
-
-    move-result v4
-
-    .line 5285
-    iget-object v5, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->f:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
-
-    invoke-virtual {v5}, Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;->e()Z
-
-    move-result v5
-
-    if-eqz v0, :cond_2
-
-    if-eqz v3, :cond_2
-
-    if-eqz v4, :cond_2
-
-    if-eqz v5, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_4
-
-    .line 5256
-    invoke-static {p0}, Lcom/sube/cargasube/c/a;->a(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 5258
-    iget-object p0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->l:Lcom/sube/cargasube/gui/login/b/b;
-
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/b/b;->a()V
-
-    return-void
-
-    :cond_3
-    const v0, 0x7f12008e
-
-    .line 5275
-    invoke-virtual {p0, v0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 5272
-    invoke-static {p0, v2, v0}, Lcom/sube/cargasube/gui/common/view/a/a/a;->a(Landroid/content/Context;ZLjava/lang/String;)Lcom/sube/cargasube/gui/common/view/a/a/a;
-
-    move-result-object v0
-
-    .line 5277
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object p0
-
-    const-string v1, "errorDialog"
-
-    invoke-virtual {v0, p0, v1}, Lcom/sube/cargasube/gui/common/view/a/a/a;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
-
-    :cond_4
-    return-void
-.end method
-
-.method static synthetic j(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
-    .locals 0
-
-    .line 44
-    invoke-direct {p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->b()V
+    .line 1
+    invoke-static {p0}, Lg/d/a/b/d/m/q/a;->i(Landroid/content/Context;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
+.method public e()V
     .locals 0
 
-    .line 425
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->finish()V
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 4159
-    invoke-direct {p0, v0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->b(Z)V
+    .line 1
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method
 
 .method public onBackPressed()V
-    .locals 0
+    .locals 2
 
-    .line 399
-    invoke-direct {p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->b()V
+    .line 1
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/sube/cargasube/gui/login/pre_form/PreFormLoginActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    .line 3
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 69
-    invoke-super {p0, p1}, Lcom/sube/cargasube/gui/common/view/b;->onCreate(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Lg/f/a/c/c/a/g;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d004c
+    const p1, 0x7f0d004d
 
-    .line 70
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->setContentView(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    .line 1080
-    new-instance p1, Lcom/sube/cargasube/gui/login/b/b;
+    .line 3
+    new-instance p1, Lg/f/a/c/d/d/c;
 
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$1;
+    new-instance v0, Lg/f/a/c/d/a/a;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$1;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/a;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
-    invoke-direct {p1, p0, v0}, Lcom/sube/cargasube/gui/login/b/b;-><init>(Landroid/content/Context;Lcom/sube/cargasube/gui/login/b/b$a;)V
+    invoke-direct {p1, p0, v0}, Lg/f/a/c/d/d/c;-><init>(Landroid/content/Context;Lg/f/a/c/d/d/c$c;)V
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->l:Lcom/sube/cargasube/gui/login/b/b;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->p:Lg/f/a/c/d/d/c;
 
-    .line 1113
+    .line 4
     invoke-static {p0}, Landroidx/lifecycle/ViewModelProviders;->of(Landroidx/fragment/app/FragmentActivity;)Landroidx/lifecycle/ViewModelProvider;
 
     move-result-object p1
 
-    const-class v0, Lcom/sube/cargasube/gui/common/a/a;
+    const-class v0, Lg/f/a/c/c/b/a;
 
     invoke-virtual {p1, v0}, Landroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p1
 
-    check-cast p1, Lcom/sube/cargasube/gui/common/a/a;
+    check-cast p1, Lg/f/a/c/c/b/a;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->a:Lcom/sube/cargasube/gui/common/a/a;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->f:Lg/f/a/c/c/b/a;
 
-    .line 1164
-    iget-object p1, p1, Lcom/sube/cargasube/gui/common/a/a;->a:Landroidx/lifecycle/MediatorLiveData;
+    .line 5
+    iget-object p1, p1, Lg/f/a/c/c/b/a;->b:Landroidx/lifecycle/MediatorLiveData;
 
-    .line 1115
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$2;
+    .line 6
+    new-instance v0, Lg/f/a/c/d/a/b;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$2;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/b;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
     invoke-virtual {p1, p0, v0}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
-    const p1, 0x7f0a00c8
+    const p1, 0x7f0a00cb
 
-    .line 1175
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 7
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/ImageView;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->b:Landroid/widget/ImageView;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->g:Landroid/widget/ImageView;
 
-    .line 1389
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$7;
+    .line 8
+    new-instance v0, Lg/f/a/c/d/a/i;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$7;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/i;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a017c
+    const p1, 0x7f0a0186
 
-    .line 2194
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 9
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->f:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->k:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
 
-    .line 2195
-    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;->d()V
+    .line 10
+    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;->p()V
 
-    const p1, 0x7f0a0179
+    const p1, 0x7f0a0183
 
-    .line 2197
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 11
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->e:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->j:Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
 
-    .line 2198
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->f:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
+    .line 12
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->k:Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;
 
-    invoke-virtual {v0}, Lcom/sube/cargasube/gui/login/form/sube_views/password/SubeTextInputLayoutTextPassword;->getEditText()Landroid/widget/EditText;
+    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->a(Landroid/widget/EditText;)V
+    invoke-virtual {p1, v0}, Lg/f/a/c/d/a/j/a/c/c;->a(Landroid/widget/EditText;)V
 
-    const p1, 0x7f0a017b
+    const p1, 0x7f0a0185
 
-    .line 2200
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 13
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-    .line 2201
-    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->d()V
+    .line 14
+    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
-    const p1, 0x7f0a017a
+    move-result-object v0
 
-    .line 2203
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    check-cast v0, Lcom/google/android/material/textfield/TextInputEditText;
+
+    iput-object v0, p1, Lg/f/a/c/d/a/j/a/b/b;->v0:Lcom/google/android/material/textfield/TextInputEditText;
+
+    .line 15
+    new-instance v1, Lg/f/a/c/d/a/j/a/b/a;
+
+    invoke-direct {v1, p1}, Lg/f/a/c/d/a/j/a/b/a;-><init>(Lg/f/a/c/d/a/j/a/b/b;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    const p1, 0x7f0a0184
+
+    .line 16
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->c:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->h:Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;
 
-    .line 2204
-    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
+    .line 17
+    iget-object v0, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-    invoke-virtual {v0}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->getEditText()Landroid/widget/EditText;
+    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object v0
 
-    .line 2225
-    invoke-virtual {p1, v0}, Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;->a(Landroid/widget/EditText;)V
+    .line 18
+    invoke-virtual {p1, v0}, Lg/f/a/c/d/a/j/a/c/c;->a(Landroid/widget/EditText;)V
 
-    .line 2226
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$4;
+    .line 19
+    new-instance v0, Lg/f/a/c/d/a/d;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$4;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/d;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
     invoke-virtual {p1, v0}, Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId;->setOnIdTypeIdSelectionListener(Lcom/sube/cargasube/gui/login/form/sube_views/id_type/SubeTextInputLayoutSpinnerTypeId$a;)V
 
-    const p1, 0x7f0a01b1
+    const p1, 0x7f0a01bb
 
-    .line 1180
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 20
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->h:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->l:Landroid/widget/TextView;
 
-    .line 3215
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$3;
+    .line 21
+    new-instance v0, Lg/f/a/c/d/a/c;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$3;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/c;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a00fb
+    const p1, 0x7f0a0100
 
-    .line 1183
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 22
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/google/android/material/button/MaterialButton;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/google/android/material/button/MaterialButton;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->m:Lcom/google/android/material/button/MaterialButton;
 
-    .line 3246
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$5;
+    .line 23
+    new-instance v0, Lg/f/a/c/d/a/e;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$5;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/e;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/button/MaterialButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a0183
+    const p1, 0x7f0a018d
 
-    .line 1186
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 24
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Lcom/google/android/material/switchmaterial/SwitchMaterial;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->j:Lcom/google/android/material/switchmaterial/SwitchMaterial;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->n:Lcom/google/android/material/switchmaterial/SwitchMaterial;
 
-    .line 3291
-    new-instance v0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$6;
+    .line 25
+    new-instance v0, Lg/f/a/c/d/a/h;
 
-    invoke-direct {v0, p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity$6;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
+    invoke-direct {v0, p0}, Lg/f/a/c/d/a/h;-><init>(Lcom/sube/cargasube/gui/login/form/FormLoginActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/switchmaterial/SwitchMaterial;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {p1, v0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 3381
-    invoke-virtual {p1}, Lcom/google/android/material/switchmaterial/SwitchMaterial;->isChecked()Z
+    .line 26
+    invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3382
-    iget-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
+    .line 27
+    iget-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->f()V
+    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->q()V
 
     goto :goto_0
 
-    .line 3384
+    .line 28
     :cond_0
-    iget-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->d:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
+    iget-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->i:Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;
 
-    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->e()V
+    invoke-virtual {p1}, Lcom/sube/cargasube/gui/login/form/sube_views/id/SubeTextInputLayoutTextId;->p()V
 
     :goto_0
-    const p1, 0x7f0a013c
+    const p1, 0x7f0a0142
 
-    .line 1189
-    invoke-virtual {p0, p1}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->findViewById(I)Landroid/view/View;
+    .line 29
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/ProgressBar;
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->k:Landroid/widget/ProgressBar;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->o:Landroid/widget/ProgressBar;
 
     const/4 v0, 0x1
 
-    .line 1190
+    .line 30
     invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
-
-    return-void
-.end method
-
-.method public final r_()V
-    .locals 0
-
-    .line 415
-    invoke-static {p0}, Lcom/sube/cargasube/gui/common/view/e;->c(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method public final s_()V
-    .locals 0
-
-    .line 420
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/form/FormLoginActivity;->finish()V
 
     return-void
 .end method

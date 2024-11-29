@@ -23,7 +23,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Landroidx/annotation/InspectableProperty$ValueType;
+.field public static final synthetic $VALUES:[Landroidx/annotation/InspectableProperty$ValueType;
 
 .field public static final enum COLOR:Landroidx/annotation/InspectableProperty$ValueType;
 
@@ -41,10 +41,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 10
 
-    .line 152
+    .line 1
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v1, 0x0
@@ -55,7 +55,7 @@
 
     sput-object v0, Landroidx/annotation/InspectableProperty$ValueType;->NONE:Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 157
+    .line 2
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v2, 0x1
@@ -66,7 +66,7 @@
 
     sput-object v0, Landroidx/annotation/InspectableProperty$ValueType;->INFERRED:Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 166
+    .line 3
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v3, 0x2
@@ -77,7 +77,7 @@
 
     sput-object v0, Landroidx/annotation/InspectableProperty$ValueType;->INT_ENUM:Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 175
+    .line 4
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v4, 0x3
@@ -88,7 +88,7 @@
 
     sput-object v0, Landroidx/annotation/InspectableProperty$ValueType;->INT_FLAG:Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 182
+    .line 5
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v5, 0x4
@@ -99,7 +99,7 @@
 
     sput-object v0, Landroidx/annotation/InspectableProperty$ValueType;->COLOR:Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 189
+    .line 6
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v6, 0x5
@@ -110,7 +110,7 @@
 
     sput-object v0, Landroidx/annotation/InspectableProperty$ValueType;->GRAVITY:Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 197
+    .line 7
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     const/4 v7, 0x6
@@ -125,7 +125,7 @@
 
     new-array v8, v8, [Landroidx/annotation/InspectableProperty$ValueType;
 
-    .line 148
+    .line 8
     sget-object v9, Landroidx/annotation/InspectableProperty$ValueType;->NONE:Landroidx/annotation/InspectableProperty$ValueType;
 
     aput-object v9, v8, v1
@@ -157,7 +157,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -165,7 +165,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -174,7 +174,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/annotation/InspectableProperty$ValueType;
     .locals 1
 
-    .line 148
+    .line 1
     const-class v0, Landroidx/annotation/InspectableProperty$ValueType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -189,7 +189,7 @@
 .method public static values()[Landroidx/annotation/InspectableProperty$ValueType;
     .locals 1
 
-    .line 148
+    .line 1
     sget-object v0, Landroidx/annotation/InspectableProperty$ValueType;->$VALUES:[Landroidx/annotation/InspectableProperty$ValueType;
 
     invoke-virtual {v0}, [Landroidx/annotation/InspectableProperty$ValueType;->clone()Ljava/lang/Object;

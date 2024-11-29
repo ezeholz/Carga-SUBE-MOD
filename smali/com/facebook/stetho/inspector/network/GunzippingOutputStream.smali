@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;
+.class public Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;
 .super Ljava/io/FilterOutputStream;
 .source "GunzippingOutputStream.java"
 
@@ -12,11 +12,11 @@
 
 
 # static fields
-.field private static final sExecutor:Ljava/util/concurrent/ExecutorService;
+.field public static final sExecutor:Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field private final mCopyFuture:Ljava/util/concurrent/Future;
+.field public final mCopyFuture:Ljava/util/concurrent/Future;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/Future<",
@@ -28,10 +28,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 37
+    .line 1
     invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/io/OutputStream;Ljava/util/concurrent/Future;)V
+.method public constructor <init>(Ljava/io/OutputStream;Ljava/util/concurrent/Future;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -53,10 +53,10 @@
         }
     .end annotation
 
-    .line 50
+    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 51
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;->mCopyFuture:Ljava/util/concurrent/Future;
 
     return-void
@@ -65,17 +65,17 @@
 .method public static create(Ljava/io/OutputStream;)Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;
     .locals 4
 
-    .line 40
+    .line 1
     new-instance v0, Ljava/io/PipedInputStream;
 
     invoke-direct {v0}, Ljava/io/PipedInputStream;-><init>()V
 
-    .line 41
+    .line 2
     new-instance v1, Ljava/io/PipedOutputStream;
 
     invoke-direct {v1, v0}, Ljava/io/PipedOutputStream;-><init>(Ljava/io/PipedInputStream;)V
 
-    .line 43
+    .line 3
     sget-object v2, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;->sExecutor:Ljava/util/concurrent/ExecutorService;
 
     new-instance v3, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream$GunzippingCallable;
@@ -86,7 +86,7 @@
 
     move-result-object p0
 
-    .line 46
+    .line 4
     new-instance v0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;
 
     invoke-direct {v0, v1, p0}, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;-><init>(Ljava/io/OutputStream;Ljava/util/concurrent/Future;)V
@@ -94,7 +94,7 @@
     return-object v0
 .end method
 
-.method private static getAndRethrow(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+.method public static getAndRethrow(Ljava/util/concurrent/Future;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -106,7 +106,7 @@
         }
     .end annotation
 
-    .line 74
+    .line 1
     :catch_0
     :goto_0
     :try_start_0
@@ -122,17 +122,17 @@
     :catch_1
     move-exception v0
 
-    .line 78
+    .line 2
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    .line 79
+    .line 3
     const-class v1, Ljava/io/IOException;
 
     invoke-static {v0, v1}, Lcom/facebook/stetho/common/ExceptionUtil;->propagateIfInstanceOf(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
-    .line 80
+    .line 4
     invoke-static {v0}, Lcom/facebook/stetho/common/ExceptionUtil;->propagate(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     goto :goto_0
@@ -143,13 +143,13 @@
 .method public close()V
     .locals 2
 
-    .line 58
+    .line 1
     :try_start_0
     invoke-super {p0}, Ljava/io/FilterOutputStream;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
+    .line 2
     :try_start_1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;->mCopyFuture:Ljava/util/concurrent/Future;
 
@@ -162,13 +162,13 @@
     :catch_0
     move-exception v0
 
-    .line 65
+    .line 3
     throw v0
 
     :catchall_0
     move-exception v0
 
-    .line 62
+    .line 4
     :try_start_2
     iget-object v1, p0, Lcom/facebook/stetho/inspector/network/GunzippingOutputStream;->mCopyFuture:Ljava/util/concurrent/Future;
 
@@ -176,7 +176,7 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 68
+    .line 5
     :catch_1
     throw v0
 .end method

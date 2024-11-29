@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/protocol/module/CSS$1;
+.class public Lcom/facebook/stetho/inspector/protocol/module/CSS$1;
 .super Ljava/lang/Object;
 .source "CSS.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/CSS;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/protocol/module/CSS;
 
-.field final synthetic val$request:Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;
+.field public final synthetic val$request:Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;
 
-.field final synthetic val$result:Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;
+.field public final synthetic val$result:Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/CSS;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/protocol/module/CSS;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeResult;)V
     .locals 0
 
-    .line 66
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;->this$0:Lcom/facebook/stetho/inspector/protocol/module/CSS;
 
     iput-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;->val$request:Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 69
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;->this$0:Lcom/facebook/stetho/inspector/protocol/module/CSS;
 
     invoke-static {v0}, Lcom/facebook/stetho/inspector/protocol/module/CSS;->access$200(Lcom/facebook/stetho/inspector/protocol/module/CSS;)Lcom/facebook/stetho/inspector/elements/Document;
@@ -63,12 +63,12 @@
 
     if-nez v0, :cond_0
 
-    .line 72
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Tried to get the style of an element that does not exist, using nodeid="
 
-    const-string v1, "Tried to get the style of an element that does not exist, using nodeid="
+    .line 2
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;->val$request:Lcom/facebook/stetho/inspector/protocol/module/CSS$GetComputedStyleForNodeRequest;
 
@@ -84,7 +84,7 @@
 
     return-void
 
-    .line 78
+    .line 3
     :cond_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/protocol/module/CSS$1;->this$0:Lcom/facebook/stetho/inspector/protocol/module/CSS;
 

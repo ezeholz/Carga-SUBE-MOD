@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$1;
+.class public Landroidx/media/MediaBrowserServiceCompat$1;
 .super Landroidx/media/MediaBrowserServiceCompat$Result;
 .source "MediaBrowserServiceCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -24,22 +24,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
+.field public final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-.field final synthetic val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
+.field public final synthetic val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-.field final synthetic val$notifyChildrenChangedOptions:Landroid/os/Bundle;
+.field public final synthetic val$notifyChildrenChangedOptions:Landroid/os/Bundle;
 
-.field final synthetic val$parentId:Ljava/lang/String;
+.field public final synthetic val$parentId:Ljava/lang/String;
 
-.field final synthetic val$subscribeOptions:Landroid/os/Bundle;
+.field public final synthetic val$subscribeOptions:Landroid/os/Bundle;
 
 
 # direct methods
-.method constructor <init>(Landroidx/media/MediaBrowserServiceCompat;Ljava/lang/Object;Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroidx/media/MediaBrowserServiceCompat;Ljava/lang/Object;Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1573
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$1;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
@@ -57,10 +57,10 @@
 
 
 # virtual methods
-.method bridge synthetic onResultSent(Ljava/lang/Object;)V
+.method public bridge synthetic onResultSent(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1573
+    .line 1
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Landroidx/media/MediaBrowserServiceCompat$1;->onResultSent(Ljava/util/List;)V
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method onResultSent(Ljava/util/List;)V
+.method public onResultSent(Ljava/util/List;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -79,7 +79,7 @@
         }
     .end annotation
 
-    .line 1576
+    .line 2
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$1;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat;->mConnections:Landroidx/collection/ArrayMap;
@@ -92,7 +92,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -100,38 +100,20 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1577
+    .line 3
     sget-boolean p1, Landroidx/media/MediaBrowserServiceCompat;->DEBUG:Z
 
     if-eqz p1, :cond_0
 
-    .line 1578
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Not sending onLoadChildren result for connection that has been disconnected. pkg="
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
-
-    iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " id="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$parentId:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 4
+    iget-object p1, v1, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg:Ljava/lang/String;
 
     :cond_0
     return-void
 
-    .line 1585
+    .line 5
     :cond_1
-    invoke-virtual {p0}, Landroidx/media/MediaBrowserServiceCompat$1;->getFlags()I
+    invoke-virtual {p0}, Landroidx/media/MediaBrowserServiceCompat$Result;->getFlags()I
 
     move-result v0
 
@@ -143,12 +125,12 @@
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$subscribeOptions:Landroid/os/Bundle;
 
-    .line 1586
+    .line 6
     invoke-virtual {v0, p1, v1}, Landroidx/media/MediaBrowserServiceCompat;->applyOptions(Ljava/util/List;Landroid/os/Bundle;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 1588
+    .line 7
     :cond_2
     :try_start_0
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
@@ -165,29 +147,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
-    .line 1592
+    .line 8
     :catch_0
-    new-instance p1, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    const-string v0, "Calling onLoadChildren() failed for id="
+    iget-object p1, p1, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg:Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$parentId:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " package="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
-
-    iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    :goto_0
     return-void
 .end method

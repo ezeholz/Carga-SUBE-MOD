@@ -22,7 +22,7 @@
     <string name="abc_searchview_description_clear">Исчисти барање</string>
     <string name="abc_searchview_description_query">Пребарај барање</string>
     <string name="abc_searchview_description_search">Пребарај</string>
-    <string name="abc_searchview_description_submit">Поднеси барање</string>
+    <string name="abc_searchview_description_submit">Испрати барање</string>
     <string name="abc_searchview_description_voice">Гласовно пребарување</string>
     <string name="abc_shareactionprovider_share_with">Сподели со</string>
     <string name="abc_shareactionprovider_share_with_application">Сподели со %s</string>

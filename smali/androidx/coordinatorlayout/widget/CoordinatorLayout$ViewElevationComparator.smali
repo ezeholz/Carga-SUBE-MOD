@@ -1,4 +1,4 @@
-.class Landroidx/coordinatorlayout/widget/CoordinatorLayout$ViewElevationComparator;
+.class public Landroidx/coordinatorlayout/widget/CoordinatorLayout$ViewElevationComparator;
 .super Ljava/lang/Object;
 .source "CoordinatorLayout.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ViewElevationComparator"
 .end annotation
 
@@ -27,10 +27,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 1998
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,12 +41,12 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 1
 
-    .line 2001
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
 
     move-result p1
 
-    .line 2002
+    .line 3
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
 
     move-result p2
@@ -77,7 +77,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1998
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

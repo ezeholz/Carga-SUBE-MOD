@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/ListAdapter$1;
+.class public Landroidx/recyclerview/widget/ListAdapter$1;
 .super Ljava/lang/Object;
 .source "ListAdapter.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,14 +26,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/ListAdapter;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/ListAdapter;
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/ListAdapter;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/ListAdapter;)V
     .locals 0
 
-    .line 98
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/ListAdapter$1;->this$0:Landroidx/recyclerview/widget/ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +45,14 @@
 # virtual methods
 .method public onCurrentListChanged(Ljava/util/List;Ljava/util/List;)V
     .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,7 +63,7 @@
         }
     .end annotation
 
-    .line 102
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ListAdapter$1;->this$0:Landroidx/recyclerview/widget/ListAdapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/ListAdapter;->onCurrentListChanged(Ljava/util/List;Ljava/util/List;)V

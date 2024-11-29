@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/FontProvider$1;
+.class public Landroidx/core/provider/FontProvider$1;
 .super Ljava/lang/Object;
 .source "FontProvider.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,10 +26,10 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 197
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 197
+    .line 1
     check-cast p1, [B
 
     check-cast p2, [B
@@ -55,14 +55,14 @@
 .method public compare([B[B)I
     .locals 4
 
-    .line 200
+    .line 2
     array-length v0, p1
 
     array-length v1, p2
 
     if-eq v0, v1, :cond_0
 
-    .line 201
+    .line 3
     array-length p1, p1
 
     array-length p2, p2
@@ -77,20 +77,20 @@
 
     const/4 v1, 0x0
 
-    .line 203
+    .line 4
     :goto_1
     array-length v2, p1
 
     if-ge v1, v2, :cond_2
 
-    .line 204
+    .line 5
     aget-byte v2, p1, v1
 
     aget-byte v3, p2, v1
 
     if-eq v2, v3, :cond_1
 
-    .line 205
+    .line 6
     aget-byte p1, p1, v1
 
     aget-byte p2, p2, v1

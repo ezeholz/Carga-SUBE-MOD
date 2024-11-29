@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$NoopHighlighter;
+.class public final Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$NoopHighlighter;
 .super Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 .source "ViewHighlighter.java"
 
@@ -9,25 +9,25 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "NoopHighlighter"
 .end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 44
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$1;)V
     .locals 0
 
-    .line 44
+    .line 2
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$NoopHighlighter;-><init>()V
 
     return-void
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public final clearHighlight()V
+.method public clearHighlight()V
     .locals 0
 
     return-void
 .end method
 
-.method public final setHighlightedView(Landroid/view/View;Landroid/graphics/Rect;I)V
+.method public setHighlightedView(Landroid/view/View;Landroid/graphics/Rect;I)V
     .locals 0
 
     return-void

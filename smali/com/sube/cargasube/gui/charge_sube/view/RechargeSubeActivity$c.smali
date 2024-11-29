@@ -1,44 +1,36 @@
-.class final Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$c;
+.class public final Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$c;
 .super Ljava/lang/Object;
 .source "RechargeSubeActivity.kt"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Lg/f/a/c/a/c/a/b/b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Landroidx/lifecycle/Observer<",
-        "Ljava/util/List<",
-        "+",
-        "Lcom/sube/cargasube/gui/charge_sube/a/a;",
-        ">;>;"
-    }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
+.field public final synthetic a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)V
+.method public constructor <init>(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$c;->a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,38 +40,48 @@
 
 
 # virtual methods
-.method public final synthetic onChanged(Ljava/lang/Object;)V
+.method public a(Ljava/lang/String;)V
     .locals 2
 
-    .line 21
-    check-cast p1, Ljava/util/List;
+    const-string v0, "paymentMethodHandle"
 
-    .line 1033
-    iget-object v0, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$c;->a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;->a(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/selected/SelectedWalletsRecyclerView;
+    .line 1
+    iget-object v1, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$c;->a:Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;->a(Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity;)Lg/f/a/c/a/d/a;
 
-    const-string v1, "it"
+    move-result-object v1
 
-    invoke-static {p1, v1}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz v1, :cond_0
 
-    const-string v1, "paymentMethod"
+    .line 2
+    invoke-static {p1, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v1}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 3
+    iget-object v0, v1, Lg/f/a/c/a/d/a;->a:Lg/f/a/c/a/b/a;
 
-    .line 1055
-    iget-object v0, v0, Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/selected/SelectedWalletsRecyclerView;->b:Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/selected/c;
+    .line 4
+    iget-object v1, v0, Lg/f/a/c/a/b/a;->c:Landroid/content/Context;
 
-    if-nez v0, :cond_0
+    invoke-static {v1}, Lcom/sube/cargasube/user/UserInfo;->getInstance(Landroid/content/Context;)Lcom/sube/cargasube/user/UserInfo;
 
-    const-string v1, "selectedWalletsAdapter"
+    move-result-object v1
 
-    invoke-static {v1}, Lkotlin/d/b/h;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lcom/sube/cargasube/user/UserInfo;->removeFromSelectedPaymentMethods(Ljava/lang/String;)V
 
-    :cond_0
-    invoke-virtual {v0, p1}, Lcom/sube/cargasube/gui/charge_sube/view/wallets_listing/selected/c;->submitList(Ljava/util/List;)V
+    .line 5
+    invoke-virtual {v0}, Lg/f/a/c/a/b/a;->b()V
+
+    .line 6
+    invoke-virtual {v0}, Lg/f/a/c/a/b/a;->a()V
 
     return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 7
+    throw p1
 .end method

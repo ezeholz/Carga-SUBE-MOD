@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
+.class public Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
 .super Ljava/lang/Object;
 .source "AnimateLayoutChangeDetector.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,14 +26,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
 
 
 # direct methods
-.method constructor <init>(Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;)V
     .locals 0
 
-    .line 94
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;->this$0:Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 94
+    .line 1
     check-cast p1, [I
 
     check-cast p2, [I
@@ -63,7 +63,7 @@
 
     const/4 v0, 0x0
 
-    .line 97
+    .line 2
     aget p1, p1, v0
 
     aget p2, p2, v0

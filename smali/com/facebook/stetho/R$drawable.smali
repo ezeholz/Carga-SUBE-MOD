@@ -62,65 +62,65 @@
 
 .field public static final abc_ic_menu_share_mtrl_alpha:I = 0x7f080025
 
-.field public static final abc_item_background_holo_dark:I = 0x7f08002e
+.field public static final abc_item_background_holo_dark:I = 0x7f080028
 
-.field public static final abc_item_background_holo_light:I = 0x7f08002f
+.field public static final abc_item_background_holo_light:I = 0x7f080029
 
-.field public static final abc_list_divider_mtrl_alpha:I = 0x7f080031
+.field public static final abc_list_divider_mtrl_alpha:I = 0x7f08002b
 
-.field public static final abc_list_focused_holo:I = 0x7f080032
+.field public static final abc_list_focused_holo:I = 0x7f08002c
 
-.field public static final abc_list_longpressed_holo:I = 0x7f080033
+.field public static final abc_list_longpressed_holo:I = 0x7f08002d
 
-.field public static final abc_list_pressed_holo_dark:I = 0x7f080034
+.field public static final abc_list_pressed_holo_dark:I = 0x7f08002e
 
-.field public static final abc_list_pressed_holo_light:I = 0x7f080035
+.field public static final abc_list_pressed_holo_light:I = 0x7f08002f
 
-.field public static final abc_list_selector_background_transition_holo_dark:I = 0x7f080036
+.field public static final abc_list_selector_background_transition_holo_dark:I = 0x7f080030
 
-.field public static final abc_list_selector_background_transition_holo_light:I = 0x7f080037
+.field public static final abc_list_selector_background_transition_holo_light:I = 0x7f080031
 
-.field public static final abc_list_selector_disabled_holo_dark:I = 0x7f080038
+.field public static final abc_list_selector_disabled_holo_dark:I = 0x7f080032
 
-.field public static final abc_list_selector_disabled_holo_light:I = 0x7f080039
+.field public static final abc_list_selector_disabled_holo_light:I = 0x7f080033
 
-.field public static final abc_list_selector_holo_dark:I = 0x7f08003a
+.field public static final abc_list_selector_holo_dark:I = 0x7f080034
 
-.field public static final abc_list_selector_holo_light:I = 0x7f08003b
+.field public static final abc_list_selector_holo_light:I = 0x7f080035
 
-.field public static final abc_menu_hardkey_panel_mtrl_mult:I = 0x7f08003c
+.field public static final abc_menu_hardkey_panel_mtrl_mult:I = 0x7f080036
 
-.field public static final abc_popup_background_mtrl_mult:I = 0x7f08003d
+.field public static final abc_popup_background_mtrl_mult:I = 0x7f080037
 
-.field public static final abc_spinner_mtrl_am_alpha:I = 0x7f080049
+.field public static final abc_spinner_mtrl_am_alpha:I = 0x7f080043
 
-.field public static final abc_spinner_textfield_background_material:I = 0x7f08004a
+.field public static final abc_spinner_textfield_background_material:I = 0x7f080044
 
-.field public static final abc_switch_thumb_material:I = 0x7f08004b
+.field public static final abc_switch_thumb_material:I = 0x7f080047
 
-.field public static final abc_switch_track_mtrl_alpha:I = 0x7f08004c
+.field public static final abc_switch_track_mtrl_alpha:I = 0x7f080048
 
-.field public static final abc_tab_indicator_material:I = 0x7f08004d
+.field public static final abc_tab_indicator_material:I = 0x7f080049
 
-.field public static final abc_tab_indicator_mtrl_alpha:I = 0x7f08004e
+.field public static final abc_tab_indicator_mtrl_alpha:I = 0x7f08004a
 
-.field public static final abc_text_cursor_material:I = 0x7f08004f
+.field public static final abc_text_cursor_material:I = 0x7f08004b
 
-.field public static final abc_textfield_activated_mtrl_alpha:I = 0x7f080056
+.field public static final abc_textfield_activated_mtrl_alpha:I = 0x7f08004f
 
-.field public static final abc_textfield_default_mtrl_alpha:I = 0x7f080057
+.field public static final abc_textfield_default_mtrl_alpha:I = 0x7f080050
 
-.field public static final abc_textfield_search_activated_mtrl_alpha:I = 0x7f080058
+.field public static final abc_textfield_search_activated_mtrl_alpha:I = 0x7f080051
 
-.field public static final abc_textfield_search_default_mtrl_alpha:I = 0x7f080059
+.field public static final abc_textfield_search_default_mtrl_alpha:I = 0x7f080052
 
-.field public static final abc_textfield_search_material:I = 0x7f08005a
+.field public static final abc_textfield_search_material:I = 0x7f080053
 
-.field public static final notification_template_icon_bg:I = 0x7f0800ff
+.field public static final notification_template_icon_bg:I = 0x7f080100
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

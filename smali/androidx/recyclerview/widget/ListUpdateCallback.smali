@@ -5,6 +5,10 @@
 
 # virtual methods
 .method public abstract onChanged(IILjava/lang/Object;)V
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract onInserted(II)V

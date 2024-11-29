@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final CONSTRUCTORS:Landroidx/collection/ArrayMap;
+.field public static final CONSTRUCTORS:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/ArrayMap<",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static final CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
+.field public static final CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -27,11 +27,11 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     const/4 v0, 0x2
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    .line 43
+    .line 1
     const-class v2, Landroid/content/Context;
 
     aput-object v2, v0, v1
@@ -53,7 +53,7 @@
 
     sput-object v0, Landroidx/transition/TransitionInflater;->CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
 
-    .line 45
+    .line 2
     new-instance v0, Landroidx/collection/ArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
@@ -63,13 +63,17 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 49
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
+    .line 2
     iput-object p1, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     return-void
@@ -82,14 +86,14 @@
 
     const-string v1, "class"
 
-    .line 193
+    .line 1
     invoke-interface {p1, v0, v1}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 200
+    .line 2
     :try_start_0
     sget-object p3, Landroidx/transition/TransitionInflater;->CONSTRUCTORS:Landroidx/collection/ArrayMap;
 
@@ -97,11 +101,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
+    .line 3
     :try_start_1
     sget-object v1, Landroidx/transition/TransitionInflater;->CONSTRUCTORS:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v1, v0}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -111,7 +115,7 @@
 
     if-nez v1, :cond_0
 
-    .line 204
+    .line 4
     iget-object v3, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
@@ -122,27 +126,27 @@
 
     move-result-object v3
 
-    .line 205
+    .line 5
     invoke-virtual {v3, p2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 207
+    .line 6
     sget-object v1, Landroidx/transition/TransitionInflater;->CONSTRUCTOR_SIGNATURE:[Ljava/lang/Class;
 
     invoke-virtual {v3, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
-    .line 208
+    .line 7
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 209
+    .line 8
     sget-object v3, Landroidx/transition/TransitionInflater;->CONSTRUCTORS:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v3, v0, v1}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     const/4 v3, 0x2
@@ -151,7 +155,7 @@
 
     const/4 v4, 0x0
 
-    .line 213
+    .line 9
     iget-object v5, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     aput-object v5, v3, v4
@@ -169,7 +173,7 @@
     :catchall_0
     move-exception p1
 
-    .line 214
+    .line 10
     monitor-exit p3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -182,14 +186,16 @@
     :catch_0
     move-exception p1
 
-    .line 216
+    .line 11
     new-instance p3, Landroid/view/InflateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Could not instantiate "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -207,21 +213,13 @@
 
     throw p3
 
-    .line 196
+    .line 12
     :cond_1
     new-instance p1, Landroid/view/InflateException;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string p2, " tag must have a \'class\' attribute"
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p3, " tag must have a \'class\' attribute"
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p3, p2}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -233,12 +231,12 @@
 .method private createTransitionFromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroidx/transition/Transition;)Landroidx/transition/Transition;
     .locals 7
 
-    .line 120
+    .line 1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 122
+    .line 2
     instance-of v1, p3, Landroidx/transition/TransitionSet;
 
     const/4 v2, 0x0
@@ -257,7 +255,7 @@
     :goto_0
     move-object v3, v2
 
-    .line 125
+    .line 3
     :cond_1
     :goto_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -272,32 +270,35 @@
 
     move-result v5
 
-    if-le v5, v0, :cond_18
+    if-le v5, v0, :cond_19
 
     :cond_2
     const/4 v5, 0x1
 
-    if-eq v4, v5, :cond_18
+    if-eq v4, v5, :cond_19
 
     const/4 v5, 0x2
 
-    if-ne v4, v5, :cond_1
+    if-eq v4, v5, :cond_3
 
-    .line 132
+    goto :goto_1
+
+    .line 4
+    :cond_3
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "fade"
 
-    .line 133
+    .line 5
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
-    .line 134
+    .line 6
     new-instance v3, Landroidx/transition/Fade;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -306,17 +307,17 @@
 
     goto/16 :goto_2
 
-    :cond_3
+    :cond_4
     const-string v5, "changeBounds"
 
-    .line 135
+    .line 7
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
-    .line 136
+    .line 8
     new-instance v3, Landroidx/transition/ChangeBounds;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -325,17 +326,17 @@
 
     goto/16 :goto_2
 
-    :cond_4
+    :cond_5
     const-string v5, "slide"
 
-    .line 137
+    .line 9
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_6
 
-    .line 138
+    .line 10
     new-instance v3, Landroidx/transition/Slide;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -344,17 +345,17 @@
 
     goto/16 :goto_2
 
-    :cond_5
+    :cond_6
     const-string v5, "explode"
 
-    .line 139
+    .line 11
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_6
+    if-eqz v5, :cond_7
 
-    .line 140
+    .line 12
     new-instance v3, Landroidx/transition/Explode;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -363,17 +364,17 @@
 
     goto/16 :goto_2
 
-    :cond_6
+    :cond_7
     const-string v5, "changeImageTransform"
 
-    .line 141
+    .line 13
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_8
 
-    .line 142
+    .line 14
     new-instance v3, Landroidx/transition/ChangeImageTransform;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -382,17 +383,17 @@
 
     goto/16 :goto_2
 
-    :cond_7
+    :cond_8
     const-string v5, "changeTransform"
 
-    .line 143
+    .line 15
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
-    .line 144
+    .line 16
     new-instance v3, Landroidx/transition/ChangeTransform;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -401,17 +402,17 @@
 
     goto/16 :goto_2
 
-    :cond_8
+    :cond_9
     const-string v5, "changeClipBounds"
 
-    .line 145
+    .line 17
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_a
 
-    .line 146
+    .line 18
     new-instance v3, Landroidx/transition/ChangeClipBounds;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -420,17 +421,17 @@
 
     goto/16 :goto_2
 
-    :cond_9
+    :cond_a
     const-string v5, "autoTransition"
 
-    .line 147
+    .line 19
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_b
 
-    .line 148
+    .line 20
     new-instance v3, Landroidx/transition/AutoTransition;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -439,17 +440,17 @@
 
     goto/16 :goto_2
 
-    :cond_a
+    :cond_b
     const-string v5, "changeScroll"
 
-    .line 149
+    .line 21
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_c
 
-    .line 150
+    .line 22
     new-instance v3, Landroidx/transition/ChangeScroll;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -458,17 +459,17 @@
 
     goto/16 :goto_2
 
-    :cond_b
+    :cond_c
     const-string v5, "transitionSet"
 
-    .line 151
+    .line 23
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_d
 
-    .line 152
+    .line 24
     new-instance v3, Landroidx/transition/TransitionSet;
 
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -477,17 +478,17 @@
 
     goto :goto_2
 
-    :cond_c
+    :cond_d
     const-string v5, "transition"
 
-    .line 153
+    .line 25
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_d
+    if-eqz v6, :cond_e
 
-    .line 154
+    .line 26
     const-class v3, Landroidx/transition/Transition;
 
     invoke-direct {p0, p2, v3, v5}, Landroidx/transition/TransitionInflater;->createCustom(Landroid/util/AttributeSet;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
@@ -498,34 +499,34 @@
 
     goto :goto_2
 
-    :cond_d
+    :cond_e
     const-string v5, "targets"
 
-    .line 155
+    .line 27
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_e
+    if-eqz v5, :cond_f
 
-    .line 156
+    .line 28
     invoke-direct {p0, p1, p2, p3}, Landroidx/transition/TransitionInflater;->getTargetIds(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroidx/transition/Transition;)V
 
     goto :goto_2
 
-    :cond_e
+    :cond_f
     const-string v5, "arcMotion"
 
-    .line 157
+    .line 29
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_10
+    if-eqz v5, :cond_11
 
-    if-eqz p3, :cond_f
+    if-eqz p3, :cond_10
 
-    .line 161
+    .line 30
     new-instance v4, Landroidx/transition/ArcMotion;
 
     iget-object v5, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -536,8 +537,8 @@
 
     goto :goto_2
 
-    .line 159
-    :cond_f
+    .line 31
+    :cond_10
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Invalid use of arcMotion element"
@@ -546,19 +547,19 @@
 
     throw p1
 
-    :cond_10
+    :cond_11
     const-string v5, "pathMotion"
 
-    .line 162
+    .line 32
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_12
+    if-eqz v6, :cond_13
 
-    if-eqz p3, :cond_11
+    if-eqz p3, :cond_12
 
-    .line 166
+    .line 33
     const-class v4, Landroidx/transition/PathMotion;
 
     invoke-direct {p0, p2, v4, v5}, Landroidx/transition/TransitionInflater;->createCustom(Landroid/util/AttributeSet;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
@@ -571,8 +572,8 @@
 
     goto :goto_2
 
-    .line 164
-    :cond_11
+    .line 34
+    :cond_12
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Invalid use of pathMotion element"
@@ -581,19 +582,19 @@
 
     throw p1
 
-    :cond_12
+    :cond_13
     const-string v5, "patternPathMotion"
 
-    .line 168
+    .line 35
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_17
+    if-eqz v4, :cond_18
 
-    if-eqz p3, :cond_16
+    if-eqz p3, :cond_17
 
-    .line 172
+    .line 36
     new-instance v4, Landroidx/transition/PatternPathMotion;
 
     iget-object v5, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
@@ -605,31 +606,31 @@
     :goto_2
     if-eqz v3, :cond_1
 
-    .line 177
+    .line 37
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->isEmptyElementTag()Z
 
     move-result v4
 
-    if-nez v4, :cond_13
+    if-nez v4, :cond_14
 
-    .line 178
+    .line 38
     invoke-direct {p0, p1, p2, v3}, Landroidx/transition/TransitionInflater;->createTransitionFromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroidx/transition/Transition;)Landroidx/transition/Transition;
 
-    :cond_13
-    if-eqz v1, :cond_14
+    :cond_14
+    if-eqz v1, :cond_15
 
-    .line 181
+    .line 39
     invoke-virtual {v1, v3}, Landroidx/transition/TransitionSet;->addTransition(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
 
     goto/16 :goto_0
 
-    :cond_14
-    if-nez p3, :cond_15
+    :cond_15
+    if-nez p3, :cond_16
 
     goto/16 :goto_1
 
-    .line 184
-    :cond_15
+    .line 40
+    :cond_16
     new-instance p1, Landroid/view/InflateException;
 
     const-string p2, "Could not add transition to another transition."
@@ -638,8 +639,8 @@
 
     throw p1
 
-    .line 170
-    :cond_16
+    .line 41
+    :cond_17
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Invalid use of patternPathMotion element"
@@ -648,15 +649,15 @@
 
     throw p1
 
-    .line 174
-    :cond_17
+    .line 42
+    :cond_18
     new-instance p2, Ljava/lang/RuntimeException;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    const-string p3, "Unknown scene name: "
 
-    const-string v0, "Unknown scene name: "
+    invoke-static {p3}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p3
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -672,22 +673,21 @@
 
     throw p2
 
-    :cond_18
+    :cond_19
     return-object v3
 .end method
 
 .method private createTransitionManagerFromXml(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/view/ViewGroup;)Landroidx/transition/TransitionManager;
     .locals 4
 
-    .line 285
+    .line 1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 288
-    :cond_0
+    .line 2
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -695,7 +695,7 @@
 
     const/4 v3, 0x3
 
-    if-ne v2, v3, :cond_1
+    if-ne v2, v3, :cond_0
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
@@ -703,30 +703,33 @@
 
     if-le v3, v0, :cond_4
 
-    :cond_1
+    :cond_0
     const/4 v3, 0x1
 
     if-eq v2, v3, :cond_4
 
     const/4 v3, 0x2
 
-    if-ne v2, v3, :cond_0
+    if-eq v2, v3, :cond_1
 
-    .line 295
+    goto :goto_0
+
+    .line 3
+    :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "transitionManager"
 
-    .line 296
+    .line 4
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 297
+    .line 5
     new-instance v1, Landroidx/transition/TransitionManager;
 
     invoke-direct {v1}, Landroidx/transition/TransitionManager;-><init>()V
@@ -736,7 +739,7 @@
     :cond_2
     const-string v3, "transition"
 
-    .line 298
+    .line 6
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -745,20 +748,20 @@
 
     if-eqz v1, :cond_3
 
-    .line 299
+    .line 7
     invoke-direct {p0, p2, p1, p3, v1}, Landroidx/transition/TransitionInflater;->loadTransition(Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Landroidx/transition/TransitionManager;)V
 
     goto :goto_0
 
-    .line 301
+    .line 8
     :cond_3
     new-instance p2, Ljava/lang/RuntimeException;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    const-string p3, "Unknown scene name: "
 
-    const-string v0, "Unknown scene name: "
+    invoke-static {p3}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p3
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -781,7 +784,7 @@
 .method public static from(Landroid/content/Context;)Landroidx/transition/TransitionInflater;
     .locals 1
 
-    .line 57
+    .line 1
     new-instance v0, Landroidx/transition/TransitionInflater;
 
     invoke-direct {v0, p0}, Landroidx/transition/TransitionInflater;-><init>(Landroid/content/Context;)V
@@ -792,13 +795,12 @@
 .method private getTargetIds(Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroidx/transition/Transition;)V
     .locals 7
 
-    .line 226
+    .line 1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 228
-    :cond_0
+    .line 2
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -806,7 +808,7 @@
 
     const/4 v2, 0x3
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v2, :cond_0
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
@@ -814,30 +816,33 @@
 
     if-le v3, v0, :cond_9
 
-    :cond_1
+    :cond_0
     const/4 v3, 0x1
 
     if-eq v1, v3, :cond_9
 
     const/4 v4, 0x2
 
-    if-ne v1, v4, :cond_0
+    if-eq v1, v4, :cond_1
 
-    .line 235
+    goto :goto_0
+
+    .line 3
+    :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v5, "target"
 
-    .line 236
+    .line 4
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 237
+    .line 5
     iget-object v1, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     sget-object v5, Landroidx/transition/Styleable;->TRANSITION_TARGET:[I
@@ -850,14 +855,14 @@
 
     const-string v6, "targetId"
 
-    .line 238
+    .line 6
     invoke-static {v1, p1, v6, v3, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 242
+    .line 7
     invoke-virtual {p3, v6}, Landroidx/transition/Transition;->addTarget(I)Landroidx/transition/Transition;
 
     goto :goto_1
@@ -865,14 +870,14 @@
     :cond_2
     const-string v6, "excludeId"
 
-    .line 243
+    .line 8
     invoke-static {v1, p1, v6, v4, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 245
+    .line 9
     invoke-virtual {p3, v4, v3}, Landroidx/transition/Transition;->excludeTarget(IZ)Landroidx/transition/Transition;
 
     goto :goto_1
@@ -882,14 +887,14 @@
 
     const-string v6, "targetName"
 
-    .line 246
+    .line 10
     invoke-static {v1, p1, v6, v4}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
-    .line 248
+    .line 11
     invoke-virtual {p3, v4}, Landroidx/transition/Transition;->addTarget(Ljava/lang/String;)Landroidx/transition/Transition;
 
     goto :goto_1
@@ -899,14 +904,14 @@
 
     const-string v6, "excludeName"
 
-    .line 249
+    .line 12
     invoke-static {v1, p1, v6, v4}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_5
 
-    .line 251
+    .line 13
     invoke-virtual {p3, v4, v3}, Landroidx/transition/Transition;->excludeTarget(Ljava/lang/String;Z)Landroidx/transition/Transition;
 
     goto :goto_1
@@ -914,20 +919,20 @@
     :cond_5
     const-string v4, "excludeClass"
 
-    .line 253
+    .line 14
     invoke-static {v1, p1, v4, v2}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_6
 
-    .line 257
+    .line 15
     :try_start_0
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 258
+    .line 16
     invoke-virtual {p3, v4, v3}, Landroidx/transition/Transition;->excludeTarget(Ljava/lang/Class;Z)Landroidx/transition/Transition;
 
     goto :goto_1
@@ -935,24 +940,24 @@
     :cond_6
     const-string v3, "targetClass"
 
-    .line 259
+    .line 17
     invoke-static {v1, p1, v3, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
-    .line 261
+    .line 18
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
 
-    .line 262
+    .line 19
     invoke-virtual {p3, v3}, Landroidx/transition/Transition;->addTarget(Ljava/lang/Class;)Landroidx/transition/Transition;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 269
+    .line 20
     :cond_7
     :goto_1
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
@@ -962,19 +967,15 @@
     :catch_0
     move-exception p1
 
-    .line 265
+    .line 21
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 266
+    .line 22
     new-instance p2, Ljava/lang/RuntimeException;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string p3, "Could not create "
 
-    move-result-object p3
-
-    const-string v0, "Could not create "
-
-    invoke-virtual {v0, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, v2}, Lg/b/a/a/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -982,15 +983,15 @@
 
     throw p2
 
-    .line 271
+    .line 23
     :cond_8
     new-instance p2, Ljava/lang/RuntimeException;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    const-string p3, "Unknown scene name: "
 
-    const-string v0, "Unknown scene name: "
+    invoke-static {p3}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p3
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -1013,7 +1014,7 @@
 .method private loadTransition(Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Landroidx/transition/TransitionManager;)V
     .locals 6
 
-    .line 310
+    .line 1
     iget-object v0, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     sget-object v1, Landroidx/transition/Styleable;->TRANSITION_MANAGER:[I
@@ -1028,7 +1029,7 @@
 
     const/4 v2, 0x2
 
-    .line 311
+    .line 2
     invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v1
@@ -1037,7 +1038,7 @@
 
     const/4 v3, 0x0
 
-    .line 313
+    .line 3
     invoke-static {p1, p2, v2, v3, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v2
@@ -1050,7 +1051,7 @@
 
     goto :goto_0
 
-    .line 315
+    .line 4
     :cond_0
     iget-object v4, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
@@ -1063,7 +1064,7 @@
 
     const-string v5, "toScene"
 
-    .line 317
+    .line 5
     invoke-static {p1, p2, v5, v4, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
@@ -1072,7 +1073,7 @@
 
     goto :goto_1
 
-    .line 319
+    .line 6
     :cond_1
     iget-object v0, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
@@ -1083,7 +1084,7 @@
     :goto_1
     if-ltz v1, :cond_4
 
-    .line 322
+    .line 7
     invoke-virtual {p0, v1}, Landroidx/transition/TransitionInflater;->inflateTransition(I)Landroidx/transition/Transition;
 
     move-result-object p2
@@ -1094,28 +1095,24 @@
 
     if-nez v2, :cond_2
 
-    .line 328
+    .line 8
     invoke-virtual {p4, v3, p2}, Landroidx/transition/TransitionManager;->setTransition(Landroidx/transition/Scene;Landroidx/transition/Transition;)V
 
     goto :goto_2
 
-    .line 330
+    .line 9
     :cond_2
     invoke-virtual {p4, v2, v3, p2}, Landroidx/transition/TransitionManager;->setTransition(Landroidx/transition/Scene;Landroidx/transition/Scene;Landroidx/transition/Transition;)V
 
     goto :goto_2
 
-    .line 325
+    .line 10
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const-string p2, "No toScene for transition ID "
 
-    move-result-object p2
-
-    const-string p3, "No toScene for transition ID "
-
-    invoke-virtual {p3, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v1}, Lg/b/a/a/a;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1123,7 +1120,7 @@
 
     throw p1
 
-    .line 334
+    .line 11
     :cond_4
     :goto_2
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -1136,7 +1133,7 @@
 .method public inflateTransition(I)Landroidx/transition/Transition;
     .locals 4
 
-    .line 69
+    .line 1
     iget-object v0, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1147,7 +1144,7 @@
 
     move-result-object p1
 
-    .line 71
+    .line 2
     :try_start_0
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
@@ -1163,7 +1160,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 78
+    .line 3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
     return-object v0
@@ -1176,7 +1173,7 @@
     :catch_0
     move-exception v0
 
-    .line 75
+    .line 4
     :try_start_1
     new-instance v1, Landroid/view/InflateException;
 
@@ -1184,7 +1181,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 76
+    .line 5
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v3
@@ -1212,7 +1209,7 @@
     :catch_1
     move-exception v0
 
-    .line 73
+    .line 6
     new-instance v1, Landroid/view/InflateException;
 
     invoke-virtual {v0}, Lorg/xmlpull/v1/XmlPullParserException;->getMessage()Ljava/lang/String;
@@ -1225,7 +1222,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 78
+    .line 7
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
@@ -1235,7 +1232,7 @@
 .method public inflateTransitionManager(ILandroid/view/ViewGroup;)Landroidx/transition/TransitionManager;
     .locals 3
 
-    .line 91
+    .line 1
     iget-object v0, p0, Landroidx/transition/TransitionInflater;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1246,7 +1243,7 @@
 
     move-result-object p1
 
-    .line 93
+    .line 2
     :try_start_0
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
@@ -1260,7 +1257,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 105
+    .line 3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
     return-object p2
@@ -1273,7 +1270,7 @@
     :catch_0
     move-exception p2
 
-    .line 99
+    .line 4
     :try_start_1
     new-instance v0, Landroid/view/InflateException;
 
@@ -1281,7 +1278,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 100
+    .line 5
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v2
@@ -1292,7 +1289,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 101
+    .line 6
     invoke-virtual {p2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -1305,16 +1302,16 @@
 
     invoke-direct {v0, v1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
 
-    .line 102
+    .line 7
     invoke-virtual {v0, p2}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 103
+    .line 8
     throw v0
 
     :catch_1
     move-exception p2
 
-    .line 95
+    .line 9
     new-instance v0, Landroid/view/InflateException;
 
     invoke-virtual {p2}, Lorg/xmlpull/v1/XmlPullParserException;->getMessage()Ljava/lang/String;
@@ -1323,15 +1320,15 @@
 
     invoke-direct {v0, v1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
 
-    .line 96
+    .line 10
     invoke-virtual {v0, p2}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 97
+    .line 11
     throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 105
+    .line 12
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 

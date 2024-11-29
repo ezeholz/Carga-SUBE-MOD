@@ -15,59 +15,59 @@
 
 
 # instance fields
-.field private final a:I
+.field public final d:I
 
-.field private final b:Landroid/os/IBinder;
+.field public final e:Landroid/os/IBinder;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
-.field private final c:[Lcom/google/android/gms/common/api/Scope;
+.field public final f:[Lcom/google/android/gms/common/api/Scope;
 
-.field private d:Ljava/lang/Integer;
+.field public g:Ljava/lang/Integer;
 
-.field private e:Ljava/lang/Integer;
+.field public h:Ljava/lang/Integer;
 
-.field private f:Landroid/accounts/Account;
+.field public i:Landroid/accounts/Account;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 44
-    new-instance v0, Lcom/google/android/gms/common/internal/s;
+    .line 1
+    new-instance v0, Lg/d/a/b/d/m/r;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/internal/s;-><init>()V
+    invoke-direct {v0}, Lg/d/a/b/d/m/r;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(ILandroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Ljava/lang/Integer;Ljava/lang/Integer;Landroid/accounts/Account;)V
+.method public constructor <init>(ILandroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Ljava/lang/Integer;Ljava/lang/Integer;Landroid/accounts/Account;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     .line 2
-    iput p1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->a:I
+    iput p1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->d:I
 
     .line 3
-    iput-object p2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->b:Landroid/os/IBinder;
+    iput-object p2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->e:Landroid/os/IBinder;
 
     .line 4
-    iput-object p3, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->c:[Lcom/google/android/gms/common/api/Scope;
+    iput-object p3, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->f:[Lcom/google/android/gms/common/api/Scope;
 
     .line 5
-    iput-object p4, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->d:Ljava/lang/Integer;
+    iput-object p4, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->g:Ljava/lang/Integer;
 
     .line 6
-    iput-object p5, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->e:Ljava/lang/Integer;
+    iput-object p5, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->h:Ljava/lang/Integer;
 
     .line 7
-    iput-object p6, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->f:Landroid/accounts/Account;
+    iput-object p6, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->i:Landroid/accounts/Account;
 
     return-void
 .end method
@@ -75,59 +75,59 @@
 
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    .locals 4
 
-    const/16 v0, 0x4f45
-
-    .line 1017
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I)I
+    .line 1
+    invoke-static {p1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;)I
 
     move-result v0
 
-    .line 36
-    iget v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->a:I
+    .line 2
+    iget v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->d:I
 
     const/4 v2, 0x1
 
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;II)V
+    invoke-static {p1, v2, v1}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;II)V
 
-    .line 37
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->b:Landroid/os/IBinder;
+    .line 3
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->e:Landroid/os/IBinder;
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+    const/4 v3, 0x2
 
-    .line 38
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->c:[Lcom/google/android/gms/common/api/Scope;
+    invoke-static {p1, v3, v1, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILandroid/os/IBinder;Z)V
 
-    const/4 v2, 0x3
+    .line 4
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->f:[Lcom/google/android/gms/common/api/Scope;
 
-    invoke-static {p1, v2, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
+    const/4 v3, 0x3
 
-    .line 39
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->d:Ljava/lang/Integer;
+    invoke-static {p1, v3, v1, p2, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
 
-    const/4 v2, 0x4
+    .line 5
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->g:Ljava/lang/Integer;
 
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILjava/lang/Integer;)V
+    const/4 v3, 0x4
 
-    .line 40
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->e:Ljava/lang/Integer;
+    invoke-static {p1, v3, v1, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILjava/lang/Integer;Z)V
 
-    const/4 v2, 0x5
+    .line 6
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->h:Ljava/lang/Integer;
 
-    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILjava/lang/Integer;)V
+    const/4 v3, 0x5
 
-    .line 41
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->f:Landroid/accounts/Account;
+    invoke-static {p1, v3, v1, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILjava/lang/Integer;Z)V
 
-    const/4 v2, 0x6
+    .line 7
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->i:Landroid/accounts/Account;
 
-    invoke-static {p1, v2, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    const/4 v3, 0x6
 
-    .line 1018
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    invoke-static {p1, v3, v1, p2, v2}, Lg/d/a/b/d/m/q/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
+
+    .line 8
+    invoke-static {p1, v0}, Lg/d/a/b/d/m/q/a;->b(Landroid/os/Parcel;I)V
 
     return-void
 .end method

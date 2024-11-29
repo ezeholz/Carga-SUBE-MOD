@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;
+.class public Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;
 .super Ljava/lang/Object;
 .source "SqliteDatabaseDriver.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "SqliteDatabaseDescriptor"
 .end annotation
 
@@ -25,10 +25,10 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .line 236
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 237
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;->file:Ljava/io/File;
 
     return-void
@@ -39,7 +39,7 @@
 .method public name()Ljava/lang/String;
     .locals 1
 
-    .line 242
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/database/SqliteDatabaseDriver$SqliteDatabaseDescriptor;->file:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class final Landroidx/collection/MapCollections$ArrayIterator;
+.class public final Landroidx/collection/MapCollections$ArrayIterator;
 .super Ljava/lang/Object;
 .source "MapCollections.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "ArrayIterator"
 .end annotation
 
@@ -29,35 +29,35 @@
 
 
 # instance fields
-.field mCanRemove:Z
+.field public mCanRemove:Z
 
-.field mIndex:I
+.field public mIndex:I
 
-.field final mOffset:I
+.field public final mOffset:I
 
-.field mSize:I
+.field public mSize:I
 
-.field final synthetic this$0:Landroidx/collection/MapCollections;
+.field public final synthetic this$0:Landroidx/collection/MapCollections;
 
 
 # direct methods
-.method constructor <init>(Landroidx/collection/MapCollections;I)V
+.method public constructor <init>(Landroidx/collection/MapCollections;I)V
     .locals 1
 
-    .line 43
+    .line 1
     iput-object p1, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 41
+    .line 2
     iput-boolean v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
-    .line 44
+    .line 3
     iput p2, p0, Landroidx/collection/MapCollections$ArrayIterator;->mOffset:I
 
-    .line 45
+    .line 4
     invoke-virtual {p1}, Landroidx/collection/MapCollections;->colGetSize()I
 
     move-result p1
@@ -69,10 +69,10 @@
 
 
 # virtual methods
-.method public final hasNext()Z
+.method public hasNext()Z
     .locals 2
 
-    .line 50
+    .line 1
     iget v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
     iget v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mSize:I
@@ -81,15 +81,16 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public next()Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -97,14 +98,14 @@
         }
     .end annotation
 
-    .line 55
+    .line 1
     invoke-virtual {p0}, Landroidx/collection/MapCollections$ArrayIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 56
+    .line 2
     iget-object v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;
 
     iget v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
@@ -115,7 +116,7 @@
 
     move-result-object v0
 
-    .line 57
+    .line 3
     iget v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
     const/4 v2, 0x1
@@ -124,12 +125,12 @@
 
     iput v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
-    .line 58
+    .line 4
     iput-boolean v2, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
     return-object v0
 
-    .line 55
+    .line 5
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -138,22 +139,22 @@
     throw v0
 .end method
 
-.method public final remove()V
+.method public remove()V
     .locals 2
 
-    .line 64
+    .line 1
     iget-boolean v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
     if-eqz v0, :cond_0
 
-    .line 67
+    .line 2
     iget v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroidx/collection/MapCollections$ArrayIterator;->mIndex:I
 
-    .line 68
+    .line 3
     iget v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mSize:I
 
     add-int/lit8 v1, v1, -0x1
@@ -162,17 +163,17 @@
 
     const/4 v1, 0x0
 
-    .line 69
+    .line 4
     iput-boolean v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->mCanRemove:Z
 
-    .line 70
+    .line 5
     iget-object v1, p0, Landroidx/collection/MapCollections$ArrayIterator;->this$0:Landroidx/collection/MapCollections;
 
     invoke-virtual {v1, v0}, Landroidx/collection/MapCollections;->colRemoveAt(I)V
 
     return-void
 
-    .line 65
+    .line 6
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

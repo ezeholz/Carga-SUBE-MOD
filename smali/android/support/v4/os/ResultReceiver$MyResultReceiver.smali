@@ -1,4 +1,4 @@
-.class Landroid/support/v4/os/ResultReceiver$MyResultReceiver;
+.class public Landroid/support/v4/os/ResultReceiver$MyResultReceiver;
 .super Landroid/support/v4/os/IResultReceiver$Stub;
 .source "ResultReceiver.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "MyResultReceiver"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroid/support/v4/os/ResultReceiver;
+.field public final synthetic this$0:Landroid/support/v4/os/ResultReceiver;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/os/ResultReceiver;)V
+.method public constructor <init>(Landroid/support/v4/os/ResultReceiver;)V
     .locals 0
 
-    .line 67
+    .line 1
     iput-object p1, p0, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/support/v4/os/ResultReceiver;
 
     invoke-direct {p0}, Landroid/support/v4/os/IResultReceiver$Stub;-><init>()V
@@ -35,33 +35,26 @@
 .method public send(ILandroid/os/Bundle;)V
     .locals 3
 
-    .line 70
+    .line 1
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/support/v4/os/ResultReceiver;
 
-    iget-object v0, v0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
+    iget-object v1, v0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 71
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/support/v4/os/ResultReceiver;
+    .line 2
+    new-instance v2, Landroid/support/v4/os/ResultReceiver$MyRunnable;
 
-    iget-object v0, v0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
+    invoke-direct {v2, v0, p1, p2}, Landroid/support/v4/os/ResultReceiver$MyRunnable;-><init>(Landroid/support/v4/os/ResultReceiver;ILandroid/os/Bundle;)V
 
-    new-instance v1, Landroid/support/v4/os/ResultReceiver$MyRunnable;
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v2, p0, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/support/v4/os/ResultReceiver;
+    goto :goto_0
 
-    invoke-direct {v1, v2, p1, p2}, Landroid/support/v4/os/ResultReceiver$MyRunnable;-><init>(Landroid/support/v4/os/ResultReceiver;ILandroid/os/Bundle;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    .line 73
+    .line 3
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;->this$0:Landroid/support/v4/os/ResultReceiver;
-
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->onReceiveResult(ILandroid/os/Bundle;)V
 
+    :goto_0
     return-void
 .end method

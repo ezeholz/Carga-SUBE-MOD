@@ -9,9 +9,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 32
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
@@ -24,9 +24,9 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 43
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v0

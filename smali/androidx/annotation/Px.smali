@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/Dimension;
+    unit = 0x1
+.end annotation
+
 .annotation runtime Ljava/lang/annotation/Documented;
 .end annotation
 

@@ -1,10 +1,10 @@
 .class public Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;
-.super Lcom/sube/cargasube/gui/login/form/sube_views/a/b/a;
+.super Lg/f/a/c/d/a/j/a/c/c;
 .source "SubeTextInputLayoutSpinnerGender.java"
 
 
 # static fields
-.field private static final g:Ljava/util/ArrayList;
+.field public static final x0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -14,7 +14,7 @@
     .end annotation
 .end field
 
-.field private static final h:Ljava/util/Map;
+.field public static final y0:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -27,66 +27,88 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static constructor <clinit>()V
+    .locals 4
 
-    .line 25
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 26
-    sput-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->g:Ljava/util/ArrayList;
+    sput-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
 
     const-string v1, "Femenino"
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 27
-    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->g:Ljava/util/ArrayList;
+    .line 3
+    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
 
     const-string v1, "Masculino"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 31
+    .line 4
+    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
+
+    const-string v1, "X"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 32
-    sput-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->h:Ljava/util/Map;
+    sput-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->y0:Ljava/util/Map;
 
-    sget-object v1, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->g:Ljava/util/ArrayList;
+    .line 6
+    sget-object v2, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    const-string v2, "F"
+    const-string v3, "F"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
-    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->h:Ljava/util/Map;
+    .line 7
+    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->y0:Ljava/util/Map;
 
-    sget-object v1, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->g:Ljava/util/ArrayList;
+    sget-object v2, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    const-string v2, "M"
+    const-string v3, "M"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 8
+    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->y0:Ljava/util/Map;
+
+    sget-object v2, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -94,59 +116,42 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 38
-    invoke-direct {p0, p1}, Lcom/sube/cargasube/gui/login/form/sube_views/a/b/a;-><init>(Landroid/content/Context;)V
+    .line 1
+    invoke-direct {p0, p1}, Lg/f/a/c/d/a/j/a/c/c;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 42
-    invoke-direct {p0, p1, p2}, Lcom/sube/cargasube/gui/login/form/sube_views/a/b/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 2
+    invoke-direct {p0, p1, p2}, Lg/f/a/c/d/a/j/a/c/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 46
-    invoke-direct {p0, p1, p2, p3}, Lcom/sube/cargasube/gui/login/form/sube_views/a/b/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 3
+    invoke-direct {p0, p1, p2, p3}, Lg/f/a/c/d/a/j/a/c/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(I)V
+.method public b(I)V
     .locals 0
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 4
-
-    .line 51
-    new-instance v0, Landroid/widget/ArrayAdapter;
-
-    .line 52
-    invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->g:Ljava/util/ArrayList;
-
-    const v3, 0x1090003
-
-    invoke-direct {v0, v1, v3, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
-
-    .line 56
-    iget-object v1, p0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->f:Landroid/widget/AutoCompleteTextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/AutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     return-void
 .end method
@@ -154,7 +159,7 @@
 .method public bridge synthetic getInput()Ljava/lang/Object;
     .locals 1
 
-    .line 16
+    .line 1
     invoke-virtual {p0}, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->getInput()Ljava/lang/String;
 
     move-result-object v0
@@ -165,10 +170,10 @@
 .method public getInput()Ljava/lang/String;
     .locals 2
 
-    .line 65
-    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->h:Ljava/util/Map;
+    .line 2
+    sget-object v0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->y0:Ljava/util/Map;
 
-    iget-object v1, p0, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->f:Landroid/widget/AutoCompleteTextView;
+    iget-object v1, p0, Lg/f/a/c/d/a/j/a/c/c;->v0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v1}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
 
@@ -185,4 +190,29 @@
     check-cast v0, Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public p()V
+    .locals 4
+
+    .line 1
+    new-instance v0, Landroid/widget/ArrayAdapter;
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/sube/cargasube/gui/login/form/sube_views/gender/SubeTextInputLayoutSpinnerGender;->x0:Ljava/util/ArrayList;
+
+    const v3, 0x1090003
+
+    invoke-direct {v0, v1, v3, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
+
+    .line 3
+    iget-object v1, p0, Lg/f/a/c/d/a/j/a/c/c;->v0:Landroid/widget/AutoCompleteTextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/AutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    return-void
 .end method

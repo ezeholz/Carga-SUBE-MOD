@@ -1,4 +1,4 @@
-.class Landroidx/cardview/widget/CardViewApi17Impl$1;
+.class public Landroidx/cardview/widget/CardViewApi17Impl$1;
 .super Ljava/lang/Object;
 .source "CardViewApi17Impl.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/cardview/widget/CardViewApi17Impl;
+.field public final synthetic this$0:Landroidx/cardview/widget/CardViewApi17Impl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/cardview/widget/CardViewApi17Impl;)V
+.method public constructor <init>(Landroidx/cardview/widget/CardViewApi17Impl;)V
     .locals 0
 
-    .line 30
+    .line 1
     iput-object p1, p0, Landroidx/cardview/widget/CardViewApi17Impl$1;->this$0:Landroidx/cardview/widget/CardViewApi17Impl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public drawRoundRect(Landroid/graphics/Canvas;Landroid/graphics/RectF;FLandroid/graphics/Paint;)V
     .locals 0
 
-    .line 34
+    .line 1
     invoke-virtual {p1, p2, p3, p3, p4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void

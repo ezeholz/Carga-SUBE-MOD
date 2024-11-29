@@ -4,22 +4,27 @@
 
 
 # instance fields
-.field private final mService:Landroid/support/customtabs/ICustomTabsService;
+.field public final mService:Landroid/support/customtabs/ICustomTabsService;
 
-.field private final mServiceComponentName:Landroid/content/ComponentName;
+.field public final mServiceComponentName:Landroid/content/ComponentName;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
+.method public constructor <init>(Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    .line 52
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
+    .line 2
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
 
-    .line 54
+    .line 3
     iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsClient;->mServiceComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -28,14 +33,14 @@
 .method public static bindCustomTabsService(Landroid/content/Context;Ljava/lang/String;Landroidx/browser/customtabs/CustomTabsServiceConnection;)Z
     .locals 2
 
-    .line 71
+    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.support.customtabs.action.CustomTabsService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 72
+    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -47,7 +52,7 @@
     :cond_0
     const/16 p1, 0x21
 
-    .line 73
+    .line 3
     invoke-virtual {p0, v0, p2, p1}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result p0
@@ -64,18 +69,18 @@
 
     return v0
 
-    .line 140
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 141
+    .line 2
     new-instance v1, Landroidx/browser/customtabs/CustomTabsClient$1;
 
     invoke-direct {v1, p0}, Landroidx/browser/customtabs/CustomTabsClient$1;-><init>(Landroid/content/Context;)V
 
-    .line 156
+    .line 3
     :try_start_0
     invoke-static {p0, p1, v1}, Landroidx/browser/customtabs/CustomTabsClient;->bindCustomTabsService(Landroid/content/Context;Ljava/lang/String;Landroidx/browser/customtabs/CustomTabsServiceConnection;)Z
 
@@ -91,6 +96,10 @@
 
 .method public static getPackageName(Landroid/content/Context;Ljava/util/List;)Ljava/lang/String;
     .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -104,7 +113,7 @@
 
     const/4 v0, 0x0
 
-    .line 83
+    .line 1
     invoke-static {p0, p1, v0}, Landroidx/browser/customtabs/CustomTabsClient;->getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -114,6 +123,10 @@
 
 .method public static getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;
     .locals 4
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -125,14 +138,14 @@
         }
     .end annotation
 
-    .line 101
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     if-nez p1, :cond_0
 
-    .line 103
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -142,7 +155,7 @@
     :cond_0
     move-object v0, p1
 
-    .line 104
+    .line 4
     :goto_0
     new-instance v1, Landroid/content/Intent;
 
@@ -160,19 +173,19 @@
 
     if-nez p2, :cond_2
 
-    .line 107
+    .line 5
     invoke-virtual {p0, v1, v2}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    .line 109
+    .line 6
     iget-object p2, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object p2, p2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 110
+    .line 7
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -183,18 +196,18 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 111
-    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 8
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     if-eqz p1, :cond_1
 
-    .line 112
-    invoke-interface {v1, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    .line 9
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     :cond_1
     move-object v0, v1
 
-    .line 116
+    .line 10
     :cond_2
     new-instance p1, Landroid/content/Intent;
 
@@ -202,7 +215,7 @@
 
     invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 117
+    .line 11
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -220,10 +233,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 118
+    .line 12
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 119
+    .line 13
     invoke-virtual {p0, p1, v2}, Landroid/content/pm/PackageManager;->resolveService(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
@@ -243,7 +256,7 @@
 .method public extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    .line 266
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
 
@@ -264,14 +277,14 @@
 .method public newSession(Landroidx/browser/customtabs/CustomTabsCallback;)Landroidx/browser/customtabs/CustomTabsSession;
     .locals 3
 
-    .line 191
+    .line 1
     new-instance v0, Landroidx/browser/customtabs/CustomTabsClient$2;
 
     invoke-direct {v0, p0, p1}, Landroidx/browser/customtabs/CustomTabsClient$2;-><init>(Landroidx/browser/customtabs/CustomTabsClient;Landroidx/browser/customtabs/CustomTabsCallback;)V
 
     const/4 p1, 0x0
 
-    .line 257
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
 
@@ -285,7 +298,7 @@
 
     return-object p1
 
-    .line 261
+    .line 3
     :cond_0
     new-instance p1, Landroidx/browser/customtabs/CustomTabsSession;
 
@@ -302,7 +315,7 @@
 .method public warmup(J)Z
     .locals 1
 
-    .line 173
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
 

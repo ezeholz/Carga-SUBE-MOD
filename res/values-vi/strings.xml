@@ -68,10 +68,6 @@
     <string name="common_open_on_phone">Mở trên điện thoại</string>
     <string name="common_signin_button_text">Đăng nhập</string>
     <string name="common_signin_button_text_long">Đăng nhập bằng Google</string>
-    <string name="joda_time_android_date_time">%1$s %2$s</string>
-    <string name="joda_time_android_preposition_for_date">vào %s</string>
-    <string name="joda_time_android_preposition_for_time">vào lúc %s</string>
-    <string name="joda_time_android_relative_time">%1$s, %2$s</string>
     <string name="search_menu_title">Tìm kiếm</string>
     <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

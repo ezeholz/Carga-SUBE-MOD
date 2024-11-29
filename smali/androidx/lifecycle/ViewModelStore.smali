@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final mMap:Ljava/util/HashMap;
+.field public final mMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -20,10 +20,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -38,7 +38,7 @@
 .method public final clear()V
     .locals 2
 
-    .line 61
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModelStore;->mMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -62,12 +62,12 @@
 
     check-cast v1, Landroidx/lifecycle/ViewModel;
 
-    .line 62
+    .line 2
     invoke-virtual {v1}, Landroidx/lifecycle/ViewModel;->clear()V
 
     goto :goto_0
 
-    .line 64
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/lifecycle/ViewModelStore;->mMap:Ljava/util/HashMap;
 
@@ -76,10 +76,10 @@
     return-void
 .end method
 
-.method final get(Ljava/lang/String;)Landroidx/lifecycle/ViewModel;
+.method public final get(Ljava/lang/String;)Landroidx/lifecycle/ViewModel;
     .locals 1
 
-    .line 50
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModelStore;->mMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -91,7 +91,7 @@
     return-object p1
 .end method
 
-.method keys()Ljava/util/Set;
+.method public keys()Ljava/util/Set;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -102,7 +102,7 @@
         }
     .end annotation
 
-    .line 54
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p0, Landroidx/lifecycle/ViewModelStore;->mMap:Ljava/util/HashMap;
@@ -116,10 +116,10 @@
     return-object v0
 .end method
 
-.method final put(Ljava/lang/String;Landroidx/lifecycle/ViewModel;)V
+.method public final put(Ljava/lang/String;Landroidx/lifecycle/ViewModel;)V
     .locals 1
 
-    .line 43
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModelStore;->mMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -130,7 +130,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 45
+    .line 2
     invoke-virtual {p1}, Landroidx/lifecycle/ViewModel;->onCleared()V
 
     :cond_0

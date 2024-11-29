@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
+.class public Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "AlertController.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "CheckedItemAdapter"
 .end annotation
 
@@ -26,7 +26,7 @@
 .method public constructor <init>(Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 1104
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
     return-void

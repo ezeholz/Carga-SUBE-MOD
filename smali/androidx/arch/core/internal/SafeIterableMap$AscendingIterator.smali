@@ -1,4 +1,4 @@
-.class Landroidx/arch/core/internal/SafeIterableMap$AscendingIterator;
+.class public Landroidx/arch/core/internal/SafeIterableMap$AscendingIterator;
 .super Landroidx/arch/core/internal/SafeIterableMap$ListIterator;
 .source "SafeIterableMap.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AscendingIterator"
 .end annotation
 
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/arch/core/internal/SafeIterableMap$Entry;Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
+.method public constructor <init>(Landroidx/arch/core/internal/SafeIterableMap$Entry;Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -39,7 +39,7 @@
         }
     .end annotation
 
-    .line 283
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/arch/core/internal/SafeIterableMap$ListIterator;-><init>(Landroidx/arch/core/internal/SafeIterableMap$Entry;Landroidx/arch/core/internal/SafeIterableMap$Entry;)V
 
     return-void
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method backward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method public backward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -59,13 +59,13 @@
         }
     .end annotation
 
-    .line 293
+    .line 1
     iget-object p1, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     return-object p1
 .end method
 
-.method forward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.method public forward(Landroidx/arch/core/internal/SafeIterableMap$Entry;)Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    .line 288
+    .line 1
     iget-object p1, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
     return-object p1

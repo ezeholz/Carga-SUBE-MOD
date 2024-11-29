@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;
+.class public Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;
 .super Landroidx/core/app/ComponentActivity$ExtraData;
 .source "MediaControllerCompat.java"
 
@@ -9,23 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MediaControllerExtraData"
 .end annotation
 
 
 # instance fields
-.field private final mMediaController:Landroid/support/v4/media/session/MediaControllerCompat;
+.field public final mMediaController:Landroid/support/v4/media/session/MediaControllerCompat;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat;)V
+.method public constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat;)V
     .locals 0
 
-    .line 140
+    .line 1
     invoke-direct {p0}, Landroidx/core/app/ComponentActivity$ExtraData;-><init>()V
 
-    .line 141
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;->mMediaController:Landroid/support/v4/media/session/MediaControllerCompat;
 
     return-void
@@ -33,10 +33,10 @@
 
 
 # virtual methods
-.method getMediaController()Landroid/support/v4/media/session/MediaControllerCompat;
+.method public getMediaController()Landroid/support/v4/media/session/MediaControllerCompat;
     .locals 1
 
-    .line 145
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerExtraData;->mMediaController:Landroid/support/v4/media/session/MediaControllerCompat;
 
     return-object v0

@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/ListFragment$2;
+.class public Landroidx/fragment/app/ListFragment$2;
 .super Ljava/lang/Object;
 .source "ListFragment.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/ListFragment;
+.field public final synthetic this$0:Landroidx/fragment/app/ListFragment;
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/ListFragment;)V
+.method public constructor <init>(Landroidx/fragment/app/ListFragment;)V
     .locals 0
 
-    .line 60
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/ListFragment$2;->this$0:Landroidx/fragment/app/ListFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
         }
     .end annotation
 
-    .line 63
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/ListFragment$2;->this$0:Landroidx/fragment/app/ListFragment;
 
     move-object v1, p1

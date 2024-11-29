@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 16
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +19,7 @@
     :try_start_0
     const-string v0, "UTF-8"
 
-    .line 19
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -35,7 +35,7 @@
     :catch_0
     move-exception p0
 
-    .line 21
+    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -46,7 +46,7 @@
 .method public static create([BLjava/lang/String;)Lcom/facebook/stetho/server/http/LightHttpBody;
     .locals 1
 
-    .line 26
+    .line 3
     new-instance v0, Lcom/facebook/stetho/server/http/LightHttpBody$1;
 
     invoke-direct {v0, p1, p0}, Lcom/facebook/stetho/server/http/LightHttpBody$1;-><init>(Ljava/lang/String;[B)V

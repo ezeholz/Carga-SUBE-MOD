@@ -1,13 +1,13 @@
-.class Lcom/facebook/stetho/websocket/MaskingHelper;
+.class public Lcom/facebook/stetho/websocket/MaskingHelper;
 .super Ljava/lang/Object;
 .source "MaskingHelper.java"
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 12
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +25,7 @@
 
     add-int/lit8 p3, p2, 0x1
 
-    .line 16
+    .line 1
     aget-byte v2, p1, p2
 
     add-int/lit8 v3, v0, 0x1

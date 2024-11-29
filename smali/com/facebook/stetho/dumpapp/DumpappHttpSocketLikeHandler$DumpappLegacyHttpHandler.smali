@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/dumpapp/DumpappHttpSocketLikeHandler$DumpappLegacyHttpHandler;
+.class public Lcom/facebook/stetho/dumpapp/DumpappHttpSocketLikeHandler$DumpappLegacyHttpHandler;
 .super Ljava/lang/Object;
 .source "DumpappHttpSocketLikeHandler.java"
 
@@ -12,31 +12,31 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "DumpappLegacyHttpHandler"
 .end annotation
 
 
 # static fields
-.field private static final CONTENT_TYPE:Ljava/lang/String; = "application/octet-stream"
+.field public static final CONTENT_TYPE:Ljava/lang/String; = "application/octet-stream"
 
-.field private static final QUERY_PARAM_ARGV:Ljava/lang/String; = "argv"
+.field public static final QUERY_PARAM_ARGV:Ljava/lang/String; = "argv"
 
-.field private static final RESPONSE_HEADER_ALLOW_ORIGIN:Ljava/lang/String; = "Access-Control-Allow-Origin"
+.field public static final RESPONSE_HEADER_ALLOW_ORIGIN:Ljava/lang/String; = "Access-Control-Allow-Origin"
 
 
 # instance fields
-.field private final mDumper:Lcom/facebook/stetho/dumpapp/Dumper;
+.field public final mDumper:Lcom/facebook/stetho/dumpapp/Dumper;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/dumpapp/Dumper;)V
     .locals 0
 
-    .line 63
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/dumpapp/DumpappHttpSocketLikeHandler$DumpappLegacyHttpHandler;->mDumper:Lcom/facebook/stetho/dumpapp/Dumper;
 
     return-void
@@ -47,7 +47,7 @@
 .method public handleRequest(Lcom/facebook/stetho/server/SocketLike;Lcom/facebook/stetho/server/http/LightHttpRequest;Lcom/facebook/stetho/server/http/LightHttpResponse;)Z
     .locals 7
 
-    .line 72
+    .line 1
     iget-object p1, p2, Lcom/facebook/stetho/server/http/LightHttpRequest;->method:Ljava/lang/String;
 
     const-string v0, "POST"
@@ -62,7 +62,7 @@
 
     if-nez p1, :cond_0
 
-    .line 73
+    .line 2
     iget-object v2, p2, Lcom/facebook/stetho/server/http/LightHttpRequest;->method:Ljava/lang/String;
 
     const-string v3, "GET"
@@ -90,15 +90,15 @@
     :cond_1
     const/16 p1, 0x1f5
 
-    .line 101
+    .line 3
     iput p1, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->code:I
 
     const-string p1, "Not implemented"
 
-    .line 102
+    .line 4
     iput-object p1, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->reasonPhrase:Ljava/lang/String;
 
-    .line 103
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +125,7 @@
 
     goto :goto_4
 
-    .line 76
+    .line 6
     :cond_2
     :goto_1
     iget-object p2, p2, Lcom/facebook/stetho/server/http/LightHttpRequest;->uri:Landroid/net/Uri;
@@ -136,12 +136,12 @@
 
     move-result-object p2
 
-    .line 78
+    .line 7
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 79
+    .line 8
     new-instance v4, Lcom/facebook/stetho/dumpapp/Framer;
 
     new-instance v5, Ljava/io/ByteArrayInputStream;
@@ -161,7 +161,7 @@
     :cond_3
     const-string p1, "WARNING"
 
-    .line 85
+    .line 9
     :goto_2
     invoke-virtual {v4}, Lcom/facebook/stetho/dumpapp/Framer;->getStderr()Ljava/io/PrintStream;
 
@@ -169,9 +169,11 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v6, "*** "
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -187,7 +189,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 89
+    .line 10
     iget-object p1, p0, Lcom/facebook/stetho/dumpapp/DumpappHttpSocketLikeHandler$DumpappLegacyHttpHandler;->mDumper:Lcom/facebook/stetho/dumpapp/Dumper;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -206,29 +208,29 @@
 
     goto :goto_3
 
-    .line 93
+    .line 11
     :cond_4
     invoke-virtual {v4, v1}, Lcom/facebook/stetho/dumpapp/Framer;->writeExitCode(I)V
 
     :goto_3
     const/16 p1, 0xc8
 
-    .line 96
+    .line 12
     iput p1, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->code:I
 
     const-string p1, "OK"
 
-    .line 97
+    .line 13
     iput-object p1, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->reasonPhrase:Ljava/lang/String;
 
     const-string p1, "Access-Control-Allow-Origin"
 
     const-string p2, "*"
 
-    .line 98
-    invoke-virtual {p3, p1, p2}, Lcom/facebook/stetho/server/http/LightHttpResponse;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    .line 14
+    invoke-virtual {p3, p1, p2}, Lcom/facebook/stetho/server/http/LightHttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
+    .line 15
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p1

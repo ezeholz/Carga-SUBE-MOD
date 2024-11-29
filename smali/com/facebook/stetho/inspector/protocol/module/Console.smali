@@ -22,7 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 24
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,12 +35,12 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 34
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/inspector/console/ConsolePeerManager;->getOrCreateInstance()Lcom/facebook/stetho/inspector/console/ConsolePeerManager;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/console/ConsolePeerManager;->removePeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
+    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->removePeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
 
     return-void
 .end method
@@ -50,12 +50,12 @@
     .annotation runtime Lcom/facebook/stetho/inspector/protocol/ChromeDevtoolsMethod;
     .end annotation
 
-    .line 29
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/inspector/console/ConsolePeerManager;->getOrCreateInstance()Lcom/facebook/stetho/inspector/console/ConsolePeerManager;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/console/ConsolePeerManager;->addPeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)Z
+    invoke-virtual {p2, p1}, Lcom/facebook/stetho/inspector/helper/ChromePeerManager;->addPeer(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)Z
 
     return-void
 .end method

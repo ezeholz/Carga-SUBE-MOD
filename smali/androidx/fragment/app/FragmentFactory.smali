@@ -4,28 +4,30 @@
 
 
 # static fields
-.field private static final sClassMap:Landroidx/collection/SimpleArrayMap;
+.field public static final sClassCacheMap:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
+            "Ljava/lang/ClassLoader;",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "Ljava/lang/Class<",
-            "*>;>;"
+            "*>;>;>;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 32
+    .line 1
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    sput-object v0, Landroidx/fragment/app/FragmentFactory;->sClassMap:Landroidx/collection/SimpleArrayMap;
+    sput-object v0, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -33,22 +35,30 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 31
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static isFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Z
+.method public static isFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Z
     .locals 0
+    .param p0    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 64
+    .line 1
     :try_start_0
     invoke-static {p0, p1}, Landroidx/fragment/app/FragmentFactory;->loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 65
+    .line 2
     const-class p1, Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -65,8 +75,19 @@
     return p0
 .end method
 
-.method private static loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
-    .locals 1
+.method public static loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
+    .locals 2
+    .param p0    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -78,35 +99,64 @@
         }
     .end annotation
 
-    .line 44
-    sget-object v0, Landroidx/fragment/app/FragmentFactory;->sClassMap:Landroidx/collection/SimpleArrayMap;
+    .line 1
+    sget-object v0, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Class;
+    check-cast v0, Landroidx/collection/SimpleArrayMap;
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    .line 2
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    .line 47
-    invoke-static {p1, v0, p0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    move-result-object v0
+    .line 3
+    sget-object v1, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
-    .line 48
-    sget-object p0, Landroidx/fragment/app/FragmentFactory;->sClassMap:Landroidx/collection/SimpleArrayMap;
+    invoke-virtual {v1, p0, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
+    .line 4
     :cond_0
-    return-object v0
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Class;
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x0
+
+    .line 5
+    invoke-static {p1, v1, p0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    .line 6
+    invoke-virtual {v0, p1, v1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    return-object v1
 .end method
 
 .method public static loadFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
     .locals 3
+    .param p0    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -122,7 +172,7 @@
 
     const-string v0, "Unable to instantiate fragment "
 
-    .line 88
+    .line 1
     :try_start_0
     invoke-static {p0, p1}, Landroidx/fragment/app/FragmentFactory;->loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
@@ -136,20 +186,12 @@
     :catch_0
     move-exception p0
 
-    .line 94
+    .line 2
     new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, ": make sure class is a valid subclass of Fragment"
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ": make sure class is a valid subclass of Fragment"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p1, v2}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -160,20 +202,12 @@
     :catch_1
     move-exception p0
 
-    .line 91
+    .line 3
     new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, ": make sure class name exists"
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ": make sure class name exists"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p1, v2}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -186,12 +220,22 @@
 # virtual methods
 .method public instantiate(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
     .locals 4
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const-string v0, ": make sure class name exists, is public, and has an empty constructor that is public"
 
     const-string v1, "Unable to instantiate fragment "
 
-    .line 114
+    .line 1
     :try_start_0
     invoke-static {p1, p2}, Landroidx/fragment/app/FragmentFactory;->loadFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
@@ -201,7 +245,7 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 115
+    .line 2
     invoke-virtual {p1, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -224,20 +268,12 @@
     :catch_0
     move-exception p1
 
-    .line 128
+    .line 3
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, ": calling Fragment constructor caused an exception"
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, ": calling Fragment constructor caused an exception"
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, p2, v2}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -248,20 +284,12 @@
     :catch_1
     move-exception p1
 
-    .line 125
+    .line 4
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, ": could not find Fragment constructor"
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, ": could not find Fragment constructor"
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, p2, v2}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -272,18 +300,10 @@
     :catch_2
     move-exception p1
 
-    .line 121
+    .line 5
     new-instance v2, Landroidx/fragment/app/Fragment$InstantiationException;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, p2, v0}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -294,18 +314,10 @@
     :catch_3
     move-exception p1
 
-    .line 117
+    .line 6
     new-instance v2, Landroidx/fragment/app/Fragment$InstantiationException;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, p2, v0}, Lg/b/a/a/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

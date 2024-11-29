@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraCallback;
+.class public Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraCallback;
 .super Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;
 .source "MediaControllerCompat.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ExtraCallback"
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
+.method public constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
     .locals 0
 
-    .line 2249
+    .line 1
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public onExtrasChanged(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 2279
+    .line 1
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
@@ -40,7 +40,7 @@
 .method public onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 0
 
-    .line 2261
+    .line 1
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 2267
+    .line 1
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
@@ -70,7 +70,7 @@
 .method public onQueueTitleChanged(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 2273
+    .line 1
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
@@ -81,7 +81,7 @@
 .method public onSessionDestroyed()V
     .locals 1
 
-    .line 2255
+    .line 1
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -92,7 +92,7 @@
 .method public onVolumeInfoChanged(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
     .locals 0
 
-    .line 2285
+    .line 1
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V

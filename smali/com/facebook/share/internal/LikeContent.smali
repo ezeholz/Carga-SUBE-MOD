@@ -27,46 +27,46 @@
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
-.field private final b:Ljava/lang/String;
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 101
-    new-instance v0, Lcom/facebook/share/internal/LikeContent$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/internal/LikeContent$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/internal/LikeContent$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/internal/LikeContent$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/internal/LikeContent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 53
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/LikeContent;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/LikeContent;->d:Ljava/lang/String;
 
-    .line 55
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/internal/LikeContent;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/share/internal/LikeContent;->e:Ljava/lang/String;
 
     return-void
 .end method
@@ -88,13 +88,13 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 91
-    iget-object p2, p0, Lcom/facebook/share/internal/LikeContent;->a:Ljava/lang/String;
+    .line 1
+    iget-object p2, p0, Lcom/facebook/share/internal/LikeContent;->d:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 92
-    iget-object p2, p0, Lcom/facebook/share/internal/LikeContent;->b:Ljava/lang/String;
+    .line 2
+    iget-object p2, p0, Lcom/facebook/share/internal/LikeContent;->e:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

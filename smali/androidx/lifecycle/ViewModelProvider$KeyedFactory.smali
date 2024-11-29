@@ -1,4 +1,4 @@
-.class abstract Landroidx/lifecycle/ViewModelProvider$KeyedFactory;
+.class public abstract Landroidx/lifecycle/ViewModelProvider$KeyedFactory;
 .super Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;
 .source "ViewModelProvider.java"
 
@@ -12,16 +12,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x408
+    accessFlags = 0x409
     name = "KeyedFactory"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 65
+    .line 1
     invoke-direct {p0}, Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;-><init>()V
 
     return-void
@@ -31,6 +31,13 @@
 # virtual methods
 .method public create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
     .locals 1
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -41,7 +48,7 @@
         }
     .end annotation
 
-    .line 81
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "create(String, Class<?>) must be called on implementaions of KeyedFactory"
@@ -52,6 +59,17 @@
 .end method
 
 .method public abstract create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

@@ -1,83 +1,62 @@
-.class synthetic Landroidx/fragment/app/FragmentStateManager$1;
+.class public Landroidx/fragment/app/FragmentStateManager$1;
 .super Ljava/lang/Object;
 .source "FragmentStateManager.java"
 
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/fragment/app/FragmentStateManager;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/fragment/app/FragmentStateManager;->createView()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$State:[I
+# instance fields
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentStateManager;
+
+.field public final synthetic val$fragmentView:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroidx/fragment/app/FragmentStateManager;Landroid/view/View;)V
+    .locals 0
 
-    .line 197
-    invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
+    .line 1
+    iput-object p1, p0, Landroidx/fragment/app/FragmentStateManager$1;->this$0:Landroidx/fragment/app/FragmentStateManager;
 
-    move-result-object v0
+    iput-object p2, p0, Landroidx/fragment/app/FragmentStateManager$1;->val$fragmentView:Landroid/view/View;
 
-    array-length v0, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    sput-object v0, Landroidx/fragment/app/FragmentStateManager$1;->$SwitchMap$androidx$lifecycle$Lifecycle$State:[I
 
-    :try_start_0
-    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
+# virtual methods
+.method public onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
+    .line 1
+    iget-object p1, p0, Landroidx/fragment/app/FragmentStateManager$1;->val$fragmentView:Landroid/view/View;
 
-    move-result v1
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const/4 v2, 0x1
+    .line 2
+    iget-object p1, p0, Landroidx/fragment/app/FragmentStateManager$1;->val$fragmentView:Landroid/view/View;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->requestApplyInsets(Landroid/view/View;)V
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Landroidx/fragment/app/FragmentStateManager$1;->$SwitchMap$androidx$lifecycle$Lifecycle$State:[I
+    return-void
+.end method
 
-    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
+.method public onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
 
-    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Landroidx/fragment/app/FragmentStateManager$1;->$SwitchMap$androidx$lifecycle$Lifecycle$State:[I
-
-    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
-
-    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
     return-void
 .end method

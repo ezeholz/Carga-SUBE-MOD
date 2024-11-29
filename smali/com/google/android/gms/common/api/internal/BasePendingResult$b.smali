@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/BasePendingResult$b;
+.class public final Lcom/google/android/gms/common/api/internal/BasePendingResult$b;
 .super Ljava/lang/Object;
 
 
@@ -8,17 +8,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "b"
 .end annotation
 
 
 # instance fields
-.field private final synthetic a:Lcom/google/android/gms/common/api/internal/BasePendingResult;
+.field public final synthetic a:Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
 
 # direct methods
-.method private constructor <init>(Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
+.method public synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/BasePendingResult;Lg/d/a/b/d/j/i/n0;)V
     .locals 0
 
     .line 1
@@ -29,30 +29,21 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/BasePendingResult;B)V
-    .locals 0
-
-    .line 5
-    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult$b;-><init>(Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method protected final finalize()V
+.method public final finalize()V
     .locals 1
 
-    .line 2
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult$b;->a:Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
-    invoke-static {v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->a(Lcom/google/android/gms/common/api/internal/BasePendingResult;)Lcom/google/android/gms/common/api/h;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->b(Lcom/google/android/gms/common/api/h;)V
+    .line 2
+    iget-object v0, v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->g:Lg/d/a/b/d/j/g;
 
     .line 3
+    invoke-static {v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->c(Lg/d/a/b/d/j/g;)V
+
+    .line 4
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void

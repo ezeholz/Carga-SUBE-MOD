@@ -3,63 +3,49 @@
 .source "AlreadySelectedException.java"
 
 
-# instance fields
-.field private a:Lorg/apache/commons/cli/f;
-
-.field private b:Lorg/apache/commons/cli/e;
-
-
 # direct methods
-.method private constructor <init>(Ljava/lang/String;)V
-    .locals 0
-
-    .line 43
-    invoke-direct {p0, p1}, Lorg/apache/commons/cli/ParseException;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lorg/apache/commons/cli/f;Lorg/apache/commons/cli/e;)V
+.method public constructor <init>(Lm/a/a/a/g;Lm/a/a/a/f;)V
     .locals 2
 
-    .line 56
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v1, "The option \'"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Lorg/apache/commons/cli/e;->a()Ljava/lang/String;
-
-    move-result-object v1
-
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string v1, "\' was specified but an option from this group has already been selected: \'"
+    invoke-virtual {p2}, Lm/a/a/a/f;->b()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    move-result-object p2
 
-    .line 1106
-    iget-object v1, p1, Lorg/apache/commons/cli/f;->a:Ljava/lang/String;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 56
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string p2, "\' was specified but an option from this group "
 
-    const-string v1, "\'"
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string p2, "has already been selected: \'"
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 2
+    iget-object p1, p1, Lm/a/a/a/g;->e:Ljava/lang/String;
+
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string p1, "\'"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-direct {p0, v0}, Lorg/apache/commons/cli/AlreadySelectedException;-><init>(Ljava/lang/String;)V
-
-    .line 58
-    iput-object p1, p0, Lorg/apache/commons/cli/AlreadySelectedException;->a:Lorg/apache/commons/cli/f;
-
-    .line 59
-    iput-object p2, p0, Lorg/apache/commons/cli/AlreadySelectedException;->b:Lorg/apache/commons/cli/e;
+    .line 4
+    invoke-direct {p0, p1}, Lorg/apache/commons/cli/ParseException;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/protocol/module/Runtime$2;
+.class public final Lcom/facebook/stetho/inspector/protocol/module/Runtime$2;
 .super Ljava/lang/Object;
 .source "Runtime.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$peer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
+.field public final synthetic val$peer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;)V
     .locals 0
 
-    .line 98
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/protocol/module/Runtime$2;->val$peer:Lcom/facebook/stetho/inspector/jsonrpc/JsonRpcPeer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,10 +35,10 @@
 
 
 # virtual methods
-.method public final onDisconnect()V
+.method public onDisconnect()V
     .locals 2
 
-    .line 101
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/inspector/protocol/module/Runtime;->access$100()Ljava/util/Map;
 
     move-result-object v0

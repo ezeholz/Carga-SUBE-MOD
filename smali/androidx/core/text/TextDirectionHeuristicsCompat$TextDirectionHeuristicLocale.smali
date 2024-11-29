@@ -1,4 +1,4 @@
-.class Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
+.class public Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
 .super Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;
 .source "TextDirectionHeuristicsCompat.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "TextDirectionHeuristicLocale"
 .end annotation
 
 
 # static fields
-.field static final INSTANCE:Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
+.field public static final INSTANCE:Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 253
+    .line 1
     new-instance v0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;
 
     invoke-direct {v0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;-><init>()V
@@ -32,12 +32,12 @@
     return-void
 .end method
 
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 244
+    .line 1
     invoke-direct {p0, v0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;-><init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;)V
 
     return-void
@@ -45,10 +45,10 @@
 
 
 # virtual methods
-.method protected defaultIsRtl()Z
+.method public defaultIsRtl()Z
     .locals 2
 
-    .line 249
+    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -61,10 +61,11 @@
 
     if-ne v0, v1, :cond_0
 
-    return v1
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    return v0
+    :goto_0
+    return v1
 .end method

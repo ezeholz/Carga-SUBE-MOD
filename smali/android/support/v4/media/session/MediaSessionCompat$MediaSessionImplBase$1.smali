@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;
+.class public Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;
 .super Landroidx/media/VolumeProviderCompat$Callback;
 .source "MediaSessionCompat.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
+.field public final synthetic this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;)V
+.method public constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;)V
     .locals 0
 
-    .line 2025
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     invoke-direct {p0}, Landroidx/media/VolumeProviderCompat$Callback;-><init>()V
@@ -35,7 +35,7 @@
 .method public onVolumeChanged(Landroidx/media/VolumeProviderCompat;)V
     .locals 7
 
-    .line 2028
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeProvider:Landroidx/media/VolumeProviderCompat;
@@ -44,7 +44,7 @@
 
     return-void
 
-    .line 2031
+    .line 2
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/ParcelableVolumeInfo;
 
@@ -52,11 +52,9 @@
 
     iget v2, v1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeType:I
 
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
-
     iget v3, v1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLocalStream:I
 
-    .line 2032
+    .line 3
     invoke-virtual {p1}, Landroidx/media/VolumeProviderCompat;->getVolumeControl()I
 
     move-result v4
@@ -65,7 +63,7 @@
 
     move-result v5
 
-    .line 2033
+    .line 4
     invoke-virtual {p1}, Landroidx/media/VolumeProviderCompat;->getCurrentVolume()I
 
     move-result v6
@@ -74,7 +72,7 @@
 
     invoke-direct/range {v1 .. v6}, Landroid/support/v4/media/session/ParcelableVolumeInfo;-><init>(IIIII)V
 
-    .line 2034
+    .line 5
     iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->sendVolumeInfoChanged(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V

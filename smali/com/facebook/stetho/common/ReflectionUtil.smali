@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 19
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +16,7 @@
 .method public static getFieldValue(Ljava/lang/reflect/Field;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 49
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -29,7 +29,7 @@
     :catch_0
     move-exception p0
 
-    .line 51
+    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -49,7 +49,7 @@
         }
     .end annotation
 
-    .line 25
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -78,7 +78,7 @@
         }
     .end annotation
 
-    .line 34
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -105,7 +105,7 @@
 
     const-string p0, "Could not retrieve %s field from %s"
 
-    .line 36
+    .line 2
     invoke-static {v0, p0, v1}, Lcom/facebook/stetho/common/LogUtil;->d(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p0, 0x0

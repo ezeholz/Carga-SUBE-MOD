@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;
+.class public Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;
 .super Ljava/lang/Object;
 .source "LocationManagerCompat.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
+.field public final synthetic this$0:Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
 
-.field final synthetic val$executor:Ljava/util/concurrent/Executor;
+.field public final synthetic val$executor:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$status:Landroid/location/GnssStatus;
+.field public final synthetic val$status:Landroid/location/GnssStatus;
 
 
 # direct methods
-.method constructor <init>(Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;Ljava/util/concurrent/Executor;Landroid/location/GnssStatus;)V
+.method public constructor <init>(Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;Ljava/util/concurrent/Executor;Landroid/location/GnssStatus;)V
     .locals 0
 
-    .line 525
+    .line 1
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;->this$0:Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
 
     iput-object p2, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;->val$executor:Ljava/util/concurrent/Executor;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 528
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;->this$0:Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
 
     iget-object v0, v0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
@@ -57,7 +57,7 @@
 
     return-void
 
-    .line 531
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport$4;->this$0:Landroidx/core/location/LocationManagerCompat$PreRGnssStatusTransport;
 

@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/transition/GhostViewImpl;
+.class public interface abstract Landroidx/transition/GhostViewImpl;
 .super Ljava/lang/Object;
 .source "GhostViewImpl.java"
 

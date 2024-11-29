@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresOptIn;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/os/BuildCompat;
 .end annotation

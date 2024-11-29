@@ -26,7 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 521
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,10 +36,20 @@
 # virtual methods
 .method public extendRangeInto([I[II)V
     .locals 6
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 577
+    .line 1
     aget v1, p1, v0
 
     const/4 v2, 0x0
@@ -50,10 +60,10 @@
 
     add-int/2addr v1, v0
 
-    .line 578
+    .line 2
     div-int/lit8 v3, v1, 0x2
 
-    .line 579
+    .line 3
     aget v4, p1, v2
 
     if-ne p3, v0, :cond_0
@@ -70,7 +80,7 @@
 
     aput v4, p2, v2
 
-    .line 580
+    .line 4
     aget p1, p1, v0
 
     const/4 v2, 0x2
@@ -91,10 +101,20 @@
 .end method
 
 .method public abstract getItemRangeInto([I)V
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
 .end method
 
 .method public abstract onDataRefresh()V
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
 .end method
 
 .method public abstract onItemLoaded(I)V
+    .annotation build Landroidx/annotation/UiThread;
+    .end annotation
 .end method

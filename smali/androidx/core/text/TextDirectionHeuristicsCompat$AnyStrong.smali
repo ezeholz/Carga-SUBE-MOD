@@ -1,4 +1,4 @@
-.class Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
+.class public Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
 .super Ljava/lang/Object;
 .source "TextDirectionHeuristicsCompat.java"
 
@@ -12,24 +12,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "AnyStrong"
 .end annotation
 
 
 # static fields
-.field static final INSTANCE_RTL:Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
+.field public static final INSTANCE_RTL:Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
 
 
 # instance fields
-.field private final mLookForRtl:Z
+.field public final mLookForRtl:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    .line 235
+    .line 1
     new-instance v0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
 
     const/4 v1, 0x1
@@ -41,13 +41,13 @@
     return-void
 .end method
 
-.method private constructor <init>(Z)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    .line 231
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
+    .line 2
     iput-boolean p1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
     return-void
@@ -65,38 +65,38 @@
     const/4 v1, 0x0
 
     :goto_0
-    const/4 v2, 0x1
-
     if-ge p2, p3, :cond_3
 
-    .line 208
+    .line 1
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result v3
+    move-result v2
 
-    invoke-static {v3}, Ljava/lang/Character;->getDirectionality(C)B
+    invoke-static {v2}, Ljava/lang/Character;->getDirectionality(C)B
 
-    move-result v3
+    move-result v2
 
-    invoke-static {v3}, Landroidx/core/text/TextDirectionHeuristicsCompat;->isRtlText(I)I
+    invoke-static {v2}, Landroidx/core/text/TextDirectionHeuristicsCompat;->isRtlText(I)I
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_1
+    const/4 v3, 0x1
 
-    if-eq v3, v2, :cond_0
+    if-eqz v2, :cond_1
+
+    if-eq v2, v3, :cond_0
 
     goto :goto_1
 
-    .line 216
+    .line 2
     :cond_0
     iget-boolean v1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
     if-nez v1, :cond_2
 
-    return v2
+    return v3
 
-    .line 210
+    .line 3
     :cond_1
     iget-boolean v1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
@@ -113,19 +113,14 @@
     goto :goto_0
 
     :cond_3
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 226
+    .line 4
     iget-boolean p1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
-    if-eqz p1, :cond_4
-
-    return v2
+    return p1
 
     :cond_4
-    return v0
-
-    :cond_5
     const/4 p1, 0x2
 
     return p1

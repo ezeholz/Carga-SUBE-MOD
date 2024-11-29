@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;
+.class public Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;
 .super Ljava/lang/Object;
 .source "Stetho.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "RealSocketHandlerFactory"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/facebook/stetho/Stetho$Initializer;
+.field public final synthetic this$0:Lcom/facebook/stetho/Stetho$Initializer;
 
 
 # direct methods
-.method private constructor <init>(Lcom/facebook/stetho/Stetho$Initializer;)V
+.method public constructor <init>(Lcom/facebook/stetho/Stetho$Initializer;)V
     .locals 0
 
-    .line 456
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;->this$0:Lcom/facebook/stetho/Stetho$Initializer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,10 +33,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/Stetho$Initializer;Lcom/facebook/stetho/Stetho$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/Stetho$Initializer;Lcom/facebook/stetho/Stetho$1;)V
     .locals 0
 
-    .line 456
+    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;-><init>(Lcom/facebook/stetho/Stetho$Initializer;)V
 
     return-void
@@ -47,19 +47,19 @@
 .method public create()Lcom/facebook/stetho/server/SocketHandler;
     .locals 5
 
-    .line 459
+    .line 1
     new-instance v0, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;
 
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;->this$0:Lcom/facebook/stetho/Stetho$Initializer;
 
-    .line 460
+    .line 2
     invoke-static {v1}, Lcom/facebook/stetho/Stetho$Initializer;->access$100(Lcom/facebook/stetho/Stetho$Initializer;)Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;-><init>(Landroid/content/Context;)V
 
-    .line 462
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;->this$0:Lcom/facebook/stetho/Stetho$Initializer;
 
     invoke-virtual {v1}, Lcom/facebook/stetho/Stetho$Initializer;->getDumperPlugins()Ljava/lang/Iterable;
@@ -68,12 +68,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 464
+    .line 4
     new-instance v2, Lcom/facebook/stetho/dumpapp/Dumper;
 
     invoke-direct {v2, v1}, Lcom/facebook/stetho/dumpapp/Dumper;-><init>(Ljava/lang/Iterable;)V
 
-    .line 466
+    .line 5
     new-instance v1, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$ExactMagicMatcher;
 
     sget-object v3, Lcom/facebook/stetho/dumpapp/DumpappSocketLikeHandler;->PROTOCOL_MAGIC:[B
@@ -86,42 +86,42 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->addHandler(Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;Lcom/facebook/stetho/server/SocketLikeHandler;)V
 
-    .line 472
+    .line 6
     new-instance v1, Lcom/facebook/stetho/dumpapp/DumpappHttpSocketLikeHandler;
 
     invoke-direct {v1, v2}, Lcom/facebook/stetho/dumpapp/DumpappHttpSocketLikeHandler;-><init>(Lcom/facebook/stetho/dumpapp/Dumper;)V
 
-    .line 473
+    .line 7
     new-instance v2, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$ExactMagicMatcher;
 
     const-string v3, "GET /dumpapp"
 
-    .line 475
+    .line 8
     invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$ExactMagicMatcher;-><init>([B)V
 
-    .line 473
+    .line 9
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->addHandler(Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;Lcom/facebook/stetho/server/SocketLikeHandler;)V
 
-    .line 477
+    .line 10
     new-instance v2, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$ExactMagicMatcher;
 
     const-string v3, "POST /dumpapp"
 
-    .line 479
+    .line 11
     invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$ExactMagicMatcher;-><init>([B)V
 
-    .line 477
+    .line 12
     invoke-virtual {v0, v2, v1}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->addHandler(Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;Lcom/facebook/stetho/server/SocketLikeHandler;)V
 
-    .line 483
+    .line 13
     :cond_0
     iget-object v1, p0, Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;->this$0:Lcom/facebook/stetho/Stetho$Initializer;
 
@@ -131,7 +131,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 485
+    .line 14
     new-instance v2, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$AlwaysMatchMatcher;
 
     invoke-direct {v2}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$AlwaysMatchMatcher;-><init>()V
@@ -140,14 +140,14 @@
 
     iget-object v4, p0, Lcom/facebook/stetho/Stetho$Initializer$RealSocketHandlerFactory;->this$0:Lcom/facebook/stetho/Stetho$Initializer;
 
-    .line 487
+    .line 15
     invoke-static {v4}, Lcom/facebook/stetho/Stetho$Initializer;->access$100(Lcom/facebook/stetho/Stetho$Initializer;)Landroid/content/Context;
 
     move-result-object v4
 
     invoke-direct {v3, v4, v1}, Lcom/facebook/stetho/inspector/DevtoolsSocketHandler;-><init>(Landroid/content/Context;Ljava/lang/Iterable;)V
 
-    .line 485
+    .line 16
     invoke-virtual {v0, v2, v3}, Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler;->addHandler(Lcom/facebook/stetho/server/ProtocolDetectingSocketHandler$MagicMatcher;Lcom/facebook/stetho/server/SocketLikeHandler;)V
 
     :cond_1

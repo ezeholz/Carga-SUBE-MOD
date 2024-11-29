@@ -4,18 +4,18 @@
 
 
 # instance fields
-.field private final a:Lcom/facebook/g;
+.field public final d:Lg/c/k;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/g;Ljava/lang/String;)V
+.method public constructor <init>(Lg/c/k;Ljava/lang/String;)V
     .locals 0
 
-    .line 37
+    .line 1
     invoke-direct {p0, p2}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
-    .line 38
-    iput-object p1, p0, Lcom/facebook/FacebookGraphResponseException;->a:Lcom/facebook/g;
+    .line 2
+    iput-object p1, p0, Lcom/facebook/FacebookGraphResponseException;->d:Lg/c/k;
 
     return-void
 .end method
@@ -25,40 +25,40 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .line 51
-    iget-object v0, p0, Lcom/facebook/FacebookGraphResponseException;->a:Lcom/facebook/g;
+    .line 1
+    iget-object v0, p0, Lcom/facebook/FacebookGraphResponseException;->d:Lg/c/k;
 
     if-eqz v0, :cond_0
 
-    .line 1117
-    iget-object v0, v0, Lcom/facebook/g;->b:Lcom/facebook/FacebookRequestError;
+    .line 2
+    iget-object v0, v0, Lg/c/k;->c:Lcom/facebook/FacebookRequestError;
 
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 52
     :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "{FacebookGraphResponseException: "
 
-    const-string v2, "{FacebookGraphResponseException: "
+    .line 3
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    .line 54
-    invoke-virtual {p0}, Lcom/facebook/FacebookGraphResponseException;->getMessage()Ljava/lang/String;
+    .line 4
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 56
+    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, " "
 
-    .line 57
+    .line 6
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
@@ -66,43 +66,43 @@
 
     const-string v2, "httpResponseCode: "
 
-    .line 60
+    .line 7
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1194
-    iget v2, v0, Lcom/facebook/FacebookRequestError;->b:I
+    .line 8
+    iget v2, v0, Lcom/facebook/FacebookRequestError;->e:I
 
-    .line 61
+    .line 9
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, ", facebookErrorCode: "
 
-    .line 62
+    .line 10
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1203
-    iget v2, v0, Lcom/facebook/FacebookRequestError;->c:I
+    .line 11
+    iget v2, v0, Lcom/facebook/FacebookRequestError;->f:I
 
-    .line 63
+    .line 12
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, ", facebookErrorType: "
 
-    .line 64
+    .line 13
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1223
-    iget-object v2, v0, Lcom/facebook/FacebookRequestError;->e:Ljava/lang/String;
+    .line 14
+    iget-object v2, v0, Lcom/facebook/FacebookRequestError;->h:Ljava/lang/String;
 
-    .line 65
+    .line 15
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, ", message: "
 
-    .line 66
+    .line 16
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 67
+    .line 17
     invoke-virtual {v0}, Lcom/facebook/FacebookRequestError;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -111,10 +111,10 @@
 
     const-string v0, "}"
 
-    .line 68
+    .line 18
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
+    .line 19
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

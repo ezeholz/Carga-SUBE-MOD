@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;
+.class public Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;
 .super Ljava/lang/Object;
 .source "LightHttpServer.java"
 
@@ -9,42 +9,42 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "NewLineDetector"
 .end annotation
 
 
 # static fields
-.field private static final STATE_ON_CR:I = 0x2
+.field public static final STATE_ON_CR:I = 0x2
 
-.field private static final STATE_ON_CRLF:I = 0x3
+.field public static final STATE_ON_CRLF:I = 0x3
 
-.field private static final STATE_ON_OTHER:I = 0x1
+.field public static final STATE_ON_OTHER:I = 0x1
 
 
 # instance fields
-.field private state:I
+.field public state:I
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 216
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 221
+    .line 2
     iput v0, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/server/http/LightHttpServer$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/server/http/LightHttpServer$1;)V
     .locals 0
 
-    .line 216
+    .line 3
     invoke-direct {p0}, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;-><init>()V
 
     return-void
@@ -55,7 +55,7 @@
 .method public accept(C)V
     .locals 5
 
-    .line 224
+    .line 1
     iget v0, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
     const/16 v1, 0xd
@@ -74,26 +74,26 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 239
+    .line 2
     iput v2, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
-    return-void
+    goto :goto_0
 
-    .line 241
+    .line 3
     :cond_0
     iput v3, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
-    return-void
+    goto :goto_0
 
-    .line 245
+    .line 4
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Unknown state: "
 
-    const-string v1, "Unknown state: "
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     iget v1, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
@@ -112,31 +112,32 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 232
+    .line 5
     iput v4, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
-    return-void
+    goto :goto_0
 
-    .line 234
+    .line 6
     :cond_3
     iput v3, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
-    return-void
+    goto :goto_0
 
     :cond_4
     if-ne p1, v1, :cond_5
 
-    .line 227
+    .line 7
     iput v2, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
     :cond_5
+    :goto_0
     return-void
 .end method
 
 .method public state()I
     .locals 1
 
-    .line 250
+    .line 1
     iget v0, p0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageReader$NewLineDetector;->state:I
 
     return v0

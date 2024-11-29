@@ -7,17 +7,17 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 32
+    .line 2
     invoke-direct {p0}, Lcom/android/volley/ServerError;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/volley/h;)V
+.method public constructor <init>(Lg/b/b/h;)V
     .locals 0
 
-    .line 28
-    invoke-direct {p0, p1}, Lcom/android/volley/ServerError;-><init>(Lcom/android/volley/h;)V
+    .line 1
+    invoke-direct {p0, p1}, Lcom/android/volley/ServerError;-><init>(Lg/b/b/h;)V
 
     return-void
 .end method

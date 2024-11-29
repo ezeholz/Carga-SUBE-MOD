@@ -30,7 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 742
+    .line 1
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void
@@ -38,14 +38,14 @@
 
 
 # virtual methods
-.method public final store(Ljava/lang/String;Ljava/lang/String;)V
+.method public store(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 747
-    invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/Document$AttributeListAccumulator;->add(Ljava/lang/Object;)Z
+    .line 1
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 748
-    invoke-virtual {p0, p2}, Lcom/facebook/stetho/inspector/elements/Document$AttributeListAccumulator;->add(Ljava/lang/Object;)Z
+    .line 2
+    invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

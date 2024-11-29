@@ -1,4 +1,4 @@
-.class final Landroidx/constraintlayout/solver/Pools;
+.class public final Landroidx/constraintlayout/solver/Pools;
 .super Ljava/lang/Object;
 .source "Pools.java"
 
@@ -13,14 +13,14 @@
 
 
 # static fields
-.field private static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 75
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -4,7 +4,10 @@
 
 
 # instance fields
-.field private final mBagOfTags:Ljava/util/Map;
+.field public final mBagOfTags:Ljava/util/Map;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -15,17 +18,17 @@
     .end annotation
 .end field
 
-.field private volatile mCleared:Z
+.field public volatile mCleared:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 108
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -34,21 +37,21 @@
 
     const/4 v0, 0x0
 
-    .line 112
+    .line 3
     iput-boolean v0, p0, Landroidx/lifecycle/ViewModel;->mCleared:Z
 
     return-void
 .end method
 
-.method private static closeWithRuntimeException(Ljava/lang/Object;)V
+.method public static closeWithRuntimeException(Ljava/lang/Object;)V
     .locals 1
 
-    .line 187
+    .line 1
     instance-of v0, p0, Ljava/io/Closeable;
 
     if-eqz v0, :cond_0
 
-    .line 189
+    .line 2
     :try_start_0
     check-cast p0, Ljava/io/Closeable;
 
@@ -56,12 +59,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
     :catch_0
     move-exception p0
 
-    .line 191
+    .line 3
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -69,28 +72,31 @@
     throw v0
 
     :cond_0
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method final clear()V
+.method public final clear()V
     .locals 3
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
     const/4 v0, 0x1
 
-    .line 126
+    .line 1
     iput-boolean v0, p0, Landroidx/lifecycle/ViewModel;->mCleared:Z
 
-    .line 131
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
     if-eqz v0, :cond_1
 
-    .line 132
+    .line 3
     monitor-enter v0
 
-    .line 133
+    .line 4
     :try_start_0
     iget-object v1, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
@@ -113,12 +119,12 @@
 
     move-result-object v2
 
-    .line 135
+    .line 5
     invoke-static {v2}, Landroidx/lifecycle/ViewModel;->closeWithRuntimeException(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 137
+    .line 6
     :cond_0
     monitor-exit v0
 
@@ -133,7 +139,7 @@
 
     throw v1
 
-    .line 139
+    .line 7
     :cond_1
     :goto_1
     invoke-virtual {p0}, Landroidx/lifecycle/ViewModel;->onCleared()V
@@ -141,7 +147,7 @@
     return-void
 .end method
 
-.method getTag(Ljava/lang/String;)Ljava/lang/Object;
+.method public getTag(Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -153,7 +159,7 @@
         }
     .end annotation
 
-    .line 178
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
     if-nez v0, :cond_0
@@ -162,11 +168,11 @@
 
     return-object p1
 
-    .line 181
+    .line 2
     :cond_0
     monitor-enter v0
 
-    .line 182
+    .line 3
     :try_start_0
     iget-object v1, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
@@ -181,7 +187,7 @@
     :catchall_0
     move-exception p1
 
-    .line 183
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -189,13 +195,13 @@
     throw p1
 .end method
 
-.method protected onCleared()V
+.method public onCleared()V
     .locals 0
 
     return-void
 .end method
 
-.method setTagIfAbsent(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+.method public setTagIfAbsent(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -207,12 +213,12 @@
         }
     .end annotation
 
-    .line 157
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 158
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
@@ -222,12 +228,12 @@
 
     if-nez v1, :cond_0
 
-    .line 160
+    .line 3
     iget-object v2, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
     invoke-interface {v2, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
+    .line 4
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -240,13 +246,13 @@
     :cond_1
     move-object p2, v1
 
-    .line 164
+    .line 5
     :goto_0
     iget-boolean p1, p0, Landroidx/lifecycle/ViewModel;->mCleared:Z
 
     if-eqz p1, :cond_2
 
-    .line 168
+    .line 6
     invoke-static {p2}, Landroidx/lifecycle/ViewModel;->closeWithRuntimeException(Ljava/lang/Object;)V
 
     :cond_2
@@ -255,7 +261,7 @@
     :catchall_0
     move-exception p1
 
-    .line 162
+    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1

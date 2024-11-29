@@ -1,14 +1,14 @@
 .class public final Landroidx/collection/LruCacheKt$lruCache$2;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "LruCache.kt"
 
 # interfaces
-.implements Lkotlin/d/a/b;
+.implements Lj/m/b/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/collection/LruCacheKt;->lruCache$default(ILkotlin/d/a/m;Lkotlin/d/a/b;Lkotlin/d/a/r;ILjava/lang/Object;)Landroidx/collection/LruCache;
+    value = Landroidx/collection/LruCacheKt;->lruCache$default(ILj/m/b/p;Lj/m/b/l;Lj/m/b/r;ILjava/lang/Object;)Landroidx/collection/LruCache;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/b<",
+        "Lj/m/c/j;",
+        "Lj/m/b/l<",
         "TK;TV;>;"
     }
 .end annotation
@@ -30,7 +30,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     new-instance v0, Landroidx/collection/LruCacheKt$lruCache$2;
@@ -47,7 +47,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, v0}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

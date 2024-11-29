@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/Stetho$PluginBuilder;
+.class public Lcom/facebook/stetho/Stetho$PluginBuilder;
 .super Ljava/lang/Object;
 .source "Stetho.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "PluginBuilder"
 .end annotation
 
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field private mFinished:Z
+.field public mFinished:Z
 
-.field private final mPlugins:Ljava/util/ArrayList;
+.field public final mPlugins:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field private final mProvidedNames:Ljava/util/Set;
+.field public final mProvidedNames:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field private final mRemovedNames:Ljava/util/Set;
+.field public final mRemovedNames:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -57,27 +57,27 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
-    .line 155
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 156
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mProvidedNames:Ljava/util/Set;
 
-    .line 157
+    .line 3
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mRemovedNames:Ljava/util/Set;
 
-    .line 159
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -87,10 +87,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/facebook/stetho/Stetho$1;)V
+.method public synthetic constructor <init>(Lcom/facebook/stetho/Stetho$1;)V
     .locals 0
 
-    .line 155
+    .line 5
     invoke-direct {p0}, Lcom/facebook/stetho/Stetho$PluginBuilder;-><init>()V
 
     return-void
@@ -99,14 +99,14 @@
 .method private throwIfFinished()V
     .locals 2
 
-    .line 184
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mFinished:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 185
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -131,10 +131,10 @@
 
     const/4 v0, 0x1
 
-    .line 190
+    .line 1
     iput-boolean v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mFinished:Z
 
-    .line 191
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mPlugins:Ljava/util/ArrayList;
 
     return-object v0
@@ -150,15 +150,15 @@
         }
     .end annotation
 
-    .line 164
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/Stetho$PluginBuilder;->throwIfFinished()V
 
-    .line 165
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mPlugins:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 166
+    .line 3
     iget-object p2, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mProvidedNames:Ljava/util/Set;
 
     invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -176,10 +176,10 @@
         }
     .end annotation
 
-    .line 170
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/Stetho$PluginBuilder;->throwIfFinished()V
 
-    .line 171
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mRemovedNames:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -188,7 +188,7 @@
 
     if-nez v0, :cond_0
 
-    .line 172
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mProvidedNames:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -197,7 +197,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 173
+    .line 4
     iget-object p1, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mPlugins:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -209,10 +209,10 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .line 179
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/Stetho$PluginBuilder;->throwIfFinished()V
 
-    .line 180
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/Stetho$PluginBuilder;->mRemovedNames:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z

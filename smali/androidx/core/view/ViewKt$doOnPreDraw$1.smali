@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewKt;->doOnPreDraw(Landroid/view/View;Lkotlin/d/a/b;)Landroidx/core/view/OneShotPreDrawListener;
+    value = Landroidx/core/view/ViewKt;->doOnPreDraw(Landroid/view/View;Lj/m/b/l;)Landroidx/core/view/OneShotPreDrawListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,37 +18,37 @@
 
 
 # instance fields
-.field final synthetic $action:Lkotlin/d/a/b;
+.field public final synthetic $action:Lj/m/b/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "Landroid/view/View;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $this_doOnPreDraw:Landroid/view/View;
+.field public final synthetic $this_doOnPreDraw:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/b;Landroid/view/View;)V
+.method public constructor <init>(Lj/m/b/l;Landroid/view/View;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;",
             "Landroid/view/View;",
             ")V"
         }
     .end annotation
 
-    iput-object p1, p0, Landroidx/core/view/ViewKt$doOnPreDraw$1;->$action:Lkotlin/d/a/b;
+    iput-object p1, p0, Landroidx/core/view/ViewKt$doOnPreDraw$1;->$action:Lj/m/b/l;
 
     iput-object p2, p0, Landroidx/core/view/ViewKt$doOnPreDraw$1;->$this_doOnPreDraw:Landroid/view/View;
 
@@ -62,12 +62,12 @@
 .method public final run()V
     .locals 2
 
-    .line 82
-    iget-object v0, p0, Landroidx/core/view/ViewKt$doOnPreDraw$1;->$action:Lkotlin/d/a/b;
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/ViewKt$doOnPreDraw$1;->$action:Lj/m/b/l;
 
     iget-object v1, p0, Landroidx/core/view/ViewKt$doOnPreDraw$1;->$this_doOnPreDraw:Landroid/view/View;
 
-    invoke-interface {v0, v1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

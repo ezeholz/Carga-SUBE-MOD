@@ -12,21 +12,25 @@
 
 
 # instance fields
-.field private final mId:Ljava/lang/String;
+.field public final mId:Ljava/lang/String;
 
-.field private final mWrapped:Landroid/content/LocusId;
+.field public final mWrapped:Landroid/content/LocusId;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 76
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "id cannot be empty"
 
-    .line 77
+    .line 2
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkStringNotEmpty(Ljava/lang/CharSequence;Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -35,42 +39,45 @@
 
     iput-object v0, p0, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
-    .line 78
+    .line 3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-lt v0, v1, :cond_0
 
-    .line 79
+    .line 4
     invoke-static {p1}, Landroidx/core/content/LocusIdCompat$Api29Impl;->create(Ljava/lang/String;)Landroid/content/LocusId;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/core/content/LocusIdCompat;->mWrapped:Landroid/content/LocusId;
 
-    return-void
+    goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 81
+    .line 5
     iput-object p1, p0, Landroidx/core/content/LocusIdCompat;->mWrapped:Landroid/content/LocusId;
 
+    :goto_0
     return-void
 .end method
 
 .method private getSanitizedId()Ljava/lang/String;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 142
+    .line 1
     iget-object v0, p0, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 143
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,13 +97,23 @@
 
 .method public static toLocusIdCompat(Landroid/content/LocusId;)Landroidx/core/content/LocusIdCompat;
     .locals 2
+    .param p0    # Landroid/content/LocusId;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
 
     const-string v0, "locusId cannot be null"
 
-    .line 135
+    .line 1
     invoke-static {p0, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
+    .line 2
     new-instance v0, Landroidx/core/content/LocusIdCompat;
 
     invoke-static {p0}, Landroidx/core/content/LocusIdCompat$Api29Impl;->getId(Landroid/content/LocusId;)Ljava/lang/String;
@@ -118,8 +135,12 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public equals(Ljava/lang/Object;)Z
     .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x1
 
@@ -134,11 +155,9 @@
 
     return v1
 
-    .line 105
+    .line 1
     :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
+    const-class v2, Landroidx/core/content/LocusIdCompat;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -148,26 +167,29 @@
 
     return v1
 
-    .line 106
+    .line 2
     :cond_2
     check-cast p1, Landroidx/core/content/LocusIdCompat;
 
-    .line 107
+    .line 3
     iget-object v2, p0, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
-    .line 108
+    .line 4
     iget-object p1, p1, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
     if-nez p1, :cond_3
 
-    return v0
+    goto :goto_0
 
     :cond_3
-    return v1
+    const/4 v0, 0x0
 
-    .line 110
+    :goto_0
+    return v0
+
+    .line 5
     :cond_4
     iget-object p1, p1, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
@@ -178,19 +200,21 @@
     return p1
 .end method
 
-.method public final getId()Ljava/lang/String;
+.method public getId()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 90
+    .line 1
     iget-object v0, p0, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public hashCode()I
+    .locals 2
 
-    .line 97
+    .line 1
     iget-object v0, p0, Landroidx/core/content/LocusIdCompat;->mId:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -205,41 +229,47 @@
     move-result v0
 
     :goto_0
-    add-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    return v0
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final toLocusId()Landroid/content/LocusId;
+.method public toLocusId()Landroid/content/LocusId;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 126
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Landroidx/core/content/LocusIdCompat;->mWrapped:Landroid/content/LocusId;
 
     return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public toString()Ljava/lang/String;
+    .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 117
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "LocusIdCompat["
 
-    const-string v1, "LocusIdCompat["
+    .line 1
+    invoke-static {v0}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     invoke-direct {p0}, Landroidx/core/content/LocusIdCompat;->getSanitizedId()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "]"
 
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lg/b/a/a/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;
+.class public Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;
 .super Ljava/lang/Object;
 .source "ToolbarWidgetWrapper.java"
 
@@ -12,34 +12,34 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final mNavItem:Landroidx/appcompat/view/menu/ActionMenuItem;
+.field public final mNavItem:Landroidx/appcompat/view/menu/ActionMenuItem;
 
-.field final synthetic this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ToolbarWidgetWrapper;)V
     .locals 7
 
-    .line 182
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
+    .line 2
     new-instance p1, Landroidx/appcompat/view/menu/ActionMenuItem;
 
     iget-object v0, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -69,29 +69,23 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 187
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
-    iget-object p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mWindowCallback:Landroid/view/Window$Callback;
+    iget-object v0, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mWindowCallback:Landroid/view/Window$Callback;
 
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
+    if-eqz v0, :cond_0
 
     iget-boolean p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mMenuPrepared:Z
 
     if-eqz p1, :cond_0
 
-    .line 188
-    iget-object p1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->this$0:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
+    const/4 p1, 0x0
 
-    iget-object p1, p1, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mWindowCallback:Landroid/view/Window$Callback;
-
-    const/4 v0, 0x0
-
+    .line 2
     iget-object v1, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper$1;->mNavItem:Landroidx/appcompat/view/menu/ActionMenuItem;
 
-    invoke-interface {p1, v0, v1}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+    invoke-interface {v0, p1, v1}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
     :cond_0
     return-void

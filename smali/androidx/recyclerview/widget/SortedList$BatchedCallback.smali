@@ -25,9 +25,9 @@
 
 
 # instance fields
-.field private final mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
+.field public final mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
-.field final mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
+.field public final mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/SortedList$Callback<",
@@ -48,13 +48,13 @@
         }
     .end annotation
 
-    .line 951
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/SortedList$Callback;-><init>()V
 
-    .line 952
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
-    .line 953
+    .line 3
     new-instance v0, Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-direct {v0, p1}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;-><init>(Landroidx/recyclerview/widget/ListUpdateCallback;)V
@@ -74,7 +74,7 @@
         }
     .end annotation
 
-    .line 988
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -92,7 +92,7 @@
         }
     .end annotation
 
-    .line 993
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -110,7 +110,7 @@
         }
     .end annotation
 
-    .line 958
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -123,7 +123,7 @@
 .method public dispatchLastEvent()V
     .locals 1
 
-    .line 1007
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;->dispatchLastEvent()V
@@ -133,6 +133,9 @@
 
 .method public getChangePayload(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT2;TT2;)",
@@ -140,7 +143,7 @@
         }
     .end annotation
 
-    .line 999
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mWrappedCallback:Landroidx/recyclerview/widget/SortedList$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->getChangePayload(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -153,7 +156,7 @@
 .method public onChanged(II)V
     .locals 2
 
-    .line 978
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     const/4 v1, 0x0
@@ -166,7 +169,7 @@
 .method public onChanged(IILjava/lang/Object;)V
     .locals 1
 
-    .line 983
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;->onChanged(IILjava/lang/Object;)V
@@ -177,7 +180,7 @@
 .method public onInserted(II)V
     .locals 1
 
-    .line 963
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;->onInserted(II)V
@@ -188,7 +191,7 @@
 .method public onMoved(II)V
     .locals 1
 
-    .line 973
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;->onMoved(II)V
@@ -199,7 +202,7 @@
 .method public onRemoved(II)V
     .locals 1
 
-    .line 968
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;->onRemoved(II)V

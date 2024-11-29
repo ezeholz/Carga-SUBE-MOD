@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 30
+    .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -15,10 +15,10 @@
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
 
-    .line 33
+    .line 1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -31,17 +31,15 @@
 
     if-eqz p1, :cond_0
 
-    .line 34
-    invoke-static {}, Lcom/facebook/b;->a()Lcom/facebook/b;
+    .line 2
+    invoke-static {}, Lg/c/c;->a()Lg/c/c;
 
     move-result-object p1
 
-    .line 1140
-    iget-object p2, p1, Lcom/facebook/b;->b:Lcom/facebook/AccessToken;
+    .line 3
+    iget-object p2, p1, Lg/c/c;->c:Lcom/facebook/AccessToken;
 
-    iget-object v0, p1, Lcom/facebook/b;->b:Lcom/facebook/AccessToken;
-
-    invoke-virtual {p1, p2, v0}, Lcom/facebook/b;->a(Lcom/facebook/AccessToken;Lcom/facebook/AccessToken;)V
+    invoke-virtual {p1, p2, p2}, Lg/c/c;->a(Lcom/facebook/AccessToken;Lcom/facebook/AccessToken;)V
 
     :cond_0
     return-void

@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage, ParcelClassLoader"
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/fragment/app/Fragment;
 .end annotation
@@ -19,6 +25,9 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -30,14 +39,14 @@
 
 
 # instance fields
-.field final mState:Landroid/os/Bundle;
+.field public final mState:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 429
+    .line 1
     new-instance v0, Landroidx/fragment/app/Fragment$SavedState$1;
 
     invoke-direct {v0}, Landroidx/fragment/app/Fragment$SavedState$1;-><init>()V
@@ -47,25 +56,33 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 407
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 408
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/Fragment$SavedState;->mState:Landroid/os/Bundle;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 411
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 412
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object p1
@@ -76,7 +93,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 414
+    .line 5
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
     :cond_0
@@ -95,8 +112,12 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 425
+    .line 1
     iget-object p2, p0, Landroidx/fragment/app/Fragment$SavedState;->mState:Landroid/os/Bundle;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V

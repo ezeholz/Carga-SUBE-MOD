@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final mHttpHandlers:Ljava/util/ArrayList;
+.field public final mHttpHandlers:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -14,7 +14,7 @@
     .end annotation
 .end field
 
-.field private final mPathMatchers:Ljava/util/ArrayList;
+.field public final mPathMatchers:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -29,17 +29,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 16
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mPathMatchers:Ljava/util/ArrayList;
 
-    .line 18
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -53,12 +53,14 @@
 # virtual methods
 .method public declared-synchronized lookup(Ljava/lang/String;)Lcom/facebook/stetho/server/http/HttpHandler;
     .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 39
+    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mPathMatchers:Ljava/util/ArrayList;
 
@@ -69,7 +71,7 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 40
+    .line 2
     iget-object v2, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mPathMatchers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -84,7 +86,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 41
+    .line 3
     iget-object p1, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mHttpHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -107,7 +109,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 44
+    .line 4
     monitor-exit p0
 
     return-object p1
@@ -131,20 +133,20 @@
 
     monitor-enter p0
 
-    .line 21
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mPathMatchers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 22
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mHttpHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23
+    .line 3
     monitor-exit p0
 
     return-void
@@ -162,7 +164,7 @@
 
     monitor-enter p0
 
-    .line 26
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mPathMatchers:Ljava/util/ArrayList;
 
@@ -172,7 +174,7 @@
 
     if-ltz p1, :cond_0
 
-    .line 28
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mHttpHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -181,12 +183,12 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 29
+    .line 3
     iget-object p2, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mPathMatchers:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 30
+    .line 4
     iget-object p2, p0, Lcom/facebook/stetho/server/http/HandlerRegistry;->mHttpHandlers:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -195,7 +197,7 @@
 
     const/4 p1, 0x1
 
-    .line 31
+    .line 5
     monitor-exit p0
 
     return p1
@@ -203,7 +205,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 34
+    .line 6
     monitor-exit p0
 
     return p1

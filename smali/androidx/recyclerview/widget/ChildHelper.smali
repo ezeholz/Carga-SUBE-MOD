@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/ChildHelper;
+.class public Landroidx/recyclerview/widget/ChildHelper;
 .super Ljava/lang/Object;
 .source "ChildHelper.java"
 
@@ -13,17 +13,17 @@
 
 
 # static fields
-.field private static final DEBUG:Z = false
+.field public static final DEBUG:Z = false
 
-.field private static final TAG:Ljava/lang/String; = "ChildrenHelper"
+.field public static final TAG:Ljava/lang/String; = "ChildrenHelper"
 
 
 # instance fields
-.field final mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
+.field public final mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
-.field final mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
+.field public final mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
-.field final mHiddenViews:Ljava/util/List;
+.field public final mHiddenViews:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -35,23 +35,23 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/recyclerview/widget/ChildHelper$Callback;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/ChildHelper$Callback;)V
     .locals 0
 
-    .line 48
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
-    .line 50
+    .line 3
     new-instance p1, Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/ChildHelper$Bucket;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
-    .line 51
+    .line 4
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -70,7 +70,7 @@
 
     return v0
 
-    .line 117
+    .line 1
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -83,7 +83,7 @@
     :goto_0
     if-ge v2, v1, :cond_3
 
-    .line 120
+    .line 2
     iget-object v3, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->countOnesBefore(I)I
@@ -96,7 +96,7 @@
 
     if-nez v3, :cond_2
 
-    .line 123
+    .line 3
     :goto_1
     iget-object p1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -125,12 +125,12 @@
 .method private hideViewInternal(Landroid/view/View;)V
     .locals 1
 
-    .line 60
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 61
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->onEnteredHiddenState(Landroid/view/View;)V
@@ -141,7 +141,7 @@
 .method private unhideViewInternal(Landroid/view/View;)Z
     .locals 1
 
-    .line 70
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -150,7 +150,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->onLeftHiddenState(Landroid/view/View;)V
@@ -167,12 +167,12 @@
 
 
 # virtual methods
-.method addView(Landroid/view/View;IZ)V
+.method public addView(Landroid/view/View;IZ)V
     .locals 1
 
     if-gez p2, :cond_0
 
-    .line 99
+    .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {p2}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildCount()I
@@ -181,13 +181,13 @@
 
     goto :goto_0
 
-    .line 101
+    .line 3
     :cond_0
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 
     move-result p2
 
-    .line 103
+    .line 4
     :goto_0
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -195,10 +195,10 @@
 
     if-eqz p3, :cond_1
 
-    .line 105
+    .line 5
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->hideViewInternal(Landroid/view/View;)V
 
-    .line 107
+    .line 6
     :cond_1
     iget-object p3, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -207,23 +207,23 @@
     return-void
 .end method
 
-.method addView(Landroid/view/View;Z)V
+.method public addView(Landroid/view/View;Z)V
     .locals 1
 
     const/4 v0, -0x1
 
-    .line 85
+    .line 1
     invoke-virtual {p0, p1, v0, p2}, Landroidx/recyclerview/widget/ChildHelper;->addView(Landroid/view/View;IZ)V
 
     return-void
 .end method
 
-.method attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)V
+.method public attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)V
     .locals 1
 
     if-gez p2, :cond_0
 
-    .line 231
+    .line 1
     iget-object p2, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {p2}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildCount()I
@@ -232,13 +232,13 @@
 
     goto :goto_0
 
-    .line 233
+    .line 2
     :cond_0
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 
     move-result p2
 
-    .line 235
+    .line 3
     :goto_0
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -246,10 +246,10 @@
 
     if-eqz p4, :cond_1
 
-    .line 237
+    .line 4
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->hideViewInternal(Landroid/view/View;)V
 
-    .line 239
+    .line 5
     :cond_1
     iget-object p4, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -258,20 +258,20 @@
     return-void
 .end method
 
-.method detachViewFromParent(I)V
+.method public detachViewFromParent(I)V
     .locals 1
 
-    .line 282
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 
     move-result p1
 
-    .line 283
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->remove(I)Z
 
-    .line 284
+    .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->detachViewFromParent(I)V
@@ -279,10 +279,10 @@
     return-void
 .end method
 
-.method findHiddenNonRemovedView(I)Landroid/view/View;
+.method public findHiddenNonRemovedView(I)Landroid/view/View;
     .locals 5
 
-    .line 206
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -294,7 +294,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 208
+    .line 2
     iget-object v2, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -303,28 +303,28 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 209
+    .line 3
     iget-object v3, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v3, v2}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v3
 
-    .line 210
+    .line 4
     invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getLayoutPosition()I
 
     move-result v4
 
     if-ne v4, p1, :cond_0
 
-    .line 211
+    .line 5
     invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->isInvalid()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 212
+    .line 6
     invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->isRemoved()Z
 
     move-result v3
@@ -344,15 +344,15 @@
     return-object p1
 .end method
 
-.method getChildAt(I)Landroid/view/View;
+.method public getChildAt(I)Landroid/view/View;
     .locals 1
 
-    .line 180
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 
     move-result p1
 
-    .line 181
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildAt(I)Landroid/view/View;
@@ -362,10 +362,10 @@
     return-object p1
 .end method
 
-.method getChildCount()I
+.method public getChildCount()I
     .locals 2
 
-    .line 253
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildCount()I
@@ -383,10 +383,10 @@
     return v0
 .end method
 
-.method getUnfilteredChildAt(I)Landroid/view/View;
+.method public getUnfilteredChildAt(I)Landroid/view/View;
     .locals 1
 
-    .line 273
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildAt(I)Landroid/view/View;
@@ -396,10 +396,10 @@
     return-object p1
 .end method
 
-.method getUnfilteredChildCount()I
+.method public getUnfilteredChildCount()I
     .locals 1
 
-    .line 263
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildCount()I
@@ -409,10 +409,10 @@
     return v0
 .end method
 
-.method hide(Landroid/view/View;)V
-    .locals 2
+.method public hide(Landroid/view/View;)V
+    .locals 3
 
-    .line 328
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->indexOfChild(Landroid/view/View;)I
@@ -421,27 +421,31 @@
 
     if-ltz v0, :cond_0
 
-    .line 335
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->set(I)V
 
-    .line 336
+    .line 3
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->hideViewInternal(Landroid/view/View;)V
 
     return-void
 
-    .line 330
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "view is not a child, cannot hide "
+    const-string v2, "view is not a child, cannot hide "
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -450,10 +454,10 @@
     throw v0
 .end method
 
-.method indexOfChild(Landroid/view/View;)I
+.method public indexOfChild(Landroid/view/View;)I
     .locals 2
 
-    .line 297
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->indexOfChild(Landroid/view/View;)I
@@ -466,7 +470,7 @@
 
     return v0
 
-    .line 301
+    .line 2
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -478,7 +482,7 @@
 
     return v0
 
-    .line 309
+    .line 3
     :cond_1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -491,10 +495,10 @@
     return p1
 .end method
 
-.method isHidden(Landroid/view/View;)Z
+.method public isHidden(Landroid/view/View;)Z
     .locals 1
 
-    .line 319
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -504,15 +508,15 @@
     return p1
 .end method
 
-.method removeAllViewsUnfiltered()V
+.method public removeAllViewsUnfiltered()V
     .locals 3
 
-    .line 188
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->reset()V
 
-    .line 189
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -524,7 +528,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 190
+    .line 3
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     iget-object v2, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
@@ -537,7 +541,7 @@
 
     invoke-interface {v1, v2}, Landroidx/recyclerview/widget/ChildHelper$Callback;->onLeftHiddenState(Landroid/view/View;)V
 
-    .line 191
+    .line 4
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mHiddenViews:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -546,7 +550,7 @@
 
     goto :goto_0
 
-    .line 193
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -555,10 +559,10 @@
     return-void
 .end method
 
-.method removeView(Landroid/view/View;)V
+.method public removeView(Landroid/view/View;)V
     .locals 2
 
-    .line 140
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->indexOfChild(Landroid/view/View;)I
@@ -569,7 +573,7 @@
 
     return-void
 
-    .line 144
+    .line 2
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -579,10 +583,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 145
+    .line 3
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->unhideViewInternal(Landroid/view/View;)Z
 
-    .line 147
+    .line 4
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -591,15 +595,15 @@
     return-void
 .end method
 
-.method removeViewAt(I)V
+.method public removeViewAt(I)V
     .locals 2
 
-    .line 160
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 
     move-result p1
 
-    .line 161
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildAt(I)Landroid/view/View;
@@ -610,7 +614,7 @@
 
     return-void
 
-    .line 165
+    .line 3
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -620,10 +624,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 166
+    .line 4
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/ChildHelper;->unhideViewInternal(Landroid/view/View;)Z
 
-    .line 168
+    .line 5
     :cond_1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -632,10 +636,10 @@
     return-void
 .end method
 
-.method removeViewIfHidden(Landroid/view/View;)Z
+.method public removeViewIfHidden(Landroid/view/View;)Z
     .locals 3
 
-    .line 373
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->indexOfChild(Landroid/view/View;)I
@@ -648,12 +652,12 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 375
+    .line 2
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->unhideViewInternal(Landroid/view/View;)Z
 
     return v1
 
-    .line 380
+    .line 3
     :cond_0
     iget-object v2, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -663,15 +667,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 381
+    .line 4
     iget-object v2, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->remove(I)Z
 
-    .line 382
+    .line 5
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->unhideViewInternal(Landroid/view/View;)Z
 
-    .line 386
+    .line 6
     iget-object p1, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {p1, v0}, Landroidx/recyclerview/widget/ChildHelper$Callback;->removeViewAt(I)V
@@ -687,7 +691,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 363
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -719,10 +723,10 @@
     return-object v0
 .end method
 
-.method unhide(Landroid/view/View;)V
-    .locals 2
+.method public unhide(Landroid/view/View;)V
+    .locals 3
 
-    .line 350
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/ChildHelper$Callback;->indexOfChild(Landroid/view/View;)I
@@ -731,7 +735,7 @@
 
     if-ltz v0, :cond_1
 
-    .line 354
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->get(I)Z
@@ -740,27 +744,31 @@
 
     if-eqz v1, :cond_0
 
-    .line 357
+    .line 3
     iget-object v1, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/ChildHelper$Bucket;->clear(I)V
 
-    .line 358
+    .line 4
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->unhideViewInternal(Landroid/view/View;)Z
 
     return-void
 
-    .line 355
+    .line 5
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "trying to unhide a view that was not hidden"
+    const-string v2, "trying to unhide a view that was not hidden"
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -768,17 +776,21 @@
 
     throw v0
 
-    .line 352
+    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "view is not a child, cannot hide "
+    const-string v2, "view is not a child, cannot hide "
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 

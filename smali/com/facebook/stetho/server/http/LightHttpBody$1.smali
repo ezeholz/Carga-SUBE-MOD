@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/server/http/LightHttpBody$1;
+.class public final Lcom/facebook/stetho/server/http/LightHttpBody$1;
 .super Lcom/facebook/stetho/server/http/LightHttpBody;
 .source "LightHttpBody.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$body:[B
+.field public final synthetic val$body:[B
 
-.field final synthetic val$contentType:Ljava/lang/String;
+.field public final synthetic val$contentType:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;[B)V
+.method public constructor <init>(Ljava/lang/String;[B)V
     .locals 0
 
-    .line 26
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/server/http/LightHttpBody$1;->val$contentType:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/facebook/stetho/server/http/LightHttpBody$1;->val$body:[B
@@ -36,10 +36,10 @@
 
 
 # virtual methods
-.method public final contentLength()I
+.method public contentLength()I
     .locals 1
 
-    .line 34
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpBody$1;->val$body:[B
 
     array-length v0, v0
@@ -47,19 +47,19 @@
     return v0
 .end method
 
-.method public final contentType()Ljava/lang/String;
+.method public contentType()Ljava/lang/String;
     .locals 1
 
-    .line 29
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpBody$1;->val$contentType:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final writeTo(Ljava/io/OutputStream;)V
+.method public writeTo(Ljava/io/OutputStream;)V
     .locals 1
 
-    .line 39
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/http/LightHttpBody$1;->val$body:[B
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V

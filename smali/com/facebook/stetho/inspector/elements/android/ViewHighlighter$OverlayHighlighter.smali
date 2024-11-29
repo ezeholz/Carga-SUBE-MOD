@@ -1,21 +1,25 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;
+.class public final Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;
 .super Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 .source "ViewHighlighter.java"
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x12
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "OverlayHighlighter"
 .end annotation
 
 
 # instance fields
-.field private mBoundsToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
+.field public mBoundsToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
@@ -25,21 +29,21 @@
     .end annotation
 .end field
 
-.field private mContentColor:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public mContentColor:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field private final mEmptyRect:Landroid/graphics/Rect;
+.field public final mEmptyRect:Landroid/graphics/Rect;
 
-.field private final mHandler:Landroid/os/Handler;
+.field public final mHandler:Landroid/os/Handler;
 
-.field private final mHighlightOverlays:Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;
+.field public final mHighlightOverlays:Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;
 
-.field private final mHighlightViewOnUiThreadRunnable:Ljava/lang/Runnable;
+.field public final mHighlightViewOnUiThreadRunnable:Ljava/lang/Runnable;
 
-.field private final mHighlightedBounds:Landroid/graphics/Rect;
+.field public final mHighlightedBounds:Landroid/graphics/Rect;
 
-.field private mHighlightedView:Landroid/view/View;
+.field public mHighlightedView:Landroid/view/View;
 
-.field private mViewToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
+.field public mViewToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
@@ -54,59 +58,59 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 78
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;-><init>()V
 
-    .line 60
+    .line 2
     invoke-static {}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;->newInstance()Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightOverlays:Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;
 
-    .line 64
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightedBounds:Landroid/graphics/Rect;
 
-    .line 65
+    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mEmptyRect:Landroid/graphics/Rect;
 
-    .line 67
+    .line 5
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mViewToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 68
+    .line 6
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mBoundsToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 69
+    .line 7
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mContentColor:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 71
+    .line 8
     new-instance v0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter$1;
 
     invoke-direct {v0, p0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter$1;-><init>(Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;)V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightViewOnUiThreadRunnable:Ljava/lang/Runnable;
 
-    .line 79
+    .line 9
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -120,10 +124,10 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;)V
+.method public static synthetic access$100(Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;)V
     .locals 0
 
-    .line 55
+    .line 1
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->highlightViewOnUiThread()V
 
     return-void
@@ -132,7 +136,7 @@
 .method private highlightViewOnUiThread()V
     .locals 4
 
-    .line 101
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mViewToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -143,7 +147,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 102
+    .line 2
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mBoundsToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
@@ -154,10 +158,10 @@
 
     if-nez v1, :cond_0
 
-    .line 104
+    .line 3
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mEmptyRect:Landroid/graphics/Rect;
 
-    .line 107
+    .line 4
     :cond_0
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightedView:Landroid/view/View;
 
@@ -173,13 +177,13 @@
 
     return-void
 
-    .line 111
+    .line 5
     :cond_1
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightedView:Landroid/view/View;
 
     if-eqz v2, :cond_2
 
-    .line 112
+    .line 6
     iget-object v3, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightOverlays:Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;
 
     invoke-virtual {v3, v2}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;->removeHighlight(Landroid/view/View;)V
@@ -187,67 +191,68 @@
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 116
+    .line 7
     iget-object v2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightOverlays:Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;
 
     iget-object v3, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mContentColor:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 119
+    .line 8
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v3
 
-    .line 116
+    .line 9
     invoke-virtual {v2, v0, v1, v3}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlightOverlays;->highlightView(Landroid/view/View;Landroid/graphics/Rect;I)V
 
-    .line 122
+    .line 10
     :cond_3
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightedView:Landroid/view/View;
 
     if-nez v1, :cond_4
 
-    .line 125
+    .line 11
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    return-void
+    goto :goto_0
 
-    .line 127
+    .line 12
     :cond_4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightedBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    :goto_0
     return-void
 .end method
 
 .method private setHighlightedViewImpl(Landroid/view/View;Landroid/graphics/Rect;I)V
     .locals 2
 
-    .line 93
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightViewOnUiThreadRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 94
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mViewToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 95
+    .line 3
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mBoundsToHighlight:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 96
+    .line 4
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mContentColor:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1, p3}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 97
+    .line 5
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHandler:Landroid/os/Handler;
 
     iget-object p2, p0, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->mHighlightViewOnUiThreadRunnable:Ljava/lang/Runnable;
@@ -261,23 +266,23 @@
 
 
 # virtual methods
-.method public final clearHighlight()V
+.method public clearHighlight()V
     .locals 2
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    .line 84
+    .line 1
     invoke-direct {p0, v0, v0, v1}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter$OverlayHighlighter;->setHighlightedViewImpl(Landroid/view/View;Landroid/graphics/Rect;I)V
 
     return-void
 .end method
 
-.method public final setHighlightedView(Landroid/view/View;Landroid/graphics/Rect;I)V
+.method public setHighlightedView(Landroid/view/View;Landroid/graphics/Rect;I)V
     .locals 0
 
-    .line 89
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

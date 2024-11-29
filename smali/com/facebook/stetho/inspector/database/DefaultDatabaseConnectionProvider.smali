@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,10 +18,12 @@
 
 
 # virtual methods
-.method protected determineOpenOptions(Ljava/io/File;)I
+.method public determineOpenOptions(Ljava/io/File;)I
     .locals 3
+    .annotation build Lcom/facebook/stetho/inspector/database/SQLiteDatabaseCompat$SQLiteOpenOptions;
+    .end annotation
 
-    .line 45
+    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->getParent()Ljava/lang/String;
@@ -48,23 +50,33 @@
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
     return p1
 .end method
 
 .method public openDatabase(Ljava/io/File;)Landroid/database/sqlite/SQLiteDatabase;
     .locals 1
 
-    .line 34
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/database/DefaultDatabaseConnectionProvider;->determineOpenOptions(Ljava/io/File;)I
 
     move-result v0
 
-    .line 32
+    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/facebook/stetho/inspector/database/DefaultDatabaseConnectionProvider;->performOpen(Ljava/io/File;I)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
@@ -72,34 +84,38 @@
     return-object p1
 .end method
 
-.method protected performOpen(Ljava/io/File;I)Landroid/database/sqlite/SQLiteDatabase;
+.method public performOpen(Ljava/io/File;I)Landroid/database/sqlite/SQLiteDatabase;
     .locals 3
+    .param p2    # I
+        .annotation build Lcom/facebook/stetho/inspector/database/SQLiteDatabaseCompat$SQLiteOpenOptions;
+        .end annotation
+    .end param
 
-    .line 61
+    .line 1
     invoke-static {}, Lcom/facebook/stetho/inspector/database/SQLiteDatabaseCompat;->getInstance()Lcom/facebook/stetho/inspector/database/SQLiteDatabaseCompat;
 
     move-result-object v0
 
-    .line 62
+    .line 2
     invoke-virtual {v0, p2}, Lcom/facebook/stetho/inspector/database/SQLiteDatabaseCompat;->provideOpenFlags(I)I
 
     move-result v1
 
     or-int/lit8 v1, v1, 0x0
 
-    .line 65
+    .line 3
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v2, 0x0
 
-    .line 64
+    .line 4
     invoke-static {p1, v2, v1}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
-    .line 68
+    .line 5
     invoke-virtual {v0, p2, p1}, Lcom/facebook/stetho/inspector/database/SQLiteDatabaseCompat;->enableFeatures(ILandroid/database/sqlite/SQLiteDatabase;)V
 
     return-object p1

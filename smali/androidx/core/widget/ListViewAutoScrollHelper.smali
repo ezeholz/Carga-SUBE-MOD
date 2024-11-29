@@ -4,17 +4,21 @@
 
 
 # instance fields
-.field private final mTarget:Landroid/widget/ListView;
+.field public final mTarget:Landroid/widget/ListView;
 
 
 # direct methods
 .method public constructor <init>(Landroid/widget/ListView;)V
     .locals 0
+    .param p1    # Landroid/widget/ListView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 33
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/widget/AutoScrollHelper;-><init>(Landroid/view/View;)V
 
-    .line 35
+    .line 2
     iput-object p1, p0, Landroidx/core/widget/ListViewAutoScrollHelper;->mTarget:Landroid/widget/ListView;
 
     return-void
@@ -33,10 +37,10 @@
 .method public canTargetScrollVertically(I)Z
     .locals 7
 
-    .line 51
+    .line 1
     iget-object v0, p0, Landroidx/core/widget/ListViewAutoScrollHelper;->mTarget:Landroid/widget/ListView;
 
-    .line 52
+    .line 2
     invoke-virtual {v0}, Landroid/widget/ListView;->getCount()I
 
     move-result v1
@@ -47,13 +51,13 @@
 
     return v2
 
-    .line 57
+    .line 3
     :cond_0
     invoke-virtual {v0}, Landroid/widget/ListView;->getChildCount()I
 
     move-result v3
 
-    .line 58
+    .line 4
     invoke-virtual {v0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
     move-result v4
@@ -68,12 +72,12 @@
 
     sub-int/2addr v3, v6
 
-    .line 64
+    .line 5
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 65
+    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getBottom()I
 
     move-result p1
@@ -91,12 +95,12 @@
 
     if-gtz v4, :cond_2
 
-    .line 72
+    .line 7
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 73
+    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result p1
@@ -115,7 +119,7 @@
 .method public scrollTargetBy(II)V
     .locals 0
 
-    .line 40
+    .line 1
     iget-object p1, p0, Landroidx/core/widget/ListViewAutoScrollHelper;->mTarget:Landroid/widget/ListView;
 
     invoke-static {p1, p2}, Landroidx/core/widget/ListViewCompat;->scrollListBy(Landroid/widget/ListView;I)V

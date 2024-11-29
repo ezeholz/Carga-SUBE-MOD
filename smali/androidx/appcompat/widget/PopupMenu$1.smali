@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/PopupMenu$1;
+.class public Landroidx/appcompat/widget/PopupMenu$1;
 .super Ljava/lang/Object;
 .source "PopupMenu.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/PopupMenu;
+.field public final synthetic this$0:Landroidx/appcompat/widget/PopupMenu;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/PopupMenu;)V
+.method public constructor <init>(Landroidx/appcompat/widget/PopupMenu;)V
     .locals 0
 
-    .line 109
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/PopupMenu$1;->this$0:Landroidx/appcompat/widget/PopupMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,19 +37,23 @@
 # virtual methods
 .method public onMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
     .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 112
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/widget/PopupMenu$1;->this$0:Landroidx/appcompat/widget/PopupMenu;
 
     iget-object p1, p1, Landroidx/appcompat/widget/PopupMenu;->mMenuItemClickListener:Landroidx/appcompat/widget/PopupMenu$OnMenuItemClickListener;
 
     if-eqz p1, :cond_0
 
-    .line 113
-    iget-object p1, p0, Landroidx/appcompat/widget/PopupMenu$1;->this$0:Landroidx/appcompat/widget/PopupMenu;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/PopupMenu;->mMenuItemClickListener:Landroidx/appcompat/widget/PopupMenu$OnMenuItemClickListener;
-
+    .line 2
     invoke-interface {p1, p2}, Landroidx/appcompat/widget/PopupMenu$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
     move-result p1
@@ -64,6 +68,10 @@
 
 .method public onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method

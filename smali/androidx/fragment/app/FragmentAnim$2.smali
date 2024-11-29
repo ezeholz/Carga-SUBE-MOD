@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentAnim$2;
+.class public Landroidx/fragment/app/FragmentAnim$2;
 .super Ljava/lang/Object;
 .source "FragmentAnim.java"
 
@@ -12,26 +12,26 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
+.field public final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
-.field final synthetic val$container:Landroid/view/ViewGroup;
+.field public final synthetic val$container:Landroid/view/ViewGroup;
 
-.field final synthetic val$fragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$fragment:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$signal:Landroidx/core/os/CancellationSignal;
+.field public final synthetic val$signal:Landroidx/core/os/CancellationSignal;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/core/os/CancellationSignal;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
-    .line 160
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$2;->val$container:Landroid/view/ViewGroup;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentAnim$2;->val$fragment:Landroidx/fragment/app/Fragment;
@@ -47,10 +47,10 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 170
+    .line 1
     iget-object p1, p0, Landroidx/fragment/app/FragmentAnim$2;->val$container:Landroid/view/ViewGroup;
 
     new-instance v0, Landroidx/fragment/app/FragmentAnim$2$1;
@@ -62,13 +62,13 @@
     return-void
 .end method
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
 
     return-void

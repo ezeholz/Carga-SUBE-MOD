@@ -27,89 +27,89 @@
 
 
 # instance fields
-.field private final c:Ljava/lang/String;
+.field public final j:Ljava/lang/String;
 
-.field private final d:Ljava/lang/String;
+.field public final k:Ljava/lang/String;
 
-.field private final e:Ljava/lang/String;
+.field public final l:Ljava/lang/String;
 
-.field private final f:Ljava/lang/String;
+.field public final m:Ljava/lang/String;
 
-.field private final g:Ljava/lang/String;
+.field public final n:Ljava/lang/String;
 
-.field private final h:Ljava/lang/String;
+.field public final o:Ljava/lang/String;
 
-.field private final i:Ljava/lang/String;
+.field public final p:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    .line 106
-    new-instance v0, Lcom/facebook/share/internal/ShareFeedContent$1;
+    .line 1
+    new-instance v0, Lcom/facebook/share/internal/ShareFeedContent$a;
 
-    invoke-direct {v0}, Lcom/facebook/share/internal/ShareFeedContent$1;-><init>()V
+    invoke-direct {v0}, Lcom/facebook/share/internal/ShareFeedContent$a;-><init>()V
 
     sput-object v0, Lcom/facebook/share/internal/ShareFeedContent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 52
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/share/model/ShareContent;-><init>(Landroid/os/Parcel;)V
 
-    .line 53
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->c:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->j:Ljava/lang/String;
 
-    .line 54
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->d:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->k:Ljava/lang/String;
 
-    .line 55
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->l:Ljava/lang/String;
 
-    .line 56
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->f:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->m:Ljava/lang/String;
 
-    .line 57
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->g:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->n:Ljava/lang/String;
 
-    .line 58
+    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcom/facebook/share/internal/ShareFeedContent;->o:Ljava/lang/String;
 
-    .line 59
+    .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/share/internal/ShareFeedContent;->i:Ljava/lang/String;
+    iput-object p1, p0, Lcom/facebook/share/internal/ShareFeedContent;->p:Ljava/lang/String;
 
     return-void
 .end method
@@ -127,41 +127,41 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 95
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/facebook/share/model/ShareContent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 96
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->c:Ljava/lang/String;
+    .line 2
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->j:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 97
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->d:Ljava/lang/String;
+    .line 3
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->k:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 98
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->e:Ljava/lang/String;
+    .line 4
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->l:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 99
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->f:Ljava/lang/String;
+    .line 5
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->m:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 100
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->g:Ljava/lang/String;
+    .line 6
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->n:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 101
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->h:Ljava/lang/String;
+    .line 7
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->o:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 102
-    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->i:Ljava/lang/String;
+    .line 8
+    iget-object p2, p0, Lcom/facebook/share/internal/ShareFeedContent;->p:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

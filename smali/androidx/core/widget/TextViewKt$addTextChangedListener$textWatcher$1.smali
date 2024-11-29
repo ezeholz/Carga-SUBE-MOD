@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->addTextChangedListener(Landroid/widget/TextView;Lkotlin/d/a/r;Lkotlin/d/a/r;Lkotlin/d/a/b;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->addTextChangedListener(Landroid/widget/TextView;Lj/m/b/r;Lj/m/b/r;Lj/m/b/l;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,40 +18,40 @@
 
 
 # instance fields
-.field final synthetic $afterTextChanged:Lkotlin/d/a/b;
+.field public final synthetic $afterTextChanged:Lj/m/b/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "Landroid/text/Editable;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $beforeTextChanged:Lkotlin/d/a/r;
+.field public final synthetic $beforeTextChanged:Lj/m/b/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/r<",
+            "Lj/m/b/r<",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $onTextChanged:Lkotlin/d/a/r;
+.field public final synthetic $onTextChanged:Lj/m/b/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/d/a/r<",
+            "Lj/m/b/r<",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;"
         }
     .end annotation
@@ -59,17 +59,17 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/d/a/b;Lkotlin/d/a/r;Lkotlin/d/a/r;)V
+.method public constructor <init>(Lj/m/b/l;Lj/m/b/r;Lj/m/b/r;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/text/Editable;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;",
-            "Lkotlin/d/a/r<",
+            "Lj/m/b/r<",
             "-",
             "Ljava/lang/CharSequence;",
             "-",
@@ -78,9 +78,9 @@
             "Ljava/lang/Integer;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;",
-            "Lkotlin/d/a/r<",
+            "Lj/m/b/r<",
             "-",
             "Ljava/lang/CharSequence;",
             "-",
@@ -89,18 +89,18 @@
             "Ljava/lang/Integer;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
-    iput-object p1, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$afterTextChanged:Lkotlin/d/a/b;
+    iput-object p1, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$afterTextChanged:Lj/m/b/l;
 
-    iput-object p2, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$beforeTextChanged:Lkotlin/d/a/r;
+    iput-object p2, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$beforeTextChanged:Lj/m/b/r;
 
-    iput-object p3, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$onTextChanged:Lkotlin/d/a/r;
+    iput-object p3, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$onTextChanged:Lj/m/b/r;
 
-    .line 80
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,22 +108,22 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public afterTextChanged(Landroid/text/Editable;)V
     .locals 1
 
-    .line 82
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$afterTextChanged:Lkotlin/d/a/b;
+    .line 1
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$afterTextChanged:Lj/m/b/l;
 
-    invoke-interface {v0, p1}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
 
-    .line 86
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$beforeTextChanged:Lkotlin/d/a/r;
+    .line 1
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$beforeTextChanged:Lj/m/b/r;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -137,16 +137,16 @@
 
     move-result-object p4
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/d/a/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lj/m/b/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
 
-    .line 90
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$onTextChanged:Lkotlin/d/a/r;
+    .line 1
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$addTextChangedListener$textWatcher$1;->$onTextChanged:Lj/m/b/r;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -160,7 +160,7 @@
 
     move-result-object p4
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/d/a/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lj/m/b/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

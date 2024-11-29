@@ -19,16 +19,16 @@
 
 
 # instance fields
-.field mFullSpan:Z
+.field public mFullSpan:Z
 
-.field mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
+.field public mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
 
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 2454
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;-><init>(II)V
 
     return-void
@@ -37,7 +37,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2450
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -46,7 +46,7 @@
 .method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
-    .line 2462
+    .line 4
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -55,7 +55,7 @@
 .method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
     .locals 0
 
-    .line 2458
+    .line 3
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
     return-void
@@ -64,7 +64,7 @@
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$LayoutParams;)V
     .locals 0
 
-    .line 2466
+    .line 5
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutParams;)V
 
     return-void
@@ -75,7 +75,7 @@
 .method public final getSpanIndex()I
     .locals 1
 
-    .line 2498
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
     if-nez v0, :cond_0
@@ -84,7 +84,7 @@
 
     return v0
 
-    .line 2501
+    .line 2
     :cond_0
     iget v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mIndex:I
 
@@ -94,7 +94,7 @@
 .method public isFullSpan()Z
     .locals 1
 
-    .line 2488
+    .line 1
     iget-boolean v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     return v0
@@ -103,7 +103,7 @@
 .method public setFullSpan(Z)V
     .locals 0
 
-    .line 2478
+    .line 1
     iput-boolean p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     return-void

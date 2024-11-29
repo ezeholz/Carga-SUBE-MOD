@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
+.class public final Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;
 .super Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;
 .source "AndroidDocumentProvider.java"
 
@@ -16,33 +16,33 @@
 
 
 # static fields
-.field private static final INSPECT_HOVER_COLOR:I = 0x404040ff
+.field public static final INSPECT_HOVER_COLOR:I = 0x404040ff
 
-.field private static final INSPECT_OVERLAY_COLOR:I = 0x40ffffff
+.field public static final INSPECT_OVERLAY_COLOR:I = 0x40ffffff
 
-.field private static final REPORT_CHANGED_INTERVAL_MS:J = 0x3e8L
+.field public static final REPORT_CHANGED_INTERVAL_MS:J = 0x3e8L
 
 
 # instance fields
-.field private final mApplication:Landroid/app/Application;
+.field public final mApplication:Landroid/app/Application;
 
-.field private final mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
+.field public final mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
-.field private final mDocumentRoot:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;
+.field public final mDocumentRoot:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;
 
-.field private final mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
+.field public final mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
-.field private final mHighlightingBoundsRect:Landroid/graphics/Rect;
+.field public final mHighlightingBoundsRect:Landroid/graphics/Rect;
 
-.field private final mHitRect:Landroid/graphics/Rect;
+.field public final mHitRect:Landroid/graphics/Rect;
 
-.field private final mInspectModeHandler:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
+.field public final mInspectModeHandler:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
-.field private mIsReportChangesTimerPosted:Z
+.field public mIsReportChangesTimerPosted:Z
 
-.field private mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
+.field public mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
-.field private final mReportChangesTimer:Ljava/lang/Runnable;
+.field public final mReportChangesTimer:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -60,17 +60,17 @@
         }
     .end annotation
 
-    .line 82
+    .line 1
     invoke-direct {p0, p3}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;-><init>(Lcom/facebook/stetho/common/ThreadBound;)V
 
-    .line 48
+    .line 2
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p3, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlightingBoundsRect:Landroid/graphics/Rect;
 
-    .line 49
+    .line 3
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
@@ -79,17 +79,17 @@
 
     const/4 p3, 0x0
 
-    .line 64
+    .line 4
     iput-boolean p3, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mIsReportChangesTimerPosted:Z
 
-    .line 65
+    .line 5
     new-instance v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$1;
 
     invoke-direct {v0, p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$1;-><init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mReportChangesTimer:Ljava/lang/Runnable;
 
-    .line 84
+    .line 6
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -98,19 +98,19 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mApplication:Landroid/app/Application;
 
-    .line 85
+    .line 7
     new-instance v0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;
 
     invoke-direct {v0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;-><init>(Landroid/app/Application;)V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDocumentRoot:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;
 
-    .line 87
+    .line 8
     new-instance p1, Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     invoke-direct {p1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;-><init>()V
 
-    .line 88
+    .line 9
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->beginInit()Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -121,7 +121,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/ActivityDescriptor;-><init>()V
 
-    .line 89
+    .line 10
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -130,7 +130,7 @@
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDocumentRoot:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;
 
-    .line 90
+    .line 11
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -141,7 +141,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/ApplicationDescriptor;-><init>()V
 
-    .line 91
+    .line 12
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -152,7 +152,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/DialogDescriptor;-><init>()V
 
-    .line 92
+    .line 13
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -163,7 +163,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/ObjectDescriptor;-><init>()V
 
-    .line 93
+    .line 14
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -174,7 +174,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/TextViewDescriptor;-><init>()V
 
-    .line 94
+    .line 15
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -185,7 +185,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/ViewDescriptor;-><init>()V
 
-    .line 95
+    .line 16
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -196,7 +196,7 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/ViewGroupDescriptor;-><init>()V
 
-    .line 96
+    .line 17
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
@@ -207,22 +207,22 @@
 
     invoke-direct {v1}, Lcom/facebook/stetho/inspector/elements/android/WindowDescriptor;-><init>()V
 
-    .line 97
+    .line 18
     invoke-virtual {p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->registerDescriptor(Ljava/lang/Class;Lcom/facebook/stetho/inspector/elements/Descriptor;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
-    .line 99
+    .line 19
     invoke-static {p1}, Lcom/facebook/stetho/inspector/elements/android/DialogFragmentDescriptor;->register(Lcom/facebook/stetho/inspector/elements/DescriptorMap;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
-    .line 100
+    .line 20
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     invoke-static {p1}, Lcom/facebook/stetho/inspector/elements/android/FragmentDescriptor;->register(Lcom/facebook/stetho/inspector/elements/DescriptorMap;)Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
-    .line 102
+    .line 21
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p1
@@ -230,14 +230,14 @@
     :goto_0
     if-ge p3, p1, :cond_0
 
-    .line 103
+    .line 22
     invoke-interface {p2, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/facebook/stetho/inspector/elements/DescriptorProvider;
 
-    .line 104
+    .line 23
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     invoke-interface {v0, v1}, Lcom/facebook/stetho/inspector/elements/DescriptorProvider;->registerDescriptor(Lcom/facebook/stetho/inspector/elements/DescriptorRegistrar;)V
@@ -246,7 +246,7 @@
 
     goto :goto_0
 
-    .line 107
+    .line 24
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
@@ -256,14 +256,14 @@
 
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->endInit()Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
-    .line 109
+    .line 25
     invoke-static {}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;->newInstance()Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
-    .line 110
+    .line 26
     new-instance p1, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
     const/4 p2, 0x0
@@ -275,64 +275,64 @@
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Z)Z
+.method public static synthetic access$002(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Z)Z
     .locals 0
 
-    .line 43
+    .line 1
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mIsReportChangesTimerPosted:Z
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
+.method public static synthetic access$100(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
     .locals 0
 
-    .line 43
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Landroid/app/Application;
+.method public static synthetic access$300(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Landroid/app/Application;
     .locals 0
 
-    .line 43
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mApplication:Landroid/app/Application;
 
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/common/Accumulator;)V
+.method public static synthetic access$500(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/common/Accumulator;)V
     .locals 0
 
-    .line 43
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->getWindows(Lcom/facebook/stetho/common/Accumulator;)V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Landroid/graphics/Rect;
+.method public static synthetic access$600(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 43
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHitRect:Landroid/graphics/Rect;
 
     return-object p0
 .end method
 
-.method static synthetic access$700(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Landroid/graphics/Rect;
+.method public static synthetic access$700(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 43
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlightingBoundsRect:Landroid/graphics/Rect;
 
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
+.method public static synthetic access$800(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;)Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
     .locals 0
 
-    .line 43
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
     return-object p0
@@ -349,7 +349,7 @@
         }
     .end annotation
 
-    .line 251
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mApplication:Landroid/app/Application;
 
     invoke-virtual {p0, v0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->getDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/Descriptor;
@@ -358,15 +358,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
+    .line 2
     new-instance v1, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;
 
     invoke-direct {v1, p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$2;-><init>(Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;Lcom/facebook/stetho/common/Accumulator;)V
 
-    .line 269
+    .line 3
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mApplication:Landroid/app/Application;
 
-    invoke-virtual {v0, p1, v1}, Lcom/facebook/stetho/inspector/elements/Descriptor;->getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
+    invoke-interface {v0, p1, v1}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->getChildren(Ljava/lang/Object;Lcom/facebook/stetho/common/Accumulator;)V
 
     :cond_0
     return-void
@@ -374,50 +374,50 @@
 
 
 # virtual methods
-.method public final dispose()V
+.method public dispose()V
     .locals 1
 
-    .line 115
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 117
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;->clearHighlight()V
 
-    .line 118
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mInspectModeHandler:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->disable()V
 
-    .line 119
+    .line 4
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mReportChangesTimer:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->removeCallbacks(Ljava/lang/Runnable;)V
 
     const/4 v0, 0x0
 
-    .line 120
+    .line 5
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mIsReportChangesTimerPosted:Z
 
     const/4 v0, 0x0
 
-    .line 121
+    .line 6
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
     return-void
 .end method
 
-.method public final getDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/Descriptor;
+.method public getDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/Descriptor;
     .locals 1
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    return-object p1
+    goto :goto_0
 
-    .line 205
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
@@ -429,10 +429,11 @@
 
     move-result-object p1
 
+    :goto_0
     return-object p1
 .end method
 
-.method public final getHighlightableDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
+.method public getHighlightableDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
     .locals 4
 
     const/4 v0, 0x0
@@ -441,7 +442,7 @@
 
     return-object v0
 
-    .line 231
+    .line 1
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -456,7 +457,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 234
+    .line 2
     iget-object v3, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     invoke-virtual {v3, p1}, Lcom/facebook/stetho/inspector/elements/DescriptorMap;->get(Ljava/lang/Class;)Lcom/facebook/stetho/inspector/elements/Descriptor;
@@ -470,17 +471,17 @@
     :cond_1
     if-eq v3, v2, :cond_2
 
-    .line 239
+    .line 3
     instance-of v2, v3, Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
 
     if-eqz v2, :cond_2
 
-    .line 240
+    .line 4
     move-object v1, v3
 
     check-cast v1, Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
 
-    .line 244
+    .line 5
     :cond_2
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -494,13 +495,13 @@
     return-object v1
 .end method
 
-.method public final getNodeDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeDescriptor;
+.method public getNodeDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/NodeDescriptor;
     .locals 0
 
-    .line 146
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 147
+    .line 2
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->getDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/Descriptor;
 
     move-result-object p1
@@ -508,25 +509,25 @@
     return-object p1
 .end method
 
-.method public final getRootElement()Ljava/lang/Object;
+.method public getRootElement()Ljava/lang/Object;
     .locals 1
 
-    .line 140
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 141
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDocumentRoot:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentRoot;
 
     return-object v0
 .end method
 
-.method public final hideHighlight()V
+.method public hideHighlight()V
     .locals 1
 
-    .line 176
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 178
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
     invoke-virtual {v0}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;->clearHighlight()V
@@ -534,50 +535,50 @@
     return-void
 .end method
 
-.method public final highlightElement(Ljava/lang/Object;I)V
+.method public highlightElement(Ljava/lang/Object;I)V
     .locals 2
 
-    .line 152
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 154
+    .line 2
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->getHighlightableDescriptor(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 156
+    .line 3
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;->clearHighlight()V
 
     return-void
 
-    .line 160
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlightingBoundsRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 161
+    .line 5
     iget-object v1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlightingBoundsRect:Landroid/graphics/Rect;
 
-    .line 162
+    .line 6
     invoke-interface {v0, p1, v1}, Lcom/facebook/stetho/inspector/elements/android/HighlightableDescriptor;->getViewAndBoundsForHighlighting(Ljava/lang/Object;Landroid/graphics/Rect;)Landroid/view/View;
 
     move-result-object p1
 
     if-nez p1, :cond_1
 
-    .line 164
+    .line 7
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;->clearHighlight()V
 
     return-void
 
-    .line 168
+    .line 8
     :cond_1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mHighlighter:Lcom/facebook/stetho/inspector/elements/android/ViewHighlighter;
 
@@ -588,43 +589,43 @@
     return-void
 .end method
 
-.method public final onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+.method public onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 210
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
     if-eqz v0, :cond_0
 
-    .line 211
+    .line 2
     invoke-interface {v0, p1, p2, p3}, Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;->onAttributeModified(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
+.method public onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
-    .line 217
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
     if-eqz v0, :cond_0
 
-    .line 218
+    .line 2
     invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;->onAttributeRemoved(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
+.method public setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 2
 
-    .line 194
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 196
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mDescriptorMap:Lcom/facebook/stetho/inspector/elements/DescriptorMap;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -637,66 +638,67 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/Descriptor;->setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 3
+    invoke-interface {v0, p1, p2}, Lcom/facebook/stetho/inspector/elements/NodeDescriptor;->setAttributesAsText(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final setInspectModeEnabled(Z)V
+.method public setInspectModeEnabled(Z)V
     .locals 0
 
-    .line 183
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
     if-eqz p1, :cond_0
 
-    .line 186
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mInspectModeHandler:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->enable()V
 
-    return-void
+    goto :goto_0
 
-    .line 188
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mInspectModeHandler:Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;
 
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider$InspectModeHandler;->disable()V
 
+    :goto_0
     return-void
 .end method
 
-.method public final setListener(Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;)V
+.method public setListener(Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;)V
     .locals 2
 
-    .line 126
-    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->verifyThreadAccess()V
+    .line 1
+    invoke-virtual {p0}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->verifyThreadAccess()V
 
-    .line 128
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
     if-nez p1, :cond_0
 
-    .line 129
+    .line 3
     iget-boolean p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mIsReportChangesTimerPosted:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 130
+    .line 4
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mIsReportChangesTimerPosted:Z
 
-    .line 131
+    .line 5
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mReportChangesTimer:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    return-void
+    goto :goto_0
 
-    .line 132
+    .line 6
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mListener:Lcom/facebook/stetho/inspector/elements/DocumentProviderListener;
 
@@ -708,16 +710,17 @@
 
     const/4 p1, 0x1
 
-    .line 133
+    .line 7
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mIsReportChangesTimerPosted:Z
 
-    .line 134
+    .line 8
     iget-object p1, p0, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->mReportChangesTimer:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x3e8
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/facebook/stetho/inspector/elements/android/AndroidDocumentProvider;->postDelayed(Ljava/lang/Runnable;J)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/facebook/stetho/inspector/helper/ThreadBoundProxy;->postDelayed(Ljava/lang/Runnable;J)V
 
     :cond_1
+    :goto_0
     return-void
 .end method

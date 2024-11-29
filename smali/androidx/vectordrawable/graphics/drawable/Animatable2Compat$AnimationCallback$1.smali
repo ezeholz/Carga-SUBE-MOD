@@ -1,4 +1,4 @@
-.class Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback$1;
+.class public Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback$1;
 .super Landroid/graphics/drawable/Animatable2$AnimationCallback;
 .source "Animatable2Compat.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
+.field public final synthetic this$0:Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
 
 
 # direct methods
-.method constructor <init>(Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;)V
+.method public constructor <init>(Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;)V
     .locals 0
 
-    .line 78
+    .line 1
     iput-object p1, p0, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback$1;->this$0:Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Animatable2$AnimationCallback;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 86
+    .line 1
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback$1;->this$0:Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
 
     invoke-virtual {v0, p1}, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
@@ -46,7 +46,7 @@
 .method public onAnimationStart(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 81
+    .line 1
     iget-object v0, p0, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback$1;->this$0:Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
 
     invoke-virtual {v0, p1}, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V

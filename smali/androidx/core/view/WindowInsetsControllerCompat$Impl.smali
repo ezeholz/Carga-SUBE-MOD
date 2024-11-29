@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsControllerCompat$Impl;
+.class public Landroidx/core/view/WindowInsetsControllerCompat$Impl;
 .super Ljava/lang/Object;
 .source "WindowInsetsControllerCompat.java"
 
@@ -9,16 +9,16 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "Impl"
 .end annotation
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 341
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,19 +26,19 @@
 
 
 # virtual methods
-.method addOnControllableInsetsChangedListener(Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;)V
+.method public addOnControllableInsetsChangedListener(Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;)V
     .locals 0
 
     return-void
 .end method
 
-.method controlWindowInsetsAnimation(IJLandroid/view/animation/Interpolator;Landroid/os/CancellationSignal;Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;)V
+.method public controlWindowInsetsAnimation(IJLandroid/view/animation/Interpolator;Landroid/os/CancellationSignal;Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;)V
     .locals 0
 
     return-void
 .end method
 
-.method getSystemBarsBehavior()I
+.method public getSystemBarsBehavior()I
     .locals 1
 
     const/4 v0, 0x0
@@ -46,7 +46,7 @@
     return v0
 .end method
 
-.method hide(I)V
+.method public hide(I)V
     .locals 0
 
     return-void
@@ -68,8 +68,12 @@
     return v0
 .end method
 
-.method removeOnControllableInsetsChangedListener(Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;)V
+.method public removeOnControllableInsetsChangedListener(Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;)V
     .locals 0
+    .param p1    # Landroidx/core/view/WindowInsetsControllerCompat$OnControllableInsetsChangedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
@@ -86,13 +90,13 @@
     return-void
 .end method
 
-.method setSystemBarsBehavior(I)V
+.method public setSystemBarsBehavior(I)V
     .locals 0
 
     return-void
 .end method
 
-.method show(I)V
+.method public show(I)V
     .locals 0
 
     return-void

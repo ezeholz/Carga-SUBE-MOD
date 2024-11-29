@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTransition$4;
+.class public Landroidx/fragment/app/FragmentTransition$4;
 .super Ljava/lang/Object;
 .source "FragmentTransition.java"
 
@@ -12,34 +12,34 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$enterTransition:Ljava/lang/Object;
+.field public final synthetic val$enterTransition:Ljava/lang/Object;
 
-.field final synthetic val$enteringViews:Ljava/util/ArrayList;
+.field public final synthetic val$enteringViews:Ljava/util/ArrayList;
 
-.field final synthetic val$exitTransition:Ljava/lang/Object;
+.field public final synthetic val$exitTransition:Ljava/lang/Object;
 
-.field final synthetic val$exitingViews:Ljava/util/ArrayList;
+.field public final synthetic val$exitingViews:Ljava/util/ArrayList;
 
-.field final synthetic val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
+.field public final synthetic val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
 
-.field final synthetic val$inFragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$inFragment:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$nonExistentView:Landroid/view/View;
+.field public final synthetic val$nonExistentView:Landroid/view/View;
 
-.field final synthetic val$sharedElementsIn:Ljava/util/ArrayList;
+.field public final synthetic val$sharedElementsIn:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;Landroidx/fragment/app/FragmentTransitionImpl;Landroid/view/View;Landroidx/fragment/app/Fragment;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/Object;Landroidx/fragment/app/FragmentTransitionImpl;Landroid/view/View;Landroidx/fragment/app/Fragment;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Object;)V
     .locals 0
 
-    .line 450
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$enterTransition:Ljava/lang/Object;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransition$4;->val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
@@ -63,22 +63,22 @@
 
 
 # virtual methods
-.method public final run()V
+.method public run()V
     .locals 5
 
-    .line 453
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$4;->val$enterTransition:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 454
+    .line 2
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
 
     iget-object v2, p0, Landroidx/fragment/app/FragmentTransition$4;->val$nonExistentView:Landroid/view/View;
 
     invoke-virtual {v1, v0, v2}, Landroidx/fragment/app/FragmentTransitionImpl;->removeTarget(Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 456
+    .line 3
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$4;->val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
 
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$enterTransition:Ljava/lang/Object;
@@ -93,33 +93,33 @@
 
     move-result-object v0
 
-    .line 458
+    .line 4
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$enteringViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 461
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$4;->val$exitingViews:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_2
 
-    .line 462
+    .line 6
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$4;->val$exitTransition:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    .line 463
+    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 464
+    .line 8
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$nonExistentView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 465
+    .line 9
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
 
     iget-object v2, p0, Landroidx/fragment/app/FragmentTransition$4;->val$exitTransition:Ljava/lang/Object;
@@ -128,13 +128,13 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->replaceTargets(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 468
+    .line 10
     :cond_1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$4;->val$exitingViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 469
+    .line 11
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$4;->val$exitingViews:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$4;->val$nonExistentView:Landroid/view/View;

@@ -1,4 +1,4 @@
-.class Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;
+.class public Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;
 .super Ljava/lang/Object;
 .source "SwipeRefreshLayout.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+.field public final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
 
 # direct methods
-.method constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
+.method public constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;)V
     .locals 0
 
-    .line 178
+    .line 1
     iput-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,70 +38,61 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 189
+    .line 1
     iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget-boolean p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mRefreshing:Z
+    iget-boolean v0, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mRefreshing:Z
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 191
-    iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
-
+    .line 2
     iget-object p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mProgress:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
 
     const/16 v0, 0xff
 
     invoke-virtual {p1, v0}, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->setAlpha(I)V
 
-    .line 192
+    .line 3
     iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     iget-object p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mProgress:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
 
     invoke-virtual {p1}, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->start()V
 
-    .line 193
+    .line 4
     iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget-boolean p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mNotify:Z
+    iget-boolean v0, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mNotify:Z
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 194
-    iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
-
+    .line 5
     iget-object p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mListener:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;
 
     if-eqz p1, :cond_0
 
-    .line 195
-    iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
-
-    iget-object p1, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mListener:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;
-
+    .line 6
     invoke-interface {p1}, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;->onRefresh()V
 
-    .line 198
+    .line 7
     :cond_0
     iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     iget-object v0, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mCircleView:Landroidx/swiperefreshlayout/widget/CircleImageView;
 
-    invoke-virtual {v0}, Landroidx/swiperefreshlayout/widget/CircleImageView;->getTop()I
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getTop()I
 
     move-result v0
 
     iput v0, p1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mCurrentTargetOffsetTop:I
 
-    return-void
+    goto :goto_0
 
-    .line 200
+    .line 8
     :cond_1
-    iget-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$1;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
-
     invoke-virtual {p1}, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->reset()V
 
+    :goto_0
     return-void
 .end method
 

@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout$VerticalSlice;
+.class public Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout$VerticalSlice;
 .super Ljava/lang/Object;
 .source "ConstraintTableLayout.java"
 
@@ -9,35 +9,35 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "VerticalSlice"
 .end annotation
 
 
 # instance fields
-.field alignment:I
+.field public alignment:I
 
-.field left:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+.field public left:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-.field padding:I
+.field public padding:I
 
-.field right:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+.field public right:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-.field final synthetic this$0:Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout;
+.field public final synthetic this$0:Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout;
 
 
 # direct methods
-.method constructor <init>(Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout;)V
+.method public constructor <init>(Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout;)V
     .locals 0
 
-    .line 45
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout$VerticalSlice;->this$0:Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x1
 
-    .line 48
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/solver/widgets/ConstraintTableLayout$VerticalSlice;->alignment:I
 
     return-void

@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11693
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,8 +40,12 @@
 
 .method public onItemRangeChanged(IILjava/lang/Object;)V
     .locals 0
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 11705
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onItemRangeChanged(II)V
 
     return-void

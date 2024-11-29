@@ -3,7 +3,12 @@
 .source "com.google.android.gms:play-services-measurement-api@@18.0.0"
 
 # interfaces
-.implements Lcom/google/firebase/components/h;
+.implements Lg/d/b/j/i;
+
+
+# annotations
+.annotation build Landroidx/annotation/Keep;
+.end annotation
 
 
 # direct methods
@@ -20,74 +25,73 @@
 # virtual methods
 .method public getComponents()Ljava/util/List;
     .locals 3
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "MissingPermission"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/google/firebase/components/b<",
+            "Lg/d/b/j/d<",
             "*>;>;"
         }
     .end annotation
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/google/firebase/components/b;
+    new-array v0, v0, [Lg/d/b/j/d;
+
+    .line 1
+    const-class v1, Lg/d/b/i/a/a;
 
     .line 2
-    const-class v1, Lcom/google/firebase/analytics/connector/a;
-
-    .line 3
-    invoke-static {v1}, Lcom/google/firebase/components/b;->a(Ljava/lang/Class;)Lcom/google/firebase/components/b$a;
+    invoke-static {v1}, Lg/d/b/j/d;->a(Ljava/lang/Class;)Lg/d/b/j/d$b;
 
     move-result-object v1
 
-    const-class v2, Lcom/google/firebase/b;
+    const-class v2, Lg/d/b/c;
 
-    .line 4
-    invoke-static {v2}, Lcom/google/firebase/components/n;->b(Ljava/lang/Class;)Lcom/google/firebase/components/n;
+    .line 3
+    invoke-static {v2}, Lg/d/b/j/q;->b(Ljava/lang/Class;)Lg/d/b/j/q;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/google/firebase/components/b$a;->a(Lcom/google/firebase/components/n;)Lcom/google/firebase/components/b$a;
-
-    move-result-object v1
+    invoke-virtual {v1, v2}, Lg/d/b/j/d$b;->a(Lg/d/b/j/q;)Lg/d/b/j/d$b;
 
     const-class v2, Landroid/content/Context;
 
-    .line 5
-    invoke-static {v2}, Lcom/google/firebase/components/n;->b(Ljava/lang/Class;)Lcom/google/firebase/components/n;
+    .line 4
+    invoke-static {v2}, Lg/d/b/j/q;->b(Ljava/lang/Class;)Lg/d/b/j/q;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/google/firebase/components/b$a;->a(Lcom/google/firebase/components/n;)Lcom/google/firebase/components/b$a;
+    invoke-virtual {v1, v2}, Lg/d/b/j/d$b;->a(Lg/d/b/j/q;)Lg/d/b/j/d$b;
 
-    move-result-object v1
+    const-class v2, Lg/d/b/n/d;
 
-    const-class v2, Lcom/google/firebase/a/d;
+    .line 5
+    invoke-static {v2}, Lg/d/b/j/q;->b(Ljava/lang/Class;)Lg/d/b/j/q;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lg/d/b/j/d$b;->a(Lg/d/b/j/q;)Lg/d/b/j/d$b;
+
+    sget-object v2, Lg/d/b/i/a/c/a;->a:Lg/d/b/j/h;
 
     .line 6
-    invoke-static {v2}, Lcom/google/firebase/components/n;->b(Ljava/lang/Class;)Lcom/google/firebase/components/n;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/google/firebase/components/b$a;->a(Lcom/google/firebase/components/n;)Lcom/google/firebase/components/b$a;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/google/firebase/analytics/connector/internal/a;->a:Lcom/google/firebase/components/g;
+    invoke-virtual {v1, v2}, Lg/d/b/j/d$b;->a(Lg/d/b/j/h;)Lg/d/b/j/d$b;
 
     .line 7
-    invoke-virtual {v1, v2}, Lcom/google/firebase/components/b$a;->a(Lcom/google/firebase/components/g;)Lcom/google/firebase/components/b$a;
+    invoke-virtual {v1}, Lg/d/b/j/d$b;->b()Lg/d/b/j/d$b;
 
-    move-result-object v1
-
-    .line 1254
-    invoke-virtual {v1}, Lcom/google/firebase/components/b$a;->a()Lcom/google/firebase/components/b$a;
-
-    move-result-object v1
-
-    .line 9
-    invoke-virtual {v1}, Lcom/google/firebase/components/b$a;->b()Lcom/google/firebase/components/b;
+    .line 8
+    invoke-virtual {v1}, Lg/d/b/j/d$b;->a()Lg/d/b/j/d;
 
     move-result-object v1
 
@@ -99,8 +103,8 @@
 
     const-string v2, "18.0.0"
 
-    .line 10
-    invoke-static {v1, v2}, Lcom/google/firebase/e/g;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/b;
+    .line 9
+    invoke-static {v1, v2}, Lg/d/a/b/d/m/q/a;->a(Ljava/lang/String;Ljava/lang/String;)Lg/d/b/j/d;
 
     move-result-object v1
 
@@ -108,7 +112,7 @@
 
     aput-object v1, v0, v2
 
-    .line 11
+    .line 10
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

@@ -21,9 +21,15 @@
 
 
 # instance fields
-.field private final mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
+.field public final mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+.field public final mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/DiffUtil$ItemCallback<",
@@ -32,12 +38,27 @@
     .end annotation
 .end field
 
-.field private final mMainThreadExecutor:Ljava/util/concurrent/Executor;
+.field public final mMainThreadExecutor:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
     .locals 0
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,16 +69,16 @@
         }
     .end annotation
 
-    .line 47
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mMainThreadExecutor:Ljava/util/concurrent/Executor;
 
-    .line 49
+    .line 3
     iput-object p2, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
-    .line 50
+    .line 4
     iput-object p3, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
 
     return-void
@@ -65,17 +86,22 @@
 
 
 # virtual methods
-.method public final getBackgroundThreadExecutor()Ljava/util/concurrent/Executor;
+.method public getBackgroundThreadExecutor()Ljava/util/concurrent/Executor;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 64
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mBackgroundThreadExecutor:Ljava/util/concurrent/Executor;
 
     return-object v0
 .end method
 
-.method public final getDiffCallback()Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
+.method public getDiffCallback()Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -84,16 +110,24 @@
         }
     .end annotation
 
-    .line 70
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mDiffCallback:Landroidx/recyclerview/widget/DiffUtil$ItemCallback;
 
     return-object v0
 .end method
 
-.method public final getMainThreadExecutor()Ljava/util/concurrent/Executor;
+.method public getMainThreadExecutor()Ljava/util/concurrent/Executor;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 58
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncDifferConfig;->mMainThreadExecutor:Ljava/util/concurrent/Executor;
 
     return-object v0

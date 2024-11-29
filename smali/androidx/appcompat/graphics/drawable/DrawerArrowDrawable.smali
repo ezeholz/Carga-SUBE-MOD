@@ -20,42 +20,42 @@
 
 .field public static final ARROW_DIRECTION_START:I = 0x2
 
-.field private static final ARROW_HEAD_ANGLE:F
+.field public static final ARROW_HEAD_ANGLE:F
 
 
 # instance fields
-.field private mArrowHeadLength:F
+.field public mArrowHeadLength:F
 
-.field private mArrowShaftLength:F
+.field public mArrowShaftLength:F
 
-.field private mBarGap:F
+.field public mBarGap:F
 
-.field private mBarLength:F
+.field public mBarLength:F
 
-.field private mDirection:I
+.field public mDirection:I
 
-.field private mMaxCutForBarSize:F
+.field public mMaxCutForBarSize:F
 
-.field private final mPaint:Landroid/graphics/Paint;
+.field public final mPaint:Landroid/graphics/Paint;
 
-.field private final mPath:Landroid/graphics/Path;
+.field public final mPath:Landroid/graphics/Path;
 
-.field private mProgress:F
+.field public mProgress:F
 
-.field private final mSize:I
+.field public final mSize:I
 
-.field private mSpin:Z
+.field public mSpin:Z
 
-.field private mVerticalMirror:Z
+.field public mVerticalMirror:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     const-wide v0, 0x4046800000000000L    # 45.0
 
-    .line 100
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v0
@@ -70,17 +70,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 6
 
-    .line 128
+    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 97
+    .line 2
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 113
+    .line 3
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
@@ -89,43 +89,43 @@
 
     const/4 v0, 0x0
 
-    .line 117
+    .line 4
     iput-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mVerticalMirror:Z
 
     const/4 v1, 0x2
 
-    .line 123
+    .line 5
     iput v1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mDirection:I
 
-    .line 129
+    .line 6
     iget-object v1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 130
+    .line 7
     iget-object v1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Join;->MITER:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 131
+    .line 8
     iget-object v1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 132
+    .line 9
     iget-object v1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 134
+    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p1
@@ -142,7 +142,7 @@
 
     move-result-object p1
 
-    .line 138
+    .line 11
     sget v1, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_color:I
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
@@ -151,7 +151,7 @@
 
     invoke-virtual {p0, v1}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->setColor(I)V
 
-    .line 139
+    .line 12
     sget v1, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_thickness:I
 
     const/4 v3, 0x0
@@ -162,7 +162,7 @@
 
     invoke-virtual {p0, v1}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->setBarThickness(F)V
 
-    .line 140
+    .line 13
     sget v1, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_spinBars:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -171,7 +171,7 @@
 
     invoke-virtual {p0, v1}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->setSpinEnabled(Z)V
 
-    .line 142
+    .line 14
     sget v1, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_gapBetweenBars:I
 
     invoke-virtual {p1, v1, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
@@ -186,7 +186,7 @@
 
     invoke-virtual {p0, v1}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->setGapSize(F)V
 
-    .line 144
+    .line 15
     sget v1, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_drawableSize:I
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -195,7 +195,7 @@
 
     iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSize:I
 
-    .line 146
+    .line 16
     sget v0, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_barLength:I
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
@@ -210,7 +210,7 @@
 
     iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarLength:F
 
-    .line 148
+    .line 17
     sget v0, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_arrowHeadLength:I
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
@@ -225,7 +225,7 @@
 
     iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowHeadLength:F
 
-    .line 150
+    .line 18
     sget v0, Landroidx/appcompat/R$styleable;->DrawerArrowToggle_arrowShaftLength:I
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
@@ -234,20 +234,18 @@
 
     iput v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowShaftLength:F
 
-    .line 151
+    .line 19
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
-.method private static lerp(FFF)F
+.method public static lerp(FFF)F
     .locals 0
 
-    sub-float/2addr p1, p0
+    invoke-static {p1, p0, p2, p0}, Lg/b/a/a/a;->a(FFFF)F
 
-    mul-float p1, p1, p2
-
-    add-float/2addr p0, p1
+    move-result p0
 
     return p0
 .end method
@@ -261,12 +259,12 @@
 
     move-object/from16 v1, p1
 
-    .line 326
-    invoke-virtual/range {p0 .. p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->getBounds()Landroid/graphics/Rect;
+    .line 1
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 329
+    .line 2
     iget v3, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mDirection:I
 
     const/4 v4, 0x0
@@ -281,7 +279,7 @@
 
     if-eq v3, v6, :cond_0
 
-    .line 342
+    .line 3
     invoke-static/range {p0 .. p0}, Landroidx/core/graphics/drawable/DrawableCompat;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
 
     move-result v3
@@ -290,7 +288,7 @@
 
     goto :goto_0
 
-    .line 337
+    .line 4
     :cond_0
     invoke-static/range {p0 .. p0}, Landroidx/core/graphics/drawable/DrawableCompat;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
 
@@ -302,7 +300,7 @@
     :goto_0
     const/4 v4, 0x1
 
-    .line 349
+    .line 5
     :cond_2
     iget v3, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowHeadLength:F
 
@@ -320,7 +318,7 @@
 
     double-to-float v3, v7
 
-    .line 350
+    .line 6
     iget v7, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarLength:F
 
     iget v8, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
@@ -329,7 +327,7 @@
 
     move-result v3
 
-    .line 351
+    .line 7
     iget v7, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarLength:F
 
     iget v8, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowShaftLength:F
@@ -340,7 +338,7 @@
 
     move-result v7
 
-    .line 353
+    .line 8
     iget v8, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mMaxCutForBarSize:F
 
     iget v9, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
@@ -357,7 +355,7 @@
 
     int-to-float v8, v8
 
-    .line 355
+    .line 9
     sget v9, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->ARROW_HEAD_ANGLE:F
 
     iget v11, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
@@ -387,10 +385,11 @@
     :cond_4
     const/4 v13, 0x0
 
-    .line 358
+    .line 10
     :goto_2
     iget v14, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
 
+    .line 11
     invoke-static {v11, v13, v14}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->lerp(FFF)F
 
     move-result v11
@@ -401,7 +400,7 @@
 
     float-to-double v10, v9
 
-    .line 361
+    .line 12
     invoke-static {v10, v11}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v16
@@ -418,27 +417,27 @@
 
     long-to-float v3, v3
 
-    .line 362
+    .line 13
     invoke-static {v10, v11}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v10
 
     invoke-static {v13, v14}, Ljava/lang/Double;->isNaN(D)Z
 
-    mul-double v13, v13, v10
+    mul-double v10, v10, v13
 
-    invoke-static {v13, v14}, Ljava/lang/Math;->round(D)J
+    invoke-static {v10, v11}, Ljava/lang/Math;->round(D)J
 
     move-result-wide v10
 
     long-to-float v4, v10
 
-    .line 364
+    .line 14
     iget-object v10, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v10}, Landroid/graphics/Path;->rewind()V
 
-    .line 365
+    .line 15
     iget v10, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarGap:F
 
     iget-object v11, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
@@ -447,15 +446,15 @@
 
     move-result v11
 
-    add-float/2addr v10, v11
+    add-float/2addr v11, v10
 
-    iget v11, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mMaxCutForBarSize:F
+    iget v10, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mMaxCutForBarSize:F
 
-    neg-float v11, v11
+    neg-float v10, v10
 
     iget v13, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
 
-    invoke-static {v10, v11, v13}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->lerp(FFF)F
+    invoke-static {v11, v10, v13}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->lerp(FFF)F
 
     move-result v10
 
@@ -463,7 +462,7 @@
 
     div-float/2addr v11, v6
 
-    .line 370
+    .line 16
     iget-object v13, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     add-float v14, v11, v8
@@ -472,7 +471,7 @@
 
     invoke-virtual {v13, v14, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 371
+    .line 17
     iget-object v13, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     mul-float v8, v8, v6
@@ -481,46 +480,46 @@
 
     invoke-virtual {v13, v7, v5}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 374
+    .line 18
     iget-object v5, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v5, v11, v10}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 375
+    .line 19
     iget-object v5, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v5, v3, v4}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 378
+    .line 20
     iget-object v5, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     neg-float v7, v10
 
     invoke-virtual {v5, v11, v7}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 379
+    .line 21
     iget-object v5, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     neg-float v4, v4
 
     invoke-virtual {v5, v3, v4}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 381
+    .line 22
     iget-object v3, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v3}, Landroid/graphics/Path;->close()V
 
-    .line 383
+    .line 23
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 387
+    .line 24
     iget-object v3, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v3}, Landroid/graphics/Paint;->getStrokeWidth()F
 
     move-result v3
 
-    .line 388
+    .line 25
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v4
@@ -541,7 +540,7 @@
 
     float-to-int v4, v4
 
-    .line 389
+    .line 26
     div-int/lit8 v4, v4, 0x4
 
     mul-int/lit8 v4, v4, 0x2
@@ -554,23 +553,23 @@
 
     add-float/2addr v3, v5
 
-    add-float/2addr v4, v3
+    add-float/2addr v3, v4
 
-    .line 392
+    .line 27
     invoke-virtual {v2}, Landroid/graphics/Rect;->centerX()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    invoke-virtual {v1, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 393
+    .line 28
     iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSpin:Z
 
     if-eqz v2, :cond_6
 
-    .line 394
+    .line 29
     iget-boolean v2, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mVerticalMirror:Z
 
     xor-int/2addr v2, v9
@@ -596,10 +595,10 @@
     :cond_6
     if-eqz v9, :cond_7
 
-    .line 396
+    .line 30
     invoke-virtual {v1, v12}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 398
+    .line 31
     :cond_7
     :goto_4
     iget-object v2, v0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPath:Landroid/graphics/Path;
@@ -608,7 +607,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 400
+    .line 32
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -617,7 +616,7 @@
 .method public getArrowHeadLength()F
     .locals 1
 
-    .line 171
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowHeadLength:F
 
     return v0
@@ -626,7 +625,7 @@
 .method public getArrowShaftLength()F
     .locals 1
 
-    .line 190
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowShaftLength:F
 
     return v0
@@ -635,7 +634,7 @@
 .method public getBarLength()F
     .locals 1
 
-    .line 197
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarLength:F
 
     return v0
@@ -644,7 +643,7 @@
 .method public getBarThickness()F
     .locals 1
 
-    .line 247
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -656,8 +655,10 @@
 
 .method public getColor()I
     .locals 1
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
-    .line 227
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
@@ -670,7 +671,7 @@
 .method public getDirection()I
     .locals 1
 
-    .line 311
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mDirection:I
 
     return v0
@@ -679,7 +680,7 @@
 .method public getGapSize()F
     .locals 1
 
-    .line 256
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarGap:F
 
     return v0
@@ -688,7 +689,7 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 419
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSize:I
 
     return v0
@@ -697,7 +698,7 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 424
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSize:I
 
     return v0
@@ -714,7 +715,7 @@
 .method public final getPaint()Landroid/graphics/Paint;
     .locals 1
 
-    .line 458
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -722,8 +723,12 @@
 
 .method public getProgress()F
     .locals 1
+    .annotation build Landroidx/annotation/FloatRange;
+        from = 0.0
+        to = 1.0
+    .end annotation
 
-    .line 437
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
 
     return v0
@@ -732,7 +737,7 @@
 .method public isSpinEnabled()Z
     .locals 1
 
-    .line 289
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSpin:Z
 
     return v0
@@ -741,7 +746,7 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 405
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
@@ -750,13 +755,13 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 406
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 407
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -765,18 +770,18 @@
 .method public setArrowHeadLength(F)V
     .locals 1
 
-    .line 160
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowHeadLength:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 161
+    .line 2
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowHeadLength:F
 
-    .line 162
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -785,18 +790,18 @@
 .method public setArrowShaftLength(F)V
     .locals 1
 
-    .line 180
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowShaftLength:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 181
+    .line 2
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mArrowShaftLength:F
 
-    .line 182
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -805,18 +810,18 @@
 .method public setBarLength(F)V
     .locals 1
 
-    .line 206
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarLength:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 207
+    .line 2
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarLength:F
 
-    .line 208
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -825,7 +830,7 @@
 .method public setBarThickness(F)V
     .locals 4
 
-    .line 236
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -836,7 +841,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 237
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
@@ -847,7 +852,7 @@
 
     float-to-double v0, p1
 
-    .line 238
+    .line 3
     sget p1, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->ARROW_HEAD_ANGLE:F
 
     float-to-double v2, p1
@@ -858,14 +863,14 @@
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
-    mul-double v0, v0, v2
+    mul-double v2, v2, v0
 
-    double-to-float p1, v0
+    double-to-float p1, v2
 
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mMaxCutForBarSize:F
 
-    .line 239
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 4
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -873,8 +878,12 @@
 
 .method public setColor(I)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
-    .line 216
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
@@ -883,13 +892,13 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 217
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 218
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -898,13 +907,13 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 413
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 414
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 2
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -912,16 +921,16 @@
 .method public setDirection(I)V
     .locals 1
 
-    .line 277
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mDirection:I
 
     if-eq p1, v0, :cond_0
 
-    .line 278
+    .line 2
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mDirection:I
 
-    .line 279
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -930,18 +939,18 @@
 .method public setGapSize(F)V
     .locals 1
 
-    .line 267
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarGap:F
 
     cmpl-float v0, p1, v0
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 2
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mBarGap:F
 
-    .line 269
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -949,19 +958,25 @@
 
 .method public setProgress(F)V
     .locals 1
+    .param p1    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
 
-    .line 448
+    .line 1
     iget v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 449
+    .line 2
     iput p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mProgress:F
 
-    .line 450
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -970,16 +985,16 @@
 .method public setSpinEnabled(Z)V
     .locals 1
 
-    .line 300
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSpin:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 301
+    .line 2
     iput-boolean p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mSpin:Z
 
-    .line 302
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -988,16 +1003,16 @@
 .method public setVerticalMirror(Z)V
     .locals 1
 
-    .line 318
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mVerticalMirror:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 319
+    .line 2
     iput-boolean p1, p0, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->mVerticalMirror:Z
 
-    .line 320
-    invoke-virtual {p0}, Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
     return-void

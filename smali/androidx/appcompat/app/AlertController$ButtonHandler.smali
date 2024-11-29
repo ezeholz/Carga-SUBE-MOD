@@ -1,4 +1,4 @@
-.class final Landroidx/appcompat/app/AlertController$ButtonHandler;
+.class public final Landroidx/appcompat/app/AlertController$ButtonHandler;
 .super Landroid/os/Handler;
 .source "AlertController.java"
 
@@ -9,17 +9,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "ButtonHandler"
 .end annotation
 
 
 # static fields
-.field private static final MSG_DISMISS_DIALOG:I = 0x1
+.field public static final MSG_DISMISS_DIALOG:I = 0x1
 
 
 # instance fields
-.field private mDialog:Ljava/lang/ref/WeakReference;
+.field public mDialog:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -34,10 +34,10 @@
 .method public constructor <init>(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 156
+    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 157
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -49,10 +49,10 @@
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 162
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, -0x3
@@ -73,7 +73,7 @@
 
     goto :goto_0
 
-    .line 171
+    .line 2
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -81,10 +81,9 @@
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 167
+    .line 3
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -102,5 +101,6 @@
 
     invoke-interface {v0, v1, p1}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
+    :goto_0
     return-void
 .end method

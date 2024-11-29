@@ -1,4 +1,4 @@
-.class Landroidx/transition/TransitionUtils$MatrixEvaluator;
+.class public Landroidx/transition/TransitionUtils$MatrixEvaluator;
 .super Ljava/lang/Object;
 .source "TransitionUtils.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "MatrixEvaluator"
 .end annotation
 
@@ -27,33 +27,33 @@
 
 
 # instance fields
-.field final mTempEndValues:[F
+.field public final mTempEndValues:[F
 
-.field final mTempMatrix:Landroid/graphics/Matrix;
+.field public final mTempMatrix:Landroid/graphics/Matrix;
 
-.field final mTempStartValues:[F
+.field public final mTempStartValues:[F
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
-    .line 155
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x9
 
     new-array v1, v0, [F
 
-    .line 157
+    .line 2
     iput-object v1, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempStartValues:[F
 
     new-array v0, v0, [F
 
-    .line 159
+    .line 3
     iput-object v0, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
-    .line 161
+    .line 4
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -68,12 +68,12 @@
 .method public evaluate(FLandroid/graphics/Matrix;Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
     .locals 3
 
-    .line 165
+    .line 2
     iget-object v0, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempStartValues:[F
 
     invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 166
+    .line 3
     iget-object p2, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
     invoke-virtual {p3, p2}, Landroid/graphics/Matrix;->getValues([F)V
@@ -85,7 +85,7 @@
 
     if-ge p2, p3, :cond_0
 
-    .line 168
+    .line 4
     iget-object p3, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempEndValues:[F
 
     aget v0, p3, p2
@@ -96,20 +96,20 @@
 
     sub-float/2addr v0, v2
 
-    .line 169
+    .line 5
     aget v1, v1, p2
 
     mul-float v0, v0, p1
 
-    add-float/2addr v1, v0
+    add-float/2addr v0, v1
 
-    aput v1, p3, p2
+    aput v0, p3, p2
 
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    .line 171
+    .line 6
     :cond_0
     iget-object p1, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempMatrix:Landroid/graphics/Matrix;
 
@@ -117,7 +117,7 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Matrix;->setValues([F)V
 
-    .line 172
+    .line 7
     iget-object p1, p0, Landroidx/transition/TransitionUtils$MatrixEvaluator;->mTempMatrix:Landroid/graphics/Matrix;
 
     return-object p1
@@ -126,7 +126,7 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 155
+    .line 1
     check-cast p2, Landroid/graphics/Matrix;
 
     check-cast p3, Landroid/graphics/Matrix;

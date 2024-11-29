@@ -1,4 +1,4 @@
-.class Landroidx/browser/browseractions/BrowserActionsFallbackMenuAdapter$ViewHolderItem;
+.class public Landroidx/browser/browseractions/BrowserActionsFallbackMenuAdapter$ViewHolderItem;
 .super Ljava/lang/Object;
 .source "BrowserActionsFallbackMenuAdapter.java"
 
@@ -9,22 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ViewHolderItem"
 .end annotation
 
 
 # instance fields
-.field mIcon:Landroid/widget/ImageView;
+.field public mIcon:Landroid/widget/ImageView;
 
-.field mText:Landroid/widget/TextView;
+.field public mText:Landroid/widget/TextView;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 88
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

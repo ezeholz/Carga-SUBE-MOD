@@ -1,4 +1,4 @@
-.class Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;
+.class public Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;
 .super Landroid/view/animation/Animation;
 .source "SwipeRefreshLayout.java"
 
@@ -9,24 +9,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+.field public final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-.field final synthetic val$endingAlpha:I
+.field public final synthetic val$endingAlpha:I
 
-.field final synthetic val$startingAlpha:I
+.field public final synthetic val$startingAlpha:I
 
 
 # direct methods
-.method constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;II)V
+.method public constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;II)V
     .locals 0
 
-    .line 499
+    .line 1
     iput-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     iput p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;->val$startingAlpha:I
@@ -43,7 +43,7 @@
 .method public applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 3
 
-    .line 502
+    .line 1
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mProgress:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
@@ -60,9 +60,9 @@
 
     mul-float v0, v0, p1
 
-    add-float/2addr v1, v0
+    add-float/2addr v0, v1
 
-    float-to-int p1, v1
+    float-to-int p1, v0
 
     invoke-virtual {p2, p1}, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->setAlpha(I)V
 

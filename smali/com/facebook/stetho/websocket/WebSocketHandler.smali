@@ -7,39 +7,39 @@
 
 
 # static fields
-.field private static final HEADER_CONNECTION:Ljava/lang/String; = "Connection"
+.field public static final HEADER_CONNECTION:Ljava/lang/String; = "Connection"
 
-.field private static final HEADER_CONNECTION_UPGRADE:Ljava/lang/String; = "Upgrade"
+.field public static final HEADER_CONNECTION_UPGRADE:Ljava/lang/String; = "Upgrade"
 
-.field private static final HEADER_SEC_WEBSOCKET_ACCEPT:Ljava/lang/String; = "Sec-WebSocket-Accept"
+.field public static final HEADER_SEC_WEBSOCKET_ACCEPT:Ljava/lang/String; = "Sec-WebSocket-Accept"
 
-.field private static final HEADER_SEC_WEBSOCKET_KEY:Ljava/lang/String; = "Sec-WebSocket-Key"
+.field public static final HEADER_SEC_WEBSOCKET_KEY:Ljava/lang/String; = "Sec-WebSocket-Key"
 
-.field private static final HEADER_SEC_WEBSOCKET_PROTOCOL:Ljava/lang/String; = "Sec-WebSocket-Protocol"
+.field public static final HEADER_SEC_WEBSOCKET_PROTOCOL:Ljava/lang/String; = "Sec-WebSocket-Protocol"
 
-.field private static final HEADER_SEC_WEBSOCKET_VERSION:Ljava/lang/String; = "Sec-WebSocket-Version"
+.field public static final HEADER_SEC_WEBSOCKET_VERSION:Ljava/lang/String; = "Sec-WebSocket-Version"
 
-.field private static final HEADER_SEC_WEBSOCKET_VERSION_13:Ljava/lang/String; = "13"
+.field public static final HEADER_SEC_WEBSOCKET_VERSION_13:Ljava/lang/String; = "13"
 
-.field private static final HEADER_UPGRADE:Ljava/lang/String; = "Upgrade"
+.field public static final HEADER_UPGRADE:Ljava/lang/String; = "Upgrade"
 
-.field private static final HEADER_UPGRADE_WEBSOCKET:Ljava/lang/String; = "websocket"
+.field public static final HEADER_UPGRADE_WEBSOCKET:Ljava/lang/String; = "websocket"
 
-.field private static final SERVER_KEY_GUID:Ljava/lang/String; = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+.field public static final SERVER_KEY_GUID:Ljava/lang/String; = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
 
 
 # instance fields
-.field private final mEndpoint:Lcom/facebook/stetho/websocket/SimpleEndpoint;
+.field public final mEndpoint:Lcom/facebook/stetho/websocket/SimpleEndpoint;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/websocket/SimpleEndpoint;)V
     .locals 0
 
-    .line 63
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/websocket/WebSocketHandler;->mEndpoint:Lcom/facebook/stetho/websocket/SimpleEndpoint;
 
     return-void
@@ -50,61 +50,61 @@
 
     const/16 v0, 0x65
 
-    .line 99
+    .line 1
     iput v0, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->code:I
 
     const-string v0, "Switching Protocols"
 
-    .line 100
+    .line 2
     iput-object v0, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->reasonPhrase:Ljava/lang/String;
 
     const-string v0, "Upgrade"
 
     const-string v1, "websocket"
 
-    .line 101
-    invoke-virtual {p3, v0, v1}, Lcom/facebook/stetho/server/http/LightHttpResponse;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-virtual {p3, v0, v1}, Lcom/facebook/stetho/server/http/LightHttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "Connection"
 
-    .line 102
-    invoke-virtual {p3, v1, v0}, Lcom/facebook/stetho/server/http/LightHttpResponse;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-virtual {p3, v1, v0}, Lcom/facebook/stetho/server/http/LightHttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 103
+    .line 5
     iput-object v0, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->body:Lcom/facebook/stetho/server/http/LightHttpBody;
 
     const-string v0, "Sec-WebSocket-Key"
 
-    .line 105
+    .line 6
     invoke-static {p2, v0}, Lcom/facebook/stetho/websocket/WebSocketHandler;->getFirstHeaderValue(Lcom/facebook/stetho/server/http/LightHttpMessage;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 107
+    .line 7
     invoke-static {p2}, Lcom/facebook/stetho/websocket/WebSocketHandler;->generateServerKey(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "Sec-WebSocket-Accept"
 
-    invoke-virtual {p3, v0, p2}, Lcom/facebook/stetho/server/http/LightHttpResponse;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p3, v0, p2}, Lcom/facebook/stetho/server/http/LightHttpMessage;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
+    .line 8
     :cond_0
     invoke-virtual {p1}, Lcom/facebook/stetho/server/SocketLike;->getInput()Ljava/io/InputStream;
 
     move-result-object p2
 
-    .line 111
+    .line 9
     invoke-virtual {p1}, Lcom/facebook/stetho/server/SocketLike;->getOutput()Ljava/io/OutputStream;
 
     move-result-object p1
 
-    .line 112
+    .line 10
     new-instance v0, Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;
 
     new-instance v1, Ljava/io/BufferedOutputStream;
@@ -115,23 +115,23 @@
 
     invoke-static {p3, v0}, Lcom/facebook/stetho/server/http/LightHttpServer;->writeResponseMessage(Lcom/facebook/stetho/server/http/LightHttpResponse;Lcom/facebook/stetho/server/http/LightHttpServer$HttpMessageWriter;)V
 
-    .line 116
+    .line 11
     new-instance p3, Lcom/facebook/stetho/websocket/WebSocketSession;
 
     iget-object v0, p0, Lcom/facebook/stetho/websocket/WebSocketHandler;->mEndpoint:Lcom/facebook/stetho/websocket/SimpleEndpoint;
 
     invoke-direct {p3, p2, p1, v0}, Lcom/facebook/stetho/websocket/WebSocketSession;-><init>(Ljava/io/InputStream;Ljava/io/OutputStream;Lcom/facebook/stetho/websocket/SimpleEndpoint;)V
 
-    .line 117
+    .line 12
     invoke-virtual {p3}, Lcom/facebook/stetho/websocket/WebSocketSession;->handle()V
 
     return-void
 .end method
 
-.method private static generateServerKey(Ljava/lang/String;)Ljava/lang/String;
+.method public static generateServerKey(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 122
+    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -149,19 +149,19 @@
 
     const-string v0, "SHA-1"
 
-    .line 123
+    .line 2
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 124
+    .line 3
     invoke-static {p0}, Lcom/facebook/stetho/common/Utf8Charset;->encodeUTF8(Ljava/lang/String;)[B
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 125
+    .line 4
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -179,7 +179,7 @@
     :catch_0
     move-exception p0
 
-    .line 127
+    .line 5
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -187,10 +187,10 @@
     throw v0
 .end method
 
-.method private static getFirstHeaderValue(Lcom/facebook/stetho/server/http/LightHttpMessage;Ljava/lang/String;)Ljava/lang/String;
+.method public static getFirstHeaderValue(Lcom/facebook/stetho/server/http/LightHttpMessage;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 133
+    .line 1
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/server/http/LightHttpMessage;->getFirstHeaderValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -198,12 +198,12 @@
     return-object p0
 .end method
 
-.method private static isSupportableUpgradeRequest(Lcom/facebook/stetho/server/http/LightHttpRequest;)Z
+.method public static isSupportableUpgradeRequest(Lcom/facebook/stetho/server/http/LightHttpRequest;)Z
     .locals 3
 
     const-string v0, "Upgrade"
 
-    .line 88
+    .line 1
     invoke-static {p0, v0}, Lcom/facebook/stetho/websocket/WebSocketHandler;->getFirstHeaderValue(Lcom/facebook/stetho/server/http/LightHttpMessage;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -218,7 +218,7 @@
 
     const-string v1, "Connection"
 
-    .line 89
+    .line 2
     invoke-static {p0, v1}, Lcom/facebook/stetho/websocket/WebSocketHandler;->getFirstHeaderValue(Lcom/facebook/stetho/server/http/LightHttpMessage;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -231,14 +231,14 @@
 
     const-string v0, "Sec-WebSocket-Version"
 
-    .line 91
+    .line 3
     invoke-static {p0, v0}, Lcom/facebook/stetho/websocket/WebSocketHandler;->getFirstHeaderValue(Lcom/facebook/stetho/server/http/LightHttpMessage;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "13"
 
-    .line 90
+    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -247,11 +247,12 @@
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return p0
 .end method
 
@@ -260,7 +261,7 @@
 .method public handleRequest(Lcom/facebook/stetho/server/SocketLike;Lcom/facebook/stetho/server/http/LightHttpRequest;Lcom/facebook/stetho/server/http/LightHttpResponse;)Z
     .locals 1
 
-    .line 72
+    .line 1
     invoke-static {p2}, Lcom/facebook/stetho/websocket/WebSocketHandler;->isSupportableUpgradeRequest(Lcom/facebook/stetho/server/http/LightHttpRequest;)Z
 
     move-result v0
@@ -269,19 +270,19 @@
 
     const/16 p1, 0x1f5
 
-    .line 73
+    .line 2
     iput p1, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->code:I
 
     const-string p1, "Not Implemented"
 
-    .line 74
+    .line 3
     iput-object p1, p3, Lcom/facebook/stetho/server/http/LightHttpResponse;->reasonPhrase:Ljava/lang/String;
 
     const-string p1, "Not a supported WebSocket upgrade request\n"
 
     const-string p2, "text/plain"
 
-    .line 75
+    .line 4
     invoke-static {p1, p2}, Lcom/facebook/stetho/server/http/LightHttpBody;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/stetho/server/http/LightHttpBody;
 
     move-result-object p1
@@ -292,7 +293,7 @@
 
     return p1
 
-    .line 83
+    .line 5
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/facebook/stetho/websocket/WebSocketHandler;->doUpgrade(Lcom/facebook/stetho/server/SocketLike;Lcom/facebook/stetho/server/http/LightHttpRequest;Lcom/facebook/stetho/server/http/LightHttpResponse;)V
 

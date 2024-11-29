@@ -20,13 +20,13 @@
 
 
 # static fields
-.field private static final sDatabaseName:Ljava/lang/String; = "content-providers"
+.field public static final sDatabaseName:Ljava/lang/String; = "content-providers"
 
 
 # instance fields
-.field private final mContentProviderSchemas:[Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
+.field public final mContentProviderSchemas:[Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
 
-.field private mTableNames:Ljava/util/List;
+.field public mTableNames:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -41,10 +41,10 @@
 .method public varargs constructor <init>(Landroid/content/Context;[Lcom/facebook/stetho/inspector/database/ContentProviderSchema;)V
     .locals 0
 
-    .line 39
+    .line 1
     invoke-direct {p0, p1}, Lcom/facebook/stetho/inspector/protocol/module/DatabaseDriver2;-><init>(Landroid/content/Context;)V
 
-    .line 40
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mContentProviderSchemas:[Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
 
     return-void
@@ -53,7 +53,7 @@
 .method private fetchTableName(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 91
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mTableNames:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -73,7 +73,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 92
+    .line 2
     invoke-virtual {p1, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -104,36 +104,36 @@
         }
     .end annotation
 
-    .line 66
+    .line 2
     invoke-direct {p0, p2}, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->fetchTableName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 69
+    .line 3
     iget-object p2, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mTableNames:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
 
-    .line 70
+    .line 4
     iget-object p2, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mContentProviderSchemas:[Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
 
     aget-object p1, p2, p1
 
-    .line 73
-    iget-object p2, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mContext:Landroid/content/Context;
+    .line 5
+    iget-object p2, p0, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 75
+    .line 6
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/database/ContentProviderSchema;->getUri()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 76
+    .line 7
     invoke-virtual {p1}, Lcom/facebook/stetho/inspector/database/ContentProviderSchema;->getProjection()[Ljava/lang/String;
 
     move-result-object v2
@@ -144,12 +144,12 @@
 
     const/4 v5, 0x0
 
-    .line 74
+    .line 8
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
 
-    .line 81
+    .line 9
     :try_start_0
     invoke-interface {p3, p1}, Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;->handleSelect(Landroid/database/Cursor;)Ljava/lang/Object;
 
@@ -159,7 +159,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 83
+    .line 10
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     return-object p2
@@ -169,14 +169,14 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 84
+    .line 11
     throw p2
 .end method
 
 .method public bridge synthetic executeSQL(Ljava/lang/Object;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
     .locals 0
 
-    .line 27
+    .line 1
     check-cast p1, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->executeSQL(Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;Ljava/lang/String;Lcom/facebook/stetho/inspector/protocol/module/BaseDatabaseDriver$ExecuteResultHandler;)Lcom/facebook/stetho/inspector/protocol/module/Database$ExecuteSQLResponse;
@@ -197,7 +197,7 @@
         }
     .end annotation
 
-    .line 45
+    .line 1
     new-instance v0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;
 
     invoke-direct {v0}, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;-><init>()V
@@ -222,19 +222,19 @@
         }
     .end annotation
 
-    .line 50
+    .line 2
     iget-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mTableNames:Ljava/util/List;
 
     if-nez p1, :cond_0
 
-    .line 51
+    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mTableNames:Ljava/util/List;
 
-    .line 52
+    .line 4
     iget-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mContentProviderSchemas:[Lcom/facebook/stetho/inspector/database/ContentProviderSchema;
 
     array-length v0, p1
@@ -246,7 +246,7 @@
 
     aget-object v2, p1, v1
 
-    .line 53
+    .line 5
     iget-object v3, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mTableNames:Ljava/util/List;
 
     invoke-virtual {v2}, Lcom/facebook/stetho/inspector/database/ContentProviderSchema;->getTableName()Ljava/lang/String;
@@ -259,7 +259,7 @@
 
     goto :goto_0
 
-    .line 56
+    .line 6
     :cond_0
     iget-object p1, p0, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->mTableNames:Ljava/util/List;
 
@@ -269,7 +269,7 @@
 .method public bridge synthetic getTableNames(Ljava/lang/Object;)Ljava/util/List;
     .locals 0
 
-    .line 27
+    .line 1
     check-cast p1, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;
 
     invoke-virtual {p0, p1}, Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver;->getTableNames(Lcom/facebook/stetho/inspector/database/ContentProviderDatabaseDriver$ContentProviderDatabaseDescriptor;)Ljava/util/List;

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mIdToObjectMap:Landroid/util/SparseArray;
+.field public mIdToObjectMap:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -14,9 +14,9 @@
     .end annotation
 .end field
 
-.field private mNextId:I
+.field public mNextId:I
 
-.field private final mObjectToIdMap:Ljava/util/Map;
+.field public final mObjectToIdMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -27,17 +27,17 @@
     .end annotation
 .end field
 
-.field protected final mSync:Ljava/lang/Object;
+.field public final mSync:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 20
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -46,17 +46,17 @@
 
     const/4 v0, 0x1
 
-    .line 23
+    .line 3
     iput v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mNextId:I
 
-    .line 26
+    .line 4
     new-instance v0, Ljava/util/IdentityHashMap;
 
     invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
-    .line 29
+    .line 5
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -71,33 +71,33 @@
 .method public clear()V
     .locals 5
 
-    .line 34
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 35
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
-    .line 36
+    .line 3
     iget-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 37
+    .line 4
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
-    .line 38
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
+    .line 6
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -107,17 +107,17 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 42
+    .line 7
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 43
+    .line 8
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 44
+    .line 9
     invoke-virtual {p0, v4, v3}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->onUnmapped(Ljava/lang/Object;I)V
 
     add-int/lit8 v2, v2, 0x1
@@ -130,7 +130,7 @@
     :catchall_0
     move-exception v1
 
-    .line 38
+    .line 10
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -148,12 +148,12 @@
 .method public containsId(I)Z
     .locals 2
 
-    .line 49
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 50
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
@@ -178,7 +178,7 @@
     :catchall_0
     move-exception p1
 
-    .line 51
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -189,12 +189,12 @@
 .method public containsObject(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 55
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 56
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
@@ -209,7 +209,7 @@
     :catchall_0
     move-exception p1
 
-    .line 57
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -220,12 +220,12 @@
 .method public getIdForObject(Ljava/lang/Object;)Ljava/lang/Integer;
     .locals 2
 
-    .line 69
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 70
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
@@ -242,7 +242,7 @@
     :catchall_0
     move-exception p1
 
-    .line 71
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -253,12 +253,12 @@
 .method public getObjectForId(I)Ljava/lang/Object;
     .locals 2
 
-    .line 62
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 63
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
@@ -273,7 +273,7 @@
     :catchall_0
     move-exception p1
 
-    .line 64
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -281,13 +281,13 @@
     throw p1
 .end method
 
-.method protected onMapped(Ljava/lang/Object;I)V
+.method public onMapped(Ljava/lang/Object;I)V
     .locals 0
 
     return-void
 .end method
 
-.method protected onUnmapped(Ljava/lang/Object;I)V
+.method public onUnmapped(Ljava/lang/Object;I)V
     .locals 0
 
     return-void
@@ -296,12 +296,12 @@
 .method public putObject(Ljava/lang/Object;)I
     .locals 4
 
-    .line 77
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 78
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
@@ -313,7 +313,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 80
+    .line 3
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -322,7 +322,7 @@
 
     return p1
 
-    .line 83
+    .line 4
     :cond_0
     iget v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mNextId:I
 
@@ -334,12 +334,12 @@
 
     move-result-object v1
 
-    .line 84
+    .line 5
     iget-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
     invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
+    .line 6
     iget-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -348,19 +348,19 @@
 
     invoke-virtual {v2, v3, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 86
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
+    .line 8
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->onMapped(Ljava/lang/Object;I)V
 
-    .line 89
+    .line 9
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -370,7 +370,7 @@
     :catchall_0
     move-exception p1
 
-    .line 86
+    .line 10
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -382,12 +382,12 @@
 .method public removeObject(Ljava/lang/Object;)Ljava/lang/Integer;
     .locals 4
 
-    .line 114
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 115
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
@@ -401,12 +401,12 @@
 
     const/4 p1, 0x0
 
-    .line 117
+    .line 3
     monitor-exit v0
 
     return-object p1
 
-    .line 120
+    .line 4
     :cond_0
     iget-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
@@ -416,12 +416,12 @@
 
     invoke-virtual {v2, v3}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 121
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
+    .line 6
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -433,7 +433,7 @@
     :catchall_0
     move-exception p1
 
-    .line 121
+    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -445,12 +445,12 @@
 .method public removeObjectById(I)Ljava/lang/Object;
     .locals 3
 
-    .line 96
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 97
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
@@ -462,28 +462,28 @@
 
     const/4 p1, 0x0
 
-    .line 99
+    .line 3
     monitor-exit v0
 
     return-object p1
 
-    .line 102
+    .line 4
     :cond_0
     iget-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mIdToObjectMap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 103
+    .line 5
     iget-object v2, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 106
+    .line 7
     invoke-virtual {p0, v1, p1}, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->onUnmapped(Ljava/lang/Object;I)V
 
     return-object v1
@@ -491,7 +491,7 @@
     :catchall_0
     move-exception p1
 
-    .line 104
+    .line 8
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -503,12 +503,12 @@
 .method public size()I
     .locals 2
 
-    .line 128
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 129
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/facebook/stetho/inspector/helper/ObjectIdMapper;->mObjectToIdMap:Ljava/util/Map;
 
@@ -523,7 +523,7 @@
     :catchall_0
     move-exception v1
 
-    .line 130
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

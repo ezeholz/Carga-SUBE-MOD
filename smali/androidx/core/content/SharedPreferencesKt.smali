@@ -4,56 +4,63 @@
 
 
 # direct methods
-.method public static final edit(Landroid/content/SharedPreferences;ZLkotlin/d/a/b;)V
+.method public static final edit(Landroid/content/SharedPreferences;ZLj/m/b/l;)V
     .locals 1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ApplySharedPref"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/SharedPreferences;",
             "Z",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroid/content/SharedPreferences$Editor;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 43
+    .line 1
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string v0, "editor"
 
-    .line 44
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 2
+    invoke-static {p0, v0}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
-    .line 46
+    .line 3
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    return-void
+    goto :goto_0
 
-    .line 48
+    .line 4
     :cond_0
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic edit$default(Landroid/content/SharedPreferences;ZLkotlin/d/a/b;ILjava/lang/Object;)V
+.method public static synthetic edit$default(Landroid/content/SharedPreferences;ZLj/m/b/l;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x1
@@ -65,35 +72,36 @@
     :cond_0
     const-string p3, "<this>"
 
-    .line 39
-    invoke-static {p0, p3}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p0, p3}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p3, "action"
 
-    invoke-static {p2, p3}, Lkotlin/d/b/h;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lj/m/c/i;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 43
+    .line 2
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const-string p3, "editor"
 
-    .line 44
-    invoke-static {p0, p3}, Lkotlin/d/b/h;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p0, p3}, Lj/m/c/i;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
-    .line 46
+    .line 4
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    return-void
+    goto :goto_0
 
-    .line 48
+    .line 5
     :cond_1
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
+    :goto_0
     return-void
 .end method

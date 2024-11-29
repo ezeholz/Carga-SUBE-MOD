@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field dependents:Ljava/util/HashSet;
+.field public dependents:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet<",
@@ -22,17 +22,17 @@
     .end annotation
 .end field
 
-.field state:I
+.field public state:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    .line 23
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     const/4 v1, 0x2
@@ -43,7 +43,7 @@
 
     const/4 v0, 0x0
 
-    .line 35
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->state:I
 
     return-void
@@ -54,7 +54,7 @@
 .method public addDependent(Landroidx/constraintlayout/solver/widgets/ResolutionNode;)V
     .locals 1
 
-    .line 38
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->dependents:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -67,10 +67,10 @@
 
     const/4 v0, 0x1
 
-    .line 63
+    .line 1
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->state:I
 
-    .line 70
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->dependents:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -90,7 +90,7 @@
 
     check-cast v1, Landroidx/constraintlayout/solver/widgets/ResolutionNode;
 
-    .line 71
+    .line 3
     invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->resolve()V
 
     goto :goto_0
@@ -104,10 +104,10 @@
 
     const/4 v0, 0x0
 
-    .line 47
+    .line 1
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->state:I
 
-    .line 48
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->dependents:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -127,7 +127,7 @@
 
     check-cast v1, Landroidx/constraintlayout/solver/widgets/ResolutionNode;
 
-    .line 49
+    .line 3
     invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->invalidate()V
 
     goto :goto_0
@@ -139,17 +139,17 @@
 .method public invalidateAnchors()V
     .locals 2
 
-    .line 54
+    .line 1
     instance-of v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionAnchor;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 55
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->state:I
 
-    .line 57
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->dependents:Ljava/util/HashSet;
 
@@ -170,7 +170,7 @@
 
     check-cast v1, Landroidx/constraintlayout/solver/widgets/ResolutionNode;
 
-    .line 58
+    .line 4
     invoke-virtual {v1}, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->invalidateAnchors()V
 
     goto :goto_0
@@ -182,19 +182,20 @@
 .method public isResolved()Z
     .locals 2
 
-    .line 76
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->state:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    return v1
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    return v0
+    :goto_0
+    return v1
 .end method
 
 .method public remove(Landroidx/constraintlayout/solver/widgets/ResolutionDimension;)V
@@ -208,10 +209,10 @@
 
     const/4 v0, 0x0
 
-    .line 42
+    .line 1
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->state:I
 
-    .line 43
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/ResolutionNode;->dependents:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V

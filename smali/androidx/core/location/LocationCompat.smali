@@ -13,32 +13,32 @@
 
 
 # static fields
-.field private static final EXTRA_IS_MOCK:Ljava/lang/String; = "mockLocation"
+.field public static final EXTRA_IS_MOCK:Ljava/lang/String; = "mockLocation"
 
-.field private static sSetIsFromMockProviderMethod:Ljava/lang/reflect/Method;
+.field public static sSetIsFromMockProviderMethod:Ljava/lang/reflect/Method;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 45
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static getElapsedRealtimeMillis(Landroid/location/Location;)J
-    .locals 6
+    .locals 3
+    .param p0    # Landroid/location/Location;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 77
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x11
-
-    if-lt v0, v1, :cond_0
-
-    .line 78
+    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {p0}, Landroidx/core/location/LocationCompat$Api17Impl;->getElapsedRealtimeNanos(Landroid/location/Location;)J
@@ -50,86 +50,32 @@
     move-result-wide v0
 
     return-wide v0
-
-    .line 80
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0}, Landroid/location/Location;->getTime()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    .line 81
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long p0, v0, v4
-
-    if-gez p0, :cond_1
-
-    return-wide v2
-
-    :cond_1
-    cmp-long p0, v0, v2
-
-    if-lez p0, :cond_2
-
-    return-wide v4
-
-    :cond_2
-    sub-long/2addr v2, v0
-
-    return-wide v2
 .end method
 
 .method public static getElapsedRealtimeNanos(Landroid/location/Location;)J
-    .locals 3
+    .locals 2
+    .param p0    # Landroid/location/Location;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 64
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x11
-
-    if-lt v0, v1, :cond_0
-
-    .line 65
+    .line 1
     invoke-static {p0}, Landroidx/core/location/LocationCompat$Api17Impl;->getElapsedRealtimeNanos(Landroid/location/Location;)J
 
     move-result-wide v0
 
     return-wide v0
-
-    .line 67
-    :cond_0
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {p0}, Landroidx/core/location/LocationCompat;->getElapsedRealtimeMillis(Landroid/location/Location;)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method
 
-.method private static getSetIsFromMockProviderMethod()Ljava/lang/reflect/Method;
+.method public static getSetIsFromMockProviderMethod()Ljava/lang/reflect/Method;
     .locals 5
 
-    .line 177
+    .line 1
     sget-object v0, Landroidx/core/location/LocationCompat;->sSetIsFromMockProviderMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
-    .line 178
+    .line 2
     const-class v0, Landroid/location/Location;
 
     const/4 v1, 0x1
@@ -148,12 +94,12 @@
 
     move-result-object v0
 
-    .line 180
     sput-object v0, Landroidx/core/location/LocationCompat;->sSetIsFromMockProviderMethod:Ljava/lang/reflect/Method;
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 183
+    .line 4
     :cond_0
     sget-object v0, Landroidx/core/location/LocationCompat;->sSetIsFromMockProviderMethod:Ljava/lang/reflect/Method;
 
@@ -161,39 +107,14 @@
 .end method
 
 .method public static isMock(Landroid/location/Location;)Z
-    .locals 2
+    .locals 0
+    .param p0    # Landroid/location/Location;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 107
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x12
-
-    if-lt v0, v1, :cond_0
-
-    .line 108
+    .line 1
     invoke-static {p0}, Landroidx/core/location/LocationCompat$Api18Impl;->isMock(Landroid/location/Location;)Z
-
-    move-result p0
-
-    return p0
-
-    .line 110
-    :cond_0
-    invoke-virtual {p0}, Landroid/location/Location;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_1
-
-    return v0
-
-    :cond_1
-    const-string v1, "mockLocation"
-
-    .line 115
-    invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -202,21 +123,18 @@
 
 .method public static setMock(Landroid/location/Location;Z)V
     .locals 3
+    .param p0    # Landroid/location/Location;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 128
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/4 v1, 0x1
-
-    const/16 v2, 0x12
-
-    if-lt v0, v2, :cond_0
-
-    .line 130
+    .line 1
     :try_start_0
     invoke-static {}, Landroidx/core/location/LocationCompat;->getSetIsFromMockProviderMethod()Ljava/lang/reflect/Method;
 
     move-result-object v0
+
+    const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -239,7 +157,7 @@
     :catch_0
     move-exception p0
 
-    .line 140
+    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -249,57 +167,28 @@
     :catch_1
     move-exception p0
 
-    .line 136
+    .line 3
     new-instance p1, Ljava/lang/IllegalAccessError;
 
     invoke-direct {p1}, Ljava/lang/IllegalAccessError;-><init>()V
 
-    .line 137
+    .line 4
     invoke-virtual {p1, p0}, Ljava/lang/Error;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 138
+    .line 5
     throw p1
 
     :catch_2
     move-exception p0
 
-    .line 132
+    .line 6
     new-instance p1, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {p1}, Ljava/lang/NoSuchMethodError;-><init>()V
 
-    .line 133
+    .line 7
     invoke-virtual {p1, p0}, Ljava/lang/Error;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 134
+    .line 8
     throw p1
-
-    .line 143
-    :cond_0
-    invoke-virtual {p0}, Landroid/location/Location;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string v0, "mockLocation"
-
-    if-nez p1, :cond_1
-
-    .line 145
-    new-instance p1, Landroid/os/Bundle;
-
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
-
-    .line 146
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    .line 147
-    invoke-virtual {p0, p1}, Landroid/location/Location;->setExtras(Landroid/os/Bundle;)V
-
-    return-void
-
-    .line 149
-    :cond_1
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-void
 .end method

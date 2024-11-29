@@ -1,9 +1,15 @@
 .class public final Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;
-.super Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;
+.super Lcom/google/android/material/snackbar/BaseTransientBottomBar$i;
 .source "Snackbar.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/snackbar/Snackbar;
 .end annotation
@@ -18,8 +24,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 432
-    invoke-direct {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;-><init>(Landroid/content/Context;)V
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$i;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -27,37 +33,37 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 436
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 2
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final onMeasure(II)V
+.method public onMeasure(II)V
     .locals 5
 
-    .line 441
-    invoke-super {p0, p1, p2}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;->onMeasure(II)V
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 446
-    invoke-virtual {p0}, Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;->getChildCount()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result p1
 
-    .line 447
-    invoke-virtual {p0}, Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;->getMeasuredWidth()I
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result p2
 
-    invoke-virtual {p0}, Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 
     move-result v0
 
     sub-int/2addr p2, v0
 
-    invoke-virtual {p0}, Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingRight()I
 
     move-result v0
 
@@ -68,12 +74,12 @@
     :goto_0
     if-ge v0, p1, :cond_1
 
-    .line 449
-    invoke-virtual {p0, v0}, Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;->getChildAt(I)Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 450
+    .line 5
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
@@ -86,12 +92,12 @@
 
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 452
+    .line 6
     invoke-static {p2, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v3
 
-    .line 453
+    .line 7
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v4
@@ -100,7 +106,7 @@
 
     move-result v2
 
-    .line 451
+    .line 8
     invoke-virtual {v1, v3, v2}, Landroid/view/View;->measure(II)V
 
     :cond_0
@@ -112,11 +118,15 @@
     return-void
 .end method
 
-.method public final bridge synthetic setOnClickListener(Landroid/view/View$OnClickListener;)V
+.method public bridge synthetic setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 0
+    .param p1    # Landroid/view/View$OnClickListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 429
-    invoke-super {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$d;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$i;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/RequestExecutor$ReplyRunnable;
+.class public Landroidx/core/provider/RequestExecutor$ReplyRunnable;
 .super Ljava/lang/Object;
 .source "RequestExecutor.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ReplyRunnable"
 .end annotation
 
@@ -28,7 +28,10 @@
 
 
 # instance fields
-.field private mCallable:Ljava/util/concurrent/Callable;
+.field public mCallable:Ljava/util/concurrent/Callable;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/Callable<",
@@ -37,7 +40,10 @@
     .end annotation
 .end field
 
-.field private mConsumer:Landroidx/core/util/Consumer;
+.field public mConsumer:Landroidx/core/util/Consumer;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/core/util/Consumer<",
@@ -46,12 +52,27 @@
     .end annotation
 .end field
 
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;Landroidx/core/util/Consumer;)V
+.method public constructor <init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;Landroidx/core/util/Consumer;)V
     .locals 0
+    .param p1    # Landroid/os/Handler;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/concurrent/Callable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/core/util/Consumer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -63,16 +84,16 @@
         }
     .end annotation
 
-    .line 135
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
+    .line 2
     iput-object p2, p0, Landroidx/core/provider/RequestExecutor$ReplyRunnable;->mCallable:Ljava/util/concurrent/Callable;
 
-    .line 137
+    .line 3
     iput-object p3, p0, Landroidx/core/provider/RequestExecutor$ReplyRunnable;->mConsumer:Landroidx/core/util/Consumer;
 
-    .line 138
+    .line 4
     iput-object p1, p0, Landroidx/core/provider/RequestExecutor$ReplyRunnable;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -83,7 +104,7 @@
 .method public run()V
     .locals 4
 
-    .line 145
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/core/provider/RequestExecutor$ReplyRunnable;->mCallable:Ljava/util/concurrent/Callable;
 
@@ -98,11 +119,11 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 150
+    .line 2
     :goto_0
     iget-object v1, p0, Landroidx/core/provider/RequestExecutor$ReplyRunnable;->mConsumer:Landroidx/core/util/Consumer;
 
-    .line 151
+    .line 3
     iget-object v2, p0, Landroidx/core/provider/RequestExecutor$ReplyRunnable;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Landroidx/core/provider/RequestExecutor$ReplyRunnable$1;

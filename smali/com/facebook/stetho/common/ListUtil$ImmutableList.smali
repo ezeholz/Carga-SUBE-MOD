@@ -1,4 +1,4 @@
-.class interface abstract Lcom/facebook/stetho/common/ListUtil$ImmutableList;
+.class public interface abstract Lcom/facebook/stetho/common/ListUtil$ImmutableList;
 .super Ljava/lang/Object;
 .source "ListUtil.java"
 
@@ -13,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "ImmutableList"
 .end annotation
 

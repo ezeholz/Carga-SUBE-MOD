@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1171
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,6 +55,10 @@
 .end method
 
 .method public abstract setContentDescription(I)Landroidx/appcompat/app/ActionBar$Tab;
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setContentDescription(Ljava/lang/CharSequence;)Landroidx/appcompat/app/ActionBar$Tab;
@@ -67,6 +71,10 @@
 .end method
 
 .method public abstract setIcon(I)Landroidx/appcompat/app/ActionBar$Tab;
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setIcon(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/app/ActionBar$Tab;

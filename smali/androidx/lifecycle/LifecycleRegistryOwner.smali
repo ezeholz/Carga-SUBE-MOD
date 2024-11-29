@@ -13,4 +13,6 @@
 
 # virtual methods
 .method public abstract getLifecycle()Landroidx/lifecycle/LifecycleRegistry;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method

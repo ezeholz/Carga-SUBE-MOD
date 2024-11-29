@@ -1,4 +1,4 @@
-.class final Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;
+.class public final Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;
 .super Ljava/util/AbstractList;
 .source "ListUtil.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x19
     name = "ImmutableArrayList"
 .end annotation
 
@@ -30,17 +30,17 @@
 
 
 # instance fields
-.field private final mArray:[Ljava/lang/Object;
+.field public final mArray:[Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;)V
     .locals 0
 
-    .line 83
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 84
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;->mArray:[Ljava/lang/Object;
 
     return-void
@@ -48,7 +48,7 @@
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
+.method public get(I)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 90
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;->mArray:[Ljava/lang/Object;
 
     aget-object p1, v0, p1
@@ -64,10 +64,10 @@
     return-object p1
 .end method
 
-.method public final size()I
+.method public size()I
     .locals 1
 
-    .line 95
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/common/ListUtil$ImmutableArrayList;->mArray:[Ljava/lang/Object;
 
     array-length v0, v0

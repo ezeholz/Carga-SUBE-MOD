@@ -1,9 +1,9 @@
 .class public final Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$a;
-.super Lkotlin/d/b/i;
+.super Lj/m/c/j;
 .source "ActivityViewModelLazy.kt"
 
 # interfaces
-.implements Lkotlin/d/a/a;
+.implements Lj/m/b/a;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/d/b/i;",
-        "Lkotlin/d/a/a<",
+        "Lj/m/c/j;",
+        "Lj/m/b/a<",
         "Landroidx/lifecycle/ViewModelProvider$Factory;",
         ">;"
     }
@@ -27,29 +27,29 @@
 
 
 # instance fields
-.field final synthetic a:Landroidx/activity/ComponentActivity;
+.field public final synthetic d:Landroidx/activity/ComponentActivity;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/activity/ComponentActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$a;->a:Landroidx/activity/ComponentActivity;
+    iput-object p1, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$a;->d:Landroidx/activity/ComponentActivity;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/d/b/i;-><init>(I)V
+    invoke-direct {p0, p1}, Lj/m/c/j;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic invoke()Ljava/lang/Object;
+.method public invoke()Ljava/lang/Object;
     .locals 2
 
-    .line 1044
-    iget-object v0, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$a;->a:Landroidx/activity/ComponentActivity;
+    .line 1
+    iget-object v0, p0, Lcom/sube/cargasube/gui/charge_sube/view/RechargeSubeActivity$a;->d:Landroidx/activity/ComponentActivity;
 
     invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->getDefaultViewModelProviderFactory()Landroidx/lifecycle/ViewModelProvider$Factory;
 
@@ -57,7 +57,7 @@
 
     const-string v1, "defaultViewModelProviderFactory"
 
-    invoke-static {v0, v1}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

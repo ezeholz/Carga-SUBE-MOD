@@ -1,4 +1,4 @@
-.class Landroidx/browser/customtabs/CustomTabsClient$2;
+.class public Landroidx/browser/customtabs/CustomTabsClient$2;
 .super Landroid/support/customtabs/ICustomTabsCallback$Stub;
 .source "CustomTabsClient.java"
 
@@ -9,31 +9,31 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private mHandler:Landroid/os/Handler;
+.field public mHandler:Landroid/os/Handler;
 
-.field final synthetic this$0:Landroidx/browser/customtabs/CustomTabsClient;
+.field public final synthetic this$0:Landroidx/browser/customtabs/CustomTabsClient;
 
-.field final synthetic val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
+.field public final synthetic val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/customtabs/CustomTabsClient;Landroidx/browser/customtabs/CustomTabsCallback;)V
+.method public constructor <init>(Landroidx/browser/customtabs/CustomTabsClient;Landroidx/browser/customtabs/CustomTabsCallback;)V
     .locals 0
 
-    .line 191
+    .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->this$0:Landroidx/browser/customtabs/CustomTabsClient;
 
     iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
     invoke-direct {p0}, Landroid/support/customtabs/ICustomTabsCallback$Stub;-><init>()V
 
-    .line 192
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -52,14 +52,14 @@
 .method public extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 208
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 209
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->mHandler:Landroid/os/Handler;
 
@@ -75,14 +75,14 @@
 .method public onMessageChannelReady(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 220
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 221
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->mHandler:Landroid/os/Handler;
 
@@ -98,14 +98,14 @@
 .method public onNavigationEvent(ILandroid/os/Bundle;)V
     .locals 2
 
-    .line 196
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 197
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->mHandler:Landroid/os/Handler;
 
@@ -121,14 +121,14 @@
 .method public onPostMessage(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 232
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 233
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->mHandler:Landroid/os/Handler;
 
@@ -143,15 +143,19 @@
 
 .method public onRelationshipValidationResult(ILandroid/net/Uri;ZLandroid/os/Bundle;)V
     .locals 8
+    .param p4    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    .line 245
+    .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 246
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->mHandler:Landroid/os/Handler;
 

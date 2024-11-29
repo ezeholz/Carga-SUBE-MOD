@@ -1,11 +1,11 @@
 .class public final Landroidx/core/util/LongSparseArrayKt$keyIterator$1;
-.super Lkotlin/a/w;
+.super Lj/j/h;
 .source "LongSparseArray.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/util/LongSparseArrayKt;->keyIterator(Landroid/util/LongSparseArray;)Lkotlin/a/w;
+    value = Landroidx/core/util/LongSparseArrayKt;->keyIterator(Landroid/util/LongSparseArray;)Lj/j/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic $this_keyIterator:Landroid/util/LongSparseArray;
+.field public final synthetic $this_keyIterator:Landroid/util/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/LongSparseArray<",
@@ -24,11 +24,11 @@
     .end annotation
 .end field
 
-.field private index:I
+.field public index:I
 
 
 # direct methods
-.method constructor <init>(Landroid/util/LongSparseArray;)V
+.method public constructor <init>(Landroid/util/LongSparseArray;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -40,8 +40,8 @@
 
     iput-object p1, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroid/util/LongSparseArray;
 
-    .line 98
-    invoke-direct {p0}, Lkotlin/a/w;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lj/j/h;-><init>()V
 
     return-void
 .end method
@@ -51,16 +51,16 @@
 .method public final getIndex()I
     .locals 1
 
-    .line 99
+    .line 1
     iget v0, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->index:I
 
     return v0
 .end method
 
-.method public final hasNext()Z
+.method public hasNext()Z
     .locals 2
 
-    .line 100
+    .line 1
     iget v0, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->index:I
 
     iget-object v1, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroid/util/LongSparseArray;
@@ -73,18 +73,19 @@
 
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method public final nextLong()J
+.method public nextLong()J
     .locals 3
 
-    .line 101
+    .line 1
     iget-object v0, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->$this_keyIterator:Landroid/util/LongSparseArray;
 
     iget v1, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->index:I
@@ -103,7 +104,7 @@
 .method public final setIndex(I)V
     .locals 0
 
-    .line 99
+    .line 1
     iput p1, p0, Landroidx/core/util/LongSparseArrayKt$keyIterator$1;->index:I
 
     return-void

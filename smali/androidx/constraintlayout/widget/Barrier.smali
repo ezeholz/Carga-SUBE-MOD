@@ -18,24 +18,24 @@
 
 
 # instance fields
-.field private mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
+.field public mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
 
-.field private mIndicatedType:I
+.field public mIndicatedType:I
 
-.field private mResolvedType:I
+.field public mResolvedType:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 115
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;-><init>(Landroid/content/Context;)V
 
     const/16 p1, 0x8
 
-    .line 116
-    invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->setVisibility(I)V
+    .line 2
+    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
@@ -43,13 +43,13 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 120
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintHelper;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/16 p1, 0x8
 
-    .line 121
-    invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->setVisibility(I)V
+    .line 4
+    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
@@ -57,13 +57,13 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 125
+    .line 5
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintHelper;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/16 p1, 0x8
 
-    .line 126
-    invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->setVisibility(I)V
+    .line 6
+    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 .method public allowsGoneWidget()Z
     .locals 1
 
-    .line 204
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/Barrier;->allowsGoneWidget()Z
@@ -86,19 +86,19 @@
 .method public getType()I
     .locals 1
 
-    .line 135
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/widget/Barrier;->mIndicatedType:I
 
     return v0
 .end method
 
-.method protected init(Landroid/util/AttributeSet;)V
+.method public init(Landroid/util/AttributeSet;)V
     .locals 6
 
-    .line 181
+    .line 1
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->init(Landroid/util/AttributeSet;)V
 
-    .line 182
+    .line 2
     new-instance v0, Landroidx/constraintlayout/solver/widgets/Barrier;
 
     invoke-direct {v0}, Landroidx/constraintlayout/solver/widgets/Barrier;-><init>()V
@@ -107,8 +107,8 @@
 
     if-eqz p1, :cond_2
 
-    .line 184
-    invoke-virtual {p0}, Landroidx/constraintlayout/widget/Barrier;->getContext()Landroid/content/Context;
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     move-result-object p1
 
-    .line 185
+    .line 4
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result v0
@@ -130,17 +130,17 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 187
+    .line 5
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v3
 
-    .line 188
+    .line 6
     sget v4, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_barrierDirection:I
 
     if-ne v3, v4, :cond_0
 
-    .line 189
+    .line 7
     invoke-virtual {p1, v3, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v3
@@ -149,13 +149,13 @@
 
     goto :goto_1
 
-    .line 190
+    .line 8
     :cond_0
     sget v4, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_barrierAllowsGoneWidgets:I
 
     if-ne v3, v4, :cond_1
 
-    .line 191
+    .line 9
     iget-object v4, p0, Landroidx/constraintlayout/widget/Barrier;->mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
 
     const/4 v5, 0x1
@@ -172,14 +172,14 @@
 
     goto :goto_0
 
-    .line 195
+    .line 10
     :cond_2
     iget-object p1, p0, Landroidx/constraintlayout/widget/Barrier;->mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
 
-    iput-object p1, p0, Landroidx/constraintlayout/widget/Barrier;->mHelperWidget:Landroidx/constraintlayout/solver/widgets/Helper;
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mHelperWidget:Landroidx/constraintlayout/solver/widgets/Helper;
 
-    .line 196
-    invoke-virtual {p0}, Landroidx/constraintlayout/widget/Barrier;->validateParams()V
+    .line 11
+    invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->validateParams()V
 
     return-void
 .end method
@@ -187,7 +187,7 @@
 .method public setAllowsGoneWidget(Z)V
     .locals 1
 
-    .line 200
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
 
     invoke-virtual {v0, p1}, Landroidx/constraintlayout/solver/widgets/Barrier;->setAllowsGoneWidget(Z)V
@@ -196,50 +196,16 @@
 .end method
 
 .method public setType(I)V
-    .locals 5
+    .locals 4
 
-    .line 144
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/widget/Barrier;->mIndicatedType:I
 
-    .line 145
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
 
-    .line 146
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/4 v0, 0x6
-
-    const/4 v1, 0x5
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/16 v4, 0x11
-
-    if-ge p1, v4, :cond_1
-
-    .line 149
-    iget p1, p0, Landroidx/constraintlayout/widget/Barrier;->mIndicatedType:I
-
-    if-ne p1, v1, :cond_0
-
-    .line 150
-    iput v2, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
-
-    goto :goto_1
-
-    :cond_0
-    if-ne p1, v0, :cond_6
-
-    .line 152
-    iput v3, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
-
-    goto :goto_1
-
-    .line 156
-    :cond_1
-    invoke-virtual {p0}, Landroidx/constraintlayout/widget/Barrier;->getResources()Landroid/content/res/Resources;
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -247,60 +213,68 @@
 
     move-result-object p1
 
-    .line 157
+    .line 4
     invoke-virtual {p1}, Landroid/content/res/Configuration;->getLayoutDirection()I
 
     move-result p1
 
-    if-ne v3, p1, :cond_2
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ne v1, p1, :cond_0
 
     const/4 p1, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_0
     const/4 p1, 0x0
 
     :goto_0
-    if-eqz p1, :cond_4
+    const/4 v2, 0x6
 
-    .line 159
+    const/4 v3, 0x5
+
+    if-eqz p1, :cond_2
+
+    .line 5
     iget p1, p0, Landroidx/constraintlayout/widget/Barrier;->mIndicatedType:I
 
-    if-ne p1, v1, :cond_3
+    if-ne p1, v3, :cond_1
 
-    .line 160
-    iput v3, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
+    .line 6
+    iput v1, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
+
+    goto :goto_1
+
+    :cond_1
+    if-ne p1, v2, :cond_4
+
+    .line 7
+    iput v0, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
+
+    goto :goto_1
+
+    .line 8
+    :cond_2
+    iget p1, p0, Landroidx/constraintlayout/widget/Barrier;->mIndicatedType:I
+
+    if-ne p1, v3, :cond_3
+
+    .line 9
+    iput v0, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
 
     goto :goto_1
 
     :cond_3
-    if-ne p1, v0, :cond_6
+    if-ne p1, v2, :cond_4
 
-    .line 162
-    iput v2, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
+    .line 10
+    iput v1, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
 
-    goto :goto_1
-
-    .line 165
+    .line 11
     :cond_4
-    iget p1, p0, Landroidx/constraintlayout/widget/Barrier;->mIndicatedType:I
-
-    if-ne p1, v1, :cond_5
-
-    .line 166
-    iput v2, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
-
-    goto :goto_1
-
-    :cond_5
-    if-ne p1, v0, :cond_6
-
-    .line 168
-    iput v3, p0, Landroidx/constraintlayout/widget/Barrier;->mResolvedType:I
-
-    .line 172
-    :cond_6
     :goto_1
     iget-object p1, p0, Landroidx/constraintlayout/widget/Barrier;->mBarrier:Landroidx/constraintlayout/solver/widgets/Barrier;
 

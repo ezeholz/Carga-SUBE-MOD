@@ -4,28 +4,28 @@
 
 
 # instance fields
-.field protected mWidgets:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
+.field public mWidgets:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-.field protected mWidgetsCount:I
+.field public mWidgetsCount:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 8
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidget;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-    .line 9
+    .line 2
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgets:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     const/4 v0, 0x0
 
-    .line 10
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgetsCount:I
 
     return-void
@@ -36,7 +36,7 @@
 .method public add(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
     .locals 3
 
-    .line 18
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgetsCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -47,7 +47,7 @@
 
     if-le v0, v2, :cond_0
 
-    .line 19
+    .line 2
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -60,7 +60,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgets:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
-    .line 21
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgets:[Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
@@ -70,7 +70,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 22
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgetsCount:I
 
     return-void
@@ -81,7 +81,7 @@
 
     const/4 v0, 0x0
 
-    .line 29
+    .line 1
     iput v0, p0, Landroidx/constraintlayout/solver/widgets/Helper;->mWidgetsCount:I
 
     return-void

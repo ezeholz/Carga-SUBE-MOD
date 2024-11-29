@@ -7,46 +7,48 @@
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field public final mContext:Landroid/content/Context;
 
-.field private mRhinoJsUnexpectedError:Ljava/lang/RuntimeException;
+.field public mRhinoJsUnexpectedError:Ljava/lang/RuntimeException;
 
-.field private mRhinoReplFactory:Lcom/facebook/stetho/inspector/console/RuntimeReplFactory;
+.field public mRhinoReplFactory:Lcom/facebook/stetho/inspector/console/RuntimeReplFactory;
 
-.field private mSearchedForRhinoJs:Z
+.field public mSearchedForRhinoJs:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 36
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 2
     iput-object p1, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mContext:Landroid/content/Context;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;)Ljava/lang/RuntimeException;
+.method public static synthetic access$000(Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;)Ljava/lang/RuntimeException;
     .locals 0
 
-    .line 29
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mRhinoJsUnexpectedError:Ljava/lang/RuntimeException;
 
     return-object p0
 .end method
 
-.method private static findRhinoReplFactory(Landroid/content/Context;)Lcom/facebook/stetho/inspector/console/RuntimeReplFactory;
+.method public static findRhinoReplFactory(Landroid/content/Context;)Lcom/facebook/stetho/inspector/console/RuntimeReplFactory;
     .locals 7
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
     :try_start_0
     const-string v1, "com.facebook.stetho.rhino.JsRuntimeReplFactoryBuilder"
 
-    .line 70
+    .line 1
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -57,14 +59,14 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 71
+    .line 2
     const-class v5, Landroid/content/Context;
 
     const/4 v6, 0x0
 
     aput-object v5, v4, v6
 
-    .line 72
+    .line 3
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -73,7 +75,7 @@
 
     aput-object p0, v2, v6
 
-    .line 73
+    .line 4
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -90,7 +92,7 @@
     :catch_0
     move-exception p0
 
-    .line 82
+    .line 5
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -100,7 +102,7 @@
     :catch_1
     move-exception p0
 
-    .line 80
+    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -110,7 +112,7 @@
     :catch_2
     move-exception p0
 
-    .line 78
+    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -120,7 +122,7 @@
     :catch_3
     const-string p0, "Error finding stetho-js-rhino, cannot enable console evaluation!"
 
-    .line 75
+    .line 8
     invoke-static {p0}, Lcom/facebook/stetho/common/LogUtil;->i(Ljava/lang/String;)V
 
     return-object v0
@@ -131,17 +133,17 @@
 .method public newInstance()Lcom/facebook/stetho/inspector/console/RuntimeRepl;
     .locals 1
 
-    .line 42
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mSearchedForRhinoJs:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 43
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mSearchedForRhinoJs:Z
 
-    .line 45
+    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mContext:Landroid/content/Context;
 
@@ -158,24 +160,24 @@
     :catch_0
     move-exception v0
 
-    .line 47
+    .line 4
     iput-object v0, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mRhinoJsUnexpectedError:Ljava/lang/RuntimeException;
 
-    .line 50
+    .line 5
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory;->mRhinoReplFactory:Lcom/facebook/stetho/inspector/console/RuntimeReplFactory;
 
     if-eqz v0, :cond_1
 
-    .line 51
+    .line 6
     invoke-interface {v0}, Lcom/facebook/stetho/inspector/console/RuntimeReplFactory;->newInstance()Lcom/facebook/stetho/inspector/console/RuntimeRepl;
 
     move-result-object v0
 
     return-object v0
 
-    .line 53
+    .line 7
     :cond_1
     new-instance v0, Lcom/facebook/stetho/inspector/runtime/RhinoDetectingRuntimeReplFactory$1;
 

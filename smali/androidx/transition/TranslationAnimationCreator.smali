@@ -1,4 +1,4 @@
-.class Landroidx/transition/TranslationAnimationCreator;
+.class public Landroidx/transition/TranslationAnimationCreator;
 .super Ljava/lang/Object;
 .source "TranslationAnimationCreator.java"
 
@@ -12,33 +12,33 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 136
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static createAnimation(Landroid/view/View;Landroidx/transition/TransitionValues;IIFFFFLandroid/animation/TimeInterpolator;)Landroid/animation/Animator;
+.method public static createAnimation(Landroid/view/View;Landroidx/transition/TransitionValues;IIFFFFLandroid/animation/TimeInterpolator;)Landroid/animation/Animator;
     .locals 14
 
     move-object v0, p0
 
     move-object v1, p1
 
-    .line 51
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getTranslationX()F
 
     move-result v2
 
-    .line 52
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v3
 
-    .line 53
+    .line 3
     iget-object v4, v1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
 
     sget v5, Landroidx/transition/R$id;->transition_position:I
@@ -49,15 +49,13 @@
 
     check-cast v4, [I
 
-    check-cast v4, [I
-
     const/4 v5, 0x1
 
     const/4 v6, 0x0
 
     if-eqz v4, :cond_0
 
-    .line 55
+    .line 4
     aget v7, v4, v6
 
     sub-int v7, v7, p2
@@ -66,7 +64,7 @@
 
     add-float/2addr v7, v2
 
-    .line 56
+    .line 5
     aget v4, v4, v5
 
     sub-int v4, v4, p3
@@ -85,26 +83,26 @@
     :goto_0
     sub-float v8, v7, v2
 
-    .line 59
+    .line 6
     invoke-static {v8}, Ljava/lang/Math;->round(F)I
 
     move-result v8
 
-    add-int v8, p2, v8
+    add-int v8, v8, p2
 
     sub-float v9, v4, v3
 
-    .line 60
+    .line 7
     invoke-static {v9}, Ljava/lang/Math;->round(F)I
 
     move-result v9
 
-    add-int v9, p3, v9
+    add-int v9, v9, p3
 
-    .line 62
+    .line 8
     invoke-virtual {p0, v7}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 63
+    .line 9
     invoke-virtual {p0, v4}, Landroid/view/View;->setTranslationY(F)V
 
     cmpl-float v10, v7, p6
@@ -124,7 +122,7 @@
 
     new-array v11, v10, [Landroid/animation/PropertyValuesHolder;
 
-    .line 67
+    .line 10
     sget-object v12, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
     new-array v13, v10, [F
@@ -133,7 +131,7 @@
 
     aput p6, v13, v5
 
-    .line 68
+    .line 11
     invoke-static {v12, v13}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v7
@@ -148,19 +146,19 @@
 
     aput p7, v10, v5
 
-    .line 69
+    .line 12
     invoke-static {v7, v10}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v4
 
     aput-object v4, v11, v5
 
-    .line 67
+    .line 13
     invoke-static {p0, v11}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    .line 71
+    .line 14
     new-instance v5, Landroidx/transition/TranslationAnimationCreator$TransitionPositionListener;
 
     iget-object v1, v1, Landroidx/transition/TransitionValues;->view:Landroid/view/View;
@@ -181,15 +179,15 @@
 
     invoke-direct/range {p1 .. p7}, Landroidx/transition/TranslationAnimationCreator$TransitionPositionListener;-><init>(Landroid/view/View;Landroid/view/View;IIFF)V
 
-    .line 73
+    .line 15
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 74
+    .line 16
     invoke-static {v4, v5}, Landroidx/transition/AnimatorUtils;->addPauseListener(Landroid/animation/Animator;Landroid/animation/AnimatorListenerAdapter;)V
 
     move-object/from16 v0, p8
 
-    .line 75
+    .line 17
     invoke-virtual {v4, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     return-object v4

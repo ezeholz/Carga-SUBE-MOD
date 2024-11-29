@@ -1,4 +1,4 @@
-.class abstract Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
+.class public abstract Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 .super Ljava/lang/Object;
 .source "ViewPager2.java"
 
@@ -9,20 +9,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x400
+    accessFlags = 0x401
     name = "AccessibilityProvider"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method private constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
-    .line 1187
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,10 +30,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroidx/viewpager2/widget/ViewPager2$1;)V
+.method public synthetic constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroidx/viewpager2/widget/ViewPager2$1;)V
     .locals 0
 
-    .line 1187
+    .line 2
     invoke-direct {p0, p1}, Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
 
     return-void
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method handlesGetAccessibilityClassName()Z
+.method public handlesGetAccessibilityClassName()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -49,7 +49,7 @@
     return v0
 .end method
 
-.method handlesLmPerformAccessibilityAction(I)Z
+.method public handlesLmPerformAccessibilityAction(I)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -57,7 +57,7 @@
     return p1
 .end method
 
-.method handlesPerformAccessibilityAction(ILandroid/os/Bundle;)Z
+.method public handlesPerformAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -65,7 +65,7 @@
     return p1
 .end method
 
-.method handlesRvGetAccessibilityClassName()Z
+.method public handlesRvGetAccessibilityClassName()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -73,8 +73,12 @@
     return v0
 .end method
 
-.method onAttachAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+.method public onAttachAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -86,8 +90,12 @@
     return-void
 .end method
 
-.method onDetachAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+.method public onDetachAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
     .locals 0
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -99,10 +107,10 @@
     return-void
 .end method
 
-.method onGetAccessibilityClassName()Ljava/lang/String;
+.method public onGetAccessibilityClassName()Ljava/lang/String;
     .locals 2
 
-    .line 1197
+    .line 1
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Not implemented."
@@ -112,28 +120,40 @@
     throw v0
 .end method
 
-.method onInitialize(Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;Landroidx/recyclerview/widget/RecyclerView;)V
+.method public onInitialize(Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 0
+    .param p1    # Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 0
 
     return-void
 .end method
 
-.method onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+.method public onLmInitializeAccessibilityNodeInfo(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 0
+    .param p1    # Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
-.method onLmInitializeAccessibilityNodeInfo(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method onLmPerformAccessibilityAction(I)Z
+.method public onLmPerformAccessibilityAction(I)Z
     .locals 1
 
-    .line 1240
+    .line 1
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "Not implemented."
@@ -143,10 +163,10 @@
     throw p1
 .end method
 
-.method onPerformAccessibilityAction(ILandroid/os/Bundle;)Z
+.method public onPerformAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 0
 
-    .line 1229
+    .line 1
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "Not implemented."
@@ -156,16 +176,16 @@
     throw p1
 .end method
 
-.method onRestorePendingState()V
+.method public onRestorePendingState()V
     .locals 0
 
     return-void
 .end method
 
-.method onRvGetAccessibilityClassName()Ljava/lang/CharSequence;
+.method public onRvGetAccessibilityClassName()Ljava/lang/CharSequence;
     .locals 2
 
-    .line 1251
+    .line 1
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Not implemented."
@@ -175,31 +195,35 @@
     throw v0
 .end method
 
-.method onRvInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+.method public onRvInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 0
+    .param p1    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public onSetLayoutDirection()V
     .locals 0
 
     return-void
 .end method
 
-.method onSetLayoutDirection()V
+.method public onSetNewCurrentItem()V
     .locals 0
 
     return-void
 .end method
 
-.method onSetNewCurrentItem()V
+.method public onSetOrientation()V
     .locals 0
 
     return-void
 .end method
 
-.method onSetOrientation()V
-    .locals 0
-
-    return-void
-.end method
-
-.method onSetUserInputEnabled()V
+.method public onSetUserInputEnabled()V
     .locals 0
 
     return-void

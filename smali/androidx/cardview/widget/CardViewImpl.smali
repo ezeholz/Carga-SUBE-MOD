@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/cardview/widget/CardViewImpl;
+.class public interface abstract Landroidx/cardview/widget/CardViewImpl;
 .super Ljava/lang/Object;
 .source "CardViewImpl.java"
 
@@ -35,6 +35,10 @@
 .end method
 
 .method public abstract setBackgroundColor(Landroidx/cardview/widget/CardViewDelegate;Landroid/content/res/ColorStateList;)V
+    .param p2    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract setElevation(Landroidx/cardview/widget/CardViewDelegate;F)V

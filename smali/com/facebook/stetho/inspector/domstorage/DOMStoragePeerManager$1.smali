@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;
+.class public Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;
 .super Lcom/facebook/stetho/inspector/helper/PeersRegisteredListener;
 .source "DOMStoragePeerManager.java"
 
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
 # instance fields
-.field private final mPrefsListeners:Ljava/util/List;
+.field public final mPrefsListeners:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,19 +25,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;)V
+.method public constructor <init>(Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;)V
     .locals 0
 
-    .line 68
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->this$0:Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;
 
     invoke-direct {p0}, Lcom/facebook/stetho/inspector/helper/PeersRegisteredListener;-><init>()V
 
-    .line 69
+    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -54,7 +54,7 @@
 
     monitor-enter p0
 
-    .line 79
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->this$0:Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;
 
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    .line 80
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -84,7 +84,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 81
+    .line 3
     iget-object v2, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->this$0:Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;
 
     invoke-static {v2}, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;->access$000(Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;)Landroid/content/Context;
@@ -97,17 +97,17 @@
 
     move-result-object v2
 
-    .line 82
+    .line 4
     new-instance v3, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$DevToolsSharedPreferencesListener;
 
     iget-object v4, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->this$0:Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;
 
     invoke-direct {v3, v4, v2, v1}, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$DevToolsSharedPreferencesListener;-><init>(Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager;Landroid/content/SharedPreferences;Ljava/lang/String;)V
 
-    .line 84
+    .line 5
     invoke-interface {v2, v3}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 85
+    .line 6
     iget-object v1, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->mPrefsListeners:Ljava/util/List;
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -116,7 +116,7 @@
 
     goto :goto_0
 
-    .line 87
+    .line 7
     :cond_0
     monitor-exit p0
 
@@ -141,7 +141,7 @@
 
     monitor-enter p0
 
-    .line 91
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->mPrefsListeners:Ljava/util/List;
 
@@ -162,12 +162,12 @@
 
     check-cast v1, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$DevToolsSharedPreferencesListener;
 
-    .line 92
+    .line 2
     invoke-virtual {v1}, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$DevToolsSharedPreferencesListener;->unregister()V
 
     goto :goto_0
 
-    .line 94
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/inspector/domstorage/DOMStoragePeerManager$1;->mPrefsListeners:Ljava/util/List;
 
@@ -175,7 +175,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
+    .line 4
     monitor-exit p0
 
     return-void

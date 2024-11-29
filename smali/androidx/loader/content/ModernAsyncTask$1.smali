@@ -1,4 +1,4 @@
-.class final Landroidx/loader/content/ModernAsyncTask$1;
+.class public final Landroidx/loader/content/ModernAsyncTask$1;
 .super Ljava/lang/Object;
 .source "ModernAsyncTask.java"
 
@@ -12,23 +12,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = null
 .end annotation
 
 
 # instance fields
-.field private final mCount:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
-    .line 60
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
+    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -42,17 +42,17 @@
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    .line 65
+    .line 1
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "ModernAsyncTask #"
 
-    const-string v2, "ModernAsyncTask #"
+    invoke-static {v1}, Lg/b/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     iget-object v2, p0, Landroidx/loader/content/ModernAsyncTask$1;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 

@@ -4,56 +4,57 @@
 
 
 # direct methods
-.method public static final commit(Landroidx/fragment/app/FragmentManager;ZLkotlin/d/a/b;)V
+.method public static final commit(Landroidx/fragment/app/FragmentManager;ZLj/m/b/l;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/fragment/app/FragmentManager;",
             "Z",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroidx/fragment/app/FragmentTransaction;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "$this$commit"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "body"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
     const-string v0, "beginTransaction()"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
-    .line 33
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    return-void
+    goto :goto_0
 
-    .line 35
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic commit$default(Landroidx/fragment/app/FragmentManager;ZLkotlin/d/a/b;ILjava/lang/Object;)V
+.method public static synthetic commit$default(Landroidx/fragment/app/FragmentManager;ZLj/m/b/l;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x1
@@ -65,89 +66,91 @@
     :cond_0
     const-string p3, "$this$commit"
 
-    .line 27
-    invoke-static {p0, p3}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p0, p3}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p3, "body"
 
-    invoke-static {p2, p3}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 96
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
     const-string p3, "beginTransaction()"
 
-    invoke-static {p0, p3}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p3}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 97
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
-    .line 99
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    return-void
+    goto :goto_0
 
-    .line 101
+    .line 5
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
+    :goto_0
     return-void
 .end method
 
-.method public static final commitNow(Landroidx/fragment/app/FragmentManager;ZLkotlin/d/a/b;)V
+.method public static final commitNow(Landroidx/fragment/app/FragmentManager;ZLj/m/b/l;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/fragment/app/FragmentManager;",
             "Z",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroidx/fragment/app/FragmentTransaction;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "$this$commitNow"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "body"
 
-    invoke-static {p2, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 51
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
     const-string v0, "beginTransaction()"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
-    .line 54
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
-    return-void
+    goto :goto_0
 
-    .line 56
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNow()V
 
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic commitNow$default(Landroidx/fragment/app/FragmentManager;ZLkotlin/d/a/b;ILjava/lang/Object;)V
+.method public static synthetic commitNow$default(Landroidx/fragment/app/FragmentManager;ZLj/m/b/l;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x1
@@ -159,105 +162,107 @@
     :cond_0
     const-string p3, "$this$commitNow"
 
-    .line 48
-    invoke-static {p0, p3}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p0, p3}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p3, "body"
 
-    invoke-static {p2, p3}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 104
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
     const-string p3, "beginTransaction()"
 
-    invoke-static {p0, p3}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p3}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 105
-    invoke-interface {p2, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p2, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
-    .line 107
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
-    return-void
+    goto :goto_0
 
-    .line 109
+    .line 5
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNow()V
 
+    :goto_0
     return-void
 .end method
 
-.method public static final transaction(Landroidx/fragment/app/FragmentManager;ZZLkotlin/d/a/b;)V
+.method public static final transaction(Landroidx/fragment/app/FragmentManager;ZZLj/m/b/l;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/fragment/app/FragmentManager;",
             "ZZ",
-            "Lkotlin/d/a/b<",
+            "Lj/m/b/l<",
             "-",
             "Landroidx/fragment/app/FragmentTransaction;",
-            "Lkotlin/n;",
+            "Lj/i;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "$this$transaction"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "body"
 
-    invoke-static {p3, v0}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 79
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
     const-string v0, "beginTransaction()"
 
-    invoke-static {p0, v0}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 80
-    invoke-interface {p3, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-interface {p3, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 83
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
-    return-void
+    goto :goto_0
 
-    .line 85
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNow()V
 
-    return-void
+    goto :goto_0
 
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 89
+    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    return-void
+    goto :goto_0
 
-    .line 91
+    .line 6
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic transaction$default(Landroidx/fragment/app/FragmentManager;ZZLkotlin/d/a/b;ILjava/lang/Object;)V
+.method public static synthetic transaction$default(Landroidx/fragment/app/FragmentManager;ZZLj/m/b/l;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -278,51 +283,52 @@
     :cond_1
     const-string p4, "$this$transaction"
 
-    .line 76
-    invoke-static {p0, p4}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p0, p4}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p4, "body"
 
-    invoke-static {p3, p4}, Lkotlin/d/b/h;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lj/m/c/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 112
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
     const-string p4, "beginTransaction()"
 
-    invoke-static {p0, p4}, Lkotlin/d/b/h;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p4}, Lj/m/c/i;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 113
-    invoke-interface {p3, p0}, Lkotlin/d/a/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p3, p0}, Lj/m/b/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_3
 
     if-eqz p2, :cond_2
 
-    .line 116
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
-    return-void
+    goto :goto_0
 
-    .line 118
+    .line 5
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitNow()V
 
-    return-void
+    goto :goto_0
 
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 122
+    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    return-void
+    goto :goto_0
 
-    .line 124
+    .line 7
     :cond_4
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
+    :goto_0
     return-void
 .end method

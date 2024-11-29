@@ -12,44 +12,44 @@
 
 
 # static fields
-.field private static final MAX_BIND_RETRIES:I = 0x2
+.field public static final MAX_BIND_RETRIES:I = 0x2
 
-.field private static final TIME_BETWEEN_BIND_RETRIES_MS:I = 0x3e8
+.field public static final TIME_BETWEEN_BIND_RETRIES_MS:I = 0x3e8
 
-.field private static final WORKER_THREAD_NAME_PREFIX:Ljava/lang/String; = "StethoWorker"
+.field public static final WORKER_THREAD_NAME_PREFIX:Ljava/lang/String; = "StethoWorker"
 
 
 # instance fields
-.field private final mAddress:Ljava/lang/String;
+.field public final mAddress:Ljava/lang/String;
 
-.field private final mFriendlyName:Ljava/lang/String;
+.field public final mFriendlyName:Ljava/lang/String;
 
-.field private mListenerThread:Ljava/lang/Thread;
+.field public mListenerThread:Ljava/lang/Thread;
 
-.field private mServerSocket:Landroid/net/LocalServerSocket;
+.field public mServerSocket:Landroid/net/LocalServerSocket;
 
-.field private final mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
+.field public final mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
 
-.field private mStopped:Z
+.field public mStopped:Z
 
-.field private final mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/facebook/stetho/server/SocketHandler;)V
     .locals 1
 
-    .line 48
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
+    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 49
+    .line 3
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -58,7 +58,7 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mFriendlyName:Ljava/lang/String;
 
-    .line 50
+    .line 4
     invoke-static {p2}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -67,13 +67,13 @@
 
     iput-object p1, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mAddress:Ljava/lang/String;
 
-    .line 51
+    .line 5
     iput-object p3, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
 
     return-void
 .end method
 
-.method private static bindToSocket(Ljava/lang/String;)Landroid/net/LocalServerSocket;
+.method public static bindToSocket(Ljava/lang/String;)Landroid/net/LocalServerSocket;
     .locals 4
 
     const/4 v0, 0x2
@@ -83,7 +83,7 @@
     :goto_0
     const/4 v2, 0x3
 
-    .line 139
+    .line 1
     :try_start_0
     invoke-static {v2}, Lcom/facebook/stetho/common/LogUtil;->isLoggable(I)Z
 
@@ -91,20 +91,24 @@
 
     if-eqz v2, :cond_0
 
-    const-string v2, "Trying to bind to @"
+    .line 2
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 140
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v3
+    const-string v3, "Trying to bind to @"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v2}, Lcom/facebook/stetho/common/LogUtil;->d(Ljava/lang/String;)V
 
-    .line 142
+    .line 3
     :cond_0
     new-instance v2, Landroid/net/LocalServerSocket;
 
@@ -119,7 +123,7 @@
 
     const-string v3, "Binding error, sleep 1000 ms..."
 
-    .line 144
+    .line 4
     invoke-static {v2, v3}, Lcom/facebook/stetho/common/LogUtil;->w(Ljava/lang/Throwable;Ljava/lang/String;)V
 
     if-nez v1, :cond_1
@@ -129,7 +133,7 @@
     :cond_1
     const-wide/16 v2, 0x3e8
 
-    .line 148
+    .line 5
     invoke-static {v2, v3}, Lcom/facebook/stetho/common/Util;->sleepUninterruptibly(J)V
 
     add-int/lit8 v2, v0, -0x1
@@ -140,7 +144,7 @@
 
     goto :goto_0
 
-    .line 152
+    .line 6
     :cond_2
     goto :goto_2
 
@@ -154,35 +158,39 @@
 .method private listenOnAddress(Ljava/lang/String;)V
     .locals 3
 
-    .line 78
+    .line 1
     invoke-static {p1}, Lcom/facebook/stetho/server/LocalSocketServer;->bindToSocket(Ljava/lang/String;)Landroid/net/LocalServerSocket;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mServerSocket:Landroid/net/LocalServerSocket;
 
-    .line 79
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "Listening on @"
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/facebook/stetho/common/LogUtil;->i(Ljava/lang/String;)V
 
-    .line 81
+    .line 3
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 85
+    .line 4
     :try_start_0
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mServerSocket:Landroid/net/LocalServerSocket;
 
@@ -190,19 +198,21 @@
 
     move-result-object v0
 
-    .line 88
+    .line 5
     new-instance v1, Lcom/facebook/stetho/server/LocalSocketServer$WorkerThread;
 
     iget-object v2, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mSocketHandler:Lcom/facebook/stetho/server/SocketHandler;
 
     invoke-direct {v1, v0, v2}, Lcom/facebook/stetho/server/LocalSocketServer$WorkerThread;-><init>(Landroid/net/LocalSocket;Lcom/facebook/stetho/server/SocketHandler;)V
 
-    .line 89
+    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "StethoWorker-"
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mFriendlyName:Ljava/lang/String;
 
@@ -214,7 +224,7 @@
 
     iget-object v2, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mThreadId:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 92
+    .line 7
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
     move-result v2
@@ -225,15 +235,15 @@
 
     move-result-object v0
 
-    .line 89
+    .line 8
     invoke-virtual {v1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    .line 93
+    .line 9
     invoke-virtual {v1, v0}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 94
+    .line 10
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_1
@@ -247,7 +257,7 @@
 
     const-string v1, "I/O error initialising connection thread"
 
-    .line 104
+    .line 11
     invoke-static {v0, v1}, Lcom/facebook/stetho/common/LogUtil;->w(Ljava/lang/Throwable;Ljava/lang/String;)V
 
     goto :goto_1
@@ -255,31 +265,38 @@
     :catch_1
     move-exception v0
 
-    .line 97
+    .line 12
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
+    goto :goto_1
+
+    :cond_0
     const-string v1, "I/O error"
 
-    .line 100
+    .line 13
     invoke-static {v0, v1}, Lcom/facebook/stetho/common/LogUtil;->w(Ljava/lang/Throwable;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 109
+    .line 14
     :catch_2
-    :cond_0
+    :cond_1
     :goto_1
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Server shutdown on @"
+    const-string v1, "Server shutdown on @"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -293,7 +310,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 55
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mFriendlyName:Ljava/lang/String;
 
     return-object v0
@@ -302,21 +319,21 @@
 .method public run()V
     .locals 1
 
-    .line 67
+    .line 1
     monitor-enter p0
 
-    .line 68
+    .line 2
     :try_start_0
     iget-boolean v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mStopped:Z
 
     if-eqz v0, :cond_0
 
-    .line 69
+    .line 3
     monitor-exit p0
 
     return-void
 
-    .line 71
+    .line 4
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -324,12 +341,12 @@
 
     iput-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mListenerThread:Ljava/lang/Thread;
 
-    .line 72
+    .line 5
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
+    .line 6
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mAddress:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/facebook/stetho/server/LocalSocketServer;->listenOnAddress(Ljava/lang/String;)V
@@ -339,7 +356,7 @@
     :catchall_0
     move-exception v0
 
-    .line 72
+    .line 7
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -351,43 +368,43 @@
 .method public stop()V
     .locals 1
 
-    .line 116
+    .line 1
     monitor-enter p0
 
     const/4 v0, 0x1
 
-    .line 117
+    .line 2
     :try_start_0
     iput-boolean v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mStopped:Z
 
-    .line 118
+    .line 3
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mListenerThread:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    .line 119
+    .line 4
     monitor-exit p0
 
     return-void
 
-    .line 121
+    .line 5
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
+    .line 6
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mListenerThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 125
+    .line 7
     :try_start_1
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mServerSocket:Landroid/net/LocalServerSocket;
 
     if-eqz v0, :cond_1
 
-    .line 126
+    .line 8
     iget-object v0, p0, Lcom/facebook/stetho/server/LocalSocketServer;->mServerSocket:Landroid/net/LocalServerSocket;
 
     invoke-virtual {v0}, Landroid/net/LocalServerSocket;->close()V
@@ -401,7 +418,7 @@
     :catchall_0
     move-exception v0
 
-    .line 121
+    .line 9
     :try_start_2
     monitor-exit p0
     :try_end_2

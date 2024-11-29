@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;
+.class public Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;
 .super Landroid/view/TouchDelegate;
 .source "SearchView.java"
 
@@ -9,33 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "UpdatableTouchDelegate"
 .end annotation
 
 
 # instance fields
-.field private final mActualBounds:Landroid/graphics/Rect;
+.field public final mActualBounds:Landroid/graphics/Rect;
 
-.field private mDelegateTargeted:Z
+.field public mDelegateTargeted:Z
 
-.field private final mDelegateView:Landroid/view/View;
+.field public final mDelegateView:Landroid/view/View;
 
-.field private final mSlop:I
+.field public final mSlop:I
 
-.field private final mSlopBounds:Landroid/graphics/Rect;
+.field public final mSlopBounds:Landroid/graphics/Rect;
 
-.field private final mTargetBounds:Landroid/graphics/Rect;
+.field public final mTargetBounds:Landroid/graphics/Rect;
 
 
 # direct methods
 .method public constructor <init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/view/View;)V
     .locals 1
 
-    .line 1760
+    .line 1
     invoke-direct {p0, p1, p3}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    .line 1761
+    .line 2
     invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -50,31 +50,31 @@
 
     iput v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mSlop:I
 
-    .line 1762
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mTargetBounds:Landroid/graphics/Rect;
 
-    .line 1763
+    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
-    .line 1764
+    .line 5
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mActualBounds:Landroid/graphics/Rect;
 
-    .line 1765
+    .line 6
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->setBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 1766
+    .line 7
     iput-object p3, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateView:Landroid/view/View;
 
     return-void
@@ -85,21 +85,21 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
-    .line 1778
+    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 1779
+    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
     float-to-int v1, v1
 
-    .line 1784
+    .line 3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -122,22 +122,22 @@
 
     goto :goto_2
 
-    .line 1801
+    .line 4
     :cond_0
     iget-boolean v2, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateTargeted:Z
 
-    .line 1802
+    .line 5
     iput-boolean v5, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateTargeted:Z
 
     goto :goto_0
 
-    .line 1793
+    .line 6
     :cond_1
     iget-boolean v2, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateTargeted:Z
 
     if-eqz v2, :cond_2
 
-    .line 1795
+    .line 7
     iget-object v6, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v6, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
@@ -161,7 +161,7 @@
 
     goto :goto_3
 
-    .line 1786
+    .line 8
     :cond_3
     iget-object v2, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mTargetBounds:Landroid/graphics/Rect;
 
@@ -171,7 +171,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 1787
+    .line 9
     iput-boolean v4, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateTargeted:Z
 
     goto :goto_1
@@ -187,7 +187,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 1806
+    .line 10
     iget-object v2, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mActualBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v2, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
@@ -196,7 +196,7 @@
 
     if-nez v2, :cond_5
 
-    .line 1810
+    .line 11
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
@@ -209,7 +209,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateView:Landroid/view/View;
 
-    .line 1811
+    .line 12
     invoke-virtual {v1}, Landroid/view/View;->getHeight()I
 
     move-result v1
@@ -218,22 +218,20 @@
 
     int-to-float v1, v1
 
-    .line 1810
+    .line 13
     invoke-virtual {p1, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
 
     goto :goto_4
 
-    .line 1814
+    .line 14
     :cond_5
     iget-object v2, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mActualBounds:Landroid/graphics/Rect;
 
-    iget v2, v2, Landroid/graphics/Rect;->left:I
+    iget v3, v2, Landroid/graphics/Rect;->left:I
 
-    sub-int/2addr v0, v2
+    sub-int/2addr v0, v3
 
     int-to-float v0, v0
-
-    iget-object v2, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mActualBounds:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
@@ -243,7 +241,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 1817
+    .line 15
     :goto_4
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mDelegateView:Landroid/view/View;
 
@@ -258,17 +256,17 @@
 .method public setBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 1770
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mTargetBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1771
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1772
+    .line 3
     iget-object p1, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
     iget v0, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mSlop:I
@@ -279,7 +277,7 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 1773
+    .line 4
     iget-object p1, p0, Landroidx/appcompat/widget/SearchView$UpdatableTouchDelegate;->mActualBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V

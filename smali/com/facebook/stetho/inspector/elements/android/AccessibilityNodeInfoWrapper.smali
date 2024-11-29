@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 26
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +16,12 @@
 .method public static createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
     .locals 1
 
-    .line 30
+    .line 1
     invoke-static {}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->obtain()Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v0
 
-    .line 31
+    .line 2
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
     return-object v0
@@ -29,19 +29,21 @@
 
 .method public static getActions(Landroid/view/View;)Ljava/lang/String;
     .locals 5
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 177
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object p0
 
-    .line 179
+    .line 2
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 182
+    .line 3
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getActionList()Ljava/util/List;
 
     move-result-object v1
@@ -63,7 +65,7 @@
 
     check-cast v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 183
+    .line 4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
@@ -72,10 +74,10 @@
 
     const-string v3, ", "
 
-    .line 184
+    .line 5
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 186
+    .line 6
     :cond_0
     invoke-virtual {v2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
 
@@ -91,14 +93,14 @@
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 242
+    .line 7
     invoke-virtual {v2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getLabel()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 244
+    .line 8
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -106,7 +108,7 @@
     :cond_1
     const-string v2, "unknown"
 
-    .line 246
+    .line 9
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -114,7 +116,7 @@
     :sswitch_0
     const-string v2, "set-selection"
 
-    .line 239
+    .line 10
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -122,7 +124,7 @@
     :sswitch_1
     const-string v2, "cut"
 
-    .line 230
+    .line 11
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -130,7 +132,7 @@
     :sswitch_2
     const-string v2, "paste"
 
-    .line 236
+    .line 12
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -138,7 +140,7 @@
     :sswitch_3
     const-string v2, "copy"
 
-    .line 233
+    .line 13
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -146,7 +148,7 @@
     :sswitch_4
     const-string v2, "scroll-backward"
 
-    .line 227
+    .line 14
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -154,7 +156,7 @@
     :sswitch_5
     const-string v2, "scroll-forward"
 
-    .line 224
+    .line 15
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -162,7 +164,7 @@
     :sswitch_6
     const-string v2, "previous-html-element"
 
-    .line 221
+    .line 16
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -170,7 +172,7 @@
     :sswitch_7
     const-string v2, "next-html-element"
 
-    .line 218
+    .line 17
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -178,7 +180,7 @@
     :sswitch_8
     const-string v2, "previous-at-movement-granularity"
 
-    .line 215
+    .line 18
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -186,7 +188,7 @@
     :sswitch_9
     const-string v2, "next-at-movement-granularity"
 
-    .line 212
+    .line 19
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -194,7 +196,7 @@
     :sswitch_a
     const-string v2, "clear-accessibility-focus"
 
-    .line 209
+    .line 20
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -202,7 +204,7 @@
     :sswitch_b
     const-string v2, "accessibility-focus"
 
-    .line 206
+    .line 21
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -210,7 +212,7 @@
     :sswitch_c
     const-string v2, "long-click"
 
-    .line 203
+    .line 22
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
@@ -218,7 +220,7 @@
     :sswitch_d
     const-string v2, "click"
 
-    .line 200
+    .line 23
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
@@ -226,7 +228,7 @@
     :sswitch_e
     const-string v2, "clear-selection"
 
-    .line 197
+    .line 24
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
@@ -234,7 +236,7 @@
     :sswitch_f
     const-string v2, "select"
 
-    .line 194
+    .line 25
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
@@ -242,7 +244,7 @@
     :cond_2
     const-string v2, "clear-focus"
 
-    .line 191
+    .line 26
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
@@ -250,12 +252,12 @@
     :cond_3
     const-string v2, "focus"
 
-    .line 188
+    .line 27
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
 
-    .line 252
+    .line 28
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -274,7 +276,7 @@
     :cond_5
     const/4 v0, 0x0
 
-    .line 254
+    .line 29
     :goto_1
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
@@ -285,7 +287,7 @@
 
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
-    .line 255
+    .line 30
     goto :goto_3
 
     :goto_2
@@ -317,24 +319,26 @@
 
 .method public static getDescription(Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 8
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 260
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v0
 
-    .line 262
+    .line 2
     :try_start_0
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 263
+    .line 3
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getText()Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 265
+    .line 4
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -350,11 +354,11 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 266
+    .line 5
     :goto_0
     instance-of v5, p0, Landroid/widget/EditText;
 
-    .line 269
+    .line 6
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -367,7 +371,7 @@
 
     if-nez v3, :cond_2
 
-    .line 310
+    .line 7
     :cond_1
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
@@ -380,7 +384,7 @@
 
     return-object v2
 
-    .line 279
+    .line 8
     :cond_3
     :try_start_1
     instance-of v1, p0, Landroid/view/ViewGroup;
@@ -389,15 +393,15 @@
 
     if-eqz v1, :cond_9
 
-    .line 280
+    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 282
+    .line 10
     check-cast p0, Landroid/view/ViewGroup;
 
-    .line 284
+    .line 11
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
@@ -405,34 +409,34 @@
     :goto_1
     if-ge v4, v3, :cond_7
 
-    .line 285
+    .line 12
     invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 287
+    .line 13
     invoke-static {}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->obtain()Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v6
 
-    .line 288
+    .line 14
     invoke-static {v5, v6}, Landroidx/core/view/ViewCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 291
+    .line 15
     invoke-static {v6, v5}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isSpeakingNode(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
 
     move-result v7
 
     if-eqz v7, :cond_4
 
-    .line 292
+    .line 16
     invoke-static {v6, v5}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isAccessibilityFocusable(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
 
     move-result v7
 
     if-nez v7, :cond_4
 
-    .line 293
+    .line 17
     invoke-static {v5}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->getDescription(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object v5
@@ -442,7 +446,7 @@
     :cond_4
     move-object v5, v2
 
-    .line 296
+    .line 18
     :goto_2
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -450,7 +454,7 @@
 
     if-nez v7, :cond_6
 
-    .line 297
+    .line 19
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
@@ -459,14 +463,14 @@
 
     const-string v7, ", "
 
-    .line 298
+    .line 20
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
+    .line 21
     :cond_5
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 302
+    .line 22
     :cond_6
     invoke-virtual {v6}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
@@ -474,7 +478,7 @@
 
     goto :goto_1
 
-    .line 305
+    .line 23
     :cond_7
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
@@ -488,7 +492,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 310
+    .line 24
     :cond_8
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
@@ -504,7 +508,7 @@
 
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
-    .line 311
+    .line 25
     goto :goto_4
 
     :goto_3
@@ -516,36 +520,38 @@
 
 .method public static getFocusableReasons(Landroid/view/View;)Ljava/lang/String;
     .locals 5
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 134
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v0
 
-    .line 136
+    .line 2
     :try_start_0
     invoke-static {v0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->hasText(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)Z
 
     move-result v1
 
-    .line 137
+    .line 3
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->isCheckable()Z
 
     move-result v2
 
-    .line 139
+    .line 4
     invoke-static {v0, p0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->hasNonActionableSpeakingDescendants(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
 
     move-result v3
 
-    .line 141
+    .line 5
     invoke-static {v0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isActionableForAccessibility(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 142
+    .line 6
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getChildCount()I
 
     move-result v4
@@ -556,7 +562,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 171
+    .line 7
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
@@ -564,33 +570,42 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_1
     const-string p0, "View is actionable and has a description."
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
     :cond_1
     if-eqz v2, :cond_2
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_2
     const-string p0, "View is actionable and checkable."
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
     :cond_2
     if-eqz v3, :cond_3
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_3
     const-string p0, "View is actionable and has non-actionable descendants with descriptions."
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
-    .line 153
+    .line 8
     :cond_3
-    :try_start_1
+    :try_start_4
     invoke-static {v0, p0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isTopLevelScrollItem(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
 
     move-result p0
@@ -600,10 +615,10 @@
     if-eqz v1, :cond_4
 
     const-string p0, "View is a direct child of a scrollable container and has a description."
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 171
+    .line 9
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
@@ -611,34 +626,43 @@
     :cond_4
     if-eqz v2, :cond_5
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_5
     const-string p0, "View is a direct child of a scrollable container and is checkable."
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
     :cond_5
     if-eqz v3, :cond_6
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_6
     const-string p0, "View is a direct child of a scrollable container and has non-actionable descendants with descriptions."
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
     :cond_6
     if-eqz v1, :cond_7
 
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_7
     const-string p0, "View has a description and is not actionable, but has no actionable ancestor."
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
     :cond_7
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
     const/4 p0, 0x0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
@@ -647,14 +671,14 @@
 
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
-    .line 172
+    .line 10
     throw p0
 .end method
 
 .method public static getIgnored(Landroid/view/View;)Z
     .locals 4
 
-    .line 44
+    .line 1
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getImportantForAccessibility(Landroid/view/View;)I
 
     move-result v0
@@ -671,19 +695,19 @@
 
     goto :goto_1
 
-    .line 51
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 52
+    .line 3
     :goto_0
     instance-of v3, v0, Landroid/view/View;
 
     if-eqz v3, :cond_2
 
-    .line 53
+    .line 4
     move-object v3, v0
 
     check-cast v3, Landroid/view/View;
@@ -696,7 +720,7 @@
 
     return v1
 
-    .line 57
+    .line 5
     :cond_1
     invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
@@ -704,13 +728,13 @@
 
     goto :goto_0
 
-    .line 60
+    .line 6
     :cond_2
     invoke-static {p0}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v0
 
-    .line 62
+    .line 7
     :try_start_0
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->isVisibleToUser()Z
 
@@ -720,12 +744,12 @@
 
     if-nez v2, :cond_3
 
-    .line 88
+    .line 8
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return v1
 
-    .line 66
+    .line 9
     :cond_3
     :try_start_1
     invoke-static {v0, p0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isAccessibilityFocusable(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
@@ -736,7 +760,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 67
+    .line 10
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getChildCount()I
 
     move-result v2
@@ -745,12 +769,12 @@
 
     if-gtz v2, :cond_4
 
-    .line 88
+    .line 11
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return v3
 
-    .line 71
+    .line 12
     :cond_4
     :try_start_2
     invoke-static {v0, p0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isSpeakingNode(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
@@ -761,7 +785,7 @@
 
     if-eqz p0, :cond_5
 
-    .line 88
+    .line 13
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return v3
@@ -771,7 +795,7 @@
 
     return v1
 
-    .line 82
+    .line 14
     :cond_6
     :try_start_3
     invoke-static {v0, p0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->hasFocusableAncestor(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
@@ -788,7 +812,7 @@
 
     if-eqz p0, :cond_7
 
-    .line 88
+    .line 15
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return v3
@@ -803,7 +827,7 @@
 
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
-    .line 89
+    .line 16
     throw p0
 
     :cond_8
@@ -814,7 +838,7 @@
 .method public static getIgnoredReasons(Landroid/view/View;)Ljava/lang/String;
     .locals 3
 
-    .line 93
+    .line 1
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getImportantForAccessibility(Landroid/view/View;)I
 
     move-result v0
@@ -836,19 +860,19 @@
 
     return-object p0
 
-    .line 103
+    .line 2
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 104
+    .line 3
     :goto_0
     instance-of v2, v0, Landroid/view/View;
 
     if-eqz v2, :cond_3
 
-    .line 105
+    .line 4
     move-object v2, v0
 
     check-cast v2, Landroid/view/View;
@@ -863,7 +887,7 @@
 
     return-object p0
 
-    .line 109
+    .line 5
     :cond_2
     invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
@@ -871,13 +895,13 @@
 
     goto :goto_0
 
-    .line 112
+    .line 6
     :cond_3
     invoke-static {p0}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v0
 
-    .line 114
+    .line 7
     :try_start_0
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->isVisibleToUser()Z
 
@@ -889,12 +913,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
+    .line 8
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
-    .line 118
+    .line 9
     :cond_4
     :try_start_1
     invoke-static {v0, p0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->isAccessibilityFocusable(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Landroid/view/View;)Z
@@ -907,12 +931,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 128
+    .line 10
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
-    .line 122
+    .line 11
     :cond_5
     :try_start_2
     invoke-static {v0}, Lcom/facebook/stetho/common/android/AccessibilityUtil;->hasText(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)Z
@@ -925,15 +949,18 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 128
+    .line 12
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
     :cond_6
-    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
-
+    :try_start_3
     const-string p0, "View is not actionable and has no description."
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return-object p0
 
@@ -942,7 +969,7 @@
 
     invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
-    .line 129
+    .line 13
     goto :goto_2
 
     :goto_1
@@ -955,17 +982,17 @@
 .method public static getIsAccessibilityFocused(Landroid/view/View;)Z
     .locals 1
 
-    .line 36
+    .line 1
     invoke-static {p0}, Lcom/facebook/stetho/inspector/elements/android/AccessibilityNodeInfoWrapper;->createNodeInfoFromView(Landroid/view/View;)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object p0
 
-    .line 37
+    .line 2
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->isAccessibilityFocused()Z
 
     move-result v0
 
-    .line 38
+    .line 3
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->recycle()V
 
     return v0

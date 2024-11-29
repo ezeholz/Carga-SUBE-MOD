@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private final mElementToInfoMap:Ljava/util/IdentityHashMap;
+.field public final mElementToInfoMap:Ljava/util/IdentityHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/IdentityHashMap<",
@@ -27,26 +27,26 @@
     .end annotation
 .end field
 
-.field private mIsUpdating:Z
+.field public mIsUpdating:Z
 
-.field private final mRootElement:Ljava/lang/Object;
+.field public final mRootElement:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
-    .line 32
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
+    .line 2
     new-instance v0, Ljava/util/IdentityHashMap;
 
     invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mElementToInfoMap:Ljava/util/IdentityHashMap;
 
-    .line 33
+    .line 3
     invoke-static {p1}, Lcom/facebook/stetho/common/Util;->throwIfNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -56,37 +56,37 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/util/IdentityHashMap;
+.method public static synthetic access$000(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/util/IdentityHashMap;
     .locals 0
 
-    .line 27
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mElementToInfoMap:Ljava/util/IdentityHashMap;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/lang/Object;
+.method public static synthetic access$100(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Ljava/lang/Object;
     .locals 0
 
-    .line 27
+    .line 1
     iget-object p0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mRootElement:Ljava/lang/Object;
 
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Z
+.method public static synthetic access$200(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)Z
     .locals 0
 
-    .line 27
+    .line 1
     iget-boolean p0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mIsUpdating:Z
 
     return p0
 .end method
 
-.method static synthetic access$202(Lcom/facebook/stetho/inspector/elements/ShadowDocument;Z)Z
+.method public static synthetic access$202(Lcom/facebook/stetho/inspector/elements/ShadowDocument;Z)Z
     .locals 0
 
-    .line 27
+    .line 1
     iput-boolean p1, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mIsUpdating:Z
 
     return p1
@@ -94,27 +94,27 @@
 
 
 # virtual methods
-.method public final beginUpdate()Lcom/facebook/stetho/inspector/elements/ShadowDocument$UpdateBuilder;
+.method public beginUpdate()Lcom/facebook/stetho/inspector/elements/ShadowDocument$UpdateBuilder;
     .locals 1
 
-    .line 47
+    .line 1
     iget-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mIsUpdating:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 51
+    .line 2
     iput-boolean v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mIsUpdating:Z
 
-    .line 53
+    .line 3
     new-instance v0, Lcom/facebook/stetho/inspector/elements/ShadowDocument$UpdateBuilder;
 
     invoke-direct {v0, p0}, Lcom/facebook/stetho/inspector/elements/ShadowDocument$UpdateBuilder;-><init>(Lcom/facebook/stetho/inspector/elements/ShadowDocument;)V
 
     return-object v0
 
-    .line 48
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -123,10 +123,10 @@
     throw v0
 .end method
 
-.method public final getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
+.method public getElementInfo(Ljava/lang/Object;)Lcom/facebook/stetho/inspector/elements/ElementInfo;
     .locals 1
 
-    .line 43
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mElementToInfoMap:Ljava/util/IdentityHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -138,10 +138,10 @@
     return-object p1
 .end method
 
-.method public final getRootElement()Ljava/lang/Object;
+.method public getRootElement()Ljava/lang/Object;
     .locals 1
 
-    .line 38
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/inspector/elements/ShadowDocument;->mRootElement:Ljava/lang/Object;
 
     return-object v0

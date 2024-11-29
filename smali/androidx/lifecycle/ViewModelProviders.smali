@@ -17,16 +17,16 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 38
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private static checkActivity(Landroidx/fragment/app/Fragment;)Landroid/app/Activity;
+.method public static checkActivity(Landroidx/fragment/app/Fragment;)Landroid/app/Activity;
     .locals 1
 
-    .line 51
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
@@ -35,7 +35,7 @@
 
     return-object p0
 
-    .line 53
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -46,10 +46,10 @@
     throw p0
 .end method
 
-.method private static checkApplication(Landroid/app/Activity;)Landroid/app/Application;
+.method public static checkApplication(Landroid/app/Activity;)Landroid/app/Application;
     .locals 1
 
-    .line 42
+    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object p0
@@ -58,7 +58,7 @@
 
     return-object p0
 
-    .line 44
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -71,10 +71,19 @@
 
 .method public static of(Landroidx/fragment/app/Fragment;)Landroidx/lifecycle/ViewModelProvider;
     .locals 1
+    .param p0    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 70
+    .line 1
     invoke-static {p0, v0}, Landroidx/lifecycle/ViewModelProviders;->of(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/ViewModelProvider$Factory;)Landroidx/lifecycle/ViewModelProvider;
 
     move-result-object p0
@@ -84,8 +93,21 @@
 
 .method public static of(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/ViewModelProvider$Factory;)Landroidx/lifecycle/ViewModelProvider;
     .locals 1
+    .param p0    # Landroidx/fragment/app/Fragment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/lifecycle/ViewModelProvider$Factory;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 101
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 3
     invoke-static {p0}, Landroidx/lifecycle/ViewModelProviders;->checkActivity(Landroidx/fragment/app/Fragment;)Landroid/app/Activity;
 
     move-result-object v0
@@ -96,12 +118,12 @@
 
     if-nez p1, :cond_0
 
-    .line 103
+    .line 4
     invoke-static {v0}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->getInstance(Landroid/app/Application;)Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
     move-result-object p1
 
-    .line 105
+    .line 5
     :cond_0
     new-instance v0, Landroidx/lifecycle/ViewModelProvider;
 
@@ -116,10 +138,19 @@
 
 .method public static of(Landroidx/fragment/app/FragmentActivity;)Landroidx/lifecycle/ViewModelProvider;
     .locals 1
+    .param p0    # Landroidx/fragment/app/FragmentActivity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const/4 v0, 0x0
 
-    .line 85
+    .line 2
     invoke-static {p0, v0}, Landroidx/lifecycle/ViewModelProviders;->of(Landroidx/fragment/app/FragmentActivity;Landroidx/lifecycle/ViewModelProvider$Factory;)Landroidx/lifecycle/ViewModelProvider;
 
     move-result-object p0
@@ -129,24 +160,37 @@
 
 .method public static of(Landroidx/fragment/app/FragmentActivity;Landroidx/lifecycle/ViewModelProvider$Factory;)Landroidx/lifecycle/ViewModelProvider;
     .locals 1
+    .param p0    # Landroidx/fragment/app/FragmentActivity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/lifecycle/ViewModelProvider$Factory;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
 
-    .line 122
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 6
     invoke-static {p0}, Landroidx/lifecycle/ViewModelProviders;->checkApplication(Landroid/app/Activity;)Landroid/app/Application;
 
     move-result-object v0
 
     if-nez p1, :cond_0
 
-    .line 124
+    .line 7
     invoke-static {v0}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->getInstance(Landroid/app/Application;)Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
     move-result-object p1
 
-    .line 126
+    .line 8
     :cond_0
     new-instance v0, Landroidx/lifecycle/ViewModelProvider;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
+    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
 
     move-result-object p0
 

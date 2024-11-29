@@ -1,178 +1,86 @@
 .class public Lcom/google/android/material/textfield/TextInputLayout$a;
-.super Landroidx/core/view/AccessibilityDelegateCompat;
+.super Ljava/lang/Object;
 .source "TextInputLayout.java"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/material/textfield/TextInputLayout;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/textfield/TextInputLayout;->setEditText(Landroid/widget/EditText;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "a"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
 # instance fields
-.field private final a:Lcom/google/android/material/textfield/TextInputLayout;
+.field public final synthetic d:Lcom/google/android/material/textfield/TextInputLayout;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
     .locals 0
 
-    .line 3287
-    invoke-direct {p0}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->d:Lcom/google/android/material/textfield/TextInputLayout;
 
-    .line 3288
-    iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->a:Lcom/google/android/material/textfield/TextInputLayout;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
-    .locals 9
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .locals 3
+    .param p1    # Landroid/text/Editable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 3294
-    invoke-super {p0, p1, p2}, Landroidx/core/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->d:Lcom/google/android/material/textfield/TextInputLayout;
 
-    .line 3295
-    iget-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->a:Lcom/google/android/material/textfield/TextInputLayout;
+    .line 2
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->t0:Z
 
-    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+    xor-int/lit8 v1, v1, 0x1
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    if-eqz p1, :cond_0
+    .line 3
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/textfield/TextInputLayout;->a(ZZ)V
 
-    .line 3296
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    .line 4
+    iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->d:Lcom/google/android/material/textfield/TextInputLayout;
 
-    move-result-object p1
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->i:Z
 
-    goto :goto_0
+    if-eqz v1, :cond_0
+
+    .line 5
+    invoke-interface {p1}, Landroid/text/Editable;->length()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->a(I)V
 
     :cond_0
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    .line 3297
-    :goto_0
-    iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->a:Lcom/google/android/material/textfield/TextInputLayout;
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getHint()Ljava/lang/CharSequence;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    .line 3298
-    iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->a:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v1}, Lcom/google/android/material/textfield/TextInputLayout;->getError()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    .line 3299
-    iget-object v2, p0, Lcom/google/android/material/textfield/TextInputLayout$a;->a:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v2}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterOverflowDescription()Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    .line 3300
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    xor-int/2addr v3, v4
-
-    .line 3301
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    xor-int/2addr v5, v4
-
-    .line 3302
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    xor-int/2addr v6, v4
-
-    const/4 v7, 0x0
-
-    if-nez v6, :cond_2
-
-    .line 3303
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v8, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const/4 v8, 0x1
-
-    :goto_2
-    if-eqz v3, :cond_3
-
-    .line 3306
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_3
-
-    :cond_3
-    if-eqz v5, :cond_4
-
-    .line 3308
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_4
-    :goto_3
-    if-eqz v5, :cond_6
-
-    .line 3312
-    invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setHintText(Ljava/lang/CharSequence;)V
-
-    if-nez v3, :cond_5
-
-    if-eqz v5, :cond_5
-
-    const/4 v7, 0x1
-
-    .line 3313
-    :cond_5
-    invoke-virtual {p2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setShowingHintText(Z)V
-
-    :cond_6
-    if-eqz v8, :cond_8
-
-    if-eqz v6, :cond_7
-
-    goto :goto_4
-
-    :cond_7
-    move-object v1, v2
-
-    .line 3317
-    :goto_4
-    invoke-virtual {p2, v1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setError(Ljava/lang/CharSequence;)V
-
-    .line 3318
-    invoke-virtual {p2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setContentInvalid(Z)V
-
-    :cond_8
     return-void
 .end method

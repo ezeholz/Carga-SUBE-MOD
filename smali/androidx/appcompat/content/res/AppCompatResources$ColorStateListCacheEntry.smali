@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;
+.class public Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;
 .super Ljava/lang/Object;
 .source "AppCompatResources.java"
 
@@ -9,28 +9,36 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "ColorStateListCacheEntry"
 .end annotation
 
 
 # instance fields
-.field final configuration:Landroid/content/res/Configuration;
+.field public final configuration:Landroid/content/res/Configuration;
 
-.field final value:Landroid/content/res/ColorStateList;
+.field public final value:Landroid/content/res/ColorStateList;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;)V
+.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;)V
     .locals 0
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Configuration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 186
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 187
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;->value:Landroid/content/res/ColorStateList;
 
-    .line 188
+    .line 3
     iput-object p2, p0, Landroidx/appcompat/content/res/AppCompatResources$ColorStateListCacheEntry;->configuration:Landroid/content/res/Configuration;
 
     return-void

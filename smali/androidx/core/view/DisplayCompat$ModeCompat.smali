@@ -15,83 +15,105 @@
 
 
 # instance fields
-.field private final mIsNative:Z
+.field public final mIsNative:Z
 
-.field private final mMode:Landroid/view/Display$Mode;
+.field public final mMode:Landroid/view/Display$Mode;
 
-.field private final mPhysicalSize:Landroid/graphics/Point;
+.field public final mPhysicalSize:Landroid/graphics/Point;
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/Point;)V
+.method public constructor <init>(Landroid/graphics/Point;)V
     .locals 1
+    .param p1    # Landroid/graphics/Point;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 330
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "physicalSize == null"
 
-    .line 331
+    .line 2
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 332
+    .line 3
     iput-object p1, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mPhysicalSize:Landroid/graphics/Point;
 
     const/4 p1, 0x0
 
-    .line 333
+    .line 4
     iput-object p1, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mMode:Landroid/view/Display$Mode;
 
     const/4 p1, 0x1
 
-    .line 334
+    .line 5
     iput-boolean p1, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mIsNative:Z
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/view/Display$Mode;Landroid/graphics/Point;)V
+.method public constructor <init>(Landroid/view/Display$Mode;Landroid/graphics/Point;)V
     .locals 1
+    .param p1    # Landroid/view/Display$Mode;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Point;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
 
-    .line 360
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "mode == null, can\'t wrap a null reference"
 
-    .line 361
+    .line 12
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "physicalSize == null"
 
-    .line 362
+    .line 13
     invoke-static {p2, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 363
+    .line 14
     iput-object p2, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mPhysicalSize:Landroid/graphics/Point;
 
-    .line 364
+    .line 15
     iput-object p1, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mMode:Landroid/view/Display$Mode;
 
     const/4 p1, 0x1
 
-    .line 365
+    .line 16
     iput-boolean p1, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mIsNative:Z
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/view/Display$Mode;Z)V
+.method public constructor <init>(Landroid/view/Display$Mode;Z)V
     .locals 3
+    .param p1    # Landroid/view/Display$Mode;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
 
-    .line 343
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "mode == null, can\'t wrap a null reference"
 
-    .line 344
+    .line 7
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 346
+    .line 8
     new-instance v0, Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/view/Display$Mode;->getPhysicalWidth()I
@@ -106,10 +128,10 @@
 
     iput-object v0, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mPhysicalSize:Landroid/graphics/Point;
 
-    .line 347
+    .line 9
     iput-object p1, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mMode:Landroid/view/Display$Mode;
 
-    .line 348
+    .line 10
     iput-boolean p2, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mIsNative:Z
 
     return-void
@@ -117,10 +139,10 @@
 
 
 # virtual methods
-.method public final getPhysicalHeight()I
+.method public getPhysicalHeight()I
     .locals 1
 
-    .line 379
+    .line 1
     iget-object v0, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mPhysicalSize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->y:I
@@ -128,10 +150,10 @@
     return v0
 .end method
 
-.method public final getPhysicalWidth()I
+.method public getPhysicalWidth()I
     .locals 1
 
-    .line 372
+    .line 1
     iget-object v0, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mPhysicalSize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
@@ -139,21 +161,27 @@
     return v0
 .end method
 
-.method public final isNative()Z
+.method public isNative()Z
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 393
+    .line 1
     iget-boolean v0, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mIsNative:Z
 
     return v0
 .end method
 
-.method public final toMode()Landroid/view/Display$Mode;
+.method public toMode()Landroid/view/Display$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    .line 402
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Landroidx/core/view/DisplayCompat$ModeCompat;->mMode:Landroid/view/Display$Mode;
 
     return-object v0

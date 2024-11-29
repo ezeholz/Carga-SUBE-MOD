@@ -1,4 +1,4 @@
-.class final Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;
+.class public final Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;
 .super Ljava/lang/Object;
 .source "AppCompatDelegateImpl.java"
 
@@ -12,20 +12,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
+    accessFlags = 0x11
     name = "ActionMenuPresenterCallback"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final synthetic this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
-    .line 2521
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,10 +35,14 @@
 
 
 # virtual methods
-.method public final onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
+.method public onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
     .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2535
+    .line 1
     iget-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {p2, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->checkCloseActionMenu(Landroidx/appcompat/view/menu/MenuBuilder;)V
@@ -46,10 +50,14 @@
     return-void
 .end method
 
-.method public final onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
+.method public onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
     .locals 2
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2526
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->getWindowCallback()Landroid/view/Window$Callback;
@@ -60,7 +68,7 @@
 
     const/16 v1, 0x6c
 
-    .line 2528
+    .line 2
     invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
 
     :cond_0

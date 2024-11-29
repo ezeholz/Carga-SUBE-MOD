@@ -1,30 +1,30 @@
-.class Landroidx/appcompat/app/TwilightCalculator;
+.class public Landroidx/appcompat/app/TwilightCalculator;
 .super Ljava/lang/Object;
 .source "TwilightCalculator.java"
 
 
 # static fields
-.field private static final ALTIDUTE_CORRECTION_CIVIL_TWILIGHT:F = -0.10471976f
+.field public static final ALTIDUTE_CORRECTION_CIVIL_TWILIGHT:F = -0.10471976f
 
-.field private static final C1:F = 0.0334196f
+.field public static final C1:F = 0.0334196f
 
-.field private static final C2:F = 3.49066E-4f
+.field public static final C2:F = 3.49066E-4f
 
-.field private static final C3:F = 5.236E-6f
+.field public static final C3:F = 5.236E-6f
 
 .field public static final DAY:I = 0x0
 
-.field private static final DEGREES_TO_RADIANS:F = 0.017453292f
+.field public static final DEGREES_TO_RADIANS:F = 0.017453292f
 
-.field private static final J0:F = 9.0E-4f
+.field public static final J0:F = 9.0E-4f
 
 .field public static final NIGHT:I = 0x1
 
-.field private static final OBLIQUITY:F = 0.4092797f
+.field public static final OBLIQUITY:F = 0.4092797f
 
-.field private static final UTC_2000:J = 0xdc6d62da00L
+.field public static final UTC_2000:J = 0xdc6d62da00L
 
-.field private static sInstance:Landroidx/appcompat/app/TwilightCalculator;
+.field public static sInstance:Landroidx/appcompat/app/TwilightCalculator;
 
 
 # instance fields
@@ -36,31 +36,31 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 26
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static getInstance()Landroidx/appcompat/app/TwilightCalculator;
+.method public static getInstance()Landroidx/appcompat/app/TwilightCalculator;
     .locals 1
 
-    .line 31
+    .line 1
     sget-object v0, Landroidx/appcompat/app/TwilightCalculator;->sInstance:Landroidx/appcompat/app/TwilightCalculator;
 
     if-nez v0, :cond_0
 
-    .line 32
+    .line 2
     new-instance v0, Landroidx/appcompat/app/TwilightCalculator;
 
     invoke-direct {v0}, Landroidx/appcompat/app/TwilightCalculator;-><init>()V
 
     sput-object v0, Landroidx/appcompat/app/TwilightCalculator;->sInstance:Landroidx/appcompat/app/TwilightCalculator;
 
-    .line 34
+    .line 3
     :cond_0
     sget-object v0, Landroidx/appcompat/app/TwilightCalculator;->sInstance:Landroidx/appcompat/app/TwilightCalculator;
 
@@ -94,7 +94,7 @@
 
     float-to-double v5, v4
 
-    .line 95
+    .line 1
     invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v7
@@ -113,7 +113,7 @@
 
     float-to-double v9, v9
 
-    .line 96
+    .line 2
     invoke-static {v9, v10}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v9
@@ -122,21 +122,21 @@
 
     mul-double v9, v9, v11
 
-    add-double/2addr v7, v9
+    add-double/2addr v9, v7
 
-    const/high16 v9, 0x40400000    # 3.0f
+    const/high16 v7, 0x40400000    # 3.0f
 
-    mul-float v4, v4, v9
+    mul-float v4, v4, v7
 
-    float-to-double v9, v4
+    float-to-double v7, v4
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v9
+    move-result-wide v7
 
     const-wide v11, 0x3ed5f61cc0000000L    # 5.236000106378924E-6
 
-    mul-double v9, v9, v11
+    mul-double v7, v7, v11
 
     add-double/2addr v7, v9
 
@@ -162,7 +162,7 @@
 
     float-to-double v11, v3
 
-    .line 103
+    .line 3
     invoke-static {v11, v12}, Ljava/lang/Double;->isNaN(D)Z
 
     sub-double/2addr v11, v9
@@ -177,7 +177,7 @@
 
     float-to-double v3, v3
 
-    .line 104
+    .line 4
     invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
 
     add-double/2addr v3, v9
@@ -190,24 +190,24 @@
 
     mul-double v5, v5, v9
 
-    add-double/2addr v3, v5
+    add-double/2addr v5, v3
 
-    const-wide/high16 v5, 0x4000000000000000L    # 2.0
+    const-wide/high16 v3, 0x4000000000000000L    # 2.0
 
-    mul-double v5, v5, v7
+    mul-double v3, v3, v7
 
-    .line 105
-    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
+    .line 5
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v5
+    move-result-wide v3
 
     const-wide v9, -0x4083bcd35a858794L    # -0.0069
 
-    mul-double v5, v5, v9
+    mul-double v3, v3, v9
 
     add-double/2addr v3, v5
 
-    .line 108
+    .line 6
     invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v5
@@ -218,9 +218,9 @@
 
     move-result-wide v7
 
-    mul-double v5, v5, v7
+    mul-double v7, v7, v5
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->asin(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->asin(D)D
 
     move-result-wide v5
 
@@ -230,7 +230,7 @@
 
     const-wide v9, -0x4045311600000000L    # -0.10471975803375244
 
-    .line 112
+    .line 7
     invoke-static {v9, v10}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v9
@@ -239,14 +239,14 @@
 
     move-result-wide v11
 
-    .line 113
+    .line 8
     invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v13
 
-    mul-double v11, v11, v13
+    mul-double v13, v13, v11
 
-    sub-double/2addr v9, v11
+    sub-double/2addr v9, v13
 
     invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
@@ -256,9 +256,9 @@
 
     move-result-wide v5
 
-    mul-double v7, v7, v5
+    mul-double v5, v5, v7
 
-    div-double/2addr v9, v7
+    div-double/2addr v9, v5
 
     const/4 v5, 0x1
 
@@ -270,13 +270,13 @@
 
     if-ltz v8, :cond_0
 
-    .line 117
+    .line 9
     iput v5, v0, Landroidx/appcompat/app/TwilightCalculator;->state:I
 
-    .line 118
+    .line 10
     iput-wide v6, v0, Landroidx/appcompat/app/TwilightCalculator;->sunset:J
 
-    .line 119
+    .line 11
     iput-wide v6, v0, Landroidx/appcompat/app/TwilightCalculator;->sunrise:J
 
     return-void
@@ -290,18 +290,18 @@
 
     if-gtz v13, :cond_1
 
-    .line 122
+    .line 12
     iput v8, v0, Landroidx/appcompat/app/TwilightCalculator;->state:I
 
-    .line 123
+    .line 13
     iput-wide v6, v0, Landroidx/appcompat/app/TwilightCalculator;->sunset:J
 
-    .line 124
+    .line 14
     iput-wide v6, v0, Landroidx/appcompat/app/TwilightCalculator;->sunrise:J
 
     return-void
 
-    .line 128
+    .line 15
     :cond_1
     invoke-static {v9, v10}, Ljava/lang/Math;->acos(D)D
 
@@ -315,7 +315,7 @@
 
     float-to-double v6, v6
 
-    .line 130
+    .line 16
     invoke-static {v6, v7}, Ljava/lang/Double;->isNaN(D)Z
 
     add-double v9, v3, v6
@@ -332,7 +332,7 @@
 
     iput-wide v9, v0, Landroidx/appcompat/app/TwilightCalculator;->sunset:J
 
-    .line 131
+    .line 17
     invoke-static {v6, v7}, Ljava/lang/Double;->isNaN(D)Z
 
     sub-double/2addr v3, v6
@@ -351,21 +351,22 @@
 
     if-gez v1, :cond_2
 
-    .line 133
+    .line 18
     iget-wide v1, v0, Landroidx/appcompat/app/TwilightCalculator;->sunset:J
 
     cmp-long v3, v1, p1
 
     if-lez v3, :cond_2
 
-    .line 134
+    .line 19
     iput v8, v0, Landroidx/appcompat/app/TwilightCalculator;->state:I
 
-    return-void
+    goto :goto_0
 
-    .line 136
+    .line 20
     :cond_2
     iput v5, v0, Landroidx/appcompat/app/TwilightCalculator;->state:I
 
+    :goto_0
     return-void
 .end method

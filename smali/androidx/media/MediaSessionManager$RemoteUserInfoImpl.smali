@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;
+.class public interface abstract Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;
 .super Ljava/lang/Object;
 .source "MediaSessionManager.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x609
     name = "RemoteUserInfoImpl"
 .end annotation
 

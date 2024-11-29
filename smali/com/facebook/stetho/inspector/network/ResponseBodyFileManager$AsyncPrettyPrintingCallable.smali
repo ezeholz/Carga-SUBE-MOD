@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;
+.class public Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;
 .super Ljava/lang/Object;
 .source "ResponseBodyFileManager.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1
     name = "AsyncPrettyPrintingCallable"
 .end annotation
 
@@ -27,26 +27,26 @@
 
 
 # instance fields
-.field private final mAsyncPrettyPrinter:Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
+.field public final mAsyncPrettyPrinter:Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
 
-.field private final mInputStream:Ljava/io/InputStream;
+.field public final mInputStream:Ljava/io/InputStream;
 
-.field final synthetic this$0:Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
+.field public final synthetic this$0:Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
 
 
 # direct methods
 .method public constructor <init>(Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;Ljava/io/InputStream;Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;)V
     .locals 0
 
-    .line 153
+    .line 1
     iput-object p1, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;->this$0:Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
+    .line 2
     iput-object p2, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;->mInputStream:Ljava/io/InputStream;
 
-    .line 155
+    .line 3
     iput-object p3, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;->mAsyncPrettyPrinter:Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;
 
     return-void
@@ -55,25 +55,25 @@
 .method private prettyPrintContent(Ljava/io/InputStream;Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;)Ljava/lang/String;
     .locals 2
 
-    .line 165
+    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 166
+    .line 2
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 167
+    .line 3
     invoke-interface {p2, v1, p1}, Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;->printTo(Ljava/io/PrintWriter;Ljava/io/InputStream;)V
 
-    .line 168
+    .line 4
     invoke-virtual {v1}, Ljava/io/PrintWriter;->flush()V
 
     const-string p1, "UTF-8"
 
-    .line 169
+    .line 5
     invoke-virtual {v0, p1}, Ljava/io/ByteArrayOutputStream;->toString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -86,7 +86,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .line 147
+    .line 1
     invoke-virtual {p0}, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;->call()Ljava/lang/String;
 
     move-result-object v0
@@ -97,7 +97,7 @@
 .method public call()Ljava/lang/String;
     .locals 2
 
-    .line 160
+    .line 2
     iget-object v0, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;->mInputStream:Ljava/io/InputStream;
 
     iget-object v1, p0, Lcom/facebook/stetho/inspector/network/ResponseBodyFileManager$AsyncPrettyPrintingCallable;->mAsyncPrettyPrinter:Lcom/facebook/stetho/inspector/network/AsyncPrettyPrinter;

@@ -21,31 +21,32 @@
         "Ljava/lang/Object;",
         "Ljava/util/Iterator<",
         "Landroid/graphics/Rect;",
-        ">;"
+        ">;",
+        "Ljava/lang/Object;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $this_iterator:Landroid/graphics/Region;
+.field public final synthetic $this_iterator:Landroid/graphics/Region;
 
-.field private hasMore:Z
+.field public hasMore:Z
 
-.field private final iterator:Landroid/graphics/RegionIterator;
+.field public final iterator:Landroid/graphics/RegionIterator;
 
-.field private final rect:Landroid/graphics/Rect;
+.field public final rect:Landroid/graphics/Rect;
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/Region;)V
+.method public constructor <init>(Landroid/graphics/Region;)V
     .locals 1
 
     iput-object p1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->$this_iterator:Landroid/graphics/Region;
 
-    .line 142
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
+    .line 2
     new-instance p1, Landroid/graphics/RegionIterator;
 
     iget-object v0, p0, Landroidx/core/graphics/RegionKt$iterator$1;->$this_iterator:Landroid/graphics/Region;
@@ -54,14 +55,14 @@
 
     iput-object p1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->iterator:Landroid/graphics/RegionIterator;
 
-    .line 144
+    .line 3
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->rect:Landroid/graphics/Rect;
 
-    .line 145
+    .line 4
     iget-object v0, p0, Landroidx/core/graphics/RegionKt$iterator$1;->iterator:Landroid/graphics/RegionIterator;
 
     invoke-virtual {v0, p1}, Landroid/graphics/RegionIterator;->next(Landroid/graphics/Rect;)Z
@@ -75,31 +76,31 @@
 
 
 # virtual methods
-.method public final hasNext()Z
+.method public hasNext()Z
     .locals 1
 
-    .line 147
+    .line 1
     iget-boolean v0, p0, Landroidx/core/graphics/RegionKt$iterator$1;->hasMore:Z
 
     return v0
 .end method
 
-.method public final next()Landroid/graphics/Rect;
+.method public next()Landroid/graphics/Rect;
     .locals 3
 
-    .line 150
+    .line 2
     iget-boolean v0, p0, Landroidx/core/graphics/RegionKt$iterator$1;->hasMore:Z
 
     if-eqz v0, :cond_0
 
-    .line 151
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->rect:Landroid/graphics/Rect;
 
     invoke-direct {v0, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 152
+    .line 4
     iget-object v1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->iterator:Landroid/graphics/RegionIterator;
 
     iget-object v2, p0, Landroidx/core/graphics/RegionKt$iterator$1;->rect:Landroid/graphics/Rect;
@@ -112,7 +113,7 @@
 
     return-object v0
 
-    .line 155
+    .line 5
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -121,10 +122,10 @@
     throw v0
 .end method
 
-.method public final bridge synthetic next()Ljava/lang/Object;
+.method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 142
+    .line 1
     invoke-virtual {p0}, Landroidx/core/graphics/RegionKt$iterator$1;->next()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -132,7 +133,7 @@
     return-object v0
 .end method
 
-.method public final remove()V
+.method public remove()V
     .locals 2
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;

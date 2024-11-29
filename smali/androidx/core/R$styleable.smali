@@ -153,26 +153,26 @@
 
     :array_0
     .array-data 4
-        0x7f040226
-        0x7f040240
+        0x7f04023a
+        0x7f040254
     .end array-data
 
     :array_1
     .array-data 4
         0x10101a5
         0x101031f
-        0x7f040029
+        0x7f04002b
     .end array-data
 
     :array_2
     .array-data 4
-        0x7f040137
-        0x7f040138
         0x7f040139
         0x7f04013a
         0x7f04013b
         0x7f04013c
         0x7f04013d
+        0x7f04013e
+        0x7f04013f
     .end array-data
 
     :array_3
@@ -182,11 +182,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f040135
-        0x7f04013e
-        0x7f04013f
+        0x7f040137
         0x7f040140
-        0x7f0402c4
+        0x7f040141
+        0x7f040142
+        0x7f0402d8
     .end array-data
 
     :array_4
@@ -212,7 +212,7 @@
     .end array-data
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

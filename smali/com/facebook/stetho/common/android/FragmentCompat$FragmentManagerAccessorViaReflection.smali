@@ -1,4 +1,4 @@
-.class Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
+.class public Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;
 .super Ljava/lang/Object;
 .source "FragmentCompat.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x9
     name = "FragmentManagerAccessorViaReflection"
 .end annotation
 
@@ -31,14 +31,14 @@
 
 
 # instance fields
-.field private mFieldMAdded:Ljava/lang/reflect/Field;
+.field public mFieldMAdded:Ljava/lang/reflect/Field;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    .line 83
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,19 +56,19 @@
         }
     .end annotation
 
-    .line 93
+    .line 1
     iget-object v0, p0, Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;->mFieldMAdded:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 95
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "mAdded"
 
-    .line 94
+    .line 3
     invoke-static {v0, v1}, Lcom/facebook/stetho/common/ReflectionUtil;->tryGetDeclaredField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -77,29 +77,30 @@
 
     const/4 v1, 0x1
 
-    .line 99
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 100
+    .line 5
     iput-object v0, p0, Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;->mFieldMAdded:Ljava/lang/reflect/Field;
 
-    .line 104
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/facebook/stetho/common/android/FragmentCompat$FragmentManagerAccessorViaReflection;->mFieldMAdded:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_1
 
-    .line 105
+    .line 7
     invoke-static {v0, p1}, Lcom/facebook/stetho/common/ReflectionUtil;->getFieldValue(Ljava/lang/reflect/Field;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/util/List;
 
-    return-object p1
+    goto :goto_0
 
     :cond_1
     const/4 p1, 0x0
 
+    :goto_0
     return-object p1
 .end method
